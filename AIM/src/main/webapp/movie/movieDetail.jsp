@@ -13,8 +13,8 @@
 	<!-- 상위 배너 -->
 	<jsp:include page="../inc/topbanner.jsp" />
 	<!-- 헤더/네비 -->
-	<jsp:include page="../inc/login_nav_bar.jsp" />
-	<br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<jsp:include page="../inc/nav_bar.jsp" />
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 	<div id="contents"
 		class="contents_movie_detail area__movingbar litype2">
 		<h2 class="hidden">영화</h2>
@@ -115,16 +115,16 @@
 						
 						
 						<form action="./ReviewWrite.mv?movieCd=${dto.movieCd }" method="post">
-							<div class="movi_review_box">
-								<div class="review_write_box">
-									<textarea id="txtComment" name="review_sy"
+							<div class="movi_review_box" style="width: 1000px; left: 50%; margin-left: 0px;">
+								<div class="review_write_box" style="width:860px;">
+									<textarea id="txtComment" name="review_sy" "
 										placeholder="평점 및 영화 관람평을 작성해주세요. 주제와 무관한 리뷰 또는 스포일러는 표시제한 또는 삭제될 수 있습니다. 
 	작성하신 평점 및 관람평은 AIM 홈페이지, SNS 등에 인용될 수 있습니다."
 										title="관람평 작성"></textarea>
 									<span class="byte_info"><strong class="byte">0</strong>/<em>220</em></span>
 								</div>
 	<!-- 							<button type="submit" id="btnComment" class="btn_submit">관람평 작성</button> -->
-								<input type="submit" id="btnComment" class="btn_submit" value="관람평 작성">
+								<input type="submit" id="btnComment" class="btn_submit" value="관람평 작성" style="width:139px; ">
 							</div>
 						</form>
 						
@@ -148,8 +148,24 @@
 							<ul class="review_con_list" id="review_con_list1"></ul>
 							<ul class="review_con_list" id="review_con_list2">
 							<c:forEach var="redto" items="${reviewListAll }">
-							<li><span class="img_info">
-								<img src="../Content/images/customer/ic_survey_02.png" alt=""></span>
+							<li>
+								<c:choose>
+									<c:when test="${redto.mb_grade==1 }">
+										<span class="img_info"><img src="./assets/img/silver.png" alt="silver"></span>
+									</c:when>
+									<c:when test="${redto.mb_grade==2 }">
+										<span class="img_info"><img src="./assets/img/gold.png" alt="gold"></span>
+									</c:when>
+									<c:when test="${redto.mb_grade==3 }">
+										<span class="img_info"><img src="./assets/img/vip.png" alt="vip"></span>
+									</c:when>
+									<c:when test="${redto.mb_grade==4 }">
+										<span class="img_info"><img src="./assets/img/vvip.png" alt="vvip"></span>
+									</c:when>
+								</c:choose> 
+								
+							<span class="img_info">
+							</span>
 								<div class="top_info"><span class="name">${redto.mb_nick }</span>
 								<span class="txt_ic_score">
 									<span class="stargradebg">
@@ -158,7 +174,8 @@
 										</span>
 									</span>
 								</span>
-								<span class="date_info">${redto.date}</span></div>
+								<span class="date_info" style="float:right; color:gray;">
+								<fmt:formatDate value="${redto.date}" pattern="yyyy.MM.dd"/></span></div>
 								<div class="review_info">${redto.review }</div>
 								<div class="btm_info">
 									<div class="edit_review"><em></em></div>

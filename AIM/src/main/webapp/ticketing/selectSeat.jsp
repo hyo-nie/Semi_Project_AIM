@@ -100,16 +100,15 @@
 							<div class="bx_con">
 							
 								<!-- 선택한 스케쥴 정보 출력 -->
-								<div></div>
 								<dl>
 									<dt>선택한 영화 제목</dt>
-									<dd>킹덤2: 아득한 대지로</dd>
+									<dd>${mvDTO.movieNm }</dd>
 									<dt>선택한 상영관</dt>
-									<dd>가산디지털 4관</dd>
+									<dd>${scDTO.branchCd }</dd>
 									<dt>선택한 상영 날짜</dt>
-									<dd>2022-11-18 (금)</dd>
+									<dd>${scDTO.sc_date }</dd>
 									<dt>선택한 시간</dt>
-									<dd>14:15 ~ 16:38</dd>
+									<dd>${scDTO.starttime } ~ ${scDTO.endtime }</dd>
 								</dl>
 								<!-- 선택한 스케쥴 정보 출력 -->
 								

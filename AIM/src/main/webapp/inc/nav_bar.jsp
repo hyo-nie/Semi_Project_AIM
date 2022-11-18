@@ -74,7 +74,7 @@
 						<li><a href="#" title="할인안내">할인안내</a></li>
 					</ul>
 				</div></li>
-			<li class=""><a href="./MovieList.mv">영화</a> <!-- 영화 임시 가상주소 입니다 자유롭게 변경해서 사용해주세요 -->
+			<li class=""><a href="./MovieHomeList.mv">영화</a> <!-- 영화 임시 가상주소 입니다 자유롭게 변경해서 사용해주세요 -->
 				<div>
 					<ul>
 						<li><a href="./MovieHomeList.mv" title="홈">홈</a></li>

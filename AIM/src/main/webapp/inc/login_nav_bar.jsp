@@ -111,12 +111,11 @@
 						<li><a href="#" title="할인안내">할인안내</a></li>
 					</ul>
 				</div></li>
-			<li class=""><a href="./MovieList.mv">영화</a> <!-- 영화 임시 가상주소 입니다 자유롭게 변경해서 사용해주세요 -->
+			<li class=""><a href="./MovieHomeList.mv">영화</a> <!-- 영화 임시 가상주소 입니다 자유롭게 변경해서 사용해주세요 -->
 				<div>
 					<ul>
-						<li><a href="./MovieList.mv" title="홈">홈</a></li>
-						<li><a href="#" title="현재상영작">현재상영작</a></li>
-						<li><a href="#" title="상영예정작">상영예정작</a></li>
+						<li><a href="./MovieHomeList.mv" title="홈">홈</a></li>
+						<li><a href="./MovieList.mv" title="현재상영작">현재상영작</a></li>
 					</ul>
 				</div></li>
 				<li class=""><a href="#">영화관</a> <!-- 영화관은 상세영화관 클릭안하면 클릭해도 이동 없습니다 자유롭게 변경해서 사용해주세요 -->

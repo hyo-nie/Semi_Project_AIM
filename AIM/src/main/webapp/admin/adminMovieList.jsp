@@ -36,6 +36,7 @@
 				<th class="actors_ym">actors</th>
 				<th>contents</th>
 				<th>boxrank</th>
+				<th>관리</th>
 			</tr>
 			
 			<c:forEach var="dto" items="${adminMovieList }">
@@ -53,6 +54,11 @@
 				<td>${dto.actors }</td>
 				<td>${dto.contents }</td>
 				<td>${dto.boxrank }</td>
+				<td>
+				<a href="./AdminMovieModify.mv?movieCd=${dto.movieCd }">수정</a>
+				/
+				<a href="./AdminMovieDelete.mv?movieCd=${dto.movieCd }">삭제</a>
+				</td>
 			</tr>
 			</c:forEach>
 			
