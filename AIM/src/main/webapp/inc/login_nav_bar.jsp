@@ -133,13 +133,12 @@
 						<li><a href="#" title="대연">대연</a></li>
 					</ul>
 				</div></li>
-			<li class=""><a href="./Store.st">스토어</a> <!-- 스토어 임시 가상주소 입니다 자유롭게 변경해서 사용해주세요 -->
+			<li class=""><a href="./StoreMain.st">스토어</a> 
 				<div>
 					<ul>
-						<li><a href="#" title="베스트">베스트</a></li>
-						<li><a href="#" title="관람권">관람권</a></li>
-						<li><a href="#" title="스낵음료">스낵음료</a></li>
-						<li><a href="#" title="포토카드">포토카드</a></li>
+						<li><a href="./AimPick.st" title="추천상품">AIM's pick</a></li>
+						<li><a href="./GiftcardList.st" title="기프트카드">기프트카드/관람권</a></li>
+						<li><a href="./PopcornList.st" title="팝콘">팝콘/음료/굿즈</a></li>
 					</ul>
 				</div></li>
 			<li class="wrap_nav_underline"><span class="nav_underline"></span></li>

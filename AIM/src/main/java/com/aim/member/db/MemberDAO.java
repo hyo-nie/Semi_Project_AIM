@@ -262,7 +262,39 @@ public class MemberDAO {
    	}
    //회원정보 조회 메서드 - getMember
    	
-   
+    // id에 해당하는 회원의 info을 받아오는 메서드 - getMemberInfo(id)
+    public MemberDTO getMemberInfo(String mb_id) {
+ 	   MemberDTO dto = null;
+ 	   
+ 	   try {
+ 		con = getConnection();
+ 		sql = "select * from member where mb_id=?";
+ 		pstmt = con.prepareStatement(sql);
+ 		pstmt.setString(1, mb_id);
+ 		rs = pstmt.executeQuery();
+ 		
+ 		if(rs.next()) {
+ 			dto = new MemberDTO();
+ 			
+ 			dto.setMb_birth(rs.getString("mb_birth"));
+ 			dto.setMb_gender(rs.getString("mb_gender"));
+ 			dto.setMb_grade(0);
+ 			dto.setMb_id(mb_id);
+ 			dto.setMb_name(rs.getString("mb_name"));
+ 			dto.setMb_nick(rs.getString("mb_nick"));
+ 			dto.setMb_pay(rs.getInt("mb_pay"));
+ 			dto.setMb_pw(rs.getString("mb_pw"));
+ 			dto.setMb_tel(rs.getString("mb_tel"));
+ 			dto.setMb_view(rs.getInt("mb_view"));
+ 		}
+// 		System.out.println("@@@@@@@@@dto에 저장이 완료되었습니다");
+ 		
+ 	} catch (Exception e) {
+ 		e.printStackTrace();
+ 	}
+ 	   
+ 	   return dto;
+    }
    
    
    

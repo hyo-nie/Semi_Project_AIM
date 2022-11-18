@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+div {
+	display : block;
+}
+
+/* footer ================================================== */
+.footer {padding-top:80px;}
+.footer .inner {position:relative; width:980px; margin:0 auto;}
+.footer .f_logo {display:block; margin-bottom:20px;}
+.footer .f_menu {margin-bottom:15px;}
+.footer .f_menu:after {content:""; display:block; clear:both;}
+.footer .f_menu li {position:relative; float:left; margin-right:10px; padding-left:10px;}
+.footer .f_menu li:before {content:""; position:absolute; left:0; top:2px; height:10px; border-left:1px solid #707070;}
+.footer .f_menu li:first-child {padding-left:0;}
+.footer .f_menu li:first-child:before {display:none;}
+.footer .f_menu li a {display:block; font-size:12px;}
+.footer .bx_address {line-height:1.5; font-size:12px; color:#4D4D4D;}
+.footer .bx_address address {display:inline; margin-right:10px;}
+.footer .bx_address span {margin-right:10px;}
+.footer .bx_address span:first-child {border:1px solid red;}
+.footer .bx_address span.bar {position:relative; padding-left:10px;}
+.footer .bx_address span.bar:before {content:""; position:absolute; left:0; top:4px; height:10px; border-left:1px solid #707070;}
+.footer .copyright {display:block; margin-top:4px; font-size:12px; color:#4D4D4D;}
+.footer .familysite {position:absolute; right:50px; top:-10px;}
+.footer .familysite select {min-width:180px;}
+.footer .article_award {margin:50px auto 0; padding:20px 0; background:#f5f5f5;}
+.footer .article_award ul:after {content:""; display:block; clear:both;}
+.footer .article_award ul li {float:left; margin:0 4px;}
+.footer .article_award ul li:first-child {margin-left:0;}
+.footer .article_award ul li:last-child {margin-right:0;}
+.footer .article_award ul li a {display:block;}
+/* fonts */
+body, h1, h2, h3, h4, h5, h6, fieldset, ul, ol, dl, dt, dd, p, figure {margin:0; padding:0;}
+body, textarea {line-height:1.1; letter-spacing:-0.03em;}
+body, input, button, select, textarea {font-family:"Noto Sans KR", "Roboto", "dotum", "sans-serif"; font-size:12px; color:#000;}
+/* img */
+img {border:none; vertical-align:top;}
