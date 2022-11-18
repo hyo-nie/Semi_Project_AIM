@@ -33,7 +33,8 @@
 				<button type="button" class="tab_tit" style="width: 33.33%; left: 0%;" onclick="">
 					<span>공지 사항</span>
 				</button>
-			</li><li class="active">
+			</li>
+			<li class="active">
 				<button type="button" class="tab_tit" style="width: 33.33%; left: 33.33%;">
 					<span>1:1 문의</span>
 				</button>
@@ -145,7 +146,9 @@
 						<tbody>
 							<tr>
 								<th scope="row" class="req">아이디</th>
-								<td><input type="text" class="ty2 inp_name" name="mb_id" title="성명을 입력해주세요" value="${dto.mb_id }"></td>
+								<td>
+									<input type="text" class="ty2 inp_name" name="mb_id" title="성명을 입력해주세요" value="${dto.mb_id }">
+								</td>
 							</tr>
 							<tr>
 								<th scope="row" class="req">비밀번호</th>

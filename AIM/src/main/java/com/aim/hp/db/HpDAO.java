@@ -330,8 +330,8 @@ public class HpDAO {
 			return dto;
 		}
 		// 문의 글 1개 불러오기 - getHpList(hp_bno)
-		
-		// 게시글 수정 -myhpupdate (DTO)
+			
+		// 문의 게시글 수정 -myhpupdate (DTO)
 		public int myhpupdate(HpDTO dto) {
 			int result = -1;
 						

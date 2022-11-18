@@ -28,8 +28,13 @@
 			<h2 class="tit"> 고객센터 - 1:1 문의 </h2>
 		</div>
 		<ul class="tab_wrap outer actionmovingbar">
+			<li>
+				<button type="button" class="tab_tit" style="width: 33.33%; left: 0%;" onclick="">
+					<span>공지 사항</span>
+				</button>
+			</li>
 			<li class="active">
-				<button type="button" class="tab_tit" style="width: 50%; left: 0%;">
+				<button type="button" class="tab_tit" style="width: 33.33%; left: 33.33%;">
 					<span>1:1 문의</span>
 				</button>
 				<div class="tab_con">
@@ -51,7 +56,7 @@
 							<span class="txt_req">필수입력</span>
 						</div>
 					</div>
-				<form action="./MyHpUpdatePro.hp?hp_bno=${dto.hp_bno }&pageNum=${pageNum }" method="post" enctype="multipart/form-data" value="${dto.hp_bno }">
+				<form action="./MyHpUpdatePro.hp?hp_bno=${dto.hp_bno }&pageNum=${pageNum }" method="post" enctype="multipart/form-data">
 					<table class="tbl_form" summary="문의내용작성 테이블">
 						<caption>문의 내용을 작성해주세요</caption>
 						<colgroup>
@@ -131,12 +136,12 @@
 						<tbody>
 							<tr>
 								<th scope="row" class="req">아이디</th>
-								<td><input type="text" class="ty2 inp_name" name="mb_id" title="성명을 입력해주세요" value="${dto.mb_id }"></td>
+								<td><input type="text" class="ty2 inp_name" name="mb_id" title="성명을 입력해주세요" value="${dto.mb_id }">\</td>
 							</tr>
 							<tr>
 								<th scope="row" class="req">비밀번호</th>
 								<td>
-									<input type="text" class="ty2 inp_id" title="이메일 아이디"	name="hp_deletepw" value=""> 
+									<input type="text" class="ty2 inp_id" title="이메일 아이디"	name="hp_deletepw" > 
 									<span class="txt_caution1 fl_r with_inp">사용되는 비밀번호는 수정 및 삭제에 이용되므로 필수로 작성해주시기 바랍니다.</span></td>
 							</tr>
 						</tbody>
@@ -174,7 +179,7 @@
 					</div>
 				</div></li>
 		<li>
-				<button type="button" class="tab_tit" style="width: 50%; left: 50%;">
+				<button type="button" class="tab_tit" style="width: 33.33%; left: 66.67%;">
 					<span>문의 내용 목록</span>
 				</button></li>
 			<li class="wrap_nav_underline"><span class="nav_underline"></span></li>

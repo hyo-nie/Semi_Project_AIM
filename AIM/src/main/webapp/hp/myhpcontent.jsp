@@ -23,13 +23,18 @@
 			<h2 class="tit">고객센터</h2>
 		</div>
 		<ul class="tab_wrap outer actionmovingbar">
+			<li>
+				<button type="button" class="tab_tit" style="width: 33.33%; left: 0%;" onclick="">
+					<span>공지 사항</span>
+				</button>
+			</li>
 			<li><button type="button" class="tab_tit"
-					style="width: 50%; left: 0%;">
+					style="width: 33.33%; left: 33.33%;">
 					<span>1:1 문의</span>
 				</button></li>
 			<li class="active"><button type="button" class="tab_tit"
-					style="width: 50%; left: 50%;">
-					<span>공지사항</span>
+					style="width: 33.33%; left: 66.67%;">
+					<span>문의 내용 목록</span>
 				</button>
 				<div class="tab_con">
 					<h3 class="hidden">문의 내용 목록</h3>
