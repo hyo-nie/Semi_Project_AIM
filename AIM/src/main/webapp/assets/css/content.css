@@ -7,7 +7,6 @@ ver : 1.01 20191219 2502 line > íŒì—…ë©”ë‰´ ê³ ì •ë†�
 
 
 
-
 /* íŒì—… : ì”¨ì¸„ ì œê³µë™ì˜ ============================== */
 .layer_wrap.layer_movie_grade {width:600px;} 
 .layer_wrap.layer_movie_grade .tbl_dtal td {font-size:13px;}
@@ -244,9 +243,9 @@ ver : 1.01 20191219 2502 line > íŒì—…ë©”ë‰´ ê³ ì •ë†�
 .contents_movie_detail .no_data {padding:140px 0; background:#F8F8F8; text-align:center; font-size:15px; border-top:1px solid #ccc}
 .contents_movie_detail .list_bdr_box {margin-top:60px;}
 .contents_movie_detail .list_txt {margin-left:10px;}
-.movi_tab_info1 .left_con {float:left; width:1000px; height:300px;}
-.movi_tab_info1 .left_con .mCustomScrollbar {height:300px;}
-.movi_tab_info1 .left_con .txt_info {padding-right:80px; font-size:13px; line-height:1.8;}
+.movi_tab_info1 .left_con {float:left; width:480px;}
+.movi_tab_info1 .left_con .mCustomScrollbar {height:115px;}
+.movi_tab_info1 .left_con .txt_info {padding-right:80px; font-size:13px; line-height:1.8}
 .movi_tab_info1 .right_con {float:right; width:480px;}
 .movi_tab_info1 .group_graph:after {content:""; display:block; clear:both;}
 .movi_tab_info1 .group_graph .bx_graph01 {float:left; position:relative; width:32%; height:76px; margin-top:49px;}
@@ -380,16 +379,16 @@ ver : 1.01 20191219 2502 line > íŒì—…ë©”ë‰´ ê³ ì •ë†�
 .movi_score_box .txt_ic_score2 {margin-bottom:15px;}
 .movi_score_box .txt_info {font-size:13px; color:#666; line-height:1.3}
 /* ë¦¬ë·°ìž‘ì„± */
-.movi_review_box {width:1000px; height:90px; margin-bottom:55px; border:1px solid #ccc; box-sizing:border-box;}
+.movi_review_box {height:90px; margin-bottom:55px; border:1px solid #ccc; box-sizing:border-box;}
 .movi_review_box .star_score_box {float:left; width:320px; height:88px; background:#F8F8F8; text-align:center; border-right:1px solid #ccc}
 .movi_review_box .star_score_box .score_info {display:block; margin:20px 0 7px 0; font-size:13px;}
 .movi_review_box .star_score_box .score_info em {font-family:'Roboto', "Noto Sans KR"; font-size:28px;}
-.movi_review_box .review_write_box {float:left; width:860px;}
+.movi_review_box .review_write_box {float:left; width:538px;}
 .movi_review_box .review_write_box textarea {height:70px; border:none;}
 .movi_review_box .review_write_box textarea:disabled{background:none;}
 .movi_review_box .review_write_box .byte_info {display:block; margin:0 10px 10px 0; text-align:right; font-size:10px; color:#666; font-family:'Roboto', "Noto Sans KR";}
 .movi_review_box .review_write_box .byte_info strong {color:#000; font-weight:bold;}
-.movi_review_box .btn_submit {float:left; width:138px; height:90px; border:none; margin:-1px -1px 0 0; padding:0; background:#666; color:#fff; font-size:15px;}
+.movi_review_box .btn_submit {float:left; width:119px; height:90px; border:none; margin:-1px -1px 0 0; padding:0; background:#666; color:#fff; font-size:15px;}
 .movi_review_box .btn_col4 {background:none;}
 .movi_review_list .review_top {overflow:hidden; width:100%; margin-bottom:14px;}
 .movi_review_list .review_top .total_info {float:left; font-size:15px;}
@@ -536,9 +535,9 @@ ver : 1.01 20191219 2502 line > íŒì—…ë©”ë‰´ ê³ ì •ë†�
 
 
 /* ì˜í™”ê´€/ìƒì„¸ ========================================================================================= */
-.contents_theater_detail .theater_top_wrap {position:relative; margin:18px 0 0 22px;}
+.contents_theater_detail .theater_top_wrap {position:relative; margin:150px 0 0 22px; }
 .contents_theater_detail .theater_top_wrap .info_wrap {width:470px;}
-.contents_theater_detail .theater_top_wrap .info_wrap .theater_tit {font-size:0; margin-bottom:34px;}
+.contents_theater_detail .theater_top_wrap .info_wrap .theater_tit {font-size:0; margin-bottom:34px; font-family:'Noto Sans KR';}
 .contents_theater_detail .theater_top_wrap .info_wrap .theater_tit .tit {display:inline-block; margin-right:10px; font-size:32px; vertical-align:middle;}
 .contents_theater_detail .theater_top_wrap .info_wrap .theater_tit .btn_col4 {margin-top:2px;}
 .contents_theater_detail .theater_top_wrap .info_wrap .theater_info {margin-bottom:15px;}
@@ -800,7 +799,7 @@ ver : 1.01 20191219 2502 line > íŒì—…ë©”ë‰´ ê³ ì •ë†�
 .contents_event .vote_wrap .vote_list_wrap.ty1 > li .vote_itm img {width:200px; height:200px; border-radius:50%; -webkit-border-radius:50%; -moz-border-radius:50%; -ms-border-radius:50%; -o-border-radius:50%;}
 .contents_event .vote_wrap .vote_list_wrap.ty1 > li .vote_itm span {display:block; margin:10px 0 0; font-size:16px;}
 .contents_event .vote_wrap .vote_list_wrap.ty1 > li .vote_itm.active:after {content:''; display:block; position:absolute; top:0; left:30px; background:rgba(255, 119, 135, .9) url('../images/event/vote_chk_65.png') no-repeat 50% 50%; border-radius:50%; width:200px; height:200px; z-index:10; -webkit-border-radius:50%; -moz-border-radius:50%; -ms-border-radius:50%; -o-border-radius:50%;}
-.contents_event .vote_wrap .vote_list_wrap.ty2 > li label {display:inline; background:#F8F8F8; border-radius:5px; margin-right:15px; padding:16px; -webkit-border-radius:5px; -moz-border-radius:5px; -ms-border-radius:5px; -o-border-radius:5px;}
+.contents_event .vote_wrap .vote_list_wrap.ty2 > li label {display:inline;  background:#F8F8F8; border-radius:5px; margin-right:15px; padding:16px; -webkit-border-radius:5px; -moz-border-radius:5px; -ms-border-radius:5px; -o-border-radius:5px;}
 .contents_event .vote_wrap + .btn_btm_wrap {margin-top:0;}
 .contents_event .vote_result_wrap {border-top:1px solid #BBBBBB; padding:0 60px;}
 .contents_event .vote_result_wrap .vote_tit {position:relative; font-size:40px; margin:56px auto 30px;}
@@ -3269,7 +3268,7 @@ dl.total_price dd strong {font-family:'Roboto'; font-size:25px; font-weight:bold
 .wrap_reserve .section_step_tit ul li.prev {border-color:#333; border-bottom-color:#666; background-color:#333;}
 .wrap_reserve .section_step_tit ul li.prev > a {color:#FFF;}
 /* í˜„ë‹¨ê³„ */
-.wrap_reserve .section_step_tit ul li.active {border-color:#333; border-bottom-color:#666; background-color:#333;}
+.wrap_reserve .section_step_tit ul li.active {border-color:#FF243E; border-bottom-color:#666; background-color:#FF243E;}
 .wrap_reserve .section_step_tit ul li.active > a {color:#FFF;}
 .wrap_reserve .section_step_tit ul li.active > a:before {content:"í˜„ìž¬ ë‹¨ê³„"; overflow:hidden; position:absolute; width:1px; height:1px; text-indent:-9999em;}
 .wrap_reserve .section_step_tit ul li.active > a > strong {font-size:15px;}
@@ -3294,7 +3293,7 @@ dl.total_price dd strong {font-family:'Roboto'; font-size:25px; font-weight:bold
 .wrap_reserve .section_step_con:after {content:""; display:block; clear:both;}
 .wrap_reserve .section_step_con.active {display:block; overflow:inherit; position:relative; width:1202px; height:100%; margin-left:78px;}
 .wrap_reserve .section_step_con .article {position:relative; float:left; height:100%; box-sizing:border-box; background-color:#FFF;}
-.wrap_reserve .section_step_con .article .group_top {overflow:hidden; position:relative; height:55px; line-height:55px; border-right:1px solid #222; text-align:center; background-color:#717275;}
+.wrap_reserve .section_step_con .article .group_top {overflow:hidden; position:relative; height:55px; line-height:55px; border-right:1px solid #222; text-align:center; background-color:#000;}
 .wrap_reserve .section_step_con .article:first-child .group_top {border-left:none;}
 .wrap_reserve .section_step_con .article .group_top .tit {font-size:18px; color:#FFF;}
 .wrap_reserve .section_step_con .article .group_top .txt {position:absolute; top:5px; right:30px; font-size:13px; color:#fff;}
@@ -3540,7 +3539,7 @@ dl.total_price dd strong {font-family:'Roboto'; font-size:25px; font-weight:bold
 .date_select_wrap .swiper-container {padding:0 20px;}
 .date_select_wrap .swiper-button-prev {left:0; margin-top:0px;}
 .date_select_wrap .swiper-button-next {right:0; margin-top:0px;}
-.date_select_wrap .month {position:absolute; top:0; left:0; width:100%; text-align:center; font-size:12px;}
+.date_select_wrap .month {position:absolute; top:0; left:0; width:100%; text-align:center; font-size:10px;}
 .date_select_wrap .date {display:block; position:relative; padding-top:20px;}
 .date_select_wrap .date label {display:block; cursor:pointer;}
 .date_select_wrap .date label input[type="radio"] {overflow:hidden; position:absolute; width:1px; height:1px; clip:rect(0, 0, 0, 0);}
@@ -3571,7 +3570,7 @@ dl.total_price dd strong {font-family:'Roboto'; font-size:25px; font-weight:bold
 .time_select_wrap ul.list_time:after {content:""; display:block; clear:both;}
 .time_select_wrap ul.list_time li {float:left; width:23.5%; margin:0 0 11px 2%;}
 .time_select_wrap ul.list_time li:nth-child(4n+1) {margin-left:0;}
-.time_select_wrap ul.list_time li > a {display:block; position:relative; height:58px; padding:8px 14px 5px; border-radius:4px; border:1px solid #ddd; cursor:pointer; background: #f8f8f8; background:-moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(248, 248, 248, 1) 100%); background:-webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(248, 248, 248, 1) 100%); background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(248, 248, 248, 1) 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#f8f8f8", GradientType=0);}
+.time_select_wrap ul.list_time li > a {display:block; position:relative; height:56px; padding:8px 14px 5px; border-radius:4px; border:1px solid #ddd; cursor:pointer; background: #f8f8f8; background:-moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(248, 248, 248, 1) 100%); background:-webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(248, 248, 248, 1) 100%); background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(248, 248, 248, 1) 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#f8f8f8", GradientType=0);}
 .time_select_wrap ul.list_time li > a dl dt {overflow:hidden; position:absolute !important; width:1px; height:1px; clip:rect(1px, 1px, 1px, 1px);}
 .time_select_wrap ul.list_time li > a dl dd.time {margin-bottom:5px; font-family:'Roboto'; font-size:11px;}
 .time_select_wrap ul.list_time li > a dl dd.time strong {display:block; font-size:15px; font-weight:bold; text-align:center;}
@@ -4553,7 +4552,7 @@ select.ty5 ~ select.ty5 {margin-left:5px;}
 .contents_theater_detail .theater_top_wrap .info_wrap .theater_info dd.adr .link_viewmap {position:relative; padding-left:15px; margin-left:13px;}
 .contents_theater_detail .theater_top_wrap .info_wrap .theater_info dd.adr .link_viewmap:before {content:''; position: absolute; top:5px; left:0; width:1px; height:14px; background:#ddd;}
 .icon_viewmap {display:inline-block; width:15px; height:19px; background: url('../../Content/images/icon/icon_viewmap.jpg') 0 0 no-repeat; background-size:100%; vertical-align: -4px;}
-.icon_groupvisit {display:inline-block; width:16px; height:16px; background:url("../../Content/images/icon/icon_groupvisit.jpg") 0 0 no-repeat; vertical-align:middle;}
+.icon_groupvisit {display:inline-block; width:16px; height:16px; background:url("	https://www.lottecinema.co.kr/NLCHS/Content/images/icon/icon_groupvisit.jpg") 0 0 no-repeat; vertical-align:middle;}
 .contents_theater_detail .theater_top_wrap .theater_tit {margin-bottom:34px;}
 .contents_theater_detail .theater_top_wrap .theater_tit .tit {display:inline-block; margin-right:10px; font-size:32px; vertical-align:middle;}
 /* ì´ë²¤íŠ¸ ë‹¹ì²¨ìž ì´ë¦„ ë° ì•„ì´ë”” ê²€ìƒ‰ */

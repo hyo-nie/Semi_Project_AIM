@@ -15,7 +15,6 @@ ver : 1.00
 ============================== */
 
 
-
 /* 공통 */
 .ad_wrap {margin-top:70px;}
 .clear:after {content:''; display:table; clear:both;}
@@ -35,7 +34,7 @@ ver : 1.00
 .banner_top_wrap>.inner {position:relative; width:980px; height:80px; margin:0 auto; overflow:hidden;}
 .banner_top_wrap>.inner>a {display:block;}
 .banner_top_wrap>.inner>a>img {width:980px; height:80px;}
-.banner_top_wrap>.inner>.btn_close {position:absolute; top:50%; right:0; background:url('../images/icon/close_19_wht.png') no-repeat 50% 50%; border:0 none; width:20px; height:20px; margin-top:-10px; text-indent:-9999em;}
+/* .banner_top_wrap>.inner>.btn_close {position:absolute; top:50%; right:0; background:url('../images/icon/close_19_wht.png') no-repeat 50% 50%; border:0 none; width:20px; height:20px; margin-top:-10px; text-indent:-9999em;} */
 .banner_dim_wrap {position:fixed; top:50%; left:50%; width:980px; margin-top:-320px; margin-left:-490px; z-index:100;}
 .banner_dim_wrap a {display:block;}
 .banner_dim_wrap img {width:980px; height:640px;}
@@ -258,14 +257,14 @@ input.inp_cont {width:54px; margin:0 3px;} /* 2020.01.02 */
 .visual_top .swiper-container-horizontal > .swiper-pagination-bullets {bottom:20px;}
 /* owl */
 .owl-carousel .owl-nav {position:static; right:auto;}
-.owl-carousel .owl-nav .owl-prev {opacity:.6; position:absolute; left:0; top:50%; width:37px; height:39px; margin-top:-20px; background:url("../images/icon/arr_lf_11.png") no-repeat center center;}
-.owl-carousel .owl-nav .owl-next {opacity:.6; position:absolute; right:0; top:50%; width:37px; height:39px;  margin-top:-20px; background:url("../images/icon/arr_rg_11.png") no-repeat center center;}
+.owl-carousel .owl-nav .owl-prev {opacity:.6; position:absolute; left:0; top:50%; width:37px; height:39px; margin-top:-20px; background:url("https://www.lottecinema.co.kr/NLCHS/Content/images/icon/arr_lf_11.png") no-repeat center center;}
+.owl-carousel .owl-nav .owl-next {opacity:.6; position:absolute; right:0; top:50%; width:37px; height:39px;  margin-top:-20px; background:url("https://www.lottecinema.co.kr/NLCHS/Content/images/icon/arr_rg_11.png") no-repeat center center;}
 .owl-carousel .owl-nav .owl-prev:hover,
 .owl-carousel .owl-nav .owl-next:hover {opacity:1;}
 .owl-carousel .owl-nav .owl-prev.disabled,
 .owl-carousel .owl-nav .owl-next.disabled {opacity:.35; pointer-events:none;}
-.owl-carousel .owl-dots {display:inline-block;}
-.owl-carousel .owl-dots .owl-dot span {opacity:.5; background-color:#000;}
+.owl-carousel .owl-dots {display:inline-block; opacity:0; }
+.owl-carousel .owl-dots .owl-dot span {background-color:#000;}
 .owl-carousel .owl-dots .owl-dot.active span,
 .owl-carousel .owl-dots .owl-dot:hover span {opacity:1;}
 .slide_wrap {position:relative;}
@@ -510,6 +509,7 @@ body {overflow-y:scroll;}
 /* active */
 .header.ty3 #nav > ul > li.active > div > ul > li.active > a,
 .header.ty3 #nav > ul > li.active > div > ul > li > a:hover {opacity:1;}
+
 /* header :fixed ================================================== */
 .header.fixed {position:fixed; z-index:90; top:0; left:0; right:0; height:43px;}
 .header.fixed .gnb {height:auto; border-bottom:none;}
@@ -564,7 +564,7 @@ body {overflow-y:scroll;}
 #contents.contents_movie_detail {padding-top:35px;}
 #contents.contents_mall_home {padding-top:30px;}
 #contents.contents_member_comn {padding-top:105px;}
-#contents.contents_reserve {padding-bottom:70px; background-color: #f8faff;}
+#contents.contents_reserve {padding : 152px 0 0 0; background-color:#444}
 /* 본문상단영역 */
 #contents > .title_top {margin-bottom:20px; padding:25px 0 14px; border-bottom:1px solid #EEE;}
 #contents > .title_top:after {content:""; display:block; clear:both;}
@@ -605,7 +605,7 @@ body {overflow-y:scroll;}
 .txt_ic_score em {overflow:hidden; display:inline-block; vertical-align:middle; text-indent:-9999em; background:url("../../Content/images/icon/star_10.png") no-repeat 0 0;}
 .txt_ic_score strong {display:inline-block; font-family:"Roboto"; vertical-align:middle;}
 /* ty1 */
-.txt_ic_score.ty1 em {width:10px; height:10px; margin:-2px 3px 0 0; background:url("../../Content/images/icon/star_10.png") no-repeat 0 0;}
+.txt_ic_score.ty1 em {width:10px; height:10px; margin:-2px 3px 0 0; background:url("	https://www.lottecinema.co.kr/NLCHS/Content/images/icon/star_10.png") no-repeat 0 0;}
 .txt_ic_score.ty1 strong {font-size:11px;}
 /* ty2 (사이즈 수정 해도됨, 수정 후 이 문구 지우삼) */
 .txt_ic_score.ty2 em {width:14px; height:14px; margin:-2px 3px 0 0; background:url("../../Content/images/icon/star_14.png") no-repeat 0 0;}
@@ -752,7 +752,7 @@ body {overflow-y:scroll;}
 .ico_lpay em {text-indent:-9999em; font-size:0;}
 .ico_lpoint {display:inline-block; background:url('../images/icon/txt_lpoint_20210407.png') no-repeat 50% 50%; width:70px; height:16px; margin-right:5px; text-indent:-9999em; font-size:0; vertical-align:middle;}
 .ico_lpoint em {text-indent:-9999em; font-size:0;}
-.ico_heart {display:inline-block; width:16px; height:18px; background:url("../../Content/images/icon/heart_15_off.png") no-repeat 50% 0; background-color:transparent; vertical-align:middle;}
+.ico_heart {display:inline-block; width:16px; height:18px; background:url("https://www.lottecinema.co.kr/NLCHS/Content/images/icon/heart_15_off.png") no-repeat 50% 0; background-color:transparent; vertical-align:middle;}
 .ico_heart em {text-indent:-9999em; font-size:0;}
 .ico_heart.active, .active>.ico_heart {background-image:url("../../Content/images/icon/heart_15_on.png");}
 button>.ico_heart,a>.ico_heart {margin-right:5px;}
@@ -871,14 +871,14 @@ button>.ico_heart,a>.ico_heart {margin-right:5px;}
 /* */
 .btn_del {width:20px; height:20px; background-image:url("../../Content/images/icon/delete_20.png"); background-color:transparent; border:0 none;}
 .btn_del2 {width:30px; height:30px; background-image:url("../../Content/images/icon/delete_30.png"); background-color:transparent; border:0 none;}
-.btn_share {width:16px; height:18px; background-image:url("../../Content/images/icon/share_16.png");}
+.btn_share {width:16px; height:18px; background-image:url("https://www.lottecinema.co.kr/NLCHS/Content/images/icon/share_16.png");}
 .btn_setup {width:16px; height:16px; background-image:url("../../Content/images/icon/setup.png");}
 .btn_download1 {width:18px; height:18px; background-image:url("../../Content/images/icon/download_01.png");}
 .btn_download2 {width:15px; height:15px; background-image:url("../../Content/images/icon/download_02.png");}
 .btn_search {width:18px; height:18px; background-image:url("../../Content/images/icon/search.png");}
 .btn_heart {width:16px; height:16px; background-image:url("../../Content/images/icon/heart_15_off.png"); background-color:transparent;}
 .btn_heart.active {background-image:url("../../Content/images/icon/heart_15_on.png");}
-.btn_heart.ty2 {width:19px; height:19px; background-image:url("../../Content/images/icon/heart_18_off.png");}
+.btn_heart.ty2 {width:19px; height:19px; background-image:url("https://www.lottecinema.co.kr/NLCHS/Content/images/icon/heart_18_off.png");}
 .btn_heart.ty2.active {background-image:url("../../Content/images/icon/heart_18_on.png");}
 .btn_heart_rnd {width:16px; height:16px; background-image:url("https://www.lottecinema.co.kr/NLCHS/Content/images/icon/heart_rnd_16_off.png");background-color:transparent;}
 .btn_heart_rnd.active {background-image:url("../../Content/images/icon/heart_rnd_16_on.png");}
@@ -888,8 +888,8 @@ button>.ico_heart,a>.ico_heart {margin-right:5px;}
 
 /* button :icon + text ========== */
 .btn_txt_more {width:100%; padding:8px 0; border:1px solid #ECECEC; background-color:#ffffff;}
-.btn_txt_more span {padding-right:20px; background:url("../../Content/images/icon/arr_dw_9.png") no-repeat right center;}
-.btn_txt_more.ty2 {display:inline-block; background:url('../images/icon/arr_rg_6.png') no-repeat right 2px; border:0 none; width:auto; padding:0 10px 0 0; color:#666666; font-size:10px;}
+.btn_txt_more span {padding-right:20px; background:url("https://www.lottecinema.co.kr/NLCHS/Content/images/icon/arr_rg_6.png") no-repeat right center;}
+.btn_txt_more.ty2 {display:inline-block; background:url("https://www.lottecinema.co.kr/NLCHS/Content/images/icon/arr_rg_6.png") no-repeat right 2px; border:0 none; width:auto; padding:0 10px 0 0; color:#666666; font-size:10px;}
 .btn_txt_more.ty3 {border:none;}
 .btn_txt_edit {padding-left:18px; font-size:11px; color:#000; background:url("../../Content/images/icon/edit_15.png") no-repeat 0 center;}
 .btn_txt_detail {font-size:11px; color:#000; border:0 none; background:transparent; padding:0;}
@@ -909,7 +909,7 @@ button>.ico_heart,a>.ico_heart {margin-right:5px;}
 .btn_txt_gift {display:inline-block; background:url('../images/icon/present_14.png') no-repeat 0 50%; border:0 none; width:auto; padding:0 0 0 18px; color:#666666; font-size:11px;}
 .btn_txt_gift:disabled {opacity:.6; cursor:auto;}
 /* 선물하기 */
-.btn_txt_notice {display:inline-block; background:#ffffff url('../images/icon/caution_15_2.png') no-repeat 12px 50%; border-radius:4px; width:auto; padding:7px 12px 7px 33px; color:#000000; font-size:13px; -webkit-border-radius:4px; -moz-border-radius:4px; -ms-border-radius:4px; -o-border-radius:4px;}
+.btn_txt_notice {display:inline-block; background:#ffffff url("https://www.lottecinema.co.kr/NLCHS/Content/images/icon/caution_15_2.png") no-repeat 12px 50%; border-radius:4px; width:auto; padding:7px 12px 7px 33px; color:#000000; font-size:13px; -webkit-border-radius:4px; -moz-border-radius:4px; -ms-border-radius:4px; -o-border-radius:4px;}
 .btn_txt_notice:disabled {opacity:.6; cursor:auto;}
 /* 기본링크버튼 */
 a.btn_lnk {padding-right:8px; font-size:12px;}
@@ -1215,3 +1215,14 @@ a.btn_lnk2 {border-bottom:1px solid #666; font-size:12px; color:#666; vertical-a
 .list_txt.ty3 > p { color:#666;}
 .list_txt.ty4 > li {margin:0 0 5px 6px; text-indent:-6px; color:#000;}
 .list_txt.ty4 > li:before {width: 3px;height: 3px;margin:8px 5px 0 0;background-color: #666;}
+
+
+/* owl 추가 - 김태홍 */
+owlpos {position:relative; padding : 150px 0 0 0; }
+
+/* 날짜별 && 일정없을때 글자색 변경 */
+.saturday {color:#0000FF; }
+.sunday {color:#FF0000;}
+.notsche {color:#A4A4A4}
+
+
