@@ -8,6 +8,8 @@ import javax.servlet.http.HttpSession;
 
 import com.aim.hp.db.HpDAO;
 import com.aim.hp.db.HpDTO;
+import com.oreilly.servlet.MultipartRequest;
+import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
 public class MyHpUpdateProAction implements Action {
 
@@ -26,21 +28,43 @@ public class MyHpUpdateProAction implements Action {
 					return forward;
 				}
 		
+		
+		// 파일 업로드
+		String realPath = request.getRealPath("/upload");
+		System.out.println(" M : realPath : "+realPath);
+		int maxSize = 10 * 1024 * 1024;
+				
+		// 파일업로드 -> 파일업로드 객체 생성(MultipartRequest)
+		MultipartRequest multi 
+				      = new MultipartRequest(
+				        request,
+				        realPath,
+				        maxSize,
+				        "UTF-8",
+				        new DefaultFileRenamePolicy()
+				        );
+				
+		System.out.println(" M : 첨부파일 업로드 성공! ");			
+				
 		// DTO 객체 생성 및 데이터 저장
 		HpDTO dto = new HpDTO();
-		dto.setHp_bno(Integer.parseInt(request.getParameter("hp_bno")));
-		dto.setMb_id(request.getParameter("mb_id"));
-		dto.setHp_select(request.getParameter("hp_select"));
-		dto.setHp_class(request.getParameter("hp_class"));
-		dto.setHp_content(request.getParameter("hp_content"));
+		dto.setHp_bno(Integer.parseInt(multi.getParameter("hp_bno")));
+		dto.setMb_id(multi.getParameter("mb_id"));
+		dto.setHp_deletepw(multi.getParameter("hp_deletepw"));
+		dto.setHp_subject(multi.getParameter("hp_subject"));
+		dto.setHp_select(multi.getParameter("hp_select"));
+		dto.setHp_class(multi.getParameter("hp_class"));
+		dto.setHp_content(multi.getParameter("hp_content"));
 		
 		String pageNum = request.getParameter("pageNum");
 		
 		// DB
 		HpDAO dao = new HpDAO();
+		
+		
 		int result = dao.myhpupdate(dto);
 		
-		System.out.println(" M : 수정완료 "+result);
+		System.out.println(" M : 결과 "+result);
 		
 		
 		response.setContentType("text/html; charset=UTF-8");
@@ -61,7 +85,7 @@ public class MyHpUpdateProAction implements Action {
 			// 더이상 실행없이 컨트롤러로 전달		
 		}else if(result == 0) {
 			out.print("<script>");
-			out.print(" alert(' 전화번호가 맞지 않습니다 '); ");
+			out.print(" alert(' 비밀번호가 맞지 않습니다 '); ");
 			out.print(" history.back(); ");
 			out.print("</script>");
 			out.close();

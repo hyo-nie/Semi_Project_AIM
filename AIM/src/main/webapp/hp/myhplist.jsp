@@ -23,10 +23,15 @@
 			<h2 class="tit">고객센터 - 문의 내용 목록</h2>
 		</div>
 		<ul class="tab_wrap outer actionmovingbar">
-			<li><button type="button" class="tab_tit" style="width: 50%; left: 0%;" onclick="location.href='./HpLoginAction.hp';">
+			<li>
+				<button type="button" class="tab_tit" style="width: 33.33%; left: 0%;" onclick="">
+					<span>공지 사항</span>
+				</button>
+			</li>
+			<li><button type="button" class="tab_tit" style="width: 33.33%; left: 33.33%;" onclick="location.href='./HpLoginAction.hp';">
 					<span>1:1문의</span>
 				</button></li>
-			<li class="active"><button type="button" class="tab_tit" style="width: 50%; left: 50%;">
+			<li class="active"><button type="button" class="tab_tit" style="width: 33.33%; left: 66.67%;">
 					<span>문의 내용 목록</span>
 				</button>
 				<div class="tab_con">

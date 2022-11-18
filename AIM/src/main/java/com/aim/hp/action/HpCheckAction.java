@@ -18,11 +18,11 @@ public class HpCheckAction implements Action {
 		System.out.println("M : HpAdminAction_execute() 호출 ");
 		
 		String mb_id = request.getParameter("mb_id");
-		String hp_deletepw = request.getParameter("hp_deletepw");
+		String mb_pw = request.getParameter("mb_pw");
 		
 		// DAO - 로그인 여부 체크 메서드 loginCheck()
 		HpDAO dao = new HpDAO();
-		int result = dao.loginCheck(mb_id, hp_deletepw);
+		int result = dao.loginCheck(mb_id, mb_pw);
 		
 		if(result == 0) {
 			response.setContentType("text/html; charset=UTF-8");

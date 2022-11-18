@@ -23,7 +23,7 @@
 				alt="스토어"></a>
 			<a href="#">
 				<img
-				src="https://caching.lottecinema.co.kr//Media/WebAdmin/e339dfaae8d74acfbf7b0c6987442ac8.png"
+				src="./HpAdmin.hp"
 				alt="고객센터"></a>
 
 			<a href="#" class="qick_top">TOP</a> <!-- top 수정금지 -->

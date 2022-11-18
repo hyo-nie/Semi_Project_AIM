@@ -137,7 +137,7 @@ public class HpFrontController extends HttpServlet {
 				e.printStackTrace();
 			}
     	}
-    	// 문의한 내용 확인
+    	// 문의한 내용 삭제 유무 확인
     	else if(command.equals("/MyHpDeleteCheck.hp")) {
     		System.out.println(" C : MyHpDeleteCheck.hp 실행 ");
     		
