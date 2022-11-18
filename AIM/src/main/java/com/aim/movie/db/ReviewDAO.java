@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -42,15 +43,20 @@ public class ReviewDAO {
   } 
   // 자원해제
   
+  
   /**
    * getReviewList(movieCD) : 해당 영화의 리뷰 글 정보를 가져오는 메서드
+   * 리뷰 페이지에 회원등급에 따른 아이콘 표시를 위해 review테이블, member테이블 조인
    */
   public ArrayList getReviewList(String movieCd) {
     ArrayList reviewList = new ArrayList();
     
     try {
       con = getConnection();
-      sql = "select * from review where movieCd=?";
+      sql = "select A.reviewNo, A.review, A.date, A.movieCd, A.mb_nick, A.mb_id, B.mb_grade "
+      		+ "from review A JOIN member B "
+      		+ "on A.mb_id = B.mb_id "
+      		+ "where movieCd=?";
       pstmt = con.prepareStatement(sql);
       pstmt.setString(1, movieCd);
       rs = pstmt.executeQuery();
@@ -62,6 +68,7 @@ public class ReviewDAO {
         dto.setReview(rs.getString("review"));
         dto.setDate(rs.getTimestamp("date"));
         dto.setMb_nick(rs.getString("mb_nick"));
+        dto.setMb_grade(rs.getInt("mb_grade"));
         
         reviewList.add(dto);
       }
@@ -137,6 +144,7 @@ public class ReviewDAO {
   //insertReview(DTO) 끝
   
   
+
   
   
   

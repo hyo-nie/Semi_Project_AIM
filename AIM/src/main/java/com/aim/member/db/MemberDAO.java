@@ -208,6 +208,7 @@ public class MemberDAO {
 	   return result;
    } // 아이디 중복체크 - idCheck(mb_id)
    
+   
    // 닉네임 중복체크 - NickCheck(mb_nick)
    	public int NickCheck(String mb_nick) {
 	   int result = 0; 
@@ -235,32 +236,6 @@ public class MemberDAO {
 	   return result;
    } // 닉네임 중복체크 끝 - NickCheck(mb_nick)
    
-   
-   //회원정보 조회 메서드 - getMember
-   	public MemberDTO getMember(String mb_id) {
-   		MemberDTO dto = new MemberDTO();
-   		try {
-			con = getConnection();
-			sql = "select * from member where mb_id=?";
-			pstmt = con.prepareStatement(sql);
-			pstmt.setString(1, mb_id);
-			rs = pstmt.executeQuery();
-			
-			if(rs.next()) {
-				dto.setMb_nick(rs.getString("mb_nick"));
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			closeDB();
-		}
-   		
-   		
-   		
-   		return dto;
-   		
-   	}
-   //회원정보 조회 메서드 - getMember
    	
     // id에 해당하는 회원의 info을 받아오는 메서드 - getMemberInfo(id)
     public MemberDTO getMemberInfo(String mb_id) {
@@ -278,7 +253,7 @@ public class MemberDAO {
  			
  			dto.setMb_birth(rs.getString("mb_birth"));
  			dto.setMb_gender(rs.getString("mb_gender"));
- 			dto.setMb_grade(0);
+ 			dto.setMb_grade(rs.getInt("mb_grade"));
  			dto.setMb_id(mb_id);
  			dto.setMb_name(rs.getString("mb_name"));
  			dto.setMb_nick(rs.getString("mb_nick"));
@@ -287,15 +262,12 @@ public class MemberDAO {
  			dto.setMb_tel(rs.getString("mb_tel"));
  			dto.setMb_view(rs.getInt("mb_view"));
  		}
-// 		System.out.println("@@@@@@@@@dto에 저장이 완료되었습니다");
- 		
  	} catch (Exception e) {
  		e.printStackTrace();
  	}
- 	   
  	   return dto;
     }
-    
+    //getMemberInfo() 끝
    
    
    

@@ -28,7 +28,11 @@
 		
 		<input type="button" value="DB에 추천 영화 저장" onclick="location.href='./AdminMovieInsert2.mv'">
 	</form>
+		<br><br><br><br><br><br>
 	
+	<h2>여긴 스케줄등록하는자리</h2><br>
+	<a href="./AdminScheAdd.th">스케줄 등록하기</a><br><br>
+	<a href="./AdminScheList.th">관리자 스케줄 리스트</a>
 	
 	
 	

@@ -250,6 +250,7 @@ public class TheaterDAO {
 				selectScheList.setStarttime(rs.getString("starttime"));
 				selectScheList.setMovieNm(rs.getString("movieNm"));
 				selectScheList.setWatchGradeNm(rs.getString("watchGradeNm"));
+				selectScheList.setSeatcomp(rs.getInt("seatcomp"));
 				
 			}//if
 			System.out.println("선택한 상영정보 저장완료");

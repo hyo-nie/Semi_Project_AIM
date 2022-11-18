@@ -34,7 +34,8 @@ public class ReviewWriteAction implements Action {
 		
 		
 		MemberDAO mdao = new MemberDAO();
-		MemberDTO mdto = mdao.getMember(mb_id);
+		MemberDTO mdto = mdao.getMemberInfo(mb_id);
+		
 		
 		ReviewDTO dto = new ReviewDTO();
 		dto.setReview(review_sy);

@@ -320,6 +320,7 @@ public class MovieDAO {
         
 	}
 	
+	
 	/**
 	 * AdminMovieRecommend() - movie 테이블에 추천 영화 정보 저장하는 메서드
 	 */
@@ -357,6 +358,7 @@ public class MovieDAO {
 		         closeDB();
 		      }
 		   } // AdminMovieRecommend 끝
+
 	
 		/**
 		 * AdminMovieModify() - movie 테이블에 추천 영화 정보 수정하는 메서드
@@ -396,6 +398,8 @@ public class MovieDAO {
 		}	
 		// 영화정보 수정메서드 - AdminMovieModify(DTO)
 		
+		
+		
 		/**
 		 * AdminMovieDelete() - movie 테이블에 추천 영화 정보 삭제하는 메서드
 		 */
@@ -421,6 +425,8 @@ public class MovieDAO {
 		}
 		
 		// 영화정보 삭제메서드 - AdminMovieDelete(MovieCd)
+	
+	
 	
 	
 	
