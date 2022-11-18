@@ -13,8 +13,8 @@
 	<!-- 상위 배너 -->
 	<jsp:include page="../inc/topbanner.jsp" />
 	<!-- 헤더/네비 -->
-	<jsp:include page="../inc/login_nav_bar.jsp" />
-	<br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<jsp:include page="../inc/nav_bar.jsp" />
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 	<div id="contents"
 		class="contents_movie_detail area__movingbar litype2">
 		<h2 class="hidden">영화</h2>
@@ -148,8 +148,24 @@
 							<ul class="review_con_list" id="review_con_list1"></ul>
 							<ul class="review_con_list" id="review_con_list2">
 							<c:forEach var="redto" items="${reviewListAll }">
-							<li><span class="img_info">
-								<img src="../Content/images/customer/ic_survey_02.png" alt=""></span>
+							<li>
+								<c:choose>
+									<c:when test="${redto.mb_grade==1 }">
+										<span class="img_info"><img src="./assets/img/silver.png" alt="silver"></span>
+									</c:when>
+									<c:when test="${redto.mb_grade==2 }">
+										<span class="img_info"><img src="./assets/img/gold.png" alt="gold"></span>
+									</c:when>
+									<c:when test="${redto.mb_grade==3 }">
+										<span class="img_info"><img src="./assets/img/vip.png" alt="vip"></span>
+									</c:when>
+									<c:when test="${redto.mb_grade==4 }">
+										<span class="img_info"><img src="./assets/img/vvip.png" alt="vvip"></span>
+									</c:when>
+								</c:choose> 
+								
+							<span class="img_info">
+							</span>
 								<div class="top_info"><span class="name">${redto.mb_nick }</span>
 								<span class="txt_ic_score">
 									<span class="stargradebg">
@@ -158,7 +174,8 @@
 										</span>
 									</span>
 								</span>
-								<span class="date_info">${redto.date}</span></div>
+								<span class="date_info" style="float:right; color:gray;">
+								<fmt:formatDate value="${redto.date}" pattern="yyyy.MM.dd"/></span></div>
 								<div class="review_info">${redto.review }</div>
 								<div class="btm_info">
 									<div class="edit_review"><em></em></div>

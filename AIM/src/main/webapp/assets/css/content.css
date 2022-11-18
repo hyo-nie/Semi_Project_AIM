@@ -399,7 +399,8 @@ ver : 1.01 20191219 2502 line > íŒì—…ë©”ë‰´ ê³ ì •ë†�
 .review_con_list > li {position:relative; padding:20px 0 15px 68px; border-top:1px solid #eee}
 .review_con_list > li:first-child {border-color:#ccc}
 .review_con_list > li.my_review {background:#F8F8F8}
-.review_con_list > li .img_info {display:block; position:absolute; top:15px; left:10px; overflow:hidden; width:42px; height:42px; border-radius:50%;}
+.review_con_list > li .img_info {display:block; top:5px; left:5px; position:absolute; /*수정*/ 
+ overflow:hidden; width:70px; height:70px; border-radius:50%;}
 .review_con_list > li .img_info img {width:100%; border-radius:50%;}
 .review_con_list .top_info {margin-bottom:12px;}
 .review_con_list .top_info .name_info {position:relative; padding-right:11px; margin-right:9px; font-size:12px;}
