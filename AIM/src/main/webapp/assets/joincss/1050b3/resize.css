@@ -1,0 +1,915 @@
+@charset "utf-8";
+
+/* onlyPC */
+@media only screen and (min-width:1024px){
+	/* 휴대폰본인인증 2열약관 */
+	.grid-col2:after {content:'';display:block;clear:both;}
+	.grid-col2 .inner {float:left;width:50%;}
+	.grid-col2 .inner:first-child {margin-top:10px;}
+	.__opt-in .grid-col2 .inner:nth-child(2n+1) .ui-wrap {padding-right:160px;}
+	.__opt-in .grid-col2 .inner:nth-child(2n+1) .ui-wrap .detail {right:100px;}
+	.__opt-in .grid-col2 .inner:nth-child(2n) .ui-wrap {padding-left:100px;}
+	.form-wrap.__post .inner.__choice {margin-top:7px;}
+	.col-md > .form-wrap.__choice + .form-wrap.__choice {margin-top:12px;}
+	
+	/* layout */
+	#mast-foot > .container {padding-right:330px;}
+	#mast-foot .com-address span {white-space:nowrap;}
+	#mast-foot .com-address span:not(:first-child):before {content:none;}
+	#mast-foot .com-address span:not(:last-child):after {content:'|';display:inline;margin:0 5px;color:#b7b7b7;}
+	
+	/* 유료회원제 */
+	/* 툴팁 - 이용권 등록 관리 */
+	.__oners .contents .use_wrap .oners-tooltip-view{top: 16px;}
+	/* 서비스 해지 */
+	.__benefits.type03 .service_cancel_wrap .btn-area {padding:11px 30px 35px;}
+	.__benefits.type03 .service_cancel_wrap .benefits_list li {width:38%;padding: 25px 0 0 18%;}
+	.__benefits.type03 .service_cancel_wrap .benefits_list li:first-child,
+	.__benefits.type03 .service_cancel_wrap .benefits_list li:nth-child(2) {padding-top: 50px;}
+	.__benefits.type03 .service_cancel_wrap .benefits_list li:nth-child(6){margin-bottom:35px;}
+	
+	/* 연간결제변경 */	
+	.contents .contents_round_box{margin: 0 30px;}
+	
+	.btn-pay-flag {position: absolute;display: inline-block;right:35%; top:1065px; }
+	.btn-area.__fixed.bg-none._center-btn {margin:0 auto; width:40%;}
+
+	/* 이용권 등록 */
+	#mast-body.__oners.__oners-step-third .section:nth-child(2){ background-color:#fafafa; margin-left:200px; margin-right:200px;}
+	.oners_step3_certified {height:100%; width:100%; padding:50px 200px 70px 200px;}
+	/* 신용카드 등록 */
+	.__oners .ui-check._card-chk-div .card-chk-label { position: relative;left: 159px;}
+}
+
+/* 타블렛 */
+@media only screen and (min-width:681px) and (max-width:1024px) {
+	/* 공통여백 */
+	.__high {margin:0 0 60px !important;}
+	.__half {margin:0 0 50px !important;}
+	.__low {margin:0 0 20px !important;}
+
+	/* Layout */
+	#mast-head {height:60px;}
+	#mast-head .bi {font-size:16px;height:60px;line-height:60px;background:none;}
+	#mast-head .bi > a {float:none;display:inline-block;height:60px;}
+	#mast-head .bi > a:nth-child(2) {display:none;}
+	#mast-head .language {right:30px;top:18px;}
+	#mast-body .container {padding:20px 30px 80px;width:auto;}
+	#mast-body .toparea {margin-bottom:59px;}
+	#mast-body .step > .order:before {margin:0 5px;}
+	#mast-head .container,
+	#mast-foot .container {padding:0 30px;width:auto;}
+	#mast-foot .utility {display:flex;display:-webkit-flex;flex-wrap:wrap;-webkit-flex-wrap:wrap;}
+	#mast-foot .utility > .item {position:relative;margin:0;padding:0;font-size:13.905px;line-height:1.6;text-align:center;white-space:nowrap;}
+	#mast-foot .utility > .item:before {margin:0 10px;}
+	#mast-foot .utility > .item:first-child:before {content:none;}
+	#mast-foot .copyright {text-align:left;}
+	#mast-foot .friendly {display:none;}
+	#mast-foot .com-address {display:none;}
+
+	/* toparea */
+	.headline {font-size:30px;line-height:38px;}
+	.headline.__error:before {height:135px;background:url('../images/ico/ico-error__x2.png') no-repeat 0 0;background-size:74px 117px;}
+	.headline.__success:before {height:135px;background:url('../images/ico/ico-success__x2.png') no-repeat 0 0;background-size:74px 117px;}
+	.step-desc {padding:20px 0px 7px;font-weight:100;font-size:36px;line-height:44px;color:#000;}
+	.title {margin-bottom:18px;padding:7px 0;}
+
+	/* subject */
+	.subject {margin:0 -30px;padding:0 30px 5px;font-size:15px;}
+	.subject > em {display:block;margin:0 -30px;padding:0 30px;width:auto;}
+	.subject > .description {display:block;white-space:inherit !important;word-break:keep-all;}
+	.subject.__underline > .description {margin:5px 0 0;}
+
+	/* 회원탈퇴 */
+	.warning {font-size:15px;}
+	
+	/* 간편로그인 */
+	.section.__simplogin {margin:70px 0 !important}
+
+	/* button */
+	.link-arrow2 {background-image:url('../images/ico/ico-link-arrow2__x2.png');background-size:5px 7px;}
+
+	/* tooltip */
+	.tooltip-trigger {background:url('../images/ico/ico-inform__x2.png') no-repeat 0 0;background-size:14px 14px;}
+
+	/* 우편번호 입력 */
+	.form-wrap.__post .inner.__choice {margin-top:7px;}
+	.col-md > .form-wrap.__choice + .form-wrap.__choice {margin-top:12px;}
+	.postcode-finder {left:0;top:0;width:100%;border:0;} /* form : 우편번호 */
+
+	/* 본인인증 */
+	#section-certify-way .item-wrap .item.certify-hp {background-image:url('../images/ico/ico-certify-hp__x2.png');background-size:60px 60px;} /* 휴대폰인증 */
+	#section-certify-way .item-wrap .item:hover.certify-hp,
+	#section-certify-way .item-wrap .item:focus.certify-hp {background-image:url('../images/ico/ico-certify-hp__x2.png');background-size:60px 60px;}
+	#section-certify-way .item-wrap .item.certify-card {background-image:url('../images/ico/ico-certify-card__x2.png');background-size:60px 60px;} /* 카드인증 */
+	#section-certify-way .item-wrap .item:hover.certify-card,
+	#section-certify-way .item-wrap .item:focus.certify-card {background-image:url('../images/ico/ico-certify-card__x2.png');background-size:60px 60px;}
+	#section-certify-way .item-wrap .item.certify-ipin {background-image:url('../images/ico/ico-certify-ipin__x2.png');background-size:60px 60px;} /* 아이핀인증 */
+	#section-certify-way .item-wrap .item:hover.certify-ipin,
+	#section-certify-way .item-wrap .item:focus.certify-ipin {background-image:url('../images/ico/ico-certify-ipin__x2.png');background-size:60px 60px;}
+	#section-certify-way .item-wrap .item.certify-document {background-image:url('../images/ico/ico-certify-document__x2.png');background-size:60px 60px;} /* 공인인증서인증 */
+	#section-certify-way .item-wrap .item:hover.certify-document,
+	#section-certify-way .item-wrap .item:focus.certify-document {background-image:url('../images/ico/ico-certify-document-on__x2.png');background-size:60px 60px;}
+	#section-certify-way .item-wrap .item.certify-stone {background-image:url('../images/ico/ico-certify-stone__x2.png');background-size:60px 60px;} /* 지문인증 */
+	#section-certify-way .item-wrap .item:hover.certify-stone,
+	#section-certify-way .item-wrap .item:focus.certify-stone {background-image:url('../images/ico/ico-certify-stone-on__x2.png');background-size:60px 60px;}
+	#section-certify-way .item-wrap .item.certify-email {background-image:url('../images/ico/ico-certify-email__x2.png');background-size:60px 60px;} /* 이메일인증 */
+	#section-certify-way .item-wrap .item:hover.certify-email,
+	#section-certify-way .item-wrap .item:focus.certify-email {background-image:url('../images/ico/ico-certify-email__x2.png');background-size:60px 60px;}
+	
+	/* 유료회원제 */
+	/* 일괄가입 */
+		/* 가입불가 */
+	.bot-graybox {margin:0 -30px -80px;}
+	.btn-area.__fixed {margin:0 -30px;}
+	
+	/* 유료회원가입 */
+	#mast-head.__oners .container .btn-h-back {top:5px;}
+	#mast-head.__oners h1 {height:60px; line-height:60px;}
+		/* 신용카드등록 */
+	.card-info-area {margin:-20px -30px 0;}
+	/* .card-info-area .form-wrap.__card-num .ui-input {width:25%;}
+	.card-info-area .form-wrap.__card-num .ui-input:first-child {width:20%;} */
+	
+		/* 컨텐츠 내 버튼 */
+	.__oners .btn-area.__c-inner {margin:0 -30px;}
+	
+		/* 혜택 리스트 */
+			/* 가입안내 */
+	.__benefits {margin:0 -30px;}
+	
+			/* 서비스해지 */
+	.__benefits.type01 .benefits-list-wrap .benefits-list {padding:1px 16px 0;}
+	.__benefits.type01 .benefits-list li {width:33.333%; border-top:1px solid #ededed; border-left:1px solid #ededed;}
+	.__benefits.type01 .benefits-list li:nth-child(1), .__benefits.type01 .benefits-list li:nth-child(4) {border-left:none;}
+	.__benefits.type01 .benefits-list li:nth-child(1), .__benefits.type01 .benefits-list li:nth-child(2), .__benefits.type01 .benefits-list li:nth-child(3) {margin-top:15px; padding-top:65px; border-top:0;}
+	.__benefits.type01 .benefits-list li:nth-child(4), .__benefits.type01 .benefits-list li:nth-child(5), .__benefits.type01 .benefits-list li:nth-child(6) {margin-bottom:15px; padding-bottom:5px;}
+		/* 약관동의 */
+	.__oners .section.__payment {margin:0 -30px;}
+	.__oners .section.__chk-wrap {margin:0 -30px;}
+		/* 상단 박스 디자인 */
+	.color-box-wrap {margin:-20px -30px 0;}
+	
+	/*2019-11-22 신규추가*/
+	.desc-area.mob-title-area{display:none;}
+	/*2019-11-25 신규추가*/
+	.headline-img-size{width:76px; height:76px;}
+	
+	/*2019-12-31 신규추가*/
+	.section.__half._homepage_none{display:block;}
+	.login-btn-wrap.__mob-login-area {text-align:center;margin: 0 auto; width: 300px;  border-top:none;}
+	
+	/* 서비스 해지 */
+	.__benefits.type03 .service_cancel_wrap .btn-area {padding:11px 30px 30px;}
+	.__benefits.type03 .service_cancel_wrap .benefits_list li {width:45%; padding: 20px 0 0 13%;}
+	.__benefits.type03 .service_cancel_wrap .benefits_list li:first-child,
+	.__benefits.type03 .service_cancel_wrap .benefits_list li:nth-child(2) {padding-top: 40px;}
+	.__benefits.type03 .service_cancel_wrap .benefits_list li:nth-child(6){margin-bottom:30px;}
+	/* 연간결제변경 마진수정: 2019-12-24  */
+	.contents .contents_round_box{margin: 0;}
+	/* 정보관리 */
+	#mast-body.__oners.__data {background: #fff;}
+	
+	/* 2020-01-14 top수정 */
+	.btn-pay-flag {position: absolute; display: inline-block;right:32%; top:1043px; }
+	
+	/* 2020-01-23 신용카드 등록  */
+	.section .row > .col-md._dislpay-ib:nth-child(2), .section .row > .col-md._dislpay-ib2:nth-child(2){width: 50%;}
+	.__oners .ui-check._card-chk-div .card-chk-label{margin:6px 5px 0 0;}
+	.__oners .ui-check._card-chk-div .card-chk-label:before{    top: 13px;}
+	
+}/* (min-width:681px) and (max-width:1024px) */
+/* 모바일 */
+@media only screen and (max-width:680px) {
+	/* 공통여백 */
+	.__high {margin:0 0 60px !important;}
+	.__half {margin:0 0 40px !important;}
+	.__low {margin:0 0 20px !important;}
+
+	.ui-input.__disable > label {font-size:inherit;}
+
+	/* Layout */
+	#mast-head {height:50px;}
+	#mast-head .bi {font-size:16px;height:50px;line-height:50px;background:none;}
+	#mast-head .bi > a {float:none;display:inline-block;height:50px;}
+	#mast-head .bi > a:nth-child(2) {display:none;}
+	#mast-head .language {right:30px;top:10px;}
+	#mast-head .container {padding:0 30px;width:auto;}
+	#mast-foot .container {padding:0 10px;width:auto;text-align:center;}
+	#mast-body .container {padding:20px 30px 70px 30px;width:auto;}
+	#mast-body .toparea {margin-bottom:57px;}
+	#mast-body .step > .order:before {margin:0 5px;}
+	#mast-foot .utility {display:inline-block;}
+	#mast-foot .friendly {display:none;}
+	#mast-foot .com-address {display:none;}
+
+	/* 	toparea */
+	.headline {font-size:28px;line-height:32px;}
+	.headline.__error:before {height:140px;background:url('../images/ico/ico-error__x2.png') no-repeat 0 0;background-size:74px 117px;}
+	.headline.__success:before {height:140px;background:url('../images/ico/ico-success__x2.png') no-repeat 0 0;background-size:74px 117px;}
+	.step-desc {padding:25px 0px 0;font-weight:100;font-size:28px;line-height:34px;color:#000;}
+	.step.__1:before {top:19px;}
+	.title {margin-bottom:20px;padding:6px 0;}
+
+	/* subject */
+	.subject {margin:0 -30px;padding:0 30px 5px;font-size:15px;}
+	.subject > em {display:block;margin:0 -30px;padding:0 30px;width:auto;}
+	.subject > .description {display:block;white-space:inherit !important;word-break:keep-all;}
+	.subject.__underline > .description {margin:5px 0 0;}
+
+	/* 회원탈퇴 */
+	.warning {margin:10px 0;font-size:14px;}
+	.warning > p {margin:10px 0 0;}
+
+	/* button */
+	.btn-area + .section {margin-top:70px !important;} /* btn 다음에 section(컨텐츠)가 오는경우 */
+	.link-arrow2 {background-image:url('../images/ico/ico-link-arrow2__x2.png');background-size:5px 7px;}
+
+	/* tooltip */
+	.inform-trigger > button,
+	.inform-trigger > a {background-image:url('../images/ico/ico-inform__x2.png');background-size:14px 14px;}
+	.tooltip-trigger {background:url('../images/ico/ico-inform__x2.png') no-repeat 0 0;background-size:14px 14px;}
+	.tooltip-container {position:static;}
+	.tooltip-content {left:0;right:0;top:48px;width:auto;}
+	.tooltip-trigger {height:22px;top:4px;}
+
+	/* 컨텐츠 레이아웃 재정의 */
+	.section .subject + .row {padding:15px 0;}
+	.section .row {position:relative;padding:15px 0;border:none;}
+	.section .row:last-child {padding-bottom:0;}
+	.section.__normal .row:last-child {padding-bottom:15px;} /* 휴면해제 예외처리*/
+	.section.__signout .row:last-child {padding-bottom:15px;} /* 회원탈퇴 예외처리 */
+	.section .row > .col-md {display:block;width:auto !important;}
+	.section .row > .col-md.inner-content {display:none;}
+	.section .row > .col-md.inner-content.active {display:block;}
+
+	.section > .row.__underline {position:relative;padding:25px 0;}
+	.section > .row.__underline:before {left:-30px;right:-30px;}
+	.section > .subject + .__toggle + .row .ui-check {margin:0 0 0 10px;}
+	.section > .subject + .__toggle + .row .ui-check:first-child {margin:0;}
+
+	.section.__find {margin:0 -30px 40px !important;}
+	.section.__find > .row {padding:20px 10px;border-bottom:1px solid #eee;}
+	.section.__find > .row .ui-radio {margin-left:20px;}
+	.section.__find .subject {margin:0;padding:0;}
+	.section.__find .subject > em {margin:0;padding:0 10px;}
+	.section.__find .inner-content.active {margin:20px -10px -20px;padding:0 30px 30px;}
+	.section.__find .inner-content > .row {padding:15px 0 0;}
+	.section.__find .inner-content > .row .col-md:first-child {line-height:34px;}
+
+	.section.__status {margin:0 -30px 40px !important;}
+	.section.__status > .row {padding:15px 30px;border-bottom:1px solid #eee;}
+	.section.__status > .row .__toggle {right:10px;}
+	.section.__status .subject {margin:0;padding:0;}
+	.section.__status .subject > em {margin:0;padding:0 30px;}
+	.section.__status .description {padding:0 30px;}
+	.section.__status .__expand .description {padding:0;}
+	.section.__status .cert-status {top:5px;right:10px;}
+	.section.__banner .list > a {width:100%;}
+	.section.__only-mobile {display:block;}
+	.section.__linear {margin:0 -30px;padding:30px;}
+
+	/* 마케팅정보수신/개인정보유효기간 */
+	.section.__expiry > .subject + .__toggle {margin:25px 0 0;padding:0;border:none;}
+	.section.__expiry .__agreement .row {padding:5px 0;border:none;}
+	.section.__expiry .row {padding-bottom:0 !important;}
+
+	/* 선택약관동의결과 */
+	.__topLine {border-top:0px solid #d0d0d0 !important;}
+	.__bottomLine {border-bottom:0px solid #d0d0d0  !important;}
+	.description.__topLine {padding-top:20px;} /*비밀번호강제권고*/
+	.description.__topLine:before {content:'';position:absolute;top:0;left:-30px;display:block;width:calc(100% + 60px);height:1px;background:#d0d0d0;}
+	.description.__topLine .coer {margin-bottom:10px;}
+
+	/* Lpoint아이디전환 케이스 추가 */
+	.section > .row.__depth > .col-md:first-child {line-height:34px;}
+	.section > .row.__depth .row > .col-md:first-child {line-height:1.5;}
+	.section > .row.__depth .row > .inner-content.active > .form-wrap {margin:10px 0 0 !important;}
+
+	/* form */
+	.form-wrap {flex-basis:100%;-webkit-flex-basis:100%;flex-wrap:wrap;-webkit-flex-wrap:wrap;}
+	.form-wrap > .inner {display:flex;display:-webkit-flex;flex-basis:100%;-webkit-flex-basis:100%;justify-content:space-between;-webkit-justify-content:space-between;}
+	.form-wrap.__normal .ui-select,
+	.form-wrap.__normal .ui-input	{margin:0;width:100%;max-width:none;}
+	.form-wrap.__x1 {display:flex;display:-webkit-flex;justify-content:space-between;-webkit-justify-content:space-between;}
+	.form-wrap.__x1 .ui-input {flex-basis:75%;-webkit-flex-basis:75%;}
+	.form-wrap.__x1 .ui-button {margin:0;flex-basis:24%;-webkit-flex-basis:24%;}
+	.form-wrap.__x2 {display:flex;display:-webkit-flex;justify-content:space-between;-webkit-justify-content:space-between;}
+	.form-wrap.__x2 .ui-input {flex-basis:50%;-webkit-flex-basis:50%;}
+	.form-wrap.__x2 .ui-button {flex-basis:24%;-webkit-flex-basis:24%;}
+	.form-wrap.__choice {display:block;margin:7px 0 0;width:100%;}
+
+	/* 휴대폰번호 */
+	.form-wrap.__mobile {display:flex;display:-webkit-flex;justify-content:space-between;-webkit-justify-content:space-between;}
+	.form-wrap.__mobile.__x3 .ui-input,
+	.form-wrap.__mobile.__x3 .ui-select {margin:0;flex-basis:32%;-webkit-flex-basis:32%;}
+	.form-wrap.__mobile.__x4 .ui-input,
+	.form-wrap.__mobile.__x4 > span,
+	.form-wrap.__mobile.__x4 .ui-select {margin:0;flex-basis:24%;-webkit-flex-basis:24%;}
+	.form-wrap.__mobile.__x4 > button{margin:0;}
+	.form-wrap.__mobile .ui-select {margin-left:0;}
+	.form-wrap.__mobile .ui-input {margin-left:5px;}
+	.form-wrap.__mobile > .ui-input:first-child,
+	.form-wrap.__mobile > .inner > .ui-input:first-child {margin-left:0;}
+	.form-wrap.__mobile .ui-input + .ui-input:before {display:none;}
+
+	/* 통신사 + 휴대폰번호 */
+	.form-wrap.__mobile.__telecom {padding-left:113px;flex-wrap:nowrap;-webkit-flex-wrap:nowrap;}
+	.form-wrap.__mobile.__telecom,
+	.form-wrap.__mobile.__telecom .inner {flex-basis:auto;-webkit-flex-basis:auto;}
+	.form-wrap.__mobile.__telecom > .ui-select:first-child,
+	.form-wrap.__mobile.__telecom > .inner > .ui-select:first-child {position:absolute;left:0;top:0;width:108px;display:block;}
+
+	/* 전화번호 */
+	.form-wrap.__phone {display:flex;display:-webkit-flex;justify-content:space-between;-webkit-justify-content:space-between;}
+	.form-wrap.__phone .ui-select,
+	.form-wrap.__phone .ui-input {margin:0;flex-basis:32%;-webkit-flex-basis:32%;}
+	.form-wrap.__phone .ui-input:before {content:none;}
+	.form-wrap.__phone .ui-check {margin:7px 0 0 7px;}
+
+	/* 우편번호 입력 */
+	.form-wrap.__post .inner {justify-content:flex-start;-webkit-justify-content:flex-start;}
+	.form-wrap.__post .ui-input {width:100%;}
+	.form-wrap.__post .postcode > .ui-input,
+	.form-wrap.__post .postcode > .ui-input > input {text-align:center;}
+	.form-wrap.__license {display:flex;display:-webkit-flex;justify-content:space-between;-webkit-justify-content:space-between;}
+	.form-wrap.__license .ui-input {margin:0;flex-basis:32%;-webkit-flex-basis:32%;}
+	.form-wrap.__license .ui-input:before {content:none;}
+	.form-wrap.__date {display:flex;display:-webkit-flex;justify-content:space-between;-webkit-justify-content:space-between;}
+	.form-wrap.__date .ui-select {margin:0;flex-basis:32%;-webkit-flex-basis:32%;}
+	.form-wrap.__date .ui-select:first-child {margin:0;}
+	.form-wrap.__agreement .row:first-child {border:none;}
+	.form-wrap.__agreement .row > .col-md {display:block;width:auto;}
+	.form-wrap.__agreement .row > .col-md:first-child {padding:5px 0;width:auto;}
+
+	/* form : 우편번호 */
+	.postcode-finder {left:0;right:0;top:0;bottom:0;padding:0;width:100%;border:0;}
+	.postcode-finder .postcode-wrap .hidden-content button > span{display:block;}
+	.postcode-finder .postcode-wrap .hidden-content .row > div{display:block;}
+	.postcode-finder .postcode-wrap .hidden-content .row > .col-md-2, .postcode-finder .postcode-wrap .hidden-content .row > .col-md-10 {width:100%;}
+	.postcode-finder .row-list .labels {position:relative;display:block;padding:0 31px 0 0;width:150px;color:#8a8a8a;}
+	.postcode-finder .row-list .labels:before {display:none;}
+
+	/* 본인인증 */
+	#section-certify-way .item-wrap .item.certify-hp {background-image:url('../images/ico/ico-certify-hp__x2.png');background-size:60px 60px;} /* 휴대폰인증 */
+	#section-certify-way .item-wrap .item:hover.certify-hp,
+	#section-certify-way .item-wrap .item:focus.certify-hp {background-image:url('../images/ico/ico-certify-hp__x2.png');background-size:60px 60px;}
+	#section-certify-way .item-wrap .item.certify-card {background-image:url('../images/ico/ico-certify-card__x2.png');background-size:60px 60px;} /* 카드인증 */
+	#section-certify-way .item-wrap .item:hover.certify-card,
+	#section-certify-way .item-wrap .item:focus.certify-card {background-image:url('../images/ico/ico-certify-card__x2.png');background-size:60px 60px;}
+	#section-certify-way .item-wrap .item.certify-ipin {background-image:url('../images/ico/ico-certify-ipin__x2.png');background-size:60px 60px;} /* 아이핀인증 */
+	#section-certify-way .item-wrap .item:hover.certify-ipin,
+	#section-certify-way .item-wrap .item:focus.certify-ipin {background-image:url('../images/ico/ico-certify-ipin__x2.png');background-size:60px 60px;}
+	#section-certify-way .item-wrap .item.certify-document {background-image:url('../images/ico/ico-certify-document__x2.png');background-size:60px 60px;} /* 공인인증서인증 */
+	#section-certify-way .item-wrap .item:hover.certify-document,
+	#section-certify-way .item-wrap .item:focus.certify-document {background-image:url('../images/ico/ico-certify-document-on__x2.png');background-size:60px 60px;}
+	#section-certify-way .item-wrap .item.certify-stone {background-image:url('../images/ico/ico-certify-stone__x2.png');background-size:60px 60px;} /* 지문인증 */
+	#section-certify-way .item-wrap .item:hover.certify-stone,
+	#section-certify-way .item-wrap .item:focus.certify-stone {background-image:url('../images/ico/ico-certify-stone-on__x2.png');background-size:60px 60px;}
+	#section-certify-way .item-wrap .item.certify-email {background-image:url('../images/ico/ico-certify-email__x2.png');background-size:60px 60px;} /* 이메일인증 */
+	#section-certify-way .item-wrap .item:hover.certify-email,
+	#section-certify-way .item-wrap .item:focus.certify-email {background-image:url('../images/ico/ico-certify-email__x2.png');background-size:60px 60px;}
+
+	/* 통합회원 2단계 인증 추가 */
+	#section-certify-way .item-wrap .item.certify-card {background-image:url('../images/ico/ico-certify-card__x2.png');background-size:60px 60px;} /* 카드인증 */
+	#section-certify-way .item-wrap .item:hover.certify-card,
+	#section-certify-way .item-wrap .item:focus.certify-card {background-image:url('../images/ico/ico-certify-card__x2.png');background-size:60px 60px;}
+	/* //통합회원 2단계 인증 추가 */
+
+	/* popup : 주소검색 */
+	.detail-address span{display:block;}
+	.detail-address span.addr-tit{width:100%;}
+	.detail-address span.addr-tit + .addr-txt{margin-top:30px;}
+	.detail-address span.addr-txt{width:100%;}
+
+	/* 정보입력 선택 */
+	.read-only {margin-top:0;}
+
+	/* main */
+	.index-area {padding:100px 20px 0;}
+	.index-area .headline {font-size:28px;line-height:34px;}
+	.index-area .headline span {display:inline-block;}
+	
+	/* 앱로그인 */
+	.section.__simplogin {margin-bottom:40px !important;}
+	
+	/* 유료회원제 */
+	/* 일괄가입 */
+		/* 회원가입 */
+	.sub-desc:after {margin:45px auto 0;}
+		/* 가입불가 */
+			/* 안내 문구 */
+	.bot-graybox {margin:0 -30px -70px;}
+	.terms-more-wrap .form-wrap > .inner {display:block;}
+			/* 리스트 */
+	.section.__normal02 > .row:nth-child(even) {padding:15px 0 0;}
+	.section.__normal02 > .row:nth-child(odd) {padding:5px 0 20px 0; border-bottom:1px solid #eee;}
+	.section.__normal02 > .row:nth-child(odd) .ui-input.__disable > label {color:#8a8a8a; line-height:22px;}
+			/* 가입완료 */
+	.headline.__success02:after {margin:75px auto 65px;}
+		/* 하단 고정 버튼 */
+	.btn-area.__fixed {position:fixed; left:0; bottom:0; width:100%; padding:0; text-align:inherit;  z-index:100;}
+	.btn-area.__fixed .ui-check {display:block; width:100%; margin:0; padding:23px 30px; line-height:1; border-top:1px solid #000; background:#fff;}
+	.btn-area.__fixed .ui-check > input {left:31px; top:50%; margin-top:-7px;}
+	.btn-area.__fixed .ui-check > label:before {left:30px; top:50%; margin-top:-9px;}
+	
+	#mast-body.fixed_btn.__chk-input + #mast-foot {margin-bottom:121px;}/* 회원가입 */
+	#mast-body.fixed_btn + #mast-foot {margin-bottom:56px;}/* 회원가입완료 */
+	#mast-body.fixed_btn2 + #mast-foot {margin-bottom:96px;}/* 유료회원 카드등록 */
+	#mast-body.fixed_btn2.__index-o  + #mast-foot {margin-bottom:88px;}/* oners index */
+
+	/* 유료회원가입 */
+	#mast-head.__oners .container .btn-h-back {top:5px; height:40px; padding:12px 15px 11px 15px;}
+	#mast-head.__oners h1 {height:50px; line-height:50px;}
+	#mast-body.__oners .container {padding:16px 40px 24px;}
+	#mast-body.__oners.__terms-list .container {padding-bottom:8px;}
+	#mast-body.__oners.__index-o .container,
+	#mast-body.__oners.__benefits-o .container {padding-bottom:0;}
+	.modal-container.__oners-layer .modal-header {position:fixed;}
+		/* 버튼 */
+	.__oners .btn-area.__fixed {padding:24px; background:#fff;}
+	.__oners .btn-area.bg-none {padding:16px 24px; background:transparent;}
+	.__oners .btn-area.__2 {border-top:1px solid #f5f5f5; text-align:center;}
+	.__oners .btn-area.__2.bd-none {border:none;}
+	.__oners .btn-area.__2:after, .btn-area.__2.modal-closer:after {content:'';display:block;clear:both;}
+	.__oners .btn-area.__2 .ui-button, .btn-area.__2.modal-closer .ui-button {float:left; min-width:auto; width:calc(50% - 8px);}
+	.__oners .btn-area.__2 .ui-button:first-child, .btn-area.__2.modal-closer .ui-button:first-child {margin-right:16px;}
+		/* 컨텐츠 내 버튼 */
+	.__oners .btn-area.__c-inner {margin:0 -40px;}
+		/* 카드등록 */
+	.card-wrap {width:100%;}
+			/* 약관 */
+	.__oners .section.__chk-wrap > .row .form-wrap > .inner {justify-content:flex-start;-webkit-justify-content:flex-start;}
+		/* 신용카드등록 */
+	.card-info-area {margin:-16px -40px 0;}
+	.card-info-area .form-wrap {padding:0 0 7px 0; border-bottom:1px solid #dbdbdb;}
+	.card-info-area .form-wrap.__focus {border-bottom:1px solid #888;}
+		/* 혜택 리스트 */
+			/* 가입안내 */
+	.__benefits {margin:0 -40px; padding:0 24px;}
+	.benefits-list {padding:28px 22px 0;}
+	.benefits-list li {width:50%; margin:10px 0 24px;}
+			/* 서비스해지 */
+	.__benefits.type01 .benefits-list-wrap .benefits-list {padding:1px 16px 0;}
+	.__benefits.type01 .benefits-list li {border-top:1px solid #ededed;}
+	.__benefits.type01 .benefits-list li:nth-child(1), .__benefits.type01 .benefits-list li:nth-child(2) {margin-top:15px; padding-top:65px; border-top:0;}
+	.__benefits.type01 .benefits-list li:nth-child(5), .__benefits.type01 .benefits-list li:nth-child(6) {margin-bottom:15px; padding-bottom:5px;}
+	.__benefits.type01 .benefits-list li:nth-child(even) {border-left:1px solid #ededed;}
+	.__benefits.type01 .benefits-list li.point:before, .__benefits.type01 .benefits-list li.addition:before {top:8px;}
+	.__benefits.type01 .benefits-list li:nth-child(1) .b-flag, .__benefits.type01 .benefits-list li:nth-child(2) .b-flag {top:-25px;}
+		/* 약관동의 */
+	.__oners .section.__payment {margin:0 -40px;}
+	.__oners .section.__payment .form-wrap > .inner > .ui-radio {margin:0; width:50%;}
+	.__oners .section.__chk-wrap {margin:0 -40px;}
+		/* 상단 박스 디자인 */
+	.color-box-wrap {margin:-16px -40px 0;}
+	
+	/*2019-12-31 신규추가*/
+	.section.__half._homepage_none{display:block;}
+	.login-btn-wrap.__mob-login-area {text-align:center;margin: 0 auto; width: 300px;  border-top:none;}
+	
+	/*2019-11-21 신규추가*/
+	.form-wrap.__x2 .ui-input._company-email {flex-basis:75%;-webkit-flex-basis:55%;}
+	.form-wrap.__normal .ui-select._company-select	{margin:0;width:44%;max-width:none;}
+	.form-wrap.__x2 .ui-button.__square-small.__black._mobBtn {display:block;min-width:100%; margin-top:10px;}
+	.form-wrap.__x2 .ui-button.__square-small.__black._basicBtn {display:none;}
+
+	.desc-area.mob-title-area{display:none;}
+
+	.li-service-title-comm >li:first-child, .li-service-title-comm >li:last-child {width:50%; padding-left:0;}
+	.li-service-title-comm >li:nth-child(2) {display:none;}
+	.li-service-content-comm >li:first-child {width:50%;  padding-left:0;}
+	.li-service-content-comm >li:nth-child(3), .li-service-content-comm >li:last-child {width:25%;}
+	.li-service-content-comm >li:nth-child(2) {display:none;}
+	.li-service-content-comm>li:last-child>span {float:right; padding-right:10px;}
+	.section .pagnation{display:none;}
+
+	.mob-service-div {display:block; line-height:0px;}
+	.hp-service-sp{display:none;}
+	.hp-service-sp-img{float: left; position: relative; line-height: 0px;}
+	.hp-service-sp-img>img{margin-top:5px;}
+	.mob-first-span{float: left; line-height:30px;}
+	.mob-sec-span{float: left;font-size: 0.9em;color: #999;}
+
+	.li-service-content-comm .list-date {font-size:0.9em; line-height:1.2em;}
+
+	/*2019-11-25 신규추가*/
+	.headline-img-size{width:64px; height:64px;}
+	
+	/* 툴팁 2020-01-23 추가 by이호원 */
+	/* 툴팁 - 유료회원가입,이용권 등록 관리 2020-01-23 추가 by이호원 */
+	.coupon-guide .oners-tooltip-view,.__oners .contents .use_wrap .oners-tooltip-view {left: 50%;margin-left: -152px;}
+
+	/* 툴팁 - 정기결제 등록 및 약관동의 2020-01-23 추가 by이호원 */
+	.__oners .contents .__chk-wrap2 .oners-tooltip-view {left: 50%;margin-left: -127px;}
+	/* //툴팁 2020-01-23 추가 by이호원 */
+	
+	/* bottom 버튼 수정: 2019-12-24  */
+	.__oners .btn-area.new_inner {margin: 0;}
+
+	/* 롯데카드 배너영역 수정 2019-12-26 */
+	.__oners .banner_lcard {margin:30px -16px 5px;}
+	.__oners .banner_lcard2 {margin:30px 30px 10px;}
+	
+	/* 고정 버튼1개 수정: 2019-12-24  */
+	.__oners .btn-area.__2.fixed_btn_1th{padding: 24px 16px; border-top: 0 ;}
+	.__oners .btn-area.__2.fixed_btn_1th2{padding: 24px 16px; border-top: 0 ;}
+
+
+	/* 서비스 해지 */
+	.__benefits.type03 .service_cancel_wrap .btn-area {padding:11px 30px 21px;}
+	.__benefits.type03 .service_cancel_wrap .benefits_list li {width:100%;padding: 12px 0 0 24px;}
+	.__benefits.type03 .service_cancel_wrap .benefits_list li:nth-child(1){padding: 25px 0 0 24px;}
+	.__benefits.type03 .service_cancel_wrap .benefits_list li:nth-child(6){margin-bottom:13px;}
+	
+	/* btn 추가 2019-12-27 */
+	.__oners .ui-button.__point-line2 {display: inline-block; max-width:220px;}
+	
+	/* 연간결제변경 */	
+	.contents .contents_round_box{margin: 0 -20px;}
+	.__oners .ui-button.contents_btn {font-size:13px;}	
+
+	/* 정보관리 */
+	/* 목록 타이틀 */
+	.__oners .contents .catalog_wrap h3{padding:20px 30px 20px;}
+	.__oners .contents .catalog_wrap .div_title{padding:20px 30px 20px;}
+	/* 목록 height */
+	.__oners .contents .catalog_wrap .inner_padding{padding:16px 30px;}
+	/*이메일 카카오톡 간격 */
+	.__oners .contents .catalog_wrap .row .ui-radio{margin: 0; width: 45%;}
+	/*이용권 등록 관리 */
+	.__oners .contents .use_wrap > h3:before {left:150px;}
+	/*이용권 등록 관리 arrow버튼 */
+	.__oners .section.use_wrap > .detail {right: 30px;}
+	
+	.catalog_wrap .btn-area-3-wrap{padding:16px 30px ;}
+	#mast-body.__oners.__data {background: #fff;}
+	#mast-foot .container.data_foot {padding: 0px 30px 88px 30px;px; width: auto; text-align: center;}
+	/* //정보관리 */
+
+	/* 정기결제 등록 및 약관 동의 */
+	.__oners .catalog_wrap .input-wrap{padding:0 30px 16px;}
+	#card-etc2.section.__chk-wrap {margin: 8px -40px 0;}
+	
+	/* 버튼flag 위치 수정: 2019-12-24  */
+	.btn-pay-flag {position:fixed; right:16%; bottom:85px; }
+	.btn-pay-flag:before {content:''; position:absolute; bottom:-6px; left:50%; width:0; height:0; margin:0 0 0 -6px; vertical-align:middle; border:1px solid transparent; border-top-color:#753cbe; border-width:6px 6px 0; box-shadow:0 2px 16px 0 rgba(32,28,74,0.16);}
+	
+	/* 이용권 사용관리  by 2019-12-16 최준수*/
+	._top-btn-div {margin-top:4px; width:50%; margin-left:25%;}
+	.__oners .ticket-area.__c-inner { margin: 0 -40px; padding:24px 40px 0;} 
+	.__oners .ticket-area.__c-inner .lp30p {padding-left:0}
+	.__oners .ticket-area.__c-inner .mgb15 {margin-bottom:15px;}
+	.ticket-area .area__row .use-chk-box {height:160px;}
+
+	#using-ticket_container .ticket-area .area__row.__using-ticket { width:90%; height:160px;}
+	#using-ticket_container .ticket-wrap._using {width:100%;}
+	#using-ticket_container .ticket-area .area__row.__using-ticket { width:90%; height:160px; margin-top:25px;}
+	#using-ticket_container .ticket-wrap .oners_logo:before {position:absolute; top:20px ;width:55px; height:60px; content:'';background:url(../images/common/ci-oners.png) no-repeat 0 0; background-size:auto 60px;}
+	#uses-scheduled-row {padding:12px 40px 0 40px;}
+	#using-ticket-row {border-bottom:10px solid #efefef; padding:0 40px;}
+	
+	#regist-ticket_container .ticket-area .area__row { width:100%; height:160px;}
+	
+	/* 2019-12-24  */
+	#regist-ticket_container .ticket-wrap {height:160px;}
+	#regist-ticket_container .ticket-area .area__row { margin: 0 auto 50px; }
+	#regist-ticket_container .__oners .ticket-area.__c-inner{padding-left:40px; padding-right:40px;}
+	#regist-ticket_container .ticket-wrap .oners_logo:before {position:absolute; left:-1%;top:20px ; width:55px; height:60px; content:'';background:url(../images/common/ci-oners.png) no-repeat 0 0; background-size:auto 60px;}
+
+	.__join-info.__step-error.__mg-50per {margin-top: 109px;margin-bottom: 150px;}
+	.__join-info.__step-error.__mg-50per2 {margin-top: 109px;margin-bottom: 195px;}
+	.__oners .ui-button.__square-big._radius-btn {border-radius:25px; width:50%;  height:40px; line-height:40px;}
+	.__oners .ui-button.__square-big._radius25 {border-radius:25px;}
+	
+	.ico-wave {width:30%; height:100%; float:right; position:relative; padding-left:30px; border-radius:8px;}
+	.ico-wave:before{background:url(../images/common/wave_bg.png); background-repeat: repeat-y; height:100%; left:44px; background-size:auto 23px; content: ''; position: absolute; top: 0; width:72px; margin-left:-36px;}
+	
+	/* 신용카드 등록 2020-01-23 by 이호원*/
+	._card-sign-up._col1 {width:100%; height:40px; border-radius:8px; padding:0;}
+	._card-sign-up._col2 {width: 49.5%;margin-right: 0;}
+	._card-sign-up._col2._float-righ { margin-left: 1%;}
+	.row._row-col2 {width:100%;float:left;}
+	.error-info-input {display: block; height:25px; padding-left:25px;  margin:0}
+	.row._input-area-padding {padding:15px 0 0 0; }
+	.section .row > .col-md._dislpay-ib, .section .row > .col-md._dislpay-ib2  {display: block;}
+	
+	.cert-step { display: none; }
+}
+/* 361~359px 대응*/
+@media only screen and (min-width:361px) and (max-width:367px){
+	/* 유료회원가입 안내 추가 2020-01-03 by 이호원 */	
+		/* 탭 */
+	.benefits-list2 .year-pay, .benefits-list2 .year-pay.selected{width: 122px; margin: 0; margin-bottom:20px; min-width: 153px; max-width: 270px}
+	.benefits-list2 .month-pay, .benefits-list2 .month-pay.selected{width: 122px; margin: 0; margin-left:6px; margin-bottom:20px;min-width: 153px; max-width: 270px}
+	.benefits-list2 .year-pay, .benefits-list2 .month-pay {font-size: 17px;}
+	.benefits-list2 .pay-line, .benefits-list2 .small-font {font-size: 12px;}
+	.benefits-list2 .year-pay.selected .pay_position img, .benefits-list2 .month-pay.selected .pay_position img {left: 18px;}
+		/* 센터 아이콘위치 */
+	.benefits-list2-item li > span.icon:before{left: 56%;top: 16px;}
+	.benefits-list2-item li > span.icon.point:before{left: 56%; top: 8px;}
+	.benefits-list2-item li > span.textline{font-size: 12px; top: 58px; width: 132px;}
+	.benefits-list2-item li > span.textline2{font-size: 12px; top: 48px; width: 96px; left:0;}
+		/* 왼쪽 체크 목록 */
+	.benefits-list2-item .check-left.selected:before, .benefits-list2-item .check-left:before{top: 35px; left: 35px;}
+	.benefits-list2-item .check-text-left{left: 5px; width: 80px; text-align: center; top: 60px; font-size: 11px;}
+		/* 오른쪽 체크 목록 */
+	.benefits-list2-item .check-right.selected:before, .benefits-list2-item .check-right2.selected:before, .benefits-list2-item .check-right:before, .benefits-list2-item .check-right2:before{top: 35px; right:25px;}
+	.benefits-list2-item .check-text-right {right: 20px; width: 38px; top: 61px; font-size: 11px;}
+	.benefits-list2 .year-pay.selected:before, .benefits-list2 .month-pay.selected:before{left:47%}
+		/*좌우 영역 그레이라인 길이 지정*/
+	.benefits-list2-item > li:nth-child(1), .benefits-list2-item > li:nth-child(3){min-width: 80px;}
+	/* // 유료회원가입 안내 추가 */	
+}
+/* max-width: 680px */
+@media only screen and (max-width:413px) {
+	.card-info-area .form-wrap.__card-num .ui-input {width:26%;}
+	.card-info-area .form-wrap.__card-num .ui-input:first-child {width:21%;}
+	
+	/* 유료회원제 */
+	/* 이용권 사용 관리 by 2019-12-16 최준수*/
+	#regist-ticket_container .text-header {font-size: 1.5em;}
+	#using-ticket_container .text-header {font-size: 1.5em;}
+	
+	#using-ticket-row{ padding: 0 40px;}
+	#uses-scheduled-row {padding:12px 40px 0 40px;}
+	
+	#regist-ticket_container .__oners .ticket-area.__c-inner{padding-left:20px; padding-right:20px;}
+	#regist-ticket_container .ticket-wrap .oners_logo:before { position: absolute; top: 20px;  width: 50px; left:-10%; height: 55px; content: ''; background: url(../images/common/ci-oners.png) no-repeat 0 0; background-size: auto 55px; }
+	
+	#using-ticket_container .ticket-wrap .oners_logo:before { position: absolute; top: 20px; width: 50px; left: -5px; height: 55px; content: ''; background: url(../images/common/ci-oners.png) no-repeat 0 0; background-size: auto 55px; }
+	.error-info-input._04._mgb25 {margin-bottom: 25px;}
+	.__oners .ticket-area.__c-inner {padding: 24px 40px 0;}
+}
+/* 402px 이하 대응*/
+@media only screen and (max-width:402px) {	
+	/*이용권사용 추가 2019-12-30*/
+	.card-info-area._oners-step3-area > h2 {position: relative;width: 324px;left: -5%;}
+}
+/* 모바일 대응: galaxy5, iphone5s */
+@media only screen and (max-width:360px) {
+	/* 2010-01-23수정(margin-left수정)by이호원*/
+	.__oners .contents .step_end:before {	
+		bottom: 10px;
+		width: 314px;
+		height: 160px;
+		margin-left: -157px;
+		background-size: 310px auto;
+	}
+	.container2 .__join-info .title{font-size: 23px;}
+	
+	.benefits-list2 li {position:relative; float:left; min-width:120px; max-width:270px; margin:10px 5px 15px; font-size:12px; color:#222;}
+
+	.benefits-list2-item > li {position:relative; float:left; min-width:80px; max-width:180px; height:90px; line-height:90px; vertical-align:middle;}
+	.benefits-list2-item > li:nth-child(1) {min-width:70px;max-width:180px;text-align:right;padding-right:30px;}
+	.benefits-list2-item > li:nth-child(2) {min-width:90px;max-width:180px;}
+	.benefits-list2-item > li:nth-child(3) {min-width:70px;max-width:180px;text-align:left;padding-left:30px;}
+	.benefits-list2-item li > span.textline {position:absolute; top:68px; width:90px;line-height:1.2em;font-weight:400;font-size:12px;}
+	.benefits-list2-item li > span.icon.pointplus:before {background-position: 0 -180px;margin-left: -20px;}
+	
+	.btn-area .ui-button {font-size:12px;}
+
+	.__benefits .coupon-guide .textline {font-size:12px; color:#d0d0d0;}
+	.__benefits .coupon-guide .oners-coupon-tooltip:before {content:''; display:inline-block; top:8px; margin-left:5px;width:14px; height:14px; background:url('../images/ico/ico_question.png') no-repeat 0px 0px; background-size:14px auto;}
+
+	/* 이용권 사용관리  by 2019-12-16 최준수 */
+	#using-ticket-row { padding: 0 40px;}
+	#uses-scheduled-row { padding: 0 40px;}
+	/*2020-01-20수정 by이호원 #using-ticket_container .ticket-wrap { height: 130px;}*/
+	#using-ticket_container .ticket-wrap { height: 160px;}
+	/*2020-01-20삭제 by이호원#using-ticket_container .ticket-wrap .ticket-info {padding:10px 0 10px 15px;}*/
+	#using-ticket_container .text-color {color:#8a8a8a; line-height: 16px;    bottom: -38px;}
+	/*2020-01-20수정 by이호원 width추가*/
+	#using-ticket_container .ticket-area .area__row { margin: 0 auto 30px;width: 100%;}
+	/*2020-01-20수정 by이호원 #using-ticket_container .ticket-area .area__row.__using-ticket {height:130px;}*/
+	#using-ticket_container .ticket-area .area__row.__using-ticket {height:160px;width:100%;}
+	#using-ticket_container .ticket-wrap .oners_logo:before {position: absolute; top: 15px; width:45px; height:50px;background-size:auto 50px;}
+	#using-ticket_container .text-header {font-size: 1.5em;}
+	
+	/* 체크박스 */
+	.ui-check.ui-check-ticket._dp-inline._new-img > label:before{left:-5px;}
+	.ui-check.ui-check-ticket._dp-inline._new-img > input[type=checkbox]{left:-5px;}
+	
+	
+	/* 신용카드 등록 팝업 수정2020-01-23 by 이호원 */
+	.__oners .ui-check._card-chk-div .card-chk-label {line-height: 20px; font-size:11px; padding: 7px 0 0 17px;}
+	.__oners .ui-check._card-chk-div .card-chk-label:before {position: absolute; line-height: 10px; top: 10px; left: 0; width: 13px; height: 13px; content: ''; background: url(../images/ico/ico_point_red.png) no-repeat 0 0; background-size: auto 13px;}
+	/* //신용카드 등록 팝업 수정2020-01-23 by 이호원 */
+	
+	/* 유료회원가입 안내 추가 2020-01-03 by 이호원 */	
+	/* 탭 */
+	.benefits-list2 .year-pay, .benefits-list2 .year-pay.selected{width: 130px; margin: 0; margin-bottom:20px}
+	.benefits-list2 .month-pay, .benefits-list2 .month-pay.selected{width: 130px; margin: 0; margin-left:7px; margin-bottom:20px}
+	.benefits-list2 .year-pay, .benefits-list2 .month-pay {font-size: 17px;}
+	.benefits-list2 .pay-line, .benefits-list2 .small-font {font-size: 12px;}
+	.benefits-list2 .year-pay.selected .pay_position img, .benefits-list2 .month-pay.selected .pay_position img {left: 22px;}
+	/* 센터 아이콘위치 */
+	.benefits-list2-item li > span.icon:before{left: 60%;top: 16px;}
+	.benefits-list2-item li > span.icon.point:before{left: 60%; top: 8px;}
+	.benefits-list2-item li > span.textline{font-size: 12px; top: 58px; width: 111px;}
+	.benefits-list2-item li > span.textline2{font-size: 12px; top: 48px; width: 102px; left:0;}
+	/* 왼쪽 체크 목록 */
+	.benefits-list2-item .check-left.selected:before, .benefits-list2-item .check-left:before{top: 35px; left: 30px;}
+	.benefits-list2-item .check-text-left{left: 7px; width: 67px; text-align: center; top: 60px; font-size: 11px;}
+	/* 오른쪽 체크 목록 */
+	.benefits-list2-item .check-right.selected:before, .benefits-list2-item .check-right2.selected:before, .benefits-list2-item .check-right:before, .benefits-list2-item .check-right2:before{top: 35px; right: 16px;}
+	.benefits-list2-item .check-text-right {right: 11px; width: 30px; top: 61px; font-size: 11px;}
+	/* 2010-01-17 혜택자세히 보기 추가 by이호원*/	
+	#oners-benefits-detail .modal-contents {padding: 20px 12px;}	
+	#oners-benefits-detail .modal-contents .benefits-item .item-ul-1-2 > li{text-overflow: ellipsis; width: 100%; overflow: hidden; white-space: nowrap;font-size:12px;}	
+	#oners-benefits-detail .modal-contents .benefits-item .item-ul-1 {padding: 10px 0;}
+	#oners-benefits-detail .modal-contents .benefits-item .item-ul-1 .icon:before {left: 25px;}
+	#oners-benefits-detail .modal-contents .benefits-item .item-ul-1 .icon.pointplus:before {left: 29px;}
+}
+
+/* 321~359px 대응*/
+@media only screen and (min-width:321px) and (max-width:359px){
+	.__oners .ticket-area.__c-inner {padding:24px 20px 0;}
+	#using-ticket-row {padding: 0 20px;}
+	
+	/*이용권사용 추가 2019-12-30*/
+	.card-info-area._oners-step3-area > h2 {position: relative;width: 324px;left: -11%;font-size: 23px;}
+	#regist-ticket_container .ticket-wrap .oners_logo:before{position: absolute; top: 15px; width: 45px;height: 50px;background-size: auto 50px;}
+}
+
+/* 440px 이하 대응*/
+@media only screen and (max-width:440px) {
+	/* 이용권 사용/관리 2020-01-20 by 이호원  */
+	#regist-ticket_container .ticket-wrap .oners_logo:before,#using-ticket_container .ticket-wrap .oners_logo:before {left:-10%;}
+}
+
+/* 420px 이하 대응*/
+@media only screen and (max-width:420px) {
+	/* 이용권 사용/관리 2020-01-20 by 이호원  */
+	#regist-ticket_container .ticket-wrap .oners_logo:before,#using-ticket_container .ticket-wrap .oners_logo:before {left:-15%;}
+}
+
+/* 400px 이하 대응*/
+@media only screen and (max-width:400px) {
+	/* 이용권 사용/관리 2020-01-20 by 이호원  */
+	#regist-ticket_container .ticket-wrap .oners_logo:before,#using-ticket_container .ticket-wrap .oners_logo:before {left:-20%;}
+}
+
+/* 380px 이하 대응*/
+@media only screen and (max-width:380px) {
+	/* 이용권 사용/관리 2020-01-20 by 이호원  */
+	#regist-ticket_container .ticket-wrap .oners_logo:before,#using-ticket_container .ticket-wrap .oners_logo:before {left:-25%;}
+}
+
+/* 360px 이하 대응*/
+@media only screen and (max-width:359px) {
+	/* 이용권 사용/관리 2020-01-20 by 이호원  */
+	#regist-ticket_container .ticket-wrap .oners_logo:before,#using-ticket_container .ticket-wrap .oners_logo:before {left:-20%;}
+	
+}
+
+/* 340px 이하 대응*/
+@media only screen and (max-width:340px) {
+	/* 이용권 사용/관리 2020-01-20 by 이호원  */
+	#regist-ticket_container .ticket-wrap .oners_logo:before,#using-ticket_container .ticket-wrap .oners_logo:before {left:-25%;}
+}
+
+/* 330px 이하 대응*/
+@media only screen and (max-width:330px) {
+	/* 이용권 사용/관리 2020-01-20 by 이호원  */
+	#regist-ticket_container .ticket-wrap .oners_logo:before,#using-ticket_container .ticket-wrap .oners_logo:before {left:-30%;}
+}
+/* 320px 이하 대응 */
+@media only screen and (max-width:320px) {
+	/* common */
+	body {font-size:13px;}
+
+	/* layout */
+	#mast-head .container,
+	#mast-foot .container {padding:0 10px;width:auto;}
+	#mast-body .container {padding:30px 10px 50px;}
+	#mast-head .language {right:10px;top:10px;}
+	#mast-head .language > button {padding:0 15px 0 0px;font-size:12px;}
+	#mast-head .language > button.ui-toggle:before {right:0;}
+	/* subject */
+	.subject > em {margin:0 -10px;padding:0 10px 5px;}
+
+	/* 회원탈퇴 */
+	.warning {margin:10px 0 0;font-size:12px;}
+	.warning > p {margin:10px 0 0;}
+
+	/* tooltip */
+	.tooltip-container .tooltip-trigger {height:24px;top:5px;}
+	.tooltip-content:before {left:38px;}
+
+	/* button */
+	.ui-button.__square-small {min-width:60px;}
+
+	/* 컨텐츠 레이아웃 재정의 */
+	.section > .subject + .__toggle + .row .ui-check {margin:0 0 0 10px;}
+	.section > .subject + .__toggle + .row .ui-check:first-child {margin:0;}
+	.section .subject {margin:0 -10px;padding:0 10px;}
+	.section > .row.__underline:before {left:-10px;right:-10px;}
+	.section.__only-mobile {display:block;}
+	.description > p {font-size:13px;}
+
+	/* form */
+	.form-wrap.__normal .ui-select,
+	.form-wrap.__normal .ui-input {margin:0;width:100%;max-width:none;}
+
+	/* form : 우편번호 */
+	.postcode-finder .row {margin:5px -2px;}
+	.postcode-finder .row > div {padding:0 1px;}
+	
+	
+	/* 유료회원제 */
+	/* 서비스 해지 */
+	.__benefits.type03 .service_cancel_wrap .benefits_list li {padding: 12px 0 0 12px;}
+	.__benefits.type03 .service_cancel_wrap .benefits_list li:nth-child(1){padding: 25px 0 0 12px;}
+	
+	/* 이용권 사용관리  by 2019-12-16 최준수 */
+	.ui-button.__radius-medium.__regist-btn {height:35px;}
+	.ticket-area .area__row {height:130px;}
+	.ticket-area .area__row .use-chk-box {height:130px;}
+	.__oners .ticket-area.__c-inner { padding:24px 15px 0 15px;}
+	.__oners .ui-check-ticket > label {min-height: 20px; line-height: 20px; padding:0}
+	.__oners .ui-check-ticket > label:before {content: ''; overflow: hidden; position: absolute; left: 0; top: 0; width: 20px; height: 20px; background: transparent url(../images/common/ui-input2.png) no-repeat 0 0; background-size: auto 20px; }
+	.__oners .ui-check-ticket > input:checked + label:before { background-position: -25px 0;}
+	.__oners .ticket-area.__c-inner.__using-ticket {padding:0 30px;}
+	.ticket-area .area__row.__using-ticket { height:130px;}
+	.ticket-info > p:last-child{font-size:12px;}
+	.ico-wave:before{left:50px; background-size:auto 16px; }
+	
+	#using-ticket-row { padding: 0 15px;}
+	#uses-scheduled-row { padding: 0 15px;}
+	#using-ticket_container .ticket-wrap { height: 130px;}
+	#using-ticket_container .ticket-wrap .ticket-info {padding:10px 0 10px 15px;}
+	#using-ticket_container .text-color {color:#8a8a8a; line-height: 16px;bottom:-30px;}
+	#using-ticket_container .ticket-area .area__row { margin: 0 auto 30px;}
+	#using-ticket_container .ticket-area .area__row.__using-ticket {height:130px;}
+	#using-ticket_container .ticket-wrap .oners_logo:before {position: absolute; top: 15px; width:45px; height:50px;background-size:auto 50px;}
+	#using-ticket_container .text-header {font-size: 1.5em;}
+	
+	
+	#regist-ticket_container .ticket-wrap { height: 130px;}
+	#regist-ticket_container .ticket-wrap .ticket-info {padding:10px 0 10px 15px;}
+	#regist-ticket_container .text-color {color:#8a8a8a; line-height: 16px;}
+	#regist-ticket_container .ticket-area .area__row {height:130px;}
+	#regist-ticket_container .ticket-wrap .oners_logo:before {width:46px; height:55px; left:-5px; background-size:auto 55px;}
+	#regist-ticket_container .text-header {font-size: 1.5em;}
+	
+	/* 카드 등록  by 2019-12-16 최준수 */
+	._card-sign-up ._fs{font-size:1px;}
+	/*이용권사용 추가 2019-12-30*/
+	.card-info-area._oners-step3-area > h2 {position: relative;width: 324px;left: -18%;font-size: 22px;}
+	/*이용권사용 추가 2019-12-30*/
+	.card-info-area._oners-step3-area > p.text{font-size:12.5px;}
+	
+	/* 이용권 사용/관리 2020-01-20 by 이호원  */
+	#regist-ticket_container .ticket-wrap .oners_logo:before,#using-ticket_container .ticket-wrap .oners_logo:before {
+		left:-25%;
+		position: absolute;
+		top: 15px;
+		width: 45px;
+		height: 50px;
+		background-size: auto 50px;
+		}
+	#using-ticket_container .ticket-wrap { height: 130px;}
+	#using-ticket_container .ticket-area .area__row.__using-ticket {height:130px;width:90%;}
+}
+
+/* IE10+ */
+@media screen and (-ms-high-contrast:active), (-ms-high-contrast:none) {
+	.container {min-width:465px;}
+	.form-wrap,
+	.form-wrap .inner {display:block !important;}
+	.form-wrap.__none,
+	.form-wrap .inner.__none {display:none !important;}
+	.form-wrap.__x1 {white-space:nowrap;}
+	
+	.color-box-wrap:before {content:''; position:absolute; left:auto; right:0; bottom:0; width:0; height:0; background:transparent; border-style:solid; border-color:transparent #6c37b0 #6c37b0 transparent;}
+	.color-box-wrap:after {content:''; position:absolute; left:0; bottom:0; width:0; height:0; background:transparent; border-style:solid; border-color:transparent transparent #804bc3 #804bc3;}
+	.color-box-wrap.index-top:before {border-width:113px 550px;}
+	.color-box-wrap.index-top:after {border-width:67px 209px;}
+	.color-box-wrap.user-info:before {border-width:85px 550px;}
+	.color-box-wrap.user-info:after {border-width:52px 120px;}
+}
+
+@media only screen and (-ms-high-contrast:active), (-ms-high-contrast:none) and (min-width:681px) and (max-width:1024px) {
+	.color-box-wrap.index-top:before {border-width:113px 340px;}
+	.color-box-wrap.index-top:after {border-width:67px 145px;}
+	.color-box-wrap.user-info:before {border-width:85px 340px;}
+	.color-box-wrap.user-info:after {border-width:52px 120px;}
+}
+@media only screen and (-ms-high-contrast:active), (-ms-high-contrast:none) and (max-width:680px) {
+	.color-box-wrap.index-top:before {border-width:113px 180px;}
+	.color-box-wrap.index-top:after {border-width:67px 69px;}
+	.color-box-wrap.user-info:before {border-width:85px 180px;}
+	.color-box-wrap.user-info:after {border-width:52px 54px;}
+}
+
+/* only IE9 */
+.ie9 .container {min-width:465px;}
+.ie9 .form-wrap,
+.ie9 .form-wrap .inner {display:block !important;}
+.ie9 .form-wrap.__none,
+.ie9 .form-wrap .inner.__none {display:none !important;}
+.ie9 .form-wrap.__x1,
+.ie9 .form-wrap.__x1 .inner,
+.ie9 .form-wrap.__mobile.__x4,
+.ie9 .form-wrap.__mobile.__x4 .inner {white-space:nowrap;}
