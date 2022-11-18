@@ -13,6 +13,10 @@
 		// http://localhost:8088/AIM3/Login.aim
 // 		response.sendRedirect("./JoinForm.aim");
 		// http://localhost:8088/AIM3/Join.aim
+		
+		
+		
+		
 		response.sendRedirect("./Main.aim");
 	%>
 
