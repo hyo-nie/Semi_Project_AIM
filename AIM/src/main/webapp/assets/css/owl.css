@@ -131,12 +131,12 @@
 
 .owl-carousel .owl-nav .owl-prev {
     left: 5px;
-    background-image: url('../../Content/images/icon/arr_lf_11.png');
+    background-image: url('https://www.lottecinema.co.kr/NLCHS/Content/images/icon/arr_lf_11.png');
 }
 
 .owl-carousel .owl-nav .owl-next {
     right: 5px;
-    background-image: url('../../Content/images/icon/arr_rg_11.png');
+    background-image: url('https://www.lottecinema.co.kr/NLCHS/Content/images/icon/arr_rg_11.png');
 }
 
 .owl-carousel .owl-nav.disabled+.owl-dots {
