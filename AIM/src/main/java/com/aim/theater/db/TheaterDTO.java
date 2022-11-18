@@ -1,6 +1,5 @@
 package com.aim.theater.db;
 
-
 public class TheaterDTO {
 	private int scCode; //스케줄코드
 	private int branchCd; //지점코드
@@ -109,5 +108,4 @@ public class TheaterDTO {
 				+ ", watchGradeNm=" + watchGradeNm + ", branch_name=" + branch_name + ", branch_addr=" + branch_addr
 				+ "]";
 	}
-
 }
