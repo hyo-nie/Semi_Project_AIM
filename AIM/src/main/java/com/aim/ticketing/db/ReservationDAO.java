@@ -386,6 +386,35 @@ public class ReservationDAO {
 		return dto;
 	} // getScheduleMovieCd()	
 	
+	
+	/**
+	 * getMovieInfo(scheduleDTO) - 스케줄 코드로 무비 정보 조회하는 메서드 
+	 */
+	public MovieDTO getMovieName(ScheduleDTO scDTO) {
+		MovieDTO dto = null;
+		
+		try {
+			con = getConnection();
+			sql = "select * from movie where movieCd=?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, scDTO.getMovieCd());
+			
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				dto = new MovieDTO();
+				dto.setMovieNm(rs.getString("movieNm"));
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			closeDB();
+		}
+		
+		return dto;
+	}
+	// getMovieInfo(scCode)
 
 	
 //	/**
