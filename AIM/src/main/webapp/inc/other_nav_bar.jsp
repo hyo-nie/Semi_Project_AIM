@@ -51,12 +51,11 @@
 						</ul>
 					</div></li>
 				<li class=""><a
-					href="#">영화</a>
+					href="./MovieHomeList.mv">영화</a>
 					<div>
 						<ul>
-							<li><a href="#" title="홈">홈</a></li>
-							<li><a href="#" title="현재상영작">현재상영작</a></li>
-							<li><a href="#" title="상영예정작">상영예정작</a></li>
+							<li><a href="./MovieHomeList.mv" title="홈">홈</a></li>
+							<li><a href="./MovieList.mv" title="현재상영작">현재상영작</a></li>
 						</ul>
 					</div></li>
 				<li class=""><a href="#">영화관</a>

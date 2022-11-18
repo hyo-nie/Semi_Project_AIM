@@ -1,0 +1,205 @@
+
+
+.js .container,
+.js .dragslider,
+.js .img-dragger .handle {
+	height: 100%;
+}
+
+.js  {
+	overflow: hidden;
+	
+}
+
+.js .dragslider {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	-webkit-transition: -webkit-transform 0.6s cubic-bezier(.7,0,.3,1);
+	transition: transform 0.6s cubic-bezier(.7,0,.3,1);
+}
+
+.dragslider.show-content {
+	-webkit-transform: translate3d(0,-100%,0);
+	transform: translate3d(0,-100%,0);
+}
+
+
+/* Switch button */
+button.slider-switch {
+	font-size: 0;
+	width: 80px;
+	height: 80px;
+	padding: 0;
+	color: transparent;
+	position: relative;
+	border: none;
+	background: url(../img/switchmin.svg) no-repeat center center;
+	background-size: 90%;
+	float: right;
+	outline: none;
+	overflow: hidden;
+	opacity: 0.7;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+	pointer-events: auto;
+}
+
+.no-js button.slider-switch {
+	display: none;
+}
+
+button.slider-switch.view-maxi {
+	background-image: url(../img/switchmax.svg)
+}
+
+button.slider-switch:hover {
+	opacity: 1;
+}
+
+/* Dragger */
+.img-dragger {
+	position: relative;
+	z-index: 100;
+}
+
+
+
+.js .img-dragger-large {
+	width: 100%;
+	height: 100%;
+}
+
+.js .img-dragger .handle {
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	white-space: nowrap;
+	font-size: 0;
+}
+
+.no-js .img-dragger,
+.no-js .img-dragger .handle {
+	height: auto;
+	position: relative;
+	text-align: center;
+	font-size: 0;
+	clear: both;
+	white-space: nowrap;
+	overflow: auto;
+}
+
+.no-js .img-dragger .handle {
+	padding: 40px 0 0;
+}
+
+.img-dragger .slide {
+	display: inline-block;
+	position: relative;
+	height: 100%;
+	background: #567076;
+	font-size: 16px;
+	white-space: normal;
+	cursor: -webkit-grab; 
+	cursor: -moz-grab;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	vertical-align: top;
+}
+
+.no-js .img-dragger .slide {
+	width: 300px;
+	font-size: 7px;
+	min-height: 200px;
+}
+
+.img-dragger .slide:active {
+	cursor: -webkit-grabbing; 
+	cursor: -moz-grabbing;
+}
+
+
+
+button.content-switch {
+	border: 2px solid #fff;
+	width: 160px;
+	text-indent: 200%;
+	overflow: hidden;
+	white-space: nowrap;
+	background: transparent;
+	color: #fff;
+	font-family: 'Lato', sans-serif;
+	position: absolute;
+	cursor: pointer;
+	top: 100%;
+	left: 50%;
+	-webkit-transform: translate3d(-50%,-200%,0);
+	transform: translate3d(-50%,-200%,0);
+	padding: 1em 2em;
+	font-size: 0.85em;
+	line-height: 1;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 400;
+	outline: none;
+	z-index: 1000;
+	opacity: 0.7;
+	-webkit-transition: -webkit-transform 0.6s cubic-bezier(.7,0,.3,1), opacity 0.3s, color 0.3s, border-color 0.3s;
+	transition: transform 0.6s cubic-bezier(.7,0,.3,1), opacity 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.no-js button.content-switch {
+	display: none;
+}
+
+button.content-switch:hover {
+	opacity: 1;
+}
+
+button.content-switch::before {
+	content: '\e097';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	text-indent: 0;
+	font-size: 1.5em;
+	line-height: 0.75;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.show-content .current button.content-switch {
+	border-color: #c5d3d6;
+	color: #c5d3d6;
+	-webkit-transform: translate3d(-50%,100%,0);
+	transform: translate3d(-50%,100%,0);
+}
+
+.show-content .current button.content-switch::before {
+	content: '\e096';
+}
+
+/* Content */
+.js .pages {
+	position: absolute;
+	top: 100%;
+	height: 0;
+	width: 100%;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	-webkit-transition: height 0s 0.6s;
+	transition: height 0s 0.6s;
+}
+
+.js .show-content .pages {
+	-webkit-transition: none;
+	transition: none;
+	height: 100%;
+}
+

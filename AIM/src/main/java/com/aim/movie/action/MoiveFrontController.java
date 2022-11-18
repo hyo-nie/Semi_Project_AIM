@@ -69,7 +69,7 @@ public class MoiveFrontController extends HttpServlet{
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-      }
+      } // ReviewWrite.mv 끝
 
     	else if (command.equals("/AdminMovieInsert.mv")) {
     		System.out.println(" C : /AdminMovieInsert.mv 호출 ");
@@ -112,6 +112,8 @@ public class MoiveFrontController extends HttpServlet{
 				e.printStackTrace();
 			}
     	} // AdminMovieList.mv 끝
+    	
+    	
     	
     	else if (command.equals("/AdminMovieInsert2.mv")) {
     		System.out.println(" C : AdminMovieInsert2.mv 호출 ");
@@ -197,6 +199,12 @@ public class MoiveFrontController extends HttpServlet{
 				e.printStackTrace();
 			}
     	} //MovieHomeList.mv 끝
+    	
+    	
+    	
+    	
+    	
+    	
     	
     	
     	System.out.println("C : 2. 가상주소 매핑 끝\n");
