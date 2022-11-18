@@ -115,16 +115,16 @@
 						
 						
 						<form action="./ReviewWrite.mv?movieCd=${dto.movieCd }" method="post">
-							<div class="movi_review_box">
-								<div class="review_write_box">
-									<textarea id="txtComment" name="review_sy"
+							<div class="movi_review_box" style="width: 1000px; left: 50%; margin-left: 0px;">
+								<div class="review_write_box" style="width:860px;">
+									<textarea id="txtComment" name="review_sy" "
 										placeholder="평점 및 영화 관람평을 작성해주세요. 주제와 무관한 리뷰 또는 스포일러는 표시제한 또는 삭제될 수 있습니다. 
 	작성하신 평점 및 관람평은 AIM 홈페이지, SNS 등에 인용될 수 있습니다."
 										title="관람평 작성"></textarea>
 									<span class="byte_info"><strong class="byte">0</strong>/<em>220</em></span>
 								</div>
 	<!-- 							<button type="submit" id="btnComment" class="btn_submit">관람평 작성</button> -->
-								<input type="submit" id="btnComment" class="btn_submit" value="관람평 작성">
+								<input type="submit" id="btnComment" class="btn_submit" value="관람평 작성" style="width:139px; ">
 							</div>
 						</form>
 						
