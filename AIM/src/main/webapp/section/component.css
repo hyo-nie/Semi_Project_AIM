@@ -99,7 +99,7 @@ button.slider-switch:hover {
 	position: relative;
 	background-image : url("https://ifh.cc/g/HA9PrS.gif");
 	background-repeat : no-repeat;
-	background-size : 100%;
+	background-size : cover;
 	height : 100%;
 	font-size: 16px;
 	white-space: normal;

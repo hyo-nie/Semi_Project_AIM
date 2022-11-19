@@ -70,24 +70,24 @@
 							<div class="info">
 						  <article>
 						 <div class="waviy" style="font-size: 50px;">
-						   <span style="--i:1">A</span>
-						   <span style="--i:2">I</span>
-						   <span style="--i:3">M</span>
-						   <span style="--i:4">-</span>
-						   <span style="--i:5">a</span>
-						   <span style="--i:6">l</span>
-						   <span style="--i:7">l</span>
+						   <span style="--i:1; color: #CD1039;">A</span>
+						   <span style="--i:2; color: #F56E6E;">I</span>
+						   <span style="--i:3; color: #FF8200;">M</span>
+						   <span style="--i:4; color: #FFB432;">-</span>
+						   <span style="--i:5; color: #FFD732;">a</span>
+						   <span style="--i:6; color: #A8F552;">l</span>
+						   <span style="--i:7; color: #64CD3C;">l</span>
 						   <span style="--i:7"> </span>
 						   <span style="--i:7"> </span>
-						   <span style="--i:8">i</span>
-   						   <span style="--i:9">n</span>
+						   <span style="--i:8; color: #3ED0C8;">i</span>
+   						   <span style="--i:9; color: #14D3FF;">n</span>
    						   <span style="--i:9"> </span>
    						   <span style="--i:9"> </span>
-   						   <span style="--i:10">m</span>
-   						   <span style="--i:11">o</span>
-   						   <span style="--i:12">v</span>
-   						   <span style="--i:13">i</span>
-   						   <span style="--i:14">e</span>
+   						   <span style="--i:10; color:#0000FF;">m</span>
+   						   <span style="--i:11; color:#6464CD;">o</span>
+   						   <span style="--i:12; color:#14148C;">v</span>
+   						   <span style="--i:13; color:#BC55EF;">i</span>
+   						   <span style="--i:14; color:#9400D3;">e</span>
 						  </div>
 						  </article>
 						  </div>
