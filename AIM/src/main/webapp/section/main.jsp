@@ -29,25 +29,27 @@
 		s.parentNode.insertBefore(ga, s);
 	})();
 	
-	$('#owl-banner').owlCarousel({
-	    items : 1, //화면에 표시 할 슬라이드 수
-	    animateOut : 'fadeOut', // 사라질때의 애니메이션
-	    margin : 10, // 슬라이드 간격
-	    dots : true, // Pagination 표시 여부
-	    autoplay : true, // 자동 슬라이드 여부
-	    autoplayTimeout : 3000, // 자동 슬라이드 시간 (예제는 3초)
-	    loop : true // 무한 반복 여부
-	})
+// 	$('#owl-banner').owlCarousel({
+// 	    items : 1, //화면에 표시 할 슬라이드 수
+// 	    animateOut : 'fadeOut', // 사라질때의 애니메이션
+// 	    margin : 10, // 슬라이드 간격
+// 	    dots : true, // Pagination 표시 여부
+// 	    autoplay : true, // 자동 슬라이드 여부
+// 	    autoplayTimeout : 3000, // 자동 슬라이드 시간 (예제는 3초)
+// 	    loop : true // 무한 반복 여부
+// 	})
 	
 	
 </script>
 
 </head>
 <body>
-	<div class="container">
-		<header id="header" class="codrops-header">
-			<h1>AIM - all in movie</h1>
 
+
+
+	<div class="container">
+
+		<header id="header" class="codrops-header">
 		</header>
 		<div id="overlay" class="overlay hide">
 			<div class="info">
@@ -62,12 +64,33 @@
 				<div class="handle">
 					<div class="slide current" data-content="content-1"
 						style="width: 12.5%;">
-
-	<!--  	<div id="owl-banner" class="owl-carousel owl-theme">
-			<div>
-				<img src="../../assets/img/vip.png">
-			</div>
-		</div> -->
+<!-- 							<div class="info"> -->
+<!-- 							<h3 class="animate">테스트 문구입니다.</h3> -->
+<!-- 							</div> -->
+							<div class="info">
+						  <article>
+						 <div class="waviy" style="font-size: 50px;">
+						   <span style="--i:1">A</span>
+						   <span style="--i:2">I</span>
+						   <span style="--i:3">M</span>
+						   <span style="--i:4">-</span>
+						   <span style="--i:5">a</span>
+						   <span style="--i:6">l</span>
+						   <span style="--i:7">l</span>
+						   <span style="--i:7"> </span>
+						   <span style="--i:7"> </span>
+						   <span style="--i:8">i</span>
+   						   <span style="--i:9">n</span>
+   						   <span style="--i:9"> </span>
+   						   <span style="--i:9"> </span>
+   						   <span style="--i:10">m</span>
+   						   <span style="--i:11">o</span>
+   						   <span style="--i:12">v</span>
+   						   <span style="--i:13">i</span>
+   						   <span style="--i:14">e</span>
+						  </div>
+						  </article>
+						  </div>
 
 						<button class="content-switch" 
 						style="height: 71.2px; width: 138.4px; border: 0px">
