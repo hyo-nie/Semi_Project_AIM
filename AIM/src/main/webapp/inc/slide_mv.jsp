@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@page import="java.util.Date"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 
 <jsp:include page="../inc/include.jsp" />
@@ -28,31 +31,13 @@
 				mouseDrag : true,
 				touchDrag : true
 
-			});
-		 
-		 
-		 
-		 
-		 
+			});		 
 	});
-/* 	$(document).ready(function() {
-
-
-		owl.owlCarousel({
-			items : 5, // 한번에 보여줄 아이템 수
-			loop : true, // 반복여부
-			margin : 20, // 오른쪽 간격
-			autoplay : true, // 자동재생 여부
-			autoplayTimeout : 5000, // 재생간격
-			autoplayHoverPause : false, //마우스오버시 멈출지 여부
-			mouseDrag : false,
-			touchDrag : false
-
-		});
-
-	}); */
 
 </script>
+<c:set var="today" value="<%=new Date()%>" />
+<fmt:formatDate var="md" pattern="MM.dd" value="${today }" />
+<fmt:formatDate var="hms" pattern="hh:mm" value="${today }" />
 <div id="sub_section">
 	<div id="visualAd" class="visual_top visual_main">
 		<div class="inner">
@@ -112,8 +97,8 @@
 	<div id="contents" class="contents_main">
 		<div class="movi_current_list">
 			<span class="movi_info_txt"><a
-				href="https://www.lottecinema.co.kr/NLCHS/Movie/List?flag=1"><em>11.07
-						15:45</em>&nbsp;기준</a></span> 
+				href="./MovieList.mv"><em class="now">${md }&nbsp;
+						${hms }</em>&nbsp;기준</a></span> 
 			 <ul class="tab_wrap outer lft">
 				<li class="active"><button type="button" class="tab_tit"
 						style="left: 0px; width: 20px;">
