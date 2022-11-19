@@ -564,7 +564,7 @@ body {overflow-y:scroll;}
 #contents.contents_movie_detail {padding-top:35px;}
 #contents.contents_mall_home {padding-top:30px;}
 #contents.contents_member_comn {padding-top:105px;}
-#contents.contents_reserve {padding : 152px 0 0 0; background-color:#444}
+#contents.contents_reserve {padding : 73px 0 0 0; background-color:#444}
 /* 본문상단영역 */
 #contents > .title_top {margin-bottom:20px; padding:25px 0 14px; border-bottom:1px solid #EEE;}
 #contents > .title_top:after {content:""; display:block; clear:both;}
