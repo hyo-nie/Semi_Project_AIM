@@ -100,6 +100,7 @@ public class TheaterDTO {
 	public void setBranch_addr(String branch_addr) {
 		this.branch_addr = branch_addr;
 	}
+	
 	@Override
 	public String toString() {
 		return "TheaterDTO [scCode=" + scCode + ", branchCd=" + branchCd + ", roomCd=" + roomCd + ", seatcomp="
