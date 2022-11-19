@@ -9,7 +9,7 @@
 <title>Aim - all in movie</title>
 
 <link rel="stylesheet" type="text/css" href="./section/dragdealer.css">
- <link rel="stylesheet" type="text/css" href="./section/component.css"> 
+<link rel="stylesheet" type="text/css" href="./section/component.css">
 <!-- <script type="text/javascript" async=""
 	src="https://ssl.google-analytics.com/ga.js"></script> -->
 <script src="./section/modernizr.custom.js"></script>
@@ -28,19 +28,29 @@
 		var s = document.getElementsByTagName('script')[0];
 		s.parentNode.insertBefore(ga, s);
 	})();
+	
+	$('#owl-banner').owlCarousel({
+	    items : 1, //화면에 표시 할 슬라이드 수
+	    animateOut : 'fadeOut', // 사라질때의 애니메이션
+	    margin : 10, // 슬라이드 간격
+	    dots : true, // Pagination 표시 여부
+	    autoplay : true, // 자동 슬라이드 여부
+	    autoplayTimeout : 3000, // 자동 슬라이드 시간 (예제는 3초)
+	    loop : true // 무한 반복 여부
+	})
+	
+	
 </script>
 
 </head>
 <body>
 	<div class="container">
-		<div class="codrops-top clearfix">
-
-		</div>
 		<header id="header" class="codrops-header">
 			<h1>AIM - all in movie</h1>
 			<span class="message">This mobile version does not have the
 				slideshow switch</span>
 			<button class="slider-switch">Switch view</button>
+
 		</header>
 		<div id="overlay" class="overlay hide">
 			<div class="info">
@@ -52,18 +62,21 @@
 		</div>
 		<div id="slideshow" class="dragslider">
 			<section class="img-dragger img-dragger-large dragdealer">
-				<div class="handle"
-					style="width: 800%; transform: translate3d(0px, 0px, 0px);">
+				<div class="handle">
 					<div class="slide current" data-content="content-1"
 						style="width: 12.5%;">
-						<div class="img-wrap">
-							<img src="img/1.jpg" alt="img1">
-						</div>
 
-							Lorem Waldy<span>Distilling design ideas and other
-								interesting topics</span>
+	<!--  	<div id="owl-banner" class="owl-carousel owl-theme">
+			<div>
+				<img src="../../assets/img/vip.png">
+			</div>
+		</div> -->
 
-						<button class="content-switch">Read more</button>
+						<button class="content-switch" 
+						style="height: 71.2px; width: 138.4px; border: 0px">
+						<img alt="start" src="https://ifh.cc/g/Yx81Ww.png"
+						style="left:-185px; top:-44px;"> 
+						</button>
 					</div>
 
 				</div>
@@ -85,7 +98,7 @@
 					<jsp:include page="../inc/footer.jsp" />
 
 				</div>
-				
+
 			</section>
 		</div>
 	</div>

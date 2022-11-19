@@ -43,35 +43,5 @@
 				</div>
 				<p class="copyright">COPYRIGHT© AIM ALL RIGHT RESERVED.</p>
 			</div>
-			<div class="article_award">
-				<div class="inner">
-					<ul>
-						<li><img
-							src="https://www.lottecinema.co.kr/NLCHS/Content/images/common/footer_award_NCSI7.PNG?v=22042601"
-							alt="NCSI / NCSI 영화관부문 7년 연속 1위"></li>
-						<li><img
-							src="https://www.lottecinema.co.kr/NLCHS/Content/images/common/footer_award_kcsi.png?v=21020102"
-							alt="KCSI 영화관부문 7년 연속 1위(총12회)"></li>
-						<li><img
-							src="https://www.lottecinema.co.kr/NLCHS/Content/images/common/footer_award_kssqi-10.png?v=22042601"
-							alt="KS-SQI 영화관부문 10년 연속 1위(총13회)"></li>
-						<li><img
-							src="https://www.lottecinema.co.kr/NLCHS/Content/images/common/footer_award_brandcinema.png?v=21020101"
-							alt="올해의 브랜드대상 영화관 부문 10년 연속 1위"></li>
-						<li><img
-							src="https://www.lottecinema.co.kr/NLCHS/Content/images/common/footer_award_greenstar.png?v=21020101"
-							alt="그린스타 영화관 부문 4년 연속 1위"></li>
-						<li><img
-							src="https://www.lottecinema.co.kr/NLCHS/Content/images/common/footer_award_brandstar.png?v=21020101"
-							alt="대한민국 브랜드 스타 영화관 부문 1위"></li>
-						<li><img
-							src="https://www.lottecinema.co.kr/NLCHS/Content/images/common/footer_award_familyship.png?v=21020101"
-							alt="가족친화 인증기업 선정"></li>
-						<li><img
-							src="	https://www.lottecinema.co.kr/NLCHS/Content/images/common/footer_award_winner.png?v=21020101"
-							alt="소셜미디어 브랜드분야 WINNER 수상"></li>
-					</ul>
-				</div>
-			</div>
 		</div>
 	</footer>

@@ -129,11 +129,10 @@ button.content-switch {
 	border: 2px solid #fff;
 	width: 160px;
 	text-indent: 200%;
-	overflow: hidden;
 	white-space: nowrap;
-	background: transparent;
+	background : none;
 	color: #fff;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	position: absolute;
 	cursor: pointer;
 	top: 100%;
