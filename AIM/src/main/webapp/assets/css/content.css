@@ -2850,7 +2850,15 @@ dl.total_price dd strong {font-family:'Roboto'; font-size:25px; font-weight:bold
 .banner_side_wrap .banner_01.fixed {position:fixed;}
 .banner_side_wrap .banner_01 a {display:block; overflow:hidden; width:145px; height:145px;}
 .banner_side_wrap .banner_01 a img{ width:100%; height:100%; border-radius:50%;}
-.banner_side_wrap .btn_close {position:absolute; right:0; top:0; width:13px; height:13px; border:0; text-indent:-9999em; background:transparent url("../../Content/images/icon/close_13_gry.png") no-repeat 0 0;}
+.banner_side_wrap .btn_close {    position: absolute;
+    right: 0;
+    top: 0;
+    width: 19px;
+    height: 19px;
+    border: 0;
+    text-indent: -9999em;
+    background: transparent url(https://www.lottecinema.co.kr/NLCHS/Content/images/icon/close_19.png) no-repeat 0 0;
+}
 /* í•˜ë‹¨ */
 .banner_wrap {padding-top:70px; text-align:center;}
 .banner_wrap .banner_01 {margin-bottom:50px;}

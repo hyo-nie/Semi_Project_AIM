@@ -10,7 +10,6 @@
 <meta charset="UTF-8">
 <title>AIM - 극장</title>
 <jsp:include page="../inc/include.jsp" />
-<script src="jquery-3.6.1.js"></script>
 <script type="text/javascript">
 	/*  	$(document).ready(function() {
 	 $('#datesel a').click(function() {
@@ -69,6 +68,7 @@
 			});
 
 		});
+
 	</script>
 
 
