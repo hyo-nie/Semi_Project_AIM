@@ -34,6 +34,7 @@ ver : 1.00
 .banner_top_wrap>.inner {position:relative; width:980px; height:80px; margin:0 auto; overflow:hidden;}
 .banner_top_wrap>.inner>a {display:block;}
 .banner_top_wrap>.inner>a>img {width:980px; height:80px;}
+.banner_top_wrap>.inner #hideban{right: 10px; }
 /* .banner_top_wrap>.inner>.btn_close {position:absolute; top:50%; right:0; background:url('../images/icon/close_19_wht.png') no-repeat 50% 50%; border:0 none; width:20px; height:20px; margin-top:-10px; text-indent:-9999em;} */
 .banner_dim_wrap {position:fixed; top:50%; left:50%; width:980px; margin-top:-320px; margin-left:-490px; z-index:100;}
 .banner_dim_wrap a {display:block;}
