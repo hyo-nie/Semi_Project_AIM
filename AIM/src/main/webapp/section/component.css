@@ -119,7 +119,8 @@ button.slider-switch:hover {
 
 article {
   background-color:  none;;
-  display: flex;
+  display: block;
+  position : fixed;
   justify-content: center;
   align-items: center;
   min-height: 50vh;
