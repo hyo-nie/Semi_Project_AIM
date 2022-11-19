@@ -12,24 +12,24 @@
 <jsp:include page="../inc/include.jsp" />
 <script src="jquery-3.6.1.js"></script>
 <script type="text/javascript">
-/*  	$(document).ready(function() {
-		$('#datesel a').click(function() {
-			/* $('#schedule li').remove(); 
+	/*  	$(document).ready(function() {
+	 $('#datesel a').click(function() {
+	 /* $('#schedule li').remove(); 
 
-			$ajax({
-				url : "./dateClick.th",
-				data : {
-					sc_date : $(this).val()
-				},
-				success : function(data) {
-					$('#schedule').append(data);
-				},
-				error : function() {
-					alert('실패!')
-				}
-			});
-		});
-	});  */
+	 $ajax({
+	 url : "./dateClick.th",
+	 data : {
+	 sc_date : $(this).val()
+	 },
+	 success : function(data) {
+	 $('#schedule').append(data);
+	 },
+	 error : function() {
+	 alert('실패!')
+	 }
+	 });
+	 });
+	 });  */
 </script>
 <%-- owl 조작 --%>
 <script type="text/javascript">
@@ -45,11 +45,34 @@
 			autoplayHoverPause : false, //마우스오버시 멈출지 여부
 			mouseDrag : false,
 			touchDrag : false
-		
+
 		});
 
 	});
+	
+<%-- 관람등급안내 --%>
 </script>
+	<script>
+		$(function() {
+			$("#showBtn").on("click", function() {
+				
+				$("#text").show();
+				return false;
+			});
+
+		});
+		$(function() {
+			$("#hideBtn").on("click", function() {
+				
+				$("#text").hide();
+				return false;
+			});
+
+		});
+	</script>
+
+
+
 
 <!--  날짜값 오늘 ~ 20일뒤 까지 변수 생성 -->
 <c:set var="today" value="<%=new Date()%>" />
@@ -166,7 +189,12 @@
 
 
 </head>
+
 <body>
+
+	
+
+
 	<!-- 각종 요소 -->
 	<jsp:include page="../inc/include.jsp" />
 	<!-- 상위 배너 -->
@@ -201,6 +229,7 @@
 					<dt class="adr">주소</dt>
 					<dd class="adr">${dto.branch_addr }</dd>
 				</dl>
+
 				<ul class="pop_wrap">
 					<li><a href="#layerLocationPublic" title="레이어팝업 열기"><img
 							src="https://www.lottecinema.co.kr/NLCHS/Content/images/icon/location_subway_40.png"
@@ -247,8 +276,8 @@
 			</div>
 		</div>
 		<ul class="tab_wrap outer actionmovingbar">
-			<li class="active"><button id="dates" type="button" class="tab_tit"
-					style="width: 50%; left: 0%;">
+			<li class="active"><button id="dates" type="button"
+					class="tab_tit" style="width: 50%; left: 0%;">
 					<span>상영시간표</span>
 				</button>
 				<div class="tab_con ty5" id="timeTable" style="zoom: 1;">
@@ -324,7 +353,8 @@
 							class="txt_grade gr_12">만 12세 이상 관람가</span><span
 							class="txt_grade gr_15">만 15세 이상 관람가</span><span
 							class="txt_grade gr_18">청소년 관람불가</span>
-						<button type="button" class="btn_txt_notice" title="레이어팝업 열기">관람등급안내</button>
+						<button type="button" class="btn_txt_notice" title="레이어팝업 열기" id="showBtn">관람등급안내</button>
+
 					</div>
 
 				</div></li>
@@ -737,7 +767,51 @@
 					</ul>
 				</div></li>
 		</ul>
-
+<div id="text" hidden="" class="llayer_wrap layer_movie_grade" >
+		<strong class="hidden">레이어 팝업 시작</strong>
+		<div class="layer_header">
+			<h4 class="tit" style="text-align:center; padding-bottom:10px;">관람등급 안내</h4>
+			<button id="hideBtn" type="button"></button>
+		</div>
+		<div class="layer_contents">
+			<table class="tbl_dtal" summary="이벤트 당첨자에 대한 내용입니다.">
+				<caption>이벤트 당첨자</caption>
+				<colgroup>
+					<col style="width: 40%;">
+					<col style="width: auto;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th class="text_c">등급명</th>
+						<th class="text_c">설명</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><span class="txt_grade gr_all">전체 관람가</span></td>
+						<td>모든 연령의 관람객이 관람할 수 있는 영화</td>
+					</tr>
+					<tr>
+						<td><span class="txt_grade gr_12">만 12세 이상 관람가</span></td>
+						<td>만 12세 미만의 관람객은 관람할 수 없는 영화<br>부모 및 보호자 동반 시 관람 가능
+						</td>
+					</tr>
+					<tr>
+						<td><span class="txt_grade gr_15">만 15세 이상 관람가</span></td>
+						<td>만 15세 미만의 관람객은 관람할 수 없는 영화<br>부모 및 보호자 동반 시 관람 가능
+						</td>
+					</tr>
+					<tr>
+						<td><span class="txt_grade gr_18">청소년 관람불가</span></td>
+						<td>만 18세 미만의 관람객은 관람할 수 없는 영화<br>보호자 동반과 관계없이 초중고 재학 중인
+							청소년 및 영유아 관람 불가
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<strong class="hidden txtTabIndex" tabindex="0">레이어 팝업 끝</strong>
+	</div>
 		<%-- 작업공간 --%>
 		<ul id="schedule">
 			<li class="">
@@ -789,32 +863,25 @@
 					</c:forEach>
 				</div>
 			</li>
-			</ul>
+		</ul>
 
-
-			<%--         참조            --%>
-			<%-- 				    <ul>
-						<c:forEach var="date" items="${dateList }">
-						<li>
-						<div class="owl-item active" style="width: 67.143px;">
-							<span class="date">
-							    <label>
-							    	<input type="radio" name="radioDate1">
-
-							    		<a href="./branch.th?branchCd=${date.branchCd }&date=${date.sc_date}">${date.sc_date}</a>
-							    </label>
-							</span>
-						
-						</div>
-						</li>
-				    </c:forEach>
-				    </ul> --%>
-			<%--                     --%>
+	
 	</div>
 
+	
+	<div id="layerMovieTrailer" class="layer_wrap ty2 layer_movie_trailer"></div>
+
+	<div id="layerLocationPublic" class="layer_wrap layer_location_public"></div>
+	<div id="layerLocationCar" class="layer_wrap layer_location_car"></div>
+	<div id="layerLocationMap" class="layer_wrap layer_location_map"></div>
+	
+	
 	<!-- 하단배너 -->
 	<jsp:include page="../inc/loginform_bottom_banner.jsp" />
 	<!-- 약관 -->
 	<jsp:include page="../inc/footer.jsp" />
+
+	
+	
 </body>
 </html>
