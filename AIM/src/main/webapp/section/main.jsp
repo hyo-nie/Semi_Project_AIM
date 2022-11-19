@@ -38,8 +38,8 @@
 // 	    autoplayTimeout : 3000, // 자동 슬라이드 시간 (예제는 3초)
 // 	    loop : true // 무한 반복 여부
 // 	})
-	
-	
+
+
 </script>
 
 </head>
@@ -69,7 +69,7 @@
 <!-- 							</div> -->
 							<div class="info">
 						  <article>
-						 <div class="waviy" style="font-size: 50px;">
+						 <div class="waviy" style="font-size: 50px; padding: 0 0 0 40px;">
 						   <span style="--i:1; color: #CD1039;">A</span>
 						   <span style="--i:2; color: #F56E6E;">I</span>
 						   <span style="--i:3; color: #FF8200;">M</span>
@@ -89,7 +89,18 @@
    						   <span style="--i:13; color:#BC55EF;">i</span>
    						   <span style="--i:14; color:#9400D3;">e</span>
 						  </div>
-						  </article>
+								<aim>
+								<div id=container>
+								Aim is? 
+									<div id=flip>
+										<div><div>영화의 모든 것!</div></div>
+										<div><div>액션과 판타지까지</div></div>
+										<div><div>로맨스? 공포?</div></div>
+									</div>
+									All In Movies!
+								</div>
+								</aim>
+							</article>
 						  </div>
 
 						<button class="content-switch" 
