@@ -49,8 +49,8 @@
 
 	});
 	
-<%-- 관람등급안내 --%>
 </script>
+<%-- 관람등급안내 --%>
 	<script>
 		$(function() {
 			$("#showBtn").on("click", function() {
