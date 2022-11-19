@@ -69,7 +69,7 @@
 <!-- 							</div> -->
 							<div class="info">
 						  <article>
-						 <div class="waviy" style="font-size: 50px; padding: 0 0 0 40px;">
+						 <div class="waviy" style="font-size: 50px; padding: 0 0 0 170px;">
 						   <span style="--i:1; color: #CD1039;">A</span>
 						   <span style="--i:2; color: #F56E6E;">I</span>
 						   <span style="--i:3; color: #FF8200;">M</span>
