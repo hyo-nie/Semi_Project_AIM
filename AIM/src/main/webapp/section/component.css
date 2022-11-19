@@ -98,7 +98,9 @@ button.slider-switch:hover {
 	display: inline-block;
 	position: relative;
 	height: 100%;
-	background: #567076;
+	background-image : url("https://ifh.cc/g/HA9PrS.gif");
+	background-repeat : no-repeat;
+	background-size : 100%;
 	font-size: 16px;
 	white-space: normal;
 	cursor: -webkit-grab; 

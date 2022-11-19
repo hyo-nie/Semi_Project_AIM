@@ -47,9 +47,6 @@
 	<div class="container">
 		<header id="header" class="codrops-header">
 			<h1>AIM - all in movie</h1>
-			<span class="message">This mobile version does not have the
-				slideshow switch</span>
-			<button class="slider-switch">Switch view</button>
 
 		</header>
 		<div id="overlay" class="overlay hide">
