@@ -37,7 +37,7 @@
 </script>
 <c:set var="today" value="<%=new Date()%>" />
 <fmt:formatDate var="md" pattern="MM.dd" value="${today }" />
-<fmt:formatDate var="hms" pattern="hh:mm" value="${today }" />
+<fmt:formatDate var="hms" pattern="HH:mm" value="${today }" />
 <div id="sub_section">
 	<div id="visualAd" class="visual_top visual_main">
 		<div class="inner">

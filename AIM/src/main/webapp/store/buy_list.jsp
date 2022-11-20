@@ -55,7 +55,9 @@
 <li>
   <div class="product_info_wrap">
   <span class="product_info_one_origin">
-  <strong class="product_info_name"> ${odt.o_cnum } </strong> 
+  <strong class="product_info_name"> 
+  <a href="./OrderDetail.or?o_cnum=${odt.o_cnum }">${odt.o_cnum }</a> 
+  </strong> 
   </span>
   </div>
   <div class="product_info_cnt_wrap"> ${odt.o_name } </div>

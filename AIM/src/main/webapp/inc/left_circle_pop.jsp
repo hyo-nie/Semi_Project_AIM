@@ -18,8 +18,10 @@ $(function() {
 </head>
 <body>
 
+		
+		
     <div id="pop" class="banner_side_wrap"
-		style="top: 485px;">
+		style="top: 700px;">
 		<div class="banner_01" style="top: 485px;">
 			<a
 				href="#" target=""><img
@@ -28,5 +30,7 @@ $(function() {
 			<button id="hidepop" class="btn_close" >광고 닫기</button>
 		</div>
 		</div>
+		
+		
 		</body>
 		</html>
