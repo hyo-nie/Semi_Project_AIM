@@ -381,7 +381,7 @@ input.inp_cont {width:54px; margin:0 3px;} /* 2020.01.02 */
 .visual_top.visual_movie_detail .swiper-slide a:after {right:0px; background:linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 1) 100%);}
 .visual_top.visual_movie_detail .swiper-container-horizontal > .swiper-pagination-bullets {top:530px; bottom:auto;}
 /* 영화관 상세 */
-.visual_top.visual_theater_detail {height:420px; text-align:center;}
+.visual_top.visual_theater_detail {top:152px;height:420px; text-align:center;}
 .visual_top.visual_theater_detail .owl-carousel {height:420px;}
 /* 롯시몰 홈 */
 .visual_top.visual_mall {height:296px;}
