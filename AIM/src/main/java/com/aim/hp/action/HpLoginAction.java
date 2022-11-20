@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.aim.member.db.MemberDAO;
+import com.aim.nt.action.Action;
+import com.aim.nt.action.ActionForward;
 
 public class HpLoginAction implements Action {
 

@@ -6,6 +6,8 @@ import javax.servlet.http.HttpSession;
 
 import com.aim.hp.db.HpDAO;
 import com.aim.hp.db.HpDTO;
+import com.aim.nt.action.Action;
+import com.aim.nt.action.ActionForward;
 
 public class MyHpContentAction implements Action {
 

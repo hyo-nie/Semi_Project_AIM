@@ -1,4 +1,4 @@
-package com.aim.hp.action;
+package com.aim.nt.action;
 
 public class ActionForward {
 	private String path;	

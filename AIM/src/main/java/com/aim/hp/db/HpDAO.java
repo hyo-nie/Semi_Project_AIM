@@ -122,7 +122,7 @@ public class HpDAO {
 			pstmt.setString(4, dto.getHp_subject());
 			pstmt.setString(5, dto.getHp_content());
 			pstmt.setString(6, dto.getHp_file());
-			pstmt.setInt(7, hp_bno);
+			pstmt.setInt(7, 0);
 			pstmt.setInt(8, 0);
 			pstmt.setInt(9, 0);
 			pstmt.setString(10, dto.getHp_select());

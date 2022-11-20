@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.aim.hp.action.Action;
-import com.aim.hp.action.ActionForward;
+import com.aim.nt.action.Action;
+import com.aim.nt.action.ActionForward;
 
 @WebServlet("*.hp")
 public class HpFrontController extends HttpServlet {

@@ -1,4 +1,4 @@
-package com.aim.hp.action;
+package com.aim.nt.action;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

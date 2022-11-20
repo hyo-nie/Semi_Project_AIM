@@ -23,7 +23,7 @@
 				alt="스토어"></a>
 			<a href="#">
 				<img
-				src="./HpAdmin.hp"
+				src="./NtList.nt"
 				alt="고객센터"></a>
 
 			<a href="#" class="qick_top">TOP</a> <!-- top 수정금지 -->

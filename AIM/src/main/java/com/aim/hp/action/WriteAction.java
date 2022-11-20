@@ -6,6 +6,8 @@ import javax.servlet.http.HttpSession;
 
 import com.aim.hp.db.HpDAO;
 import com.aim.hp.db.HpDTO;
+import com.aim.nt.action.Action;
+import com.aim.nt.action.ActionForward;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
@@ -19,10 +21,10 @@ public class WriteAction implements Action {
 		// 한글 처리 -> 매핑함
 		// 세션 처리 
 		HttpSession session = request.getSession();
-		String id = (String)session.getAttribute("mb_id");
+		String mb_id = (String)session.getAttribute("mb_id");
 		
 		ActionForward forward = new ActionForward();
-		if(id == null) {
+		if(mb_id == null) {
 			forward.setPath("./Login.aim");
 			forward.setRedirect(true);
 			return forward;
