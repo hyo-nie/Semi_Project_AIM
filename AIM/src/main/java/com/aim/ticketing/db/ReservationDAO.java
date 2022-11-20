@@ -417,6 +417,62 @@ public class ReservationDAO {
 	// getMovieInfo(scCode)
 
 	
+	/**
+	 *  getScheduleJoin(scCode) - scCode에 해당하는 날짜의 다양한 정보를 조회하는 메서드, join 사용
+	 */
+	public ScheduleDTO getScheduleJoin(int scCode) {
+		ScheduleDTO dto = null;
+		
+		try {
+			con = getConnection();
+			sql = "SELECT A.scCode, A.branchCd, A.sc_date, A.roomCd, A.movieCd, A.starttime, A.endtime, A.seatComp, "
+					+ "B.branch_name, C.roomNum, D.movieNm, D.poster, D.watchGradeNm, D.showTm "
+					+ "FROM schedule A JOIN theater B "
+					+ "ON A.branchCd = B.branchCd "
+					+ "JOIN room C "
+					+ "ON A.roomCd = C.roomCd "
+					+ "JOIN movie D "
+					+ "ON A.movieCd = D.movieCd "
+					+ "where scCode = ?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, scCode);
+			rs = pstmt.executeQuery();
+			
+			if (rs.next()) {
+				dto = new ScheduleDTO();
+				
+				dto.setScCode(rs.getInt("scCode"));
+				dto.setBranchCd(rs.getInt("branchCd"));
+				dto.setSc_date(rs.getString("sc_date"));
+				dto.setRoomCd(rs.getInt("roomCd"));
+				dto.setMovieCd(rs.getString("movieCd"));
+				dto.setStarttime(rs.getString("starttime"));
+				dto.setEndtime(rs.getString("endtime"));
+				dto.setSeatcomp(rs.getString("seatcomp"));
+				dto.setBranch_name(rs.getString("branch_name"));
+				dto.setRoomNum(rs.getString("roomNum"));
+				dto.setMovieNm(rs.getString("movieNm"));
+				dto.setPoster(rs.getString("poster"));
+				dto.setWatchGradeNm(rs.getString("watchGradeNm"));
+				dto.setShowTm(rs.getString("showTm"));
+				
+				System.out.println(" DAO : Schedule Join 정보 저장 완료 ");
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			closeDB();
+		}
+		return dto;
+	}
+	// getScheduleJoin(scCode)
+	
+	
+	
+	
+	
+	
 //	/**
 //	 * getScheduleList() : 극장/상영관,좌석 정보 조회 메서드, List<ScheduleDTO> 값 리턴
 //	 */

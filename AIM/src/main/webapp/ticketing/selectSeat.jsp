@@ -11,17 +11,25 @@
 <script type="text/javascript">
 	var cnt = 0;
 	var seatNo = [];
+	var adultCnt = 0;
+	var childCnt = 0;
+	var seniorCnt = 0;
+	var totalPrice = 0;
 	
 	$(document).ready(function(){
 		
+		// 좌석 선택 관련 jquery
 		$('.seat_area a').click(function(){
 			
+			// 좌석이 예매된 좌석일 떄
 			if( $(this).attr('class') == "sel p0 no_select" ) {
 				alert('이미 예매된 좌석입니다');
 				
+			// 좌석이 예매가능한 좌석일 떄
 			} else {
 				
 // 				alert('좌석 클릭');
+				// 좌석클릭시 선택한 좌석이면 선택해제
 				if ( $(this).attr('class') == 'sel p0 on') {
 					$(this).attr('class','sel p0');
 					cnt--;
@@ -35,25 +43,130 @@
 					}
 // 					alert('선택한 좌석들 : ' + seatNo);
 					
-					
-					
+				// 좌석클릭시 선택좌석으로
 				} else {
-					$(this).attr('class','sel p0 on');
-					cnt++;
-// 					alert('선택한 좌석 수 : ' + cnt);
-// 					alert('좌석 번호 : ' + $(this).attr('data-seat'));
-					seatNo.push($(this).attr('data-seat'));
-// 					alert('선택한 좌석들 : ' + seatNo);
+					// 좌석 선택시 선택인원수와 좌석 선택수가 같으면
+					if ((adultCnt + childCnt + seniorCnt) == 0) {
+						alert('인원을 선택해주세요');
+					} else {
+						if (cnt == (adultCnt + childCnt + seniorCnt)) {
+							alert('더 이상 선택할 수 없습니다!')
+						} else {
+							$(this).attr('class','sel p0 on');
+							cnt++;
+		// 					alert('선택한 좌석 수 : ' + cnt);
+		// 					alert('좌석 번호 : ' + $(this).attr('data-seat'));
+							seatNo.push($(this).attr('data-seat'));
+		// 					alert('선택한 좌석들 : ' + seatNo);
+						}
+					}
+				}
+			}
+			
+		});
+		
+		// 인원 선택 관련 jquery
+		// 성인 인원수 관련
+		$('#person_10 button').click(function(){
+// 			alert('성인 인원수 클릭');
+// 			alert($(this).val());
+			if ($(this).val() == 'Minus/10' ) {
+// 				alert('-선택')
+				if (adultCnt == 0) {
+					alert('0명 이하로 선택할 수 없습니다!');
+				} else {
+					adultCnt--;
+					$('#txt_num1').html(adultCnt);
+					totalPrice = (12000*adultCnt) + (9000*childCnt) + (7000*seniorCnt);
+					$('#totalPrice_ym').html(totalPrice);
 				}
 				
-				
+			} else if ($(this).val() == 'Plus/10' ) {
+// 				alert('+선택')
+				if (adultCnt + childCnt + seniorCnt == 6) {
+					alert('6명 이상 선택할 수 없습니다!');
+				} else {
+					adultCnt++;
+					$('#txt_num1').html(adultCnt);
+					totalPrice = (12000*adultCnt) + (9000*childCnt) + (7000*seniorCnt);
+					$('#totalPrice_ym').html(totalPrice);
+				}
 			}
 		});
+		// 성인 인원수 관련
+		
+		// 아이 인원수 관련
+		$('#person_20 button').click(function(){
+// 			alert('아이 인원수 클릭');
+			
+			if ($(this).val() == 'Minus/20' ) {
+// 				alert('-선택')
+				if (childCnt == 0) {
+					alert('0명 이하로 선택할 수 없습니다!');
+				} else {
+					childCnt--;
+					$('#txt_num2').html(childCnt);
+					totalPrice = (12000*adultCnt) + (9000*childCnt) + (7000*seniorCnt);
+					$('#totalPrice_ym').html(totalPrice);
+				}
+				
+			} else if ($(this).val() == 'Plus/20' ) {
+// 				alert('+선택')
+				if (adultCnt + childCnt + seniorCnt == 6) {
+					alert('6명 이상 선택할 수 없습니다!');
+				} else {
+					childCnt++;
+					$('#txt_num2').html(childCnt);
+					totalPrice = (12000*adultCnt) + (9000*childCnt) + (7000*seniorCnt);
+					$('#totalPrice_ym').html(totalPrice);
+				}
+			}
+		});
+		// 아이 인원수 관련
+		
+		// 우대 인원수 관련
+		$('#person_12 button').click(function(){
+// 			alert('우대 인원수 클릭');
+			
+			if ($(this).val() == 'Minus/12' ) {
+// 				alert('-선택')
+				if (seniorCnt == 0) {
+					alert('0명 이하로 선택할 수 없습니다!');
+				} else {
+					seniorCnt--;
+					$('#txt_num3').html(seniorCnt);
+					totalPrice = (12000*adultCnt) + (9000*childCnt) + (7000*seniorCnt);
+					$('#totalPrice_ym').html(totalPrice);
+				}
+				
+			} else if ($(this).val() == 'Plus/12' ) {
+// 				alert('+선택')
+				if (adultCnt + childCnt + seniorCnt == 6) {
+					alert('6명 이상 선택할 수 없습니다!');
+				} else {
+					seniorCnt++;
+					$('#txt_num3').html(seniorCnt);
+					totalPrice = (12000*adultCnt) + (9000*childCnt) + (7000*seniorCnt);
+					$('#totalPrice_ym').html(totalPrice);
+				}
+			}
+		});
+		// 우대 인원수 관련
+		
 	});
+		
+		
+		
 	
 	function pay() {
 // 		alert('결 제 버 튼 클 릭!');
-		location.href="./TicketingOrder.tk?scCode="+document.getElementById('scCode_ym').value+"&seatNo="+seatNo;
+		if (adultCnt + childCnt + seniorCnt == 0) {
+			alert('인원을 선택하세요!');
+		} else if (adultCnt + childCnt + seniorCnt != cnt) {
+			alert('좌석을 선택하세요!')
+		} else {
+			location.href="./TicketingOrder.tk?scCode="+document.getElementById('scCode_ym').value+"&seatNo="+seatNo+"&adultCnt="+adultCnt+"&childCnt="+childCnt+"&seniorCnt="+seniorCnt;
+		}
 	}
 
 </script>
@@ -100,16 +213,16 @@
 							<div class="bx_con">
 							
 								<!-- 선택한 스케쥴 정보 출력 -->
-								<dl>
-									<dt>선택한 영화 제목</dt>
-									<dd>${mvDTO.movieNm }</dd>
-									<dt>선택한 상영관</dt>
-									<dd>${scDTO.branchCd }</dd>
-									<dt>선택한 상영 날짜</dt>
-									<dd>${scDTO.sc_date }</dd>
-									<dt>선택한 시간</dt>
-									<dd>${scDTO.starttime } ~ ${scDTO.endtime }</dd>
-								</dl>
+									<dl>
+										<dt>선택한 영화 제목</dt>
+										<dd>${scDTO.movieNm }</dd>
+										<dt>선택한 상영관</dt>
+										<dd>${scDTO.branch_name } ${scDTO.roomNum }</dd>
+										<dt>선택한 상영 날짜</dt>
+										<dd>${scDTO.sc_date }</dd>
+										<dt>선택한 시간</dt>
+										<dd>${scDTO.starttime } ~ ${scDTO.endtime }</dd>
+									</dl>
 								<!-- 선택한 스케쥴 정보 출력 -->
 								
 							</div>
@@ -194,40 +307,63 @@
 								<div class="movie_infor">
 									<h6 class="hidden">예매 정보</h6>
 									<span class="thm"><img
-										src="https://caching.lottecinema.co.kr//Media/MovieFile/MovieImg/202211/19129_103_1.jpg"></span>
+										src=${scDTO.poster }></span>
 									<div class="group_infor">
 										<div class="bx_tit">
-											<span class="ic_grade gr_15">관람가</span><strong>킹덤2:
-												아득한 대지로 (2D)</strong>
+											<span class=
+												<c:if test="${scDTO.watchGradeNm.equals('12세이상관람가') }">
+													"ic_grade gr_12"
+												</c:if>
+												<c:if test="${scDTO.watchGradeNm.equals('15세이상관람가') }">
+													"ic_grade gr_15"
+												</c:if>
+												<c:if test="${scDTO.watchGradeNm.equals('18세이상관람가') }">
+													"ic_grade gr_18"
+												</c:if>
+												<c:if test="${scDTO.watchGradeNm.equals('전체관람가') }">
+													"ic_grade gr_all"
+												</c:if>>
+											</span>
+											<strong>${scDTO.movieNm }</strong>
 										</div>
 										<dl>
 											<dt>일시</dt>
 											<dd class="sub_info1">
-												22.11.18<em>(금)</em><span class="time">14:15 ~ 16:38</span>
+												${scDTO.sc_date }<em></em><span class="time">${scDTO.starttime } ~ ${scDTO.endtime }</span>
 											</dd>
 											<dt>영화관</dt>
-											<dd class="sub_info1">가산디지털 · 4관</dd>
+											<dd class="sub_info1">${scDTO.branch_name } · ${scDTO.roomNum }</dd>
 										</dl>
 									</div>
 								</div>
+								
+								<!-- 인원수 선택 -->
 								<div class="count_people">
 									<h6 class="hidden">인원선택</h6>
-									<ul>
-										<li id="person_10" data-code="10" data-peple="성인"
-											data-count="0"><strong class="tit">성인</strong><span
-											class="bx_num"><button class="btn_mins" id="Minus|10">감소</button>
-												<div class="txt_num">0</div>
-												<button class="btn_plus" id="Plus|10">증가</button></span></li>
-										<li id="person_20" data-code="20" data-peple="청소년"
-											data-count="0"><strong class="tit">청소년</strong><span
-											class="bx_num"><button class="btn_mins" id="Minus|20">감소</button>
-												<div class="txt_num">0</div>
-												<button class="btn_plus" id="Plus|20">증가</button></span></li>
-										<li id="person_12" data-code="12" data-peple="시니어"
-											data-count="0"><strong class="tit">경로/우대</strong><span
-											class="bx_num"><button class="btn_mins" id="Minus|12">감소</button>
-												<div class="txt_num">0</div>
-												<button class="btn_plus" id="Plus|12">증가</button></span>
+									<ul id="customer_ym">
+										<li id="person_10" data-code="10" data-peple="성인" data-count="0">
+											<strong class="tit">성인</strong>
+											<span class="bx_num">
+												<button class="btn_mins" id="Minus|10" value="Minus/10">감소</button>
+												<div class="txt_num" id="txt_num1">0</div>
+												<button class="btn_plus" id="Plus|10" value="Plus/10">증가</button>
+											</span>
+										</li>
+										<li id="person_20" data-code="20" data-peple="청소년" data-count="0">
+											<strong class="tit">청소년</strong>
+											<span class="bx_num">
+												<button class="btn_mins" id="Minus|20" value="Minus/20">감소</button>
+												<div class="txt_num"  id="txt_num2">0</div>
+												<button class="btn_plus" id="Plus|20" value="Plus/20">증가</button>
+											</span>
+										</li>
+										<li id="person_12" data-code="12" data-peple="시니어" data-count="0">
+											<strong class="tit">경로/우대</strong>
+											<span class="bx_num">
+												<button class="btn_mins" id="Minus|12" value="Minus/12">감소</button>
+												<div class="txt_num"  id="txt_num3">0</div>
+												<button class="btn_plus" id="Plus|12" value="Plus/12">증가</button>
+											</span>
 										</li>
 									</ul>
 								</div>
@@ -328,7 +464,7 @@
 									<dl class="total_price">
 										<dt>총 합계</dt>
 										<dd>
-											<strong>0</strong>원
+											<strong id="totalPrice_ym">0</strong>원
 										</dd>
 									</dl>
 								</div>

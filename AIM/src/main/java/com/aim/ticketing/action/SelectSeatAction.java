@@ -22,8 +22,7 @@ public class SelectSeatAction implements Action {
 		
 		// schedule 조회 메서드 reservation - getSchedule();
 		ReservationDAO dao = new ReservationDAO();
-		ScheduleDTO scDTO = dao.getSchedule(select_scCode);
-		MovieDTO mvDTO = dao.getMovieName(scDTO);
+		ScheduleDTO scDTO = dao.getScheduleJoin(select_scCode);
 		
 		String seatComp = scDTO.getSeatcomp();
 		
@@ -52,7 +51,6 @@ public class SelectSeatAction implements Action {
 		seatRow.add("H");
 		
 		// request 저장
-		request.setAttribute("mvDTO", mvDTO);
 		request.setAttribute("scDTO", scDTO);
 		request.setAttribute("seatList", seatList);
 		request.setAttribute("seatRow", seatRow);
