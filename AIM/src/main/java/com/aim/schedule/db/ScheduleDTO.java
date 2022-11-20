@@ -13,9 +13,34 @@ public class ScheduleDTO {
 	private String movieNm;
 	private String watchGradeNm;
 	
+	// 조인용 변수 추가
 	private String branch_name;
 	private int completeCnt;
 	private int totalseatCnt;
+	
+	// 조인용 변수 추가 2
+	private String roomNum;
+	private String poster;
+	private String showTm;
+	
+	public String getShowTm() {
+		return showTm;
+	}
+	public void setShowTm(String showTm) {
+		this.showTm = showTm;
+	}
+	public String getPoster() {
+		return poster;
+	}
+	public void setPoster(String poster) {
+		this.poster = poster;
+	}
+	public String getRoomNum() {
+		return roomNum;
+	}
+	public void setRoomNum(String roomNum) {
+		this.roomNum = roomNum;
+	}
 	public int getScCode() {
 		return scCode;
 	}
@@ -100,13 +125,15 @@ public class ScheduleDTO {
 	public void setTotalseatCnt(int totalseatCnt) {
 		this.totalseatCnt = totalseatCnt;
 	}
+	
 	@Override
 	public String toString() {
 		return "ScheduleDTO [scCode=" + scCode + ", branchCd=" + branchCd + ", sc_date=" + sc_date + ", roomCd="
 				+ roomCd + ", movieCd=" + movieCd + ", starttime=" + starttime + ", endtime=" + endtime + ", runcount="
 				+ runcount + ", seatcomp=" + seatcomp + ", movieNm=" + movieNm + ", watchGradeNm=" + watchGradeNm
 				+ ", branch_name=" + branch_name + ", completeCnt=" + completeCnt + ", totalseatCnt=" + totalseatCnt
-				+ "]";
+				+ ", roomNum=" + roomNum + ", poster=" + poster + ", showTm=" + showTm + "]";
 	}
+	
 }
 	

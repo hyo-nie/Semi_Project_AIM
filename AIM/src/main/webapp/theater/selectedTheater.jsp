@@ -10,11 +10,10 @@
 <meta charset="UTF-8">
 <title>AIM - 극장</title>
 <jsp:include page="../inc/include.jsp" />
-<script src="jquery-3.6.1.js"></script>
 <script type="text/javascript">
-/*  	$(document).ready(function() {
+	$(document).ready(function() {
 		$('#datesel a').click(function() {
-			/* $('#schedule li').remove(); 
+			$('#schedule li').remove();
 
 			$ajax({
 				url : "./dateClick.th",
@@ -29,27 +28,59 @@
 				}
 			});
 		});
-	});  */
+	});
 </script>
 <%-- owl 조작 --%>
 <script type="text/javascript">
-	$(document).ready(function() {
-		var owl = $('.owl-carousel');
+$(document).ready(function() {
+	
 
-		owl.owlCarousel({
+	 $('.owl-one').owlCarousel({
+		items : 1, // 한번에 보여줄 아이템 수
+		loop : true, // 반복여부
+		margin : 0, // 오른쪽 간격
+		autoplay : true, // 자동재생 여부
+		autoplayTimeout : 5000, // 재생간격
+		autoplayHoverPause : false, //마우스오버시 멈출지 여부
+		mouseDrag : false,
+		touchDrag : false
+
+	});
+	 $('.owl-two').owlCarousel({
 			items : 10, // 한번에 보여줄 아이템 수
 			loop : false, // 반복여부
-			margin : 15, // 오른쪽 간격
+			margin : 20, // 오른쪽 간격
 			autoplay : false, // 자동재생 여부
-			autoplayTimeout : 5000, // 재생간격
+			autoplayTimeout : 2500, // 재생간격
 			autoplayHoverPause : false, //마우스오버시 멈출지 여부
 			mouseDrag : false,
 			touchDrag : false
-		
+
+		});		 
+});
+</script>
+<%-- 관람등급안내 --%>
+<script>
+	$(function() {
+		$("#showBtn").on("click", function() {
+
+			$("#text").show();
+			return false;
+		});
+
+	});
+	$(function() {
+		$("#hideBtn").on("click", function() {
+
+			$("#text").hide();
+			return false;
 		});
 
 	});
 </script>
+
+
+
 
 <!--  날짜값 오늘 ~ 20일뒤 까지 변수 생성 -->
 <c:set var="today" value="<%=new Date()%>" />
@@ -166,13 +197,71 @@
 
 
 </head>
+
 <body>
+
+
+
+
 	<!-- 각종 요소 -->
 	<jsp:include page="../inc/include.jsp" />
 	<!-- 상위 배너 -->
 	<jsp:include page="../inc/topbanner.jsp" />
 	<!-- 헤더/네비 -->
 	<jsp:include page="../inc/nav_bar.jsp" />
+	<!-- 슬라이더 -->
+	<div id="visual_top" class="visual_top visual_theater_detail" style="">
+		<div class="inner">
+			<div class="slide_wrap full slide_cinema_home_visual">
+				<div class="owl-one owl-carousel owl-loaded owl-drag">
+					<div class="owl-stage-outer">
+						<div class="owl-stage"
+							style="transform: translate3d(-5760px, 0px, 0px); transition: all 0.25s ease 0s; width: 11520px;">
+							<div class="owl-item cloned" style="width: 1920px;">
+								<div class="item">
+									<a href="#none"><img
+										src="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1108/ST_1920420.jpg"
+										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1110/ST_1280720.mp4"
+										alt=""></a>
+								</div>
+							</div>
+							<div class="owl-item cloned" style="width: 1920px;">
+								<div class="item">
+									<a href="#none"><img
+										src="https://caching2.lottecinema.co.kr/lotte_image/2022/KI/KI_1920420.jpg"
+										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/KI/KI_1280720_1.mp4"
+										alt=""></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="owl-nav" style="width: 2378px; margin-left: -1189px;">
+						<button type="button" role="presentation" class="owl-prev">
+							<span aria-label="Previous">‹</span>
+						</button>
+						<button type="button" role="presentation" class="owl-next">
+							<span aria-label="Next">›</span>
+						</button>
+					</div>
+					<div class="owl-dots">
+						<button role="button" class="owl-dot">
+							<span></span>
+						</button>
+						<button role="button" class="owl-dot active" style="">
+							<span></span>
+						</button>
+					</div>
+				</div>
+				<div class="bx_ctrl" style="left: 990px;">
+					<button class="play active">슬라이드 자동재생</button>
+					<button class="stop">슬라이드 일시정지</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
 	<!-- 사이드 퀵메뉴 -->
 	<jsp:include page="../inc/side_quick_menu.jsp" />
 	<!--사이드 원 팝업창 -->
@@ -201,6 +290,7 @@
 					<dt class="adr">주소</dt>
 					<dd class="adr">${dto.branch_addr }</dd>
 				</dl>
+
 				<ul class="pop_wrap">
 					<li><a href="#layerLocationPublic" title="레이어팝업 열기"><img
 							src="https://www.lottecinema.co.kr/NLCHS/Content/images/icon/location_subway_40.png"
@@ -247,15 +337,15 @@
 			</div>
 		</div>
 		<ul class="tab_wrap outer actionmovingbar">
-			<li class="active"><button id="dates" type="button" class="tab_tit"
-					style="width: 50%; left: 0%;">
+			<li class="active"><button id="dates" type="button"
+					class="tab_tit" style="width: 50%; left: 0%;">
 					<span>상영시간표</span>
 				</button>
 				<div class="tab_con ty5" id="timeTable" style="zoom: 1;">
 					<h4 class="hidden">상영시간표</h4>
 					<div class="date_select_wrap datetheaterWrap">
 						<div class="slide_wrap slide_reserve_date_wide">
-							<ul id="datesel" class="owl-carousel owl-loaded owl-drag">
+							<ul id="datesel" class="owl-two owl-carousel owl-loaded owl-drag">
 								<div class="owl-stage-outer">
 									<!-- 날짜선택 -->
 									<div class="owl-stage"
@@ -324,7 +414,9 @@
 							class="txt_grade gr_12">만 12세 이상 관람가</span><span
 							class="txt_grade gr_15">만 15세 이상 관람가</span><span
 							class="txt_grade gr_18">청소년 관람불가</span>
-						<button type="button" class="btn_txt_notice" title="레이어팝업 열기">관람등급안내</button>
+						<button type="button" class="btn_txt_notice" title="레이어팝업 열기"
+							id="showBtn">관람등급안내</button>
+
 					</div>
 
 				</div></li>
@@ -737,8 +829,54 @@
 					</ul>
 				</div></li>
 		</ul>
-
+		<div id="text" hidden="" class="llayer_wrap layer_movie_grade">
+			<strong class="hidden">레이어 팝업 시작</strong>
+			<div class="layer_header">
+				<h4 class="tit" style="text-align: center; padding-bottom: 10px;">관람등급
+					안내</h4>
+				<button id="hideBtn" type="button"></button>
+			</div>
+			<div class="layer_contents">
+				<table class="tbl_dtal" summary="이벤트 당첨자에 대한 내용입니다.">
+					<caption>이벤트 당첨자</caption>
+					<colgroup>
+						<col style="width: 40%;">
+						<col style="width: auto;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th class="text_c">등급명</th>
+							<th class="text_c">설명</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><span class="txt_grade gr_all">전체 관람가</span></td>
+							<td>모든 연령의 관람객이 관람할 수 있는 영화</td>
+						</tr>
+						<tr>
+							<td><span class="txt_grade gr_12">만 12세 이상 관람가</span></td>
+							<td>만 12세 미만의 관람객은 관람할 수 없는 영화<br>부모 및 보호자 동반 시 관람 가능
+							</td>
+						</tr>
+						<tr>
+							<td><span class="txt_grade gr_15">만 15세 이상 관람가</span></td>
+							<td>만 15세 미만의 관람객은 관람할 수 없는 영화<br>부모 및 보호자 동반 시 관람 가능
+							</td>
+						</tr>
+						<tr>
+							<td><span class="txt_grade gr_18">청소년 관람불가</span></td>
+							<td>만 18세 미만의 관람객은 관람할 수 없는 영화<br>보호자 동반과 관계없이 초중고 재학
+								중인 청소년 및 영유아 관람 불가
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<strong class="hidden txtTabIndex" tabindex="0">레이어 팝업 끝</strong>
+		</div>
 		<%-- 작업공간 --%>
+
 		<ul id="schedule">
 			<li class="">
 				<div class="time_select_wrap ty2 timeSelect">
@@ -760,9 +898,6 @@
 							</c:choose>
 							<p>${fmovie.movieNm }</p>
 						</div>
-						<!-- 				<ul class="list_hall mt20" style="margin-bottom: 5px;">
-					<li>2D</li>
-				</ul> -->
 						<ul class="list_time">
 							<c:forEach var="fsche" items="${scheduleFirst }">
 								<c:if test="${fmovie.movieNm eq fsche.movieNm }">
@@ -786,35 +921,31 @@
 								</c:if>
 							</c:forEach>
 						</ul>
+
+
+
 					</c:forEach>
 				</div>
 			</li>
-			</ul>
+		</ul>
 
 
-			<%--         참조            --%>
-			<%-- 				    <ul>
-						<c:forEach var="date" items="${dateList }">
-						<li>
-						<div class="owl-item active" style="width: 67.143px;">
-							<span class="date">
-							    <label>
-							    	<input type="radio" name="radioDate1">
-
-							    		<a href="./branch.th?branchCd=${date.branchCd }&date=${date.sc_date}">${date.sc_date}</a>
-							    </label>
-							</span>
-						
-						</div>
-						</li>
-				    </c:forEach>
-				    </ul> --%>
-			<%--                     --%>
 	</div>
+
+
+	<div id="layerMovieTrailer" class="layer_wrap ty2 layer_movie_trailer"></div>
+
+	<div id="layerLocationPublic" class="layer_wrap layer_location_public"></div>
+	<div id="layerLocationCar" class="layer_wrap layer_location_car"></div>
+	<div id="layerLocationMap" class="layer_wrap layer_location_map"></div>
+
 
 	<!-- 하단배너 -->
 	<jsp:include page="../inc/loginform_bottom_banner.jsp" />
 	<!-- 약관 -->
 	<jsp:include page="../inc/footer.jsp" />
+
+
+
 </body>
 </html>

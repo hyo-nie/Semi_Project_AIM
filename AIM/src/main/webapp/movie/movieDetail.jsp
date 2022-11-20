@@ -10,6 +10,7 @@
 </head>
 <body>
 
+
 	<!-- 상위 배너 -->
 	<jsp:include page="../inc/topbanner.jsp" />
 	<!-- 헤더/네비 -->
@@ -27,7 +28,19 @@
 					alt="블랙 팬서: 와칸다 포에버">
 			</div>
 			<div class="tit_info">
-				<span class="ic_grade gr_12">${dto.watchGradeNm } </span>
+				<span class=
+                <c:if test="${dto.watchGradeNm.equals('12세이상관람가') }">
+                  "ic_grade gr_12"
+                </c:if>
+                <c:if test="${dto.watchGradeNm.equals('15세이상관람가') }">
+                  "ic_grade gr_15"
+                </c:if>
+                <c:if test="${dto.watchGradeNm.equals('18세이상관람가') }">
+                  "ic_grade gr_18"
+                </c:if>
+                <c:if test="${dto.watchGradeNm.equals('전체관람가') }">
+                  "ic_grade gr_all"
+                </c:if>> </span>
 				<strong>${dto.movieNm }</strong>
 			</div>
 			<ul class="detail_info1">
@@ -49,7 +62,7 @@
 			
 			<div class="movie_detail_aside_menu type2">
 				<ul>
-					<li class="area_reserve"><a
+					<li class="area_reserve" style="float:right;"><a
 						href="./Ticketing.tk?movieCd=${movie.movieCd}"
 						class="btn_col1 ty7 rnd">예매하기</a></li>
 				</ul>
@@ -119,7 +132,7 @@
 								<div class="review_write_box" style="width:860px;">
 									<textarea id="txtComment" name="review_sy" "
 										placeholder="평점 및 영화 관람평을 작성해주세요. 주제와 무관한 리뷰 또는 스포일러는 표시제한 또는 삭제될 수 있습니다. 
-	작성하신 평점 및 관람평은 AIM 홈페이지, SNS 등에 인용될 수 있습니다."
+작성하신 평점 및 관람평은 AIM 홈페이지, SNS 등에 인용될 수 있습니다."
 										title="관람평 작성"></textarea>
 									<span class="byte_info"><strong class="byte">0</strong>/<em>220</em></span>
 								</div>
@@ -134,14 +147,10 @@
 						<h5 class="hidden">관람평 목록</h5>
 						<div class="review_top">
 							<span class="tit"><span class="txt_ic_score">
-							<span class="starimg">관람객 관람평</span></span></span>
+							<span class="starimg" style="color:gray;">관람객 관람평</span></span></span>
 							<div class="wrap_sort_right">
-								<span class="total_num">총 <em>${requestScope.cnt }</em>건</span>
-								<ul class="sort_list">
-									<li id="reviewsortseq1" class="active"><button
-											class="latest">최신순</button></li>
-									<li id="reviewsortseq3"><button class="empathy">공감순</button></li>
-								</ul>
+								<span class="total_num" style="color:gray;">총 <em>${requestScope.cnt }</em>건</span>
+ 							
 							</div>
 						</div>
 
@@ -190,12 +199,11 @@
 					<div class="list_bdr_box">
 						<h3 class="title txt_caution2">유의사항</h3>
 						<ul class="list_txt">
-							<li>관람평 작성에 대한 L.POINT는 익일 적립되며, 관람 후 초기 1회에 대해서만 적립됩니다.</li>
-							<li>수정/삭제 후 재등록 시에는 포인트 적립이 되지 않습니다.</li>
 							<li>관람평은 관람 내역당 1회만 작성 가능하며, 상영종료된 영화의 관람평은 작성 불가합니다.</li>
-							<li>작성하신 관람평은 마이페이지 &gt; MY무비로그 &gt; 내가 본 영화에서 확인하실 수 있습니다.
-							</li>
-							<li>관람 평점은 AIM에서 실제 관람한 회원의 평점 입니다.</li>
+							<li>작성하신 관람평은 마이페이지 &gt; MY무비로그 &gt; 내가 본 영화에서 확인하실 수 있습니다.</li>
+							<li>부적절한 내용을 포함한 리뷰의 경우 임의로 삭제될 수 있습니다.</li>
+							<li>수정/삭제 후 재등록 시에는 포인트 적립이 되지 않습니다.</li>
+							<li>작성하신 리뷰는 AIM 마케팅에 사용될 수 있습니다.</li>
 						</ul>
 					</div>
 				</div>

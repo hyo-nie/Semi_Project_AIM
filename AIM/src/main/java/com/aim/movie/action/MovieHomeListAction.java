@@ -16,7 +16,7 @@ public class MovieHomeListAction implements Action {
 	    
 	    MovieDAO dao = new MovieDAO();
 	    
-	    List movieList = dao.allMovieList();
+	    List movieList = dao.allMovieList(request.getParameter("orderFlag"));
 	    
 	    request.setAttribute("movieList", movieList);
 	    
