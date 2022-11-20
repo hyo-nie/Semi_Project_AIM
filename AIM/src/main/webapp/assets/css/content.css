@@ -243,7 +243,7 @@ ver : 1.01 20191219 2502 line > íŒì—…ë©”ë‰´ ê³ ì •ë†�
 .contents_movie_detail .no_data {padding:140px 0; background:#F8F8F8; text-align:center; font-size:15px; border-top:1px solid #ccc}
 .contents_movie_detail .list_bdr_box {margin-top:60px;}
 .contents_movie_detail .list_txt {margin-left:10px;}
-.movi_tab_info1 .left_con {float:left; width:480px; height:300px;}
+.movi_tab_info1 .left_con {float:left; width:1000px; height:300px;}
 .movi_tab_info1 .left_con .mCustomScrollbar {height:115px;}
 .movi_tab_info1 .left_con .txt_info {padding-right:80px; font-size:13px; line-height:1.8}
 .movi_tab_info1 .right_con {float:right; width:480px;}
@@ -398,7 +398,7 @@ ver : 1.01 20191219 2502 line > íŒì—…ë©”ë‰´ ê³ ì •ë†�
 .review_con_list > li {position:relative; padding:20px 0 15px 68px; border-top:1px solid #eee}
 .review_con_list > li:first-child {border-color:#ccc}
 .review_con_list > li.my_review {background:#F8F8F8}
-.review_con_list > li .img_info {display:block; top:5px; left:5px; position:absolute; /*수정*/ 
+.review_con_list > li .img_info {display:block; top:5px; left:-5px; position:absolute; /*수정*/ 
  overflow:hidden; width:70px; height:70px; border-radius:50%;}
 .review_con_list > li .img_info img {width:100%; border-radius:50%;}
 .review_con_list .top_info {margin-bottom:12px;}
