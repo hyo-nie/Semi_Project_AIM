@@ -11,40 +11,56 @@
 <script src="jquery-3.6.1.js"></script>
 </head>
 <body>
+
 <article>
+<%-- 	${orderDetail } --%>
+	<table>
+      <div class="com_cart_list_wrap">
+      <h1>주문 상세 내역</h1>
+      <p class="cart_allchecker_wrap">
+         <input type="checkbox" id="checkboxall" class="com_custom_all_checkbox com_custom_checkbox" checked="checked">
+         <label for="checkboxall"></label>
+         <strong class="com_custom_checkbox_product_name">상품명</strong>
+         <strong class="com_custom_checkbox_price">수량</strong>
+         <strong class="com_custom_checkbox_price">주문금액</strong>
+<!--          <strong class="com_custom_checkbox_product_sel">환불여부</strong> -->
+      </p>
+               
+<%--                <c:set var="refund" value="환불가능"/>                --%>
+<%--                <c:choose> --%>
+<%--                   <c:when test="${dto.o_refund == 0 }"> --%>
+<%--                      <c:set var="refund" value="환불불가"/>    --%>
+<%--                   </c:when> --%>
+<%--                   <c:when test="${dto.o_refund == 1 }"> --%>
+<%--                      <c:set var="refund" value="환불가능"/>    --%>
+<%--                   </c:when>                                                 --%>
+<%--                </c:choose> --%>
+               
+<ul class="com_list_style1">
 
-${detailInfo }
-
-			<h1>주문 상세 내역</h1>
-			
-				<table>
-					<tr>
-						<th class="ttitle" colspan="8">주문 상세내역</th>
-					</tr>
-					<tr>
-						<th class="tno">상품명</th>
-						<th class="ttitle">수량</th>
-						<th class="twrite">금액</th>
-					</tr>
-					
-					<c:set var="totalSum" value="0"/>
-					<c:forEach var="dto" items="${detailInfo}" >
-						<tr>
-							<td>${dto.o_name }</td>
-							<td>${dto.o_amount }</td>
-							<td>${dto.o_sum }</td>
-						</tr>
-						
-						<c:set var="totalSum" value="${totalSum+dto.o_sum }"/>
-					</c:forEach>
-					
-							<tr>
-		   						<td colspan="2"> </td>
-		   						<td colspan="3"> <h3>총 주문금액 : <fmt:formatNumber value="${totalSum }"/>원</h3> </td>
-							</tr>
-					
-				</table>
-			
-		</article>
+<c:forEach var="i" begin="0" end="${orderDetail.size() -1 }" step="1">
+	<c:set var="totalPrice"/>
+	<c:set var="odt" value="${orderDetail[i] }" />
+<li>
+  <div class="product_info_wrap">
+  <span class="product_info_one_origin">
+  </span>
+  </div>
+  <div class="product_info_cnt_wrap"> ${odt.o_name } </div>
+  <div class="product_info_cnt_wrap"> ${odt.o_amount } </div>
+    <div class="product_info_cnt_wrap">
+	 <span>
+       <fmt:formatNumber value="${odt.o_sum}" />
+     </span>
+    </div>
+</li>
+</c:forEach>
+</ul>
+            </div>
+	</table>
+	  <div class="com_btn_wrap pT60">
+         <a href="#none" class="btn_style0 " onclick="location.href='./Main.aim';">돌아가기</a> 
+      </div>
+</article>
 </body>
 </html>
