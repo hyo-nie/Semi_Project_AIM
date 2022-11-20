@@ -22,9 +22,9 @@
 				<li class="active"><button type="button"><span>현재 상영작</span></button></li>
 			</ul>
 			<ul class="list_lnk" id="movietype1">
-				<li class="on"><a href="javascript:void(0)" role="button">예매순</a></li>
-				<li><a href="javascript:void(0)" role="button">개봉일순</a></li>
-				<li><a href="javascript:void(0)" role="button">관람평 많은순</a></li>
+        <li><a href="./MovieList.mv?orderFlag=boxrank" role="button">인기순</a></li>
+        <li><a href="./MovieList.mv?orderFlag=bookRating" role="button">예매순</a></li>
+        <li><a href="./MovieList.mv?orderFlag=openDt" role="button">개봉일순</a></li>
 			</ul>
 			
 			<ul class="movie_list type2">

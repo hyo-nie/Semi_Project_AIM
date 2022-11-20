@@ -52,13 +52,26 @@ public class MovieDAO {
   /**
    * allMovieList() : 영화탭 첫페이지에서 영화의 정보를 보여주는 메서드
    */
-  public List allMovieList() {
+  public List allMovieList(String orderFlag) {
       List movieList = new ArrayList();
       MovieDTO dto = null;
       
       try {
         con = getConnection();
-        sql = "select * from movie order by boxrank asc";
+        sql = "select * from movie";
+        if(orderFlag != null && !"".equals(orderFlag)) {
+          if(orderFlag.equals("boxrank")) {
+            sql = sql + " order by boxrank";
+          } else if(orderFlag.equals("bookRating")) {
+              sql = sql + " order by bookRating desc";
+          } else if(orderFlag.equals("openDt")) {
+              sql = sql + " order by openDt";
+          }
+        } else {
+           sql = sql + " order by boxrank";
+        }
+        System.out.println("orderFlag : "+orderFlag);
+        System.out.println("sql : "+sql);
         pstmt = con.prepareStatement(sql);
         rs = pstmt.executeQuery();
         
