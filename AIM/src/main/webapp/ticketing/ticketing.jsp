@@ -241,7 +241,7 @@
 
 
 	<div id="contents" class="contents_full contents_reserve"
-		style="margin-top: 120px;">
+		>
 		<div class="wrap_reserve">
 			<div class="section_step_tit">
 				<ul>

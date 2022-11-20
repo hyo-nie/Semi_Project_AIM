@@ -1,46 +1,51 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@page import="java.util.Date"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
+
+<jsp:include page="../inc/include.jsp" />
+<script type="text/javascript">
+	$(document).ready(function() {
+		
+
+		 $('.owl-one').owlCarousel({
+			items : 1, // 한번에 보여줄 아이템 수
+			loop : true, // 반복여부
+			margin : 0, // 오른쪽 간격
+			autoplay : true, // 자동재생 여부
+			autoplayTimeout : 5000, // 재생간격
+			autoplayHoverPause : false, //마우스오버시 멈출지 여부
+			mouseDrag : false,
+			touchDrag : false
+
+		});
+		 $('.owl-two').owlCarousel({
+				items : 5, // 한번에 보여줄 아이템 수
+				loop : true, // 반복여부
+				margin : 20, // 오른쪽 간격
+				autoplay : true, // 자동재생 여부
+				autoplayTimeout : 2500, // 재생간격
+				autoplayHoverPause : false, //마우스오버시 멈출지 여부
+				mouseDrag : true,
+				touchDrag : true
+
+			});		 
+	});
+
+</script>
+<c:set var="today" value="<%=new Date()%>" />
+<fmt:formatDate var="md" pattern="MM.dd" value="${today }" />
+<fmt:formatDate var="hms" pattern="hh:mm" value="${today }" />
 <div id="sub_section">
 	<div id="visualAd" class="visual_top visual_main">
 		<div class="inner">
 			<div class="slide_wrap slide_main_visual">
-				<div class="owl-carousel owl-loaded owl-drag">
-					<div class="owl-stage-outer">
-						<div class="owl-stage"
-							style="transform: translate3d(-3840px, 0px, 0px); transition: all 0.25s ease 0s; width: 15360px;">
-							<div class="owl-item cloned" style="width: 1920px;">
-								<div class="item">
-									<a href="#none"><img
-										src="https://caching2.lottecinema.co.kr/lotte_image/2022/KI/KI_1920774.jpg"
-										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/KI/KI_1280720_1.mp4"
-										alt=""></a>
-								</div>
-							</div>
-							<div class="owl-item cloned" style="width: 1920px;">
-								<div class="item">
-									<a href="#none"><img
-										src="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/ST_1920774.jpg"
-										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/ST_1280720.mp4"
-										alt=""></a>
-								</div>
-							</div>
-							<div class="owl-item active" style="width: 1920px;">
-								<div class="item">
-									<a href="#none"><img
-										src="https://caching2.lottecinema.co.kr/lotte_image/2022/BB/1103/BB_1280774.jpg"
-										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/BB/1103/BB_1280720.mp4"
-										alt="블랙팬서 와칸다 포에버 11월 대개봉 마블의  압도적 블록버스터 두 세계가 충돌한다 관람등급미정"></a>
-								</div>
-							</div>
-							<div class="owl-item" style="width: 1920px;">
-								<div class="item">
-									<a href="#none"><img
-										src="https://caching2.lottecinema.co.kr/lotte_image/2022/EE/1027/EE_1920774.jpg"
-										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/EE/1027/EE_1280720.mp4"
-										alt="창극 기획전 11월 대개봉 15세이상관람가"></a>
-								</div>
-							</div>
+				<div class="owl-one owl-carousel owl-loaded owl-drag"> <!-- 오울 로딩 -->
+					<div class="owl-stage-outer"> <!-- 오울 -->
+						<div class="owl-stage" 
+							style="transform: translate3d(-3840px, 0px, 0px); transition: all 0.25s ease 0s; width: 11520px;"><!-- 오울 -->
 							<div class="owl-item" style="width: 1920px;">
 								<div class="item">
 									<a href="#none"><img
@@ -52,25 +57,9 @@
 							<div class="owl-item" style="width: 1920px;">
 								<div class="item">
 									<a href="#none"><img
-										src="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/ST_1920774.jpg"
-										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/ST_1280720.mp4"
+										src="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1108/ST_1920774.jpg"
+										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1110/ST_1280720.mp4"
 										alt=""></a>
-								</div>
-							</div>
-							<div class="owl-item cloned" style="width: 1920px;">
-								<div class="item">
-									<a href="#none"><img
-										src="https://caching2.lottecinema.co.kr/lotte_image/2022/BB/1103/BB_1280774.jpg"
-										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/BB/1103/BB_1280720.mp4"
-										alt="블랙팬서 와칸다 포에버 11월 대개봉 마블의  압도적 블록버스터 두 세계가 충돌한다 관람등급미정"></a>
-								</div>
-							</div>
-							<div class="owl-item cloned" style="width: 1920px;">
-								<div class="item">
-									<a href="#none"><img
-										src="https://caching2.lottecinema.co.kr/lotte_image/2022/EE/1027/EE_1920774.jpg"
-										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/EE/1027/EE_1280720.mp4"
-										alt="창극 기획전 11월 대개봉 15세이상관람가"></a>
 								</div>
 							</div>
 						</div>
@@ -108,9 +97,9 @@
 	<div id="contents" class="contents_main">
 		<div class="movi_current_list">
 			<span class="movi_info_txt"><a
-				href="https://www.lottecinema.co.kr/NLCHS/Movie/List?flag=1"><em>11.07
-						15:45</em>&nbsp;기준</a></span>
-			<ul class="tab_wrap outer lft">
+				href="./MovieList.mv"><em class="now">${md }&nbsp;
+						${hms }</em>&nbsp;기준</a></span> 
+			 <ul class="tab_wrap outer lft">
 				<li class="active"><button type="button" class="tab_tit"
 						style="left: 0px; width: 20px;">
 						<span></span>
@@ -119,7 +108,7 @@
 						<h3 class="hidden"></h3>
 						<div class="main_movie_list">
 							<div class="slide_wrap slide_main_movie">
-								<div class="owl-carousel owl-loaded owl-drag">
+								<div class="owl-two owl-carousel owl-loaded owl-drag">
 									<div class="owl-stage-outer">
 										<div class="owl-stage"
 											style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 4378px;">
@@ -658,10 +647,10 @@
 							</div>
 						</div>
 					</div></li>
-			</ul>
+			</ul> 
 		</div>
 
-		<div class="main_cont_wrap notice">
+ 		<div class="main_cont_wrap notice">
 			<div class="sec_tit">공지사항</div>
 			<div class="rolling_menu_wrap">
 				<ul class="rolling_menu" style="top: -30px;">
@@ -680,7 +669,7 @@
 					<li><a href="#none" title="">영화관람권 가격 변경 안내</a></li>
 				</ul>
 			</div>
-			<button type="button" class="btn_txt_more ty2">더보기</button>
-		</div>
+			
+		</div> 
 	</div>
 </div>
