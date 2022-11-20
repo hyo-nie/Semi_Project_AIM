@@ -2592,47 +2592,52 @@ label.lab_txt .tit_lab {overflow:hidden; position:absolute; float:none; width:1p
 
 
 
-/* ì „ì²´ë©”ë‰´ ================================================== */
+/* 전체메뉴 ================================================== */
 .menu_all_wrap {display:none; position:fixed; z-index:100; top:115px; left:50%; width:980px; margin-left:-490px; padding:28px 0 0; background-color:#FFF;}
 .menu_all_wrap:after {content:""; display:block; clear:both;}
 .menu_all_wrap.active {display:block;}
-.menu_all_wrap .group_menu_all {float:left; width:620px; /*height:380px;*/ padding:0 20px;}
-.menu_all_wrap .group_menu_all table tbody th {padding:0 5px;}
-.menu_all_wrap .group_menu_all table tbody th span {display:inline-block; border-bottom:1px solid #707070; font-size:14px;}
-.menu_all_wrap .group_menu_all table tbody td {padding:0 5px 30px; font-size:11px; vertical-align:top;}
-.menu_all_wrap .group_menu_all table tbody td .tit {display:inline-block; border-bottom:1px solid #707070; font-size:14px;}
-.menu_all_wrap .group_menu_all table tbody td ul {margin-top:8px;}
-.menu_all_wrap .group_menu_all table tbody td ul > li {margin:5px 0;}
-.menu_all_wrap .group_my {float:left; width:256px; padding:0 30px 5px; border-left:1px solid rgba(112, 112, 112, .1);}
-.menu_all_wrap .group_my .mypage_box .my_info .area_btn_login {text-align:center;}
-.menu_all_wrap .group_my .bx_banner {margin:25px 0 0 -19px;}
-.menu_all_wrap .group_banner {clear:both;}
-.menu_all_wrap .group_close {position:absolute; right:-63px; top:0;}
-.menu_all_wrap .group_close button {width:43px; height:43px; border:none; text-indent:-9999em; background:url("../../Content/images/icon/close_33_wht.png") no-repeat center center;}
-/* customizing : .mypage_box */
-.menu_all_wrap .group_my .mypage_box {float:none; width:100%; min-height:inherit;}
-.menu_all_wrap .group_my .mypage_box .my_info {padding:0; min-height:46px;}
-.menu_all_wrap .group_my .mypage_box .my_info .profile_img {display:none; left:0; top:0; width:46px; height:46px;}
-.menu_all_wrap .group_my .mypage_box .my_info .grade_area {margin:0 0 0 0;}
-.menu_all_wrap .group_my .mypage_box .my_info .name {margin:5px 0 0 0; font-size:14px;}
-.menu_all_wrap .group_my .mypage_box .my_info .name strong {font-size:16px;}
-.menu_all_wrap .group_my .mypage_box .my_point {margin:25px 0 35px;}
-.menu_all_wrap .group_my .mypage_box .my_point dl:after {content:""; display:block; clear:both;}
-.menu_all_wrap .group_my .mypage_box .my_point dl img {margin-bottom:3px; vertical-align:bottom;}
-.menu_all_wrap .group_my .mypage_box .my_point dl dt {position:relative; float:left; line-height:18px; margin-right:10px; margin-left:10px; padding-left:10px; font-size:12px;}
-.menu_all_wrap .group_my .mypage_box .my_point dl dt:before {content:""; opacity:.6; position:absolute; left:0; top:1px; height:15px; border-left:1px solid #DDD;}
-.menu_all_wrap .group_my .mypage_box .my_point dl dt:first-child {margin-left:0; padding-left:0;}
-.menu_all_wrap .group_my .mypage_box .my_point dl dt:first-child:before {display:none;}
-.menu_all_wrap .group_my .mypage_box .my_point dl dd {float:left; line-height:18px; font-size:14px;}
-.menu_all_wrap .group_my .mypage_box .my_point dl dd strong {line-height:16px; font-size:16px;}
-.menu_all_wrap .group_my .mypage_box .nomember_box {line-height:1.4; margin:10px 0; padding:5px 0 20px;}
-.menu_all_wrap .group_my .my_theater {float:none; width:100%; padding:0;}
-.menu_all_wrap .group_my .my_theater > .tit {margin-bottom:8px; font-size:14px;}
-.menu_all_wrap .group_my .my_theater .btn_setup {right:0; top:2px;}
-.menu_all_wrap .group_my .my_theater .theater_box li {width:78px;}
-.menu_all_wrap .group_my .my_theater .theater_box li strong {font-size:12px;}
-.menu_all_wrap .group_my .my_theater .theater_box li.add a {padding-top:38px;}
 
+div#layerAllMenu {}
+
+div#layerAllMenu {}
+
+div#layerAllMenu {}
+.menu_all_wrap.active .group_menu_all {float:left; width:620px; /*height:380px;*/ padding:0 20px;}
+.menu_all_wrap.active .group_menu_all table tbody th {padding:0 5px;}
+.menu_all_wrap.active .group_menu_all table tbody th span {display:inline-block; border-bottom:1px solid #707070; font-size:14px;}
+.menu_all_wrap.active .group_menu_all table tbody td {padding:0 5px 30px; font-size:11px; vertical-align:top;}
+.menu_all_wrap.active .group_menu_all table tbody td .tit {display:inline-block; border-bottom:1px solid #707070; font-size:14px;}
+.menu_all_wrap.active .group_menu_all table tbody td ul {margin-top:8px;}
+.menu_all_wrap.active .group_menu_all table tbody td ul > li {margin:5px 0;}
+.menu_all_wrap.active .group_my {float:left; width:256px; padding:0 30px 5px; border-left:1px solid rgba(112, 112, 112, .1);}
+.menu_all_wrap.active .group_my .mypage_box .my_info .area_btn_login {text-align:center;}
+.menu_all_wrap.active .group_my .bx_banner {margin:25px 0 0 -19px;}
+.menu_all_wrap.active .group_banner {clear:both;}
+.menu_all_wrap.active .group_close {position:absolute; right:-63px; top:0;}
+.menu_all_wrap.active .group_close button {width:43px; height:43px; border:none; text-indent:-9999em; background:url("../../Content/images/icon/close_33_wht.png") no-repeat center center;}
+/* customizing : .mypage_box */
+.menu_all_wrap.active .group_my .mypage_box {float:none; width:100%; min-height:inherit;}
+.menu_all_wrap.active .group_my .mypage_box .my_info {padding:0; min-height:46px;}
+.menu_all_wrap.active .group_my .mypage_box .my_info .profile_img {display:none; left:0; top:0; width:46px; height:46px;}
+.menu_all_wrap.active .group_my .mypage_box .my_info .grade_area {margin:0 0 0 0;}
+.menu_all_wrap.active .group_my .mypage_box .my_info .name {margin:5px 0 0 0; font-size:14px;}
+.menu_all_wrap.active .group_my .mypage_box .my_info .name strong {font-size:16px;}
+.menu_all_wrap.active .group_my .mypage_box .my_point {margin:25px 0 35px;}
+.menu_all_wrap.active .group_my .mypage_box .my_point dl:after {content:""; display:block; clear:both;}
+.menu_all_wrap.active .group_my .mypage_box .my_point dl img {margin-bottom:3px; vertical-align:bottom;}
+.menu_all_wrap.active .group_my .mypage_box .my_point dl dt {position:relative; float:left; line-height:18px; margin-right:10px; margin-left:10px; padding-left:10px; font-size:12px;}
+.menu_all_wrap.active .group_my .mypage_box .my_point dl dt:before {content:""; opacity:.6; position:absolute; left:0; top:1px; height:15px; border-left:1px solid #DDD;}
+.menu_all_wrap.active .group_my .mypage_box .my_point dl dt:first-child {margin-left:0; padding-left:0;}
+.menu_all_wrap.active .group_my .mypage_box .my_point dl dt:first-child:before {display:none;}
+.menu_all_wrap.active .group_my .mypage_box .my_point dl dd {float:left; line-height:18px; font-size:14px;}
+.menu_all_wrap.active .group_my .mypage_box .my_point dl dd strong {line-height:16px; font-size:16px;}
+.menu_all_wrap.active .group_my .mypage_box .nomember_box {line-height:1.4; margin:10px 0; padding:5px 0 20px;}
+.menu_all_wrap.active .group_my .my_theater {float:none; width:100%; padding:0;}
+.menu_all_wrap.active .group_my .my_theater > .tit {margin-bottom:8px; font-size:14px;}
+.menu_all_wrap.active .group_my .my_theater .btn_setup {right:0; top:2px;}
+.menu_all_wrap.active .group_my .my_theater .theater_box li {width:78px;}
+.menu_all_wrap.active .group_my .my_theater .theater_box li strong {font-size:12px;}
+.menu_all_wrap.active .group_my .my_theater .theater_box li.add a {padding-top:38px;}
 /* ë°”ë¡œì˜ˆë§¤ ================================================== */
 .menu_reserve_wrap {display:none; position:absolute; z-index:3; left:0; top:14px;}
 .menu_reserve_wrap.active {display:block;}
