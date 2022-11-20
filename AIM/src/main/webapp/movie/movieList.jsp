@@ -22,33 +22,39 @@
 				<li class="active"><button type="button"><span>현재 상영작</span></button></li>
 			</ul>
 			<ul class="list_lnk" id="movietype1">
-				<li class="on"><a href="javascript:void(0)" role="button">예매순</a></li>
-				<li><a href="javascript:void(0)" role="button">개봉일순</a></li>
-				<li><a href="javascript:void(0)" role="button">관람평 많은순</a></li>
+        <li><a href="./MovieList.mv?orderFlag=boxrank" role="button">인기순</a></li>
+        <li><a href="./MovieList.mv?orderFlag=bookRating" role="button">예매순</a></li>
+        <li><a href="./MovieList.mv?orderFlag=openDt" role="button">개봉일순</a></li>
 			</ul>
 			
 			<ul class="movie_list type2">
 			  <c:forEach var="movie" items="${movieList }">
 				<li class="screen_add_box"><div class="top_info">
-						<span class="poster_info">
-						<a href="./MovieDetail.mv?movieCd=${movie.movieCd}">
-							<img src="${movie.poster }"	alt="영화명"></a>
-							<em class="num_info">${movie.boxrank }</em>
-							<span class=
-								<c:if test="${movie.watchGradeNm.equals('12세이상관람가') }">
-									"ic_grade gr_12"
-								</c:if>
-								<c:if test="${movie.watchGradeNm.equals('15세이상관람가') }">
-									"ic_grade gr_15"
-								</c:if>
-								<c:if test="${movie.watchGradeNm.equals('18세이상관람가') }">
-									"ic_grade gr_18"
-								</c:if>
-								<c:if test="${movie.watchGradeNm.equals('전체관람가') }">
-									"ic_grade gr_all"
-								</c:if>>
-							</span>
-					 	</span>
+				    <div class="postercl">  
+							<span class="poster_info">
+							<a href="./MovieDetail.mv?movieCd=${movie.movieCd}">
+							 <figure>
+								<img src="${movie.poster }"	alt="영화명">
+								<figcaption>상세정보</figcaption>
+							 </figure>	
+              </a>
+								<em class="num_info">${movie.boxrank }</em>
+								<span class=
+									<c:if test="${movie.watchGradeNm.equals('12세이상관람가') }">
+										"ic_grade gr_12"
+									</c:if>
+									<c:if test="${movie.watchGradeNm.equals('15세이상관람가') }">
+										"ic_grade gr_15"
+									</c:if>
+									<c:if test="${movie.watchGradeNm.equals('18세이상관람가') }">
+										"ic_grade gr_18"
+									</c:if>
+									<c:if test="${movie.watchGradeNm.equals('전체관람가') }">
+										"ic_grade gr_all"
+									</c:if>>
+								</span>
+	            </span>
+            </div> 
  						<div class="over_box"> 
 							<div class="inner" style="margin-top: -33px;"> 
 								<a href="./Ticketing.tk?movieCd=${movie.movieCd}"
