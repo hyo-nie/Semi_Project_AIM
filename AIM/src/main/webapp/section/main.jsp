@@ -9,7 +9,7 @@
 <title>Aim - all in movie</title>
 
 <link rel="stylesheet" type="text/css" href="./section/dragdealer.css">
- <link rel="stylesheet" type="text/css" href="./section/component.css"> 
+<link rel="stylesheet" type="text/css" href="./section/component.css">
 <!-- <script type="text/javascript" async=""
 	src="https://ssl.google-analytics.com/ga.js"></script> -->
 <script src="./section/modernizr.custom.js"></script>
@@ -28,19 +28,28 @@
 		var s = document.getElementsByTagName('script')[0];
 		s.parentNode.insertBefore(ga, s);
 	})();
+	
+// 	$('#owl-banner').owlCarousel({
+// 	    items : 1, //화면에 표시 할 슬라이드 수
+// 	    animateOut : 'fadeOut', // 사라질때의 애니메이션
+// 	    margin : 10, // 슬라이드 간격
+// 	    dots : true, // Pagination 표시 여부
+// 	    autoplay : true, // 자동 슬라이드 여부
+// 	    autoplayTimeout : 3000, // 자동 슬라이드 시간 (예제는 3초)
+// 	    loop : true // 무한 반복 여부
+// 	})
+
+
 </script>
 
 </head>
 <body>
-	<div class="container">
-		<div class="codrops-top clearfix">
 
-		</div>
+
+
+	<div class="container">
+
 		<header id="header" class="codrops-header">
-			<h1>AIM - all in movie</h1>
-			<span class="message">This mobile version does not have the
-				slideshow switch</span>
-			<button class="slider-switch">Switch view</button>
 		</header>
 		<div id="overlay" class="overlay hide">
 			<div class="info">
@@ -52,18 +61,53 @@
 		</div>
 		<div id="slideshow" class="dragslider">
 			<section class="img-dragger img-dragger-large dragdealer">
-				<div class="handle"
-					style="width: 800%; transform: translate3d(0px, 0px, 0px);">
+				<div class="handle">
 					<div class="slide current" data-content="content-1"
 						style="width: 12.5%;">
-						<div class="img-wrap">
-							<img src="img/1.jpg" alt="img1">
-						</div>
+<!-- 							<div class="info"> -->
+<!-- 							<h3 class="animate">테스트 문구입니다.</h3> -->
+<!-- 							</div> -->
+							<div class="info">
+						  <article>
+						 <div class="waviy" style="font-size: 50px; padding: 0 0 0 400px; position: fixed;">
+						   <span style="--i:1; color: #CD1039;">A</span>
+						   <span style="--i:2; color: #F56E6E;">I</span>
+						   <span style="--i:3; color: #FF8200;">M</span>
+						   <span style="--i:4; color: #FFB432;">-</span>
+						   <span style="--i:5; color: #FFD732;">a</span>
+						   <span style="--i:6; color: #A8F552;">l</span>
+						   <span style="--i:7; color: #64CD3C;">l</span>
+						   <span style="--i:7"> </span>
+						   <span style="--i:7"> </span>
+						   <span style="--i:8; color: #3ED0C8;">i</span>
+   						   <span style="--i:9; color: #14D3FF;">n</span>
+   						   <span style="--i:9"> </span>
+   						   <span style="--i:9"> </span>
+   						   <span style="--i:10; color:#0000FF;">m</span>
+   						   <span style="--i:11; color:#6464CD;">o</span>
+   						   <span style="--i:12; color:#14148C;">v</span>
+   						   <span style="--i:13; color:#BC55EF;">i</span>
+   						   <span style="--i:14; color:#9400D3;">e</span>
+						  </div>
+								<aim>
+								<div id=container>
+								Aim is? 
+									<div id=flip>
+										<div><div>영화의 모든 것!</div></div>
+										<div><div>액션과 판타지까지</div></div>
+										<div><div>로맨스? 공포?</div></div>
+									</div>
+									All In Movies!
+								</div>
+								</aim>
+							</article>
+						  </div>
 
-							Lorem Waldy<span>Distilling design ideas and other
-								interesting topics</span>
-
-						<button class="content-switch">Read more</button>
+						<button class="content-switch" 
+						style="height: 71.2px; width: 138.4px; border: 0px">
+						<img alt="start" src="https://ifh.cc/g/Yx81Ww.png"
+						style="left:-185px; top:-44px;"> 
+						</button>
 					</div>
 
 				</div>
@@ -85,7 +129,7 @@
 					<jsp:include page="../inc/footer.jsp" />
 
 				</div>
-				
+
 			</section>
 		</div>
 	</div>

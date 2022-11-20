@@ -17,13 +17,13 @@
 				<img
 				src="https://caching.lottecinema.co.kr//Media/WebAdmin/c793af89f3b648aa99cc679186ccfa02.png"
 				alt="할인안내"></a>
-			<a href="#">
+			<a href="./AimPick.st">
 				<img
 				src="https://ifh.cc/g/BOqTLc.png"
 				alt="스토어"></a>
-			<a href="#">
+			<a href="./HpAdmin.hp">
 				<img
-				src="./HpAdmin.hp"
+				src="https://caching.lottecinema.co.kr//Media/WebAdmin/e339dfaae8d74acfbf7b0c6987442ac8.png"
 				alt="고객센터"></a>
 
 			<a href="#" class="qick_top">TOP</a> <!-- top 수정금지 -->

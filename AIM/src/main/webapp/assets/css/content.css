@@ -5,20 +5,27 @@ ver : 1.00
 ver : 1.01 20191219 2502 line > íŒì—…ë©”ë‰´ ê³ ì •ë†’ì´ê°’ ì‚­ì œ
 ============================== */
 
+/* 관람등급 숨김표시 -김태홍 */
+#hide {
+	opacity: 1;
+}
 
 
 /* íŒì—… : ì”¨ì¸„ ì œê³µë™ì˜ ============================== */
-.layer_wrap.layer_movie_grade {width:600px;} 
-.layer_wrap.layer_movie_grade .tbl_dtal td {font-size:13px;}
-.layer_wrap.layer_seechu {width:600px;}
-.layer_wrap.layer_seechu .layer_header {border-bottom:0 none;}
-.layer_wrap.layer_seechu .layer_contents {background-color:#F5F5F5;}
-.layer_wrap.layer_seechu .layer_contents .bx_txt {margin-bottom:35px; line-height:1.5; font-size:12px;} /* 2020.01.08 */
-.layer_wrap.layer_seechu .layer_contents label.ty2 {font-size:15px; margin-bottom:10px;}
-.layer_wrap.layer_seechu .layer_contents textarea.ty2 {font-size:12px;}
-.layer_wrap.layer_seechu .layer_contents .btn_col10 {display:block; width:285px; margin:22px auto 0;}
-.layer_wrap.layer_seechu .layer_footer {background-color:#201C1D; text-align:left; padding:15px 30px;}
-.layer_wrap.layer_seechu .layer_footer .close_wrap label {color:#fff;}
+.llayer_wrap.layer_movie_grade {width:600px; z-index: 99999; width: 600px;  position: absolute; margin:0px 0px 0px 380px; background-color:white;
+		border: 0.5px; border-color:black; border-style:dotted; border-radius : 20px ;	
+							   } 
+.llayer_wrap.layer_movie_grade button{ position: absolute; right: 10px; top: 5px;width: 19px; height: 19px; border: none; background-image: url(https://www.lottecinema.co.kr/NLCHS/Content/images/icon/close_19.png);}
+.llayer_wrap.layer_movie_grade .tbl_dtal td {font-size:13px;}
+.llayer_wrap.layer_seechu {width:600px;}
+.llayer_wrap.layer_seechu .layer_header {border-bottom:0 none;}
+.llayer_wrap.layer_seechu .layer_contents {background-color:#F5F5F5;}
+.llayer_wrap.layer_seechu .layer_contents .bx_txt {margin-bottom:35px; line-height:1.5; font-size:12px;} /* 2020.01.08 */
+.llayer_wrap.layer_seechu .layer_contents label.ty2 {font-size:15px; margin-bottom:10px;}
+.llayer_wrap.layer_seechu .layer_contents textarea.ty2 {font-size:12px;}
+.llayer_wrap.layer_seechu .layer_contents .btn_col10 {display:block; width:285px; margin:22px auto 0;}
+.llayer_wrap.layer_seechu .layer_footer {background-color:#201C1D; text-align:left; padding:15px 30px;}
+.llayer_wrap.layer_seechu .layer_footer .close_wrap label {color:#fff;}
 
 
 
@@ -243,7 +250,7 @@ ver : 1.01 20191219 2502 line > íŒì—…ë©”ë‰´ ê³ ì •ë†�
 .contents_movie_detail .no_data {padding:140px 0; background:#F8F8F8; text-align:center; font-size:15px; border-top:1px solid #ccc}
 .contents_movie_detail .list_bdr_box {margin-top:60px;}
 .contents_movie_detail .list_txt {margin-left:10px;}
-.movi_tab_info1 .left_con {float:left; width:480px;}
+.movi_tab_info1 .left_con {float:left; width:480px; height:300px;}
 .movi_tab_info1 .left_con .mCustomScrollbar {height:115px;}
 .movi_tab_info1 .left_con .txt_info {padding-right:80px; font-size:13px; line-height:1.8}
 .movi_tab_info1 .right_con {float:right; width:480px;}
@@ -2843,7 +2850,15 @@ dl.total_price dd strong {font-family:'Roboto'; font-size:25px; font-weight:bold
 .banner_side_wrap .banner_01.fixed {position:fixed;}
 .banner_side_wrap .banner_01 a {display:block; overflow:hidden; width:145px; height:145px;}
 .banner_side_wrap .banner_01 a img{ width:100%; height:100%; border-radius:50%;}
-.banner_side_wrap .btn_close {position:absolute; right:0; top:0; width:13px; height:13px; border:0; text-indent:-9999em; background:transparent url("../../Content/images/icon/close_13_gry.png") no-repeat 0 0;}
+.banner_side_wrap .btn_close {    position: absolute;
+    right: 0;
+    top: 0;
+    width: 19px;
+    height: 19px;
+    border: 0;
+    text-indent: -9999em;
+    background: transparent url(https://www.lottecinema.co.kr/NLCHS/Content/images/icon/close_19.png) no-repeat 0 0;
+}
 /* í•˜ë‹¨ */
 .banner_wrap {padding-top:70px; text-align:center;}
 .banner_wrap .banner_01 {margin-bottom:50px;}

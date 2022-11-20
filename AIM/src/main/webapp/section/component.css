@@ -1,5 +1,5 @@
-
-
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
 .js .container,
 .js .dragslider,
 .js .img-dragger .handle {
@@ -62,7 +62,7 @@ button.slider-switch:hover {
 /* Dragger */
 .img-dragger {
 	position: relative;
-	z-index: 100;
+	z-index: 9;
 }
 
 
@@ -97,8 +97,10 @@ button.slider-switch:hover {
 .img-dragger .slide {
 	display: inline-block;
 	position: relative;
-	height: 100%;
-	background: #567076;
+	background-image : url("https://ifh.cc/g/HA9PrS.gif");
+	background-repeat : no-repeat;
+	background-size : cover;
+	height : 100%;
 	font-size: 16px;
 	white-space: normal;
 	cursor: -webkit-grab; 
@@ -111,6 +113,115 @@ button.slider-switch:hover {
 	user-select: none;
 	vertical-align: top;
 }
+.info{
+	margin : 150px 0 0 260px;	
+}
+
+article {
+  background-color:  none;;
+  display: block;
+  position : fixed;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  height : 800px;
+}
+.info .waviy span {
+  font-family: 'Alfa Slab One', cursive;
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  animation: waviy 1.5s infinite;
+  animation-delay: calc(.1s * var(--i));
+  
+}
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
+aim {
+  margin:0px;
+  font-family:'Roboto';
+  text-align:center;
+}
+
+aim #container {
+  color:#999;
+  font-size:36px;
+  font-weight:bold;
+  padding: 0px 505px 0px 0px;
+  position:fixed;
+  width:100%;
+  bottom:30%;
+  display:block;
+}
+
+aim #flip {
+  height:50px;
+  overflow:hidden;
+}
+
+aim #flip > div > div {
+  color:#fff;
+  padding:0px 12px;
+  height:45px;
+  margin-bottom:45px;
+  display:inline-block;
+}
+
+#flip div:first-child {
+  animation: show 5s linear infinite;
+}
+
+#flip div div {
+  background:#42c58a;
+}
+#flip div:first-child div {
+  background:#4ec7f3;
+}
+#flip div:last-child div {
+  background:#DC143C;
+}
+
+
+@keyframes show {
+  0% {margin-top:-270px;}
+  5% {margin-top:-180px;}
+  33% {margin-top:-180px;}
+  38% {margin-top:-90px;}
+  66% {margin-top:-90px;}
+  71% {margin-top:0px;}
+  99.99% {margin-top:0px;}
+  100% {margin-top:-270px;}
+}
+
+/* .info .animate
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+ background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  font-size: 50px;
+} */
+
 
 .no-js .img-dragger .slide {
 	width: 300px;
@@ -129,11 +240,10 @@ button.content-switch {
 	border: 2px solid #fff;
 	width: 160px;
 	text-indent: 200%;
-	overflow: hidden;
 	white-space: nowrap;
-	background: transparent;
+	background : none;
 	color: #fff;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	position: absolute;
 	cursor: pointer;
 	top: 100%;
@@ -147,7 +257,7 @@ button.content-switch {
 	letter-spacing: 1px;
 	font-weight: 400;
 	outline: none;
-	z-index: 1000;
+	z-index: 10;
 	opacity: 0.7;
 	-webkit-transition: -webkit-transform 0.6s cubic-bezier(.7,0,.3,1), opacity 0.3s, color 0.3s, border-color 0.3s;
 	transition: transform 0.6s cubic-bezier(.7,0,.3,1), opacity 0.3s, color 0.3s, border-color 0.3s;

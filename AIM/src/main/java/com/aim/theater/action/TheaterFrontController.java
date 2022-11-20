@@ -41,7 +41,7 @@ public class TheaterFrontController extends HttpServlet {
 				e.printStackTrace();
 			}
 		}
-		else if(command.equals("DateClick.th")) {
+		else if(command.equals("/DateClick.th")) {
 			System.out.println("C : /DateClick.th 호출");
 			
 			action = new DateClickAction();
