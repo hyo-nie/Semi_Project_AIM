@@ -121,7 +121,7 @@ public class OrderDAO {
 	  		
 			try {
 				con = getConnection();
-				sql = "select o_cnum,o_name,o_amount,o_id,o_tel,sum(o_sum) as o_sum,o_pay,o_pdate "
+				sql = "select o_cnum,o_name,sum(o_amount) as o_amount,o_id,o_tel,sum(o_sum) as o_sum,o_pay,o_pdate "
 						+ "from class7_220721_team3.order "
 						+ "where o_id=? "
 						+ "group by o_cnum "

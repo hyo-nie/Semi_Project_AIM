@@ -12,9 +12,9 @@
 </head>
 <body>
 
-<%-- 	<jsp:include page="../inc/include.jsp" /> --%>
+	<jsp:include page="../inc/include.jsp" />
 	
-<%-- 	<jsp:include page="../inc/nav_bar.jsp"></jsp:include> --%>
+	<jsp:include page="../inc/nav_bar.jsp"></jsp:include>
 <!-- 위에꺼 주석풀고 넣으면 다 겹쳐지고 깨져요 ㅠ 흑.. -->
 
    <!-- 구매자 주문목록페이지  -->
