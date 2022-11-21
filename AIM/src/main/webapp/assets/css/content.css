@@ -2732,9 +2732,9 @@ dl.total_price dd strong {font-family:'Roboto'; font-size:25px; font-weight:bold
 .tab_wrap > li.active > .tab_con {overflow:inherit; position:relative; width:auto; height:auto;}
 /* outer */
 .tab_wrap.outer {padding-top:80px;}
-.tab_wrap.outer > li > .tab_tit {height:50px; line-height:50px; border-bottom:1px solid #CCC; font-size:15px; color:#7F7F7F;}
+.tab_wrap.outer > li > .tab_tit {height:50px; line-height:50px; border:1px solid #DDD; font-size:15px; color:#7F7F7F;}
 .tab_wrap.outer > li > .tab_tit.ty2 {line-height:1.3;}
-.tab_wrap.outer > li.active > .tab_tit {border-bottom:2px solid #111; color:#000;}
+.tab_wrap.outer > li.active > .tab_tit {color:#000;}
 /* outer mid */
 .tab_wrap.outer.mid > li > .tab_tit {font-size:15px;}
 /* outer small */

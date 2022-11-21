@@ -24,6 +24,8 @@ public class MovieListAction implements Action {
     //System.out.println(movieList);
     request.setAttribute("movieList", movieList);
     
+    System.out.println("@@@@@@@@@@@@@@@"+movieList);
+    System.out.println("**************"+movieList.size());
     
     ActionForward forward = new ActionForward();
     forward.setPath("./movie/movieList.jsp");
