@@ -221,8 +221,8 @@ public class NtDAO {
 				pstmt.setString(3, dto.getNt_subject());
 				pstmt.setString(4, dto.getNt_content());
 				pstmt.setString(5, dto.getNt_file());
+				pstmt.setInt(6, 0);
 				pstmt.setInt(7, 0);
-				pstmt.setInt(8, 0);
 				
 				// 4. sql 실행
 				pstmt.executeUpdate();
@@ -238,5 +238,58 @@ public class NtDAO {
 			}
 		// 공지 글 쓰기
 
+		// 해당 번호 공지글 가져오기
+		
+		public NtDTO getNtList(int nt_bno) {
+			NtDTO dto=null;
+			try {
+				// 1.2. 디비연결
+				con = getConnection();
+				
+				// 3. sql 작성(select) & pstmt 객체
+				sql = "select * from notice_board where nt_bno = ?";
+				pstmt = con.prepareStatement(sql);
+				
+				// ???
+				pstmt.setInt(1, nt_bno);
+				
+				// 4. sql 실행
+				rs = pstmt.executeQuery();
+				
+				// 5. 데이터처리	
+				if(rs.next()) {
+					
+					// 데이터있을때만 dto객체 생성
+					dto = new NtDTO();
+					
+					// DB정보(rs) -> dto 저장
+					dto.setNt_bno(rs.getInt("nt_bno"));
+					dto.setMb_id(rs.getString("mb_id"));
+					dto.setNt_subject(rs.getString("nt_subject"));
+					dto.setNt_content(rs.getString("nt_content"));
+					dto.setNt_file(rs.getString("nt_file"));
+					dto.setNt_date(rs.getDate("nt_date"));
+					dto.setNt_re_lev(rs.getInt("nt_re_lev"));
+					dto.setNt_re_ref(rs.getInt("nt_re_ref"));
+					
+				}
+				
+				System.out.println(" DAO : 글 정보 1개 저장완료 ");
+					
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				closeDB();
+			}
+			
+			return dto;
+		}
+		
+		// 해당 번호 공지글 가져오기
+		
+		
+		// 공지 글 수정하기
+	
+		// 공지 글 수정하기
 	
 }

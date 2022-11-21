@@ -63,8 +63,8 @@ public class NtWriteAction implements Action {
 		dao.NtBoard(dto);
 					
 		// 페이지 이동정보 생성(티켓 생성)
-		forward.setPath("./.jsp");
-		forward.setRedirect(false);
+		forward.setPath("./NtList.nt");
+		forward.setRedirect(true);
 						
 		return forward;
 			}

@@ -99,7 +99,7 @@
 									<button type="button" class="btn_pg_next">다음 페이지로 이동</button>
 									<button type="button" class="btn_pg_last">마지막 페이지로 이동</button>
 									
-									<input type="button" value="공지사항 등록하기" onclick="location.href='./notice/ntwrite.jsp';">
+									<input type="button" value="공지사항 등록하기" onclick="location.href='./NtWriteForm.nt';">
 									
 								</div>
 							</div></li>
