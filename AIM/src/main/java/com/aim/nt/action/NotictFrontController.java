@@ -47,6 +47,14 @@ public class NotictFrontController extends HttpServlet {
 				e.printStackTrace();
 			}
     	}
+    	// 공지사항 쓰기 페이지로 이동
+    	else if(command.equals("/NtWriteForm.nt")) {
+			System.out.println(" C : /NtWriteForm.nt 호출 ");
+			
+			forward = new ActionForward();
+			forward.setPath("./notice/ntwrite.jsp");
+			forward.setRedirect(false);			
+		}
     	
     	// 공지사항 글 쓰기
     	else if(command.equals("/NtWrite.nt")) {
@@ -59,6 +67,43 @@ public class NotictFrontController extends HttpServlet {
 				e.printStackTrace();
 			}
     	}
+    	// 공지사항 글 내용 보기
+    	else if(command.equals("/NtContent.nt")) {
+    		System.out.println(" C : /NtContent.nt 실행 ");
+    		
+    		action = new NtContentAction();
+    		try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+    	}
+    	// 공지사항 글 수정페이지 이동
+    	else if(command.equals("/NtUpdate.nt")) {
+    		System.out.println(" C : /NtUpdate.nt 실행");
+    		
+    		action = new NtUpdateAction();
+    		try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+    	}
+    	
+    	// 공지사항 글 수정
+    	else if(command.equals("//NtUpdatePro.nt")) {
+    		System.out.println(" C : /NtUpdatePro.nt 실행");
+    		
+    		action = new NtUpdateProAction();
+    		try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+    	}
+    	
+    	
+    	// 공지사항 글 삭제
     	
     	
     
