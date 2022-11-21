@@ -49,7 +49,7 @@
                
 <ul class="com_list_style1">
 
-<c:forEach var="i" begin="0" end="${orderList.size() -1 }" step="1">
+<c:forEach var="i" begin="0" end="${orderList.size()-1 }" step="1">
 	<c:set var="totalPrice"/>
 	<c:set var="odt" value="${orderList[i] }" />
 <li>

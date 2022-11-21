@@ -13,7 +13,7 @@
 <body>
 
 <article>
-<%-- 	${orderDetail } --%>
+	${detailInfo }
 	<table>
       <div class="com_cart_list_wrap">
       <h1>주문 상세 내역</h1>
@@ -38,19 +38,19 @@
                
 <ul class="com_list_style1">
 
-<c:forEach var="i" begin="0" end="${orderDetail.size() -1 }" step="1">
+<c:forEach var="i" begin="0" end="${detailInfo.size()-1 }" step="1">
 	<c:set var="totalPrice"/>
-	<c:set var="odt" value="${orderDetail[i] }" />
+	<c:set var="dti" value="${detailInfo[i] }" />
 <li>
   <div class="product_info_wrap">
   <span class="product_info_one_origin">
   </span>
   </div>
-  <div class="product_info_cnt_wrap"> ${odt.o_name } </div>
-  <div class="product_info_cnt_wrap"> ${odt.o_amount } </div>
+  <div class="product_info_cnt_wrap"> ${dti.o_name } </div>
+  <div class="product_info_cnt_wrap"> ${dti.o_amount } </div>
     <div class="product_info_cnt_wrap">
 	 <span>
-       <fmt:formatNumber value="${odt.o_sum}" />
+       <fmt:formatNumber value="${dti.o_sum}" />
      </span>
     </div>
 </li>

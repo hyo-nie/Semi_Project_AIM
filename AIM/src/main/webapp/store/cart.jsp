@@ -95,7 +95,7 @@
             </p>         
          
          
-         <div>장바구니가 비어있습니다!</div>
+         <div>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ장바구니가 비어있습니다!</div>
          
          <div class="com_btn_wrap pT60">
             <a href="./StoreMain.st" class="btn_style0 ">스토어 메인</a>
