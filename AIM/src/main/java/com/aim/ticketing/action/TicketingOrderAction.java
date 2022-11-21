@@ -25,6 +25,8 @@ public class TicketingOrderAction implements Action {
 		// reservationDAO
 		ReservationDAO reDAO = new ReservationDAO();
 		ScheduleDTO scDTO = reDAO.getScheduleJoin(scCode);
+		String tkCode = reDAO.makeTkCode();
+		System.out.println(tkCode);
 		
 		// 좌석변환 시작
 		List<Integer> seatArrTmp = new ArrayList<Integer>();
@@ -52,11 +54,12 @@ public class TicketingOrderAction implements Action {
 		
 		// request 저장
 		request.setAttribute("scDTO", scDTO);
-		request.setAttribute("seatNo", seatNo);
+		request.setAttribute("seatNum", seatNo);
 		request.setAttribute("adultCnt", adultCnt);
 		request.setAttribute("childCnt", childCnt);
 		request.setAttribute("seniorCnt", seniorCnt);
 		request.setAttribute("seatArr", seatArr);
+		request.setAttribute("tkCode", tkCode);
 		
 		// 페이지 이동
 		ActionForward forward = new ActionForward();

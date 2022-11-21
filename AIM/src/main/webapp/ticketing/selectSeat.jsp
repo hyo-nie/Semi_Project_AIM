@@ -77,7 +77,7 @@
 				} else {
 					adultCnt--;
 					$('#txt_num1').html(adultCnt);
-					totalPrice = (12000*adultCnt) + (9000*childCnt) + (7000*seniorCnt);
+					totalPrice = (13000*adultCnt) + (9000*childCnt) + (7000*seniorCnt);
 					$('#totalPrice_ym').html(totalPrice);
 				}
 				
@@ -88,7 +88,7 @@
 				} else {
 					adultCnt++;
 					$('#txt_num1').html(adultCnt);
-					totalPrice = (12000*adultCnt) + (9000*childCnt) + (7000*seniorCnt);
+					totalPrice = (13000*adultCnt) + (9000*childCnt) + (7000*seniorCnt);
 					$('#totalPrice_ym').html(totalPrice);
 				}
 			}
@@ -106,7 +106,7 @@
 				} else {
 					childCnt--;
 					$('#txt_num2').html(childCnt);
-					totalPrice = (12000*adultCnt) + (9000*childCnt) + (7000*seniorCnt);
+					totalPrice = (13000*adultCnt) + (9000*childCnt) + (7000*seniorCnt);
 					$('#totalPrice_ym').html(totalPrice);
 				}
 				
@@ -117,7 +117,7 @@
 				} else {
 					childCnt++;
 					$('#txt_num2').html(childCnt);
-					totalPrice = (12000*adultCnt) + (9000*childCnt) + (7000*seniorCnt);
+					totalPrice = (13000*adultCnt) + (9000*childCnt) + (7000*seniorCnt);
 					$('#totalPrice_ym').html(totalPrice);
 				}
 			}
@@ -135,7 +135,7 @@
 				} else {
 					seniorCnt--;
 					$('#txt_num3').html(seniorCnt);
-					totalPrice = (12000*adultCnt) + (9000*childCnt) + (7000*seniorCnt);
+					totalPrice = (13000*adultCnt) + (9000*childCnt) + (7000*seniorCnt);
 					$('#totalPrice_ym').html(totalPrice);
 				}
 				
@@ -146,7 +146,7 @@
 				} else {
 					seniorCnt++;
 					$('#txt_num3').html(seniorCnt);
-					totalPrice = (12000*adultCnt) + (9000*childCnt) + (7000*seniorCnt);
+					totalPrice = (13000*adultCnt) + (9000*childCnt) + (7000*seniorCnt);
 					$('#totalPrice_ym').html(totalPrice);
 				}
 			}

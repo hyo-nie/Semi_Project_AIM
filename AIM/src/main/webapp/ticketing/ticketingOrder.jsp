@@ -15,16 +15,16 @@
 <script type="text/javascript">
 	var IMP = window.IMP;   // 생략 가능
 	IMP.init("imp43027525"); // 예: imp00000000 
-	
+	var seatNo = "${seatNum}";
 	
     function requestPay() {
         IMP.request_pay({ 
             pg: "html5_inicis",
             pay_method: "card",
-            merchant_uid: "ORD20180121-0101111",   //주문번호, 고유값(PK) 여야 한다(디비에 저장);
+            merchant_uid: "${tkCode}",   //주문번호, 고유값(PK) 여야 한다(디비에 저장);
             name: "${scDTO.movieNm}",
-            amount: 100,                         // 숫자타입
-            buyer_email: "이메일을 입력하세요.",
+            amount: 100,	// 숫자타입
+            buyer_email: "email",
             buyer_name: "홍길동",
             buyer_tel: "010-4242-4242",
             buyer_addr: "서울특별시 강남구 신사동",
@@ -33,6 +33,7 @@
             if (rsp.success) {
                 // 결제 성공 시 로직,
                 alert('결제 성공!')
+                location.href="./OrderSuccess.tk?seatNum="+seatNo+"&scCode="+${scDTO.scCode}+"&totalCnt="+${adultCnt+childCnt+seniorCnt}+"&tkCode="+${tkCode};
             } else {
                 // 결제 실패 시 로직,
                 alert('결제 실패!')
@@ -53,7 +54,6 @@
 	<jsp:include page="../inc/topbanner.jsp" />
 	<!-- 헤더/네비 -->
 	<jsp:include page="../inc/nav_bar.jsp" />
-
 
 	<br>
 	<br>
@@ -124,11 +124,11 @@
 							<div class="bx_con">
 									<dl>
 										<dt>티켓금액</dt>
-										<dd> <fmt:formatNumber value="${adultCnt*12000 + childCnt*9000 + senior*7000 }"/>원</dd>
+										<dd> <fmt:formatNumber value="${adultCnt*13000 + childCnt*9000 + seniorCnt*7000 }"/>원</dd>
 										<dt>할인금액</dt>
 										<dd>0원</dd>
 										<dt>총합계</dt>
-										<dd> <fmt:formatNumber value="${adultCnt*12000 + childCnt*9000 + senior*7000 }"/>원</dd>
+										<dd> <fmt:formatNumber value="${adultCnt*13000 + childCnt*9000 + seniorCnt*7000 }"/>원</dd>
 									</dl>
 								</div></a></li>
 						<li><a href="#" style="cursor: default;"><strong

@@ -468,6 +468,35 @@ public class ReservationDAO {
 	}
 	// getScheduleJoin(scCode)
 	
+	/**
+	 *  makeTkCode() 
+	 */
+	public String makeTkCode() {
+		String tkCode = null;
+		Calendar cal = Calendar.getInstance();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyMMdd");
+		
+		
+		try {
+			con = getConnection();
+			sql = "select count(*) from reservation";
+			pstmt = con.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			
+			if (rs.next()) {
+				tkCode = "TK" + sdf.format(cal.getTime()) + "-" + (rs.getInt(1)+1);
+			}
+			
+			System.out.println(" DAO : tkCode : " + tkCode);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			closeDB();
+		}
+		return tkCode;
+	}
+	// makeTkCode() 
 	
 	
 	
