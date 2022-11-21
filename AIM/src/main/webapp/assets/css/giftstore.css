@@ -103,7 +103,7 @@ input[type='text'][readonly]{background-color:#fff}
 	.com_btn_wrap span,
 	.com_btn_wrap a{display:inline-block; font-size:18px; margin-left:14px}
 	.com_btn_wrap > *:first-child{margin-left:0}
-		a.btn_style0{width:208px; height:60px; font-weight:500; font-size:19px; color:#fff; line-height:60px; background-color:#373e46; border:1px solid #373e46}
+		a.btn_style0{width:208px; height:60px; font-weight:500; font-size:19px; color:#fff; line-height:60px; background-color:#18315D; border:1px solid #373e46}
 		a.btn_style1{width:208px; height:60px; font-weight:500; font-size:19px; color:#222; line-height:60px; background-color:#fff; border:1px solid #9197a3}
 		a.btn_prev{position:absolute; bottom:14px; left:0; padding-left:40px; font-weight:400; font-size:18px; color:#222; line-height:34px}
 		a.btn_prev img{position:absolute; left:0}
@@ -812,7 +812,7 @@ input[type='text'][readonly]{background-color:#fff}
 
 			.category_product_detail_contents .category_product_detail_contents_wrap .category_product_detail_btn_wrap{overflow:hidden}
 			.category_product_detail_contents .category_product_detail_contents_wrap .category_product_detail_btn_wrap .state_soldout{display:block; float:left; width:100%; height:60px; font-weight:400; font-size:18px; color:#fff; line-height:60px; text-align:center; background-color:#9197a3}
-			.category_product_detail_contents .category_product_detail_contents_wrap .category_product_detail_btn_wrap a{display:block; float:left; width:245px; height:60px; margin-left:10px; font-weight:500; font-size:18px; color:#fff; line-height:60px; text-align:center; background-color:#373e46}
+			.category_product_detail_contents .category_product_detail_contents_wrap .category_product_detail_btn_wrap a{display:block; float:left; width:245px; height:60px; margin-left:10px; font-weight:500; font-size:18px; color:#fff; line-height:60px; text-align:center; background-color:#18315D}
 			.category_product_detail_contents .category_product_detail_contents_wrap .category_product_detail_btn_wrap a.btn_cart{width:60px; font-size:0; background:darkgray url('../img/bg_cartBtn.png') center center scroll no-repeat}
 			.category_product_detail_contents .category_product_detail_contents_wrap .category_product_detail_btn_wrap a.btn_cart ~ a{width:210px}
 			.category_product_detail_contents .category_product_detail_contents_wrap .category_product_detail_btn_wrap a:first-child{margin-left:0}
