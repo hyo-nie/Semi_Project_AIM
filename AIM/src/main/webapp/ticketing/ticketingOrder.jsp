@@ -9,11 +9,38 @@
 <title>AIM - 예매</title>
 
 <jsp:include page="../inc/include.jsp" />
+<!-- iamport.payment.js -->
+<script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.2.0.js"></script>
+
 <script type="text/javascript">
-	$(document).ready(function(){
-		
+	var IMP = window.IMP;   // 생략 가능
+	IMP.init("imp43027525"); // 예: imp00000000 
 	
-	});
+	
+    function requestPay() {
+        IMP.request_pay({ 
+            pg: "html5_inicis",
+            pay_method: "card",
+            merchant_uid: "ORD20180121-0101111",   //주문번호, 고유값(PK) 여야 한다(디비에 저장);
+            name: "${scDTO.movieNm}",
+            amount: 100,                         // 숫자타입
+            buyer_email: "이메일을 입력하세요.",
+            buyer_name: "홍길동",
+            buyer_tel: "010-4242-4242",
+            buyer_addr: "서울특별시 강남구 신사동",
+            buyer_postcode: "01181"
+        }, function (rsp) { // callback, (위의 로직이 모두 실행되고 나서 실행되는 함수)
+            if (rsp.success) {
+                // 결제 성공 시 로직,
+                alert('결제 성공!')
+            } else {
+                // 결제 실패 시 로직,
+                alert('결제 실패!')
+                console.log(rsp);
+            }
+        });
+      }
+	
 </script>
 
 
@@ -267,7 +294,7 @@
 										총<strong><fmt:formatNumber value="${adultCnt*12000 + childCnt*9000 + senior*7000 }"/></strong>원
 									</dd>
 								</dl>
-								<a href="#none" class="btn_col1 btn_confirm">결제하기</a>
+								<a href="javascript:requestPay();" class="btn_col1 btn_confirm">결제하기</a>
 							</div>
 						</div>
 					</div>
