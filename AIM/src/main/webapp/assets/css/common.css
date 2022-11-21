@@ -230,6 +230,14 @@ input.inp_cont {width:54px; margin:0 3px;} /* 2020.01.02 */
 .tit_type1 .eng {font-family:'Roboto', "Noto Sans KR";}
 .tit_type1 em {display:block; font-size:13px; color:#999}
 
+/* 영화홈 */
+.tit_type0 {margin-top:5px; margin-bottom:12px; font-size:24px;}
+.tit_type0 strong {display:block; margin-bottom:8px;}
+.tit_type0 strong.ty2 {display:inline; margin-bottom:0; color:#ED4C6B;}
+.tit_type0 .eng {font-family:'Roboto', "Noto Sans KR";}
+.tit_type0 em {display:block; font-size:13px; color:#999}
+
+
 /* 라벨 감추기 */
 .label_none label em {overflow:hidden; position:absolute !important; width:1px; height:1px; clip:rect(1px, 1px, 1px, 1px);}
 /* 페이지 가이드 전용 ================================================== */

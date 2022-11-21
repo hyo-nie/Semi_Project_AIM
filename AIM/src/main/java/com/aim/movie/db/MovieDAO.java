@@ -441,6 +441,70 @@ public class MovieDAO {
 	
 	
 	
+		/**
+		 * HomeMovieList() : 영화 홈에서 추천영화의 정보를 보여주는 메서드
+		 */
+		public List HomeMovieList(String orderFlag) {
+	      List movieList = new ArrayList();
+	      MovieDTO dto = null;
+	      
+	      try {
+	        con = getConnection();
+	        sql = "select * from movie where boxrank>=11 && boxrank<=16";
+	        if(orderFlag != null && !"".equals(orderFlag)) {
+	          if(orderFlag.equals("boxrank")) {
+	            sql = sql + " order by boxrank";
+	          } else if(orderFlag.equals("bookRating")) {
+	              sql = sql + " order by bookRating desc";
+	          } else if(orderFlag.equals("openDt")) {
+	              sql = sql + " order by openDt";
+	          }
+	        } else {
+	           sql = sql + " order by boxrank";
+	        }
+	        System.out.println("orderFlag : "+orderFlag);
+	        System.out.println("sql : "+sql);
+	        pstmt = con.prepareStatement(sql);
+	        rs = pstmt.executeQuery();
+	        
+	        while(rs.next()) {
+	          dto = new MovieDTO();
+	          
+	          dto.setMovieCd(rs.getString("movieCd"));
+	          dto.setMovieNm(rs.getString("movieNm"));
+	          dto.setOpenDt(rs.getString("openDt"));
+	          dto.setGenreNm(rs.getString("genreNm"));
+	          dto.setDirectors(rs.getString("directors"));
+	          dto.setPoster(rs.getString("poster"));
+	          dto.setAudiAcc(rs.getInt("audiAcc"));
+	          dto.setBookRating(rs.getDouble("bookRating"));
+	          dto.setWatchGradeNm(rs.getString("watchGradeNm"));
+	          dto.setShowTm(rs.getString("showTm"));
+	          dto.setActors(rs.getString("actors"));
+	          dto.setContents(rs.getString("contents"));
+	          dto.setBoxrank(rs.getInt("boxrank"));
+	          
+	          movieList.add(dto);
+	        }
+	        System.out.println("DAO : 영화 정보 저장 완료");
+	        
+	      } catch (Exception e) {
+	        e.printStackTrace();
+	      } finally {
+	        closeDB();
+	      }
+	      return movieList;
+	    }
+	    //HomeMovieList() 끝
+	
+		
+		
+		
+		
+		
+		
+		
+		
 	
 	
 }

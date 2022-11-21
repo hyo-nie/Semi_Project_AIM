@@ -13,6 +13,8 @@
 <!-- 헤더/네비 -->
 <jsp:include page="../inc/nav_bar.jsp" />
 
+
+<!-- 파일 추가해서 수정해야하는 영화 홈 배너 !!지금작동안함!! -->
 <div id="visual_top" class="visual_top visual_movie_home" style="margin-top: 120px;">
 	<div class="inner">
 		<div class="slide_wrap slide_visual_movie_home">
@@ -87,84 +89,65 @@
 		</div>
 	</div>
 </div>
+<!-- 파일 추가해서 수정해야하는 영화 홈 배너 !!지금작동안함!! -->
 
 </head>
 <body>
 
-<br><br><br><br><br><br><br><br><br><br><br><br>
-
-<h2>MovieHomeList.jsp</h2>
-
-<table border="1">
-  <tr>
-    <td>포스터</td>
-    <td>영화명</td>
-    <td>관람등급</td>
-    <td>상세정보클릭버튼</td>
-  </tr> 
-
-  <c:forEach var="movie" items="${movieList }" >
-    <tr>
-      <td onclick="location.href='./MovieDetail.mv?movieCd=${movie.movieCd}';">${movie.poster }</td>
-      <td>${movie.movieNm }</td>
-      <td>${movie.watchGradeNm }</td>
-      <td onclick="location.href='./MovieDetail.mv?movieCd=${movie.movieCd}';">상세정보</td>
-    </tr> 
-   </c:forEach>
-</table>
-
-
-
+<!-- 영화 홈 페이지 좌우 여백 틀 -->
 <div id="contents" class="contents_movie_list">
-		<h2 class="hidden">영화목록</h2>
+	<h2 class="hidden">영화목록</h2>
 		<div class="movie_screen_box">
-			<ul class="tab_btn_type1">
-				<li class="active"><button type="button"><span>AIM's 추천 영화</span></button></li>
-			</ul>
+<!-- 영화 홈 페이지 좌우 여백 틀 -->			
 
+
+<!-- 영화 홈 페이지 추천영화 -->
+<div class="movi_pre_list">
+<h3 class="tit_type0">11월 AIM 추천영화 <strong class="ty2 eng">TOP 6</strong></h3>
+	<ul class="homemovie_list">
+	<c:forEach var="movie" items="${movieList }">
+		<li class="">
+			<div class="top_info">
+				<span class="poster_info">
+				<em class="tit_info">${movie.boxrank-10 }위</em>
+					<img src="${movie.poster }"	alt="영화명">
+					<span class="">
+					<c:if test="${movie.watchGradeNm.equals('12세이상관람가') }">
+						"ic_grade gr_12"
+					</c:if>
+					<c:if test="${movie.watchGradeNm.equals('15세이상관람가') }">
+						"ic_grade gr_15"
+					</c:if>
+					<c:if test="${movie.watchGradeNm.equals('18세이상관람가') }">
+						"ic_grade gr_18"
+					</c:if>
+					<c:if test="${movie.watchGradeNm.equals('전체관람가') }">
+						"ic_grade gr_all"
+					</c:if>
+					</span>
+				</span>
+			</div>
+			<div class="btm_info">
+				<strong class="tit_info">${movie.movieNm }</strong>
+				<span class="sub_info1"><span class="rate_info"> ${movie.actors } <br> ${movie.contents } </span></span>
+			</div>
+		</li>
+	</c:forEach>	
+	</ul>
+</div>
+<!-- 영화 홈 페이지 추천영화 -->
+<!-- css 수정 : /* HOMEMOVIELIST */ /* 영화홈 */ -->
+
+	
 			
-			<ul class="movie_list type2">
-			  <c:forEach var="movie" items="${movieList }">
-				<li class="screen_add_box"><div class="top_info">
-						<span class="poster_info">
-						<a href="./MovieDetail.mv?movieCd=${movie.movieCd}">
-							<img src="${movie.poster }"	alt="영화명"></a>
-							<em class="num_info">${movie.boxrank }</em>
-							<span class=
-								<c:if test="${movie.watchGradeNm.equals('12세이상관람가') }">
-									"ic_grade gr_12"
-								</c:if>
-								<c:if test="${movie.watchGradeNm.equals('15세이상관람가') }">
-									"ic_grade gr_15"
-								</c:if>
-								<c:if test="${movie.watchGradeNm.equals('18세이상관람가') }">
-									"ic_grade gr_18"
-								</c:if>
-								<c:if test="${movie.watchGradeNm.equals('전체관람가') }">
-									"ic_grade gr_all"
-								</c:if>>
-							</span>
-					 	</span>
- 						<div class="over_box"> 
-							<div class="inner" style="margin-top: -33px;"> 
-								<a href="./Ticketing.tk?movieCd=${movie.movieCd}"
- 									class="btn_col3 ty3">예매하기</a> 
-								<a href="./MovieDetail.mv?movieCd=${movie.movieCd}"
- 									class="btn_col3 ty3">상세정보</a> 
- 							</div>
- 						</div>
-					</div>
-					<div class="btm_info">
-						<strong class="tit_info">${movie.movieNm }</strong>
-						<span class="sub_info1">
-							<span class="rate_info"><em>예매율 ${movie.bookRating }%</em></span>
-						</span>
-					</div>
-				</li>
-			  </c:forEach>	
-			</ul>
+<!-- 영화 홈 페이지 좌우 여백 -->
 		</div>
-	</div>
+</div>
+<!-- 영화 홈 페이지 좌우 여백 -->
+
+
+<!-- 약관 -->
+<jsp:include page="../inc/footer.jsp" />
 
 
 </body>
