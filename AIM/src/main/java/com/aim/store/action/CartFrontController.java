@@ -65,7 +65,17 @@ public class CartFrontController extends HttpServlet {
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
-		      }
+		      }else if(command.equals("/CartAmountChangeAction.ct")) {
+	               System.out.println("C : CartAmountChangeAction.ct 호출 ");
+	               
+	               action = new CartAmountChangeAction();
+	               try {
+	               forward = action.execute(request, response);
+	            } catch (Exception e) {
+	               e.printStackTrace();
+	            }
+	               
+	            }
 
 		    	  
 		      System.out.println("가상주소 매핑 완료");

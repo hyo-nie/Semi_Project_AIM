@@ -246,4 +246,26 @@ public class CartDAO {
 		}
 		// 장바구니 삭제(c_num) - deleteCart(c_num)
 		
+		/**
+		    * changeAmount(int c_num, int changeAmount)
+		    * 장바구니 상품의 개수를 변경하는 메서드
+		    */
+		   public void changeAmount(int c_num, int changeAmount) {
+		      try {
+		         con = getConnection();
+		         sql = "update cart set c_amount=? where c_num=?";
+		         pstmt = con.prepareStatement(sql);
+		         pstmt.setInt(1, changeAmount);
+		         pstmt.setInt(2, c_num);
+		         pstmt.executeUpdate();
+		         
+		         System.out.println("DAO : 장바구니 수량 변경 완료!");
+		         
+		         
+		      } catch (Exception e) {
+		         e.printStackTrace();
+		      } finally {
+		         closeDB();
+		      }
+		   }
 }
