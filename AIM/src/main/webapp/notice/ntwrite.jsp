@@ -5,8 +5,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-</head>
-<body>
 	<!-- 각종 요소 -->
 	<jsp:include page="../inc/include.jsp" />
 	<!-- 상위 배너 -->
@@ -15,6 +13,8 @@
 	<jsp:include page="../inc/login_nav_bar.jsp" />
 	<!-- 사이드 퀵메뉴 -->
 	<jsp:include page="../inc/side_quick_menu.jsp" />
+</head>
+<body>
 
 	<div id="contents" class="contents_customer area__movingbar litype5"
 		style="">

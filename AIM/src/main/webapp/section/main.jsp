@@ -4,14 +4,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1">  -->
 <title>Aim - all in movie</title>
 
-<link rel="stylesheet" type="text/css" href="./section/dragdealer.css">
+<!-- <link rel="stylesheet" type="text/css" href="./section/dragdealer.css">
 <link rel="stylesheet" type="text/css" href="./section/component.css">
-<!-- <script type="text/javascript" async=""
-	src="https://ssl.google-analytics.com/ga.js"></script> -->
+<script type="text/javascript" async=""
+	src="https://ssl.google-analytics.com/ga.js"></script>
 <script src="./section/modernizr.custom.js"></script>
 
 <script type="text/javascript">
@@ -29,24 +29,14 @@
 		s.parentNode.insertBefore(ga, s);
 	})();
 	
-// 	$('#owl-banner').owlCarousel({
-// 	    items : 1, //화면에 표시 할 슬라이드 수
-// 	    animateOut : 'fadeOut', // 사라질때의 애니메이션
-// 	    margin : 10, // 슬라이드 간격
-// 	    dots : true, // Pagination 표시 여부
-// 	    autoplay : true, // 자동 슬라이드 여부
-// 	    autoplayTimeout : 3000, // 자동 슬라이드 시간 (예제는 3초)
-// 	    loop : true // 무한 반복 여부
-// 	})
 
-
-</script>
+</script> -->
 
 </head>
 <body>
 
 
-
+<!-- 
 	<div class="container">
 
 		<header id="header" class="codrops-header">
@@ -64,9 +54,9 @@
 				<div class="handle">
 					<div class="slide current" data-content="content-1"
 						style="width: 12.5%;">
-<!-- 							<div class="info"> -->
-<!-- 							<h3 class="animate">테스트 문구입니다.</h3> -->
-<!-- 							</div> -->
+							<div class="info">
+							<h3 class="animate">테스트 문구입니다.</h3>
+							</div>
 							<div class="info">
 						  <article>
 						 <div class="waviy" style="font-size: 50px; padding: 0 0 0 400px; position: fixed;">
@@ -114,7 +104,7 @@
 			</section>
 
 			<section class="pages">
-				<div class="content" data-content="content-1">
+				<div class="content" data-content="content-1"> -->
 					<!-- 각종 요소 -->
 					<jsp:include page="../inc/include.jsp" />
 					<!-- 상위 배너 -->
@@ -128,12 +118,12 @@
 					<!-- 약관 -->
 					<jsp:include page="../inc/footer.jsp" />
 
-				</div>
+				<!-- </div>
 
 			</section>
 		</div>
 	</div>
-	<!-- /container -->
+	/container
 	<script src="./section/dragdealer.js"></script>
 	<script src="./section/classie.js"></script>
 	<script src="./section/dragslideshow.js"></script>
@@ -185,8 +175,8 @@
 
 			}());
 		</script>
-	<!-- For the demo ad only -->
-	<script src="./section/demoad.js"></script>
+	For the demo ad only
+	<script src="./section/demoad.js"></script> -->
 
 
 </body>

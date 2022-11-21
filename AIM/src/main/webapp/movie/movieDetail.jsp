@@ -15,7 +15,7 @@
 	<jsp:include page="../inc/topbanner.jsp" />
 	<!-- 헤더/네비 -->
 	<jsp:include page="../inc/nav_bar.jsp" />
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 	<div id="contents"
 		class="contents_movie_detail area__movingbar litype2">
 		<h2 class="hidden">영화</h2>
@@ -137,7 +137,7 @@
 									<span class="byte_info"><strong class="byte">0</strong>/<em>220</em></span>
 								</div>
 	<!-- 							<button type="submit" id="btnComment" class="btn_submit">관람평 작성</button> -->
-								<input type="submit" id="btnComment" class="btn_submit" value="관람평 작성" style="width:139px; ">
+								<input type="submit" id="btnComment" class="btn_submit" value="관람평 작성" style="width:139px; background:#18315D;'">
 							</div>
 						</form>
 						

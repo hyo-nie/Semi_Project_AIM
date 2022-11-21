@@ -28,6 +28,7 @@
 			</ul>
 			
 			<ul class="movie_list type2">
+			 <c:set var="rank" value="1"></c:set>
 			  <c:forEach var="movie" items="${movieList }">
 				<li class="screen_add_box"><div class="top_info">
 				    <div class="postercl">  
@@ -37,8 +38,8 @@
 								<img src="${movie.poster }"	alt="영화명">
 								<figcaption>상세정보</figcaption>
 							 </figure>	
-              </a>
-								<em class="num_info">${movie.boxrank }</em>
+							</a>
+								<em class="num_info">${rank }</em>
 								<span class=
 									<c:if test="${movie.watchGradeNm.equals('12세이상관람가') }">
 										"ic_grade gr_12"
@@ -53,8 +54,8 @@
 										"ic_grade gr_all"
 									</c:if>>
 								</span>
-	            </span>
-            </div> 
+							</span>
+				    </div> 
  						<div class="over_box"> 
 							<div class="inner" style="margin-top: -33px;"> 
 								<a href="./Ticketing.tk?movieCd=${movie.movieCd}"
@@ -67,10 +68,12 @@
 					<div class="btm_info">
 						<strong class="tit_info">${movie.movieNm }</strong>
 						<span class="sub_info1">
-							<span class="rate_info"><em>예매율 ${movie.bookRating }%</em></span>
+							<span class="rate_info"><em>예매율 ${movie.bookRating }%</em></span><br>
+							<button style="color:#fff; background:#18315D; width:75px; height:25px; margin:5px; border-radius:5px;">예매</button>
 						</span>
 					</div>
 				</li>
+			   <c:set var="rank" value="${rank+1 }"></c:set>
 			  </c:forEach>	
 			</ul>
 		</div>

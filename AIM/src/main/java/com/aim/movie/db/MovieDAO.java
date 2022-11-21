@@ -58,7 +58,7 @@ public class MovieDAO {
       
       try {
         con = getConnection();
-        sql = "select * from movie";
+        sql = "select * from movie where boxrank>=1 && boxrank<=10";
         if(orderFlag != null && !"".equals(orderFlag)) {
           if(orderFlag.equals("boxrank")) {
             sql = sql + " order by boxrank";
