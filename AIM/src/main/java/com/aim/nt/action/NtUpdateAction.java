@@ -16,17 +16,17 @@ public class NtUpdateAction implements Action {
 		System.out.println(" M : NtUpdateAction_execute() 실행 ");
 		
 		// 페이지 전달정보 저장
-		int Nt_bno = Integer.parseInt(request.getParameter("nt_bno"));
+		int nt_bno = Integer.parseInt(request.getParameter("nt_bno"));
 		String pageNum = request.getParameter("pageNum");
 				
 		// NtDAO 객체 생성
 		NtDAO dao = new NtDAO();
 				
 		// DB에 저장된 수정할 글번호를 가져와서
-//		NtDTO dto = dao.getNtList(nt_bno);
+		NtDTO dto = dao.getNtList(nt_bno);
 				
 		// request 영역에 저장
-//		request.setAttribute("dto", dto);
+		request.setAttribute("dto", dto);
 		request.setAttribute("pageNum", pageNum);
 				
 		// 페이지 이동(티켓)

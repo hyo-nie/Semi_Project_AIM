@@ -18,16 +18,6 @@ public class NtListAction implements Action {
 		
 		System.out.println(" M : NtListAction_execute() 호출 ");
 
-		// 로그인정보 전달
-		HttpSession session = request.getSession();
-		String mb_id = (String)session.getAttribute("mb_id");
-		
-		ActionForward forward = new ActionForward();
-		if(mb_id == null) {
-			forward.setPath("./Main.aim");
-			forward.setRedirect(true);
-			return forward;
-		}
 		
 		//NtDAO 객체 생성
 		NtDAO dao = new NtDAO();
@@ -92,6 +82,7 @@ public class NtListAction implements Action {
 		
 
 		// 페이지 이동준비(티켓 생성)
+		ActionForward forward = new ActionForward();
 		forward.setPath("./notice/notice.jsp");
 		forward.setRedirect(false);
 

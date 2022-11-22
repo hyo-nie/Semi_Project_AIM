@@ -50,6 +50,7 @@ public class NtWriteAction implements Action {
 		NtDTO dto = new NtDTO();
 				
 		dto.setMb_id(multi.getParameter("mb_id"));
+		dto.setMb_pw(multi.getParameter("mb_pw"));
 		dto.setNt_file(multi.getFilesystemName("nt_file"));
 		dto.setNt_content(multi.getParameter("nt_content"));
 		dto.setNt_subject(multi.getParameter("nt_subject"));

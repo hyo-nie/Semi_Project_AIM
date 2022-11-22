@@ -60,6 +60,7 @@
 										<tr>
 											<th scope="col">번호</th>
 											<th scope="col">구분</th>
+											<th scope="col">작성자</th>
 											<th scope="col">제목</th>
 											<th scope="col">등록일</th>
 										</tr>
@@ -68,7 +69,8 @@
 									<c:forEach var="dto" items="${NtListAll }">
 										<tr>
 											<td><strong class="ico_imp"> ${dto.nt_bno }</strong></td>
-											<td>${dto.nt_ }</td>
+											<td>${dto.nt_select }</td>
+											<td>${dto.mb_id }</td>
 											<td class="text_l">
 												<a href="./NtContent.nt?nt_bno=${dto.nt_bno }&pageNum=${pageNum}">${dto.nt_subject }</a>
 											</td>
@@ -110,7 +112,7 @@
 					</ul>
 				</div></li>
 				</form>
-			<li><button type="button" class="tab_tit" style="width: 33.33%; left: 33.33%;" onclick="location.href='./hp/boardhp.jsp';">
+			<li><button type="button" class="tab_tit" style="width: 33.33%; left: 33.33%;" onclick="location.href='./HpAdmin.hp';">
 					<span>1:1문의</span>
 				</button></li>
 			<li><button type="button" class="tab_tit" style="width: 33.33%; left: 66.67%;" onclick="location.href='./MyHpList.hp';">

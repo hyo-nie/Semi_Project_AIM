@@ -386,9 +386,9 @@ public class HpDAO {
 						
 						return result;
 					}
-		// 게시글 수정 - myhpupdate (DTO)
+		// 문의 글 수정 - myhpupdate (DTO)
 		
-		// 게시판 글 삭제 - MyHpDelete(bno,pass)
+		// 문의 글 삭제 - MyHpDelete(bno,pass)
 					public int deleteHp(int hp_bno,String hp_deletepw) {
 						int result = -1;
 						
@@ -438,6 +438,6 @@ public class HpDAO {
 						
 						return result;
 					}
-		// 게시판 글 삭제 - MyHpDelete (bno,pass)
+		// 문의 글 삭제 - MyHpDelete (bno,pass)
 					
 }
