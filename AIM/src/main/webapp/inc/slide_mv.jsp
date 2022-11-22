@@ -47,15 +47,55 @@
 						<div class="owl-stage"
 							style="transform: translate3d(-3840px, 0px, 0px); transition: all 0.25s ease 0s; width: 11520px;">
 							<!-- 오울 -->
-							<div class="owl-item" style="width: 1920px;">
+							<div class="owl-item cloned" style="width: 1920px;">
 								<div class="item">
 									<a href="#none"><img
-										src="https://caching2.lottecinema.co.kr/lotte_image/2022/KI/KI_1920774.jpg"
-										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/KI/KI_1280720_1.mp4"
+										src="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1108/ST_1920774.jpg"
+										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1110/ST_1280720.mp4"
 										alt=""></a>
 								</div>
 							</div>
+							<div class="owl-item cloned" style="width: 1920px;">
+								<div class="item">
+									<a href="#none"><img
+										src="https://caching2.lottecinema.co.kr/lotte_image/2022/boo/boo_1920774.jpg"
+										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/boo/boo_1280720.mp4"
+										alt="극장판 뽀로로와 친구들 바이러스를 없애줘 전체관람가 12월 1일 롯데시네마에서 만나요 네모바이러스의 습격 친구들을 구하라"></a>
+								</div>
+							</div>
 							<div class="owl-item" style="width: 1920px;">
+								<div class="item">
+									<a href="#none"><img
+										src="https://caching2.lottecinema.co.kr/lotte_image/2022/PR/PR_1920774.jpg"
+										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/PR/PR_1280720.mp4"
+										alt="프레이 포 더 데블 12월 7일 대개봉 15세이상관람가 애나벨 인시디어스 제작진"></a>
+								</div>
+							</div>
+							<div class="owl-item" style="width: 1920px;">
+								<div class="item">
+									<a href="#none"><img
+										src="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1108/ST_1920774.jpg"
+										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1110/ST_1280720.mp4"
+										alt=""></a>
+								</div>
+							</div>
+							<div class="owl-item active" style="width: 1920px;">
+								<div class="item">
+									<a href="#none"><img
+										src="https://caching2.lottecinema.co.kr/lotte_image/2022/boo/boo_1920774.jpg"
+										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/boo/boo_1280720.mp4"
+										alt="극장판 뽀로로와 친구들 바이러스를 없애줘 전체관람가 12월 1일 롯데시네마에서 만나요 네모바이러스의 습격 친구들을 구하라"></a>
+								</div>
+							</div>
+							<div class="owl-item cloned" style="width: 1920px;">
+								<div class="item">
+									<a href="#none"><img
+										src="https://caching2.lottecinema.co.kr/lotte_image/2022/PR/PR_1920774.jpg"
+										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/PR/PR_1280720.mp4"
+										alt="프레이 포 더 데블 12월 7일 대개봉 15세이상관람가 애나벨 인시디어스 제작진"></a>
+								</div>
+							</div>
+							<div class="owl-item cloned" style="width: 1920px;">
 								<div class="item">
 									<a href="#none"><img
 										src="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1108/ST_1920774.jpg"
@@ -754,7 +794,7 @@
 			<button type="button" class="btn_txt_more ty2">더보기</button>
 		</div>
 
- 		<div class="main_cont_wrap notice">
+		<div class="main_cont_wrap notice">
 			<div class="sec_tit">공지사항</div>
 			<div class="rolling_menu_wrap">
 				<ul class="rollings" style="top: -30px;">
@@ -765,6 +805,6 @@
 					<li><a href="#none" title="">영화관람권 가격 변경 안내</a></li>
 				</ul>
 			</div>
-		</div> 
+		</div>
 	</div>
 </div>
