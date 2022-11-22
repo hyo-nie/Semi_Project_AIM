@@ -146,6 +146,19 @@ public class TicketingFrontController extends HttpServlet {
 			}
     	} // TicketingOrder.tk 끝
     	
+    	else if (command.equals("/OrderSuccess.tk")) {
+    		System.out.println(" C : /OrderSuccess.tk ");
+    		System.out.println(" [패턴3] ");
+    		
+    		// OrderSuccessAction 객체
+    		action = new OrderSuccessAction();
+    		
+    		try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+    	} // OrderSuccess.tk 끝
     	
 
     	

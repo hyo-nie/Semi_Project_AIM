@@ -234,6 +234,7 @@ public class ReservationDAO {
 				dto.setBranchCd(rs.getInt("branchCd"));
 				dto.setMovieCd(rs.getString("movieCd"));
 				dto.setRuncount(rs.getInt("runcount"));
+				dto.setSeatcomp(rs.getString("seatcomp"));
 				
 				scheduleList.add(dto);
 			}
@@ -498,7 +499,48 @@ public class ReservationDAO {
 	}
 	// makeTkCode() 
 	
+	/**
+	 * updateSeatcomp(seatcomp,scCode) - 좌석정보(String), 스케줄번호를 입력받아서 DB에 예매된 좌석 정보 업데이트
+	 */
+	public void updateSeatComp(String seatcomp, int scCode) {
+		try {
+			con = getConnection();
+			sql = "update schedule set seatcomp=? where scCode=?"; 
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, seatcomp);
+			pstmt.setInt(2, scCode);
+			
+			pstmt.executeUpdate();
+
+			System.out.println(" DAO : 예매 좌석 컬럼 수정 완료! ");
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			closeDB();
+		}
+	}
+	// updateSeatcomp(seatcomp,scCode)
 	
+	/**
+	 * insertReservation(scDTO, tkCode, totalPirce, cusCnt, )
+	 */
+	public ReservationDTO insertReservation() {
+		ReservationDTO dto = null;
+		
+		try {
+			con = getConnection();
+//			sql = ""
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			closeDB();
+		}
+		return dto;
+	}
+	// insertReservation
 	
 	
 	

@@ -9,27 +9,20 @@ import javax.servlet.http.HttpServletResponse;
 import com.aim.schedule.db.ScheduleDTO;
 import com.aim.ticketing.db.ReservationDAO;
 
-public class TicketingOrderAction implements Action {
+public class OrderSuccessAction implements Action {
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		System.out.println(" M : TicketingOrderAction.execute() 호출 ");
+		System.out.println(" OrderSuccessAction.execute() 호출 ");
 		
-		// 데이터 저장
-		int scCode = Integer.parseInt(request.getParameter("scCode"));
 		String seatNo = request.getParameter("seatNo");
-		int adultCnt = Integer.parseInt(request.getParameter("adultCnt"));
-		int childCnt = Integer.parseInt(request.getParameter("childCnt"));
-		int seniorCnt = Integer.parseInt(request.getParameter("seniorCnt"));
-		
-		// reservationDAO
-		ReservationDAO reDAO = new ReservationDAO();
-		ScheduleDTO scDTO = reDAO.getScheduleJoin(scCode);
-		String tkCode = reDAO.makeTkCode();
+		int scCode = Integer.parseInt(request.getParameter("scCode"));
+		String tkCode = request.getParameter("tkCode");
+		int totalCnt = Integer.parseInt(request.getParameter("totalCnt"));
 		
 		// 좌석변환 시작 (0~99 번호 -> 좌석번호)
 		List<Integer> seatArrTmp = new ArrayList<Integer>();
-		for (int i = 0; i < adultCnt+childCnt+seniorCnt; i++) {
+		for (int i = 0; i < totalCnt; i++) {
 			seatArrTmp.add(Integer.parseInt(seatNo.split(",")[i]));
 		}
 		
@@ -49,23 +42,57 @@ public class TicketingOrderAction implements Action {
 			case 7: seatArr.add("H"+(( ((int)seatArrTmp.get(j)+1)%10)==0? 10: ((int)seatArrTmp.get(j)+1)%10)  ); break;
 			}
 		}
-		// 좌석변환 끝
 		
-		// request 저장
-		request.setAttribute("scDTO", scDTO);
-		request.setAttribute("seatNo", seatNo);
-		request.setAttribute("adultCnt", adultCnt);
-		request.setAttribute("childCnt", childCnt);
-		request.setAttribute("seniorCnt", seniorCnt);
+		// reservationDAO
+		ReservationDAO dao = new ReservationDAO();
+		ScheduleDTO scDTO = dao.getScheduleJoin(scCode);
+		String seatComp = scDTO.getSeatcomp();
+		
+		// seatComp DB 정보 -> 배열로 저장
+		List<String> seatList = new ArrayList<String>();
+		for (int i = 0; i < 80; i++) {
+			seatList.add((seatComp.split(",")[i]));
+			
+		}
+		
+		// 예매한 좌석 -> 0에서 1로 변경
+		List<Integer> seatUpdate = new ArrayList<Integer>();
+		for (int j = 0; j < totalCnt; j++) {
+			seatUpdate.add(Integer.parseInt(seatNo.split(",")[j]));
+		}
+		
+		for (int k = 0; k < seatUpdate.size(); k++) {
+			for (int l = 0; l < seatList.size(); l++) {
+				if (l == seatUpdate.get(k)) {
+					seatList.set(l,"1");
+				}
+			}
+		}
+		
+		// 변경된 좌석 배열 스트링으로 변경
+		StringBuffer seatTmp = new StringBuffer();
+		
+		for (int m = 0; m < seatList.size(); m++) {
+			if (m == seatList.size()-1) {
+				seatTmp.append(seatList.get(m));
+			} else {
+				seatTmp.append(seatList.get(m)+",");
+			}
+		}
+		
+		// reservationDAO - updateSeatComp : 변경된(예약된) 좌석 DB에 저장
+		String seatcomp = seatTmp.toString(); 
+		dao.updateSeatComp(seatcomp, scCode);
+		
+		// reservationDAO
+//		dao.insertReservation("scDTO",);
+		
+		
+		// request
 		request.setAttribute("seatArr", seatArr);
-		request.setAttribute("tkCode", tkCode);
+		request.setAttribute("scDTO", scDTO);
 		
-		// 페이지 이동
-		ActionForward forward = new ActionForward();
-		forward.setPath("./ticketing/ticketingOrder.jsp");
-		forward.setRedirect(false);
-		
-		return forward;
+		return null;
 	}
 
 }

@@ -220,10 +220,16 @@
 	
 	
 	
-// 	// 영화 스케쥴 클릭시 로그인 제어
-// 	function scClick() {
-// 		confirm("영화 예매는 로그인이 필요한 서비스입니다.\n\n 로그인 페이지로 이동합니다");
-// 	}
+	// 영화 스케쥴 클릭시 로그인 제어
+	function scClick() {
+		cf = confirm("영화 예매는 로그인이 필요한 서비스입니다.\n\n 로그인 페이지로 이동합니다");
+		
+		if (cf == true) {
+			alert('예 선택 로그인 페이지로 이동')
+			location.href="./Login.aim?ticketing=Y";
+		}
+		return;
+	}
 
 </script>
 
