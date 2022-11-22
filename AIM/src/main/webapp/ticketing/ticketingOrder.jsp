@@ -20,12 +20,12 @@
 	var seatArr = "${seatArr}";
 	var totalCnt = "${adultCnt+childCnt+seniorCnt}";
 	var totalPrice = "${adultCnt*13000 + childCnt*9000 + seniorCnt*7000 }";
-	a
-    function requestPay() {
+
+	function requestPay() {
         IMP.request_pay({ 
             pg: "html5_inicis",
             pay_method: "card",
-            merchant_uid: "YM_TEST19",   //주문번호, 고유값(PK) 여야 한다(디비에 저장); ${tkCode}사용 예정, 현재 임시값
+            merchant_uid: "YM_TEST20",   //주문번호, 고유값(PK) 여야 한다(디비에 저장); ${tkCode}사용 예정, 현재 임시값
             name: "${scDTO.movieNm}",
             amount: 100,	// 숫자타입
             buyer_email: "email",
@@ -280,8 +280,26 @@
 							<div class="select_item_wrap">
 							</div>
 							<div class="payment_sum_wrap">
+								<dl style="background-color:gray;">
+									<dt>성인 (${adultCnt })</dt>
+									<dd>
+										<strong><fmt:formatNumber value="${adultCnt*12000}"/></strong>원
+									</dd>
+								</dl>
+								<dl style="background-color:gray;">
+									<dt>청소년 (${childCnt })</dt>
+									<dd>
+										<strong><fmt:formatNumber value="${childCnt*9000}"/></strong>원
+									</dd>
+								</dl>
+								<dl style="background-color:gray;">
+									<dt>경로/우대 (${seniorCnt })</dt>
+									<dd>
+										<strong><fmt:formatNumber value="${seniorCnt*7000 }"/></strong>원
+									</dd>
+								</dl>
 								<dl>
-									<dt>상품금액</dt>
+									<dt>총 금액</dt>
 									<dd>
 										<strong><fmt:formatNumber value="${adultCnt*12000 + childCnt*9000 + seniorCnt*7000 }"/></strong>원
 									</dd>
