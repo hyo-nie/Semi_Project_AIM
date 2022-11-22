@@ -14,7 +14,6 @@
 
 	// 아이템 개수 변경
 	function changeItemAmount(object, index, st_price, c_amount ,mode){
-		
 		var test = "${cartList}";
 		
 		var countTag = $(".com_form_count").eq(index)[0].innerHTML;
@@ -127,7 +126,7 @@
         		<a href="" class="product_info_img">        
         			<img src="./upload/${prdt.st_img }" alt="${prdt.st_name }">        
         			<strong class="product_info_name">${prdt.st_name }</strong>        
-        			<span class="product_info_origin" id="spanOriginName886182">${prdt.st_text }    
+        			<span class="product_info_origin" id="spanOriginName886182" >${prdt.st_text }    
         			</span>    
         		</a> 
         		   
@@ -161,8 +160,8 @@
 
 
 		<div class="com_btn_wrap pT60">
-           <a href="./OrderStart.or" class="btn_style0 ">구매하기</a>
-           <a href="javascript:history.back();" class="btn_style0 ">돌아가기</a>
+           <a href="./OrderStart.or" class="btn_style0 " style="color:#FFF; text-decoration-line: none;">구매하기</a>
+           <a href="javascript:history.back();" class="btn_style0 " style="color:#FFF; text-decoration-line: none;">돌아가기</a>
 		</div>
 		
 			<% 	

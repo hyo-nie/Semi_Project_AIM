@@ -79,7 +79,7 @@ int endRow = currentPage * pageSize;
 					<td>${dto.st_num}</td>
 					<td>${dto.category_name }</td>
 					<td>
-						<img src="./upload/${dto.st_img }">
+						<img src="./upload/${dto.st_img }" width="200" height="200">
 					</td>
 					<td>${dto.st_name }</td>
 					<td>
