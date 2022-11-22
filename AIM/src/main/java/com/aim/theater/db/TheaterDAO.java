@@ -198,6 +198,8 @@ public class TheaterDAO {
 				
 				dto.setBranch_name(rs.getString("branch_name"));
 				dto.setBranch_addr(rs.getString("branch_addr"));
+				dto.setBranch_longitude(rs.getString("branch_longitude"));
+				dto.setBranch_latitude(rs.getString("branch_latitude"));
 				
 			}
 			

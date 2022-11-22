@@ -4940,3 +4940,35 @@ select.ty5 ~ select.ty5 {margin-left:5px;}
 .visual_special.superplex.new22 .owl-carousel .item .itm.img02 {background-image:url('../../Content/images/movie/visual_special_superplex_04.jpg'); background-size:auto 796px;}
 /* ìŠ¤í† ì–´ > í¬í† ì¹´ë“œ ì¶œë ¥ ì„ íƒ ì˜í™”ê´€ íŒì—… */
 .layer_select_print_cinema .cinema_select_wrap > ul {overflow-y: auto}
+
+/* 극장부분 css */
+.maps1 {
+	opacity: 1;
+	background: white;
+	border-radius: 0px 0px 20px 20px;
+}
+
+.maps2 {
+	opacity: 0;
+}
+
+.maphide {
+	width: 68px;
+    height: 19px;
+    position: absolute;
+    right: 2px;
+    top: 1px;
+    z-index: 11;
+    border-color: darkred;
+    border-radius: 10px;
+    background: none;
+    color: darkred;
+}
+.pp{
+line-height: 19px;
+    margin-bottom: 18px;
+    padding-left: 20px;
+    font-size: 13px;
+    color: #414141;
+    background: url("https://www.lottecinema.co.kr/NLCHS/Content/images/icon/location_pointer.png") no-repeat 0 0;
+}

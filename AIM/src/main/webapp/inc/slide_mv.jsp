@@ -848,7 +848,6 @@
 					<li><a href="#none" title="">2D 일반 관람권 활용 스페셜관 이용 안내 </a></li>
 					<li><a href="#none" title="">V3 백신 엔진 악성코드 오진 안내</a></li>
 					<li><a href="#none" title="">AIM 영구VIP 서비스 종료 안내</a></li>
-					<li><a href="#none" title="">영화관람권 가격 변경 안내</a></li>
 				</ul>
 			</div>
 		</div>
