@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.aim.schedule.db.ScheduleDTO;
 import com.aim.ticketing.db.ReservationDAO;
@@ -15,9 +16,15 @@ public class OrderSuccessAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		System.out.println(" OrderSuccessAction.execute() 호출 ");
 		
+		// 세션
+		HttpSession session = request.getSession();
+		String id = (String)session.getAttribute("mb_id");
+		
+		// 데이터 저장
 		String seatNo = request.getParameter("seatNo");
 		int scCode = Integer.parseInt(request.getParameter("scCode"));
 		String tkCode = request.getParameter("tkCode");
+		int totalPrice = Integer.parseInt(request.getParameter("totalPrice"));
 		int totalCnt = Integer.parseInt(request.getParameter("totalCnt"));
 		
 		// 좌석변환 시작 (0~99 번호 -> 좌석번호)
@@ -84,15 +91,21 @@ public class OrderSuccessAction implements Action {
 		String seatcomp = seatTmp.toString(); 
 		dao.updateSeatComp(seatcomp, scCode);
 		
-		// reservationDAO
-//		dao.insertReservation("scDTO",);
+		// reservationDAO - insertReservation : 예매 정보 저장
+		dao.insertReservation(scDTO, tkCode, totalPrice, totalCnt, id);
 		
+		// dao.getReservation(tkCode)
 		
 		// request
 		request.setAttribute("seatArr", seatArr);
 		request.setAttribute("scDTO", scDTO);
 		
-		return null;
+		// 페이지 이동 준비
+		ActionForward forward = new ActionForward();
+		forward.setPath("./ticketing/orderSuccess.jsp");
+		forward.setRedirect(false);
+		
+		return forward;
 	}
 
 }

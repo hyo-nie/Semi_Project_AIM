@@ -523,22 +523,32 @@ public class ReservationDAO {
 	// updateSeatcomp(seatcomp,scCode)
 	
 	/**
-	 * insertReservation(scDTO, tkCode, totalPirce, cusCnt, )
+	 * insertReservation(scDTO, tkCode, totalPirce, cusCnt)
 	 */
-	public ReservationDTO insertReservation() {
-		ReservationDTO dto = null;
+	public void insertReservation(ScheduleDTO scDTO, String tkCode, int totalPrice, int totalCnt, String id) {
 		
 		try {
 			con = getConnection();
-//			sql = ""
+			sql = "insert into reservation (tkCode,movieCd,totalPrice,cusCnt,payment,mb_id,scCode) "
+					+ "values(?,?,?,?,?,?,?) ";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, tkCode);
+			pstmt.setString(2, scDTO.getMovieCd());
+			pstmt.setInt(3, totalPrice);
+			pstmt.setInt(4, totalCnt);
+			pstmt.setString(5, "card"); // 임시값, 일단 카드로 통일
+			pstmt.setString(6, id);
+			pstmt.setInt(7, scDTO.getScCode());
 			
+			pstmt.executeUpdate();
+			
+			System.out.println(" DAO : 영화 예매 정보 저장 성공! ");
 			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			closeDB();
 		}
-		return dto;
 	}
 	// insertReservation
 	

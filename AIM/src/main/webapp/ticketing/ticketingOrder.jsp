@@ -18,12 +18,14 @@
 	var seatNo = "${seatNo}";
 	var tkCode = "${tkCode}";
 	var seatArr = "${seatArr}";
-	
+	var totalCnt = "${adultCnt+childCnt+seniorCnt}";
+	var totalPrice = "${adultCnt*13000 + childCnt*9000 + seniorCnt*7000 }";
+	a
     function requestPay() {
         IMP.request_pay({ 
             pg: "html5_inicis",
             pay_method: "card",
-            merchant_uid: "YM_TEST17",   //주문번호, 고유값(PK) 여야 한다(디비에 저장); ${tkCode}사용 예정, 현재 임시값
+            merchant_uid: "YM_TEST19",   //주문번호, 고유값(PK) 여야 한다(디비에 저장); ${tkCode}사용 예정, 현재 임시값
             name: "${scDTO.movieNm}",
             amount: 100,	// 숫자타입
             buyer_email: "email",
@@ -35,7 +37,7 @@
             if (rsp.success) {
                 // 결제 성공 시 로직,
                 alert('결제 성공!')
-                location.href="./OrderSuccess.tk?seatNo="+seatNo+"&scCode="+${scDTO.scCode}+"&tkCode="+tkCode+"&totalCnt="+${adultCnt+childCnt+seniorCnt};
+                location.href="./OrderSuccess.tk?seatNo="+seatNo+"&scCode="+${scDTO.scCode}+"&tkCode="+tkCode+"&totalCnt="+totalCnt+"&totalPrice="+totalPrice;
             } else {
                 // 결제 실패 시 로직,
                 alert('결제 실패!')
