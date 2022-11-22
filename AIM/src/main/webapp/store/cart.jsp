@@ -29,7 +29,8 @@
       }
       
       // 가격 변경
-      $(".product_info_price").eq(index)[0].innerHTML = c_amount * st_price;
+  		 $(".product_info_price").eq(index)[0].innerHTML = nowAmount * st_price;
+
 
       
    }
@@ -151,7 +152,7 @@
               </span>  
                 
               <div class="product_info_btn_wrap">      
-                 <a href="#none" onclick="javascript:fn_Buy();">바로구매</a>   
+<!--                  <a href="#none" onclick="javascript:fn_Buy();">바로구매</a>    -->
                  <a href="./CartDeleteAction.ct?c_num=${cart.c_num }">삭제</a>         
                        
               </div>    
