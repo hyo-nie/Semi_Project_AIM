@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.aim.hp.db.HpDAO;
 import com.aim.member.db.MemberDAO;
 import com.aim.nt.action.Action;
 import com.aim.nt.action.ActionForward;
@@ -20,7 +21,7 @@ public class HpLoginAction implements Action {
 		String mb_pw = request.getParameter("mb_pw");
 		
 		// DAO - 로그인 여부 체크 메서드 loginCheck()
-		MemberDAO dao = new MemberDAO();
+		HpDAO dao = new HpDAO();
 		int result = dao.loginCheck(mb_id, mb_pw);
 		
 		if(result == 0) {

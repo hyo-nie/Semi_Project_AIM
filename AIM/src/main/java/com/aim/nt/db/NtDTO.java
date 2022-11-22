@@ -9,7 +9,7 @@ public class NtDTO {
 	private int nt_bno;	// 공지글번호
 	private String nt_subject;	// 공지 제목
 	private String nt_content; // 공지 내용
-	private String nt_select; // 공지의 분류 
+	private int nt_select; // 공지의 분류 
 	private Date nt_date;	// 공지 날짜
 	private String nt_file;	// 공지 첨부 파일
 	private int nt_re_ref; // 참조 번호 (글 그룹 나눔)
@@ -44,10 +44,10 @@ public class NtDTO {
 	public void setNt_content(String nt_content) {
 		this.nt_content = nt_content;
 	}
-	public String getNt_select() {
+	public int getNt_select() {
 		return nt_select;
 	}
-	public void setNt_select(String nt_select) {
+	public void setNt_select(int nt_select) {
 		this.nt_select = nt_select;
 	}
 	public Date getNt_date() {
@@ -80,6 +80,7 @@ public class NtDTO {
 				+ ", nt_content=" + nt_content + ", nt_select=" + nt_select + ", nt_date=" + nt_date + ", nt_file="
 				+ nt_file + ", nt_re_ref=" + nt_re_ref + ", nt_re_lev=" + nt_re_lev + "]";
 	}
-
+	
+	
 	
 }

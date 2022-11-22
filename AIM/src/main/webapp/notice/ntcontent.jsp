@@ -25,7 +25,7 @@
 		<ul class="tab_wrap outer actionmovingbar">
 			
 			<li class="active"><button type="button" class="tab_tit"
-					style="width: 33.33%; left: 0%;">
+					style="width: 33.33%; left: 0%;" onclick="location.href='./NtList.nt'">
 					<span>공지사항</span>
 				</button>
 				<div class="tab_con">
@@ -72,11 +72,11 @@
 					</ul>
 				</div></li>
 			<li><button type="button" class="tab_tit"
-					style="width: 33.33%; left: 33.33%;">
+					style="width: 33.33%; left: 33.33%;" onclick="location.href='./HpLogin.hp';">
 					<span>1:1문의</span>
 				</button></li>
 			<li><button type="button" class="tab_tit"
-					style="width: 33.33%; left: 66.67%;">
+					style="width: 33.33%; left: 66.67%;" onclick="location.href='./MyHpList.hp';">
 					<span>문의 내용 목록</span>
 				</button></li>
 			

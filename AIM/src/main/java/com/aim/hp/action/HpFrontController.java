@@ -39,30 +39,26 @@ public class HpFrontController extends HttpServlet {
     	Action action = null;
     	ActionForward forward = null;
     	
-    	// 로그인 여부 체크
-    	if(command.equals("/HpCheck.hp")){
-    		System.out.println(" C : /HpCheck.hp 실행");
-    		
-    		action = new HpCheckAction();
-    		try {
-				forward = action.execute(request, response);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-    	}
-    	
+    
     	
     	// 고객센터 로그인 여부 체크
-    	else if(command.equals("/HpLogin.hp")) { 
+//    	if(command.equals("/HpLogin.hp")) { 
+//    		System.out.println(" C : /HpLogin.hp 실행 ");
+//    		
+//    		action = new HpLoginAction();
+//    		
+//    		try {
+//				forward = action.execute(request, response);
+//			} catch (Exception e) {
+//				e.printStackTrace();
+//			}
+//    	}
+    	if(command.equals("/HpLogin.hp")) {
     		System.out.println(" C : /HpLogin.hp 실행 ");
     		
-    		action = new HpLoginAction();
-    		
-    		try {
-				forward = action.execute(request, response);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
+    		forward = new ActionForward();
+    		forward.setPath("./hp/boardhp.jsp");
+    		forward.setRedirect(false);
     	}
     		
     	

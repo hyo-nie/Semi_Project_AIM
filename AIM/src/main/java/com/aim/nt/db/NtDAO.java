@@ -54,6 +54,8 @@ public class NtDAO {
 		}
 	}
 	// 자원해제 메서드-closeDB()
+	
+	
 		
 	// 공지글 리스트 갯수 확인 - getNtCount()
 		
@@ -194,7 +196,7 @@ public class NtDAO {
 				con = getConnection();
 				
 				// 3. sql 작성(글번호 계산) & pstmt 객체
-				sql = "select max(Nt_bno) from notice_board";
+				sql = "select max(nt_bno) from notice_board";
 				
 				pstmt = con.prepareStatement(sql);
 				
@@ -209,9 +211,9 @@ public class NtDAO {
 				System.out.println(" DAO : 글번호 = "+nt_bno);
 				
 				// 3. sql 작성 & pstmt 객체
-				sql = "insert into notice_board(nt_bno,mb_id,mb_pw,nt_subject,"
+				sql = "insert into notice_board(nt_bno,mb_id,mb_pw,nt_select,nt_subject,"
 						+ "nt_content,nt_file,nt_date,nt_re_ref,nt_re_lev) "
-						+ "values(?,?,?,?,?,?,now(),?,?)";
+						+ "values(?,?,?,?,?,?,?,now(),?,?)";
 			
 				pstmt = con.prepareStatement(sql);
 				
@@ -219,11 +221,12 @@ public class NtDAO {
 				pstmt.setInt(1, nt_bno);
 				pstmt.setString(2, dto.getMb_id());
 				pstmt.setString(3, dto.getMb_pw());
-				pstmt.setString(4, dto.getNt_subject());
-				pstmt.setString(5, dto.getNt_content());
-				pstmt.setString(6, dto.getNt_file());
-				pstmt.setInt(7, 0);
+				pstmt.setInt(4, dto.getNt_select());
+				pstmt.setString(5, dto.getNt_subject());
+				pstmt.setString(6, dto.getNt_content());
+				pstmt.setString(7, dto.getNt_file());
 				pstmt.setInt(8, 0);
+				pstmt.setInt(9, 0);
 				
 				// 4. sql 실행
 				pstmt.executeUpdate();
@@ -317,7 +320,7 @@ public class NtDAO {
 									
 							//??? 
 							pstmt.setString(1, dto.getNt_subject());
-							pstmt.setString(2, dto.getNt_select());
+							pstmt.setInt(2, dto.getNt_select());
 							pstmt.setString(3, dto.getNt_content());
 							pstmt.setInt(4, dto.getNt_bno());
 							
