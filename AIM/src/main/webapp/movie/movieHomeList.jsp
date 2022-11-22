@@ -5,7 +5,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>AIM - 영화 홈</title>
+
+<jsp:include page="../inc/include.jsp" />
 
 <!-- 상위 배너 -->
 <jsp:include page="../inc/topbanner.jsp"/>
@@ -13,86 +15,92 @@
 <!-- 헤더/네비 -->
 <jsp:include page="../inc/nav_bar.jsp" />
 
+<!-- 영화 배너 스크립트 --> <!-- 슬라이드 자동 재생 / 정지 버튼 기능 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- 파일 추가해서 수정해야하는 영화 홈 배너 !!지금작동안함!! -->
-<div id="visual_top" class="visual_top visual_movie_home" style="margin-top: 120px;">
-	<div class="inner">
-		<div class="slide_wrap slide_visual_movie_home">
-			<div class="owl-carousel owl-loaded owl-drag">
-				<div class="owl-stage-outer">
-					<div class="owl-stage" style="transform: translate3d(-5760px, 0px, 0px); transition: all 0.25s ease 0s; width: 11520px;">
-						<div class="owl-item cloned" style="width: 1920px;">
-							<div class="item">
-								<a href="#none">
-									<img src="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1108/ST_1920420.jpg" data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1110/ST_1280720.mp4" alt="">
-								</a>
-							</div>
-						</div>
-						<div class="owl-item cloned" style="width: 1920px;">
-							<div class="item">
-								<a href="#none">
-									<img src="https://caching2.lottecinema.co.kr/lotte_image/2022/KI/KI_1920420.jpg" data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/KI/KI_1280720_1.mp4" alt="">
-								</a>
-							</div>
-						</div>
-						<div class="owl-item" style="width: 1920px;">
-							<div class="item">
-								<a href="#none">
-									<img src="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1108/ST_1920420.jpg" data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1110/ST_1280720.mp4" alt="">
-								</a>
-							</div>
-						</div>
-						<div class="owl-item active" style="width: 1920px;">
-							<div class="item">
-								<a href="#none">
-									<img src="https://caching2.lottecinema.co.kr/lotte_image/2022/KI/KI_1920420.jpg" data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/KI/KI_1280720_1.mp4" alt="">
-								</a>
-							</div>
-						</div>
-						<div class="owl-item cloned" style="width: 1920px;">
-							<div class="item">
-								<a href="#none">
-									<img src="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1108/ST_1920420.jpg" data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1110/ST_1280720.mp4" alt="">
-								</a>
-							</div>
-						</div>
-						<div class="owl-item cloned" style="width: 1920px;">
-							<div class="item">
-								<a href="#none">
-									<img src="https://caching2.lottecinema.co.kr/lotte_image/2022/KI/KI_1920420.jpg" data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/KI/KI_1280720_1.mp4" alt="">
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="owl-nav" style="width: 999px; margin-left: -499.5px;">
-					<button type="button" role="presentation" class="owl-prev">
-						<span aria-label="Previous">‹</span>
-					</button>
-					<button type="button" role="presentation" class="owl-next">
-						<span aria-label="Next">›</span>
-					</button>
-				</div>
-				<div class="owl-dots">
-					<button role="button" class="owl-dot">
-						<span></span>
-					</button>
-					<button role="button" class="owl-dot active">
-						<span></span>
-					</button>
-				</div>
-			</div>
-			<div class="bx_ctrl" style="left: 990px;">
-				<button class="play active">슬라이드 자동재생</button>
-				<button class="stop">슬라이드 일시정지</button>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- 파일 추가해서 수정해야하는 영화 홈 배너 !!지금작동안함!! -->
+    <script src="./NLCHS/Content/js/jquery-1.12.3.min.js"></script>
+    <script src="./NLCHS/Content/js/jquery.jplayer.min.js"></script>
+    <script src="./NLCHS/Content/js/jquery.lazy.min.js"></script>
+    <script src="./NLCHS/Content/js/jquery-ui.min.js"></script>
+    <script src="./NLCHS/Content/js/jquery.cookie.js"></script>
+    <script src="./NLCHS/Content/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="./NLCHS/Content/js/owl.carousel-2.3.4-custom.js"></script>
+    <script src="./NLCHS/Content/js/plugin.js"></script>
+    <script src="./NLCHS/Content/js/pl_custom.js"></script>
+    <script src="./NLCHS/Scripts/Library/moment.js"></script>
+    <script type="text/javascript" src="https://members.lpoint.com/api/js/lotte.sso.api.js"></script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+
+    <script src="./NLCHS/Content/js/common.js"></script>
+    <script src="./NLCHS/Content/js/common_lc21new.js"></script>
+    <script src="./NLCHS/Scripts/common/Cookie.js"></script>
+    
+    <script src="./NLCHS/Scripts/Library/jquery.blockUI.min.js"></script>
+    <script src="./NLCHS/Scripts/Library/React/remarkable.min.js"></script>
+    <script src="./NLCHS/Scripts/Library/React/axios.min.js"></script>
+    <script src="./NLCHS/Scripts/common/URLSearchParamsCustom.js"></script>
+    <script src="./NLCHS/Scripts/common/Util.js"></script>
+    <script src="./NLCHS/Scripts/common/Common.js"></script>
+<!-- 영화 배너 스크립트 --> 
+
 
 </head>
 <body>
+
+
+<!-- 영화 홈 배너 --> <!-- 뽀로로 포기 -->
+<div id="visual_top" class="visual_top visual_theater_detail" style="">
+		<div class="inner">
+			<div class="slide_wrap full slide_cinema_home_visual">
+				<div class="owl-one owl-carousel owl-loaded owl-drag">
+					<div class="owl-stage-outer">
+						<div class="owl-stage"
+							style="transform: translate3d(-5760px, 0px, 0px); transition: all 0.25s ease 0s; width: 11520px;">
+							<div class="owl-item cloned" style="width: 1920px;">
+								<div class="item">
+									<a href="#none"><img
+										src="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1108/ST_1920420.jpg"
+										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1110/ST_1280720.mp4"
+										alt=""></a>
+								</div>
+							</div>
+							<div class="owl-item cloned" style="width: 1920px;">
+								<div class="item">
+									<a href="#none"><img
+										src="https://caching2.lottecinema.co.kr/lotte_image/2022/KI/KI_1920420.jpg"
+										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/KI/KI_1280720_1.mp4"
+										alt=""></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="owl-nav" style="width: 2378px; margin-left: -1189px;">
+						<button type="button" role="presentation" class="owl-prev">
+							<span aria-label="Previous">‹</span>
+						</button>
+						<button type="button" role="presentation" class="owl-next">
+							<span aria-label="Next">›</span>
+						</button>
+					</div>
+					<div class="owl-dots">
+						<button role="button" class="owl-dot">
+							<span></span>
+						</button>
+						<button role="button" class="owl-dot active" style="">
+							<span></span>
+						</button>
+					</div>
+				</div>
+				<div class="bx_ctrl" style="left: 990px;">
+					<button class="play active">슬라이드 자동재생</button>
+					<button class="stop">슬라이드 일시정지</button>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- 영화 홈 배너 -->
+
 
 <!-- 영화 홈 페이지 좌우 여백 틀 -->
 <div id="contents" class="contents_movie_list">
@@ -101,9 +109,15 @@
 <!-- 영화 홈 페이지 좌우 여백 틀 -->			
 
 
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
 <!-- 영화 홈 페이지 추천영화 -->
 <div class="movi_pre_list">
-<h3 class="tit_type0">11월 AIM 추천영화 <strong class="ty2 eng">TOP 6</strong></h3>
+<h3 class="tit_type0">11월 AIM 추천영화  <strong class="ty2 eng">TOP 6</strong></h3>
 	<ul class="homemovie_list">
 	<c:forEach var="movie" items="${movieList }">
 		<li class="">
@@ -111,20 +125,6 @@
 				<span class="poster_info">
 				<em class="tit_info">${movie.boxrank-10 }위</em>
 					<img src="${movie.poster }"	alt="영화명">
-					<span class="">
-					<c:if test="${movie.watchGradeNm.equals('12세이상관람가') }">
-						"ic_grade gr_12"
-					</c:if>
-					<c:if test="${movie.watchGradeNm.equals('15세이상관람가') }">
-						"ic_grade gr_15"
-					</c:if>
-					<c:if test="${movie.watchGradeNm.equals('18세이상관람가') }">
-						"ic_grade gr_18"
-					</c:if>
-					<c:if test="${movie.watchGradeNm.equals('전체관람가') }">
-						"ic_grade gr_all"
-					</c:if>
-					</span>
 				</span>
 			</div>
 			<div class="btm_info">
