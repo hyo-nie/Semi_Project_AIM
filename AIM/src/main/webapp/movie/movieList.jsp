@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>현재상영작</title>
+<<<<<<< HEAD
 <jsp:include page="../inc/include.jsp" />
 <script type="text/javascript">
 	$(document).ready(function(){
@@ -32,12 +33,109 @@
 .movie_screen_box .button {font-size:14px; color: maroon;}
 .movie_screen_box .button1 {font-size:14px; color: #666;}
 </style>
+=======
+
+<!-- 각종 요소 -->
+<jsp:include page="../inc/include.jsp" />
+
+<!-- 상위 배너 -->
+<jsp:include page="../inc/topbanner.jsp"/>
+
+<!-- 헤더/네비 -->
+<jsp:include page="../inc/nav_bar.jsp" />
+
+<!-- 영화 배너 스크립트 --> 
+<script type="text/javascript">
+$(document).ready(function() {
+	
+
+	 $('.owl-one').owlCarousel({
+		items : 1, // 한번에 보여줄 아이템 수
+		loop : true, // 반복여부
+		margin : 0, // 오른쪽 간격
+		autoplay : true, // 자동재생 여부
+		autoplayTimeout : 5000, // 재생간격
+		autoplayHoverPause : false, //마우스오버시 멈출지 여부
+		mouseDrag : false,
+		touchDrag : false
+
+	});
+});
+</script>
+
+>>>>>>> branch 'master' of https://github.com/hyo-nie/AIMAIM.git
 </head>
 <body>
+<<<<<<< HEAD
 	<!-- 상위 배너 -->
 	<jsp:include page="../inc/topbanner.jsp" />
 	<!-- 헤더/네비 -->
 	<jsp:include page="../inc/nav_bar.jsp" />
+=======
+
+<!-- 주석 부분 헤드로 옮김 -->
+<%-- 	<jsp:include page="../inc/include.jsp" /> --%>
+<!-- 	<!-- 상위 배너 --> -->
+<%-- 	<jsp:include page="../inc/topbanner.jsp" /> --%>
+<!-- 	<!-- 헤더/네비 --> -->
+<%-- 	<jsp:include page="../inc/nav_bar.jsp" /> --%>
+<!-- 주석 부분 헤드로 옮김 -->
+
+
+
+<!-- 영화 홈 배너 -->
+<div id="visual_top" class="visual_top visual_theater_detail" style="">
+		<div class="inner">
+			<div class="slide_wrap full slide_cinema_home_visual">
+				<div class="owl-one owl-carousel owl-loaded owl-drag">
+					<div class="owl-stage-outer">
+						<div class="owl-stage"
+							style="transform: translate3d(-5760px, 0px, 0px); transition: all 0.25s ease 0s; width: 11520px;">
+							<div class="owl-item cloned" style="width: 1920px;">
+								<div class="item">
+									<a href="#none"><img
+										src="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1108/ST_1920420.jpg"
+										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1110/ST_1280720.mp4"
+										alt=""></a>
+								</div>
+							</div>
+							<div class="owl-item cloned" style="width: 1920px;">
+								<div class="item">
+									<a href="#none"><img
+										src="https://caching2.lottecinema.co.kr/lotte_image/2022/KI/KI_1920420.jpg"
+										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/KI/KI_1280720_1.mp4"
+										alt=""></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="owl-nav" style="width: 2378px; margin-left: -1189px;">
+						<button type="button" role="presentation" class="owl-prev">
+							<span aria-label="Previous">‹</span>
+						</button>
+						<button type="button" role="presentation" class="owl-next">
+							<span aria-label="Next">›</span>
+						</button>
+					</div>
+					<div class="owl-dots">
+						<button role="button" class="owl-dot">
+							<span></span>
+						</button>
+						<button role="button" class="owl-dot active" style="">
+							<span></span>
+						</button>
+					</div>
+				</div>
+				<div class="bx_ctrl" style="left: 990px;">
+					<button class="play active">슬라이드 자동재생</button>
+					<button class="stop">슬라이드 일시정지</button>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- 영화 홈 배너 -->
+
+>>>>>>> branch 'master' of https://github.com/hyo-nie/AIMAIM.git
 	<br><br><br><br>
 	<div id="contents" class="contents_movie_list">
 	<br><br><br><br><br><br><br><br><br>

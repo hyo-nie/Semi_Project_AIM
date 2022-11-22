@@ -27,6 +27,11 @@
 		<div class="category_product_list_wrap">
 			<strong class="category_product_list_title">
 				기프트카드 / 관람권
+				<span style=float:right;>
+		    		<a href="./CartList.ct">
+		    			<img src="./assets/img/bg_cartBtn.png" alt="장바구니">
+		    		</a>
+	    		</span>
 			</strong>
 		
 		<c:set var="size" value="${Giftcard.size() }"/>

@@ -1,3 +1,4 @@
+<%@page import="org.apache.commons.collections4.bag.SynchronizedSortedBag"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -20,8 +21,8 @@
 // JavaScript 내에서 EL 표현식을 쓸 땐 꼭 양쪽에 따옴표를 붙여주세요!
 
 
-var IMP = window.IMP;   // 생략 가능
-IMP.init("imp30860234"); // 예: imp00000000 
+var IMP = window.IMP;  
+IMP.init("imp30860234"); 
 
 function requestPay(user_tel) {
       
@@ -32,11 +33,11 @@ function requestPay(user_tel) {
 		var itemName = "";
 		
 		if(itemObj.length == 1){
-			// 한개인경우
+			// 한 개인 경우
 			itemName = $(".product_info_name").eq(0)[0].outerText
 		}
 		else{
-			// 여러개인경우
+			// 여러 개인 경우
 			itemName = $(".product_info_name").eq(0)[0].outerText + " 외 " + (itemObj.length-1) + "건"
 		}
 		
@@ -48,8 +49,9 @@ function requestPay(user_tel) {
           amount: payAmount,
           // buyer_email: "gildong@gmail.com", 주문자 이메일[페이먼트월 필수]
           buyer_name: user,
-          buyer_tel: user_tel,
-      }, function (rsp) {
+          buyer_tel: "${order.o_tel}",
+          //user_tel
+      }, function (rsp) { // callback
           if (rsp.success) {
              console.log("결제 성공!");
               // 결제 성공 시 이동하는 페이지(./OrderList.or)
@@ -67,13 +69,11 @@ function requestPay(user_tel) {
     }
     
 	function requestPay2(user_tel){
-// 		alert('requestPay2 호출 완');
 		
 		var check = $('#check00').prop('checked');
 		
 		if(check){
-			console.log("체크 완료");
-// 			requestPay(user_tel);
+			//requestPay(user_tel);
 			location.href="./OrderAddAction.or?mb_tel="+user_tel;
 			
 		} else{
@@ -88,12 +88,15 @@ function requestPay(user_tel) {
 </head>
 <body>
 
-${cartList }
-<br>
-${productList }
-<br>
-${member }
+${prdtInfo}
+${userInfo }
 
+<%
+	int amount = (int)request.getAttribute("amount");
+	System.out.println(amount);
+%>
+
+<!-- 바로 구매하기 눌렀을 때 보여지는 view -->
 
 <form method="post" name="fr">
 
@@ -107,8 +110,6 @@ ${member }
 			</ul>
 		</div>
 
-
-
 		<!-- 장바구니 리스트 구매상품 정보 -->
 		<div class="com_cart_list_wrap com_cart_list_wrap1">
 			<strong class="com_box_design_title">구매상품 정보</strong>
@@ -119,41 +120,39 @@ ${member }
 				<strong class="com_custom_checkbox_price"> 구매금액 </strong>
 			</p>
 			
-			
 			<ul class="com_list_style1">
             
-	            <c:forEach var="i" begin="0" end="${cartList.size() -1}" step="1">
-	            <c:set var="totalPrice"/>
-				<c:set var="cart" value="${cartList[i]}" />
-				<c:set var="prdt" value="${productList[i]}" />
-	            <li>
-	                <div class="product_info_img">
-	                    <img src="./upload/${prdt.st_img }" alt="${prdt.st_name}">
-	                    <strong class="product_info_name">
-	                        ${prdt.st_name }
-	                     </strong> 
-	                     <span class="product_info_origin">
-	                        ${prdt.st_text} </span>
-	                </div>
-	                <div class="product_info_wrap">
-	                    <span class="product_info_one_price">
-	                        <fmt:formatNumber value="${prdt.st_price}"/></span>
-	                </div>
-	                
-	                <div class="product_info_cnt_wrap">
-	                    ${cart.c_amount}
-	                </div>
-	                
-	                <span>
-	                    <fmt:formatNumber value="${prdt.st_price * cart.c_amount}" />원
-	                </span>
-	                
-	                <input type="hidden" name="totalAmount" value="${totalPrice += prdt.st_price * cart.c_amount}"/>
-	                
-	            </li>
-	            </c:forEach>         
             
-       		</ul>
+            <li>
+                <div class="product_info_img">
+                    <img src="./upload/${prdtInfo.st_img }" alt="${prdtInfo.st_name }">
+                    <strong class="product_info_name">
+                        ${prdtInfo.st_name }
+                     </strong> 
+                     <span class="product_info_origin">
+                        ${prdtInfo.st_text } </span>
+                </div>
+                <div class="product_info_wrap">
+                    <span class="product_info_one_price">
+                        <fmt:formatNumber value="${prdtInfo.st_price }"/></span>
+                </div>
+                
+                <div class="product_info_cnt_wrap">
+                    <!-- 수량 -->
+                   	<%=amount %>
+                </div>
+                
+                <span>
+                    <fmt:formatNumber value="${prdtInfo.st_price * amount }" />원
+                </span>
+                
+<%--                 <input type="hidden" name="totalAmount" value="${totalPrice += prdt.st_price * cart.c_amount }"/> --%>
+                
+                
+            </li>
+     
+            
+        </ul>
         
 			<table class="com_cart_total_price_wrap">
 				<colgroup>
@@ -167,31 +166,22 @@ ${member }
 					</tr>
 				</thead>
 
+			
 				<tbody>
 					<tr>
 						<td>
-							<strong class="cart_total_price" id="totalAmountMoney" name="o_sum"> </strong>
+							<strong class="cart_total_price" id="totalAmountMoney" name="o_sum">
+							<fmt:formatNumber value="${prdtInfo.st_price * amount }"/></strong>
 						</td>
 					</tr>
 				</tbody>
 			</table>
 		
 
-			<script>
-				var amountObj = document.getElementsByName("totalAmount");
-	        	var totalAmount = 0;
-	        	
-	        	for(var i=0; i<amountObj.length; i++){
-	        		totalAmount += Number(amountObj[i].value);
-	        	}
-        	
-				document.getElementById("totalAmountMoney").innerHTML = totalAmount;
-			</script>
 			
 		</div>
+		
 		<!-- 장바구니 리스트 구매상품 정보 -->
-		
-		
 		
 		<!-- 주문자 정보 확인 -->
 		<div class="com_box_design_wrap">
@@ -200,7 +190,7 @@ ${member }
 				<li><label for="user_info_name"> 아이디</label> 
 				<input type="text" id="user_info_name" placeholder="이름" style="width: 128px" value="<%=session.getAttribute("mb_id") %>" readonly> 
 				<label for="user_info_phonenum">휴대전화 번호</label>
-					<input type="tel" id="user_info_phonenum" name="o_tel" placeholder="휴대전화 번호" style="width: 228px" value="${member.mb_tel }"></li>
+					<input type="tel" id="user_info_phonenum" name="o_tel" placeholder="휴대전화 번호" style="width: 228px" value="${userInfo.mb_tel }"></li>
 			</ul>
 <!-- 			<p class="com_box_design_olist"> -->
 				
@@ -208,16 +198,13 @@ ${member }
 		</div>
 		<!-- 주문자 정보 확인 -->
 		
-		
-		
-		
 			<!-- 결제 수단 -->
 			<div class="com_box_design_wrap">
 				<strong class="com_box_design_title">결제 수단</strong>
 					<ul class="com_box_design radioCheck" style="list-style: none;">
 	            		<li>
 	            		<label for="payment_card">
-	                		<input type="radio" name="o_pay" id="payment_card">
+	                		<input type="radio" name="o_pay">
 <!-- 	                		class="com_custom_radio" id="payment_card" value="credit_card" -->
 	                		신용카드</label>
 	               		</li>
@@ -782,7 +769,7 @@ ${member }
 			<div class="com_btn_wrap pT40">
 				<!--   <input type="button" onClick="api_start()" />-->
 <!-- 				<a href="javascript:requestPay()" class="btn_style0">결제하기</a> -->
- 				<a href='javascript:requestPay2("${member.mb_tel}")'>결제하기</a> 
+ 				<a href='javascript:requestPay2("${member.mb_tel }")'>결제하기</a> 
 				<a href="./CartList.ct" class="btn_style0">돌아가기</a> 
 			</div>
 		</div>

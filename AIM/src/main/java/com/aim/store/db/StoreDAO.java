@@ -42,7 +42,15 @@ public class StoreDAO {
 	      }
 	   } // 자원해제
 	
-	   // 카테고리별 스토어 상품 정보를 불러오는 메서드 - getStoreProduct(item) 
+	   
+	   /**
+	    * getStoreProduct()
+	    * - 카테고리별 스토어 상품 정보를 불러오는 메서드
+	    * - 카테고리 1 : 기프트카드 / 관람권
+	    *   카테고리 2 : 팝콘 / 음료 / 굿즈
+	    * @param code
+	    * @return
+	    */
 	   public List getStoreProduct(String code) {
 		   List productList = new ArrayList();
 		   
@@ -79,7 +87,12 @@ public class StoreDAO {
 		   
 	   } // 카테고리별 스토어 상품 정보를 불러오는 메서드 끝 
 	   
-	   // 추천상품 정보를 불러오는 메서드 시작 - getAimPick()
+	   /**
+	    * getAimPick()
+	    * AIM's pick 상품을 불러오는 메서드 
+	    * @param st_num
+	    * @return
+	    */
 	   public StoreDTO getAimPick(int st_num) {
 		   StoreDTO dto = new StoreDTO();
 		   

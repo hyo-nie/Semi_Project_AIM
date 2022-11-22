@@ -8,9 +8,8 @@
 <jsp:include page="../inc/include.jsp" />
 <script type="text/javascript">
 	$(document).ready(function() {
-		
 
-		 $('.owl-one').owlCarousel({
+		$('.owl-one').owlCarousel({
 			items : 1, // 한번에 보여줄 아이템 수
 			loop : true, // 반복여부
 			margin : 0, // 오른쪽 간격
@@ -21,19 +20,18 @@
 			touchDrag : false
 
 		});
-		 $('.owl-two').owlCarousel({
-				items : 5, // 한번에 보여줄 아이템 수
-				loop : true, // 반복여부
-				margin : 20, // 오른쪽 간격
-				autoplay : true, // 자동재생 여부
-				autoplayTimeout : 2500, // 재생간격
-				autoplayHoverPause : false, //마우스오버시 멈출지 여부
-				mouseDrag : true,
-				touchDrag : true
+		$('.owl-two').owlCarousel({
+			items : 5, // 한번에 보여줄 아이템 수
+			loop : true, // 반복여부
+			margin : 20, // 오른쪽 간격
+			autoplay : true, // 자동재생 여부
+			autoplayTimeout : 2500, // 재생간격
+			autoplayHoverPause : false, //마우스오버시 멈출지 여부
+			mouseDrag : true,
+			touchDrag : true
 
-			});		 
+		});
 	});
-
 </script>
 <c:set var="today" value="<%=new Date()%>" />
 <fmt:formatDate var="md" pattern="MM.dd" value="${today }" />
@@ -42,19 +40,62 @@
 	<div id="visualAd" class="visual_top visual_main">
 		<div class="inner">
 			<div class="slide_wrap slide_main_visual">
-				<div class="owl-one owl-carousel owl-loaded owl-drag"> <!-- 오울 로딩 -->
-					<div class="owl-stage-outer"> <!-- 오울 -->
-						<div class="owl-stage" 
-							style="transform: translate3d(-3840px, 0px, 0px); transition: all 0.25s ease 0s; width: 11520px;"><!-- 오울 -->
-							<div class="owl-item" style="width: 1920px;">
+				<div class="owl-one owl-carousel owl-loaded owl-drag">
+					<!-- 오울 로딩 -->
+					<div class="owl-stage-outer">
+						<!-- 오울 -->
+						<div class="owl-stage"
+							style="transform: translate3d(-3840px, 0px, 0px); transition: all 0.25s ease 0s; width: 11520px;">
+							<!-- 오울 -->
+							<div class="owl-item cloned" style="width: 1920px;">
 								<div class="item">
 									<a href="#none"><img
-										src="https://caching2.lottecinema.co.kr/lotte_image/2022/KI/KI_1920774.jpg"
-										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/KI/KI_1280720_1.mp4"
+										src="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1108/ST_1920774.jpg"
+										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1110/ST_1280720.mp4"
 										alt=""></a>
 								</div>
 							</div>
+							<div class="owl-item cloned" style="width: 1920px;">
+								<div class="item">
+									<a href="#none"><img
+										src="https://caching2.lottecinema.co.kr/lotte_image/2022/boo/boo_1920774.jpg"
+										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/boo/boo_1280720.mp4"
+										alt="극장판 뽀로로와 친구들 바이러스를 없애줘 전체관람가 12월 1일 롯데시네마에서 만나요 네모바이러스의 습격 친구들을 구하라"></a>
+								</div>
+							</div>
 							<div class="owl-item" style="width: 1920px;">
+								<div class="item">
+									<a href="#none"><img
+										src="https://caching2.lottecinema.co.kr/lotte_image/2022/PR/PR_1920774.jpg"
+										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/PR/PR_1280720.mp4"
+										alt="프레이 포 더 데블 12월 7일 대개봉 15세이상관람가 애나벨 인시디어스 제작진"></a>
+								</div>
+							</div>
+							<div class="owl-item" style="width: 1920px;">
+								<div class="item">
+									<a href="#none"><img
+										src="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1108/ST_1920774.jpg"
+										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1110/ST_1280720.mp4"
+										alt=""></a>
+								</div>
+							</div>
+							<div class="owl-item active" style="width: 1920px;">
+								<div class="item">
+									<a href="#none"><img
+										src="https://caching2.lottecinema.co.kr/lotte_image/2022/boo/boo_1920774.jpg"
+										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/boo/boo_1280720.mp4"
+										alt="극장판 뽀로로와 친구들 바이러스를 없애줘 전체관람가 12월 1일 롯데시네마에서 만나요 네모바이러스의 습격 친구들을 구하라"></a>
+								</div>
+							</div>
+							<div class="owl-item cloned" style="width: 1920px;">
+								<div class="item">
+									<a href="#none"><img
+										src="https://caching2.lottecinema.co.kr/lotte_image/2022/PR/PR_1920774.jpg"
+										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/PR/PR_1280720.mp4"
+										alt="프레이 포 더 데블 12월 7일 대개봉 15세이상관람가 애나벨 인시디어스 제작진"></a>
+								</div>
+							</div>
+							<div class="owl-item cloned" style="width: 1920px;">
 								<div class="item">
 									<a href="#none"><img
 										src="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1108/ST_1920774.jpg"
@@ -96,14 +137,10 @@
 	</div>
 	<div id="contents" class="contents_main">
 		<div class="movi_current_list">
-			<span class="movi_info_txt"><a
-				href="./MovieList.mv"><em class="now">${md }&nbsp;
-						${hms }</em>&nbsp;기준</a></span> 
-			 <ul class="tab_wrap outer lft">
-				<li class="active"><button type="button" class="tab_tit"
-						style="left: 0px; width: 20px;">
-						<span></span>
-					</button>
+			<span class="movi_info_txt"><a href="./MovieList.mv"><em
+					class="now">${md }&nbsp; ${hms }</em>&nbsp;기준</a></span>
+			<ul class="tab_wrap outer lft">
+				<li class="active">
 					<div class="tab_con">
 						<h3 class="hidden"></h3>
 						<div class="main_movie_list">
@@ -646,30 +683,192 @@
 								</div>
 							</div>
 						</div>
-					</div></li>
-			</ul> 
+					</div>
+				</li>
+			</ul>
 		</div>
 
- 		<div class="main_cont_wrap notice">
+
+		<!-- store/event -->
+		<div class="main_cont_wrap premiere">
+			<div class="sec_tit">AIM 스토어</div>
+			<ul class="premiere_wrap">
+				<li><div class="store">
+						<br> <span class="span1">AIM 기프트카드</span>
+						<button onclick="giftcard">더보기</button>
+						<dl>
+							<table>
+								<tr>
+									<dt>
+									<td class="img"><a href=""><img class="img1"
+											src="./assets/img/giftcard.png" width="150px" height="80px"></a></td>
+									<td class="name">AIM 기프트카드<br>10000원
+									</td>
+									</dt>
+								</tr>
+								<tr>
+									<dt>
+									<td class="img"><a href=""><img class="img1"
+											src="./assets/img/giftcard.png" width="150px" height="80px"></a></td>
+									<td class="name">AIM 기프트카드<br>20000원
+									</td>
+									</dt>
+								</tr>
+								<tr>
+									<dt>
+									<td class="img"><a href=""><img class="img1"
+											src="./assets/img/giftcard.png" width="150px" height="80px"></a></td>
+									<td class="name">AIM 기프트카드<br>30000원
+									</td>
+									</dt>
+								</tr>
+							</table>
+						</dl>
+					</div>
+				<li><div class="store">
+						<br> <span class="span2">AIM 관람권</span>
+						<button onclick="ticket">더보기</button>
+						<dl>
+							<table>
+								<tr>
+									<dt>
+									<td class="img"><a href=""><img class="img1"
+											src="./assets/img/ticket.png" width="150px" height="80px"></a></td>
+									<td class="name">AIM 1인관람권<br>13000원
+									</td>
+									</dt>
+								</tr>
+								<tr>
+									<dt>
+									<td class="img"><a href=""><img class="img1"
+											src="./assets/img/ticket.png" width="150px" height="80px"></a></td>
+									<td class="name">AIM 2인관람권<br>25000원
+									</td>
+									</dt>
+								</tr>
+								<tr>
+									<dt>
+									<td class="img"><a href=""><img class="img1"
+											src="./assets/img/ticket.png" width="150px" height="80px"></a></td>
+									<td class="name">AIM 3인관람권<br>33000원
+									</td>
+									</dt>
+								</tr>
+							</table>
+						</dl>
+					</div></li>
+				<li><div class="store">
+						<br> <span class="span3">AIM 콤보</span>
+						<button onclick="combo">더보기</button>
+						<dl>
+							<table>
+								<tr>
+									<dt>
+									<td class="img"><a href=""><img class="img1"
+											src="./assets/img/popcon.png" width="150px" height="80px"></a></td>
+									<td class="name">AIM 콤보<br>10000원
+									</td>
+									</dt>
+								</tr>
+								<tr>
+									<dt>
+									<td class="img"><a href=""><img class="img1"
+											src="./assets/img/popcon.png" width="150px" height="80px"></a></td>
+									<td class="name">AIM 스몰콤보<br>7000원
+									</td>
+									</dt>
+								</tr>
+								<tr>
+									<dt>
+									<td class="img"><a href=""><img class="img1"
+											src="./assets/img/popcon.png" width="150px" height="80px"></a></td>
+									<td class="name">AIM 커플콤보<br>15000원
+									</td>
+									</dt>
+								</tr>
+							</table>
+						</dl>
+					</div></li>
+
+			</ul>
+			<button type="button" class="btn_txt_more ty2">더보기</button>
+		</div>
+
+
+		<div class="main_cont_wrap premiere">
+			<div class="sec_tit">시사회/무대인사</div>
+			<ul class="premiere_wrap">
+				<li><a href="#none"><img
+						src="https://caching.lottecinema.co.kr//Media/Event/f5eb4d354c194fa3b68d3a5facac9703.jpg"
+						alt="[오늘 밤, 세계에서] 스페셜 상영회"></a></li>
+				<li><a href="#none"><img
+						src="https://caching.lottecinema.co.kr//Media/Event/10125de1b57e42769ebcec0ede7837a9.jpg"
+						alt="<동감> 2주차 무대인사"></a></li>
+				<li><a href="#none"><img
+						src="https://caching.lottecinema.co.kr//Media/Event/e7a59bf03baf4980b33d58c33c5635cd.jpg"
+						alt="롯데시네마와 함께하는 올빼미 개봉주 무대인사 안내
+
+스크린에서 눈 뗄 수 없는 118분의 긴장감
+올빼미
+개봉주 무대인사 안내
+참석자는 아래 상세 스케줄을 확인하세요
+
+
+11/26(토)	
+롯데시네마 청량리	
+1관	13:50	시영 시	안태진 감독, 류준열, 최무성, 박명훈, 김성철, 조윤서
+4관	14:00	시영 시	안태진 감독, 류준열, 최무성, 박명훈, 김성철, 조윤서
+5관	12:00	종영 시	안태진 감독, 류준열, 최무성, 박명훈, 김성철, 조윤서
+
+롯데시네마 건대	
+5관	16:40	시영 시	안태진 감독, 류준열, 최무성, 박명훈, 김성철, 조윤서
+4관	14:40	종영 시	안태진 감독, 류준열, 최무성, 박명훈, 김성철, 조윤서
+6관	14:50	종영 시	안태진 감독, 류준열, 최무성, 박명훈, 김성철, 조윤서
+
+롯데시네마 월드타워	
+5관	15:50	종영 시	안태진 감독, 류준열, 최무성, 박명훈, 김성철, 조윤서
+8관	16:00	종영 시	안태진 감독, 류준열, 최무성, 박명훈, 김성철, 조윤서
+20관	16:10	종영 시	안태진 감독, 류준열, 최무성, 박명훈, 김성철, 조윤서
+5관	18:25	시영 시	안태진 감독, 류준열, 최무성, 박명훈, 김성철, 조윤서
+
+유의사항 
+-본 행사는 사정에 의해 예고 없이 변경/취소 될 수 있습니다. 
+-본행사는 마스크 미착용 시 입장이 불가능합니다. 
+-발열 및 호흡기 질환 증세가 있으실 경우 본인과 관람객을 위해 이용을 자제해주시기 바랍니다. 
+
+올빼미 11월 23일 극장 개봉 "></a></li>
+			</ul>
+			<button type="button" class="btn_txt_more ty2">더보기</button>
+		</div>
+			<div class="main_cont_wrap notice">
 			<div class="sec_tit">공지사항</div>
 			<div class="rolling_menu_wrap">
-				<ul class="rolling_menu" style="top: -30px;">
+				<ul class="rollings" style="top: -30px;">
 					<li><a href="#none" title="">영화관람권 가격 변경 안내</a></li>
 					<li><a href="#none" title="">2D 일반 관람권 활용 스페셜관 이용 안내 </a></li>
 					<li><a href="#none" title="">V3 백신 엔진 악성코드 오진 안내</a></li>
-					<li><a href="#none" title="">롯데시네마 영구VIP 서비스 종료 안내</a></li>
-					<li><a href="#none" title="">영화관람권 가격 변경 안내</a></li>
-					<li><a href="#none" title="">영화관람권 가격 변경 안내</a></li>
-					<li><a href="#none" title="">영화관람권 가격 변경 안내</a></li>
-					<li><a href="#none" title="">영화관람권 가격 변경 안내</a></li>
-					<li><a href="#none" title="">영화관람권 가격 변경 안내</a></li>
-					<li><a href="#none" title="">영화관람권 가격 변경 안내</a></li>
-					<li><a href="#none" title="">영화관람권 가격 변경 안내</a></li>
-					<li><a href="#none" title="">영화관람권 가격 변경 안내</a></li>
+					<li><a href="#none" title="">AIM 영구VIP 서비스 종료 안내</a></li>
 					<li><a href="#none" title="">영화관람권 가격 변경 안내</a></li>
 				</ul>
 			</div>
-			
-		</div> 
+		</div>
+		<div class="mid_menu_wrap">
+			<a href="#none" class="mid_itm" title="">
+			<img src="https://caching.lottecinema.co.kr//Media/WebAdmin/3423e358b74d49d5b12867c7d9c6f6a8.png"
+				alt="할인안내"></a>
+			<a href="#none" class="mid_itm" title="">
+			<img src="https://caching.lottecinema.co.kr//Media/WebAdmin/16b056e5e6a04c609b94a5c21e786d3b.png"
+				alt="포인트"></a>
+			<a href="#none" class="mid_itm" title="">
+			<img src="https://caching.lottecinema.co.kr//Media/WebAdmin/9fd4a77cd6a44a39aa35d07e5bb8a010.png"
+				alt="멤버십"></a>
+			<a href="#none" class="mid_itm" title="">
+			<img src="https://caching.lottecinema.co.kr//Media/WebAdmin/3633088df0644062b53cd88b34067895.png"
+				alt="틴틴클럽"></a>
+			<a href="#none" class="mid_itm" title="">
+			<img src="https://caching.lottecinema.co.kr//Media/WebAdmin/9c4e2721ecdd488d86df6d27e3c2a000.png"
+				alt="bravo 브라보클럽"></a>
+		</div>
+	
 	</div>
 </div>

@@ -127,10 +127,10 @@ ver : 1.01 20191219 2502 line > íŒì—…ë©”ë‰´ ê³ ì •ë†�
 
 /* ë³¸ë¬¸ ========== */
 .contents_main .main_cont_wrap {position:relative; margin-bottom:33px;}
-.contents_main .main_cont_wrap .sec_tit {position:relative; font-size:17px; margin-bottom:10px;}
+.contents_main .main_cont_wrap .sec_tit {position:relative; font-size:17px; margin-bottom:10px; left: 10px; font-size: 40px; opacity: 0.8; font-family:"Noto Sans KR";}
 .contents_main .main_cont_wrap .sec_tit>span {position:absolute; top:-11px; font-size:10px; color:#666; letter-spacing:2px;}
 .contents_main .main_cont_wrap .btn_txt_more {position:absolute; right:0; top:5px; background-position:right 3.5px;}
-.contents_main .main_cont_wrap.special .sec_tit {border-bottom:1px dashed #D9D9D9; padding-bottom:10px;}
+.contents_main .main_cont_wrap.special .sec_tit {border-bottom:1px dashed #D9D9D9; padding-bottom:10px; font-family:"Noto Sans KR";  }
 .contents_main .main_cont_wrap.special .special_wrap {padding:16px 0; white-space:nowrap; overflow:hidden;}
 .contents_main .main_cont_wrap.special .special_wrap > li {display:inline-block; vertical-align:middle;}
 .contents_main .main_cont_wrap.special .special_wrap > li > a {display:block; text-align:center;}
@@ -143,6 +143,17 @@ ver : 1.01 20191219 2502 line > íŒì—…ë©”ë‰´ ê³ ì •ë†�
 .contents_main .main_cont_wrap.premiere .premiere_wrap > li + li {margin-left:11px;}
 .contents_main .main_cont_wrap.premiere .premiere_wrap > li > a {display:block; overflow:hidden; border-radius:4px; width:319px;}
 .contents_main .main_cont_wrap.premiere .premiere_wrap > li > a > img {width:100%;}
+
+.contents_main .main_cont_wrap.premiere .premiere_wrap .store { height: 300px;width: 300px;border: 2px;border-style: outset;border-radius: 50px; }
+.contents_main .main_cont_wrap.premiere .premiere_wrap .store .span1 { font-size:15px; margin: 10px 105px 10px 20px; }
+.contents_main .main_cont_wrap.premiere .premiere_wrap .store .span2 { font-size:15px; margin: 10px 133px 10px 20px; }
+.contents_main .main_cont_wrap.premiere .premiere_wrap .store .span3 { font-size:15px; margin: 10px 145px 10px 20px; }
+.contents_main .main_cont_wrap.premiere .premiere_wrap .store button { border: 1px solid #707070; opacity: 0.6; border-radius: 5px; width: 50px; height: 20px;  }
+.contents_main .main_cont_wrap.premiere .premiere_wrap .store .img { width:150px;  }
+.contents_main .main_cont_wrap.premiere .premiere_wrap .store .img1 { margin-left: 10px; }
+.contents_main .main_cont_wrap.premiere .premiere_wrap .store .name {  text-align: center; }
+
+
 .contents_main .mid_menu_wrap {position:relative; font-size:0; margin-bottom:50px;}
 .contents_main .mid_menu_wrap .mid_itm {display:inline-block; width:187px; height:133px;}
 .contents_main .mid_menu_wrap .mid_itm+.mid_itm {margin-left:10px;}
@@ -152,9 +163,9 @@ ver : 1.01 20191219 2502 line > íŒì—…ë©”ë‰´ ê³ ì •ë†�
 .contents_main .main_cont_wrap.notice .sec_tit {display:inline-block; margin:0; font-size:13px; vertical-align:middle;}
 .contents_main .main_cont_wrap.notice .sec_tit:after {content:''; display:inline-block; width:1px; height:13px; background:#707070; margin:0 20px; vertical-align:middle;}
 .contents_main .main_cont_wrap.notice .rolling_menu_wrap {position:relative; display:inline-block; width:840px; height:15px; overflow:hidden; vertical-align:middle;}
-.contents_main .main_cont_wrap.notice .rolling_menu_wrap .rolling_menu {position:absolute; left:0;}
-.contents_main .main_cont_wrap.notice .rolling_menu_wrap .rolling_menu>li {height:15px; line-height:15px;}
-.contents_main .main_cont_wrap.notice .rolling_menu_wrap .rolling_menu>li>a {font-size:13px; line-height:15px;}
+.contents_main .main_cont_wrap.notice .rolling_menu_wrap .rollings {position:absolute; left:0;}
+.contents_main .main_cont_wrap.notice .rolling_menu_wrap .rollings>li {height:15px; line-height:15px;}
+.contents_main .main_cont_wrap.notice .rolling_menu_wrap .rollings>li>a {font-size:13px; line-height:15px;}
 .contents_main + .banner_wrap {padding-top:30px;}
 
 

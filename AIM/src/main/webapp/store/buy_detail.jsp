@@ -13,7 +13,7 @@
 <body>
 
 <article>
-	${detailInfo }
+<%-- 	${detailInfo } --%>
 	<table>
       <div class="com_cart_list_wrap">
       <h1>주문 상세 내역</h1>

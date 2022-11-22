@@ -48,7 +48,6 @@ public class OrderStartAction implements Action {
 		request.setAttribute("member", mDTO);
 		
 		// 정보 확인용!
-//		System.out.println("정보확ㄴ인용!!!!!!! " + cartList);
 //		System.out.println("정보확ㄴ인용!!!!!!! " + productList);
 //		System.out.println(member);
 	

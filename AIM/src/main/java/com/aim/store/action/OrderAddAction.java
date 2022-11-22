@@ -1,17 +1,14 @@
 package com.aim.store.action;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.aim.store.db.CartDAO;
-import com.aim.store.db.CartDTO;
 import com.aim.store.db.OrderDAO;
 import com.aim.store.db.OrderDTO;
-import com.aim.store.db.StoreDAO;
 
 public class OrderAddAction implements Action {
 
@@ -35,9 +32,10 @@ public class OrderAddAction implements Action {
 		// 전달된 주문 정보(id, o_tel, o_pay)
 		OrderDTO orderDTO = new OrderDTO();
 		orderDTO.setO_id(id);
-		orderDTO.setO_tel(request.getParameter("o_tel"));
+		orderDTO.setO_tel(request.getParameter("mb_tel"));
 		orderDTO.setO_pay(request.getParameter("o_pay"));
-		
+		System.out.println(request.getParameter("o_pay"));
+
 		System.out.println("orderDTO : " + orderDTO);
 	
 		// 주문 상품 정보 (장바구니 정보 + 상품 정보)

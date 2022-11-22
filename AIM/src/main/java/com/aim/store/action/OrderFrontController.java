@@ -70,6 +70,24 @@ public class OrderFrontController extends HttpServlet {
 					} catch (Exception e) {
 						e.printStackTrace();
 					}
+			  } else if(command.equals("/OrderFail.or")) {
+				  System.out.println("C : /OrderFail.or");
+			  
+				  forward = new ActionForward();
+				  forward.setPath("./store/buy_fail.jsp");
+				  forward.setRedirect(false);
+			  } else if(command.equals("/OrderNowAction.or")) {
+				  System.out.println("C : /OrderNowAction.or");
+				  
+				  action = new OrderNowAction();
+				  try {
+					forward = action.execute(request, response);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			  } else if(command.equals("/OrderNow.or")) {
+				  System.out.println("C : /OrderNow.or");
+			  
 			  }
 		      
 	   

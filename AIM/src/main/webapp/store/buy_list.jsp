@@ -14,7 +14,7 @@
 
 	<jsp:include page="../inc/include.jsp" />
 	
-	<jsp:include page="../inc/nav_bar.jsp"></jsp:include>
+	<jsp:include page="../inc/login_nav_bar.jsp"></jsp:include>
 <!-- 위에꺼 주석풀고 넣으면 다 겹쳐지고 깨져요 ㅠ 흑.. -->
 
    <!-- 구매자 주문목록페이지  -->
@@ -26,8 +26,6 @@
       <div class="com_cart_list_wrap">
       <h1>주문목록</h1>
       <p class="cart_allchecker_wrap">
-         <input type="checkbox" id="checkboxall" class="com_custom_all_checkbox com_custom_checkbox" checked="checked">
-         <label for="checkboxall">전체선택</label>
          <strong class="com_custom_checkbox_sel_price">주문번호</strong>
          <strong class="com_custom_checkbox_product_name">상품명</strong>
          <strong class="com_custom_checkbox_price">수량</strong>
