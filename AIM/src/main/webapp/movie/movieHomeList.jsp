@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <title>AIM - 영화 홈</title>
 
+<!-- 각종 요소 -->
 <jsp:include page="../inc/include.jsp" />
 
 <!-- 상위 배너 -->
@@ -15,41 +16,31 @@
 <!-- 헤더/네비 -->
 <jsp:include page="../inc/nav_bar.jsp" />
 
-<!-- 영화 배너 스크립트 --> <!-- 슬라이드 자동 재생 / 정지 버튼 기능 -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <script src="./NLCHS/Content/js/jquery-1.12.3.min.js"></script>
-    <script src="./NLCHS/Content/js/jquery.jplayer.min.js"></script>
-    <script src="./NLCHS/Content/js/jquery.lazy.min.js"></script>
-    <script src="./NLCHS/Content/js/jquery-ui.min.js"></script>
-    <script src="./NLCHS/Content/js/jquery.cookie.js"></script>
-    <script src="./NLCHS/Content/js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="./NLCHS/Content/js/owl.carousel-2.3.4-custom.js"></script>
-    <script src="./NLCHS/Content/js/plugin.js"></script>
-    <script src="./NLCHS/Content/js/pl_custom.js"></script>
-    <script src="./NLCHS/Scripts/Library/moment.js"></script>
-    <script type="text/javascript" src="https://members.lpoint.com/api/js/lotte.sso.api.js"></script>
-    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
-
-    <script src="./NLCHS/Content/js/common.js"></script>
-    <script src="./NLCHS/Content/js/common_lc21new.js"></script>
-    <script src="./NLCHS/Scripts/common/Cookie.js"></script>
-    
-    <script src="./NLCHS/Scripts/Library/jquery.blockUI.min.js"></script>
-    <script src="./NLCHS/Scripts/Library/React/remarkable.min.js"></script>
-    <script src="./NLCHS/Scripts/Library/React/axios.min.js"></script>
-    <script src="./NLCHS/Scripts/common/URLSearchParamsCustom.js"></script>
-    <script src="./NLCHS/Scripts/common/Util.js"></script>
-    <script src="./NLCHS/Scripts/common/Common.js"></script>
 <!-- 영화 배너 스크립트 --> 
+<script type="text/javascript">
+$(document).ready(function() {
+	
+
+	 $('.owl-one').owlCarousel({
+		items : 1, // 한번에 보여줄 아이템 수
+		loop : true, // 반복여부
+		margin : 0, // 오른쪽 간격
+		autoplay : true, // 자동재생 여부
+		autoplayTimeout : 5000, // 재생간격
+		autoplayHoverPause : false, //마우스오버시 멈출지 여부
+		mouseDrag : false,
+		touchDrag : false
+
+	});
+});
+</script>
 
 
 </head>
 <body>
 
 
-<!-- 영화 홈 배너 --> <!-- 뽀로로 포기 -->
+<!-- 영화 홈 배너 -->
 <div id="visual_top" class="visual_top visual_theater_detail" style="">
 		<div class="inner">
 			<div class="slide_wrap full slide_cinema_home_visual">
@@ -109,10 +100,7 @@
 <!-- 영화 홈 페이지 좌우 여백 틀 -->			
 
 
-
-
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
 
 
 <!-- 영화 홈 페이지 추천영화 -->
