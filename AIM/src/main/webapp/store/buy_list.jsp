@@ -57,7 +57,7 @@
   </strong> 
   </span>
   </div>
-  <div class="product_info_cnt_wrap" style= "margin-top: 0px; width: 248px;"> ${odt.o_name } </div>
+  <div class="product_info_cnt_wrap" style= "margin-top: 0px; width: 248px;"> ${odt.o_name } 외 ${odt.o_amount -1}건 </div>
   <div class="product_info_cnt_wrap" style= "margin-top: 0px; padding-right: 100px;"> ${odt.o_amount } </div>
 <%--   <div class="product_info_cnt_wrap"> ${odt.o_pay } </div> --%>
     <div class="product_info_cnt_wrap" style= "margin-top: 0px; padding-right: 70px;">
