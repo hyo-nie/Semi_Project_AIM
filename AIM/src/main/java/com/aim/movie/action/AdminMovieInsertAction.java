@@ -2,8 +2,8 @@ package com.aim.movie.action;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-import org.json.JSONArray;
 import org.json.JSONObject;
 
 import com.aim.movie.db.MovieDAO;
@@ -13,6 +13,19 @@ public class AdminMovieInsertAction implements Action {
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		System.out.println(" M : /AdminMovieInsertAction.execute() 호출 ");
+		
+		// admin 전용 페이지 세션 제어
+		HttpSession session = request.getSession();
+		String id = (String)session.getAttribute("mb_id");
+		
+		ActionForward forward = new ActionForward();
+		
+		if(id == null || !id.equals("admin")) {			
+			forward.setPath("./Login.aim");
+			forward.setRedirect(true);
+			return forward;
+		}
+
 		
 		// 데이터 저장 (movieCd)
 		String movieCd1 = request.getParameter("movieCd1");
@@ -120,7 +133,6 @@ public class AdminMovieInsertAction implements Action {
 		dao.adminInsertMovie(movieInfo10, audiAcc10, rank10, Double.parseDouble(crawling10[0]), crawling10[1]);	
 		
 		// 페이지 이동
-		ActionForward forward = new ActionForward();
 		forward.setPath("./AdminMovieList.mv");
 		forward.setRedirect(true);
 		

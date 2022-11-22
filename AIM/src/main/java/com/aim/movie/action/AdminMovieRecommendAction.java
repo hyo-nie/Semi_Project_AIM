@@ -2,6 +2,7 @@ package com.aim.movie.action;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.aim.movie.db.MovieDAO;
 import com.aim.movie.db.MovieDTO;
@@ -12,6 +13,18 @@ public class AdminMovieRecommendAction implements Action {
 	public ActionForward execute(HttpServletRequest request, 
 			HttpServletResponse response) throws Exception {
 		System.out.println(" M : /AdminMovieRecommendAction.execute() 호출 ");
+		
+		// admin 전용 페이지 세션 제어
+		HttpSession session = request.getSession();
+		String id = (String)session.getAttribute("mb_id");
+		
+		ActionForward forward = new ActionForward();
+		
+		if(id == null || !id.equals("admin")) {			
+			forward.setPath("./Login.aim");
+			forward.setRedirect(true);
+			return forward;
+		}
 		
 		// 전달정보 저장
 		MovieDTO dto = new MovieDTO();
@@ -39,7 +52,6 @@ public class AdminMovieRecommendAction implements Action {
 		dao.AdminMovieRecommend(dto);
 		
 		// 페이지 이동
-		ActionForward forward = new ActionForward();
 		forward.setPath("./AdminMovieList.mv");
 		forward.setRedirect(true);
 		
