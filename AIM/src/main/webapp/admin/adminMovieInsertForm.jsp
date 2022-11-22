@@ -5,14 +5,26 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>AIM - 관리자 영화 API 등록 페이지</title>
 
-<jsp:include page="../inc/include.jsp" />
+<!-- 각종 요소 -->
+<jsp:include page="../inc/include.jsp"/>
+<!-- 상위 배너 -->
+<jsp:include page="../inc/topbanner.jsp"/>
+<!-- 헤더/네비 -->
+<jsp:include page="../inc/nav_bar.jsp"/>
 
 </head>
 <body>
 
-<jsp:include page="../inc/nav_bar.jsp" />
+	<%
+	//로그인 제어
+	String mb_id = (String)session.getAttribute("mb_id");
+	if(mb_id==null || !mb_id.equals("admin")){
+		response.sendRedirect("./Login.aim");
+		System.out.println("비정상적 접근 발생! IP : "+request.getRemoteAddr());
+	}
+	%>
 
 
 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
