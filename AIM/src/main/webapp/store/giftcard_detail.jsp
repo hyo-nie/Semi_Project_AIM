@@ -30,7 +30,7 @@
 		}
 		
 		function upCnt(){
-			if(defaultCnt<5){
+			if(defaultCnt<10){
 				defaultCnt++;
 				document.getElementById("showCnt").innerHTML = defaultCnt;
 				
@@ -40,28 +40,66 @@
 				document.getElementById("total_payment").innerHTML = Totalprice.toLocaleString('ko-KR');
 				
 			} else{
-				alert('5개까지 구매 가능합니다!');
+				alert('장바구니에는 최대 10개까지 담을 수 있습니다!');			
 			}
 		
 		}
 			
 		function goCart(){
 			var isMove = confirm("장바구니에 등록되었습니다! 확인 하시겠습니까?");
+			var amount = document.getElementById("showCnt").innerHTML;
 			
 			if(isMove){
-				var amount = document.getElementById("showCnt").innerHTML;
-				
+			
 				document.fr.action="./CartAddAction.ct?c_amount="+amount;
 				document.fr.isMove.value = isMove; // true
 				document.fr.submit();
 				
-			} else{
-				document.fr.action="./CartAddAction.ct";
-				document.fr.isMove.value = isMove; // false
+			}  
+			else{
+				
+				 var queryString = $("form[name=fr]").serialize() ;
+				
+				 $.ajax({
+					 	type : 'post',
+					 	data : queryString,
+			            url:"./CartAddAction.ct?c_amount="+amount,
+			            success:function(data){
+			                console.log("카트 들어갔다 나옴");
+			            }
+			        }) 
+			}
+		}
+		
+		function buyNow(){
+			// ./OrderStart.or
+			
+			alert('확인');
+			
+// 			var queryString = $("form[name=fr]").serialize() ;
+			
+// 			 $.ajax({
+// 				 	type : 'post',
+// 				 	data : queryString,
+// 		            url:"./OrderStart.or",
+// 		            success:function(data){
+// 		                console.log("orderStartAction 페이지로 이동");
+// 		                window.location.href = "./store/buy.jsp";
+// 		            }
+// 		        }) 
+			// var isMove = confirm("장바구니에 등록되었습니다! 확인 하시겠습니까?");
+			var amount = document.getElementById("showCnt").innerHTML;
+			var isMove = confirm("더이상 쇼핑하지 않고 바로 결제하시겠습니까?");
+			
+			if(isMove){
+				document.fr.action="./OrderNowAction.or?c_amount="+amount;
+				document.fr.isMove.value = isMove; // true
 				document.fr.submit();
 				
-				}
-			}
+			}  
+			
+			
+		}
 
 		
 </script>
@@ -71,13 +109,13 @@
 ${dto }
 
 	<!-- 각종 요소 -->
-	<jsp:include page="../inc/include.jsp" />
+	<jsp:include page="../inc/include.jsp"/>
 
 	<!-- 헤더/네비 -->
 	<jsp:include page="../inc/login_nav_bar.jsp"/>
 
 
-	<form action="" method="post" name="fr">
+	<form action ="" method="post" name="fr">
 	<input type="hidden" name="st_num" value="${dto.st_num }">
 	<input type="hidden" name="isMove" value="">
 	<input type="hidden" name="st_name" value="${dto.st_name }">
@@ -121,9 +159,8 @@ ${dto }
 	               </div>               
 	               
 	               <div class="category_product_detail_btn_wrap"> 
-	               		<!-- 구매와 장바구니는 회원만 가능함! -->
 						<a href="javascript:goCart();" class="btn_cart">장바구니</a>               
-						<a href="./OrderStart.or">구매하기</a>               
+						<a href="javascript:buyNow();">구매하기</a>               
 	               </div> 
 	                         
 			</div>      

@@ -233,7 +233,7 @@ input.inp_cont {width:54px; margin:0 3px;} /* 2020.01.02 */
 /* 영화홈 */
 .tit_type0 {margin-top:5px; margin-bottom:12px; font-size:24px;}
 .tit_type0 strong {display:block; margin-bottom:8px;}
-.tit_type0 strong.ty2 {display:inline; margin-bottom:0; color:#ED4C6B;}
+.tit_type0 strong.ty2 {display:inline; margin-bottom:12px; color:#ED4C6B;}
 .tit_type0 .eng {font-family:'Roboto', "Noto Sans KR";}
 .tit_type0 em {display:block; font-size:13px; color:#999}
 
@@ -378,8 +378,8 @@ input.inp_cont {width:54px; margin:0 3px;} /* 2020.01.02 */
 /* 메인 */
 .visual_top.visual_main {height:774px; z-index:0;}
 /* 영화 홈 */
-.visual_top.visual_movie_home {height:420px; text-align:center;}
-.visual_top.visual_movie_home .owl-carousel {height:420px;}
+.visual_top.visual_movie_home { height:420px; text-align:center;}
+.visual_top.visual_movie_home .owl-carousel { height:420px;}
 /* 영화상세 */
 .visual_top.visual_movie_detail {height:560px; text-align:center}
 .visual_top.visual_movie_detail .swiper-slide a {position:relative;}

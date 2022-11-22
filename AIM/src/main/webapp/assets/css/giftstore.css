@@ -884,7 +884,8 @@ input[type='text'][readonly]{background-color:#fff}
 
 
 /* S 장바구니 리스트 */
-	.com_cart_list_wrap{overflow:hidden; width:980px; margin:0 auto; padding-top:50px; font-family:'CJONLYONENEW'}
+	.com_cart_list_wrap{overflow:hidden; width:980px; margin:0 auto; padding-top:50px; font-family:'CJONLYONENEW'} /* width 980 -> 800으로 수정 */
+	.com_cart_list_wrap1{overflow:hidden; width:800px; margin:0 auto; padding-top:50px; font-family:'CJONLYONENEW'} /* width 980 -> 800으로 수정 */
 	.com_cart_list_wrap .cart_allchecker_wrap{overflow:hidden; padding:12px 20px 13px; background-color:#fafafa; border-top:3px solid #000}
 	.com_cart_list_wrap .cart_allchecker_wrap strong{float:left; position:relative; top:1px; font-family:'CJONLYONENEW'; font-weight:400; font-size:15px; color:#000; line-height:24px; text-align:center}
 	.com_cart_list_wrap .cart_allchecker_wrap strong.com_custom_checkbox_product_name{width:360px; text-align:left; text-indent:86px}

@@ -113,8 +113,8 @@
 					<jsp:include page="../inc/nav_bar.jsp" />
 					<!-- 영화슬라이더 -->
 					<jsp:include page="../inc/slide_mv.jsp" />
-					<!-- 바디 -->
-					<jsp:include page="../inc/body.jsp" />
+					<%-- <!-- 바디 -->
+					<jsp:include page="../inc/body.jsp" /> --%>
 					<!-- 약관 -->
 					<jsp:include page="../inc/footer.jsp" />
 

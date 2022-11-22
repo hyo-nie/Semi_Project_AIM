@@ -31,16 +31,21 @@
 
 
 	<div class="category_product_list_wrap">
-	     <strong class="category_product_list_title"> STORE
-	    	<span>All In Movie, 영화의 모든 것</span></strong>
-	    	<a href="./store/cart.jsp"><img src = "./assets/img/cart.png" width="25" height="25"></a> 
-	    	<!-- 여기에 store_main_popcorn 이미지를 넣을까 생각만 해봄.... -->     
-	    	<span><src href=""></span>
+	    <strong class="category_product_list_title"> STORE
+	    	<span>
+	    		All In Movie, 영화의 모든 것
+	    		<div style=float:right;>
+	    		<a href="./CartList.ct">
+	    			<img src="./assets/img/bg_cartBtn.png" alt="장바구니">
+	    		</a>
+	    		</div>
+	    	</span>
+	    </strong>
   	</div>
   	
   	
   	<div class="category_product_wrap">
-  		<c:set var="size" value="3"/>	<!-- 3개씩 보이게 -->
+  		<c:set var="size" value="3"/>
 		<c:set var="num" value="0"/>
   	
 		<ul class="category_product_list">
@@ -54,8 +59,7 @@
 	          	<li class=" ">
 					<a href="./PopcornDetail.st?st_num=${Combo.st_num}" class="btn_category_product">              
 					<span class="best_product_img_wrap">
-						<img src="./upload/2인.jpg" alt="${Combo.st_name }"></span>     <!-- 그냥 임시로 넣어둔거 -->         
-<%-- 						<img src="./upload/${Combo.st_img }" alt="${Combo.st_name }"></span>               --%>
+						<img src="./upload/${Combo.st_img }" alt="${Combo.st_name }"></span>              
 					<span class="best_product_text_wrap">                 
 						<span class="best_product_text_title">${Combo.st_name }</span>                  
 						<span class="best_product_text_name">${Combo.st_text }</span>                  
@@ -118,8 +122,7 @@
 			          <li class=" ">
 							<a href="./GiftcardDetail.st?st_num=${giftlist.st_num }" class="btn_category_product">              
 							<span class="best_product_img_wrap">
-								<img src="./assets/img/3만원.jpg" alt="${giftlist.st_img }"></span>  
-								<!-- 콤보.PNG 이미지는 임시로 넣음! 추후 ${giftlist.st_img}로 변경 예정! --> 
+								<img src="./upload/${giftlist.st_img }" alt="${giftlist.st_img }"></span>  
 								           
 							<span class="best_product_text_wrap">                 
 								<span class="best_product_text_title">${giftlist.st_name }</span>                  
@@ -153,8 +156,7 @@
 			          <li class=" ">
 							<a href="./PopcornDetail.st?st_num=${poplist.st_num }" class="btn_category_product">              
 							<span class="best_product_img_wrap">
-								<img src="./assets/img/콤보.PNG" width="300" alt="${poplist.st_img }"></span>     
-								<!-- 콤보.PNG 이미지는 임시로 넣음! 추후 ${poplist.st_img}로 변경 예정! -->         
+								<img src="./upload/${poplist.st_img }" width="300" alt="${poplist.st_img }"></span>     
 	
 							<span class="best_product_text_wrap">                 
 								<span class="best_product_text_title">${poplist.st_name }</span>                  

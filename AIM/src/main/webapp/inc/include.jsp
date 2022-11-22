@@ -43,9 +43,9 @@
 
 
 <!-- other -->
-
     <script src="./assets/css/owl.carousel.min.js"></script>
     <script src="./assets/css/owl.carousel-2.3.4-custom.js"></script>
+     <script src="./assets/css/sliderupdown.js"></script>
  	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
  	 <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     

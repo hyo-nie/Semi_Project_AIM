@@ -28,6 +28,7 @@ public class CartAddAction implements Action {
 		// 장바구니 정보 저장
 		// detail 페이지에서 선택한 옵션(개수) + 구매한 회원(mb_id)
 		CartDTO dto = new CartDTO();
+		
 		dto.setSt_num(Integer.parseInt(request.getParameter("st_num")));
 		dto.setC_amount(Integer.parseInt(request.getParameter("c_amount")));
 		dto.setSt_name(request.getParameter("st_name"));
