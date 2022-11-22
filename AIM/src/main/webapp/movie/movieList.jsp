@@ -6,7 +6,6 @@
 <head>
 <meta charset="UTF-8">
 <title>현재상영작</title>
-<<<<<<< HEAD
 <jsp:include page="../inc/include.jsp" />
 <script type="text/javascript">
 	$(document).ready(function(){
@@ -24,30 +23,16 @@
 					});
 			}
 	});
-
-	
 </script>
-
-<style type="text/css">
-
-.movie_screen_box .button {font-size:14px; color: maroon;}
-.movie_screen_box .button1 {font-size:14px; color: #666;}
-</style>
-=======
-
-<!-- 각종 요소 -->
-<jsp:include page="../inc/include.jsp" />
 
 <!-- 상위 배너 -->
 <jsp:include page="../inc/topbanner.jsp"/>
-
 <!-- 헤더/네비 -->
 <jsp:include page="../inc/nav_bar.jsp" />
 
 <!-- 영화 배너 스크립트 --> 
 <script type="text/javascript">
 $(document).ready(function() {
-	
 
 	 $('.owl-one').owlCarousel({
 		items : 1, // 한번에 보여줄 아이템 수
@@ -62,26 +47,8 @@ $(document).ready(function() {
 	});
 });
 </script>
-
->>>>>>> branch 'master' of https://github.com/hyo-nie/AIMAIM.git
 </head>
 <body>
-<<<<<<< HEAD
-	<!-- 상위 배너 -->
-	<jsp:include page="../inc/topbanner.jsp" />
-	<!-- 헤더/네비 -->
-	<jsp:include page="../inc/nav_bar.jsp" />
-=======
-
-<!-- 주석 부분 헤드로 옮김 -->
-<%-- 	<jsp:include page="../inc/include.jsp" /> --%>
-<!-- 	<!-- 상위 배너 --> -->
-<%-- 	<jsp:include page="../inc/topbanner.jsp" /> --%>
-<!-- 	<!-- 헤더/네비 --> -->
-<%-- 	<jsp:include page="../inc/nav_bar.jsp" /> --%>
-<!-- 주석 부분 헤드로 옮김 -->
-
-
 
 <!-- 영화 홈 배너 -->
 <div id="visual_top" class="visual_top visual_theater_detail" style="">
@@ -135,7 +102,6 @@ $(document).ready(function() {
 	</div>
 <!-- 영화 홈 배너 -->
 
->>>>>>> branch 'master' of https://github.com/hyo-nie/AIMAIM.git
 	<br><br><br><br>
 	<div id="contents" class="contents_movie_list">
 	<br><br><br><br><br><br><br><br><br>
