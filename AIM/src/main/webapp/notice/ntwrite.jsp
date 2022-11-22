@@ -24,7 +24,7 @@
 		<ul class="tab_wrap outer actionmovingbar">
 			
 			<li class="active"><button type="button" class="tab_tit"
-					style="width: 33.33%; left: 0%;">
+					style="width: 33.33%; left: 0%;" onclick="location.href='./NtList.nt';">
 					<span>공지사항</span>
 				</button>
 				
@@ -42,14 +42,22 @@
 							<col style="width: auto;">
 						</colgroup>
 						<tbody>
-						
+							
 							<tr>
-								<th scope="row" class="req" name="hp_class">종류</th>
+								<th scope="row" class="req">분류</th>
+								
 								<td>
-									<input type="radio" name="rdo00" id="radio01" class="aNoneSelect" checked>
-										<label for="radio01">영화 관련 문의</label>
-									<input type="radio" name="rdo00" id="radio02">
-										<label for="radio02">기타 문의</label>
+									<select title="문의내용 분류선택" name="nt_select">
+										<option	value="0">분류 선택</option>
+										<option value="1">전체</option>
+										<option value="2">영화관</option>
+										<option value="3">영화</option>
+										<option value="4">멤버십</option>
+										<option value="5">예매/결제</option>
+										<option value="6">이벤트</option>
+										<option value="7">홈페이지/모바일</option>
+										<option value="8">개인정보</option>
+									</select>
 								</td>
 							</tr>
 							
@@ -58,8 +66,7 @@
 								<td>
 									<div class="bx_textarea">
 										<input type="text" class="ty2 w_full" placeholder="제목을 입력해주세요" title="공지사항 제목입력" name="nt_subject">
-										<span class="txt_count">
-										<em id="strongContentsCount_Title">0</em>/한글<em> 50</em>자</span>
+										
 									</div>
 								</td>
 							</tr>
@@ -70,8 +77,7 @@
 										<textarea class="ty2" cols="10" rows="10" name="nt_content" 
 										title="공지사항 내용을 입력해주세요">
 										</textarea>
-										<span class="txt_count"><em id="strongContentsCount">0</em>/한글<em> 2,000</em>자</span>
-									</div></td>
+								</div></td>
 							</tr>
 							<tr>
 								<th scope="row">첨부파일</th>
@@ -89,7 +95,32 @@
 							
 						</tbody>
 					</table>
-					<input type="submit" value="작성하기">
+					<table class="tbl_form" summary="고객정보작성 테이블">
+						<caption>고객정보를 작성해주세요</caption>
+						<colgroup>
+							<col style="width: 15%;">
+							<col style="width: auto;">
+						</colgroup>
+						<tbody>
+							<tr>						
+								<th scope="row" class="req">관리자</th>
+								<td>
+									<div class="bx_textarea">
+										<input type="text" class="ty2 inp_name" title="어드민 입력" name="mb_id" value="${dto.mb_id }">
+										</div>
+								</td>
+							</tr>
+							<tr>						
+								<th scope="row" class="req">관리자 비밀번호</th>
+								<td>
+									<div class="bx_textarea">
+										<input type="password" class="ty2 inp_name" title="어드민 비밀번호" name="mb_pw">
+										</div>
+								</td>
+							</tr>
+							</tbody>
+					</table>
+					<input type="submit" value="작성하기" class="btn_col2 ty6">
 								</form>
 								
 							</div></li>
@@ -97,7 +128,7 @@
 					</ul>
 				</div></li>
 				
-			<li><button type="button" class="tab_tit" style="width: 33.33%; left: 33.33%;" onclick="location.href='./hp/boardhp.jsp';">
+			<li><button type="button" class="tab_tit" style="width: 33.33%; left: 33.33%;" onclick="location.href='./HpLogin.hp';">
 					<span>1:1문의</span>
 				</button></li>
 			<li><button type="button" class="tab_tit" style="width: 33.33%; left: 66.67%;" onclick="location.href='./MyHpList.hp';">

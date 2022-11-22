@@ -10,6 +10,8 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
+import com.aim.member.db.MemberDTO;
+
 public class HpDAO {
 
 	private Connection con = null;
@@ -85,6 +87,8 @@ public class HpDAO {
 	   } 
 	// 고객센터 로그인 체크
 	
+
+		
 	// 문의 글 쓰기
 	public void HpBoard(HpDTO dto) {
 		int hp_bno = 0;
@@ -386,9 +390,9 @@ public class HpDAO {
 						
 						return result;
 					}
-		// 게시글 수정 - myhpupdate (DTO)
+		// 문의 글 수정 - myhpupdate (DTO)
 		
-		// 게시판 글 삭제 - MyHpDelete(bno,pass)
+		// 문의 글 삭제 - MyHpDelete(bno,pass)
 					public int deleteHp(int hp_bno,String hp_deletepw) {
 						int result = -1;
 						
@@ -438,6 +442,6 @@ public class HpDAO {
 						
 						return result;
 					}
-		// 게시판 글 삭제 - MyHpDelete (bno,pass)
+		// 문의 글 삭제 - MyHpDelete (bno,pass)
 					
 }

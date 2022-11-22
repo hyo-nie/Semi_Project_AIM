@@ -179,24 +179,23 @@
 	<jsp:include page="../inc/topbanner.jsp" />
 	<!-- 헤더/네비 -->
 	<jsp:include page="../inc/nav_bar.jsp" />
-
-
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
 	
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
 
 
 	<div id="PersonSeatContents"></div>

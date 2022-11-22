@@ -16,6 +16,9 @@
 	<jsp:include page="../inc/login_nav_bar.jsp" />
 	<!-- 사이드 퀵메뉴 -->
 	<jsp:include page="../inc/side_quick_menu.jsp" />
+	
+	
+	
 
 	<div id="contents" class="contents_customer area__movingbar litype5"
 		style="">
@@ -35,19 +38,6 @@
 						<li class="active">
 							<div class="tab_con ty3">
 								<h4 class="hidden">전체 공지</h4>
-								<fieldset class="search_wrap" id="search_wrap1">
-									<legend>전체 공지 검색하기</legend>
-									<select id="selectArea1" title="지역 선택" style="display: none;"></select>
-									<select id="selectCinema1" title="영화관 선택" style="display: none;"></select>
-									<select	class="ty3" title="검색조건 제목 선택" id="selectCondition1">
-									<option value="1" selected="">제목</option>
-										<option value="2">내용</option>
-										<option value="3">제목+내용</option>
-										</select>
-										<input type="text"placeholder="검색어를 입력해주세요." title="검색어를 입력해주세요"
-										id="searchKeyword1" style="width: 580px;">
-									<button type="button" class="btn_col2" id="btnSearch1">검색</button>
-								</fieldset>
 								<table class="tbl_list text_c" summary="공지사항에 대한 표입니다">
 									<caption>전체 공지사항 내용</caption>
 									<colgroup>
@@ -60,6 +50,7 @@
 										<tr>
 											<th scope="col">번호</th>
 											<th scope="col">구분</th>
+											<th scope="col">작성자</th>
 											<th scope="col">제목</th>
 											<th scope="col">등록일</th>
 										</tr>
@@ -68,7 +59,8 @@
 									<c:forEach var="dto" items="${NtListAll }">
 										<tr>
 											<td><strong class="ico_imp"> ${dto.nt_bno }</strong></td>
-											<td>${dto.nt_ }</td>
+											<td>${dto.nt_select }</td>
+											<td>${dto.mb_id }</td>
 											<td class="text_l">
 												<a href="./NtContent.nt?nt_bno=${dto.nt_bno }&pageNum=${pageNum}">${dto.nt_subject }</a>
 											</td>
@@ -99,7 +91,9 @@
 									<button type="button" class="btn_pg_next">다음 페이지로 이동</button>
 									<button type="button" class="btn_pg_last">마지막 페이지로 이동</button>
 									
-									<input type="button" value="공지사항 등록하기" onclick="location.href='./NtWriteForm.nt';">
+									<c:if test="${mb_id.equals('admin') }">
+										<input type="button" value="공지사항 올리기" class="btn_col2 ty6" onclick="location.href='./NtWriteForm.nt';">
+									</c:if>
 									
 								</div>
 							</div></li>
@@ -110,7 +104,7 @@
 					</ul>
 				</div></li>
 				</form>
-			<li><button type="button" class="tab_tit" style="width: 33.33%; left: 33.33%;" onclick="location.href='./hp/boardhp.jsp';">
+			<li><button type="button" class="tab_tit" style="width: 33.33%; left: 33.33%;" onclick="location.href='./HpLogin.hp';">
 					<span>1:1문의</span>
 				</button></li>
 			<li><button type="button" class="tab_tit" style="width: 33.33%; left: 66.67%;" onclick="location.href='./MyHpList.hp';">

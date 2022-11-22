@@ -54,6 +54,8 @@ public class NtDAO {
 		}
 	}
 	// 자원해제 메서드-closeDB()
+	
+	
 		
 	// 공지글 리스트 갯수 확인 - getNtCount()
 		
@@ -194,7 +196,7 @@ public class NtDAO {
 				con = getConnection();
 				
 				// 3. sql 작성(글번호 계산) & pstmt 객체
-				sql = "select max(Nt_bno) from notice_board";
+				sql = "select max(nt_bno) from notice_board";
 				
 				pstmt = con.prepareStatement(sql);
 				
@@ -209,20 +211,22 @@ public class NtDAO {
 				System.out.println(" DAO : 글번호 = "+nt_bno);
 				
 				// 3. sql 작성 & pstmt 객체
-				sql = "insert into notice_board(nt_bno,mb_id,nt_subject,"
+				sql = "insert into notice_board(nt_bno,mb_id,mb_pw,nt_select,nt_subject,"
 						+ "nt_content,nt_file,nt_date,nt_re_ref,nt_re_lev) "
-						+ "values(?,?,?,?,?,now(),?,?)";
+						+ "values(?,?,?,?,?,?,?,now(),?,?)";
 			
 				pstmt = con.prepareStatement(sql);
 				
 				// ???
 				pstmt.setInt(1, nt_bno);
 				pstmt.setString(2, dto.getMb_id());
-				pstmt.setString(3, dto.getNt_subject());
-				pstmt.setString(4, dto.getNt_content());
-				pstmt.setString(5, dto.getNt_file());
-				pstmt.setInt(6, 0);
-				pstmt.setInt(7, 0);
+				pstmt.setString(3, dto.getMb_pw());
+				pstmt.setInt(4, dto.getNt_select());
+				pstmt.setString(5, dto.getNt_subject());
+				pstmt.setString(6, dto.getNt_content());
+				pstmt.setString(7, dto.getNt_file());
+				pstmt.setInt(8, 0);
+				pstmt.setInt(9, 0);
 				
 				// 4. sql 실행
 				pstmt.executeUpdate();
@@ -265,6 +269,7 @@ public class NtDAO {
 					// DB정보(rs) -> dto 저장
 					dto.setNt_bno(rs.getInt("nt_bno"));
 					dto.setMb_id(rs.getString("mb_id"));
+					dto.setMb_pw(rs.getString("mb_pw"));
 					dto.setNt_subject(rs.getString("nt_subject"));
 					dto.setNt_content(rs.getString("nt_content"));
 					dto.setNt_file(rs.getString("nt_file"));
@@ -289,7 +294,85 @@ public class NtDAO {
 		
 		
 		// 공지 글 수정하기
-	
+		public int ntupdate(NtDTO dto) {
+			int result = -1;
+						
+				try {
+					// 1.2. 디비 연결
+					con = getConnection();
+					
+					// 3. sql 작성(select) & pstmt 객체
+					sql = "select mb_pw from notice_board where nt_bno=?";
+					pstmt = con.prepareStatement(sql);
+							
+					// ???
+					pstmt.setInt(1, dto.getNt_bno());
+							
+					// 4. sql 실행
+					rs = pstmt.executeQuery();
+							
+					// 5. 데이터 처리
+					if(rs.next()) {
+						if(dto.getMb_pw().equals(rs.getString("mb_pw"))) {
+							// 3. sql 작성(update) & pstmt 객체
+							sql = "update notice_board set nt_subject=?,nt_select=?,nt_content=? where nt_bno=?";
+							pstmt = con.prepareStatement(sql);
+									
+							//??? 
+							pstmt.setString(1, dto.getNt_subject());
+							pstmt.setInt(2, dto.getNt_select());
+							pstmt.setString(3, dto.getNt_content());
+							pstmt.setInt(4, dto.getNt_bno());
+							
+									
+							// 4. sql 실행
+							result = pstmt.executeUpdate();
+							
+							}else {
+									// 비밀번호 오류
+									result = 0;
+								}				
+							}else {
+								// 게시판글 없음
+								result = -1;
+							}
+							
+							System.out.println(" DAO : 게시판 정보 수정완료 ("+result+")");
+							
+						} catch (Exception e) {
+							e.printStackTrace();
+						} finally {
+							closeDB();
+						}
+						
+						return result;
+					}
 		// 공지 글 수정하기
+		
+		// 공지 사항 글 삭제하기
+		public void NtDelete(int nt_bno) {
+			
+			try {
+				con = getConnection();
+				sql = "delete from notice_board where nt_bno = ?";
+				
+				pstmt = con.prepareStatement(sql);
+				
+				pstmt.setInt(1, nt_bno);
+				
+				pstmt.executeUpdate();
+				
+				System.out.println(" DAO : 공지사항 삭제 완료");
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				closeDB();
+			}
+			
+		}
+		
+		// 공지 사항 글 삭제하기
+		
 	
 }

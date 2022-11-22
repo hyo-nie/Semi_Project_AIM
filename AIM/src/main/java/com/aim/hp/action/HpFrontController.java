@@ -39,41 +39,29 @@ public class HpFrontController extends HttpServlet {
     	Action action = null;
     	ActionForward forward = null;
     	
-    	// 로그인 여부 체크
-    	if(command.equals("/HpCheck.hp")){
-    		System.out.println(" C : /HpCheck.hp 실행");
-    		
-    		action = new HpCheckAction();
-    		try {
-				forward = action.execute(request, response);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-    	}
-    	
+    
     	
     	// 고객센터 로그인 여부 체크
-    	else if(command.equals("/HpAdmin.hp")) { 
-    		System.out.println(" C : /HpAdmin.hp 실행 ");
+//    	if(command.equals("/HpLogin.hp")) { 
+//    		System.out.println(" C : /HpLogin.hp 실행 ");
+//    		
+//    		action = new HpLoginAction();
+//    		
+//    		try {
+//				forward = action.execute(request, response);
+//			} catch (Exception e) {
+//				e.printStackTrace();
+//			}
+//    	}
+    	if(command.equals("/HpLogin.hp")) {
+    		System.out.println(" C : /HpLogin.hp 실행 ");
     		
     		forward = new ActionForward();
-    		forward.setPath("./hp/hploginForm.jsp");
+    		forward.setPath("./hp/boardhp.jsp");
     		forward.setRedirect(false);
-    		
     	}
-    	// 고객센터 로그인체크
-    	else if(command.equals("/HpLoginAction.hp")) {
-    		System.out.println(" C : HpLoginAction.hp 실행");
     		
-    		// HpLoginAction() 
-    		action = new HpLoginAction();
-    		
-    		try {
-				forward = action.execute(request, response);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-    	}
+    	
     	// 문의글 작성
     	else if(command.equals("/Write.hp")) {
     		System.out.println(" C : /Write.hp 실행");

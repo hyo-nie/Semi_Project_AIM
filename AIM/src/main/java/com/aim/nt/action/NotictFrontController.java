@@ -91,7 +91,7 @@ public class NotictFrontController extends HttpServlet {
     	}
     	
     	// 공지사항 글 수정
-    	else if(command.equals("//NtUpdatePro.nt")) {
+    	else if(command.equals("/NtUpdatePro.nt")) {
     		System.out.println(" C : /NtUpdatePro.nt 실행");
     		
     		action = new NtUpdateProAction();
@@ -104,7 +104,16 @@ public class NotictFrontController extends HttpServlet {
     	
     	
     	// 공지사항 글 삭제
-    	
+    	else if(command.equals("/NtDelete.nt")) {
+    		System.out.println(" C : /NtDelete.nt 실행 ");
+    		
+    		action = new NtDeleteAction();
+    		try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+    	}
     	
     
     	

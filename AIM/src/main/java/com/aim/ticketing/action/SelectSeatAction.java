@@ -32,13 +32,6 @@ public class SelectSeatAction implements Action {
 			seatList.add(seatComp.split(",")[i]);
 		}
 		
-		// 예매완료 좌석 1 출력용 (임시 값)
-		seatList.set(3, "1");
-		seatList.set(5, "1");
-		seatList.set(13, "1");
-		seatList.set(14, "1");
-		seatList.set(23, "1");
-		
 		// VIEW 페이지에 줄번호 출력용 배열
 		List<String> seatRow = new ArrayList<String>();
 		seatRow.add("A");

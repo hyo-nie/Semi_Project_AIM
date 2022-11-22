@@ -30,7 +30,7 @@
 		</div>
 		<ul class="tab_wrap outer actionmovingbar">
 			<li>
-				<button type="button" class="tab_tit" style="width: 33.33%; left: 0%;" onclick="">
+				<button type="button" class="tab_tit" style="width: 33.33%; left: 0%;" onclick="location.href='./NtList.nt';">
 					<span>공지 사항</span>
 				</button>
 			</li>

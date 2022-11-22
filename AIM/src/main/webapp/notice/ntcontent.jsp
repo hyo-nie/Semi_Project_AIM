@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +8,15 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<!-- 각종 요소 -->
+	<jsp:include page="../inc/include.jsp" />
+	<!-- 상위 배너 -->
+	<jsp:include page="../inc/topbanner.jsp"/>
+	<!-- 헤더/네비 -->
+	<jsp:include page="../inc/login_nav_bar.jsp" />
+	<!-- 사이드 퀵메뉴 -->
+	<jsp:include page="../inc/side_quick_menu.jsp" />
+	
 	<div id="contents" class="contents_customer area__movingbar litype5"
 		style="margin-top: 120px;">
 		<div class="title_top">
@@ -15,7 +25,7 @@
 		<ul class="tab_wrap outer actionmovingbar">
 			
 			<li class="active"><button type="button" class="tab_tit"
-					style="width: 33.33%; left: 0%;">
+					style="width: 33.33%; left: 0%;" onclick="location.href='./NtList.nt'">
 					<span>공지사항</span>
 				</button>
 				<div class="tab_con">
@@ -36,8 +46,9 @@
 									<tbody>
 										<tr class="tb_info">
 											<td>
-												<span class="tit">영화관</span><span class="cont">전체</span>
+												<span class="tit">구분</span><span class="cont">${dto.nt_select }</span>
 												<span class="tit">등록일</span><span class="cont">${dto.nt_date }</span>
+												<span class="tit">번호</span><soab class="cont">${requestScope.dto.nt_bno }
 											</tr>
 										<tr class="tb_content">
 											<td><div id="divNoticeContents">
@@ -54,18 +65,18 @@
 									 <input type="button" value="공지 사항 수정" class="btn_col2 ty6" 
 									 	onclick="location.href='./NtUpdate.nt?nt_bno=${dto.nt_bno}&pageNum=${pageNum }';" >
   	        						 <input type="button" value="공지 사항 삭제" class="btn_col2 ty6" 
-  	        						 	onclick="location.href= './MyHpDeleteCheck.hp?nt_bno=${dto.nt_bno}&pageNum=${param.pageNum }';">
+  	        						 	onclick="location.href= './NtDelete.nt?nt_bno=${dto.nt_bno}&pageNum=${pageNum }';">
 									 <a href="./MyHpList.hp" class="btn_col2 ty6">문의 목록</a>
 								</div>
 							</div></li>
 					</ul>
 				</div></li>
 			<li><button type="button" class="tab_tit"
-					style="width: 33.33%; left: 33.33%;">
+					style="width: 33.33%; left: 33.33%;" onclick="location.href='./HpLogin.hp';">
 					<span>1:1문의</span>
 				</button></li>
 			<li><button type="button" class="tab_tit"
-					style="width: 33.33%; left: 66.67%;">
+					style="width: 33.33%; left: 66.67%;" onclick="location.href='./MyHpList.hp';">
 					<span>문의 내용 목록</span>
 				</button></li>
 			
