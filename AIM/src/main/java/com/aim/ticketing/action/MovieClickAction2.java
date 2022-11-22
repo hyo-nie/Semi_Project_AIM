@@ -1,5 +1,6 @@
 package com.aim.ticketing.action;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -26,10 +27,29 @@ public class MovieClickAction2 implements Action {
 		List<ScheduleDTO> scheduleList = dao.getScheduleList(branchCd, movieCd, date);
 		List<MovieDTO> movieList = dao.getMovieList(scheduleList);
 		
+		// 남은 좌석수 계산 로직
+		List<String> seatArr = new ArrayList<String>();
+		for(int i = 0; i < scheduleList.size(); i++) {
+			seatArr.add(scheduleList.get(i).getSeatcomp());
+		}
+		
+		List<Integer> currentSeatArr = new ArrayList<Integer>(); 
+		for(int j = 0; j < seatArr.size(); j++) {
+			int currentSeat = 0;
+			for (int k = 0; k < 80; k++) {
+				if (seatArr.get(j).split(",")[k].equals("0")) {
+					currentSeat++;
+				}
+			}
+			currentSeatArr.add(currentSeat);
+		}
+		
+		
+		
 		// request에 저장
 		request.setAttribute("scheduleList", dao.getScheduleList(branchCd, movieCd, date));
 		request.setAttribute("movieList", movieList);
-		
+		request.setAttribute("currentSeatArr", currentSeatArr);
 		System.out.println("scheduleList : " + scheduleList);
 		System.out.println("movieList : " + movieList);
 		

@@ -62,8 +62,8 @@
 			
 			<div class="movie_detail_aside_menu type2">
 				<ul>
-					<li class="area_reserve" style="float:right;"><a
-						href="./Ticketing.tk?movieCd=${movie.movieCd}"
+					<li class="area_reserve" style="float:right;">
+					<a href="./Ticketing.tk?movieCd=${movie.movieCd}"
 						class="btn_col1 ty7 rnd">예매하기</a></li>
 				</ul>
 			</div>
@@ -78,37 +78,13 @@
 					<div class="movi_tab_info1">
 						<div class="left_con">
 							<strong class="tit_info">시놉시스</strong>
-							<div class="mCustomScrollbar _mCS_1 mCS-autoHide"
-								data-mcs-theme="minimal-dark"
-								style="position: relative; overflow: visible;">
-								<div id="mCSB_1"
-									class="mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside"
-									style="max-height: none;" tabindex="0">
-									<div id="mCSB_1_container" class="mCSB_container"
-										style="position: relative; top: 0; left: 0;" dir="ltr">
-										<p class="txt_info">
-											<span><b> “와칸다를 지켜라!”<br>거대한 두 세계의 충돌, 운명을 건
-													최후의 전투가 시작된다!
-											</b><br>
+								<p class="txt_info">
+									<span><b> “와칸다를 지켜라!”<br>거대한 두 세계의 충돌, 운명을 건 최후의 전투가 시작된다!</b><br>
 											<br>국왕이자 ‘블랙 팬서’인 '티찰라'의 죽음 이후 수많은 강대국으로부터 위협을 받게 된 '와칸다'.<br>
 											'라몬다', '슈리' 그리고 '나키아', '오코예, '음바쿠'는 각자 사명감을 갖고 '와칸다'를 지키기 위해 외로운 싸움을 이어간다.<br>
-											<br>한편, 비브라늄의 패권을 둘러싼 미스터리한 음모와 함께 깊은 해저에서 모습을 드러낸 최강의 적 '네이머'와 '탈로칸'의 전사들은<br>
+											한편, 비브라늄의 패권을 둘러싼 미스터리한 음모와 함께 깊은 해저에서 모습을 드러낸 최강의 적 '네이머'와 '탈로칸'의 전사들은<br>
 											'와칸다'를 향해 무차별 공격을 퍼붓기 시작하는데…</span>
-										</p>
-									</div>
-								</div>
-								<div id="mCSB_1_scrollbar_vertical"
-									class="mCSB_scrollTools mCSB_1_scrollbar mCS-minimal-dark mCSB_scrollTools_vertical"
-									style="display: block;">
-									<div class="mCSB_draggerContainer">
-										<div id="mCSB_1_dragger_vertical" class="mCSB_dragger"
-											style="position: absolute; min-height: 50px; display: block; height: 41px; max-height: 81px; top: 0px;">
-											<div class="mCSB_dragger_bar" style="line-height: 50px;"></div>
-										</div>
-										<div class="mCSB_draggerRail"></div>
-									</div>
-								</div>
-							</div>
+								</p>
 						</div>
 					</div>
 				</div>
@@ -137,7 +113,7 @@
 									<span class="byte_info"><strong class="byte">0</strong>/<em>220</em></span>
 								</div>
 	<!-- 							<button type="submit" id="btnComment" class="btn_submit">관람평 작성</button> -->
-								<input type="submit" id="btnComment" class="btn_submit" value="관람평 작성" style="width:139px; background:#18315D;'">
+								<input type="submit" id="btnComment" class="btn_submit" value="관람평 작성" style="width:139px; background:#18315D;">
 							</div>
 						</form>
 						

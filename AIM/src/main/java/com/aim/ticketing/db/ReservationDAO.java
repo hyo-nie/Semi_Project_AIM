@@ -234,6 +234,7 @@ public class ReservationDAO {
 				dto.setBranchCd(rs.getInt("branchCd"));
 				dto.setMovieCd(rs.getString("movieCd"));
 				dto.setRuncount(rs.getInt("runcount"));
+				dto.setSeatcomp(rs.getString("seatcomp"));
 				
 				scheduleList.add(dto);
 			}
@@ -498,7 +499,58 @@ public class ReservationDAO {
 	}
 	// makeTkCode() 
 	
+	/**
+	 * updateSeatcomp(seatcomp,scCode) - 좌석정보(String), 스케줄번호를 입력받아서 DB에 예매된 좌석 정보 업데이트
+	 */
+	public void updateSeatComp(String seatcomp, int scCode) {
+		try {
+			con = getConnection();
+			sql = "update schedule set seatcomp=? where scCode=?"; 
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, seatcomp);
+			pstmt.setInt(2, scCode);
+			
+			pstmt.executeUpdate();
+
+			System.out.println(" DAO : 예매 좌석 컬럼 수정 완료! ");
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			closeDB();
+		}
+	}
+	// updateSeatcomp(seatcomp,scCode)
 	
+	/**
+	 * insertReservation(scDTO, tkCode, totalPirce, cusCnt)
+	 */
+	public void insertReservation(ScheduleDTO scDTO, String tkCode, int totalPrice, int totalCnt, String id) {
+		
+		try {
+			con = getConnection();
+			sql = "insert into reservation (tkCode,movieCd,totalPrice,cusCnt,payment,mb_id,scCode) "
+					+ "values(?,?,?,?,?,?,?) ";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, tkCode);
+			pstmt.setString(2, scDTO.getMovieCd());
+			pstmt.setInt(3, totalPrice);
+			pstmt.setInt(4, totalCnt);
+			pstmt.setString(5, "card"); // 임시값, 일단 카드로 통일
+			pstmt.setString(6, id);
+			pstmt.setInt(7, scDTO.getScCode());
+			
+			pstmt.executeUpdate();
+			
+			System.out.println(" DAO : 영화 예매 정보 저장 성공! ");
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			closeDB();
+		}
+	}
+	// insertReservation
 	
 	
 	

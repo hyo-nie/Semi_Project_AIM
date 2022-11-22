@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.aim.movie.db.MovieDTO;
 import com.aim.schedule.db.ScheduleDTO;
@@ -18,6 +19,8 @@ public class TicketingAction implements Action {
 		System.out.println(" M : TicketingAction.execute() 호출 ");
 		
 		// 영화 선택 정보 (나중에 구현)
+		
+		// 세션 생성
 		
 		// ReservationDAO - getTheaterList();
 		// 전체 극장 정보 조회 메서드 (List<TheaterDTO> 리턴)

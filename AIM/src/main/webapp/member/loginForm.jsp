@@ -46,6 +46,7 @@
 								<div>
 									<input type="hidden" name="movieCd" value="${param.movieCd }">
 									<input type="hidden" name="url" value="${param.url }">
+									<input type="hidden" name="ticketing" value="${param.ticketing }">
 									<input type="text" id="userId" maxlength="50"
 										placeholder="아이디 또는 이메일을 입력해 주세요." title="입력태그" name="mb_id"><input
 										type="password" id="userPassword" maxlength="15"

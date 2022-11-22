@@ -41,7 +41,6 @@
 	    		</div>
 	    	</span>
 	    </strong>
-	    	<!-- 여기에 store_main_popcorn 이미지를 넣을까 생각만 해봄.... -->     
   	</div>
   	
   	
@@ -123,8 +122,7 @@
 			          <li class=" ">
 							<a href="./GiftcardDetail.st?st_num=${giftlist.st_num }" class="btn_category_product">              
 							<span class="best_product_img_wrap">
-								<img src="./assets/img/콤보.PNG" alt="${giftlist.st_img }"></span>  
-								<!-- 콤보.PNG 이미지는 임시로 넣음! 추후 ${giftlist.st_img}로 변경 예정! --> 
+								<img src="./upload/${giftlist.st_img }" alt="${giftlist.st_img }"></span>  
 								           
 							<span class="best_product_text_wrap">                 
 								<span class="best_product_text_title">${giftlist.st_name }</span>                  
@@ -158,8 +156,7 @@
 			          <li class=" ">
 							<a href="./PopcornDetail.st?st_num=${poplist.st_num }" class="btn_category_product">              
 							<span class="best_product_img_wrap">
-								<img src="./assets/img/콤보.PNG" width="300" alt="${poplist.st_img }"></span>     
-								<!-- 콤보.PNG 이미지는 임시로 넣음! 추후 ${poplist.st_img}로 변경 예정! -->         
+								<img src="./upload/${poplist.st_img }" width="300" alt="${poplist.st_img }"></span>     
 	
 							<span class="best_product_text_wrap">                 
 								<span class="best_product_text_title">${poplist.st_name }</span>                  

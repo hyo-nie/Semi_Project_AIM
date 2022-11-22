@@ -6,6 +6,34 @@
 <head>
 <meta charset="UTF-8">
 <title>현재상영작</title>
+<<<<<<< HEAD
+<jsp:include page="../inc/include.jsp" />
+<script type="text/javascript">
+	$(document).ready(function(){
+			if ($('#orderFlag_sy').val() == "bookRating") {
+				$('#2n').css({
+				'color':'black',
+				});
+			} else if ($('#orderFlag_sy').val() == "openDt") {
+				$('#3n').css({
+					'color':'black',
+					});
+			} else {
+				$('#1n').css({
+					'color':'black',
+					});
+			}
+	});
+
+	
+</script>
+
+<style type="text/css">
+
+.movie_screen_box .button {font-size:14px; color: maroon;}
+.movie_screen_box .button1 {font-size:14px; color: #666;}
+</style>
+=======
 
 <!-- 각종 요소 -->
 <jsp:include page="../inc/include.jsp" />
@@ -35,8 +63,15 @@ $(document).ready(function() {
 });
 </script>
 
+>>>>>>> branch 'master' of https://github.com/hyo-nie/AIMAIM.git
 </head>
 <body>
+<<<<<<< HEAD
+	<!-- 상위 배너 -->
+	<jsp:include page="../inc/topbanner.jsp" />
+	<!-- 헤더/네비 -->
+	<jsp:include page="../inc/nav_bar.jsp" />
+=======
 
 <!-- 주석 부분 헤드로 옮김 -->
 <%-- 	<jsp:include page="../inc/include.jsp" /> --%>
@@ -100,6 +135,7 @@ $(document).ready(function() {
 	</div>
 <!-- 영화 홈 배너 -->
 
+>>>>>>> branch 'master' of https://github.com/hyo-nie/AIMAIM.git
 	<br><br><br><br>
 	<div id="contents" class="contents_movie_list">
 	<br><br><br><br><br><br><br><br><br>
@@ -108,10 +144,11 @@ $(document).ready(function() {
 			<ul class="tab_btn_type1">
 				<li class="active"><button type="button"><span>현재 상영작</span></button></li>
 			</ul>
-			<ul class="list_lnk" id="movietype1">
-        <li><a href="./MovieList.mv?orderFlag=boxrank" role="button">인기순</a></li>
-        <li><a href="./MovieList.mv?orderFlag=bookRating" role="button">예매순</a></li>
-        <li><a href="./MovieList.mv?orderFlag=openDt" role="button">개봉일순</a></li>
+				<input type="hidden" value="${param.orderFlag }" id="orderFlag_sy">
+			<ul class="list_lnk" id="movietype1_sy">
+		        <li id="btncl"><a id="1n" href="./MovieList.mv?orderFlag=boxrank" class="button1">인기순</a></li>
+		        <li id="btncl"><a id="2n" href="./MovieList.mv?orderFlag=bookRating" class="button1" >예매순</a></li>
+		        <li id="btncl"><a id="3n" href="./MovieList.mv?orderFlag=openDt" class="button1">개봉일순</a></li>
 			</ul>
 			
 			<ul class="movie_list type2">
@@ -156,7 +193,8 @@ $(document).ready(function() {
 						<strong class="tit_info">${movie.movieNm }</strong>
 						<span class="sub_info1">
 							<span class="rate_info"><em>예매율 ${movie.bookRating }%</em></span><br>
-							<button style="color:#fff; background:#18315D; width:75px; height:25px; margin:5px; border-radius:5px;">예매</button>
+							<button onclick="location.href='./Ticketing.tk?movieCd=${movie.movieCd}';" style="color:#fff; background:#18315D; width:75px; height:25px; margin:5px; border-radius:5px;">예매</button>
+							<br>
 						</span>
 					</div>
 				</li>
