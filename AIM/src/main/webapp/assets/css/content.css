@@ -163,9 +163,9 @@ ver : 1.01 20191219 2502 line > íŒì—…ë©”ë‰´ ê³ ì •ë†�
 .contents_main .main_cont_wrap.notice .sec_tit {display:inline-block; margin:0; font-size:13px; vertical-align:middle;}
 .contents_main .main_cont_wrap.notice .sec_tit:after {content:''; display:inline-block; width:1px; height:13px; background:#707070; margin:0 20px; vertical-align:middle;}
 .contents_main .main_cont_wrap.notice .rolling_menu_wrap {position:relative; display:inline-block; width:840px; height:15px; overflow:hidden; vertical-align:middle;}
-.contents_main .main_cont_wrap.notice .rolling_menu_wrap .rolling_menu {position:absolute; left:0;}
-.contents_main .main_cont_wrap.notice .rolling_menu_wrap .rolling_menu>li {height:15px; line-height:15px;}
-.contents_main .main_cont_wrap.notice .rolling_menu_wrap .rolling_menu>li>a {font-size:13px; line-height:15px;}
+.contents_main .main_cont_wrap.notice .rolling_menu_wrap .rollings {position:absolute; left:0;}
+.contents_main .main_cont_wrap.notice .rolling_menu_wrap .rollings>li {height:15px; line-height:15px;}
+.contents_main .main_cont_wrap.notice .rolling_menu_wrap .rollings>li>a {font-size:13px; line-height:15px;}
 .contents_main + .banner_wrap {padding-top:30px;}
 
 
