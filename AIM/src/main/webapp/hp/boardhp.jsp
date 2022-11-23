@@ -8,7 +8,46 @@
 <title> AIM (All In Movie!) - 고객센터 </title>
 
 <script type="text/javascript">
-	
+	function hpCheck(){
+		if(document.hp.hp_select.value=""){
+			alert('분류 탭을 체크해주세요');
+			document.hp.hp_select.focus();
+			return false;
+		}
+		if(document.hp.hp_class[0].checked==false && document.hp.hp_class[1].checked==false){
+			alert('문의 종류 탭을 체크해주세요');
+			document.hp.hp_class.focus();
+			return false;
+		}
+		if(document.hp.hp_subject.value=""){
+			alert('문의 제목을 작성해주세요');
+			document.hp.hp_subject.focus();
+			return false;
+		}
+		if(document.hp.hp_content.value=""){
+			alert('문의 내용을 작성 해주세요');
+			document.hp.hp_content.focus();
+			return false;
+		}
+		
+		if(document.hp.mb_id.value=""){
+			alert('id를 입력 해주세요');
+			document.hp.mb_id.focus();
+			return false;
+		}
+		
+		if(document.hp.mb_pw.value=""){
+			alert('비밀번호를 입력 해주세요');
+			document.hp.mb_pw.focus();
+			return false;
+		}
+		if(document.hp.hp_agree[0].checked==false && document.hp.hp_agree[1].checked==false){
+			alert('정보 동의 체크해주세요');
+			document.hp.hp_agree.focus();
+			return false;
+		}
+		
+	}
 
 </script>
 
@@ -58,7 +97,7 @@
 							<span class="txt_req">필수입력</span>
 						</div>
 					</div>
-				<form action="./Write.hp" method="post" enctype="multipart/form-data">
+				<form action="./Write.hp" method="post" enctype="multipart/form-data" name="hp" onsubmit="return hpCheck()">
 					<table class="tbl_form" summary="문의내용작성 테이블">
 						<caption>문의 내용을 작성해주세요</caption>
 						<colgroup>
@@ -72,13 +111,13 @@
 								<td>
 									<select title="문의내용 분류선택" name="hp_select">
 										<option	value="0">분류 선택</option>
-										<option value="600">영화관</option>
-										<option value="700">영화</option>
-										<option value="800">멤버십</option>
-										<option value="900">예매/결제</option>
-										<option value="1000">이벤트</option>
-										<option value="1100">홈페이지/모바일</option>
-										<option value="1200">개인정보</option>
+										<option value="1">영화관</option>
+										<option value="2">영화</option>
+										<option value="3">멤버십</option>
+										<option value="4">예매/결제</option>
+										<option value="5">이벤트</option>
+										<option value="6">홈페이지/모바일</option>
+										<option value="7">개인정보</option>
 									</select>
 								</td>
 							</tr>
@@ -86,9 +125,9 @@
 							<tr>
 								<th scope="row" class="req" name="hp_class">종류</th>
 								<td>
-									<input type="radio" name="rdo00" id="radio01" class="aNoneSelect" checked>
+									<input type="radio" name="hp_class" id="radio01" class="aNoneSelect" checked>
 										<label for="radio01">영화 관련 문의</label>
-									<input type="radio" name="rdo00" id="radio02">
+									<input type="radio" name="hp_class" id="radio02">
 										<label for="radio02">기타 문의</label>
 								</td>
 							</tr>
@@ -108,7 +147,6 @@
 								<td>
 									<div class="bx_textarea">
 										<textarea class="ty2" cols="10" rows="10" name="hp_content" 
-										title="문의내용을 입력해주세요" 
 										placeholder="내용 및 첨부파일에 개인정보(카드번호, 계좌번호, 주민번호)가 포함되지 않도록 유의하여 입력해주세요.">
 										</textarea>
 										<span class="txt_count"><em id="strongContentsCount">0</em>/한글<em> 2,000</em>자</span>
@@ -153,7 +191,7 @@
 							<tr>
 								<th scope="row" class="req">비밀번호</th>
 								<td>
-									<input type="password" class="ty2 inp_id" title="삭제용 비밀번호"	name="hp_deletepw" value=""> 
+									<input type="password" class="ty2 inp_id" title="삭제용 비밀번호"	name="mb_pw" value=""> 
 									<span class="txt_caution1 fl_r with_inp">사용되는 비밀번호는 수정 및 삭제에 이용되므로 필수로 작성해주시기 바랍니다.</span></td>
 							</tr>
 						</tbody>
@@ -178,15 +216,19 @@
 								※ 1:1문의 서비스 제공을 위한 최소한의 개인정보이며 거부할 수 있습니다. 다만, 수집에 동의하지 않을 경우 서비스 이용이 제한됩니다
 						</div>
 						<div class="bx_inp">
-							<input type="radio" name="rdo01" id="radio10" class="iDrdoAgreeY"><label for="radio10">동의 </label>
-								<input type="radio" name="rdo01" id="radio11" checked=""><label for="radio11">동의하지않음</label>
+							<input type="radio" name="hp_agree" id="radio10" checked="">
+								<label for="radio10">동의 </label>
+							<input type="radio" name="hp_agree" id="radio11">
+								<label for="radio11">동의하지않음</label>
 						</div>
 						
+					<div class="submit">
 						<div class="btn_btm_wrap">
 							<input type="button" class="btn_col3 ty6" value="취소하기" onclick="location.href='./Main.aim';">
 							<input type="submit" class="btn_col2 ty6" value="문의하기" >
 							
 						</div>
+					</div>
 						</form>
 					</div>
 				</div></li>

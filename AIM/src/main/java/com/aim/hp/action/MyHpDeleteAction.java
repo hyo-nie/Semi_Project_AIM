@@ -7,8 +7,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.aim.hp.db.HpDAO;
-import com.aim.nt.action.Action;
-import com.aim.nt.action.ActionForward;
+import com.aim.hp.action.Action;
+import com.aim.hp.action.ActionForward;
 
 public class MyHpDeleteAction implements Action {
 
@@ -18,10 +18,10 @@ public class MyHpDeleteAction implements Action {
 
 		// 세션 제어
 		HttpSession session = request.getSession();
-		String id = (String)session.getAttribute("mb_id");
+		String mb_id = (String)session.getAttribute("mb_id");
 				
 			ActionForward forward = new ActionForward();
-				if(id == null) {
+				if(mb_id == null) {
 					forward.setPath("./Login.aim");
 					forward.setRedirect(true);
 					return forward;
@@ -29,14 +29,14 @@ public class MyHpDeleteAction implements Action {
 		
 		// 전달된 파라미터 (bno,pass,  pageNum)
 		int hp_bno = Integer.parseInt(request.getParameter("hp_bno"));
-		String hp_deletepw = request.getParameter("hp_deletepw");
+		String mb_pw = request.getParameter("mb_pw");
 		
 		String pageNum = request.getParameter("pageNum");
 		
 		// HpDAO 객체 - 글삭제 메서드 
 		HpDAO dao = new HpDAO();
 		
-		int result = dao.deleteHp(hp_bno, hp_deletepw);
+		int result = dao.deleteHp(hp_bno, mb_pw);
 		
 		// 결과에 따른 페이지 이동(JS)
 		response.setContentType("text/html; charset=UTF-8");

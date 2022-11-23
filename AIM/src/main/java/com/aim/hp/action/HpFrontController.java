@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.aim.nt.action.Action;
-import com.aim.nt.action.ActionForward;
+import com.aim.hp.action.Action;
+import com.aim.hp.action.ActionForward;
 
 @WebServlet("*.hp")
 public class HpFrontController extends HttpServlet {
@@ -42,24 +42,24 @@ public class HpFrontController extends HttpServlet {
     
     	
     	// 고객센터 로그인 여부 체크
-//    	if(command.equals("/HpLogin.hp")) { 
-//    		System.out.println(" C : /HpLogin.hp 실행 ");
-//    		
-//    		action = new HpLoginAction();
-//    		
-//    		try {
-//				forward = action.execute(request, response);
-//			} catch (Exception e) {
-//				e.printStackTrace();
-//			}
-//    	}
-    	if(command.equals("/HpLogin.hp")) {
+    	if(command.equals("/HpLogin.hp")) { 
     		System.out.println(" C : /HpLogin.hp 실행 ");
     		
-    		forward = new ActionForward();
-    		forward.setPath("./hp/boardhp.jsp");
-    		forward.setRedirect(false);
+    		action = new HpLoginAction();
+    		
+    		try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
     	}
+//    	if(command.equals("/HpLogin.hp")) {
+//    		System.out.println(" C : /HpLogin.hp 실행 ");
+//    		
+//    		forward = new ActionForward();
+//    		forward.setPath("./hp/boardhp.jsp");
+//    		forward.setRedirect(false);
+//    	}
     		
     	
     	// 문의글 작성
@@ -146,6 +146,28 @@ public class HpFrontController extends HttpServlet {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+    	}
+    	// 문의 답글 작성페이지
+    	else if(command.equals("/HpReWriteForm.hp")) {
+    		System.out.println(" C : HpReWrtieForm.hp 실행");
+    		
+    		forward = new ActionForward();
+    		forward.setPath("./hp/rewriteForm.jsp");
+    		forward.setRedirect(false);
+    	}
+    		
+    	
+    	// 문의 답글 달기
+    	else if(command.equals("/HpReWrite.hp")) {
+    		System.out.println(" C : HpReWrite.hp 실행");
+    		 
+    		action = new HpReWriteAction();
+    		try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+    		
     	}
     	
     	

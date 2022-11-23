@@ -241,7 +241,17 @@ public class MemberFrontController extends HttpServlet {
     	} // AdminPage.aim 끝
     	
     		
+    	else if(command.equals("/MyPage.aim")) {
+    		System.out.println(" C : /MyPage.aim 호출");
     		
+    		action = new MyPageAction();
+    		try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+    		
+    	}	
     	
     	
 

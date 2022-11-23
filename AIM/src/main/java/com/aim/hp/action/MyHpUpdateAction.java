@@ -6,8 +6,8 @@ import javax.servlet.http.HttpSession;
 
 import com.aim.hp.db.HpDAO;
 import com.aim.hp.db.HpDTO;
-import com.aim.nt.action.Action;
-import com.aim.nt.action.ActionForward;
+import com.aim.hp.action.Action;
+import com.aim.hp.action.ActionForward;
 
 public class MyHpUpdateAction implements Action {
 
@@ -17,10 +17,10 @@ public class MyHpUpdateAction implements Action {
 		
 		// 세션제어
 		HttpSession session = request.getSession();
-		String id = (String)session.getAttribute("mb_id");
+		String mb_id = (String)session.getAttribute("mb_id");
 				
 			ActionForward forward = new ActionForward();
-				if(id == null) {
+				if(mb_id == null) {
 					forward.setPath("./Login.aim");
 					forward.setRedirect(true);
 					return forward;

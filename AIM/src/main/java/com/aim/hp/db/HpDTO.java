@@ -5,7 +5,7 @@ import java.sql.Date;
 public class HpDTO {
 	private int hp_bno; // 문의 번호
 	private String mb_id; // 문의자 id
-	private String hp_deletepw; // 삭제시 필요한 pw
+	private String mb_pw; // 삭제시 필요한 pw
 	private String hp_subject; // 문의 제목
 	private String hp_content; // 문의 내용
 	private String hp_file; // 첨부파일
@@ -15,7 +15,6 @@ public class HpDTO {
 	private int hp_re_ref; // 참조 번호 (글 그룹 나눔)
 	private int hp_re_lev; // 참조 레벨 ( 답글 달시 이용)	
 	private int hp_re_seq; // 답글 순서 표시
-
 	public int getHp_bno() {
 		return hp_bno;
 	}
@@ -28,11 +27,11 @@ public class HpDTO {
 	public void setMb_id(String mb_id) {
 		this.mb_id = mb_id;
 	}
-	public String getHp_deletepw() {
-		return hp_deletepw;
+	public String getMb_pw() {
+		return mb_pw;
 	}
-	public void setHp_deletepw(String hp_deletepw) {
-		this.hp_deletepw = hp_deletepw;
+	public void setMb_pw(String mb_pw) {
+		this.mb_pw = mb_pw;
 	}
 	public String getHp_subject() {
 		return hp_subject;
@@ -91,12 +90,11 @@ public class HpDTO {
 	
 	@Override
 	public String toString() {
-		return "HpDTO [hp_bno=" + hp_bno + ", mb_id=" + mb_id + ", hp_deletepw=" + hp_deletepw + ", hp_subject="
-				+ hp_subject + ", hp_content=" + hp_content + ", hp_file=" + hp_file + ", hp_date=" + hp_date
-				+ ", hp_select=" + hp_select + ", hp_class=" + hp_class + ", hp_re_ref=" + hp_re_ref + ", hp_re_lev="
-				+ hp_re_lev + ", hp_re_seq=" + hp_re_seq + "]";
+		return "HpDTO [hp_bno=" + hp_bno + ", mb_id=" + mb_id + ", mb_pw=" + mb_pw + ", hp_subject=" + hp_subject
+				+ ", hp_content=" + hp_content + ", hp_file=" + hp_file + ", hp_date=" + hp_date + ", hp_select="
+				+ hp_select + ", hp_class=" + hp_class + ", hp_re_ref=" + hp_re_ref + ", hp_re_lev=" + hp_re_lev
+				+ ", hp_re_seq=" + hp_re_seq + "]";
 	}
-	
-	
 
+	
 }

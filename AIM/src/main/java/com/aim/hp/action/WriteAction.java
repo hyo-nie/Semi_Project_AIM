@@ -6,8 +6,8 @@ import javax.servlet.http.HttpSession;
 
 import com.aim.hp.db.HpDAO;
 import com.aim.hp.db.HpDTO;
-import com.aim.nt.action.Action;
-import com.aim.nt.action.ActionForward;
+import com.aim.hp.action.Action;
+import com.aim.hp.action.ActionForward;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
@@ -51,7 +51,7 @@ public class WriteAction implements Action {
 		HpDTO dto = new HpDTO();
 		
 		dto.setMb_id(multi.getParameter("mb_id"));
-		dto.setHp_deletepw(multi.getParameter("hp_deletepw"));
+		dto.setMb_pw(multi.getParameter("mb_pw"));
 		dto.setHp_subject(multi.getParameter("hp_subject"));
 		dto.setHp_content(multi.getParameter("hp_content"));
 		dto.setHp_file(multi.getFilesystemName("hp_file"));

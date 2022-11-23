@@ -62,11 +62,13 @@
 									</tbody>
 								</table>
 								<div class="btn_btm_wrap">
+									<c:if test="${mb_id.equals('admin') }">
 									 <input type="button" value="공지 사항 수정" class="btn_col2 ty6" 
 									 	onclick="location.href='./NtUpdate.nt?nt_bno=${dto.nt_bno}&pageNum=${pageNum }';" >
   	        						 <input type="button" value="공지 사항 삭제" class="btn_col2 ty6" 
   	        						 	onclick="location.href= './NtDelete.nt?nt_bno=${dto.nt_bno}&pageNum=${pageNum }';">
 									 <a href="./MyHpList.hp" class="btn_col2 ty6">문의 목록</a>
+									 </c:if>
 								</div>
 							</div></li>
 					</ul>

@@ -24,7 +24,7 @@
 		</div>
 		<ul class="tab_wrap outer actionmovingbar">
 			<li>
-				<button type="button" class="tab_tit" style="width: 33.33%; left: 0%;" onclick="location.href='./NtList.nt'';">
+				<button type="button" class="tab_tit" style="width: 33.33%; left: 0%;" onclick="location.href='./NtList.nt';">
 					<span>공지 사항</span>
 				</button>
 			</li>
@@ -55,6 +55,34 @@
 										<tr class="tb_info">
 											<td>
 													<span class="tit">${dto.hp_class }</span>
+													
+<%-- 													<c:choose> --%>
+<%-- 															<c:when test="${dto.hp_class ==0 }"> --%>
+<%-- 																<c:set var="hp_class" value="분류 선택"/> --%>
+<%-- 															</c:when> --%>
+<%-- 															<c:when test="${dto.hp_class ==1 }"> --%>
+<%-- 																<c:set var="hp_class" value="영화관"/> --%>
+<%-- 															</c:when> --%>
+<%-- 															<c:when test="${dto.hp_class ==2 }"> --%>
+<%-- 																<c:set var="hp_class" value="영화"/> --%>
+<%-- 															</c:when> --%>
+<%-- 															<c:when test="${dto.hp_class ==3 }"> --%>
+<%-- 																<c:set var="hp_class" value="멤버십"/> --%>
+<%-- 															</c:when> --%>
+<%-- 															<c:when test="${dto.hp_class ==4 }"> --%>
+<%-- 																<c:set var="hp_class" value="예매/결제"/> --%>
+<%-- 															</c:when> --%>
+<%-- 															<c:when test="${dto.hp_class ==5 }"> --%>
+<%-- 																<c:set var="hp_class" value="이벤트"/> --%>
+<%-- 															</c:when> --%>
+<%-- 															<c:when test="${dto.hp_class ==6 }"> --%>
+<%-- 																<c:set var="hp_class" value="홈페이지/모바일"/> --%>
+<%-- 															</c:when> --%>
+<%-- 															<c:when test="${dto.hp_class ==0 }"> --%>
+<%-- 																<c:set var="hp_class" value="개인정보"/> --%>
+<%-- 															</c:when> --%>
+<%-- 													</c:choose> --%>
+
 													<span class="cont">${dto.hp_select }</span>
 													<span class="tit">등록일</span>
 													<span class="cont">${dto.hp_date }</span>
@@ -103,7 +131,12 @@
 									 	onclick="location.href='./MyHpUpdate.hp?hp_bno=${dto.hp_bno}&pageNum=${pageNum }';" >
   	        						 <input type="button" value="문의 내용 삭제" class="btn_col2 ty6" 
   	        						 	onclick="location.href= './MyHpDeleteCheck.hp?hp_bno=${dto.hp_bno}&pageNum=${param.pageNum }';">
+  	        						<c:if test="${mb_id.equals('admin') }">
+  	        						 <input type="button" value="문의 답글 달기" class="btn_col2 ty6" 
+  	        						 	onclick=" location.href='./HpReWriteForm.hp?hp_bno=${dto.hp_bno}&pageNum=${pageNum }&hp_re_ref=${dto.hp_re_ref }&hp_re_seq=${dto.hp_re_seq}&hp_re_lev=${dto.hp_re_lev }'; ">
+  	        						</c:if>
 									 <a href="./MyHpList.hp" class="btn_col2 ty6">문의 목록</a>
+									 
 								</div>
 							</div></li>
 					</ul>
