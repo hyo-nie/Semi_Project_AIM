@@ -139,6 +139,80 @@ public class TheaterFrontController extends HttpServlet {
 				e.printStackTrace();
 			}
 		}
+		else if(command.equals("/RentalWrite.th")) {
+			System.out.println("/RentalWrite.th 호출, 패턴3");
+			
+			action = new RentalWrite();
+			
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
+		else if(command.equals("/RentalAddAction.th")) {
+			System.out.println("/RentalAddAction.th 호출, 패턴 2");
+			
+			action = new RentalAddAction();
+			
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}else if(command.equals("/AdminRentalList.th")) {
+			System.out.println("/AdminRentalList.th 호출, 패턴3");
+			
+			//AdminRentalList 객체 생성
+			action = new AdminRentalListAction();
+			
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		else if(command.equals("/AdminRentalContent.th")) {
+			System.out.println("/AdminRentalContent.th 호출, 패턴3");
+			
+			action = new AdminRentalContentAction();
+			
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		else if(command.equals("/AdminRentalReWrite.th")) {
+			System.out.println("/AdminRentalReWrite.th 호출, 패턴3");
+			
+			action = new AdminRentalReWrite();
+			
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		else if(command.equals("/AdminRentalReWriteAction.th")) {
+			System.out.println("/AdminRentalReWriteAction.th 호출, 패턴2");
+			
+			action = new AdminRentalRewriteAction();
+			
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
 		
 		System.out.println(" C : 2. 가상주소 매핑(패턴1,2,3) 끝 \n");
 

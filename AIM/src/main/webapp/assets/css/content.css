@@ -4951,6 +4951,16 @@ select.ty5 ~ select.ty5 {margin-left:5px;}
 .maps2 {
 	opacity: 0;
 }
+.public1 {
+	opacity: 1;
+	background: white;
+	border-radius: 0px 0px 20px 20px;
+}
+
+.public2 {
+	opacity: 0;
+}
+
 
 .maphide {
 	width: 68px;
@@ -4972,3 +4982,4 @@ line-height: 19px;
     color: #414141;
     background: url("https://www.lottecinema.co.kr/NLCHS/Content/images/icon/location_pointer.png") no-repeat 0 0;
 }
+

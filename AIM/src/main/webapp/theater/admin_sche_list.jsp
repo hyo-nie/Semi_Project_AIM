@@ -14,6 +14,15 @@
 <jsp:include page="../inc/topbanner.jsp"/>
 <!-- 헤더/네비 -->
 <jsp:include page="../inc/nav_bar.jsp"/>
+
+<%
+	//로그인 제어
+	String mb_id = (String)session.getAttribute("mb_id");
+	if(mb_id==null || !mb_id.equals("admin")){
+		response.sendRedirect("./Main.aim");
+		System.out.println("비정상적 접근 발생! IP : "+request.getRemoteAddr());
+	}
+	%>
 	
 <br><br><br><br><br><br><br><br><br>			
 <!-- 게시판 -->

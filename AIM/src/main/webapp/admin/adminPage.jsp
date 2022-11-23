@@ -76,7 +76,9 @@
 	<a href="./AdminScheAdd.th">스케줄 등록하기</a><br><br>
 	<a href="./AdminScheList.th">관리자 스케줄 리스트</a>
 	
-	
+		<br><br><br>
+	<h2>대관문의 리스트</h2><br>
+	<a href="./AdminRentalList.th">관리자 대관문의 리스트</a>
 <!-- 페이지 좌우 여백 -->
 		</div>
 </div>

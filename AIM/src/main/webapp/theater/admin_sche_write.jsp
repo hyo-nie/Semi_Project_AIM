@@ -74,7 +74,10 @@
 		<tr>
 			<td>날짜</td>
 			<td>
-				<input type="text" name="sc_date">
+<!-- 				<input type="text" name="sc_date"> -->
+				<input type="date"
+			         name="sc_date"
+			         value="${today }">
 			</td>
 	    </tr>
 		<tr>
