@@ -124,7 +124,7 @@
         		<label for="checkbox886182"></label> 
         		   
         		<a href="" class="product_info_img">        
-        			<img src="./upload/${prdt.st_img }" alt="${prdt.st_name }">        
+        			<img src="./assets/img/${prdt.st_img }" alt="${prdt.st_name }">        
         			<strong class="product_info_name">${prdt.st_name }</strong>        
         			<span class="product_info_origin" id="spanOriginName886182" >${prdt.st_text }    
         			</span>    

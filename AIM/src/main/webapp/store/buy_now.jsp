@@ -125,7 +125,7 @@ ${userInfo }
             
             <li>
                 <div class="product_info_img">
-                    <img src="./upload/${prdtInfo.st_img }" alt="${prdtInfo.st_name }">
+                    <img src="./assets/img/${prdtInfo.st_img }" alt="${prdtInfo.st_name }">
                     <strong class="product_info_name">
                         ${prdtInfo.st_name }
                      </strong> 

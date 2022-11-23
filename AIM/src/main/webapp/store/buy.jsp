@@ -128,7 +128,7 @@ function requestPay(user_tel) {
 				<c:set var="prdt" value="${productList[i]}" />
 	            <li style="padding-left: 5px;">
 	                <div class="product_info_img" style= "width: 280px;">
-	                    <img src="./upload/${prdt.st_img }" alt="${prdt.st_name}" style= "margin-right: 0px;">
+	                    <img src="./assets/img/${prdt.st_img }" alt="${prdt.st_name}" style= "margin-right: 0px;">
 	                    <strong class="product_info_origin">
 	                        ${prdt.st_name }
 	                     </strong> 

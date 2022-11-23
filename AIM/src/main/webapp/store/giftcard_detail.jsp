@@ -127,7 +127,7 @@ ${dto }
 		<div class="category_product_detail_contents">        
 	 	<div class="category_product_detail_contents_img_wrap">
 	              <ul class="bxslider">
-	              <li><img src="./upload/${dto.st_img }" alt="${dto.st_name }"></li> 	
+	              <li><img src="./assets/img/${dto.st_img }" alt="${dto.st_name }"></li> 	
 	              <!-- src="${dto.st_name }" 로 바꿀 예정 -->               
 	               </ul>
 	           		</div>           
