@@ -47,6 +47,8 @@
 				<a class="tit_info" href="./AdminMovieInsert.mv">API로 영화 정보 저장</a>
 				<a class="tit_info" href="./AdminMovieList.mv">등록 영화 LIST</a>
 				<a class="tit_info" href="./AdminMovieInsert2.mv">추천영화 정보 저장</a>
+				<a class="tit_info" href="./AdminStoreAdd.ad">스토어 상품 등록</a>
+				<a class="tit_info" href="./AdminStoreList.ad">스토어 등록 상품 LIST</a>
 			</div>
 		</li>
 	</ul>
