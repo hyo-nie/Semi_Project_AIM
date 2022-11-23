@@ -779,6 +779,16 @@ ver : 1.01 20191219 2502 line > íŒì—…ë©”ë‰´ ê³ ì •ë†�
 #contents.contents_event_theater > .title_top.ty2 + .tab_wrap.outer {margin-top:32px;}
 
 
+/* ADMINPAGE */
+/* ì´ë²¤íŠ¸/í™ˆ ========================================================================================= */
+#contents.contents_admin_home > .title_top {padding-top:0;}
+#contents.contents_admin_home .banner_event_btm {margin-top:50px;}
+/* ê³µí†µ */
+#contents.contents_event_theater > .title_top.ty2 {padding:0; margin-top:28px; margin-bottom:18px;}
+#contents.contents_event_theater .tbl_list {margin-top:20px;}
+
+#contents.contents_event_theater > .title_top.ty2 + .tab_wrap.outer {margin-top:32px;}
+
 
 /* ì´ë²¤íŠ¸/ìš°ë¦¬ë™ë„¤ì˜í™”ê´€ ========================================================================================= */
 .ev_bn_wrap {position:relative;}
