@@ -27,8 +27,7 @@
 	<jsp:include page="../inc/login_nav_bar.jsp" />
 	<!-- 사이드 퀵메뉴 -->
 	<jsp:include page="../inc/side_quick_menu.jsp" />
-	<!--사이드 원 팝업창 -->
-	<jsp:include page="../inc/left_circle_pop.jsp" />
+
 </head>
 <body>
 

@@ -92,7 +92,7 @@
 		});
 
 	});
- 	$(function() {
+/*  	$(function() {
 		$("#public").on("click", function() {
 
 			$(".public2").attr('class', 'public1')
@@ -107,7 +107,7 @@
 			return false;
 		});
 
-	}); 
+	});  */
 </script>
 
 </head>
@@ -258,11 +258,6 @@
 		<div class="theater_top_wrap">
 			<div class="theater_tit">
 				<h3 class="tit">${dto.branch_name}</h3>
-
-				<button type="button" class="btnToggle btn_col4 ty3 mr10">
-					<span id="cinemalike" class="ico_heart ty2"><em>관심등록</em></span>MY
-					영화관
-				</button>
 				<button type="button" class="btnToggle btn_col4 ty3">
 					<span class="icon_groupvisit"></span> 단체/대관문의
 				</button>
@@ -326,10 +321,7 @@
 						</dd>
 					</div>
 					<div class="btn_wrap">
-						<button class="btn_share">공유</button>
-						<div id="layerShare" class="layer_wrap layer_share"></div>
-						<button type="button" id="presetlike"
-							class="btnToggle btn_heart ty2">관심등록</button>
+						<div id="layerShare" class="layer_wrap layer_share"></div>		
 						<a href="./Ticketing.tk" class="btn_col1 ty3 rnd">프리셋예매</a>
 					</div>
 					<div class="thm">

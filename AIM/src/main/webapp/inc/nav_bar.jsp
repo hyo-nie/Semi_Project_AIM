@@ -11,15 +11,12 @@
 			$("#layerAllMenu").attr('class','.menu_all_wrap.active')
 			return false;
 		});
-
 	});
 	$(function() {
 		$("#hideBtn").on("click", function() {
-
 			$("#text").hide();
 			return false;
 		});
-
 	});
 </script>
 
@@ -123,4 +120,3 @@
 
 <%-- 사이트맵 시작 --%>
 				
-<!-- End Header -->

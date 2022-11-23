@@ -22,7 +22,7 @@ $(function() {
 		
     <div id="pop" class="banner_side_wrap"
 		style="top: 700px;">
-		<div class="banner_01" style="top: 485px;">
+		<div class="banner_01" style="top: 485px; ">
 			<a
 				href="#" target=""><img
 				src="https://caching2.lottecinema.co.kr/lotte_image/2022/AA/AA_145145.png"
