@@ -11,7 +11,7 @@ public class MyPageAction implements Action {
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		System.out.println(" M : MemberInfoAction_execute() 호출 ");
+		System.out.println("M : MyPageAction_execute() 호출");
 		
 		//세션 제어
 		HttpSession session = request.getSession();
@@ -24,16 +24,15 @@ public class MyPageAction implements Action {
 			return forward;
 		}
 		
-		// DAO - 회원정보 가져오는 메서드 ( getMember(ID) )
+		// DAO - 회원정보 가져오는 메서드 ( getMemberInfo(ID) )
 		MemberDAO dao = new MemberDAO();
-		
-		MemberDTO dto = dao.getMember(mb_id);
+		MemberDTO dto = dao.getMemberInfo(mb_id);
 	
 		// 정보 request 저장
 		request.setAttribute("dto", dto);
 		
 		// 페이지 이동
-		forward.setPath("./member/mypage.jsp");
+		forward.setPath("./member/myPage.jsp");
 		forward.setRedirect(false);
 		return forward;
 	}

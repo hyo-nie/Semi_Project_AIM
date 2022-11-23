@@ -20,12 +20,12 @@
 	var seatArr = "${seatArr}";
 	var totalCnt = "${adultCnt+childCnt+seniorCnt}";
 	var totalPrice = "${adultCnt*13000 + childCnt*9000 + seniorCnt*7000 }";
-	a
-    function requestPay() {
+
+	function requestPay() {
         IMP.request_pay({ 
             pg: "html5_inicis",
             pay_method: "card",
-            merchant_uid: "YM_TEST19",   //주문번호, 고유값(PK) 여야 한다(디비에 저장); ${tkCode}사용 예정, 현재 임시값
+            merchant_uid: "${tkCode}",   //주문번호, 고유값(PK) 여야 한다(디비에 저장);
             name: "${scDTO.movieNm}",
             amount: 100,	// 숫자타입
             buyer_email: "email",
@@ -150,14 +150,14 @@
 				
 				<div id="reserveStep03" class="section_step_con step03 active">
 					<h3 class="hidden">결제</h3>
-					<div class="article article_sum_infor">
+					<div class="article article_sum_infor" style="width: 788px">
 						<div class="group_top">
 							<h4 class="tit">예매정보</h4>
 						</div>
 						<div class="inner">
 							<div class="movie_infor new2020">
 								<span class="thm">
-									<img src="${scDTO.poster }" alt="${scDTO.movieNm }">
+									<img src="${scDTO.poster }" alt="${scDTO.movieNm }" style="width:320px;">
 								</span>
 								<strong class="tit">
 									<span
@@ -190,98 +190,35 @@
 							</div>
 						</div>
 					</div>
-					<div class="article article_pay_method">
-						<div class="group_top">
-							<h4 class="tit">결제수단</h4>
-							<button type="button" class="btn_txt_reset">초기화</button>
-						</div>
-						<div class="inner">
-							<div
-								class="mCustomScrollbar _mCS_1 mCS-autoHide mCS_no_scrollbar"
-								data-mcs-theme="minimal-dark"
-								style="position: relative; overflow: visible;">
-								<div id="mCSB_1"
-									class="mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside"
-									style="max-height: none;" tabindex="0">
-									<div id="mCSB_1_container"
-										class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y"
-										style="position: relative; top: 0; left: 0;" dir="ltr">
-										<div class="group_discount" style="display: block;">
-											
-											
-											<!-- 할인 / 포인트 -->
-											<h3 class="tit_payment">할인/포인트</h3>
-											<div class="tab_wrap3 reset selected">
-												<div class="tab_tit case2">
-													<ul>
-														<li>
-															<button class="active">등급 할인 </button>
-														</li>
-														<li>
-															<button class="">회원 등급 (나중에 수정)</button>
-														</li>
-													</ul>
-												</div>
-											</div>
-											<div class="wrap_coupon">
-												<div class="bx_cate">
-													<ul class="list_pay_item cate4">
-														<li id="point_admission">
-															<button class="">
-																관람권<span class="txt_cnt">0</span>
-															</button>
-														</li>
-														<li id="point_discount">
-															<button class="">
-																기프트카드<span class="txt_cnt">0</span>
-															</button>
-														</li>
-													</ul>
-												</div>
-											</div>
-											<div class="toggle_wrap no couplechk" style="display: none;"></div>
-										</div>
-										
-										
-										
-										<!-- 결제수단 - 일단 신용카드 구현 후 나중에 생각 -->
-										<div class="group_payment">
-											<h5 class="tit_payment">최종 결제수단</h5>
-											<div class="bx_cate">
-												<ul class="list_pay_item cate6">
-													<li><button type="button" class="cate1 ">신용카드</button></li>
-													<!-- <li><button type="button" class="cate2 ">엘페이</button></li>
-													<li><button type="button" class="cate3 ">간편결제</button></li>
-													<li><button type="button" class="cate4 ty2 ">휴대폰</button></li> -->
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div id="mCSB_1_scrollbar_vertical"
-									class="mCSB_scrollTools mCSB_1_scrollbar mCS-minimal-dark mCSB_scrollTools_vertical"
-									style="display: none;">
-									<div class="mCSB_draggerContainer">
-										<div id="mCSB_1_dragger_vertical" class="mCSB_dragger"
-											style="position: absolute; min-height: 50px; height: 0px; top: 0px;">
-											<div class="mCSB_dragger_bar" style="line-height: 50px;"></div>
-										</div>
-										<div class="mCSB_draggerRail"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+					
 					<div class="article article_payment">
-						<div class="group_top">
+						<div class="group_top" style="width: 413.99px">
 							<h4 class="tit">결제하기</h4>
 						</div>
 						<div class="inner">
 							<div class="select_item_wrap">
 							</div>
 							<div class="payment_sum_wrap">
+								<dl style="background-color:gray;">
+									<dt>성인 (${adultCnt })</dt>
+									<dd>
+										<strong><fmt:formatNumber value="${adultCnt*12000}"/></strong>원
+									</dd>
+								</dl>
+								<dl style="background-color:gray;">
+									<dt>청소년 (${childCnt })</dt>
+									<dd>
+										<strong><fmt:formatNumber value="${childCnt*9000}"/></strong>원
+									</dd>
+								</dl>
+								<dl style="background-color:gray;">
+									<dt>경로/우대 (${seniorCnt })</dt>
+									<dd>
+										<strong><fmt:formatNumber value="${seniorCnt*7000 }"/></strong>원
+									</dd>
+								</dl>
 								<dl>
-									<dt>상품금액</dt>
+									<dt>총 금액</dt>
 									<dd>
 										<strong><fmt:formatNumber value="${adultCnt*12000 + childCnt*9000 + seniorCnt*7000 }"/></strong>원
 									</dd>

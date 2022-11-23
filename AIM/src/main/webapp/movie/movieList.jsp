@@ -6,7 +6,6 @@
 <head>
 <meta charset="UTF-8">
 <title>현재상영작</title>
-<<<<<<< HEAD
 <jsp:include page="../inc/include.jsp" />
 <script type="text/javascript">
 	$(document).ready(function(){
@@ -24,30 +23,16 @@
 					});
 			}
 	});
-
-	
 </script>
-
-<style type="text/css">
-
-.movie_screen_box .button {font-size:14px; color: maroon;}
-.movie_screen_box .button1 {font-size:14px; color: #666;}
-</style>
-=======
-
-<!-- 각종 요소 -->
-<jsp:include page="../inc/include.jsp" />
 
 <!-- 상위 배너 -->
 <jsp:include page="../inc/topbanner.jsp"/>
-
 <!-- 헤더/네비 -->
 <jsp:include page="../inc/nav_bar.jsp" />
 
 <!-- 영화 배너 스크립트 --> 
 <script type="text/javascript">
 $(document).ready(function() {
-	
 
 	 $('.owl-one').owlCarousel({
 		items : 1, // 한번에 보여줄 아이템 수
@@ -62,26 +47,8 @@ $(document).ready(function() {
 	});
 });
 </script>
-
->>>>>>> branch 'master' of https://github.com/hyo-nie/AIMAIM.git
 </head>
 <body>
-<<<<<<< HEAD
-	<!-- 상위 배너 -->
-	<jsp:include page="../inc/topbanner.jsp" />
-	<!-- 헤더/네비 -->
-	<jsp:include page="../inc/nav_bar.jsp" />
-=======
-
-<!-- 주석 부분 헤드로 옮김 -->
-<%-- 	<jsp:include page="../inc/include.jsp" /> --%>
-<!-- 	<!-- 상위 배너 --> -->
-<%-- 	<jsp:include page="../inc/topbanner.jsp" /> --%>
-<!-- 	<!-- 헤더/네비 --> -->
-<%-- 	<jsp:include page="../inc/nav_bar.jsp" /> --%>
-<!-- 주석 부분 헤드로 옮김 -->
-
-
 
 <!-- 영화 홈 배너 -->
 <div id="visual_top" class="visual_top visual_theater_detail" style="">
@@ -91,20 +58,38 @@ $(document).ready(function() {
 					<div class="owl-stage-outer">
 						<div class="owl-stage"
 							style="transform: translate3d(-5760px, 0px, 0px); transition: all 0.25s ease 0s; width: 11520px;">
-							<div class="owl-item cloned" style="width: 1920px;">
+
+							<div class="owl-item" style="width: 1920px;">
 								<div class="item">
 									<a href="#none"><img
-										src="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1108/ST_1920420.jpg"
-										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1110/ST_1280720.mp4"
+										src="https://caching2.lottecinema.co.kr/lotte_image/2022/AA/AA_1920420.jpg"
+										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/AA/AA_1280720.mp4"
+										alt="아바타 물의길 판도라의 바다 새로운 세계가 펼쳐진다 12월 대개봉 관람등급미정"></a>
+								</div>
+							</div>
+							<div class="owl-item active" style="width: 1920px;">
+								<div class="item">
+									<a href="#none"><img
+										src="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1121/ST_1920420.jpg"
+										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1121/ST_1280720.mp4"
 										alt=""></a>
 								</div>
 							</div>
+							<div class="owl-item" style="width: 1920px;">
+								<div class="item">
+									<a href="#none"><img
+										src="https://caching2.lottecinema.co.kr/lotte_image/2022/boo/boo_1920420.jpg"
+										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/boo/boo_1280720.mp4"
+										alt="극장판 뽀로로와 친구들 바이러스를 없애줘 전체관람가 12월 1일 롯데시네마에서 만나요 네모바이러스의 습격 친구들을 구하라"></a>
+								</div>
+							</div>
+
 							<div class="owl-item cloned" style="width: 1920px;">
 								<div class="item">
 									<a href="#none"><img
-										src="https://caching2.lottecinema.co.kr/lotte_image/2022/KI/KI_1920420.jpg"
-										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/KI/KI_1280720_1.mp4"
-										alt=""></a>
+										src="https://caching2.lottecinema.co.kr/lotte_image/2022/AA/AA_1920420.jpg"
+										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/AA/AA_1280720.mp4"
+										alt="아바타 물의길 판도라의 바다 새로운 세계가 펼쳐진다 12월 대개봉 관람등급미정"></a>
 								</div>
 							</div>
 						</div>
@@ -135,7 +120,6 @@ $(document).ready(function() {
 	</div>
 <!-- 영화 홈 배너 -->
 
->>>>>>> branch 'master' of https://github.com/hyo-nie/AIMAIM.git
 	<br><br><br><br>
 	<div id="contents" class="contents_movie_list">
 	<br><br><br><br><br><br><br><br><br>

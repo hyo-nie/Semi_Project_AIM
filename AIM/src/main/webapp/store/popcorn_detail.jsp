@@ -131,7 +131,7 @@ ${dto }
  	<div class="category_product_detail_contents_img_wrap">
               <ul class="bxslider">
               <li>
-              	<img src="./upload/${dto.st_img }" alt="${dto.st_name }" name="img">
+              	<img src="./assets/img/${dto.st_img }" alt="${dto.st_name }" name="img">
               </li> 	               
                </ul>
            		</div>           

@@ -88,11 +88,11 @@ function requestPay(user_tel) {
 </head>
 <body>
 
-${cartList }
+<%-- ${cartList } --%>
 <br>
-${productList }
+<%-- ${productList } --%>
 <br>
-${member }
+<%-- ${member } --%>
 
 
 <form method="post" name="fr">
@@ -112,8 +112,8 @@ ${member }
 		<!-- 장바구니 리스트 구매상품 정보 -->
 		<div class="com_cart_list_wrap com_cart_list_wrap1">
 			<strong class="com_box_design_title">구매상품 정보</strong>
-			<p class="cart_allchecker_wrap ">
-				<strong class="com_custom_checkbox_product_name">상품명</strong> 
+			<p class="cart_allchecker_wrap " style="width: 1000px;">
+				<strong class="com_custom_checkbox_price">상품명</strong> 
 				<strong class="com_custom_checkbox_sel_price"> 판매금액</strong> 
 				<strong class="com_custom_checkbox_cnt">수량</strong> 
 				<strong class="com_custom_checkbox_price"> 구매금액 </strong>
@@ -126,27 +126,27 @@ ${member }
 	            <c:set var="totalPrice"/>
 				<c:set var="cart" value="${cartList[i]}" />
 				<c:set var="prdt" value="${productList[i]}" />
-	            <li>
-	                <div class="product_info_img">
-	                    <img src="./upload/${prdt.st_img }" alt="${prdt.st_name}">
-	                    <strong class="product_info_name">
+	            <li style="padding-left: 5px;">
+	                <div class="product_info_img" style= "width: 280px;">
+	                    <img src="./assets/img/${prdt.st_img }" alt="${prdt.st_name}" style= "margin-right: 0px;">
+	                    <strong class="product_info_origin">
 	                        ${prdt.st_name }
 	                     </strong> 
 	                     <span class="product_info_origin">
 	                        ${prdt.st_text} </span>
 	                </div>
-	                <div class="product_info_wrap">
-	                    <span class="product_info_one_price">
+	                <div class="product_info_wrap" style= "width: 130px;">
+	                    <span class="product_info_one_price" style= "width: 120px;">
 	                        <fmt:formatNumber value="${prdt.st_price}"/></span>
 	                </div>
 	                
-	                <div class="product_info_cnt_wrap">
+	                <div class="product_info_cnt_wrap" style= "width: 200px;">
 	                    ${cart.c_amount}
 	                </div>
 	                
-	                <span>
+	                <div class="product_info_cnt_wrap">
 	                    <fmt:formatNumber value="${prdt.st_price * cart.c_amount}" />원
-	                </span>
+	                </div>
 	                
 	                <input type="hidden" name="totalAmount" value="${totalPrice += prdt.st_price * cart.c_amount}"/>
 	                

@@ -485,7 +485,7 @@ public class ReservationDAO {
 			rs = pstmt.executeQuery();
 			
 			if (rs.next()) {
-				tkCode = "TK" + sdf.format(cal.getTime()) + "-" + (rs.getInt(1)+1);
+				tkCode = "AIM" + sdf.format(cal.getTime()) + "-" + (rs.getInt(1)+1);
 			}
 			
 			System.out.println(" DAO : tkCode : " + tkCode);
@@ -550,8 +550,44 @@ public class ReservationDAO {
 			closeDB();
 		}
 	}
-	// insertReservation
+	// insertReservation()
 	
+	/**
+	 * getReservation(tkCode)
+	 */
+	public ReservationDTO getReservation(String tkCode) {
+		ReservationDTO dto = null;
+		
+		try {
+			con = getConnection();
+			sql = "select * from reservation where tkCode = ?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, tkCode);
+			rs = pstmt.executeQuery();
+			
+			// 데이터처리
+			if (rs.next()) {
+				dto = new ReservationDTO();
+				
+				dto.setScCode(rs.getInt("scCode"));
+				dto.setCusCnt(rs.getInt("cusCnt"));
+				dto.setMb_id(rs.getString("mb_id"));
+				dto.setMovieCd(rs.getString("movieCd"));
+				dto.setPayment(rs.getString("payment"));
+				dto.setTkCode(rs.getString("tkCode"));
+				dto.setTotalPrice(rs.getInt("totalPrice"));
+				
+				System.out.println(" DAO : 예매 정보 조회 완료 ! ");
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			closeDB();
+		}
+		return dto;
+	}
+	// getReservation(tkCode)
 	
 	
 //	/**

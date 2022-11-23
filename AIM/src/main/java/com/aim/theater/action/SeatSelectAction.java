@@ -27,16 +27,13 @@ public class SeatSelectAction implements Action {
 			return forward;			
 		}
 		
-		//전달정보 저장 - 날짜,지점코드,영화,시간 전달받음
-		String date = request.getParameter("date");
-		int branchCd = Integer.parseInt(request.getParameter("branchCd"));
-		String movie = request.getParameter("movie");
-		String time = request.getParameter("time");
+		//전달정보 저장 - 스케줄코드 전달받음
+		int scCode = Integer.parseInt(request.getParameter("scCode"));
 		
 		TheaterDAO dao = new TheaterDAO();
 		
 		//선택한 지점/날짜/영화/상영관/상영시간 가져오기(첫번째날짜 디폴트)
-		TheaterDTO selectSche = dao.getSelectSche(branchCd,date,movie,time);
+		TheaterDTO selectSche = dao.getSelectSche(scCode);
 		
 		//연결된 view 페이지로 정보 전달
 		request.setAttribute("selectSche", selectSche);

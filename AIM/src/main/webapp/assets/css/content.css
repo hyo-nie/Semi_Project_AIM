@@ -239,6 +239,38 @@ ver : 1.01 20191219 2502 line > íŒì—…ë©”ë‰´ ê³ ì •ë†�
 .homemovie_list li .btm_info .sub_info2 .repple_info {margin-left:10px; background:url("../../Content/images/movie/ic_repple.png") no-repeat 0 0}
 
 
+/* ADMINPAGE */
+/* ì˜í™”ëª©ë¡ : homemovie_list ========================================================================================= */
+.admin_page {overflow:hidden; margin-bottom:50px; margin:0 -7.5px}
+.admin_page li {float:left; position:relative;  margin:0 7.5px; text-align:left;}
+.admin_page li .top_info {overflow:hidden; position:relative;  border-radius:4px;}
+.admin_page li .top_info .tit_info {display:block; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; margin-bottom:6px; font-size:22px; font-weight:bold; font-style:italic;  font-family:'Roboto', "Noto Sans KR"; }
+.admin_page li.active .top_info .over_box {overflow:inherit; position:absolute; z-index:1; top:0; left:0; width:100%; height:100%;}
+.admin_page li.active .top_info .over_box:before {content:''; position:absolute; top:0; left:0; width:100%; height:100%; background:#000; opacity:0.7;}
+.admin_page li.active .top_info .over_box .inner {position:absolute; z-index:1; top:50%; left:0; right:0; padding:0 18px;}
+.admin_page li .top_info .over_box .btn_col3 {display:block; line-height:26px; margin-top:10px; background:transparent; color:#fff !important; border-color:#fff; outline-color: white;}
+.admin_page li .top_info .over_box .btn_col3:first-child {margin-top:0}
+.admin_page li .top_info .over_box .hall_info_box {position:absolute; top:0; left:0; width:100%; background:red}
+.admin_page li .top_info .over_box .btn_end {border-color:#666; color:#666 !important}
+.admin_page li .btm_info {display:block; margin-top:4px;}
+.admin_page li .btm_info .tit_info {display:block; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; margin-bottom:6px; font-size:15px; font-family:'Roboto', "Noto Sans KR";}
+.admin_page li .btm_info .sub_info1 {display:block; margin-bottom:10px; font-size:14px;}
+.admin_page li .btm_info .sub_info1 > span {position:relative; margin-left:8px; font-family:'Roboto', "Noto Sans KR";}
+.admin_page li .btm_info .sub_info1 > span:before {content:''; display:inline-block; position:absolute; top:2px; left:0; width:1px; height:8px; background:#B2B2B2}
+.admin_page li .btm_info .sub_info1 > span:first-child {margin-left:0;}
+.admin_page li .btm_info .sub_info1 > span:first-child:before{display:none;}
+.admin_page li .btm_info .sub_info1 .rate_info em {font-weight:bold;}
+.admin_page li .btm_info .sub_info1 .star_info {padding-left:22px; font-weight:bold; background:url("../../Content/images/movie/ic_star.png") no-repeat 9px 20%;}
+.admin_page li .btm_info .sub_info1 .remain_info {padding-left:10px; color:#ED4C6B}
+.admin_page li .btm_info .sub_info1 .heart_info {display:inline-block; padding-left:10px;}
+.admin_page li .btm_info .sub_info1 .heart_info .btn_heart_rnd {margin-top:-4px;}
+.admin_page li .btm_info .sub_info2 {display:block;}
+.admin_page li .btm_info .sub_info2 > span {display:inline-block; padding:4px 0 4px 21px; font-family:'Roboto', "Noto Sans KR"; font-size:11px;}
+.admin_page li .btm_info .sub_info2 .like_info {background:url("../../Content/images/movie/ic_like.png") no-repeat 0 0}
+.admin_page li .btm_info .sub_info2 .repple_info {margin-left:10px; background:url("../../Content/images/movie/ic_repple.png") no-repeat 0 0}
+
+
+
 
 
 /* ì˜í™”/ìƒì„¸ ========================================================================================= */
@@ -527,7 +559,7 @@ ver : 1.01 20191219 2502 line > íŒì—…ë©”ë‰´ ê³ ì •ë†�
 .movie_list.type2 li {height:310px; margin-bottom:70px;}
 .screen_add_box>a {display:block; width:184px; height:310px; overflow: hidden;}
 .screen_add_box>a>img {width:100%; min-height: 100%; border-radius:4px;}
-.screen_add_box>a>.num_info{ display:block; position:absolute; left:0; right:0; bottom:0; border-radius: 0 0 4px 4px; height:23px; padding-left:10px; color:#fff; font-weight:bold; font-size:26px; font-style:italic; font-family:'Roboto', "Noto Sans KR"; text-align:left; background:-moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.15) 40%, rgba(0,0,0,0.5) 100%); background:-webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.15) 40%,rgba(0,0,0,0.5) 100%); background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.15) 40%,rgba(0,0,0,0.5) 100%); -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=0); -webkit-border-radius: 0 0 4px 4px; -moz-border-radius: 0 0 4px 4px; -ms-border-radius: 0 0 4px 4px; -o-border-radius: 0 0 4px 4px;}
+.screen_add_box>a>.num_info{ display:block; position:absolute; left:0; right:0; bottom:0; border-radius: 0 0 4px 4px; height:23px; padding-left:10px; color:#fff; font-weight:bold; font-size:26px; font-style:italic; font-family:'Roboto', "Noto Sans KR"; text-align:left; background:-moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.15) 40%, rgba(0,0,0,0.5) 100%); background:-webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.15) 40%,rgba(0,0,0,0.5) 100%); background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.15) 40%,rgba(0,0,0,0.5) 100%); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=0); -webkit-border-radius: 0 0 4px 4px; -moz-border-radius: 0 0 4px 4px; -ms-border-radius: 0 0 4px 4px; -o-border-radius: 0 0 4px 4px;}
 .contents_movie_detail .list_lnk a {color:#666;}
 .contents_movie_detail .list_lnk .on a {font-weight:normal; color:#000;}
 .movie_screen_box {position:relative;}
@@ -605,10 +637,10 @@ ver : 1.01 20191219 2502 line > íŒì—…ë©”ë‰´ ê³ ì •ë†�
 .contents_theater_detail .theater_top_wrap .info_wrap .theater_info dd.adr {min-width: 220px; margin:24px 0 0; letter-spacing:-1px}
 .contents_theater_detail .theater_top_wrap .info_wrap .theater_notice dt {display:inline-block; width:80px; font-size:15px; font-weight:bold; vertical-align:middle;}
 .contents_theater_detail .theater_top_wrap .info_wrap .theater_notice dd {display:inline-block; width:370px; font-size:15px; color:#666666; vertical-align:middle;}
-.contents_theater_detail .theater_top_wrap .info_wrap .theater_notice dd > a {display:block; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; vertical-align:middle;}
+.contents_theater_detail .theater_top_wrap .info_wrap .theater_notice dd > a {display:block; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; } /* vertical-align:middle; 사용안한다고 해서 삭제*/
 .contents_theater_detail .theater_top_wrap .info_wrap .pop_wrap {margin:46px 0 38px;}
 .contents_theater_detail .theater_top_wrap .info_wrap .pop_wrap>li {display:inline-block; margin-right:25px;}
-.contents_theater_detail .theater_top_wrap .info_wrap .pop_wrap>li a {display:block; text-align:center; vertical-align:middle;}
+.contents_theater_detail .theater_top_wrap .info_wrap .pop_wrap>li a {display:block; text-align:center; } /* vertical-align:middle; 사용안한다고 해서 삭제*/
 .contents_theater_detail .theater_top_wrap .info_wrap .pop_wrap>li a img {display:inline-block; margin-right:10px; vertical-align:middle;}
 .contents_theater_detail .theater_top_wrap .info_wrap .pop_wrap>li a span {font-size:15px; vertical-align:middle;}
 .contents_theater_detail .theater_top_wrap .rcm_wrap {position:absolute; right:0; bottom:0; width:447px; /*height:219px;*/ box-sizing:border-box; border-radius:12px; padding:20px 30px 20px 40px; background-color:#F8F8F8;} /* 2020.01.07 */
@@ -658,7 +690,7 @@ ver : 1.01 20191219 2502 line > íŒì—…ë©”ë‰´ ê³ ì •ë†�
 .contents_theater_detail .th_price_wrap .th_price_info_wrap .list_txt li {margin:0; color:#666666;}
 .contents_theater_detail .event_wrap {margin-bottom:35px;}
 .contents_theater_detail .th_price_wrap .price_tabletoptitle th {text-align:center; border-bottom: 1px solid #bbb;}
-.contents_theater_detail .theater_top_wrap .notice_wrap_emp {display:block; padding:12px 12px 12px 38px; font-size:13px; margin:30px 0 50px -22px; box-sizing:border-box; -webkit-border-radius:4px; -moz-border-radius:4px; -ms-border-radius:4px; -o-border-radius:4px;}
+.contents_theater_detail .theater_top_wrap .notice_wrap_emp {display:block; padding:12px 12px 12px 38px; font-size:13px; margin:30px 0 50px -22px; box-sizing:border-box; } /*-webkit-border-radius:4px; -moz-border-radius:4px; -ms-border-radius:4px; -o-border-radius:4px; 삭제*/
 
 
 /* ìŠ¤í† ì–´/í™ˆ ========================================================================================= */
@@ -746,6 +778,16 @@ ver : 1.01 20191219 2502 line > íŒì—…ë©”ë‰´ ê³ ì •ë†�
 
 #contents.contents_event_theater > .title_top.ty2 + .tab_wrap.outer {margin-top:32px;}
 
+
+/* ADMINPAGE */
+/* ì´ë²¤íŠ¸/í™ˆ ========================================================================================= */
+#contents.contents_admin_home > .title_top {padding-top:0;}
+#contents.contents_admin_home .banner_event_btm {margin-top:50px;}
+/* ê³µí†µ */
+#contents.contents_event_theater > .title_top.ty2 {padding:0; margin-top:28px; margin-bottom:18px;}
+#contents.contents_event_theater .tbl_list {margin-top:20px;}
+
+#contents.contents_event_theater > .title_top.ty2 + .tab_wrap.outer {margin-top:32px;}
 
 
 /* ì´ë²¤íŠ¸/ìš°ë¦¬ë™ë„¤ì˜í™”ê´€ ========================================================================================= */
@@ -1025,7 +1067,7 @@ ver : 1.01 20191219 2502 line > íŒì—…ë©”ë‰´ ê³ ì •ë†�
 /* íšŒì›ê°€ìž… - L.POINT ========================================================================================= */
 .contents_lpoint .join_wrap {margin-top:55px;}
 .contents_lpoint .join_wrap .step_tit {font-size:20px; margin-bottom:10px;}
-.contents_lpoint .join_wrap .step_tit .step {display:block; border-radius:4px; background:#23363D; width:104px; height:26px; line-height:26px; font-family:'Roboto'; font-size:15px; color:#ffffff; text-align:center; margin-bottom:10px; vertical-align:text-bottom; -webkit-border-radius:4px; -moz-border-radius:4px; -ms-border-radius:4px; -o-border-radius:4px;}
+.contents_lpoint .join_wrap .step_tit .step {display:block; border-radius:4px; background:#23363D; width:104px; height:26px; line-height:26px; font-family:'Roboto'; font-size:15px; color:#ffffff; text-align:center; margin-bottom:10px;  -webkit-border-radius:4px; -moz-border-radius:4px; -ms-border-radius:4px; -o-border-radius:4px;} /* vertical-align:text-bottom; */
 .contents_lpoint .join_wrap p {display:inline-block; font-size:15px; line-height:1.4;}
 .contents_lpoint .join_wrap .btn_join {float:right; background:#2AA3FE; margin-top:-15px; width:180px;}
 .contents_lpoint .join_wrap .btn_join:before {content:''; background:url('../images/icon/join_16_20210407.png') no-repeat 50% 50%; display:inline-block; width:15px; height:15px; margin-right:5px; vertical-align:middle;} /* 2020.03.17 */
@@ -2508,9 +2550,9 @@ label.lab_txt .tit_lab {overflow:hidden; position:absolute; float:none; width:1p
 .colorium .img_05 {height:460px; text-align:right; margin-bottom: 125px;}
 .colorium .img_05 .sec_tit {width:450px; margin-right:60px;}
 .colorium .img_05 .sec_img {position: absolute; top:0; left:160px; width:506px; height:456px;}
-.colorium .img_05 .sec_img .img_wrap{}
+/* .colorium .img_05 .sec_img .img_wrap{} 사용x 칸이라고 오류 */
 .colorium .img_05 .sec_img .bx_img {background-image:url('../../Content/images/movie/special_colorium_05.png');}
-.colorium .img_06 {}
+/* .colorium .img_06 {}  사용x 칸이라고 오류*/
 .colorium .img_06 .sec_tit {width:100%; margin-bottom:40px;}
 .colorium .img_06 .sec_img {width:980px; height:331px;}
 .colorium .img_06 .sec_img .bx_img {background-image:url('../../Content/images/movie/special_colorium_06.jpg');}
@@ -2644,11 +2686,11 @@ label.lab_txt .tit_lab {overflow:hidden; position:absolute; float:none; width:1p
 .menu_all_wrap:after {content:""; display:block; clear:both;}
 .menu_all_wrap.active {display:block;}
 
-div#layerAllMenu {}
+/* div#layerAllMenu {} */
 
-div#layerAllMenu {}
+/* div#layerAllMenu {} */
 
-div#layerAllMenu {}
+/* div#layerAllMenu {}  사용 x 라고 오류*/
 .menu_all_wrap.active .group_menu_all {float:left; width:620px; /*height:380px;*/ padding:0 20px;}
 .menu_all_wrap.active .group_menu_all table tbody th {padding:0 5px;}
 .menu_all_wrap.active .group_menu_all table tbody th span {display:inline-block; border-bottom:1px solid #707070; font-size:14px;}
@@ -3996,7 +4038,7 @@ dl.total_price dd strong {font-family:'Roboto'; font-size:25px; font-weight:bold
 /* ì˜ˆë§¤ : 04ê²°ì œì™„ë£Œ/ë³¸ë¬¸ ============================== */
 .payment_fin_wrap {width:685px; margin:0 auto;}
 .payment_fin_wrap .btn_btm_wrap {margin:50px 0 0;}
-.top_notice_ic {margin:50px 0 20px; padding-top:52px; font-size:15px; text-align:center; background-repeat:no-repeat; background-position:center top;}
+.top_notice_ic {margin:0px 0 20px -60px; padding-top:52px; font-size:20px; text-align:center; background-repeat:no-repeat; background-position:center top;}
 .top_notice_ic.ty1{background-image:url("../../Content/images/icon/top_notice_ic_01.png");}
 /* ì˜ˆë§¤ì •ë³´ ========== */
 .reserve_result_wrap {position:relative; width:605px; margin:18px 0; padding:40px 40px 25px; border-radius:4px; border:1px solid #DDD; background-color:#FFF;}
@@ -4351,7 +4393,7 @@ select.ty5 ~ select.ty5 {margin-left:5px;}
 .member_login_wrap .login_input_box .login_form_wrap.type1 {padding-top: 65px;}
 /* êµ¿ì¦ˆ ìˆ˜ë ¹ */
 .remainingnum_tit {padding: 50px 0 20px; font-size:18px; color:#000}
-.remainingnum_list {}
+/* .remainingnum_list {} 사용x 라고 오류 */
 .remainingnum_list li {position:relative; padding: 30px 50px; margin-bottom: 8px; background-color: #F8F8F8; border: 1px solid #ddd;}
 .remainingnum_list li .list {width: 80%; font-size:18px; color:#000; overflow:hidden; text-overflow: ellipsis; white-space: nowrap;}
 .remainingnum_list li .list .tit {display: inline-block; padding-right: 10px; font-size:18px; color:#000}
@@ -4643,7 +4685,7 @@ select.ty5 ~ select.ty5 {margin-left:5px;}
 .ip_txt.type2 .desc_right {width: 100%; height: 45px; line-height:45px; background-color: #f8f8f8; border-color: transparent; text-align:right; font-family: "Roboto"; font-size: 17px;}
 /* ê´€ëžŒí‰ ë³„ì  5ê°œ : ì˜í™” ìƒì„¸ */
 .tab_wrap.outer.new22 > li > .tab_tit {font-size:18px}
-.tab_wrap.outer.new22 > li.active > .tab_tit {}
+/* .tab_wrap.outer.new22 > li.active > .tab_tit {} 사용x 칸이라고 오류 */
 .tab_wrap.outer.new22 > li .wrap_reviewstarscore {padding:30px; margin-top: -30px; background: #f8f8f8}
 .tab_wrap.outer.new22 .movi_review_box {margin-bottom: 0; background:#fff}
 .tab_wrap.outer.new22 .movi_review_box .review_write_box {width:799px; background:#fff}
@@ -4908,3 +4950,46 @@ select.ty5 ~ select.ty5 {margin-left:5px;}
 .visual_special.superplex.new22 .owl-carousel .item .itm.img02 {background-image:url('../../Content/images/movie/visual_special_superplex_04.jpg'); background-size:auto 796px;}
 /* ìŠ¤í† ì–´ > í¬í† ì¹´ë“œ ì¶œë ¥ ì„ íƒ ì˜í™”ê´€ íŒì—… */
 .layer_select_print_cinema .cinema_select_wrap > ul {overflow-y: auto}
+
+/* 극장부분 css */
+.maps1 {
+	opacity: 1;
+	background: white;
+	border-radius: 0px 0px 20px 20px;
+}
+
+.maps2 {
+	opacity: 0;
+}
+.public1 {
+	opacity: 1;
+	background: white;
+	border-radius: 0px 0px 20px 20px;
+}
+
+.public2 {
+	opacity: 0;
+}
+
+
+.maphide {
+	width: 68px;
+    height: 19px;
+    position: absolute;
+    right: 2px;
+    top: 1px;
+    z-index: 11;
+    border-color: darkred;
+    border-radius: 10px;
+    background: none;
+    color: darkred;
+}
+.pp{
+line-height: 19px;
+    margin-bottom: 18px;
+    padding-left: 20px;
+    font-size: 13px;
+    color: #414141;
+    background: url("https://www.lottecinema.co.kr/NLCHS/Content/images/icon/location_pointer.png") no-repeat 0 0;
+}
+

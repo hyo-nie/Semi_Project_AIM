@@ -5,6 +5,8 @@ public class TheaterDTO {
 	private int branchCd; //지점코드
 	private int roomCd; //상영관번호
 	private int seatcomp; // 좌석예매현황
+	private String branch_longitude;
+	private String branch_latitude;
 	private String roomNum;//상영관이름
 	private String starttime; //상영시작시간
 	private String endtime; //종료시간
@@ -99,14 +101,26 @@ public class TheaterDTO {
 	}
 	public void setBranch_addr(String branch_addr) {
 		this.branch_addr = branch_addr;
+	}	
+	public String getBranch_longitude() {
+		return branch_longitude;
 	}
-	
+	public void setBranch_longitude(String branch_longitude) {
+		this.branch_longitude = branch_longitude;
+	}
+	public String getBranch_latitude() {
+		return branch_latitude;
+	}
+	public void setBranch_latitude(String branch_latitude) {
+		this.branch_latitude = branch_latitude;
+	}
 	@Override
 	public String toString() {
 		return "TheaterDTO [scCode=" + scCode + ", branchCd=" + branchCd + ", roomCd=" + roomCd + ", seatcomp="
-				+ seatcomp + ", roomNum=" + roomNum + ", starttime=" + starttime + ", endtime=" + endtime + ", sc_date="
-				+ sc_date + ", runcount=" + runcount + ", movieCd=" + movieCd + ", movieNm=" + movieNm
-				+ ", watchGradeNm=" + watchGradeNm + ", branch_name=" + branch_name + ", branch_addr=" + branch_addr
-				+ "]";
+				+ seatcomp + ", branch_longitude=" + branch_longitude + ", branch_latitude=" + branch_latitude
+				+ ", roomNum=" + roomNum + ", starttime=" + starttime + ", endtime=" + endtime + ", sc_date=" + sc_date
+				+ ", runcount=" + runcount + ", movieCd=" + movieCd + ", movieNm=" + movieNm + ", watchGradeNm="
+				+ watchGradeNm + ", branch_name=" + branch_name + ", branch_addr=" + branch_addr + "]";
 	}
+
 }

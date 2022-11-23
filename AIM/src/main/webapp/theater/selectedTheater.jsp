@@ -32,21 +32,20 @@
 </script>
 <%-- owl 조작 --%>
 <script type="text/javascript">
-$(document).ready(function() {
-	
+	$(document).ready(function() {
 
-	 $('.owl-one').owlCarousel({
-		items : 1, // 한번에 보여줄 아이템 수
-		loop : true, // 반복여부
-		margin : 0, // 오른쪽 간격
-		autoplay : true, // 자동재생 여부
-		autoplayTimeout : 5000, // 재생간격
-		autoplayHoverPause : false, //마우스오버시 멈출지 여부
-		mouseDrag : false,
-		touchDrag : false
+		$('.owl-one').owlCarousel({
+			items : 1, // 한번에 보여줄 아이템 수
+			loop : true, // 반복여부
+			margin : 0, // 오른쪽 간격
+			autoplay : true, // 자동재생 여부
+			autoplayTimeout : 5000, // 재생간격
+			autoplayHoverPause : false, //마우스오버시 멈출지 여부
+			mouseDrag : false,
+			touchDrag : false
 
-	});
-	 $('.owl-two').owlCarousel({
+		});
+		$('.owl-two').owlCarousel({
 			items : 10, // 한번에 보여줄 아이템 수
 			loop : false, // 반복여부
 			margin : 20, // 오른쪽 간격
@@ -56,8 +55,8 @@ $(document).ready(function() {
 			mouseDrag : false,
 			touchDrag : false
 
-		});		 
-});
+		});
+	});
 </script>
 <%-- 관람등급안내 --%>
 <script>
@@ -77,128 +76,97 @@ $(document).ready(function() {
 		});
 
 	});
+	$(function() {
+		$("#maps").on("click", function() {
+
+			$(".maps2").attr('class', 'maps1')
+			return false;
+		});
+
+	});
+	$(function() {
+		$("#maphide").on("click", function() {
+
+			$(".maps1").attr('class', 'maps2')
+			return false;
+		});
+
+	});
+ 	$(function() {
+		$("#public").on("click", function() {
+
+			$(".public2").attr('class', 'public1')
+			return false;
+		});
+
+	});
+	$(function() {
+		$("#public2").on("click", function() {
+
+			$(".public1").attr('class', 'public2')
+			return false;
+		});
+
+	}); 
 </script>
-
-
-
-
-<!--  날짜값 오늘 ~ 20일뒤 까지 변수 생성 -->
-<c:set var="today" value="<%=new Date()%>" />
-<c:set var="yesterday"
-	value="<%=new Date(new Date().getTime() - 60 * 60 * 24 * 1000 * 1)%>" />
-<c:set var="day1"
-	value="<%=new Date(new Date().getTime() + 60 * 60 * 24 * 1000 * 1)%>" />
-<c:set var="day2"
-	value="<%=new Date(new Date().getTime() + 60 * 60 * 24 * 1000 * 2)%>" />
-<c:set var="day3"
-	value="<%=new Date(new Date().getTime() + 60 * 60 * 24 * 1000 * 3)%>" />
-<c:set var="day4"
-	value="<%=new Date(new Date().getTime() + 60 * 60 * 24 * 1000 * 4)%>" />
-<c:set var="day5"
-	value="<%=new Date(new Date().getTime() + 60 * 60 * 24 * 1000 * 5)%>" />
-<c:set var="day6"
-	value="<%=new Date(new Date().getTime() + 60 * 60 * 24 * 1000 * 6)%>" />
-<c:set var="day7"
-	value="<%=new Date(new Date().getTime() + 60 * 60 * 24 * 1000 * 7)%>" />
-<c:set var="day8"
-	value="<%=new Date(new Date().getTime() + 60 * 60 * 24 * 1000 * 8)%>" />
-<c:set var="day9"
-	value="<%=new Date(new Date().getTime() + 60 * 60 * 24 * 1000 * 9)%>" />
-<c:set var="day10"
-	value="<%=new Date(new Date().getTime() + 60 * 60 * 24 * 1000 * 10)%>" />
-<c:set var="day11"
-	value="<%=new Date(new Date().getTime() + 60 * 60 * 24 * 1000 * 11)%>" />
-<c:set var="day12"
-	value="<%=new Date(new Date().getTime() + 60 * 60 * 24 * 1000 * 12)%>" />
-<c:set var="day13"
-	value="<%=new Date(new Date().getTime() + 60 * 60 * 24 * 1000 * 13)%>" />
-<c:set var="day14"
-	value="<%=new Date(new Date().getTime() + 60 * 60 * 24 * 1000 * 14)%>" />
-<c:set var="day15"
-	value="<%=new Date(new Date().getTime() + 60 * 60 * 24 * 1000 * 15)%>" />
-<c:set var="day16"
-	value="<%=new Date(new Date().getTime() + 60 * 60 * 24 * 1000 * 16)%>" />
-<c:set var="day17"
-	value="<%=new Date(new Date().getTime() + 60 * 60 * 24 * 1000 * 17)%>" />
-<c:set var="day18"
-	value="<%=new Date(new Date().getTime() + 60 * 60 * 24 * 1000 * 18)%>" />
-<c:set var="day19"
-	value="<%=new Date(new Date().getTime() + 60 * 60 * 24 * 1000 * 19)%>" />
-
-<!-- // sc_date db값과 비교하기 위한 날짜값 (ex : 2022-11-11) -->
-<fmt:formatDate var="ymd" pattern="yyyy-MM-dd" value="${today }" />
-<fmt:formatDate var="ymd1" pattern="yyyy-MM-dd" value="${day1 }" />
-<fmt:formatDate var="ymd2" pattern="yyyy-MM-dd" value="${day2 }" />
-<fmt:formatDate var="ymd3" pattern="yyyy-MM-dd" value="${day3 }" />
-<fmt:formatDate var="ymd4" pattern="yyyy-MM-dd" value="${day4 }" />
-<fmt:formatDate var="ymd5" pattern="yyyy-MM-dd" value="${day5 }" />
-<fmt:formatDate var="ymd6" pattern="yyyy-MM-dd" value="${day6 }" />
-<fmt:formatDate var="ymd7" pattern="yyyy-MM-dd" value="${day7 }" />
-<fmt:formatDate var="ymd8" pattern="yyyy-MM-dd" value="${day8 }" />
-<fmt:formatDate var="ymd9" pattern="yyyy-MM-dd" value="${day9 }" />
-<fmt:formatDate var="ymd10" pattern="yyyy-MM-dd" value="${day10 }" />
-<fmt:formatDate var="ymd11" pattern="yyyy-MM-dd" value="${day11 }" />
-<fmt:formatDate var="ymd12" pattern="yyyy-MM-dd" value="${day12 }" />
-<fmt:formatDate var="ymd13" pattern="yyyy-MM-dd" value="${day13 }" />
-<fmt:formatDate var="ymd14" pattern="yyyy-MM-dd" value="${day14 }" />
-<fmt:formatDate var="ymd15" pattern="yyyy-MM-dd" value="${day15 }" />
-<fmt:formatDate var="ymd16" pattern="yyyy-MM-dd" value="${day16 }" />
-<fmt:formatDate var="ymd17" pattern="yyyy-MM-dd" value="${day17 }" />
-<fmt:formatDate var="ymd18" pattern="yyyy-MM-dd" value="${day18 }" />
-<fmt:formatDate var="ymd19" pattern="yyyy-MM-dd" value="${day19 }" />
-
-<!-- // owl-carousel 슬라이더에 사용될 일자 타입 변수 -->
-<fmt:formatDate var="m" pattern="MM" value="${today }" />
-<fmt:formatDate var="yd" pattern="dd" value="${yesterday }" />
-<fmt:formatDate var="d" pattern="dd" value="${today }" />
-<fmt:formatDate var="d1" pattern="dd" value="${day1 }" />
-<fmt:formatDate var="d2" pattern="dd" value="${day2 }" />
-<fmt:formatDate var="d3" pattern="dd" value="${day3 }" />
-<fmt:formatDate var="d4" pattern="dd" value="${day4 }" />
-<fmt:formatDate var="d5" pattern="dd" value="${day5 }" />
-<fmt:formatDate var="d6" pattern="dd" value="${day6 }" />
-<fmt:formatDate var="d7" pattern="dd" value="${day7 }" />
-<fmt:formatDate var="d8" pattern="dd" value="${day8 }" />
-<fmt:formatDate var="d9" pattern="dd" value="${day9 }" />
-<fmt:formatDate var="d10" pattern="dd" value="${day10 }" />
-<fmt:formatDate var="d11" pattern="dd" value="${day11 }" />
-<fmt:formatDate var="d12" pattern="dd" value="${day12 }" />
-<fmt:formatDate var="d13" pattern="dd" value="${day13 }" />
-<fmt:formatDate var="d14" pattern="dd" value="${day14 }" />
-<fmt:formatDate var="d15" pattern="dd" value="${day15 }" />
-<fmt:formatDate var="d16" pattern="dd" value="${day16 }" />
-<fmt:formatDate var="d17" pattern="dd" value="${day17 }" />
-<fmt:formatDate var="d18" pattern="dd" value="${day18 }" />
-<fmt:formatDate var="d19" pattern="dd" value="${day19 }" />
-<!-- // owl-carousel 슬라이더에 사용될 요일 타입 변수 -->
-<fmt:formatDate var="ye" pattern="E" value="${yesterday }" />
-<fmt:formatDate var="e" pattern="E" value="${today }" />
-<fmt:formatDate var="e1" pattern="E" value="${day1 }" />
-<fmt:formatDate var="e2" pattern="E" value="${day2 }" />
-<fmt:formatDate var="e3" pattern="E" value="${day3 }" />
-<fmt:formatDate var="e4" pattern="E" value="${day4 }" />
-<fmt:formatDate var="e5" pattern="E" value="${day5 }" />
-<fmt:formatDate var="e6" pattern="E" value="${day6 }" />
-<fmt:formatDate var="e7" pattern="E" value="${day7 }" />
-<fmt:formatDate var="e8" pattern="E" value="${day8 }" />
-<fmt:formatDate var="e9" pattern="E" value="${day9 }" />
-<fmt:formatDate var="e10" pattern="E" value="${day10 }" />
-<fmt:formatDate var="e11" pattern="E" value="${day11 }" />
-<fmt:formatDate var="e12" pattern="E" value="${day12 }" />
-<fmt:formatDate var="e13" pattern="E" value="${day13 }" />
-<fmt:formatDate var="e14" pattern="E" value="${day14 }" />
-<fmt:formatDate var="e15" pattern="E" value="${day15 }" />
-<fmt:formatDate var="e16" pattern="E" value="${day16 }" />
-<fmt:formatDate var="e17" pattern="E" value="${day17 }" />
-<fmt:formatDate var="e18" pattern="E" value="${day18 }" />
-<fmt:formatDate var="e19" pattern="E" value="${day19 }" />
-
-
-
 
 </head>
 
 <body>
+	<!--  날짜값 오늘 ~ 20일뒤 까지 변수 생성 -->
+	<c:set var="today" value="<%=new Date()%>" />
+	<c:set var="yesterday"
+		value="<%=new Date(new Date().getTime() - 60 * 60 * 24 * 1000 * 1)%>" />
+	<c:set var="day1"
+		value="<%=new Date(new Date().getTime() + 60 * 60 * 24 * 1000 * 1)%>" />
+	<c:set var="day2"
+		value="<%=new Date(new Date().getTime() + 60 * 60 * 24 * 1000 * 2)%>" />
+	<c:set var="day3"
+		value="<%=new Date(new Date().getTime() + 60 * 60 * 24 * 1000 * 3)%>" />
+	<c:set var="day4"
+		value="<%=new Date(new Date().getTime() + 60 * 60 * 24 * 1000 * 4)%>" />
+	<c:set var="day5"
+		value="<%=new Date(new Date().getTime() + 60 * 60 * 24 * 1000 * 5)%>" />
+	<c:set var="day6"
+		value="<%=new Date(new Date().getTime() + 60 * 60 * 24 * 1000 * 6)%>" />
+	<c:set var="day7"
+		value="<%=new Date(new Date().getTime() + 60 * 60 * 24 * 1000 * 7)%>" />
+	<c:set var="day8"
+		value="<%=new Date(new Date().getTime() + 60 * 60 * 24 * 1000 * 8)%>" />
+	<!-- // sc_date db값과 비교하기 위한 날짜값 (ex : 2022-11-11) -->
+	<fmt:formatDate var="ymd" pattern="yyyy-MM-dd" value="${today }" />
+	<fmt:formatDate var="ymd1" pattern="yyyy-MM-dd" value="${day1 }" />
+	<fmt:formatDate var="ymd2" pattern="yyyy-MM-dd" value="${day2 }" />
+	<fmt:formatDate var="ymd3" pattern="yyyy-MM-dd" value="${day3 }" />
+	<fmt:formatDate var="ymd4" pattern="yyyy-MM-dd" value="${day4 }" />
+	<fmt:formatDate var="ymd5" pattern="yyyy-MM-dd" value="${day5 }" />
+	<fmt:formatDate var="ymd6" pattern="yyyy-MM-dd" value="${day6 }" />
+	<fmt:formatDate var="ymd7" pattern="yyyy-MM-dd" value="${day7 }" />
+	<fmt:formatDate var="ymd8" pattern="yyyy-MM-dd" value="${day8 }" />
+
+	<!-- // owl-carousel 슬라이더에 사용될 일자 타입 변수 -->
+	<fmt:formatDate var="m" pattern="MM" value="${today }" />
+	<fmt:formatDate var="yd" pattern="dd" value="${yesterday }" />
+	<fmt:formatDate var="d" pattern="dd" value="${today }" />
+	<fmt:formatDate var="d1" pattern="dd" value="${day1 }" />
+	<fmt:formatDate var="d2" pattern="dd" value="${day2 }" />
+	<fmt:formatDate var="d3" pattern="dd" value="${day3 }" />
+	<fmt:formatDate var="d4" pattern="dd" value="${day4 }" />
+	<fmt:formatDate var="d5" pattern="dd" value="${day5 }" />
+	<fmt:formatDate var="d6" pattern="dd" value="${day6 }" />
+	<fmt:formatDate var="d7" pattern="dd" value="${day7 }" />
+	<fmt:formatDate var="d8" pattern="dd" value="${day8 }" />
+	<!-- // owl-carousel 슬라이더에 사용될 요일 타입 변수 -->
+	<fmt:formatDate var="ye" pattern="E" value="${yesterday }" />
+	<fmt:formatDate var="e" pattern="E" value="${today }" />
+	<fmt:formatDate var="e1" pattern="E" value="${day1 }" />
+	<fmt:formatDate var="e2" pattern="E" value="${day2 }" />
+	<fmt:formatDate var="e3" pattern="E" value="${day3 }" />
+	<fmt:formatDate var="e4" pattern="E" value="${day4 }" />
+	<fmt:formatDate var="e5" pattern="E" value="${day5 }" />
+	<fmt:formatDate var="e6" pattern="E" value="${day6 }" />
+	<fmt:formatDate var="e7" pattern="E" value="${day7 }" />
+	<fmt:formatDate var="e8" pattern="E" value="${day8 }" />
 
 
 
@@ -217,20 +185,38 @@ $(document).ready(function() {
 					<div class="owl-stage-outer">
 						<div class="owl-stage"
 							style="transform: translate3d(-5760px, 0px, 0px); transition: all 0.25s ease 0s; width: 11520px;">
-							<div class="owl-item cloned" style="width: 1920px;">
+
+							<div class="owl-item" style="width: 1920px;">
 								<div class="item">
 									<a href="#none"><img
-										src="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1108/ST_1920420.jpg"
-										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1110/ST_1280720.mp4"
+										src="https://caching2.lottecinema.co.kr/lotte_image/2022/AA/AA_1920420.jpg"
+										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/AA/AA_1280720.mp4"
+										alt="아바타 물의길 판도라의 바다 새로운 세계가 펼쳐진다 12월 대개봉 관람등급미정"></a>
+								</div>
+							</div>
+							<div class="owl-item active" style="width: 1920px;">
+								<div class="item">
+									<a href="#none"><img
+										src="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1121/ST_1920420.jpg"
+										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1121/ST_1280720.mp4"
 										alt=""></a>
 								</div>
 							</div>
+							<div class="owl-item" style="width: 1920px;">
+								<div class="item">
+									<a href="#none"><img
+										src="https://caching2.lottecinema.co.kr/lotte_image/2022/boo/boo_1920420.jpg"
+										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/boo/boo_1280720.mp4"
+										alt="극장판 뽀로로와 친구들 바이러스를 없애줘 전체관람가 12월 1일 롯데시네마에서 만나요 네모바이러스의 습격 친구들을 구하라"></a>
+								</div>
+							</div>
+
 							<div class="owl-item cloned" style="width: 1920px;">
 								<div class="item">
 									<a href="#none"><img
-										src="https://caching2.lottecinema.co.kr/lotte_image/2022/KI/KI_1920420.jpg"
-										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/KI/KI_1280720_1.mp4"
-										alt=""></a>
+										src="https://caching2.lottecinema.co.kr/lotte_image/2022/AA/AA_1920420.jpg"
+										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/AA/AA_1280720.mp4"
+										alt="아바타 물의길 판도라의 바다 새로운 세계가 펼쳐진다 12월 대개봉 관람등급미정"></a>
 								</div>
 							</div>
 						</div>
@@ -292,16 +278,36 @@ $(document).ready(function() {
 				</dl>
 
 				<ul class="pop_wrap">
-					<li><a href="#layerLocationPublic" title="레이어팝업 열기"><img
+					<li><a id="public" title="레이어팝업 열기"><img
 							src="https://www.lottecinema.co.kr/NLCHS/Content/images/icon/location_subway_40.png"
 							alt="대중교통 안내"><span>대중교통 안내</span></a></li>
-					<li><a href="#layerLocationCar" title="레이어팝업 열기"><img
+					<li><a id="car" title="레이어팝업 열기"><img
 							src="https://www.lottecinema.co.kr/NLCHS/Content/images/icon/location_car_40.png"
 							alt="자가용/주차안내"><span>자가용/주차안내</span></a></li>
-					<li><a href="#layerLocationMap" title="레이어팝업 열기"><img
+					<li><a id="maps" title="레이어팝업 열기" target="_blank"><img
 							src="https://www.lottecinema.co.kr/NLCHS/Content/images/icon/location_map_40.png"
 							alt="지도보기"><span>지도보기</span></a></li>
 				</ul>
+				<!-- 지도 -->
+				<div class="maps2" id="maps"
+					style="width: 445px; height: 350px; left: 53.5%; top: -11%; margin-left: -250; z-index: 10; position: absolute; overflow: hidden;">
+					<p class="pp">${dto.branch_addr }</p>
+					<button class="maphide" id="maphide">지도 닫기</button>
+					<div id="map"
+						style="width: 445px; height: 326px; left: 0%; top: 7%; margin-left: -250; position: absolute;">
+
+					</div>
+				</div>
+ 				<!-- 대중교통 -->
+ 				 <div class="public2" id="public1"
+					style="width: 445px; height: 350px; left: 53.5%; top: -11%; margin-left: -250; z-index: 9; position: absolute; ">
+					<p class="pp">${dto.branch_addr }</p>
+					<button class="maphide" id="public2">지도 닫기</button> 
+					<div style="width: 445px; height: 326px; left: 0%; top: 7%; margin-left: -250; position: absolute;">
+
+					</div> 
+				</div>   
+
 				<div class="notice_wrap_emp"></div>
 			</div>
 			<div class="rcm_wrap">
@@ -902,7 +908,7 @@ $(document).ready(function() {
 							<c:forEach var="fsche" items="${scheduleFirst }">
 								<c:if test="${fmovie.movieNm eq fsche.movieNm }">
 									<li class=""><a
-										href="./SeatSelect.th?branchCd=${fsche.branchCd }&date=${fsche.sc_date}&movie=${fsche.movieCd}&time=${fsche.starttime}"
+										href="./SeatSelect.th?scCode=${fsche.scCode}"
 										role="button">
 											<dl>
 												<dt>상영시간</dt>
@@ -925,6 +931,7 @@ $(document).ready(function() {
 
 
 					</c:forEach>
+
 				</div>
 			</li>
 		</ul>
@@ -937,13 +944,47 @@ $(document).ready(function() {
 
 	<div id="layerLocationPublic" class="layer_wrap layer_location_public"></div>
 	<div id="layerLocationCar" class="layer_wrap layer_location_car"></div>
-	<div id="layerLocationMap" class="layer_wrap layer_location_map"></div>
+
+
+	<script type="text/javascript"
+		src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2c915430ac4edcd6aa694ae234c0de27"></script>
+	<script>
+		var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+		mapOption = {
+			center : new kakao.maps.LatLng(${dto.branch_longitude}, ${dto.branch_latitude}), // 지도의 중심좌표
+			draggable : true,
+			// draggable: false, // 지도를 생성할때 지도 이동 및 확대/축소를 막으려면 draggable: false 옵션을 추가하세요
+			level : 3
+		// 지도의 확대 레벨
+		};
+
+		var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+		var mapTypeControl = new kakao.maps.MapTypeControl();
+		map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+		var zoomControl = new kakao.maps.ZoomControl();
+		map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+		var markerPosition  = new kakao.maps.LatLng(${dto.branch_longitude}, ${dto.branch_latitude}); 
+		// 버튼 클릭에 따라 지도 이동 기능을 막거나 풀고 싶은 경우에는 map.setDraggable 함수를 사용합니다
+		function setDraggable(draggable) {
+			// 마우스 드래그로 지도 이동 가능여부를 설정합니다
+			map.setDraggable(draggable);
+			
+		}
+		var marker = new kakao.maps.Marker({
+		    position: markerPosition
+		});
+		marker.setMap(map);
+	</script>
+
+
 
 
 	<!-- 하단배너 -->
 	<jsp:include page="../inc/loginform_bottom_banner.jsp" />
 	<!-- 약관 -->
 	<jsp:include page="../inc/footer.jsp" />
+
+
 
 
 

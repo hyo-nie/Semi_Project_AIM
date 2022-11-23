@@ -59,7 +59,7 @@
 	          	<li class=" ">
 					<a href="./PopcornDetail.st?st_num=${Combo.st_num}" class="btn_category_product">              
 					<span class="best_product_img_wrap">
-						<img src="./upload/${Combo.st_img }" alt="${Combo.st_name }"></span>              
+						<img src="./assets/img/${Combo.st_img }" alt="${Combo.st_name }"></span>              
 					<span class="best_product_text_wrap">                 
 						<span class="best_product_text_title">${Combo.st_name }</span>                  
 						<span class="best_product_text_name">${Combo.st_text }</span>                  
@@ -75,7 +75,7 @@
 	          	<li class=" ">
 					<a href="./GiftcardDetail.st?st_num=${ticket.st_num}" class="btn_category_product">              
 					<span class="best_product_img_wrap">
-						<img src="./upload/${ticket.st_img}" alt="${ticket.st_name }"></span>              
+						<img src="./assets/img/${ticket.st_img}" alt="${ticket.st_name }"></span>              
 					<span class="best_product_text_wrap">                 
 						<span class="best_product_text_title">${ticket.st_name }</span>                  
 						<span class="best_product_text_name">${ticket.st_text }</span>                  
@@ -91,7 +91,7 @@
 	          	<li class=" ">
 					<a href="./GiftcardDetail.st?st_num=${giftCard.st_num}" class="btn_category_product">              
 					<span class="best_product_img_wrap">
-						<img src="./upload/${giftCard.st_img }" alt="${giftCard.st_name }"></span>              
+						<img src="./assets/img/${giftCard.st_img }" alt="${giftCard.st_name }"></span>              
 					<span class="best_product_text_wrap">                 
 						<span class="best_product_text_title">${giftCard.st_name }</span>                  
 						<span class="best_product_text_name">${giftCard.st_text }</span>                  
@@ -122,7 +122,7 @@
 			          <li class=" ">
 							<a href="./GiftcardDetail.st?st_num=${giftlist.st_num }" class="btn_category_product">              
 							<span class="best_product_img_wrap">
-								<img src="./upload/${giftlist.st_img }" alt="${giftlist.st_img }"></span>  
+								<img src="./assets/img/${giftlist.st_img }" alt="${giftlist.st_img }"></span>  
 								           
 							<span class="best_product_text_wrap">                 
 								<span class="best_product_text_title">${giftlist.st_name }</span>                  
@@ -156,7 +156,7 @@
 			          <li class=" ">
 							<a href="./PopcornDetail.st?st_num=${poplist.st_num }" class="btn_category_product">              
 							<span class="best_product_img_wrap">
-								<img src="./upload/${poplist.st_img }" width="300" alt="${poplist.st_img }"></span>     
+								<img src="./assets/img/${poplist.st_img }" width="300" alt="${poplist.st_img }"></span>     
 	
 							<span class="best_product_text_wrap">                 
 								<span class="best_product_text_title">${poplist.st_name }</span>                  

@@ -79,7 +79,7 @@ int endRow = currentPage * pageSize;
 					<td>${dto.st_num}</td>
 					<td>${dto.category_name }</td>
 					<td>
-						<img src="./upload/${dto.st_img }">
+						<img src="./assets/img/${dto.st_img }" width="200" height="200">
 					</td>
 					<td>${dto.st_name }</td>
 					<td>
@@ -88,6 +88,7 @@ int endRow = currentPage * pageSize;
 					<td>${dto.st_text }</td>
 					<td>
 						<a href="./AdminStoreModify.ad?st_num=${dto.st_num }">수정</a>
+						/
 						<a href="./AdminStoreDel.ad?st_num=${dto.st_num }">삭제</a>
 					</td>
 				</tr>

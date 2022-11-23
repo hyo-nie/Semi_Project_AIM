@@ -2,6 +2,7 @@ package com.aim.movie.action;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.aim.movie.db.MovieDAO;
 import com.aim.movie.db.MovieDTO;
@@ -14,6 +15,17 @@ public class AdminMovieModifyProAction implements Action {
 		
 		System.out.println(" M : AdminMovieModifyProAction_execute 호출");
 		
+		// admin 전용 페이지 세션 제어
+		HttpSession session = request.getSession();
+		String id = (String)session.getAttribute("mb_id");
+		
+		ActionForward forward = new ActionForward();
+		
+		if(id == null || !id.equals("admin")) {			
+			forward.setPath("./Login.aim");
+			forward.setRedirect(true);
+			return forward;
+		}
 		
 		// 전달정보(DTO)
 		MovieDTO dto = new MovieDTO();
@@ -42,7 +54,6 @@ public class AdminMovieModifyProAction implements Action {
 		System.out.println("영화수정성공");
 		
 		// 페이지 이동
-		ActionForward forward = new ActionForward();
 		forward.setPath("./AdminMovieList.mv");
 		forward.setRedirect(true);
 		

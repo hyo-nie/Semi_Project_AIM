@@ -219,7 +219,6 @@ public class MemberFrontController extends HttpServlet {
     	} // Main.aim 끝
     	
     	else if (command.equals("/Logout.aim")) {
-    		System.out.println(" C : /Logout.aim 호출 ");
     		
     		// LogoutAction() 객체
     		action = new LogoutAction();
@@ -240,9 +239,9 @@ public class MemberFrontController extends HttpServlet {
     		forward.setRedirect(false);
     	} // AdminPage.aim 끝
     	
-    		
-    	else if(command.equals("/MyPage.aim")) {
-    		System.out.println(" C : /MyPage.aim 호출");
+    	else if (command.equals("/MyPage.aim")) {
+    		System.out.println("C : /MyPageAction.aim 호출");
+    		System.out.println("[패턴2]");
     		
     		action = new MyPageAction();
     		try {
@@ -250,9 +249,7 @@ public class MemberFrontController extends HttpServlet {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-    		
-    	}	
-    	
+    	} // MyPage.aim 끝
     	
 
     	

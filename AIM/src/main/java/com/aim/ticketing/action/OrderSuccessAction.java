@@ -7,8 +7,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.aim.member.db.MemberDAO;
+import com.aim.member.db.MemberDTO;
 import com.aim.schedule.db.ScheduleDTO;
 import com.aim.ticketing.db.ReservationDAO;
+import com.aim.ticketing.db.ReservationDTO;
 
 public class OrderSuccessAction implements Action {
 
@@ -94,11 +97,18 @@ public class OrderSuccessAction implements Action {
 		// reservationDAO - insertReservation : 예매 정보 저장
 		dao.insertReservation(scDTO, tkCode, totalPrice, totalCnt, id);
 		
-		// dao.getReservation(tkCode)
+		// dao.getReservation(tkCode) : tkCode에 해당하는 예매 정보 조회
+		ReservationDTO reDTO = dao.getReservation(tkCode);
+		
+		// 회원 정보 조회
+		MemberDAO mbDAO = new MemberDAO();
+		MemberDTO mbDTO = mbDAO.getMemberInfo(id);
 		
 		// request
 		request.setAttribute("seatArr", seatArr);
 		request.setAttribute("scDTO", scDTO);
+		request.setAttribute("reDTO", reDTO);
+		request.setAttribute("mbDTO", mbDTO);
 		
 		// 페이지 이동 준비
 		ActionForward forward = new ActionForward();
