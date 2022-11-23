@@ -18,7 +18,7 @@
 <body>
 
 	<%
-	//로그인 제어
+	// admin 전용 페이지 로그인 제어
 	String mb_id = (String)session.getAttribute("mb_id");
 	if(mb_id==null || !mb_id.equals("admin")){
 		response.sendRedirect("./Login.aim");
@@ -27,11 +27,17 @@
 	%>
 
 
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 	
-	<h1>adminMoiveList.jsp</h1>
-	
-	<br><br>
+<!-- 페이지 좌우 여백 틀 -->
+<!-- <div id="contents" class="contents_movie_list"> -->
+<!-- 	<h2 class="hidden">영화목록</h2> -->
+<!-- 		<div class="movie_screen_box"> -->
+<!-- 페이지 좌우 여백 틀 -->	
+
+
+<!-- 페이지 상단 여백 -->
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<!-- 페이지 상단 여백 표 14칸 ㅜ -->
 	
 		<table border="1">
 			<tr>
@@ -82,6 +88,13 @@
 		
 		
 	
+<!-- 페이지 좌우 여백 -->
+<!-- 		</div> -->
+<!-- </div> -->
+<!-- 페이지 좌우 여백 -->	
+
+<!-- 약관 -->
+<jsp:include page="../inc/footer.jsp" />	
 	
 	
 	
