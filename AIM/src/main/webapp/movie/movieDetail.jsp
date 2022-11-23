@@ -79,13 +79,7 @@
 						<div class="left_con">
 							<strong class="tit_info">시놉시스</strong>
 								<p class="txt_info">
-<<<<<<< HEAD
 									<span> ${dto.contents } </span>
-=======
-									<span>
-										${dto.contents }
-									</span>
->>>>>>> branch 'master' of https://github.com/hyo-nie/AIMAIM.git
 								</p>
 						</div>
 					</div>
