@@ -188,6 +188,7 @@ public class OrderDAO {
 					dto.setO_pay(rs.getString("o_pay"));
 					dto.setO_tel(rs.getString("o_tel"));
 					dto.setO_id(rs.getString("o_id"));
+					dto.setO_gimg(rs.getString("o_gimg"));
 					
 					orderList.add(dto);
 				}

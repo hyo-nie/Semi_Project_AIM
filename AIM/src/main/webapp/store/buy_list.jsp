@@ -16,6 +16,7 @@
 	
 	<jsp:include page="../inc/login_nav_bar.jsp"></jsp:include>
 
+
    <!-- 구매자 주문목록페이지  -->
 <%-- ${orderList} --%>
    <article>

@@ -46,7 +46,9 @@
   <span class="product_info_one_origin">
   </span>
   </div>
-  <div class="product_info_cnt_wrap" style= "margin-top: 0px; margin-bottom: 20px; padding-left: 90px; padding-right: 180px;"> ${dti.o_name } </div>
+  <div class="product_info_cnt_wrap" style= "margin-top: 0px; margin-bottom: 20px; padding-left: 90px; padding-right: 180px;"> ${dti.o_name } 
+          <img src="./assets/img/바코드.png" width="400" height="150" alt="${dti.o_name }">
+  </div>
   <div class="product_info_cnt_wrap" style= "margin-top: 0px; width: auto; padding-left: 60px;"> ${dti.o_amount } </div>
     <div class="product_info_cnt_wrap" style= "margin-top: 0px;">
 	 <span>
