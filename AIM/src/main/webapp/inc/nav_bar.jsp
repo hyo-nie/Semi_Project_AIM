@@ -46,7 +46,7 @@
 			<!-- 멤버십 주소 변경 -->
 			<li><a href="./NtList.nt">고객센터</a></li>
 			<!-- 고객센터 주소 변경 -->
-			<li><a href="#">단체관람/대관문의</a></li>
+			<li><a href="./RentalWrite.th">단체관람/대관문의</a></li>
 			<!-- 단체/대관문의 -->
 
 			<c:if test="${mb_id == null }">

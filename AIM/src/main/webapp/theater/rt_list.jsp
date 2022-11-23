@@ -47,8 +47,9 @@
 					
 							<td> 
 								<c:if test="${dto.r_re_lev > 0}">
-									<img src="./level.gif" width="${dto.r_re_lev * 10 }">
+									<img src="./level.png" width="${dto.r_re_lev * 10 }">
 									<img src="./re.gif">
+									
 								</c:if>
 								<a href="./AdminRentalContent.th?rno=${dto.rno }&pageNum=${pageNum}">${dto.r_name }</a>
 							</td>
@@ -64,15 +65,15 @@
 
 							  <!-- 이전 -->
 								  <c:if test="${startPage > pageBlock }">
-										<a href="./MyHpList.hp?pageNum=${startPage-pageBlock }">[이전]</a>
+										<a href="./AdminRentalList.th?pageNum=${startPage-pageBlock }">[이전]</a>
 									  </c:if>
 								 <!-- 페이지 번호(1,2,3....) -->	  
 								  <c:forEach var="i" begin="${startPage }" end="${endPage }" step="1">
-      									<a href="./MyHpList.hp?pageNum=${i }">${i }</a> 
+      									<a href="./AdminRentalList.th?pageNum=${i }">${i }</a> 
 								  </c:forEach>  
 								 <!-- 다음 -->	
 									  <c:if test="${endPage < pageCount }">
-   										<a href="./MyHpList.hp?pageNum=${startPage+pageBlock }">[다음]</a>
+   										<a href="./AdminRentalList.th?pageNum=${startPage+pageBlock }">[다음]</a>
 									 </c:if>
 
 					</c:if>
@@ -81,10 +82,6 @@
 				<button type="button" class="btn_pg_last">마지막 페이지로 이동</button>
 			</div>
 		</div>
-						
-<!-- 		<script> -->
-// 			onload();
-<!-- 		</script> -->
 
 	</div>
 

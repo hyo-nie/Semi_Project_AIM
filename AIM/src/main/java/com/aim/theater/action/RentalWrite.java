@@ -1,5 +1,6 @@
 package com.aim.theater.action;
 
+import java.io.PrintWriter;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -24,11 +25,17 @@ public class RentalWrite implements Action {
 		
 		
 		//로그인상태 아니면 로그인페이지로 이동시킴
-		ActionForward forward = new ActionForward();
+		
 		if(mb_id == null) {
-			forward.setPath("./Main.aim");
-			forward.setRedirect(true);
-			return forward;
+			response.setContentType("text/html; charset=UTF-8");
+			PrintWriter out = response.getWriter();
+			out.print("<script>");
+			out.print("alert('로그인이 필요한 서비스입니다.');");
+			out.print("location.href='./Login.aim?url=RentalWrite.th';");	
+			out.print("</script>");
+			out.flush();
+			
+			return null;
 		}
 		
 		
@@ -44,7 +51,7 @@ public class RentalWrite implements Action {
 		request.setAttribute("memberInfo", memberInfo);
 		
 		//페이지 이동 준비
-
+		ActionForward forward = new ActionForward();
 		forward.setPath("./theater/rental.jsp");
 		forward.setRedirect(false);
 		
