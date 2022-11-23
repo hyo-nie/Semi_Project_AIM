@@ -1,7 +1,6 @@
 package com.aim.movie.action;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -9,19 +8,17 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 public class MovieAPI {
 	
 	// 상수설정
-	private final String REQUEST_URL = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json";
+	//일간박스오피스
+//	private final String REQUEST_URL = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json";
+	private final String REQUEST_URL = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.json";
 	private final String KEY = "8d264108cfa20f086d75ae469aa86cb6";
 	
 	private final SimpleDateFormat DATE_FMT = new SimpleDateFormat("yyyyMMdd");
@@ -35,7 +32,7 @@ public class MovieAPI {
 		// 변수 설정 (하루전 날짜)
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(new Date());
-		cal.add(Calendar.DATE, -1);
+		cal.add(Calendar.DATE, -7);
 		
 		// 변수 설정
 		// 요청 인터페이스 Map
@@ -72,7 +69,7 @@ public class MovieAPI {
 //			String boxofficeType = boxOfficeResult.getString("boxofficeType");
 			
 			// 박스오피스 목록 출력
-			dailyBoxOfficeList = boxOfficeResult.getJSONArray("dailyBoxOfficeList");
+			dailyBoxOfficeList = boxOfficeResult.getJSONArray("weeklyBoxOfficeList");
 			
 			list = new ArrayList<JSONObject>();  //list에 JSON객체를 하나씩 담아서 출력
 			for (int i = 0; i < dailyBoxOfficeList.length(); i++) {

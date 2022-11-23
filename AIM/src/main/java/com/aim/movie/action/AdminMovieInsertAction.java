@@ -88,6 +88,39 @@ public class AdminMovieInsertAction implements Action {
 		JSONObject movieInfo9 = movieAPI.requestAPI(movieCd9);
 		JSONObject movieInfo10 = movieAPI.requestAPI(movieCd10);
 		
+		// 영화 내용(줄거리) 크롤링 소스 데이터 가공
+		String content1 = crawling1[2].replace("&lt;", "<");
+		content1 = crawling1[2].replace("&gt;", ">");
+		String content2 = crawling2[2].replace("&lt;", "<");
+		content2 = crawling2[2].replace("&gt;", ">");
+		String content3 = crawling3[2].replace("&lt;", "<");
+		content3 = crawling3[2].replace("&gt;", ">");
+		String content4 = crawling4[2].replace("&lt;", "<");
+		content4 = crawling4[2].replace("&gt;", ">");
+		String content5 = crawling5[2].replace("&lt;", "<");
+		content5 = crawling5[2].replace("&gt;", ">");
+		String content6 = crawling6[2].replace("&lt;", "<");
+		content6 = crawling6[2].replace("&gt;", ">");
+		String content7 = crawling7[2].replace("&lt;", "<");
+		content7 = crawling7[2].replace("&gt;", ">");
+		String content8 = crawling8[2].replace("&lt;", "<");
+		content8 = crawling8[2].replace("&gt;", ">");
+		String content9 = crawling9[2].replace("&lt;", "<");
+		content9 = crawling9[2].replace("&gt;", ">");
+		String content10 = crawling10[2].replace("&lt;", "<");
+		content10 = crawling10[2].replace("&gt;", ">");
+		
+		System.out.println(content1);
+		System.out.println(content2);
+		System.out.println(content3);
+		System.out.println(content4);
+		System.out.println(content5);
+		System.out.println(content6);
+		System.out.println(content7);
+		System.out.println(content8);
+		System.out.println(content9);
+		System.out.println(content10);
+		
 		// 영화정보 추출
 //		System.out.println(movieInfo1.get("actors"));
 //		JSONArray actorsArr1 = movieInfo1.getJSONArray("actors");
@@ -121,16 +154,16 @@ public class AdminMovieInsertAction implements Action {
 		dao.adminDeleteRankMoive();
 		
 		// adminInserMovie() boxOffice 1~10위 영화 정보 DB에 저장 
-		dao.adminInsertMovie(movieInfo1, audiAcc1, rank1, Double.parseDouble(crawling1[0]), crawling1[1]);	
-		dao.adminInsertMovie(movieInfo2, audiAcc2, rank2, Double.parseDouble(crawling2[0]), crawling2[1]);	
-		dao.adminInsertMovie(movieInfo3, audiAcc3, rank3, Double.parseDouble(crawling3[0]), crawling3[1]);	
-		dao.adminInsertMovie(movieInfo4, audiAcc4, rank4, Double.parseDouble(crawling4[0]), crawling4[1]);	
-		dao.adminInsertMovie(movieInfo5, audiAcc5, rank5, Double.parseDouble(crawling5[0]), crawling5[1]);	
-		dao.adminInsertMovie(movieInfo6, audiAcc6, rank6, Double.parseDouble(crawling6[0]), crawling6[1]);	
-		dao.adminInsertMovie(movieInfo7, audiAcc7, rank7, Double.parseDouble(crawling7[0]), crawling7[1]);	
-		dao.adminInsertMovie(movieInfo8, audiAcc8, rank8, Double.parseDouble(crawling8[0]), crawling8[1]);	
-		dao.adminInsertMovie(movieInfo9, audiAcc9, rank9, Double.parseDouble(crawling9[0]), crawling9[1]);	
-		dao.adminInsertMovie(movieInfo10, audiAcc10, rank10, Double.parseDouble(crawling10[0]), crawling10[1]);	
+		dao.adminInsertMovie(movieInfo1, audiAcc1, rank1, Double.parseDouble(crawling1[0]), crawling1[1], content1);	
+		dao.adminInsertMovie(movieInfo2, audiAcc2, rank2, Double.parseDouble(crawling2[0]), crawling2[1], content2);	
+		dao.adminInsertMovie(movieInfo3, audiAcc3, rank3, Double.parseDouble(crawling3[0]), crawling3[1], content3);	
+		dao.adminInsertMovie(movieInfo4, audiAcc4, rank4, Double.parseDouble(crawling4[0]), crawling4[1], content4);	
+		dao.adminInsertMovie(movieInfo5, audiAcc5, rank5, Double.parseDouble(crawling5[0]), crawling5[1], content5);	
+		dao.adminInsertMovie(movieInfo6, audiAcc6, rank6, Double.parseDouble(crawling6[0]), crawling6[1], content6);	
+		dao.adminInsertMovie(movieInfo7, audiAcc7, rank7, Double.parseDouble(crawling7[0]), crawling7[1], content7);	
+		dao.adminInsertMovie(movieInfo8, audiAcc8, rank8, Double.parseDouble(crawling8[0]), crawling8[1], content8);	
+		dao.adminInsertMovie(movieInfo9, audiAcc9, rank9, Double.parseDouble(crawling9[0]), crawling9[1], content9);	
+		dao.adminInsertMovie(movieInfo10, audiAcc10, rank10, Double.parseDouble(crawling10[0]), crawling10[1], content10);	
 		
 		// 페이지 이동
 		forward.setPath("./AdminMovieList.mv");

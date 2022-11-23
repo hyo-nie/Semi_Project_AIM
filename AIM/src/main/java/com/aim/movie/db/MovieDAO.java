@@ -157,7 +157,7 @@ public class MovieDAO {
 	 * 
 	 * adminInsertMovie(JSONObject) : 관리자가 DB에 API로 받아온 영화 정보를 저장하는 메서드, 중복값은 빼고 저장
 	 */
-	public void adminInsertMovie(JSONObject movieInfo, int audiAcc, int boxrank, double bookRating, String poster) {
+	public void adminInsertMovie(JSONObject movieInfo, int audiAcc, int boxrank, double bookRating, String poster, String content) {
 		
 		try {
 			con = getConnection();
@@ -220,7 +220,7 @@ public class MovieDAO {
 				String actors = actorsStringBuffer.toString();
 				pstmt.setString(11, actors); // 배우
 				
-				pstmt.setString(12, "임 시 값 입 니 다"); // 줄거리/내용 (일단 보류, 크롤링 해서 가져올 예정 @@@@@@@@@@@@@@@@@@@@@@@@@@)
+				pstmt.setString(12, content); // 줄거리/내용
 				pstmt.setInt(13, boxrank); // 순위
 				
 				
@@ -306,11 +306,13 @@ public class MovieDAO {
 	 */
 	public static List<MovieVo> getCGVdata() throws Exception{
 		
-		Document doc = Jsoup.connect("http://www.cgv.co.kr/movies/?lt=1&ft=0").get();
+		// http://www.cgv.co.kr/movies/?lt=1&ot=3
+		Document doc = Jsoup.connect("http://www.cgv.co.kr/movies/?lt=1&ot=3").get();
   
         Elements titles = doc.select("div.box-contents strong.title");        
         Elements percents = doc.select("div.box-contents div.score strong.percent span");
         Elements images = doc.select("div.box-image a span.thumb-image img");
+        Elements contentUrls = doc.select("div.box-image>a");
         
         List<MovieVo> list = new ArrayList<MovieVo>();
         
@@ -318,13 +320,36 @@ public class MovieDAO {
         	Element title = titles.get(i);
         	Element percent = percents.get(i);
         	
+        	String contentUrl = contentUrls.get(i).attr("href");
         	String image = images.get(i).attr("src");
         	String t = title.text();
         	String p = percent.text();
         	
         	double pv = Double.parseDouble(p.replace("%",""));
         	
-        	MovieVo vo = new MovieVo(t, pv, image);
+//        	System.out.println(contentUrl);
+        	// 줄거리 내용 정보 다시 크롤링 시작
+        	Document doc2 = Jsoup.connect("http://www.cgv.co.kr"+contentUrl).get();
+        	Elements contents = doc2.select("div.sect-story-movie");
+        	
+        	Element content = contents.get(0);
+        	
+        	String c = content.toString();
+        	c = c.replace("<div class=\"sect-story-movie\">", "");
+        	c = c.replace("</div>", "");
+        	c = c.replace("<span style=\"font-size:1.125em\">", "");
+        	c = c.replace("<span style=\"font-size:1.000em\">", "");
+        	c = c.replace("</span>", "");
+        	c = c.replace("<p>", "");
+        	c = c.replace("</p>", "");
+        	c = c.replace(",", "");
+        	c = c.replace("<", "&lt;");
+        	c = c.replace(">", "&gt;");
+        	// 줄거리 내용 정보 다시 크롤링	끝
+        	
+        	System.out.println(" 줄거리1 : " + c);
+        	
+        	MovieVo vo = new MovieVo(t, pv, image, c);
         	
         	list.add(vo);
         }
@@ -332,6 +357,44 @@ public class MovieDAO {
         return list;
         
 	}
+	
+	// 백업(현재 줄거리 내용 받아오게 수정중)
+//	/**
+//	 * 크롤링해서 cgv에서 title(제목), percents(예매율), image(포스터) 가져오는 메서드
+//	 */
+//	public static List<MovieVo> getCGVdata() throws Exception{
+//		
+//		// http://www.cgv.co.kr/movies/?lt=1&ot=3
+//		Document doc = Jsoup.connect("http://www.cgv.co.kr/movies/?lt=1&ot=3").get();
+//  
+//        Elements titles = doc.select("div.box-contents strong.title");        
+//        Elements percents = doc.select("div.box-contents div.score strong.percent span");
+//        Elements images = doc.select("div.box-image a span.thumb-image img");
+//        
+//        List<MovieVo> list = new ArrayList<MovieVo>();
+//        
+//        for(int i = 0; i < 19; i++) {
+//        	Element title = titles.get(i);
+//        	Element percent = percents.get(i);
+//        	
+//        	String image = images.get(i).attr("src");
+//        	String t = title.text();
+//        	String p = percent.text();
+//        	
+//        	double pv = Double.parseDouble(p.replace("%",""));
+//        	
+//        	MovieVo vo = new MovieVo(t, pv, image);
+//        	
+//        	list.add(vo);
+//        }
+//        
+//        return list;
+//        
+//	}
+	
+	
+	
+	
 	
 	
 	/**
