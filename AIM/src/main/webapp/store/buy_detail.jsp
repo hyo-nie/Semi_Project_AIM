@@ -42,13 +42,13 @@
 	<c:set var="totalPrice"/>
 	<c:set var="dti" value="${detailInfo[i] }" />
 <li>
-  <div class="product_info_wrap">
+  <div class="product_info_wrap" >
   <span class="product_info_one_origin">
   </span>
   </div>
-  <div class="product_info_cnt_wrap"> ${dti.o_name } </div>
-  <div class="product_info_cnt_wrap"> ${dti.o_amount } </div>
-    <div class="product_info_cnt_wrap">
+  <div class="product_info_cnt_wrap" style= "margin-top: 0px; margin-bottom: 20px; padding-left: 90px; padding-right: 180px;"> ${dti.o_name } </div>
+  <div class="product_info_cnt_wrap" style= "margin-top: 0px; width: auto; padding-left: 60px;"> ${dti.o_amount } </div>
+    <div class="product_info_cnt_wrap" style= "margin-top: 0px;">
 	 <span>
        <fmt:formatNumber value="${dti.o_sum}" />
      </span>
