@@ -4956,6 +4956,14 @@ select.ty5 ~ select.ty5 {margin-left:5px;}
 	opacity: 1;
 	background: white;
 	border-radius: 0px 0px 20px 20px;
+	width: 445px; 
+	height: 350px; 
+	left: 53.5%; 
+	top: -11%; 
+	margin-left: -250;
+	z-index: 10; 
+	position: absolute; 
+	overflow: hidden;
 }
 
 .maps2 {
@@ -4965,6 +4973,14 @@ select.ty5 ~ select.ty5 {margin-left:5px;}
 	opacity: 1;
 	background: white;
 	border-radius: 0px 0px 20px 20px;
+	width: 445px; 
+	height: 350px; 
+	left: 53.5%; 
+	top: -11%; 
+	margin-left: -250;
+	z-index: 10; 
+	position: absolute; 
+	overflow: hidden;
 }
 
 .public2 {
@@ -4991,5 +5007,14 @@ line-height: 19px;
     font-size: 13px;
     color: #414141;
     background: url("https://www.lottecinema.co.kr/NLCHS/Content/images/icon/location_pointer.png") no-repeat 0 0;
+}
+.ppp{
+line-height: 19px;
+    margin-bottom: 18px;
+    padding-left: 165px;
+    padding-top: 15px;
+    font-size: 15px;
+    color: #414141;
+   
 }
 
