@@ -61,7 +61,7 @@
 					<select name="poster${j }">	
 						<option>포스터를 선택하세요.</option>
 						<c:forEach var="cgv" items="${cgvList }">
-							<option value="${cgv.percent},${cgv.image}" >
+							<option value="${cgv.percent},${cgv.image},${cgv.content}">
 								${cgv.title }
 							</option>
 						</c:forEach>

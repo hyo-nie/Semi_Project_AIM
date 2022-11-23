@@ -79,7 +79,13 @@
 						<div class="left_con">
 							<strong class="tit_info">시놉시스</strong>
 								<p class="txt_info">
+<<<<<<< HEAD
 									<span> ${dto.contents } </span>
+=======
+									<span>
+										${dto.contents }
+									</span>
+>>>>>>> branch 'master' of https://github.com/hyo-nie/AIMAIM.git
 								</p>
 						</div>
 					</div>
@@ -109,7 +115,7 @@
 									<span class="byte_info"><strong class="byte">0</strong>/<em>220</em></span>
 								</div>
 	<!-- 							<button type="submit" id="btnComment" class="btn_submit">관람평 작성</button> -->
-								<input type="submit" id="btnComment" class="btn_submit" value="관람평 작성" style="width:139px; background:#18315D;">
+								<input type="submit" id="btnComment" class="btn_submit" value="관람평 작성" style="width:138px; background:#18315D;">
 							</div>
 						</form>
 						
