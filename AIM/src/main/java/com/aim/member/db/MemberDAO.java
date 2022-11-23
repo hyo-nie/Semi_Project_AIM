@@ -270,19 +270,16 @@ public class MemberDAO {
     //getMemberInfo() 끝
    
    // 회원정보조회
-    public MemberDTO getMember(String id){
-		MemberDTO dto = null;
+    public MemberDTO getMember(String mb_id){
+		MemberDTO dto = new MemberDTO();
 		try {
 			con = getConnection();
 			sql = "select * from member where mb_id=?";
 			pstmt = con.prepareStatement(sql);
-			
-			pstmt.setString(1, id);
+			pstmt.setString(1, mb_id);
 			rs = pstmt.executeQuery();
 			
 			if(rs.next()) {
-				dto = new MemberDTO();
-				
 				dto.setMb_id(rs.getString("mb_id"));
 				dto.setMb_pw(rs.getString("mb_pw"));
 				dto.setMb_name(rs.getString("mb_name"));
@@ -305,5 +302,7 @@ public class MemberDAO {
 		return dto;
 	}
     // 회원정보조회
+    
+    
    
 }

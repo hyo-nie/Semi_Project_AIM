@@ -1585,7 +1585,7 @@ ver : 1.01 20191219 2502 line > íŒì—…ë©”ë‰´ ê³ ì •ë†�
 /* ë§ˆì´íŽ˜ì´ì§€/vipì¡´ ========================================================================================= */
 #contents.contents_vipzone:before {content:""; position:absolute; z-index:-1; left:0; right:0; top:114px; height:280px; background:url('../images/member/bg_vipzone.jpg') repeat-x;}
 #contents.contents_vipzone > .vip_title {margin-bottom:50px; text-align:center;}
-.vip_top_infor {overflow:hidden; position:relative; margin:0 auto 50px; border-radius:10px; box-shadow:0 10px 10px rgba(0, 0, 0, .1); background-color:#FFF;}
+.vip_top_infor {overflow:hidden; position:relative; margin:0 auto 50px; border-radius:10px; box-shadow:0 10px 10px rgba(0, 0, 0, .1); background-color:whitesmoke;}
 .vip_top_infor .mypage_box {float:none; padding:0 162px; width:auto; height:auto; min-height:inherit; margin-bottom: 40px;}
 .vip_top_infor .mypage_box .my_info {padding:37px 0 0 0;}
 .vip_top_infor .mypage_box .my_info .profile_img {display:none; left:0; top:30px;}

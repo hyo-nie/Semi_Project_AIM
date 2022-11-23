@@ -240,8 +240,8 @@ public class MemberFrontController extends HttpServlet {
     	} // AdminPage.aim 끝
     	
     	else if (command.equals("/MyPage.aim")) {
-    		System.out.println("C : /MyPageAction.aim 호출");
-    		System.out.println("[패턴2]");
+    		System.out.println("C : /MyPage.aim 호출");
+    		System.out.println("[패턴3]");
     		
     		action = new MyPageAction();
     		try {
@@ -250,6 +250,26 @@ public class MemberFrontController extends HttpServlet {
 				e.printStackTrace();
 			}
     	} // MyPage.aim 끝
+    	
+    	else if(command.equals("/MemberUpdate.aim")) {       
+        System.out.println("C : /MemberUpdate.aim 호출");
+        System.out.println("[패턴1]");
+        
+        forward = new ActionForward();
+        forward.setPath("./member/memberUpdate.jsp");
+        forward.setRedirect(false);
+        
+      } // MemberUpdate.aim 끝
+    	
+    	else if(command.equals("/MemberDelete.aim")) {       
+        System.out.println("C : /MemberDelete.aim 호출");
+        System.out.println("[패턴1]");
+        
+        forward = new ActionForward();
+        forward.setPath("./member/memberDelete.jsp");
+        forward.setRedirect(false);
+        
+      } // MemberUpdate.aim 끝
     	
 
     	

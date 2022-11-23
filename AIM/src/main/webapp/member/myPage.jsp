@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,31 +16,29 @@
 <jsp:include page="../inc/nav_bar.jsp" />
 </head>
 <body>
-	
-<br><br><br><br><br>
-<!-- 본문 -->
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<!-- 본문 -->
 <div id="contents" style="margin-top: 120px;">
-	<h2 class="h2_memtit">멤버십</h2>
-	<div class="pb20 area__movingbar litype2">
-		<ul class="tab_wrap outer actionmovingbar">
-			<li class="active">
-				<button type="button" class="tab_tit" style="width: 100%; left: 0%;">
-					<span>My Page</span>
-				</button>
-				<div class="tab_con">
+		<h2 class="h2_memtit">My Page</h2>
+		<div class="pb20 area__movingbar litype2">
+			<ul class="tab_wrap outer actionmovingbar" style="padding-top:10px;">
+				<li class="active">
+					<div class="tab_con">
 						<div class="vip_top_infor">
 							<div class="mypage_box">
 								<div class="my_info">
 									<p class="name">
-										<strong>송이님은</strong> <span class="txt_rank_common">일반</span>
+										<strong>${dto.mb_id}</strong>님은 <span class="txt_rank_common">${dto.mb_grade }</span>
 										<span class="light">등급입니다.</span>
 									</p>
 									<div class="next_rank">
 										<p>
-											1분기 Lv.1까지 <em class="font22">40,000원 남았어요!</em>
 										</p>
-										<button type="button" class="btn_txt_list"
-											title="레이어팝업 열기" id="btnAcc">적립내역</button>
 									</div>
 								</div>
 								<div class="bx_grade merge2020">
@@ -48,15 +48,15 @@
 								</div>
 							</div>
 							<div class="text_c mt30 mb25">
-								<a href="#none" title="레이어팝업 열기"
-									class="btn_col10 ty5 rnd pl40 pr40" style="width:120px;">회원정보수정</a>
+								<a href="./MemberUpdate.aim" style="font-size:15px;">회원정보변경</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="./MemberDelete.aim" style="font-size:15px;">회원탈퇴</a>
 							</div>
 						</div>
-						
+
 						<div class="benefit_wrap">
-							<div class="txt_list_wrap">
+							<div class="txt_list_wrap" style="margin-bottom:50px;">
 								<h3 class="tit">
-									<em>예매내역 조회</em> 
+									<em>예매내역 조회</em>
 								</h3>
 								<div class="list_bdr_box">
 									<ul class="list_txt">
@@ -65,9 +65,9 @@
 									</ul>
 								</div>
 							</div>
-							<div class="txt_list_wrap">
+							<div class="txt_list_wrap" style="margin-bottom:50px;">
 								<h3 class="tit">
-									<em>구매내역 조회</em> 
+									<em>구매내역 조회</em>
 								</h3>
 								<div class="list_bdr_box">
 									<ul class="list_txt">
@@ -76,26 +76,47 @@
 									</ul>
 								</div>
 							</div>
-							<div class="txt_list_wrap">
+							<div class="txt_list_wrap" style="margin-bottom:50px;">
 								<h3 class="tit">
 									<em>1:1 문의내역</em>
 								</h3>
 								<div class="list_bdr_box">
-									<ul class="list_txt">
-										<li>ㅇㅇ</li>
-									</ul>
+                  <ul class="list_txt" style="text-align:center;">
+								    <li>FAQ를 이용하시면 궁금증을 더 빠르게 해결하실 수 있습니다.</li>
+                    <li>1:1 문의글 답변 운영시간 10:00 ~ 19:00</li>
+                    <li>접수 후 48시간 안에 답변 드리겠습니다.</li>
+                  </ul>
+									<button onclick="location.href='./MyHpList.hp';" 
+									        style="height:40px; line-height:38px; padding:0 18px; margin:auto; display: block;">1:1 문의내역</button>
+                </div>
+								<div>
+								</div>
+              </div>
+							<div class="txt_list_wrap" style="margin-bottom:50px;">
+								<h3 class="tit">
+									<em>대관 문의내역</em>
+								</h3>
+								<div class="list_bdr_box">
+									 <ul class="list_txt" style="text-align:center;">
+                    <li>단체관람 및 대관을 원하시는 고객님께 할인 혜택을 드리고 있습니다.<br>
+                    신청을 원하시거나 문의사항이 있으시면 아래 정보를 입력해주세요.</li>
+                  </ul>
+                  <button onclick="location.href='./AdminRentalList.th';" 
+                          style="height:40px; line-height:38px; padding:0 18px; margin:auto; display: block;">대관 문의내역</button>
 								</div>
 							</div>
+							</div>
 						</div>
-				</div></li>
+				</li>
 			</ul>
-			</div>
-			</div>
-				
-						
-						
+	</div>
+</div>
 
 
+
+
+	<!-- 약관 -->
+	<jsp:include page="../inc/footer.jsp" />
 
 </body>
 </html>

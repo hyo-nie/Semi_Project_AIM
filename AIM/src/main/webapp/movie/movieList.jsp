@@ -177,7 +177,8 @@ $(document).ready(function() {
 						<strong class="tit_info">${movie.movieNm }</strong>
 						<span class="sub_info1">
 							<span class="rate_info"><em>예매율 ${movie.bookRating }%</em></span><br>
-							<button onclick="location.href='./Ticketing.tk?movieCd=${movie.movieCd}';" style="color:#fff; background:#18315D; width:75px; height:25px; margin:5px; border-radius:5px;">예매</button>
+							<button onclick="location.href='./Ticketing.tk?movieCd=${movie.movieCd}';" 
+							        style="color:#fff; background:#18315D; width:75px; height:25px; margin:5px; border-radius:5px;">예매</button>
 							<br>
 						</span>
 					</div>
