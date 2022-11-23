@@ -514,7 +514,7 @@ input[type='text'][readonly]{background-color:#fff}
 			.category_product_list > li:nth-child(even){padding-right:30px; clear:both}
 			.category_product_list > li:nth-child(odd){padding-left:30px}
 			.category_product_list > li .category_product_title{display:block; position:relative; width:100%; margin-bottom:20px; padding-bottom:10px; font-family:'Noto Sans KR'; font-weight:500; font-size:28px; color:#000; line-height:1em; border-bottom:1px solid #999}
-			.category_product_list > li .category_product_title .btn_category_product{display:block; position:absolute; right:0; top:4px; width:23px; height:23px; font-size:0; background:transparent url('/assets/img/bg_moreBtn.png') left top scroll no-repeat}
+			.category_product_list > li .category_product_title .btn_category_product{display:block; position:absolute; right:0; top:4px; width:23px; height:23px; font-size:0; background:transparent url('../img/bg_moreBtn.png') left top scroll no-repeat}
 			.category_product_list > li:first-child{width:100%; margin-top:0; padding:0 }
 			.category_product_list > li:first-child .category_product_title{margin-bottom:30px; font-family:'CJONLYONENEW'}
 
