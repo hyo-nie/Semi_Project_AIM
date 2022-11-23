@@ -32,8 +32,72 @@
 	<h2 class="hidden">영화목록</h2>
 		<div class="movie_screen_box">
 <!-- 페이지 좌우 여백 틀 -->	
-	
+
+
+<!-- 페이지 상단 여백 -->
 <br><br><br><br><br><br><br><br><br><br><br><br>
+<!-- 페이지 상단 여백 -->
+
+
+
+
+<!-- 	스토어에서 쌔빈 코드 -->	<!-- css : /* ADMINPAGE ==== , /* ADMINPAGE */:x -->
+<!-- 	<div id="contents" class="contents_admin_home"> -->
+<!-- 		<div class="title_top"> -->
+<!-- 			<h2 class="tit01"><strong class="tit02">AIM </strong> 관리자 페이지</h2> -->
+<!-- 		</div> -->
+<!-- 	</div> -->
+
+<!-- 상단 이름 -->
+<div class="movi_pre_list">
+<h3 class="tit_type0"><strong class="ty2 eng">AIM</strong> 관리자 페이지</h3>
+</div>
+<!-- 상단 이름 -->
+
+<!-- 내용 시작 -->
+	<table class="tbl_list text_c">
+		<colgroup>
+			<col style="width: 10%;">
+			<col style="width: 15%;">
+			<col style="width: auto;">
+			<col style="width: 15%;">
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col">영화</th>
+				<th scope="col">영화관</th>
+				<th scope="col">스토어</th>
+			</tr>
+		</thead>
+		<tbody>
+				<tr>
+					<td><a class="tit_info" href="./AdminMovieInsert.mv">API로 영화 정보 저장</a></td>
+					<td><a href="./AdminScheAdd.th">스케줄 등록하기</a></td>
+					<td><a class="tit_info" href="./AdminStoreAdd.ad">스토어 상품 등록</a></td>
+				</tr>		
+				<tr>
+					<td><a class="tit_info" href="./AdminMovieList.mv">등록 영화 LIST</a></td>
+					<td><a href="./AdminScheList.th">관리자 스케줄 LIST</a></td>
+					<td><a class="tit_info" href="./AdminStoreList.ad">스토어 등록 상품 LIST</a></td>
+				</tr>	
+				<tr>
+					<td><a class="tit_info" href="./AdminMovieInsert2.mv">추천영화 정보 저장</a></td>
+					<td><a href="./AdminRentalList.th">관리자 대관문의 리스트</a></td>
+					<td>3</td>
+				</tr>
+		</tbody>
+	</table>
+<!-- 내용 끝 -->
+<!-- 	스토어에서 쌔빈 코드 -->
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br>
+
+
 
 <!-- 관리자 페이지 틀 -->
 <div class="movi_pre_list">
@@ -47,6 +111,7 @@
 				<a class="tit_info" href="./AdminMovieInsert.mv">API로 영화 정보 저장</a>
 				<a class="tit_info" href="./AdminMovieList.mv">등록 영화 LIST</a>
 				<a class="tit_info" href="./AdminMovieInsert2.mv">추천영화 정보 저장</a>
+				
 				<a class="tit_info" href="./AdminStoreAdd.ad">스토어 상품 등록</a>
 				<a class="tit_info" href="./AdminStoreList.ad">스토어 등록 상품 LIST</a>
 			</div>
@@ -58,13 +123,7 @@
 
 
 
-
-
-
-
-
-
-
+<!-- 원래있던내용이자 들어가야할 내용 버튼들 -->
 	<form action="">
 		<input type="button" value="DB에 영화 정보 저장" onclick="location.href='./AdminMovieInsert.mv'">
 		
@@ -81,6 +140,17 @@
 		<br><br><br>
 	<h2>대관문의 리스트</h2><br>
 	<a href="./AdminRentalList.th">관리자 대관문의 리스트</a>
+<!-- 원래있던내용이자 들어가야할 내용 버튼들 -->	
+	
+		
+
+
+
+	
+	
+
+	
+	
 <!-- 페이지 좌우 여백 -->
 		</div>
 </div>

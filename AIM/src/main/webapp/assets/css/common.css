@@ -565,6 +565,28 @@ body {overflow-y:scroll;}
 .footer .article_award ul li:last-child {margin-right:0;}
 .footer .article_award ul li a {display:block;}
 
+
+/* ADMINPAGE ================================================== */
+#contents {width:980px; margin:0 auto; padding:50px 0 0 0;}
+#contents.contents_full {width:100%;}
+#contents.contents_full .contents_inner {width:980px; margin:0 auto;}
+#contents.contents_mypage:before {content:""; position:absolute; z-index:-1; left:0; right:0; top:114px; height:334px; background-color:#FF7787;}
+#contents.contents_movie_detail {padding-top:35px;}
+#contents.contents_mall_home {padding-top:30px;}
+#contents.contents_member_comn {padding-top:105px;}
+#contents.contents_reserve {padding : 73px 0 0 0; background-color:#444}
+/* 본문상단영역 */
+#contents > .title_top {margin-bottom:20px; padding:25px 0 14px; border-bottom:1px solid #EEE;}
+#contents > .title_top:after {content:""; display:block; clear:both;}
+#contents > .title_top.ty2 {margin-bottom:10px; border-bottom:none;}
+#contents > .title_top .tit01 {float:left; font-size:24px; color:#000;}
+#contents > .title_top .tit02 {float:left; font-size:24px; color:#ED4C6B;}
+#contents > .title_top .group_rgt {float:right;}
+#contents > .title_top .group_rgt .list_lnk {margin-top:10px;}
+#contents > .title_top .group_rgt .bx_search {margin-top:-7px;}
+#contents > .title_top .group_rgt .bx_search.ty2 {margin-top:0;}
+
+
 /* contents ================================================== */
 #contents {width:980px; margin:0 auto; padding:50px 0 0 0;}
 #contents.contents_full {width:100%;}
