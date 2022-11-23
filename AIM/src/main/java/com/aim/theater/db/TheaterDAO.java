@@ -11,6 +11,7 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
+import com.aim.member.db.MemberDTO;
 import com.aim.schedule.db.ScheduleDTO;
 
 public class TheaterDAO {
@@ -216,7 +217,7 @@ public class TheaterDAO {
 	
 	
 	//선택한 상영정보 리스트
-	public TheaterDTO getSelectSche(int branchCd, String date, String movie, String time) {
+	public TheaterDTO getSelectSche(int scCode) {
 		TheaterDTO selectScheList = null;
 		
 		try {
@@ -229,13 +230,10 @@ public class TheaterDAO {
 					+ "on schedule.branchCd = theater.branchCd "
 					+ "join room "
 					+ "on schedule.roomCd = room.roomCd "
-					+ "where schedule.branchCd=? and sc_date=? and schedule.movieCd=? and starttime=?;";
+					+ "where schedule.scCode=?;";
 			pstmt = con.prepareStatement(sql);
 			
-			pstmt.setInt(1, branchCd);
-			pstmt.setString(2, date);
-			pstmt.setString(3, movie);
-			pstmt.setString(4, time);
+			pstmt.setInt(1, scCode);
 			
 			rs = pstmt.executeQuery();
 			
@@ -469,5 +467,6 @@ public class TheaterDAO {
 		}
 	}
 	//스케줄 삭제 - adminRemoveSche(scCode)
+	
 	
 }

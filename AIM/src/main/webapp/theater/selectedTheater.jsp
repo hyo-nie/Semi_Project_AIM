@@ -85,18 +85,31 @@
 
 	});
 	$(function() {
-		$("#maps2").on("click", function() {
+		$("#maphide").on("click", function() {
 
 			$(".maps1").attr('class', 'maps2')
 			return false;
 		});
 
 	});
-</script>
-<style type="text/css">
+ 	$(function() {
+		$("#public").on("click", function() {
 
-}
-</style>
+			$(".public2").attr('class', 'public1')
+			return false;
+		});
+
+	});
+	$(function() {
+		$("#public2").on("click", function() {
+
+			$(".public1").attr('class', 'public2')
+			return false;
+		});
+
+	}); 
+</script>
+
 </head>
 
 <body>
@@ -172,70 +185,40 @@
 					<div class="owl-stage-outer">
 						<div class="owl-stage"
 							style="transform: translate3d(-5760px, 0px, 0px); transition: all 0.25s ease 0s; width: 11520px;">
-<div class="owl-item cloned" style="width: 1920px;">
-		<div class="item">
-			<a href="#none"><img
-				src="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1121/ST_1920420.jpg"
-				data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1121/ST_1280720.mp4"
-				alt=""></a>
-		</div>
-	</div>
-	<div class="owl-item cloned" style="width: 1920px;">
-		<div class="item">
-			<a href="#none"><img
-				src="https://caching2.lottecinema.co.kr/lotte_image/2022/boo/boo_1920420.jpg"
-				data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/boo/boo_1280720.mp4"
-				alt="극장판 뽀로로와 친구들 바이러스를 없애줘 전체관람가 12월 1일 롯데시네마에서 만나요 네모바이러스의 습격 친구들을 구하라"></a>
-		</div>
-	</div>
-	<div class="owl-item" style="width: 1920px;">
-		<div class="item">
-			<a href="#none"><img
-				src="https://caching2.lottecinema.co.kr/lotte_image/2022/PR/PR_1920420.jpg"
-				data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/PR/PR_1280720.mp4"
-				alt=""></a>
-		</div>
-	</div>
-	<div class="owl-item" style="width: 1920px;">
-		<div class="item">
-			<a href="#none"><img
-				src="https://caching2.lottecinema.co.kr/lotte_image/2022/AA/AA_1920420.jpg"
-				data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/AA/AA_1280720.mp4"
-				alt="아바타 물의길 판도라의 바다 새로운 세계가 펼쳐진다 12월 대개봉 관람등급미정"></a>
-		</div>
-	</div>
-	<div class="owl-item active" style="width: 1920px;">
-		<div class="item">
-			<a href="#none"><img
-				src="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1121/ST_1920420.jpg"
-				data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1121/ST_1280720.mp4"
-				alt=""></a>
-		</div>
-	</div>
-	<div class="owl-item" style="width: 1920px;">
-		<div class="item">
-			<a href="#none"><img
-				src="https://caching2.lottecinema.co.kr/lotte_image/2022/boo/boo_1920420.jpg"
-				data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/boo/boo_1280720.mp4"
-				alt="극장판 뽀로로와 친구들 바이러스를 없애줘 전체관람가 12월 1일 롯데시네마에서 만나요 네모바이러스의 습격 친구들을 구하라"></a>
-		</div>
-	</div>
-	<div class="owl-item cloned" style="width: 1920px;">
-		<div class="item">
-			<a href="#none"><img
-				src="https://caching2.lottecinema.co.kr/lotte_image/2022/PR/PR_1920420.jpg"
-				data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/PR/PR_1280720.mp4"
-				alt=""></a>
-		</div>
-	</div>
-	<div class="owl-item cloned" style="width: 1920px;">
-		<div class="item">
-			<a href="#none"><img
-				src="https://caching2.lottecinema.co.kr/lotte_image/2022/AA/AA_1920420.jpg"
-				data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/AA/AA_1280720.mp4"
-				alt="아바타 물의길 판도라의 바다 새로운 세계가 펼쳐진다 12월 대개봉 관람등급미정"></a>
-		</div>
-	</div>
+
+							<div class="owl-item" style="width: 1920px;">
+								<div class="item">
+									<a href="#none"><img
+										src="https://caching2.lottecinema.co.kr/lotte_image/2022/AA/AA_1920420.jpg"
+										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/AA/AA_1280720.mp4"
+										alt="아바타 물의길 판도라의 바다 새로운 세계가 펼쳐진다 12월 대개봉 관람등급미정"></a>
+								</div>
+							</div>
+							<div class="owl-item active" style="width: 1920px;">
+								<div class="item">
+									<a href="#none"><img
+										src="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1121/ST_1920420.jpg"
+										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1121/ST_1280720.mp4"
+										alt=""></a>
+								</div>
+							</div>
+							<div class="owl-item" style="width: 1920px;">
+								<div class="item">
+									<a href="#none"><img
+										src="https://caching2.lottecinema.co.kr/lotte_image/2022/boo/boo_1920420.jpg"
+										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/boo/boo_1280720.mp4"
+										alt="극장판 뽀로로와 친구들 바이러스를 없애줘 전체관람가 12월 1일 롯데시네마에서 만나요 네모바이러스의 습격 친구들을 구하라"></a>
+								</div>
+							</div>
+
+							<div class="owl-item cloned" style="width: 1920px;">
+								<div class="item">
+									<a href="#none"><img
+										src="https://caching2.lottecinema.co.kr/lotte_image/2022/AA/AA_1920420.jpg"
+										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/AA/AA_1280720.mp4"
+										alt="아바타 물의길 판도라의 바다 새로운 세계가 펼쳐진다 12월 대개봉 관람등급미정"></a>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="owl-nav" style="width: 2378px; margin-left: -1189px;">
@@ -295,25 +278,36 @@
 				</dl>
 
 				<ul class="pop_wrap">
-					<li><a href="#layerLocationPublic" title="레이어팝업 열기"><img
+					<li><a id="public" title="레이어팝업 열기"><img
 							src="https://www.lottecinema.co.kr/NLCHS/Content/images/icon/location_subway_40.png"
 							alt="대중교통 안내"><span>대중교통 안내</span></a></li>
-					<li><a href="#layerLocationCar" title="레이어팝업 열기"><img
+					<li><a id="car" title="레이어팝업 열기"><img
 							src="https://www.lottecinema.co.kr/NLCHS/Content/images/icon/location_car_40.png"
 							alt="자가용/주차안내"><span>자가용/주차안내</span></a></li>
 					<li><a id="maps" title="레이어팝업 열기" target="_blank"><img
 							src="https://www.lottecinema.co.kr/NLCHS/Content/images/icon/location_map_40.png"
 							alt="지도보기"><span>지도보기</span></a></li>
 				</ul>
+				<!-- 지도 -->
 				<div class="maps2" id="maps"
 					style="width: 445px; height: 350px; left: 53.5%; top: -11%; margin-left: -250; z-index: 10; position: absolute; overflow: hidden;">
 					<p class="pp">${dto.branch_addr }</p>
-					<button class="maphide" id="maps2">지도 닫기</button>
+					<button class="maphide" id="maphide">지도 닫기</button>
 					<div id="map"
 						style="width: 445px; height: 326px; left: 0%; top: 7%; margin-left: -250; position: absolute;">
 
 					</div>
 				</div>
+ 				<!-- 대중교통 -->
+ 				 <div class="public2" id="public1"
+					style="width: 445px; height: 350px; left: 53.5%; top: -11%; margin-left: -250; z-index: 9; position: absolute; ">
+					<p class="pp">${dto.branch_addr }</p>
+					<button class="maphide" id="public2">지도 닫기</button> 
+					<div style="width: 445px; height: 326px; left: 0%; top: 7%; margin-left: -250; position: absolute;">
+
+					</div> 
+				</div>   
+
 				<div class="notice_wrap_emp"></div>
 			</div>
 			<div class="rcm_wrap">
@@ -914,7 +908,7 @@
 							<c:forEach var="fsche" items="${scheduleFirst }">
 								<c:if test="${fmovie.movieNm eq fsche.movieNm }">
 									<li class=""><a
-										href="./SeatSelect.th?branchCd=${fsche.branchCd }&date=${fsche.sc_date}&movie=${fsche.movieCd}&time=${fsche.starttime}"
+										href="./SeatSelect.th?scCode=${fsche.scCode}"
 										role="button">
 											<dl>
 												<dt>상영시간</dt>

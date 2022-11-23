@@ -47,7 +47,7 @@
 						<li class="">
 							<a href="./GiftcardDetail.st?st_num=${giftcard.st_num}" class="btn_category_product"> 
 							<span class="com_list_img_wrap">
-								<img src="./upload/${giftcard.st_img }" alt="${giftcard.st_name }"></span> 
+								<img src="./assets/img/${giftcard.st_img }" alt="${giftcard.st_name }"></span> 
 								<span class="com_list_text_wrap"> 
 								<span class="com_list_text_title">${giftcard.st_name }</span> 
 								<span class="com_list_text_name">${giftcard.st_text }</span> 
