@@ -70,7 +70,7 @@
             </div>
          </table>
       <div class="com_btn_wrap pT60">
-         <a href="#none" class="btn_style0 " onclick="location.href='./Main.aim';">돌아가기</a> 
+         <a href="#none" class="btn_style0 " onclick="location.href='./Main.aim';" style="color:#FFF;">돌아가기</a> 
       </div>
    </article>
    
