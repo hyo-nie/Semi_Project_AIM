@@ -27,29 +27,37 @@
 	%>
 
 
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-	
-	<h1>adminMoiveInsertForm.jsp</h1>
-	
-	<br><br>
-	
-	
-	
-	
-	
-	
-	<form action="./AdminMovieInsertAction.mv" method="post">
+<!-- 페이지 좌우 여백 틀 -->
+<div id="contents" class="contents_movie_list">
+	<h2 class="hidden">영화목록</h2>
+		<div class="movie_screen_box">
+<!-- 페이지 좌우 여백 틀 -->	
 
-		<h3>일별 박스 오피스 순위</h3>
-		<br>
+
+<!-- 페이지 상단 여백 -->
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<!-- 페이지 상단 여백 -->
+	
+	
+<!-- 상단 이름 -->
+<div class="movi_pre_list">
+<h3 class="tit_type0"><strong class="ty2 eng">AIM</strong> API 영화 정보 (일별 박스오피스 순위)</h3>
+</div>
+<!-- 상단 이름 -->
+	
+
+	<form action="./AdminMovieInsertAction.mv" method="post">
 		
-		<table border="1">
+		<table border="1" class="tbl_listb text_c" >
+				<colgroup>
+			<col style="width: auto;">
+		</colgroup>
 			<tr>
-				<th>순위</th>
-				<th>제목</th>
-				<th>포스터/줄거리/평점(크롤링)</th>
-				<th>개봉일</th>
-				<th>누적관객수</th>
+				<th scope="col">순위</th>
+				<th scope="col">제목</th>
+				<th scope="col">포스터/줄거리/평점(크롤링)</th>
+				<th scope="col">개봉일</th>
+				<th scope="col">누적관객수</th>
 			</tr>
 			
 			<c:set var="j" value="1"></c:set>
@@ -92,6 +100,13 @@
 	
 	
 	
+<!-- 페이지 좌우 여백 -->
+		</div>
+</div>
+<!-- 페이지 좌우 여백 -->	
+
+<!-- 약관 -->
+<jsp:include page="../inc/footer.jsp" />	
 	
 	
 </body>

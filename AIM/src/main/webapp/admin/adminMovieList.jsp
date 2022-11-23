@@ -14,6 +14,7 @@
 <!-- 헤더/네비 -->
 <jsp:include page="../inc/nav_bar.jsp"/>
 
+
 </head>
 <body>
 
@@ -29,17 +30,42 @@
 
 	
 <!-- 페이지 좌우 여백 틀 -->
-<!-- <div id="contents" class="contents_movie_list"> -->
-<!-- 	<h2 class="hidden">영화목록</h2> -->
-<!-- 		<div class="movie_screen_box"> -->
+<div id="contents" class="contents_movie_list">
+	<h2 class="hidden">영화목록</h2>
+		<div class="movie_screen_box">
 <!-- 페이지 좌우 여백 틀 -->	
 
 
 <!-- 페이지 상단 여백 -->
 <br><br><br><br><br><br><br><br><br><br><br><br>
-<!-- 페이지 상단 여백 표 14칸 ㅜ -->
-	
-		<table border="1">
+<!-- 페이지 상단 여백 -->
+
+
+<!-- 상단 이름 -->
+<div class="movi_pre_list">
+<h3 class="tit_type0"><strong class="ty2 eng">AIM</strong> 영화 목록 페이지</h3>
+</div>
+<!-- 상단 이름 -->
+
+
+<!-- 페이지 좌우 여백 -->
+		</div>
+</div>
+<!-- 페이지 좌우 여백 -->
+
+
+
+
+
+<!-- /* hj */ 페이지 상단 여백 표 14칸 ㅜ /* ADMINTABLE2*/   /* ADMINTABLE3*/  -->
+	<div class="">
+		<table class="tbl_dtalb" >
+<%-- 			<colgroup> --%>
+<%-- 				<col style="height:10%; overflow-y:scroll;"> --%>
+<%-- 			</colgroup> --%>
+
+
+<thead>
 			<tr>
 				<th>movieCd</th>
 				<th>movieNm</th>
@@ -48,6 +74,7 @@
 				<th>directors</th>
 				<th>poster</th>
 				<th>audiAcc</th>
+				
 				<th>bookRating</th>
 				<th>watchGradeNm</th>
 				<th>showTm</th>
@@ -56,35 +83,42 @@
 				<th>boxrank</th>
 				<th>관리</th>
 			</tr>
-			
+</thead>
+
+<tbody>	
 			<c:forEach var="dto" items="${adminMovieList }">
 			<tr>
-				<td>${dto.movieCd }</td>
-				<td>${dto.movieNm }</td>
-				<td>${dto.openDt }</td>
-				<td>${dto.genreNm }</td>
-				<td>${dto.directors }</td>
-				<td> <img src="${dto.poster }" width="100" height="100"></td>
-				<td>${dto.audiAcc }</td>
-				<td>${dto.bookRating }</td>
-				<td>${dto.watchGradeNm }</td>
-				<td>${dto.showTm }</td>
-				<td>${dto.actors }</td>
-				<td>${dto.contents }</td>
-				<td>${dto.boxrank }</td>
-				<td>
+				<td scope="col">${dto.movieCd }</td>
+				<td scope="col">${dto.movieNm }</td>
+				<td scope="col">${dto.openDt }</td>
+				<td scope="col">${dto.genreNm }</td>
+				<td scope="col">${dto.directors }</td>
+				<td scope="col"> <img src="${dto.poster }" width="100" height="100"></td>
+				<td scope="col">${dto.audiAcc }</td>
+				
+				<td scope="col">${dto.bookRating }</td>
+				<td scope="col">${dto.watchGradeNm }</td>
+				<td scope="col">${dto.showTm }</td>
+				<td scope="col">${dto.actors }</td>
+				<td scope="col">${dto.contents }</td>
+				<td class="hj">${dto.boxrank }</td>
+				<td scope="col">
 				<a href="./AdminMovieModify.mv?movieCd=${dto.movieCd }">수정</a>
-				/
+				<br>-<br>
 				<a href="./AdminMovieDelete.mv?movieCd=${dto.movieCd }">삭제</a>
 				</td>
 			</tr>
 			</c:forEach>
-			
+</tbody>				
 		</table>			
 		<c:set var="i" value="1"></c:set>
 	
-	
+		<br><br>
+		
 		<input type="button" value="뒤로가기" onclick="history.back();">
+	</div>
+		
+		
 		
 		
 	

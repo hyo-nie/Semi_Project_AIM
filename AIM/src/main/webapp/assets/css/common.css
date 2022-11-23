@@ -112,6 +112,54 @@ top:500px;}
 .tbl_lista.ty2 td {padding:11px 0;}
 .tbl_lista tr.tr_imp td {background-color:#f8f8f8;}
 
+/* ADMINTABLE2*/
+/* 테이블 - 리스트 ============================== */
+.tbl_listb th,
+.tbl_listb td,
+.tbl_dtalb th,
+.tbl_dtalb td {border:1px solid #EEEEEE;  text-align:center; height:120px; padding:5px; font-size:13px; line-height:1.3; }
+.tbl_listb td .txt_end {vertical-align:top; margin-left:6px;}
+.tbl_listb thead th,
+.tbl_dtalb thead th {text-align:center; width:30px; height:20px; border-bottom-color:#BBBBBB; font-weight:bold; }
+.tbl_dtalb tbody td {text-align:center; width:auto; height:120px; border-bottom-color:#BBBBBB; }
+.tbl_listb td .ico_imp {margin-top:-2px;}
+.tbl_listb td .txt_new {margin-top:-2px;}
+.tbl_listb.ty2 th {padding:20px 0;}
+.tbl_listb.ty2 td {padding:11px 0;}
+.tbl_listb tr.tr_imp td {background-color:#f8f8f8;}
+
+/* ADMINTABLE3*/
+/* 테이블 - 상세 ============================== */
+.tbl_dtalb th,
+.tbl_dtalb td {text-align:left;}
+.tbl_dtalb tr.tb_info>td {background:#F8F8F8; padding-left:61px;}
+.tbl_dtalb tr.tb_info>td .tit {color:#666666;}
+.tbl_dtalb tr.tb_info>td .tit:after {content:''; display:inline-block; background:#666; width:1px; height:14px; margin:0 20px; vertical-align:middle;}
+.tbl_dtalb tr.tb_info>td .cont {display:inline;}
+.tbl_dtalb tr.tb_info>td .cont+.tit {margin-left:120px;}
+.tbl_dtalb tr.tb_content>td {padding:30px 60px;}
+.tbl_dtalb tr.tb_content>td p {min-height:105px; line-height:22px;}
+.tbl_dtalb tr.tb_link>td {padding:0;}
+.tbl_dtalb tr.tb_link>td a {display:block; padding:18px 20px 18px 61px; color:#666666;}
+.tbl_dtalb tr.tb_link>td a .tb_next,
+.tbl_dtalb tr.tb_link>td a .tb_prev {background-repeat:no-repeat; background-position:100% 54%; margin-right:30px; padding-right:24px; color:#000;}
+.tbl_dtalb tr.tb_link>td a .tb_next {background-image:url('../images/icon/arr_up_13.png');}
+.tbl_dtalb tr.tb_link>td a .tb_prev {background-image:url('../images/icon/arr_dw_13.png');}
+.tbl_dtalb.ty2 th {padding-left:61px; color:#666666;}
+.tbl_dtalb.ty2 th.ty2 {background:#F8F8F8; color:#000; font-weight:bold;}
+.tbl_dtalb.ty2 td:before {content:''; display:inline-block; background-color:rgba(0, 0, 0, 0.5); width:1px; height:14px; margin-right:40px;}
+.tbl_dtalb.ty2 td.non_lin {padding-left:60px;}
+.tbl_dtalb.ty2 td.non_lin:before {display:none;}
+.tbl_dtalb td img {width:100%;}
+.inner_tableb {border-left:1px solid #DDDDDD; margin:20px 0;}
+.inner_tableb thead th {border-top:1px solid;}
+.inner_tableb th {background:#F8F8F8; border-bottom:1px solid;}
+.inner_tableb td {border-bottom:1px solid;}
+.inner_tableb thead th,
+.inner_tableb tbody td,
+.inner_tableb th,
+.inner_tableb td {font-size:13px; border-right:1px solid; border-color:#DDDDDD; padding:16px 0; text-align:center;}
+.tbl_dtal.ty2b {margin:40px 0 60px 0;}
 
 
 /* 테이블 - 상세 ============================== */
