@@ -1338,4 +1338,4 @@ input[type='text'][readonly]{background-color:#fff}
         .layer-wrap.gift_caution_traffic .count_area .txt3 span{font-size: 14px;font-weight:500;color:#ca1a1b}
         .layer-wrap.gift_caution_traffic .desc_txt{display:block;font-size: 16px;letter-spacing: -0.3px;color: #000;line-height: 1.6;text-align: center}
         .layer-wrap.gift_caution_traffic .desc_txt:before{content:'';display: inline-block;margin:0 0 0 -26px;width: 28px;height: 28px;background: url(http://img.cgv.co.kr/r2014/images/giftstore/common/ico_desc_caution.png) no-repeat 0 0;background-size:28px 28px;vertical-align: -2px}        
-@keyframes aniCnt { from {top:0} to {top:-16px}}
+		@keyframes aniCnt { from {top:0} to {top:-16px}}

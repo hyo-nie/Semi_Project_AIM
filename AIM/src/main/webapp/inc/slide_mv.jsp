@@ -679,111 +679,58 @@
 				</li>
 			</ul>
 		</div>
-
+				<div class="main_cont_wrap notice">
+			<div class="sec_tit">공지사항</div>
+			<div class="rolling_menu_wrap">
+				<ul class="rollings" style="top: -30px;">
+					<li><a href="#none" title="">영화관람권 가격 변경 안내</a></li>
+					<li><a href="#none" title="">2D 일반 관람권 활용 스페셜관 이용 안내 </a></li>
+					<li><a href="#none" title="">V3 백신 엔진 악성코드 오진 안내</a></li>
+					<li><a href="#none" title="">AIM 영구VIP 서비스 종료 안내</a></li>
+				</ul>
+			</div>
+		</div>
 
 		<!-- store/event -->
 		<div class="main_cont_wrap premiere">
-			<div class="sec_tit">AIM 스토어</div>
+			<div class="sec_tit">AIM 스토어 추천!</div>
 			<ul class="premiere_wrap">
 				<li><div class="store">
-						<br> <span class="span1">AIM 기프트카드</span>
-						<button onclick="giftcard">더보기</button>
-						<dl>
+						<br> <span class="span1">AIM 콤보</span>
+						<button onclick="location.href='http://localhost:8081/AIM/PopcornList.st'">더보기</button>
 							<table>
 								<tr>
-									<dt>
-									<td class="img"><a href=""><img class="img1"
-											src="./assets/img/giftcard.png" width="150px" height="80px"></a></td>
-									<td class="name">AIM 기프트카드<br>10000원
+									<td class="img"><a href="http://localhost:8081/AIM/PopcornDetail.st?st_num=6">
+									<img class="img1" src="./assets/img/AIM콤보.jpg" width="250px" height="250px"></a>
 									</td>
-									</dt>
-								</tr>
-								<tr>
-									<dt>
-									<td class="img"><a href=""><img class="img1"
-											src="./assets/img/giftcard.png" width="150px" height="80px"></a></td>
-									<td class="name">AIM 기프트카드<br>20000원
-									</td>
-									</dt>
-								</tr>
-								<tr>
-									<dt>
-									<td class="img"><a href=""><img class="img1"
-											src="./assets/img/giftcard.png" width="150px" height="80px"></a></td>
-									<td class="name">AIM 기프트카드<br>30000원
-									</td>
-									</dt>
 								</tr>
 							</table>
-						</dl>
 					</div>
 				<li><div class="store">
-						<br> <span class="span2">AIM 관람권</span>
-						<button onclick="ticket">더보기</button>
-						<dl>
+						<br> <span class="span2">AIM 기프트카드</span>
+						<button onclick="location.href='http://localhost:8081/AIM/GiftcardList.st'">더보기</button>	
 							<table>
 								<tr>
-									<dt>
-									<td class="img"><a href=""><img class="img1"
-											src="./assets/img/ticket.png" width="150px" height="80px"></a></td>
-									<td class="name">AIM 1인관람권<br>13000원
+									<td class="img"><a href="http://localhost:8081/AIM/PopcornDetail.st?st_num=2">
+									<img class="img1" src="./assets/img/3만원.jpg" width="250px" height="250px"></a>
 									</td>
-									</dt>
-								</tr>
-								<tr>
-									<dt>
-									<td class="img"><a href=""><img class="img1"
-											src="./assets/img/ticket.png" width="150px" height="80px"></a></td>
-									<td class="name">AIM 2인관람권<br>25000원
-									</td>
-									</dt>
-								</tr>
-								<tr>
-									<dt>
-									<td class="img"><a href=""><img class="img1"
-											src="./assets/img/ticket.png" width="150px" height="80px"></a></td>
-									<td class="name">AIM 3인관람권<br>33000원
-									</td>
-									</dt>
 								</tr>
 							</table>
-						</dl>
 					</div></li>
 				<li><div class="store">
-						<br> <span class="span3">AIM 콤보</span>
-						<button onclick="combo">더보기</button>
-						<dl>
+						<br> <span class="span3">AIM 관람권</span>
+						<button onclick="location.href='http://localhost:8081/AIM/GiftcardList.st'">더보기</button>
 							<table>
 								<tr>
-									<dt>
-									<td class="img"><a href=""><img class="img1"
-											src="./assets/img/popcon.png" width="150px" height="80px"></a></td>
-									<td class="name">AIM 콤보<br>10000원
+									<td class="img"><a href="http://localhost:8081/AIM/PopcornDetail.st?st_num=5">
+									<img class="img1" src="./assets/img/2인.jpg" width="250px" height="250px"></a>
 									</td>
-									</dt>
-								</tr>
-								<tr>
-									<dt>
-									<td class="img"><a href=""><img class="img1"
-											src="./assets/img/popcon.png" width="150px" height="80px"></a></td>
-									<td class="name">AIM 스몰콤보<br>7000원
-									</td>
-									</dt>
-								</tr>
-								<tr>
-									<dt>
-									<td class="img"><a href=""><img class="img1"
-											src="./assets/img/popcon.png" width="150px" height="80px"></a></td>
-									<td class="name">AIM 커플콤보<br>15000원
-									</td>
-									</dt>
 								</tr>
 							</table>
-						</dl>
 					</div></li>
 
 			</ul>
-			<button type="button" class="btn_txt_more ty2">더보기</button>
+			<button type="button" class="btn_txt_more ty2" onclick="location.href='http://localhost:8081/AIM/StoreMain.st'">더보기</button>
 		</div>
 
 
@@ -832,18 +779,8 @@
 			</ul>
 			<button type="button" class="btn_txt_more ty2">더보기</button>
 		</div>
-		<div class="main_cont_wrap notice">
-			<div class="sec_tit">공지사항</div>
-			<div class="rolling_menu_wrap">
-				<ul class="rollings" style="top: -30px;">
-					<li><a href="#none" title="">영화관람권 가격 변경 안내</a></li>
-					<li><a href="#none" title="">2D 일반 관람권 활용 스페셜관 이용 안내 </a></li>
-					<li><a href="#none" title="">V3 백신 엔진 악성코드 오진 안내</a></li>
-					<li><a href="#none" title="">AIM 영구VIP 서비스 종료 안내</a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="mid_menu_wrap">
+
+<!-- 		<div class="mid_menu_wrap">
 			<a href="#none" class="mid_itm" title=""> <img
 				src="https://caching.lottecinema.co.kr//Media/WebAdmin/3423e358b74d49d5b12867c7d9c6f6a8.png"
 				alt="할인안내"></a> <a href="#none" class="mid_itm" title=""> <img
@@ -855,7 +792,7 @@
 				alt="틴틴클럽"></a> <a href="#none" class="mid_itm" title=""> <img
 				src="https://caching.lottecinema.co.kr//Media/WebAdmin/9c4e2721ecdd488d86df6d27e3c2a000.png"
 				alt="bravo 브라보클럽"></a>
-		</div>
+		</div> -->
 
 	</div>
 </div>

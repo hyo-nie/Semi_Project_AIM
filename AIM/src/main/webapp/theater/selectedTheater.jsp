@@ -76,38 +76,39 @@
 		});
 
 	});
+	
+	
+	
 	$(function() {
 		$("#maps").on("click", function() {
-
+			
 			$(".maps2").attr('class', 'maps1')
+			$(".public1").attr('class', 'public2')
 			return false;
 		});
 
 	});
-	$(function() {
-		$("#maphide").on("click", function() {
-
-			$(".maps1").attr('class', 'maps2')
-			return false;
-		});
-
-	});
+	
  	$(function() {
 		$("#public").on("click", function() {
-
+			$(".maps1").attr('class', 'maps2')
 			$(".public2").attr('class', 'public1')
 			return false;
 		});
 
 	});
+	// 닫기누를시 모든 안내창 종료
 	$(function() {
-		$("#public2").on("click", function() {
+		$("#maphide").on("click", function() {
 
+			$(".maps1").attr('class', 'maps2')
 			$(".public1").attr('class', 'public2')
 			return false;
 		});
 
-	}); 
+	});
+	
+
 </script>
 
 </head>
@@ -259,10 +260,6 @@
 			<div class="theater_tit">
 				<h3 class="tit">${dto.branch_name}</h3>
 
-				<button type="button" class="btnToggle btn_col4 ty3 mr10">
-					<span id="cinemalike" class="ico_heart ty2"><em>관심등록</em></span>MY
-					영화관
-				</button>
 				<button type="button" class="btnToggle btn_col4 ty3">
 					<span class="icon_groupvisit"></span> 단체/대관문의
 				</button>
@@ -298,15 +295,28 @@
 
 					</div>
 				</div>
- 				<!-- 대중교통 -->
- 				 <div class="public2" id="public1"
-					style="width: 445px; height: 350px; left: 53.5%; top: -11%; margin-left: -250; z-index: 9; position: absolute; ">
-					<p class="pp">${dto.branch_addr }</p>
-					<button class="maphide" id="public2">지도 닫기</button> 
-					<div style="width: 445px; height: 326px; left: 0%; top: 7%; margin-left: -250; position: absolute;">
-
-					</div> 
-				</div>   
+				<!-- 대중교통 -->
+				<div class="public2" id="public1"
+					style="width: 445px; height: 350px; left: 53.5%; top: -11%; margin-left: -250; z-index: 9; position: absolute;">
+					<div
+						style="position: relative; height: 54px; line-height: 58px; border-bottom: 1px solid #CCC; color: #FFF;">
+						<p class="ppp">대중교통안내</p>
+					</div>
+					<button class="maphide" id="maphide">닫기</button>
+					<div style="width: 445px; height: 326px; left: 0%; top: 18%; margin-left: -250; position: absolute;">
+						<div class="layer_contents" style="top:10px;">
+								<ul class="list_txt" style="list-style: none;">
+									<li><span class="tit"><font color="blue"><b>지하철 이용 시</b></font></span><span class="txt"></span></li>
+									<li><span class="tit"><font color="black">1) 2호선 서면역 2번 출구</font></span><span class="txt"></span></li>
+									<li><span class="tit"><font color="black">2) 2호선 전포역 5번 출구</font></span><span class="txt"></span></li><br>
+									<li><span class="tit"><font color="blue"><b>버스 이용 시</b></font></span><span class="txt"></span></li>
+									<li><span class="tit"><font color="black">- 시내버스 : 20번,24번,301번,66번,17번,23번</font></span><span class="txt"></span></li>
+									<li><span class="tit"><font color="black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									103번,81번,83-1번,86번,133번 등</font></span><span class="txt"></span></li><br>
+							</ul>
+						</div>
+					</div>
+				</div>
 
 				<div class="notice_wrap_emp"></div>
 			</div>
@@ -326,10 +336,6 @@
 						</dd>
 					</div>
 					<div class="btn_wrap">
-						<button class="btn_share">공유</button>
-						<div id="layerShare" class="layer_wrap layer_share"></div>
-						<button type="button" id="presetlike"
-							class="btnToggle btn_heart ty2">관심등록</button>
 						<a href="./Ticketing.tk" class="btn_col1 ty3 rnd">프리셋예매</a>
 					</div>
 					<div class="thm">
@@ -908,8 +914,7 @@
 							<c:forEach var="fsche" items="${scheduleFirst }">
 								<c:if test="${fmovie.movieNm eq fsche.movieNm }">
 									<li class=""><a
-										href="./SeatSelect.th?scCode=${fsche.scCode}"
-										role="button">
+										href="./SeatSelect.th?scCode=${fsche.scCode}" role="button">
 											<dl>
 												<dt>상영시간</dt>
 												<dd class="time">
