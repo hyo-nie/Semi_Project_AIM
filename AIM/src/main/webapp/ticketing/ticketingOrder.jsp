@@ -25,7 +25,7 @@
         IMP.request_pay({ 
             pg: "html5_inicis",
             pay_method: "card",
-            merchant_uid: "YM_TEST20",   //주문번호, 고유값(PK) 여야 한다(디비에 저장); ${tkCode}사용 예정, 현재 임시값
+            merchant_uid: "${tkCode}",   //주문번호, 고유값(PK) 여야 한다(디비에 저장);
             name: "${scDTO.movieNm}",
             amount: 100,	// 숫자타입
             buyer_email: "email",

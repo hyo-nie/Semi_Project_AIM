@@ -4028,7 +4028,7 @@ dl.total_price dd strong {font-family:'Roboto'; font-size:25px; font-weight:bold
 /* ì˜ˆë§¤ : 04ê²°ì œì™„ë£Œ/ë³¸ë¬¸ ============================== */
 .payment_fin_wrap {width:685px; margin:0 auto;}
 .payment_fin_wrap .btn_btm_wrap {margin:50px 0 0;}
-.top_notice_ic {margin:50px 0 20px; padding-top:52px; font-size:15px; text-align:center; background-repeat:no-repeat; background-position:center top;}
+.top_notice_ic {margin:0px 0 20px -60px; padding-top:52px; font-size:20px; text-align:center; background-repeat:no-repeat; background-position:center top;}
 .top_notice_ic.ty1{background-image:url("../../Content/images/icon/top_notice_ic_01.png");}
 /* ì˜ˆë§¤ì •ë³´ ========== */
 .reserve_result_wrap {position:relative; width:605px; margin:18px 0; padding:40px 40px 25px; border-radius:4px; border:1px solid #DDD; background-color:#FFF;}

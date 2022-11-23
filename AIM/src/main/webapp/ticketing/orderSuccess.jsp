@@ -149,7 +149,7 @@
 												<dt>상영관</dt>
 												<dd>${scDTO.branch_name } ${scDTO.roomNum }</dd>
 												<dt>관람인원</dt>
-												<dd>총 ${cusCnt}명</dd>
+												<dd>총 ${reDTO.cusCnt}명</dd>
 												<dt>좌석</dt>
 												<dd>
 													<c:forEach var="seat" items="${seatArr }">
