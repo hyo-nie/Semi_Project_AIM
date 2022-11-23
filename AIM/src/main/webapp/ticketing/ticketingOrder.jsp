@@ -150,14 +150,14 @@
 				
 				<div id="reserveStep03" class="section_step_con step03 active">
 					<h3 class="hidden">결제</h3>
-					<div class="article article_sum_infor">
+					<div class="article article_sum_infor" style="width: 788px">
 						<div class="group_top">
 							<h4 class="tit">예매정보</h4>
 						</div>
 						<div class="inner">
 							<div class="movie_infor new2020">
 								<span class="thm">
-									<img src="${scDTO.poster }" alt="${scDTO.movieNm }">
+									<img src="${scDTO.poster }" alt="${scDTO.movieNm }" style="width:320px;">
 								</span>
 								<strong class="tit">
 									<span
@@ -190,90 +190,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="article article_pay_method">
-						<div class="group_top">
-							<h4 class="tit">결제수단</h4>
-							<button type="button" class="btn_txt_reset">초기화</button>
-						</div>
-						<div class="inner">
-							<div
-								class="mCustomScrollbar _mCS_1 mCS-autoHide mCS_no_scrollbar"
-								data-mcs-theme="minimal-dark"
-								style="position: relative; overflow: visible;">
-								<div id="mCSB_1"
-									class="mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside"
-									style="max-height: none;" tabindex="0">
-									<div id="mCSB_1_container"
-										class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y"
-										style="position: relative; top: 0; left: 0;" dir="ltr">
-										<div class="group_discount" style="display: block;">
-											
-											
-											<!-- 할인 / 포인트 -->
-											<h3 class="tit_payment">할인/포인트</h3>
-											<div class="tab_wrap3 reset selected">
-												<div class="tab_tit case2">
-													<ul>
-														<li>
-															<button class="active">등급 할인 </button>
-														</li>
-														<li>
-															<button class="">회원 등급 (나중에 수정)</button>
-														</li>
-													</ul>
-												</div>
-											</div>
-											<div class="wrap_coupon">
-												<div class="bx_cate">
-													<ul class="list_pay_item cate4">
-														<li id="point_admission">
-															<button class="">
-																관람권<span class="txt_cnt">0</span>
-															</button>
-														</li>
-														<li id="point_discount">
-															<button class="">
-																기프트카드<span class="txt_cnt">0</span>
-															</button>
-														</li>
-													</ul>
-												</div>
-											</div>
-											<div class="toggle_wrap no couplechk" style="display: none;"></div>
-										</div>
-										
-										
-										
-										<!-- 결제수단 - 일단 신용카드 구현 후 나중에 생각 -->
-										<div class="group_payment">
-											<h5 class="tit_payment">최종 결제수단</h5>
-											<div class="bx_cate">
-												<ul class="list_pay_item cate6">
-													<li><button type="button" class="cate1 ">신용카드</button></li>
-													<!-- <li><button type="button" class="cate2 ">엘페이</button></li>
-													<li><button type="button" class="cate3 ">간편결제</button></li>
-													<li><button type="button" class="cate4 ty2 ">휴대폰</button></li> -->
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div id="mCSB_1_scrollbar_vertical"
-									class="mCSB_scrollTools mCSB_1_scrollbar mCS-minimal-dark mCSB_scrollTools_vertical"
-									style="display: none;">
-									<div class="mCSB_draggerContainer">
-										<div id="mCSB_1_dragger_vertical" class="mCSB_dragger"
-											style="position: absolute; min-height: 50px; height: 0px; top: 0px;">
-											<div class="mCSB_dragger_bar" style="line-height: 50px;"></div>
-										</div>
-										<div class="mCSB_draggerRail"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+					
 					<div class="article article_payment">
-						<div class="group_top">
+						<div class="group_top" style="width: 413.99px">
 							<h4 class="tit">결제하기</h4>
 						</div>
 						<div class="inner">
