@@ -133,8 +133,12 @@
 		});
 
 	});
+	$(function(){
+		$('sele').tooltip();
+	});
 </script>
-
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 </head>
 
 <body>
@@ -833,7 +837,7 @@
 						<ul class="list_time">
 							<c:forEach var="fsche" items="${scheduleFirst }">
 								<c:if test="${fmovie.movieNm eq fsche.movieNm }">
-									<li class=""><a id="sele" role="button">
+									<li class=""><a id="sele" title="종료시간:${fsche.endtime }" role="button">
 											<dl>
 												<dt>상영시간</dt>
 												<dd class="time">
