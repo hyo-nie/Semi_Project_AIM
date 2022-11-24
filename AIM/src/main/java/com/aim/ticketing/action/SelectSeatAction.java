@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.aim.movie.db.MovieDAO;
 import com.aim.movie.db.MovieDTO;
@@ -16,6 +17,19 @@ public class SelectSeatAction implements Action {
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		System.out.println(" M : SelectSeatAction.execute() 호출 ");
+		
+		// 세션 제어
+		HttpSession session = request.getSession();
+		String id = (String)session.getAttribute("mb_id");
+		
+		ActionForward forward = new ActionForward();
+		if (id == null) {
+			forward.setPath("./Login.aim");
+			forward.setRedirect(true);
+			
+			return forward;
+		}
+		
 		
 		// 데이터 저장
 		int select_scCode = Integer.parseInt(request.getParameter("scCode"));
@@ -49,7 +63,6 @@ public class SelectSeatAction implements Action {
 		request.setAttribute("seatRow", seatRow);
 		
 		// 페이지 이동
-		ActionForward forward = new ActionForward();
 		forward.setPath("./ticketing/selectSeat.jsp");
 		forward.setRedirect(false);
 		

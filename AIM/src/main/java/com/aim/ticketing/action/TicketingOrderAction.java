@@ -5,7 +5,10 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
+import com.aim.member.db.MemberDAO;
+import com.aim.member.db.MemberDTO;
 import com.aim.schedule.db.ScheduleDTO;
 import com.aim.ticketing.db.ReservationDAO;
 
@@ -14,6 +17,19 @@ public class TicketingOrderAction implements Action {
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		System.out.println(" M : TicketingOrderAction.execute() 호출 ");
+		
+		// 세션 제어
+		HttpSession session = request.getSession();
+		String id = (String)session.getAttribute("mb_id");
+		
+		ActionForward forward = new ActionForward();
+		if (id == null) {
+			forward.setPath("./Login.aim");
+			forward.setRedirect(true);
+			
+			return forward;
+		}
+		
 		
 		// 데이터 저장
 		int scCode = Integer.parseInt(request.getParameter("scCode"));
@@ -51,6 +67,11 @@ public class TicketingOrderAction implements Action {
 		}
 		// 좌석변환 끝
 		
+		// memberDAO
+		MemberDAO mbDAO = new MemberDAO();
+		MemberDTO mbDTO = mbDAO.getMember(id);
+		
+		
 		// request 저장
 		request.setAttribute("scDTO", scDTO);
 		request.setAttribute("seatNo", seatNo);
@@ -59,9 +80,10 @@ public class TicketingOrderAction implements Action {
 		request.setAttribute("seniorCnt", seniorCnt);
 		request.setAttribute("seatArr", seatArr);
 		request.setAttribute("tkCode", tkCode);
+		request.setAttribute("mbDTO", mbDTO);
 		
 		// 페이지 이동
-		ActionForward forward = new ActionForward();
+		
 		forward.setPath("./ticketing/ticketingOrder.jsp");
 		forward.setRedirect(false);
 		

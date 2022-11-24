@@ -19,9 +19,17 @@ public class OrderSuccessAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		System.out.println(" OrderSuccessAction.execute() 호출 ");
 		
-		// 세션
+		// 세션 제어
 		HttpSession session = request.getSession();
 		String id = (String)session.getAttribute("mb_id");
+		
+		ActionForward forward = new ActionForward();
+		if (id == null) {
+			forward.setPath("./Login.aim");
+			forward.setRedirect(true);
+			
+			return forward;
+		}
 		
 		// 데이터 저장
 		String seatNo = request.getParameter("seatNo");
@@ -118,7 +126,6 @@ public class OrderSuccessAction implements Action {
 		request.setAttribute("mbDTO", mbDTO);
 		
 		// 페이지 이동 준비
-		ActionForward forward = new ActionForward();
 		forward.setPath("./ticketing/orderSuccess.jsp");
 		forward.setRedirect(false);
 		
