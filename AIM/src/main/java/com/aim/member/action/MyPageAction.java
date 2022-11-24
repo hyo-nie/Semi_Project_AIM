@@ -6,6 +6,9 @@ import javax.servlet.http.HttpSession;
 
 import com.aim.member.db.MemberDAO;
 import com.aim.member.db.MemberDTO;
+import com.aim.schedule.db.ScheduleDTO;
+import com.aim.ticketing.db.ReservationDAO;
+import com.aim.ticketing.db.ReservationDTO;
 
 public class MyPageAction implements Action {
 
@@ -26,9 +29,21 @@ public class MyPageAction implements Action {
 		MemberDAO dao = new MemberDAO();
 		MemberDTO dto = new MemberDTO();
 		
+		// 영화예매내역 조회
+		ReservationDAO reDAO = new ReservationDAO();
+		ReservationDTO reDTO = reDAO.getReservationMy(mb_id);
+		ScheduleDTO scDTO = null;
+		if (reDTO != null) {
+			scDTO = reDAO.getScheduleJoin(reDTO.getScCode());
+		}
+		
+		// 영화예매내역 조회 
+		
 		dto = dao.getMember(request.getParameter("mb_id"));
 	
 		request.setAttribute("dto", dto);
+		request.setAttribute("reDTO", reDTO);
+		request.setAttribute("scDTO", scDTO);
 		
 		forward.setPath("./member/myPage.jsp");
 		forward.setRedirect(false);

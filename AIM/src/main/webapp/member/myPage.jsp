@@ -60,8 +60,32 @@
 								</h3>
 								<div class="list_bdr_box">
 									<ul class="list_txt">
-										<li>ㅇㅇ</li>
-										<li>ㅇㅇ</li>
+										<c:choose>
+											<c:when test="${reDTO == null }">
+													<h2> 예 매 내 역 이 없 습 니 다 ! </h2>
+											</c:when>
+											<c:otherwise>
+													<img src="${scDTO.poster }" width="200">
+													<dl class="dlist_infor">
+														<dt style="display: inline; font-size: 25px;">예매번호 | </dt>
+														<dd style="display: inline; font-size: 25px;">${reDTO.tkCode }</dd>
+														<br>
+														<dt style="display: inline; font-size: 25px;">제목 | </dt>
+														<dd style="display: inline; font-size: 25px;">${scDTO.movieNm }</dd>
+														<br>
+														<dt style="display: inline; font-size: 25px;">날짜 및 시간 | </dt>
+														<dd style="display: inline; font-size: 25px;">${scDTO.sc_date }, ${scDTO.starttime } ~ ${scDTO.endtime }</dd>
+														<br>
+														<dt style="display: inline; font-size: 25px;">영화관 | </dt>
+														<dd style="display: inline; font-size: 25px;">${scDTO.branch_name } ${scDTO.roomNum }</dd>
+														<br>
+														<dt style="display: inline; font-size: 25px;">총 인원 | </dt>
+														<dd style="display: inline; font-size: 25px;">${reDTO.cusCnt } 명</dd>
+														<dt style="display: inline; font-size: 25px;">&nbsp;결제 금액 | </dt>
+														<dd style="display: inline; font-size: 25px;"><fmt:formatNumber value="${reDTO.totalPrice }"/> 원</dd>
+													</dl>
+											</c:otherwise>
+										</c:choose>
 									</ul>
 								</div>
 							</div>

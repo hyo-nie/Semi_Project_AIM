@@ -553,7 +553,7 @@ public class ReservationDAO {
 	// insertReservation()
 	
 	/**
-	 * getReservation(tkCode)
+	 * getReservation(tkCode) : tkCode로 해당 예매 정보 조회 메서드
 	 */
 	public ReservationDTO getReservation(String tkCode) {
 		ReservationDTO dto = null;
@@ -563,6 +563,43 @@ public class ReservationDAO {
 			sql = "select * from reservation where tkCode = ?";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, tkCode);
+			rs = pstmt.executeQuery();
+			
+			// 데이터처리
+			if (rs.next()) {
+				dto = new ReservationDTO();
+				
+				dto.setScCode(rs.getInt("scCode"));
+				dto.setCusCnt(rs.getInt("cusCnt"));
+				dto.setMb_id(rs.getString("mb_id"));
+				dto.setMovieCd(rs.getString("movieCd"));
+				dto.setPayment(rs.getString("payment"));
+				dto.setTkCode(rs.getString("tkCode"));
+				dto.setTotalPrice(rs.getInt("totalPrice"));
+				
+				System.out.println(" DAO : 예매 정보 조회 완료 ! ");
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			closeDB();
+		}
+		return dto;
+	}
+	// getReservation(tkCode)
+	
+	/**
+	 * getReservationMy(id) : 회원 id정보로 가장 최근에 예매 정보 조회
+	 */
+	public ReservationDTO getReservationMy(String id) {
+		ReservationDTO dto = null;
+		
+		try {
+			con = getConnection();
+			sql = "select * from reservation where mb_id = ? order by tkCode desc";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, id);
 			rs = pstmt.executeQuery();
 			
 			// 데이터처리
