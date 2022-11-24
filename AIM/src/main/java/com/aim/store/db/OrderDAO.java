@@ -119,7 +119,7 @@ public class OrderDAO {
 		  * @return
 		  */
 	      public List<OrderDTO> getOrderList(String id) {
-	  		List<OrderDTO> orderList = new ArrayList<>();
+	  		List<OrderDTO> orderList = null;
 	  		
 			try {
 				con = getConnection();
@@ -134,6 +134,7 @@ public class OrderDAO {
 				
 				rs = pstmt.executeQuery();
 				
+				orderList = new ArrayList<>();
 				while(rs.next()) {
 					// DB(rs) -> OrderDTO 저장 -> OrderList저장
 					OrderDTO dto = new OrderDTO();

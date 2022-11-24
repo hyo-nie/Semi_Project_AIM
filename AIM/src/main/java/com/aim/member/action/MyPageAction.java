@@ -1,5 +1,7 @@
 package com.aim.member.action;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -7,6 +9,8 @@ import javax.servlet.http.HttpSession;
 import com.aim.member.db.MemberDAO;
 import com.aim.member.db.MemberDTO;
 import com.aim.schedule.db.ScheduleDTO;
+import com.aim.store.db.OrderDAO;
+import com.aim.store.db.OrderDTO;
 import com.aim.ticketing.db.ReservationDAO;
 import com.aim.ticketing.db.ReservationDTO;
 
@@ -45,6 +49,12 @@ public class MyPageAction implements Action {
 		request.setAttribute("dto", dto);
 		request.setAttribute("reDTO", reDTO);
 		request.setAttribute("scDTO", scDTO);
+		
+		// 스토어 구매 내역 조회
+		OrderDAO ordao = new OrderDAO();
+		List<OrderDTO> orderList = ordao.getOrderList(mb_id);
+		System.out.println(orderList);
+		request.setAttribute("orderList", orderList);
 		
 		forward.setPath("./member/myPage.jsp");
 		forward.setRedirect(false);
