@@ -426,8 +426,8 @@ public class MemberDAO {
 		try {
 			con = getConnection();
 	        sql = "update member set "
-	         		+ "mb_pw=?,mb_name=?,mb_nick=?,mb_tel=? "
-		            + "where mb_id=?";
+	         		+ "mb_pw=?,mb_name=?,mb_nick=?,mb_tel=?,mb_id=? ";
+//		            + "where mb_id=?";
 	        pstmt = con.prepareStatement(sql);
 	         
 			pstmt.setString(1, dto.getMb_pw());

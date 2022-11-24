@@ -2,6 +2,7 @@ package com.aim.member.action;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.aim.member.db.MemberDAO;
 import com.aim.member.db.MemberDTO;
@@ -14,8 +15,17 @@ public class MemberUpdateProAction implements Action {
 		
 		System.out.println(" M : MemberUpdateProAction_execute 호출");
 		
-		// 마이페이지 비회원 안되게
+		// 비회원 못 사용하게 세션 제어
+		HttpSession session = request.getSession();
+		String mb_id = (String)session.getAttribute("mb_id");
 		
+		ActionForward forward = new ActionForward();
+		if(mb_id == null) {
+			forward.setPath("./Login.aim");
+			forward.setRedirect(true);
+			return forward;
+		}
+	
 		// 전달정보(DTO)
 		MemberDTO dto = new MemberDTO();
 		
@@ -29,11 +39,10 @@ public class MemberUpdateProAction implements Action {
 		
 		// DAO - 회원 정보 수정 메서드 (MemberUpdate
 		MemberDAO dao = new MemberDAO();
-//		dao.MemberUpdate(dto);
+		dao.MemberUpdate(dto);
 		System.out.println(" M : dto : " + " 회원 정보 수정 성공");
 		
 		// 페이지 이동
-		ActionForward forward = new ActionForward();
 		forward.setPath("./MyPage.aim");
 		forward.setRedirect(true);
 
