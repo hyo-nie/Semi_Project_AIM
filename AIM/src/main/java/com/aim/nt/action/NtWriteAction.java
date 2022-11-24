@@ -24,7 +24,7 @@ public class NtWriteAction implements Action {
 				
 		ActionForward forward = new ActionForward();
 		if(mb_id == null) {
-			forward.setPath("./Main.aim");
+			forward.setPath("./Login.aim");
 			forward.setRedirect(true);
 			return forward;
 		}
@@ -39,7 +39,8 @@ public class NtWriteAction implements Action {
 		dto.setNt_content(request.getParameter("nt_content"));
 		dto.setNt_subject(request.getParameter("nt_subject"));
 		
-				
+		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"+request.getParameter("mb_id"));
+		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"+request.getParameter("mb_pw"));
 				
 		// NtDAO 객체
 		NtDAO dao = new NtDAO();

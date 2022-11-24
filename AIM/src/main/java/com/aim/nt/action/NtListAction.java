@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.aim.nt.db.NtDAO;
+import com.aim.member.db.MemberDAO;
+import com.aim.member.db.MemberDTO;
 import com.aim.nt.action.ActionForward;
 
 
@@ -18,6 +20,9 @@ public class NtListAction implements Action {
 		
 		System.out.println(" M : NtListAction_execute() 호출 ");
 
+		
+		HttpSession session = request.getSession();
+		String mb_id = (String) session.getAttribute("mb_id");
 		
 		//NtDAO 객체 생성
 		NtDAO dao = new NtDAO();
@@ -68,6 +73,9 @@ public class NtListAction implements Action {
 
 
 		
+		MemberDAO dao2 = new MemberDAO();
+		MemberDTO dto =  dao2.getMember(mb_id);
+		
 		// Action -> jsp 페이지 정보 전달(request 영역객체 저장)
 		request.setAttribute("NtListAll", NtListAll);
 		
@@ -78,6 +86,7 @@ public class NtListAction implements Action {
 		request.setAttribute("pageBlock", pageBlock);
 		request.setAttribute("startPage", startPage);
 		request.setAttribute("endPage", endPage);
+		request.setAttribute("dto", dto);
 		
 		
 

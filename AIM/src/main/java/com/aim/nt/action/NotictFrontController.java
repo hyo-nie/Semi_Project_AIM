@@ -51,9 +51,12 @@ public class NotictFrontController extends HttpServlet {
     	else if(command.equals("/NtWriteForm.nt")) {
 			System.out.println(" C : /NtWriteForm.nt 호출 ");
 			
-			forward = new ActionForward();
-			forward.setPath("./notice/ntwrite.jsp");
-			forward.setRedirect(false);			
+			action = new NtWriteFormAction();
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}	
 		}
     	
     	// 공지사항 글 쓰기
