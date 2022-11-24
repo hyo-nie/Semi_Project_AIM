@@ -253,13 +253,41 @@ public class MemberFrontController extends HttpServlet {
     	
     	else if(command.equals("/MemberUpdate.aim")) {       
         System.out.println("C : /MemberUpdate.aim 호출");
-        System.out.println("[패턴1]");
+        System.out.println("[패턴2]");
         
-        forward = new ActionForward();
-        forward.setPath("./member/memberUpdate.jsp");
-        forward.setRedirect(false);
+        // MemberUpdateAction() 객체
+        action = new MemberUpdateAction();
+        
+        try {
+			forward = action.execute(request, response);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
         
       } // MemberUpdate.aim 끝
+    	
+    	else if(command.equals("/MemberUpdatePro.aim")) {       
+            System.out.println("C : /MemberUpdatePro.aim 호출");
+            System.out.println("[패턴2]");
+            
+            // MemberUpdateProAction() 객체
+            action = new MemberUpdateProAction();
+            
+            try {
+    			forward = action.execute(request, response);
+    		} catch (Exception e) {
+    			// TODO Auto-generated catch block
+    			e.printStackTrace();
+    		}
+            
+          } // MemberUpdatePro.aim 끝
+    	
+    	
+    	
+    	
+    	
+    	
     	
     	else if(command.equals("/MemberDelete.aim")) {       
         System.out.println("C : /MemberDelete.aim 호출");
@@ -269,7 +297,7 @@ public class MemberFrontController extends HttpServlet {
         forward.setPath("./member/memberDelete.jsp");
         forward.setRedirect(false);
         
-      } // MemberUpdate.aim 끝
+      } // MemberDelete.aim 끝
     	
 
     	
