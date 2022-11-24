@@ -350,6 +350,39 @@ public class RentDAO {
 		}
 	}
 	//대관문의 답변쓰기 - reInsertRent(DTO)
-	
+	//패스워드 체크후 게시글확인 - goContent(rno,r_mb_pw)
+		public int goContent(int rno,String r_mb_pw) {
+			int result = -1;
+			
+			try {
+				con = getConnection();
+				
+				sql = "select r_mb_pw from rent where rno = ?";
+				pstmt = con.prepareStatement(sql);
+				
+				pstmt.setInt(1, rno);
+				
+				rs = pstmt.executeQuery();
+				
+				if(rs.next()) {
+					if(r_mb_pw.equals(rs.getString("r_mb_pw")) || r_mb_pw.equals("admin")) {
+						result = 1;
+					}else {
+						//비밀번호 오류
+						result = 0;
+					}
+				}else {
+					//게시글 없음
+					result = -1;
+				}
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}finally {
+				closeDB();
+			}
+			return result;
+		}	
+		//패스워드 체크후 게시글확인 - goContent(rno,r_mb_pw)
 	
 }

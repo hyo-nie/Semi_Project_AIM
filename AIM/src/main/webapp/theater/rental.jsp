@@ -9,7 +9,6 @@
 
 <script type="text/javascript">
 	function rentalCheck(){
-		alert('test');
 		
 		if(document.rt.branchCd.value == ""){
 			alert("지점을 선택해주세요");
@@ -90,6 +89,14 @@
 </script>
 </head>
 <body>
+
+	<%
+		/* 로그인 제어! 회원만 접근 가능 */
+			String id = (String) session.getAttribute("mb_id");
+			if (id == null) {
+				response.sendRedirect("./Login.aim");
+			}
+	%>
 <!-- 각종 요소 -->
 	<jsp:include page="../inc/include.jsp" />
 	<!-- 상위 배너 -->
@@ -100,7 +107,7 @@
 	<br><br><br><br><br><br><br>
 	
 <form action="./RentalAddAction.th" method="post" name="rt">
-	
+	<input type="hidden" name="r_mb_id" value="${sessionScope.mb_id }">
 	<div id="contents">
 		<div class="title_top">
 			<h2 class="tit">단체관람/대관문의</h2>
@@ -214,7 +221,7 @@
 				<tr>
 					<th scope="row" class="req1">비밀번호</th>
 					<td>
-						<input type="text" name="r_mb_pw">
+						<input type="password" name="r_mb_pw">
 					</td>
 				</tr>
 			</tbody>
