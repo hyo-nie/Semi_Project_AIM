@@ -131,9 +131,11 @@
 				<tr>
 					<th scope="row" class="req1">상영관</th>
 					<td>
-						<select name="roomCd" id="room" value="${getsche.roomCd }">
-		
-						</select>
+					<select name="roomCd" id="room">
+						<option>${getsche.roomCd }</option>
+						<option>${getsche.roomCd +1 }</option>
+						<option>${getsche.roomCd +2 }</option>
+					</select>
 					</td>
 			    </tr>
 				<tr>

@@ -6,6 +6,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style type="text/css">
+.sujeong th {
+text-align: center;
+}
+</style>
 </head>
 <body>
 
@@ -42,7 +47,7 @@
 					<col style="width: 30%;">
 				</colgroup>
 				<thead>
-					<tr>
+					<tr class="sujeong">
 						<th scope="col">번호</th>
 						
 						<th scope="col">신청자명</th>
@@ -61,8 +66,7 @@
 					
 							<td> 
 								<c:if test="${dto.r_re_lev > 0}">
-									<img src="./assets/img/cart.png" width="${dto.r_re_lev * 10 }">
-									<img src="./re.gif">
+									<img src="./theater/level.png" width="15px" height="15px">
 									
 								</c:if>
 								<a href="./AdminRentalPwCheck.th?rno=${dto.rno }&pageNum=${pageNum}">${dto.r_name }</a>

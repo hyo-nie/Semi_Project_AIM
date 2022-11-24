@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.aim.hp.action.Action;
 import com.aim.hp.action.ActionForward;
+import com.aim.theater.action.AdminPwCheckAction;
 
 @WebServlet("*.hp")
 public class HpFrontController extends HttpServlet {
@@ -158,8 +159,8 @@ public class HpFrontController extends HttpServlet {
     		
     	
     	// 문의 답글 달기
-    	else if(command.equals("/HpReWrite.hp")) {
-    		System.out.println(" C : HpReWrite.hp 실행");
+    	else if(command.equals("/HpReWriteAction.hp")) {
+    		System.out.println(" C : HpReWriteAction.hp 실행");
     		 
     		action = new HpReWriteAction();
     		try {
@@ -169,6 +170,26 @@ public class HpFrontController extends HttpServlet {
 			}
     		
     	}
+    	// 문의 리스트 pw 제어
+    	else if(command.equals("/HpPwCheck.hp")) {
+			System.out.println("/HpPwCheck.hp 실행");
+			
+			forward = new ActionForward();
+			forward.setPath("./hp/hppwcheck.jsp");
+			forward.setRedirect(false);
+		}
+    	// 문의 리스트 pw 확인
+		else if(command.equals("/HpPwCheckAction.hp")) {
+			System.out.println("HpPwCheckAction.hp 실행");
+			
+			action = new HpPwCheckAction();
+			
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
     	
     	
     	System.out.println("C : 2. 가상주소 매핑 끝\n");

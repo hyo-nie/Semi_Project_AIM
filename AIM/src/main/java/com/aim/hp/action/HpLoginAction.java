@@ -18,52 +18,7 @@ public class HpLoginAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		System.out.println("M : HpLoginAction_execute() 호출 ");
 		
-//		HttpSession session = request.getSession();
-//		String mb_id = (String)session.getAttribute("mb_id");
-//		String mb_pw = (String)session.getAttribute("mb_pw");
-//		
-//		ActionForward forward = new ActionForward();
-//		if(mb_id == null) {
-//			forward.setPath("./Main.aim");
-//			forward.setRedirect(true);
-//			return forward;
-//		}
-//		
-//		// DAO - 로그인 여부 체크 메서드 loginCheck()
-//		HpDAO dao = new HpDAO();
-//		int result = dao.loginCheck(mb_id, mb_pw);
-//		
-//		if(result == 0) {
-//			response.setContentType("text/html; charset=UTF-8");
-//			PrintWriter out = response.getWriter();
-//			out.print("<script>");
-//			out.print("alert('비밀번호가 일치하지 않습니다');");
-//			out.print("history.back();");
-//			out.print("</script>");
-//
-//			out.close();
-//			
-//			return null;
-//		}
-//		
-//		if(result == -1) {
-//			response.setContentType("text/html; charset=UTF-8");
-//			PrintWriter out = response.getWriter();
-//			out.print("<script>");
-//			out.print("alert('로그인이 되어있지 않습니다');");
-//			out.print("history.back();");
-//			out.print("</script>");
-//
-//			out.close();
-//			
-//			return null;
-//		}
-//		
-//		
-//		
-//		forward.setPath("./hp/boardhp.jsp");
-//		forward.setRedirect(false);	
-		
+
 		//세션 제어
 		HttpSession session = request.getSession();
 		String mb_id = (String)session.getAttribute("mb_id");

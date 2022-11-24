@@ -6,6 +6,15 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+<style type="text/css">
+.sujeong th {
+padding : 18px 15px 18px 15px;
+text-align: center;
+}
+
+</style>
+
 </head>
 <body>
 <!-- 각종 요소 -->
@@ -49,12 +58,12 @@
 <%-- 					<col style="width: 10%;"> --%>
 				</colgroup>
 				<thead align="center">
-					<tr>
-						<th scope="col">번호</th>						
+					<tr class="sujeong">
+						<th scope="col" style="width:71px;">번호</th>						
 						<th scope="col">지점</th>
 						<th scope="col">날짜</th>
-						<th scope="col">상영관</th>
-						<th scope="col">영화명</th>
+						<th scope="col" style="width:86px;">상영관</th>
+						<th scope="col" style="width:286px;">영화명</th>
 						<th scope="col">시작시간</th>
 						<th scope="col">상영횟수</th>
 						<th scope="col">관리</th>
@@ -68,13 +77,13 @@
 					 <c:forEach var="admins" items="${adminScheList }">
 						<tr>
 							<td>${admins.scCode }</td>
-							<td>${admins.branch_name }</td>
-						    <td>${admins.sc_date }</td>
+							<td style="width:90px;">${admins.branch_name }</td>
+						    <td style="width:126px;">${admins.sc_date }</td>
 						    <td>${admins.roomCd }</td>
 						    <td>${admins.movieNm }</td>
 						    <td>${admins.starttime }</td>
 						    <td>${admins.runcount }</td>
-						    <td>
+						    <td style="width:106px;">
 						    	<a href="./adminScheModify.th?scCode=${admins.scCode }">수정</a>
 						    	/
 						    	<a href="./AdminScheRemove.th?scCode=${admins.scCode }">삭제</a>

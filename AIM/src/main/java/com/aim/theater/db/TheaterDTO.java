@@ -15,6 +15,7 @@ public class TheaterDTO {
 	private String movieCd; //영화코드
 	private String movieNm; //영화제목
 	private String watchGradeNm;//관람등급
+	private String poster; // 포스터
 	
 	private String branch_name; //지점이름
 	private String branch_addr; //지점주소
@@ -114,13 +115,23 @@ public class TheaterDTO {
 	public void setBranch_latitude(String branch_latitude) {
 		this.branch_latitude = branch_latitude;
 	}
+	
+	public String getPoster() {
+		return poster;
+	}
+	public void setPoster(String poster) {
+		this.poster = poster;
+	}
 	@Override
 	public String toString() {
 		return "TheaterDTO [scCode=" + scCode + ", branchCd=" + branchCd + ", roomCd=" + roomCd + ", seatcomp="
 				+ seatcomp + ", branch_longitude=" + branch_longitude + ", branch_latitude=" + branch_latitude
 				+ ", roomNum=" + roomNum + ", starttime=" + starttime + ", endtime=" + endtime + ", sc_date=" + sc_date
 				+ ", runcount=" + runcount + ", movieCd=" + movieCd + ", movieNm=" + movieNm + ", watchGradeNm="
-				+ watchGradeNm + ", branch_name=" + branch_name + ", branch_addr=" + branch_addr + "]";
+				+ watchGradeNm + ", poster=" + poster + ", branch_name=" + branch_name + ", branch_addr=" + branch_addr
+				+ "]";
 	}
+
+	
 
 }

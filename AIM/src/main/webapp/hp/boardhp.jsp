@@ -9,44 +9,50 @@
 
 <script type="text/javascript">
 	function hpCheck(){
-		if(document.hp.hp_select.value=""){
-			alert('분류 탭을 체크해주세요');
+		
+		var hp_select = $("#hp_select").val();
+		var hp_class1 = $("#radio01").val();
+		var hp_class2 = $("#radio02").val();
+		var hp_subject = $("#hp_subject").val();
+		var hp_content = $("#hp_content").val();
+		var mb_id = $("#mb_id").val();
+		var mb_pw = $("#mb_pw").val();
+		var hp_agree = $("#radio10").val();
+	
+		if(hp_select == ""){
+			alert('문의 분류를 선택해주세요');
 			document.hp.hp_select.focus();
-			return false;
+			return false();
 		}
-		if(document.hp.hp_class[0].checked==false && document.hp.hp_class[1].checked==false){
-			alert('문의 종류 탭을 체크해주세요');
-			document.hp.hp_class.focus();
-			return false;
-		}
-		if(document.hp.hp_subject.value=""){
-			alert('문의 제목을 작성해주세요');
+		
+		if(hp_subject == ""){
+			alert('문의 제목을 입력해주세요');
 			document.hp.hp_subject.focus();
-			return false;
+			return false();
 		}
-		if(document.hp.hp_content.value=""){
-			alert('문의 내용을 작성 해주세요');
+		if(hp_content == ""){
+			alert('문의 내용을 입력해주세요');
 			document.hp.hp_content.focus();
-			return false;
+			return false();
 		}
-		
-		if(document.hp.mb_id.value=""){
-			alert('id를 입력 해주세요');
-			document.hp.mb_id.focus();
-			return false;
+// 		if(mb_id == ""){
+// 			alert('아이디를 입력해주세요');
+// 			document.hp.hp_select.focus();
+// 			return false();
+// 		}
+// 		if(mb_pw == ""){
+// 			alert('비밀번호를 입력해주세요');
+// 			document.hp.mb_pw.focus();
+// 			return false();
+// 		}
+		if(hp_agree == ""){
+			alert('개인정보 이용에 동의를 선택해주세요');
+			documnet.hp.hp_agree.focus();
+			return false();
 		}
-		
-		if(document.hp.mb_pw.value=""){
-			alert('비밀번호를 입력 해주세요');
-			document.hp.mb_pw.focus();
-			return false;
-		}
-		if(document.hp.hp_agree[0].checked==false && document.hp.hp_agree[1].checked==false){
-			alert('정보 동의 체크해주세요');
-			document.hp.hp_agree.focus();
-			return false;
-		}
-		
+		alert('함수');
+
+		document.hp.submit();
 	}
 
 </script>
@@ -97,7 +103,7 @@
 							<span class="txt_req">필수입력</span>
 						</div>
 					</div>
-				<form action="./Write.hp" method="post" enctype="multipart/form-data" name="hp" onsubmit="return hpCheck()">
+				<form action="./Write.hp" method="post" name="hp" >
 					<table class="tbl_form" summary="문의내용작성 테이블">
 						<caption>문의 내용을 작성해주세요</caption>
 						<colgroup>
@@ -109,8 +115,8 @@
 							<tr>
 								<th scope="row" class="req">분류</th>
 								<td>
-									<select title="문의내용 분류선택" name="hp_select">
-										<option	value="0">분류 선택</option>
+									<select id="hp_select" title="문의내용 분류선택" name="hp_select">
+										<option	value="">분류 선택</option>
 										<option value="1">영화관</option>
 										<option value="2">영화</option>
 										<option value="3">멤버십</option>
@@ -123,79 +129,64 @@
 							</tr>
 							
 							<tr>
-								<th scope="row" class="req" name="hp_class">종류</th>
+								<th>종류</th>
 								<td>
-									<input type="radio" name="hp_class" id="radio01" class="aNoneSelect" checked>
-										<label for="radio01">영화 관련 문의</label>
-									<input type="radio" name="hp_class" id="radio02">
-										<label for="radio02">기타 문의</label>
+									<input type="radio" name="hp_class" id="radio01" checked>
+										<label>영화 관련 문의</label>
+									<input type="radio" name="hp_class" id="radio02" >
+										<label>기타 문의</label>
 								</td>
 							</tr>
 							
 							<tr>
-								<th scope="row" class="req">제목</th>
+								<th scope="row" class="req" >제목</th>
 								<td>
 									<div class="bx_textarea">
-										<input type="text" class="ty2 w_full" placeholder="제목을 입력해주세요" title="문의내용 제목입력" name="hp_subject">
+										<input type="text" class="ty2 w_full" placeholder="제목을 입력해주세요" title="문의내용 제목입력" id="hp_subject" name="hp_subject">
 										<span class="txt_count">
 										<em id="strongContentsCount_Title">0</em>/한글<em> 50</em>자</span>
 									</div>
 								</td>
 							</tr>
 							<tr>
-								<th scope="row" class="req">내용</th>
+								<th scope="row" class="req" id="">내용</th>
 								<td>
 									<div class="bx_textarea">
-										<textarea class="ty2" cols="10" rows="10" name="hp_content" 
-										placeholder="내용 및 첨부파일에 개인정보(카드번호, 계좌번호, 주민번호)가 포함되지 않도록 유의하여 입력해주세요.">
-										</textarea>
+										<textarea class="ty2" cols="10" rows="10" name="hp_content"  id="hp_content"
+										placeholder="내용 및 첨부파일에 개인정보(카드번호, 계좌번호, 주민번호)가 포함되지 않도록 유의하여 입력해주세요."></textarea>
 										<span class="txt_count"><em id="strongContentsCount">0</em>/한글<em> 2,000</em>자</span>
 									</div></td>
 							</tr>
-							<tr>
-								<th scope="row">첨부파일</th>
-								<td>
-									<div class="bx_file ">
-										<input type="file" id="file" name="hp_file">
-											<label class="" for="file">파일선택</label>
-									<div class="file_item">
-									<span class="" id="iDfileUpload1"> ${hp_file } </span>
-									<button class="btn_del">삭제</button></div>
-									</div>
-									<span class="txt_caution1 fl_r with_inp">첨부 파일형식 : jpg / jpeg / png / bmp / gif / pdf (5MB X 1개)</span>
-								</td>
-							</tr>
-							
 						</tbody>
 					</table>
 			
-					<div class="con_tit ty2">
-						<h4 class="tit">고객정보</h4>
-						<div class="group_rgt">
-							<span class="txt_req">필수입력</span>
-						</div>
-					</div>
-					<table class="tbl_form" summary="고객정보작성 테이블">
-						<caption>고객정보를 작성해주세요</caption>
-						<colgroup>
-							<col style="width: 15%;">
-							<col style="width: auto;">
-						</colgroup>
-						<tbody>
-							<tr>
-								<th scope="row" class="req">아이디</th>
-								<td>
-									<input type="text" class="ty2 inp_name" name="mb_id" title="성명을 입력해주세요" value="${dto.mb_id }">
-								</td>
-							</tr>
-							<tr>
-								<th scope="row" class="req">비밀번호</th>
-								<td>
-									<input type="password" class="ty2 inp_id" title="삭제용 비밀번호"	name="mb_pw" value=""> 
-									<span class="txt_caution1 fl_r with_inp">사용되는 비밀번호는 수정 및 삭제에 이용되므로 필수로 작성해주시기 바랍니다.</span></td>
-							</tr>
-						</tbody>
-					</table>
+<!-- 					<div class="con_tit ty2"> -->
+<!-- 						<h4 class="tit">고객정보</h4> -->
+<!-- 						<div class="group_rgt"> -->
+<!-- 							<span class="txt_req">필수입력</span> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+<!-- 					<table class="tbl_form" summary="고객정보작성 테이블"> -->
+<%-- 						<caption>고객정보를 작성해주세요</caption> --%>
+<%-- 						<colgroup> --%>
+<%-- 							<col style="width: 15%;"> --%>
+<%-- 							<col style="width: auto;"> --%>
+<%-- 						</colgroup> --%>
+<!-- 						<tbody> -->
+<!-- 							<tr> -->
+<!-- 								<th scope="row" class="req">아이디</th> -->
+<!-- 								<td> -->
+<%-- 									<input type="text" class="ty2 inp_name" name="mb_id" id="mb_id" title="성명을 입력해주세요" value="${dto.mb_id }"> --%>
+<!-- 								</td> -->
+<!-- 							</tr> -->
+<!-- 							<tr> -->
+<!-- 								<th scope="row" class="req">비밀번호</th> -->
+<!-- 								<td> -->
+<%-- 									<input type="password" class="ty2 inp_id" title="삭제용 비밀번호" id="mb_pw" name="mb_pw" value="${dto.mb_pw }">  --%>
+<!-- 									<span class="txt_caution1 fl_r with_inp">사용되는 비밀번호는 수정 및 삭제에 이용되므로 필수로 작성해주시기 바랍니다.</span></td> -->
+<!-- 							</tr> -->
+<!-- 						</tbody> -->
+<!-- 					</table> -->
 					<div class="con_tit ty2">
 						<h4 class="tit">개인정보 수집에 대한 동의</h4>
 						<div class="group_rgt">
@@ -215,18 +206,19 @@
 								보유기간 : 문의접수 후 처리 완료시점으로 부터 3년</span><br><br>
 								※ 1:1문의 서비스 제공을 위한 최소한의 개인정보이며 거부할 수 있습니다. 다만, 수집에 동의하지 않을 경우 서비스 이용이 제한됩니다
 						</div>
-						<div class="bx_inp">
-							<input type="radio" name="hp_agree" id="radio10" checked="">
+						<div class="bx_inp" id="hp_agree">
+							<input type="radio" name="hp_agree" id="radio10">
 								<label for="radio10">동의 </label>
-							<input type="radio" name="hp_agree" id="radio11">
+							<input type="radio" name="hp_agree" id="radio11" checked>
 								<label for="radio11">동의하지않음</label>
 						</div>
 						
 					<div class="submit">
 						<div class="btn_btm_wrap">
+							<input type="hidden" name="mb_id" id="mb_id" value="${dto.mb_id }">
+							<input type="hidden" name="mb_pw" id="mb_pw" value="${dto.mb_pw }">
 							<input type="button" class="btn_col3 ty6" value="취소하기" onclick="location.href='./Main.aim';">
-							<input type="submit" class="btn_col2 ty6" value="문의하기" >
-							
+							<input type="button" class="btn_col2 ty6" value="문의하기" onclick="hpCheck()" >
 						</div>
 					</div>
 						</form>

@@ -4,14 +4,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
-import com.aim.store.db.OrderDTO;
 
 public class MemberDAO {
 
@@ -414,5 +411,40 @@ public class MemberDAO {
 			closeDB();
 		}
     }
+    
+    
+    
+    
+    /**
+	 * MemberUpdate() - member 테이블에 회원정보 수정하는 메서드
+	 */
+   // 회원정보 수정메서드 - MemberUpdate(DTO)
+	public void MemberUpdate(MemberDTO dto) {
+		
+		try {
+			con = getConnection();
+	        sql = "update member set "
+	         		+ "mb_pw=?,mb_name=?,mb_nick=?,mb_tel=? "
+		            + "where mb_id=?";
+	        pstmt = con.prepareStatement(sql);
+	         
+			pstmt.setString(1, dto.getMb_pw());
+			pstmt.setString(2, dto.getMb_name());
+			pstmt.setString(3, dto.getMb_nick());
+			pstmt.setString(4, dto.getMb_tel());
+			pstmt.setString(5, dto.getMb_id());
+ 
+			pstmt.executeUpdate();
+			
+			System.out.println(" DAO : 회원 정보 수정 완료");
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			closeDB();
+		}
+		
+	}	
+	// 회원정보 수정메서드 - MemberUpdate(DTO)
    
 }
