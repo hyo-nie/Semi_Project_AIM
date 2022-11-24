@@ -846,7 +846,7 @@
 												</dd>
 												<dt>잔여석</dt>
 												<dd class="seat">
-													<strong>146</strong> / 162
+													<strong>145</strong> / 162
 												</dd>
 												<dt>상영관</dt>
 												<dd class="hall">${fsche.roomCd}관</dd>
