@@ -8,11 +8,58 @@
 <title>AIM 스토어 상품 등록</title>
 <link href="./assets/css/common.css" rel="stylesheet" type="text/css">
 <link href="./assets/css/default.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+
+	function check(){
+		// 카테고리, 소분류, 상품명, 가격, 구성, 첨부파일
+		if(document.adminfr.category.value == ""){
+			alert("카테고리를 선택해주세요!");
+			document.adminfr.category.focus();
+			return false;
+		}
+		if(document.adminfr.category_name.value == ""){
+			alert("소분류를 선택해주세요!");
+			document.adminfr.category_name.focus();
+			return false;
+		}
+		if(document.adminfr.name.value == ""){
+			alert("상품명을 입력해주세요!");
+			document.adminfr.name.focus();
+			return false;
+		}
+		if(document.adminfr.price.value == ""){
+			alert("상품 가격을 입력해주세요!");
+			document.adminfr.price.focus();
+			return false;
+		}
+		if(document.adminfr.text.value == ""){
+			alert("상품 구성을 입력해주세요!");
+			document.adminfr.text.focus();
+			return false;
+		}
+		if(document.adminfr.img.value == ""){
+			alert("상품 사진을 등록해주세요!");
+			document.adminfr.img.focus();
+			return false;
+		}
+		if (confirm("상품을 등록 하시겠습니까?") == true){
+			 document.adminfr.submit();
+			 
+		 }else{
+		     return false;
+		 }	
+		
+	}
+</script>
 
 </head>
 <body>
 
-	<!-- 카테고리 별로 상품을 따로 등록을 하는 게 좋을 거 같음 -->
+	<!-- 각종 요소 -->
+	<jsp:include page="../inc/include.jsp" />
+	
+	<!-- 헤더/네비 -->
+	<jsp:include page="../inc/login_nav_bar.jsp"/>
 
 	<%
 		/* 로그인 제어! 스토어 상품 등록 페이지는 admin(관리자)만 접근 가능 */
@@ -22,7 +69,10 @@
 			}
 	%>
 	
-	<form action="./AdminStoreAddAction.ad" method="post" enctype="multipart/form-data">
+	
+	
+	
+	<form action="./AdminStoreAddAction.ad" method="post" name="adminfr" enctype="multipart/form-data">
 	
 	<div id="contents">
 		<div class="title_top">
@@ -41,22 +91,18 @@
 					<th scope="row" class="req1">카테고리</th>
 					<td>
 						<select title="카테고리를 선택" name="category" id="iDdivisionCode">
-							<option value="0" selected="selected">카테고리 선택</option>
+							<option value="" selected disabled hidden>카테고리</option>
 							<option value="1">기프트카드/관람권</option>
 							<option value="2">팝콘/음료/굿즈</option>
 						</select>
 					</td>
 				</tr>
 				
-				
-				<!-- select-option으로 소분류를 나눌 예정 -->
-				<!-- code_1이면 기프트카드와 관람권이 option으로, -->
-				<!-- code_2이면 팝콘, 음료, 콤보, 굿즈가 option으로 -->
 				<tr>
 					<th scope="row" class="req1">소분류</th>
 					<td>
 						<select name="category_name" id="iDdivisionCode">
-							<option value="0" selected="selected">소분류 선택</option>
+							<option value="" selected disabled hidden>소분류</option>
 							<option value="기프트카드">기프트카드</option>
 							<option value="관람권">관람권</option>
 							<option value="팝콘">팝콘</option>
@@ -114,8 +160,8 @@
 		</table>
 		
 			<div class="btn_btm_wrap">
-				<a href="#none" class="btn_col3 ty6">취소</a>
-				<input type="submit" value="등록" class="btn_col2 ty6">
+				<input type="button" value="등록" class="btn_col2 ty6" onclick="check();">
+				<input type="reset" class="btn_col3 ty6" value="취소하기">
 			</div>
 			
 		</div>

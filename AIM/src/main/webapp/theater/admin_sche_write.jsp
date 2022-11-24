@@ -206,7 +206,7 @@
 						
 				</tbody>
 			</table>
-				<div class="btn_btm_wrap">
+				<div class="btn_btm_wrap" align="center">
 					<a href="#none" class="btn_col3 ty6">취소</a>
 					<input type="button" value="등록" class="btn_col2 ty6" onclick="scheCheck();">
 				</div>

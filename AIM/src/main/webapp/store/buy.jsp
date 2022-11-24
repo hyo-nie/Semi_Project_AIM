@@ -53,7 +53,7 @@ function requestPay(user_tel) {
           if (rsp.success) {
              console.log("결제 성공!");
               // 결제 성공 시 이동하는 페이지(./OrderList.or)
-              location.href="./OrderAddAction.or?mb_tel="+user_tel;
+              location.href="./OrderAddAction.or?mb_tel="+user_tel+"&totalAmountMoney="+payAmount;
               
           } else {
         	  console.log(rsp)

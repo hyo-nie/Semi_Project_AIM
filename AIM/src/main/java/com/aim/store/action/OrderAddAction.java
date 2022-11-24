@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.aim.member.db.MemberDAO;
 import com.aim.store.db.CartDAO;
 import com.aim.store.db.OrderDAO;
 import com.aim.store.db.OrderDTO;
@@ -28,6 +29,10 @@ public class OrderAddAction implements Action {
 			
 			return forward;
 		}
+		
+		// 총 결제금액 저장
+		MemberDAO mb = new MemberDAO();
+		mb.Addsum(id, request.getParameter("payAmount"));
 		
 		// 전달된 주문 정보(id, o_tel, o_pay)
 		OrderDTO orderDTO = new OrderDTO();

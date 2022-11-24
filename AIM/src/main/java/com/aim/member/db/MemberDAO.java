@@ -4,10 +4,14 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
+
+import com.aim.store.db.OrderDTO;
 
 public class MemberDAO {
 
@@ -387,5 +391,27 @@ public class MemberDAO {
 		}
     }
     // updateMemberGrade()
+    
+    
+    
+	  /**
+	   * Addsum()
+	   * 구매 시 구매금액을 member테이블 mbpay에 구매금액을 누적시키는 메서드
+	   */
+	  
+    public void Addsum(String mb_id, String mb_pay){
+    	
+    	try {
+			con = getConnection();
+			sql = "update class7_220721_team3.member set mb_pay=mb_pay+? where mb_id=?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, mb_pay);
+			pstmt.setString(2, mb_id);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			closeDB();
+		}
+    }
    
 }
