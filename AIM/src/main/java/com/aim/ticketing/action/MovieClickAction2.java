@@ -24,6 +24,7 @@ public class MovieClickAction2 implements Action {
 		
 		// dao - getScheduleList
 		ReservationDAO dao = new ReservationDAO();
+		System.out.println(branchCd + " " + movieCd + " " + date);
 		List<ScheduleDTO> scheduleList = dao.getScheduleList(branchCd, movieCd, date);
 		List<MovieDTO> movieList = dao.getMovieList(scheduleList);
 		
