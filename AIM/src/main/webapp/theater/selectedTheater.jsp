@@ -13,26 +13,7 @@
 <style type="text/css">
 	.layer_contents ul, li {list-style: none; }
 	</style>
-<script type="text/javascript">
-	$(document).ready(function() {
-		$('#datesel a').click(function() {
-			$('#schedule li').remove();
 
-			$ajax({
-				url : "./dateClick.th",
-				data : {
-					sc_date : $(this).val()
-				},
-				success : function(data) {
-					$('#schedule').append(data);
-				},
-				error : function() {
-					alert('실패!')
-				}
-			});
-		});
-	});
-</script>
 <%-- owl 조작 --%>
 <script type="text/javascript">
 	$(document).ready(function() {
@@ -291,8 +272,8 @@
 	<div id="contents"
 		class="contents_theater_detail area__movingbar litype2">
 		<div class="theater_top_wrap">
-			<div class="theater_tit">
-				<h3 class="tit">${dto.branch_name}</h3>
+			<div class="theater_tit" ><a name="name"></a>
+				<h3 class="tit" >${dto.branch_name}</h3>
 
 				<button type="button" class="btnToggle btn_col4 ty3">
 					<span class="icon_groupvisit"></span> 단체/대관문의
@@ -469,48 +450,48 @@
 												<li class="item"><strong class="month">${m }월</strong><span
 													class="date"><label> <input type="radio"
 															name="radioDate1" checked=""> <a
-															href="./branch.th?branchCd=${date.branchCd }&date=${ymd}#dates"><strong>${d }</strong><em>오늘</em></a></label></span></li>
+															href="./branch.th?branchCd=${date.branchCd }&date=${ymd}#name"><strong>${d }</strong><em>오늘</em></a></label></span></li>
 											</div>
 											<div class="owl-item active" style="width: 67.143px;">
 												<li class="item"><span class="date"><label>
 															<input type="radio" name="radioDate1"><a
-															href="./branch.th?branchCd=${date.branchCd }&date=${ymd1}#dates"><strong>${d1 }</strong><em>${e1 }</em></a>
+															href="./branch.th?branchCd=${date.branchCd }&date=${ymd1}#name"><strong>${d1 }</strong><em>${e1 }</em></a>
 													</label></span></li>
 											</div>
 											<div class="owl-item active" style="width: 67.143px;">
 												<li class="item"><span class="date"><label><input
 															type="radio" name="radioDate1"><a
-															href="./branch.th?branchCd=${date.branchCd }&date=${ymd2}#dates"><strong>${d2 }</strong><em>${e2 }</em></a></label></span></li>
+															href="./branch.th?branchCd=${date.branchCd }&date=${ymd2}#name"><strong>${d2 }</strong><em>${e2 }</em></a></label></span></li>
 											</div>
 											<div class="owl-item active" style="width: 67.143px;">
 												<li class="item"><span class="date"><label><input
 															type="radio" name="radioDate1"><a
-															href="./branch.th?branchCd=${date.branchCd }&date=${ymd3}#dates"><strong>${d3 }</strong><em>${e3 }</em></a></label></span></li>
+															href="./branch.th?branchCd=${date.branchCd }&date=${ymd3}#name"><strong>${d3 }</strong><em>${e3 }</em></a></label></span></li>
 											</div>
 											<div class="owl-item active" style="width: 67.143px;">
 												<li class="item"><span class="date"><label><input
 															type="radio" name="radioDate1"><a
-															href="./branch.th?branchCd=${date.branchCd }&date=${ymd4}#dates"><strong>${d4 }</strong><em>${e4 }</em></a></label></span></li>
+															href="./branch.th?branchCd=${date.branchCd }&date=${ymd4}#name"><strong>${d4 }</strong><em>${e4 }</em></a></label></span></li>
 											</div>
 											<div class="owl-item active" style="width: 67.143px;">
 												<li class="item"><span class="date"><label><input
 															type="radio" name="radioDate1"><a
-															href="./branch.th?branchCd=${date.branchCd }&date=${ymd5}#dates"><strong>${d5 }</strong><em>${e5 }</em></a></label></span></li>
+															href="./branch.th?branchCd=${date.branchCd }&date=${ymd5}#name"><strong>${d5 }</strong><em>${e5 }</em></a></label></span></li>
 											</div>
 											<div class="owl-item active" style="width: 67.143px;">
 												<li class="item"><span class="date"><label><input
 															type="radio" name="radioDate1"><a
-															href="./branch.th?branchCd=${date.branchCd }&date=${ymd6}#dates"><strong>${d6 }</strong><em>${e6 }</em></a></label></span></li>
+															href="./branch.th?branchCd=${date.branchCd }&date=${ymd6}#name"><strong>${d6 }</strong><em>${e6 }</em></a></label></span></li>
 											</div>
 											<div class="owl-item active" style="width: 67.143px;">
 												<li class="item"><span class="date"><label><input
 															type="radio" name="radioDate1"><a
-															href="./branch.th?branchCd=${date.branchCd }&date=${ymd7}#dates"><strong>${d7 }</strong><em>${e7 }</em></a></label></span></li>
+															href="./branch.th?branchCd=${date.branchCd }&date=${ymd7}#name"><strong>${d7 }</strong><em>${e7 }</em></a></label></span></li>
 											</div>
 											<div class="owl-item active" style="width: 67.143px;">
 												<li class="item"><span class="date"><label><input
 															type="radio" name="radioDate1"><a
-															href="./branch.th?branchCd=${date.branchCd }&date=${ymd8}#dates"><strong>${d8 }</strong><em>${e8 }</em></a></label></span></li>
+															href="./branch.th?branchCd=${date.branchCd }&date=${ymd8}#name"><strong>${d8 }</strong><em>${e8 }</em></a></label></span></li>
 											</div>
 										</c:forEach>
 									</div>
@@ -607,17 +588,17 @@
 												</tr>
 												<tr>
 													<th>일반</th>
-													<td>12,000</td>
-													<td>10,000</td>
+													<td>13,000</td>
+													<td>9,000</td>
 													<td>7,000</td>
-													<td>5,000</td>
+													<td>7,000</td>
 													<td>-</td>
 													<td>&nbsp;</td>
 													<th>일반</th>
 													<td>14,000</td>
 													<td>10,000</td>
 													<td>7,000</td>
-													<td>5,000</td>
+													<td>7,000</td>
 													<td>-</td>
 													<td>&nbsp;</td>
 												</tr>
@@ -674,14 +655,14 @@
 													<th>조조</th>
 													<td>11,000</td>
 													<td>10,000</td>
-													<td>10,000</td>
+													<td>8,000</td>
 													<td>8,000</td>
 													<td>-</td>
 													<td>&nbsp;</td>
 													<th>조조</th>
 													<td>12,000</td>
 													<td>10,000</td>
-													<td>10,000</td>
+													<td>8,000</td>
 													<td>8,000</td>
 													<td>-</td>
 													<td>&nbsp;</td>
@@ -690,14 +671,14 @@
 													<th>일반</th>
 													<td>13,000</td>
 													<td>12,000</td>
-													<td>10,000</td>
+													<td>8,000</td>
 													<td>8,000</td>
 													<td>-</td>
 													<td>&nbsp;</td>
 													<th>일반</th>
 													<td>15,000</td>
 													<td>12,000</td>
-													<td>10,000</td>
+													<td>8,000</td>
 													<td>8,000</td>
 													<td>-</td>
 													<td>&nbsp;</td>
