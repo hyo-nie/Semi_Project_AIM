@@ -58,7 +58,7 @@ public class MemberDAO {
 	         pstmt.setString(5, dto.getMb_birth());
 	         pstmt.setString(6, dto.getMb_gender());
 	         pstmt.setString(7, dto.getMb_tel());
-	         pstmt.setInt(8, 0);
+	         pstmt.setInt(8, 1);
 	         pstmt.setInt(9, 0);
 	         pstmt.setInt(10, 0);
 	         
@@ -303,6 +303,89 @@ public class MemberDAO {
 	}
     // 회원정보조회
     
+    /**
+     * updateMemberPay(id, totalPrice) : 아이디와 영화 예매 총 결제금액을 받아서 멤버 테이블에 총 결제금액 업데이트 
+     */
+    public void updateMemberPay(String id, int totalPrice) {
+    	try {
+			con = getConnection();
+			sql = "update member set mb_pay = mb_pay+? where mb_id = ?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, totalPrice);
+			pstmt.setString(2, id);
+			
+			pstmt.executeUpdate();
+			
+			System.out.println(" DAO : 회원 총 결제금액 수정 완료 ! ");
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			closeDB();
+		}
+    }
+    //  updateMemberPay()
     
+    /**
+     * updateMemberView() : 아이디를 받아서 멤버 테이블에 총 관람 횟수 업데이트
+     */
+    public void updateMemberView(String id) {
+    	try {
+			con = getConnection();
+			sql = "update member set mb_view = mb_view+1 where mb_id = ?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, id);
+			
+			pstmt.executeUpdate();
+			
+			System.out.println(" DAO : 회원 관람 횟수 수정 완료 ! ");
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			closeDB();
+		}
+    }
+    // updateMemberView()
+    
+    /**
+     * updateMemberGrade() : 아이디를 입력받아서 회원 등급 수정하는 메서드
+     */
+    public void updateMemberGrade(String id) {
+    	try {
+			con = getConnection();
+			sql = "select mb_pay from member where mb_id = ?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, id);
+			
+			rs = pstmt.executeQuery();
+			
+			if (rs.next()) { // 1=실버, 2=골드, 3=vip, 4=vvip
+				String sql2 = "update member set mb_grade=? where mb_id=?";
+				PreparedStatement pstmt2 = con.prepareStatement(sql2);
+				
+				if (rs.getInt(1) >= 200000) { // 총 결제금액 20만 이상
+					pstmt2.setInt(1, 4);
+				} else if (rs.getInt(1) >= 100000) { // 총 결제금액 10만 이상
+					pstmt2.setInt(1, 3);
+				} else if (rs.getInt(1) >= 50000) { // 총 결제금액 5만 이상
+					pstmt2.setInt(1, 2);
+				} else { // 나머지
+					pstmt2.setInt(1, 1);
+				}
+				
+				pstmt2.setString(2, id);
+				pstmt2.executeUpdate();
+				
+				System.out.println(" DAO : 회원 등급 수정 완료 ! ");
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			closeDB();
+		}
+    }
+    // updateMemberGrade()
    
 }

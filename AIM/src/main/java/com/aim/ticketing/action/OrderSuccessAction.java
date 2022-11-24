@@ -95,7 +95,7 @@ public class OrderSuccessAction implements Action {
 		dao.updateSeatComp(seatcomp, scCode);
 		
 		// reservationDAO - insertReservation : 예매 정보 저장
-		dao.insertReservation(scDTO, tkCode, totalPrice, totalCnt, id);
+		int result = dao.insertReservation(scDTO, tkCode, totalPrice, totalCnt, id);
 		
 		// dao.getReservation(tkCode) : tkCode에 해당하는 예매 정보 조회
 		ReservationDTO reDTO = dao.getReservation(tkCode);
@@ -103,6 +103,13 @@ public class OrderSuccessAction implements Action {
 		// 회원 정보 조회
 		MemberDAO mbDAO = new MemberDAO();
 		MemberDTO mbDTO = mbDAO.getMemberInfo(id);
+		
+		// 결제성공시 누적금액, 관람횟수 수정
+		if (result == 1) {
+			mbDAO.updateMemberPay(id, totalPrice);
+			mbDAO.updateMemberView(id);
+			mbDAO.updateMemberGrade(id);
+		}
 		
 		// request
 		request.setAttribute("seatArr", seatArr);
