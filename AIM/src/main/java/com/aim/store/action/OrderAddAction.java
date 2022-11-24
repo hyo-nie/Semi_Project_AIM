@@ -34,11 +34,12 @@ public class OrderAddAction implements Action {
 		MemberDAO mb = new MemberDAO();
 		mb.Addsum(id, Integer.parseInt(request.getParameter("totalAmountMoney")));
 		System.out.println(request.getParameter("totalAmountMoney"));
+		mb.updateMemberGrade(id);
 		
 		// 전달된 주문 정보(id, o_tel, o_pay)
 		OrderDTO orderDTO = new OrderDTO();
 		orderDTO.setO_id(id);
-		orderDTO.setO_tel(request.getParameter("o_tel")); // 이거 왜 mb_tel 되어있노?
+		orderDTO.setO_tel(request.getParameter("mb_tel")); // 이거 왜 mb_tel 되어있노?
 		orderDTO.setO_pay(request.getParameter("o_pay"));
 //		System.out.println(request.getParameter("o_pay"));
 
