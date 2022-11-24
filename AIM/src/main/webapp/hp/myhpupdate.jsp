@@ -66,22 +66,6 @@
 						<tbody>
 						
 							<tr>
-								<th scope="row" class="req">분류</th>
-								<td>
-									<select title="문의내용 분류선택" name="hp_select">
-										<option	value="${dto.hp_select }">${dto.hp_select }</option>
-										<option value="600">영화관</option>
-										<option value="700">영화</option>
-										<option value="800">멤버십</option>
-										<option value="900">예매/결제</option>
-										<option value="1000">이벤트</option>
-										<option value="1100">홈페이지/모바일</option>
-										<option value="1200">개인정보</option>
-									</select>
-								</td>
-							</tr>
-							
-							<tr>
 								<th scope="row" class="req" name="hp_class">종류</th>
 								<td>
 									<input type="radio" name="rdo00" id="radio01" class="aNoneSelect" checked>
