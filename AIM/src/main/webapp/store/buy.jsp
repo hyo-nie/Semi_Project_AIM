@@ -20,27 +20,29 @@
 // JavaScript 내에서 EL 표현식을 쓸 땐 꼭 양쪽에 따옴표를 붙여주세요!
 
 
-var IMP = window.IMP;   // 생략 가능
-IMP.init("imp30860234"); // 예: imp00000000 
+var IMP = window.IMP;
+IMP.init("imp30860234"); 
 
 function requestPay(user_tel) {
       
 		var user = "<%=session.getAttribute("mb_id") %>";
 		var payAmount = Number(document.getElementById("totalAmountMoney").innerHTML);
-// 		alert(payAmount);
+		alert(payAmount);
+		alert(user);
 		
 		var itemObj = $(".product_info_name");	
 		var itemName = "";
 		
-		if(itemObj.length == 1){
-			// 한 개인 경우
-			itemName = $(".product_info_name").eq(0)[0].outerText
-		}
-		else{
-			// 여러 개인 경우
-			itemName = $(".product_info_name").eq(0)[0].outerText + " 외 " + (itemObj.length-1) + "건"
-		}
-		
+// 		if(itemObj.length == 1){
+// 			// 한 개인 경우
+// 			itemName = $(".product_info_name").eq(0)[0].outerText
+// 		}
+// 		else{
+// 			// 여러 개인 경우
+// 			itemName = $(".product_info_name").eq(0)[0].outerText + " 외 " + (itemObj.length-1) + "건"
+// 		}
+		alert('결제가 되는지......... 왜 안 되는지,,,,,,,,,,,,,,');
+
       IMP.request_pay({ 
           pg: "html5_inicis",
           pay_method: "card",
@@ -69,14 +71,14 @@ function requestPay(user_tel) {
     
 	function requestPay2(user_tel){
 // 		alert('requestPay2 호출 완');
-var payAmount = Number(document.getElementById("totalAmountMoney").innerHTML);
+		var payAmount = Number(document.getElementById("totalAmountMoney").innerHTML);
 		
 		var check = $('#check00').prop('checked');
 		
 		if(check){
 			console.log("체크 완료");
-// 			requestPay(user_tel);
-			location.href="./OrderAddAction.or?mb_tel="+user_tel+"&totalAmountMoney="+payAmount;
+ 			requestPay(user_tel);
+//			location.href="./OrderAddAction.or?mb_tel="+user_tel+"&totalAmountMoney="+payAmount;
 			
 		} else{
 			alert('약관에 모두 동의하셔야 결제가 가능합니다.');
@@ -674,8 +676,8 @@ var payAmount = Number(document.getElementById("totalAmountMoney").innerHTML);
 			
 			<div class="com_btn_wrap pT40">
 				<!--   <input type="button" onClick="api_start()" />-->
-				<a href="javascript:requestPay()" class="btn_style0">결제하기</a>
- 				<a href='javascript:requestPay2("${member.mb_tel}")'>결제하기</a> 
+<!-- 				<a href="javascript:requestPay()" class="btn_style0">결제하기</a> -->
+ 				<a href='javascript:requestPay2("${member.mb_tel}")' class="btn_style0">결제하기</a> 
 				<a href="./CartList.ct" class="btn_style0" style="color:white">돌아가기</a> 
 			</div>
 		</div>

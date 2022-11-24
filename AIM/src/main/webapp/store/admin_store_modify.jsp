@@ -8,9 +8,47 @@
 <title>AIM - 스토어 상품 수정</title>
 <link href="./assets/css/common.css" rel="stylesheet" type="text/css">
 <link href="./assets/css/default.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+function check(){
+	// 카테고리, 소분류, 상품명, 가격, 구성
+	if(document.adminfr.category.value == ""){
+		alert("카테고리를 선택해주세요!");
+		document.adminfr.category.focus();
+		return false;
+	}
+	if(document.adminfr.category_name.value == ""){
+		alert("소분류를 선택해주세요!");
+		document.adminfr.category_name.focus();
+		return false;
+	}
+	if(document.adminfr.name.value == ""){
+		alert("상품명을 입력해주세요!");
+		document.adminfr.name.focus();
+		return false;
+	}
+	if(document.adminfr.price.value == ""){
+		alert("상품 가격을 입력해주세요!");
+		document.adminfr.price.focus();
+		return false;
+	}
+	if(document.adminfr.text.value == ""){
+		alert("상품 구성을 입력해주세요!");
+		document.adminfr.text.focus();
+		return false;
+	}
+	if (confirm("상품을 등록 하시겠습니까?") == true){
+		 document.adminfr.submit();
+		 
+	 }else{
+	     return false;
+	 }	
+	
+}
+
+
+</script>
 </head>
 <body>
-<%-- ${dto } 정보확인용 --%>
 
 	<%
 		/* 로그인 제어! 스토어 상품 수정 페이지는 admin(관리자)만 접근 가능 */
@@ -20,7 +58,7 @@
 			}
 	%>
 	
-	<form action="./AdminStoreModifyPro.ad" method="post"> 
+	<form action="./AdminStoreModifyPro.ad" method="post" name="adminfr"> 
 	<input type="hidden" name="st_num" value="${dto.st_num }">
 	<!-- 파일 수정 안 함 -->
 	
@@ -131,25 +169,14 @@
 						</div>
 					</td>
 				</tr>
-				
-<!-- 				<tr> -->
-<!-- 					<th scope="row">첨부파일</th> -->
-<!-- 					<td> -->
-<!-- 						<div class="bx_file"> -->
-<!-- 							<input type="file" id="file" name="img"> -->
-<!-- 							<label class="" for="file">파일선택</label> -->
-<!-- 							<div class="file_item"></div> -->
-<!-- 						</div> -->
-<!-- 						<span class="txt_caution1 fl_r with_inp"> 상품 대표 사진을 등록해주세요.</span> -->
-<!-- 					</td> -->
-<!-- 				</tr> -->
+
 				
 			</tbody>
 		</table>
 		
 			<div class="btn_btm_wrap">
 				<a href="#none" class="btn_col3 ty6">취소</a>
-				<input type="submit" value="수정" class="btn_col2 ty6">
+				<input type="button" value="수정" class="btn_col2 ty6" onclick="check();">
 			</div>
 			
 		</div>
