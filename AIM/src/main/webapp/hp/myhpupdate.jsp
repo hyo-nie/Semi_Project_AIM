@@ -29,7 +29,7 @@
 		</div>
 		<ul class="tab_wrap outer actionmovingbar">
 			<li>
-				<button type="button" class="tab_tit" style="width: 33.33%; left: 0%;" onclick="">
+				<button type="button" class="tab_tit" style="width: 33.33%; left: 0%;" onclick="location.href='./NtList.nt';">
 					<span>공지 사항</span>
 				</button>
 			</li>
@@ -56,7 +56,7 @@
 							<span class="txt_req">필수입력</span>
 						</div>
 					</div>
-				<form action="./MyHpUpdatePro.hp?hp_bno=${dto.hp_bno }&pageNum=${pageNum }" method="post" enctype="multipart/form-data">
+				<form action="./MyHpUpdatePro.hp?hp_bno=${dto.hp_bno }&pageNum=${pageNum }" method="post">
 					<table class="tbl_form" summary="문의내용작성 테이블">
 						<caption>문의 내용을 작성해주세요</caption>
 						<colgroup>
@@ -108,9 +108,7 @@
 									<div class="bx_textarea">
 										<textarea class="ty2" cols="10" rows="10" name="hp_content" 
 										title="문의내용을 입력해주세요" 
-										placeholder="내용 및 첨부파일에 개인정보(카드번호, 계좌번호, 주민번호)가 포함되지 않도록 유의하여 입력해주세요.">
-										${dto.hp_content }
-										</textarea>
+										placeholder="내용 및 첨부파일에 개인정보(카드번호, 계좌번호, 주민번호)가 포함되지 않도록 유의하여 입력해주세요.">${dto.hp_content }</textarea>
 										<span class="txt_count"><em id="strongContentsCount">
 											
 											</em>
@@ -136,12 +134,12 @@
 						<tbody>
 							<tr>
 								<th scope="row" class="req">아이디</th>
-								<td><input type="text" class="ty2 inp_name" name="mb_id" title="성명을 입력해주세요" value="${dto.mb_id }">\</td>
+								<td><input type="text" class="ty2 inp_name" name="mb_id" title="아이디" value="${dto.mb_id }"></td>
 							</tr>
 							<tr>
 								<th scope="row" class="req">비밀번호</th>
 								<td>
-									<input type="text" class="ty2 inp_id" title="이메일 아이디"	name="hp_deletepw" > 
+									<input type="text" class="ty2 inp_id" title="비밀번호"	name="mb_pw" > 
 									<span class="txt_caution1 fl_r with_inp">사용되는 비밀번호는 수정 및 삭제에 이용되므로 필수로 작성해주시기 바랍니다.</span></td>
 							</tr>
 						</tbody>
@@ -171,6 +169,8 @@
 						</div>
 						
 						<div class="btn_btm_wrap">
+							<input type="hidden" name="mb_id" id="mb_id" value="${dto.mb_id }">
+							<input type="hidden" name="mb_pw" id="mb_pw" value="${dto.mb_pw }">
 							<input type="submit" class="btn_col3 ty6" value="수정하기" >
 							<input type="button" class="btn_col2 ty6" value="문의목록" onclick="location.href='./MyHpList.hp';" >
 							
@@ -179,7 +179,7 @@
 					</div>
 				</div></li>
 		<li>
-				<button type="button" class="tab_tit" style="width: 33.33%; left: 66.67%;">
+				<button type="button" class="tab_tit" style="width: 33.33%; left: 66.67%;" onclick="location.href='./MyHpList.hp';" >
 					<span>문의 내용 목록</span>
 				</button></li>
 			<li class="wrap_nav_underline"><span class="nav_underline"></span></li>
@@ -208,5 +208,4 @@
 	</div>
    
 </body>
-
 </html>
