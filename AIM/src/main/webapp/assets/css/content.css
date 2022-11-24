@@ -10012,6 +10012,11 @@ line-height: 19px;
    
 }
 /*  예매넘기기전 확인창  */
+.hwakin .hwakin0 { 
+	opacity: 0;
+	position: fixed; 
+}
+
 .hwakin .hwakin1 { 
 	left: 38%; 
 	top: 20%; 
@@ -10024,7 +10029,7 @@ line-height: 19px;
 	border-radius: 20px;
 }
 .hwakin .hwakin1 .hwakin-1 {
-	background: lightgrey;
+	background: #708090;
 	top: 10%; 
 	width: 390px;
 	height: 40px; 
@@ -10038,6 +10043,7 @@ line-height: 19px;
 	position: absolute;
 	top:1.5%;
 	left:28%;
+	color:white;
 }
 
 .hwakin .hwakin1 .posterimg{
@@ -10073,6 +10079,21 @@ line-height: 19px;
 	text-decoration: underline;
 }		
 .hwakin .hwakin1 .button{
-	margin-top:20px;
+	margin-top:10px;
 	text-align: center;
 }
+.hwakin .hwakin1 .button .cansle{
+	width: 100px;
+	height: 30px;
+	border-radius: 5px;
+	background:#333333;
+	color:white;
+}
+.hwakin .hwakin1 .button .sel{
+	width: 100px;
+	height: 30px;
+	border-radius: 5px;
+	background-color: #FF0033;
+    color: white;
+}
+

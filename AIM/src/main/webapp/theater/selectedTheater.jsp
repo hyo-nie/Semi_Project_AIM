@@ -117,8 +117,22 @@
 		});
 
 	});
-	
+	$(function() {
+		$("#sele").on("click", function() {
 
+			$("#hwakin").attr('class','hwakin1');
+			return false;
+		});
+
+	});
+	$(function() {
+		$("#cans").on("click", function() {
+
+			$("#hwakin").attr('class','hwakin0');
+			return false;
+		});
+
+	});
 </script>
 
 </head>
@@ -279,7 +293,8 @@
 				<a name="name"></a>
 				<h3 class="tit">${dto.branch_name}</h3>
 
-				<button type="button" class="btnToggle btn_col4 ty3" onclick="location.href='RentalWrite.th';">
+				<button type="button" class="btnToggle btn_col4 ty3"
+					onclick="location.href='RentalWrite.th';">
 					<span class="icon_groupvisit"></span> 단체/대관문의
 				</button>
 			</div>
@@ -817,31 +832,26 @@
 						</div>
 						<ul class="list_time">
 							<c:forEach var="fsche" items="${scheduleFirst }">
+								<c:if test="${fmovie.movieNm eq fsche.movieNm }">
+									<li class=""><a id="sele" role="button">
+											<dl>
+												<dt>상영시간</dt>
+												<dd class="time">
+													<strong> ${fsche.starttime}</strong>
+													<div class="tooltip">종료 :</div>
+												</dd>
+												<dt>잔여석</dt>
+												<dd class="seat">
+													<strong>146</strong> / 162
+												</dd>
+												<dt>상영관</dt>
+												<dd class="hall">${fsche.roomCd}관</dd>
 
-										<c:if test="${fmovie.movieNm eq fsche.movieNm }">
-											<li class=""><a
-												href="./SelectSeat.tk?scCode=${fsche.scCode}"
-												onclick="alert('좌석을 선택해주세요');" role="button">
-													<dl>
-														<dt>상영시간</dt>
-														<dd class="time">
-															<strong> ${fsche.starttime}</strong>
-															<div class="tooltip">종료 :</div>
-														</dd>
-														<dt>잔여석</dt>
-														<dd class="seat">
-															<strong>146</strong> / 162
-														</dd>
-														<dt>상영관</dt>
-														<dd class="hall">${fsche.roomCd}관</dd>
-														
-													</dl>
-											</a></li>
+											</dl>
 
-
-
-									<div id="hwakin" class="hwakin">
-										<div class="hwakin1">
+									</a></li></c:if>
+									<div class="hwakin">
+										<div id="hwakin" class="hwakin0">
 											<div class="hwakin-1">
 												<span>${fsche.starttime }&nbsp;&nbsp;~&nbsp;&nbsp;${fsche.endtime }(${fsche.roomCd }관)</span>
 											</div>
@@ -849,35 +859,38 @@
 												<img class="img" src="${fsche.poster }">
 											</div>
 											<div class="info">
-											<c:choose>
-												<c:when test="${fmovie.watchGradeNm eq '12세이상관람가' }">
-													<span class="ic_grade gr_12">12</span>
-													본 영화는<span class="y12" > 만 12세 이상 관람가 </span> 영화입니다.<br>
+												<c:choose>
+													<c:when test="${fmovie.watchGradeNm eq '12세이상관람가' }">
+														<span class="ic_grade gr_12">12</span>
+													본 영화는<span class="y12"> 만 12세 이상 관람가 </span> 영화입니다.<br>
 													만 12세 미만의 고객님(영, 유아 포함)은 반드시 부모님 또는 성인 보호자의 
 													동반하에 관람이 가능합니다. 연령 확인 불가 시 입장이 제한될 수 있습니다.
 													
 												</c:when>
-												<c:when test="${fmovie.watchGradeNm eq '15세이상관람가' }">
-													<span class="ic_grade gr_15">15</span>
+													<c:when test="${fmovie.watchGradeNm eq '15세이상관람가' }">
+														<span class="ic_grade gr_15">15</span>
 													본 영화는<span class="y15"> 만 15세 이상 관람가 </span> 영화입니다.<br>
 													만 15세 미만의 고객님(영, 유아 포함)은 반드시 부모님 또는 성인 보호자의 동반하에
 													관람이 가능합니다. 연령 확인 불가 시 입장이 제한될 수 있습니다.
 												</c:when>
-												<c:when test="${fmovie.watchGradeNm eq '청소년관람불가' }">
-													<span class="ic_grade gr_18">18</span>
+													<c:when test="${fmovie.watchGradeNm eq '청소년관람불가' }">
+														<span class="ic_grade gr_18">18</span>
 													본 영화는<span class="18"> 청소년 관람불가 </span> 영화입니다.<br>
 													만 18세 미만의 고객님(영, 유아 포함)은 부모님 또는 성인 보호자를 동반하여도
 													관람이 불가합니다. 또한 만 18세 이상이라도 재학중인 학생은 관람이 불가합니다.
 													영화 관람 시, 반드시 신분증을 지참하여 주시기 바랍니다.
 												</c:when>
-												<c:otherwise>
-													<span class="ic_grade gr_all">All</span>
+													<c:otherwise>
+														<span class="ic_grade gr_all">All</span>
 													본 영화는<span class="all"> 전체 관람가 </span> 영화입니다.
 												</c:otherwise>
-											</c:choose>
+												</c:choose>
 											</div>
 											<div class="button">
-											<button>취소</button><button>인원/좌석 선택</button>
+												<button id="cans" class="cansle">취소</button>
+												<button class="sel"
+													onclick='location.href="./SelectSeat.tk?scCode=${fsche.scCode}"'>인원/좌석
+													선택</button>
 											</div>
 										</div>
 
@@ -885,16 +898,18 @@
 
 
 
-								</c:if>
-										<div id="mCSB_6_container"
-											class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y"
-											style="position: relative; top: 0; left: 0;" dir="ltr">
-											<div class="bx_nodata_movie">
-												<p >
-													조회 가능한 상영시간이 없습니다.<br>조건을 변경해주세요.
-												</p>
-											</div>
-										</div>
+								
+
+
+								<!-- <div id="mCSB_6_container"
+									class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y"
+									style="position: relative; top: 0; left: 0;" dir="ltr">
+									<div class="bx_nodata_movie">
+										<p>
+											조회 가능한 상영시간이 없습니다.<br>조건을 변경해주세요.
+										</p>
+									</div>
+								</div> -->
 
 							</c:forEach>
 						</ul>
@@ -911,10 +926,10 @@
 	</div>
 
 
-	<div style="width:100%; height: 100%; background: black; opacity:0.3">
-		
+	<div style="width: 100%; height: 100%; background: black; opacity: 0.3">
+
 	</div>
-	
+
 
 
 	<script type="text/javascript"
