@@ -102,8 +102,8 @@ public class RentDAO {
 			if(rs.next()) {
 				rno = rs.getInt(1) + 1;
 			}
-			sql="insert into rent(rno,branchCd,r_class,r_people,hopeday,hopestart,hopeend,movieCd,r_text,r_name,r_tel,r_re_ref,r_re_lev,r_re_seq) "
-				+ "values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+			sql="insert into rent(rno,branchCd,r_class,r_people,hopeday,hopestart,hopeend,movieCd,r_text,r_name,r_tel,r_re_ref,r_re_lev,r_re_seq,r_mb_pw,r_mb_id) "
+				+ "values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 			pstmt = con.prepareStatement(sql);
 			
 			pstmt.setInt(1, rno);
@@ -122,6 +122,9 @@ public class RentDAO {
 			pstmt.setInt(12, rno);
 			pstmt.setInt(13, 0);
 			pstmt.setInt(14, 0);
+			
+			pstmt.setString(15, dto.getR_mb_pw());
+			pstmt.setString(16, dto.getR_mb_id());
 			
 			pstmt.executeUpdate();
 			
@@ -198,6 +201,9 @@ public class RentDAO {
 				dto.setR_re_lev(rs.getInt("r_re_lev"));
 				dto.setR_re_seq(rs.getInt("r_re_seq"));
 				
+				dto.setR_mb_id(rs.getString("r_mb_id"));
+				dto.setR_mb_pw(rs.getString("r_mb_pw"));
+				
 				RentList.add(dto);
 			}
 		} catch (Exception e) {
@@ -216,7 +222,7 @@ public class RentDAO {
 		
 		try {
 			con = getConnection();
-			sql = "select rno, rent.branchCd, theater.branch_name, r_class, r_people,hopeday, hopestart,hopeend, rent.movieCd, movie.movieNm,r_text,r_name,r_tel,r_re_ref,r_re_lev,r_re_seq "
+			sql = "select rno, rent.branchCd, theater.branch_name, r_class, r_people,hopeday, hopestart,hopeend, rent.movieCd, movie.movieNm,r_text,r_name,r_tel,r_re_ref,r_re_lev,r_re_seq,r_mb_id,r_mb_pw "
 					+ "from rent join theater "
 					+ "on rent.branchCd = theater.branchCd "
 					+ "join movie "
@@ -245,6 +251,9 @@ public class RentDAO {
 				dto.setR_re_ref(rs.getInt("r_re_ref"));
 				dto.setR_re_lev(rs.getInt("r_re_lev"));
 				dto.setR_re_seq(rs.getInt("r_re_seq"));
+				
+				dto.setR_mb_id(rs.getString("r_mb_id"));
+				dto.setR_mb_pw(rs.getString("r_mb_pw"));
 				
 			}
 		} catch (Exception e) {
@@ -318,7 +327,7 @@ public class RentDAO {
 			}
 			
 			//3.답글쓰기
-			sql="insert into rent(rno,branchCd,r_class,r_people,hopeday,hopestart,hopeend,movieCd,r_text,r_name,r_tel,r_re_ref,r_re_lev,r_re_seq) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+			sql="insert into rent(rno,branchCd,r_class,r_people,hopeday,hopestart,hopeend,movieCd,r_text,r_name,r_tel,r_re_ref,r_re_lev,r_re_seq,r_mb_id,r_mb_pw) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 			pstmt = con.prepareStatement(sql);
 			
 			pstmt.setInt(1, rno);
@@ -339,6 +348,9 @@ public class RentDAO {
 			pstmt.setInt(13, dto.getR_re_lev()+1);//r_re_lev : 원글의 lev + 1
 			pstmt.setInt(14,dto.getR_re_seq()+1);// r_re_seq : 원글의 seq +1
 			
+			pstmt.setString(15, dto.getR_mb_id());
+			pstmt.setString(16, dto.getR_mb_pw());
+			
 			//4. sql 실행
 			pstmt.executeUpdate();
 			
@@ -350,39 +362,40 @@ public class RentDAO {
 		}
 	}
 	//대관문의 답변쓰기 - reInsertRent(DTO)
+	
 	//패스워드 체크후 게시글확인 - goContent(rno,r_mb_pw)
-		public int goContent(int rno,String r_mb_pw) {
-			int result = -1;
+	public int goContent(int rno,String r_mb_pw) {
+		int result = -1;
+		
+		try {
+			con = getConnection();
 			
-			try {
-				con = getConnection();
-				
-				sql = "select r_mb_pw from rent where rno = ?";
-				pstmt = con.prepareStatement(sql);
-				
-				pstmt.setInt(1, rno);
-				
-				rs = pstmt.executeQuery();
-				
-				if(rs.next()) {
-					if(r_mb_pw.equals(rs.getString("r_mb_pw")) || r_mb_pw.equals("admin")) {
-						result = 1;
-					}else {
-						//비밀번호 오류
-						result = 0;
-					}
+			sql = "select r_mb_pw from rent where rno = ?";
+			pstmt = con.prepareStatement(sql);
+			
+			pstmt.setInt(1, rno);
+			
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				if(r_mb_pw.equals(rs.getString("r_mb_pw")) || r_mb_pw.equals("admin")) {
+					result = 1;
 				}else {
-					//게시글 없음
-					result = -1;
+					//비밀번호 오류
+					result = 0;
 				}
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}finally {
-				closeDB();
+			}else {
+				//게시글 없음
+				result = -1;
 			}
-			return result;
-		}	
-		//패스워드 체크후 게시글확인 - goContent(rno,r_mb_pw)
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			closeDB();
+		}
+		return result;
+	}	
+	//패스워드 체크후 게시글확인 - goContent(rno,r_mb_pw)
 	
 }

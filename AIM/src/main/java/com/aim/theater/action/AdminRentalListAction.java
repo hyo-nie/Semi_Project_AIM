@@ -14,6 +14,16 @@ public class AdminRentalListAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		System.out.println(" M : AdminRentalListAction.execute() 호출 ");
 		
+		//세션제어(회원만)
+		HttpSession session = request.getSession();
+		String mb_id = (String) session.getAttribute("mb_id");
+		
+		ActionForward forward = new ActionForward();
+		if(mb_id==null) {
+			forward.setPath("./Main.aim");
+			forward.setRedirect(true);
+			return forward;
+		}
 		
 		//RentDAO 객체 생성
 		RentDAO dao = new RentDAO();
@@ -75,7 +85,7 @@ public class AdminRentalListAction implements Action {
 		
 		
 		// 페이지 이동
-		ActionForward forward = new ActionForward();
+		forward = new ActionForward();
 		forward.setPath("./theater/rt_list.jsp");
 		forward.setRedirect(false);
 

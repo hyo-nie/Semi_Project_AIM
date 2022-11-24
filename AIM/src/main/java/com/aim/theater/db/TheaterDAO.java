@@ -270,7 +270,7 @@ public class TheaterDAO {
 		
 		try {
 			con = getConnection();
-			sql = "select movieCd, movieNm, watchGradeNm from movie";
+			sql = "select movieCd, movieNm, watchGradeNm from movie where boxrank>=1 && boxrank<=10";
 			pstmt = con.prepareStatement(sql);
 			
 			rs = pstmt.executeQuery();
@@ -338,8 +338,35 @@ public class TheaterDAO {
 	}
 	//스케줄 등록 - insertSche(dto)
 	
+	//스케줄 카운트 - getScheCount();
+	public int getScheCount() {
+		int cnt = 0;
+	
+		try {
+			con = getConnection();
+			
+			sql="select count(*) from schedule";
+			pstmt=con.prepareStatement(sql);
+			
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				cnt = rs.getInt("count(*)");
+			}
+			System.out.println("DAO: 전체 글 개수 : "+cnt+"개");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			closeDB();
+		}
+		return cnt;
+	}
+	//스케줄 카운트 - getScheCount();
+	
+	
 	//관리자 스케줄 리스트 - getAdminScheList()
-	public List getAdminScheList() {
+	public List getAdminScheList(int startRow,int pageSize) {
 		List adminScheList = new ArrayList();
 		
 		try {
@@ -350,8 +377,12 @@ public class TheaterDAO {
 					+ "on schedule.branchCd = theater.branchCd "
 					+ "join movie "
 					+ "on schedule.movieCd = movie.movieCd "
-					+ "order by scCode;";
+					+ "order by scCode desc limit ?,?;";
 			pstmt = con.prepareStatement(sql);
+			
+			// ?????
+			pstmt.setInt(1, startRow-1); // 시작행 - 1
+			pstmt.setInt(2, pageSize); // 개수
 			
 			rs = pstmt.executeQuery();
 			

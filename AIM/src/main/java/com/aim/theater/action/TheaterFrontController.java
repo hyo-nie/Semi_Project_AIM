@@ -176,6 +176,25 @@ public class TheaterFrontController extends HttpServlet {
 				e.printStackTrace();
 			}
 		}
+		else if(command.equals("/AdminRentalPwCheck.th")) {
+			System.out.println("/AdminRentalPwCheck.th 호출, 패턴1");
+			
+			forward = new ActionForward();
+			forward.setPath("./theater/admin_pw_check.jsp");
+			forward.setRedirect(false);
+		}
+		else if(command.equals("/AdminPwCheckAction.th")) {
+			System.out.println("/AdminPwCheckAction.th 호출, 패턴2");
+			
+			action = new AdminPwCheckAction();
+			
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 		else if(command.equals("/AdminRentalContent.th")) {
 			System.out.println("/AdminRentalContent.th 호출, 패턴3");
 			

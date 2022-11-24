@@ -24,6 +24,8 @@ public class RentalAddAction implements Action {
 		dto.setR_text(request.getParameter("r_text"));
 		dto.setR_name(request.getParameter("r_name"));
 		dto.setR_tel(request.getParameter("r_tel"));
+		dto.setR_mb_pw(request.getParameter("r_mb_pw"));
+		dto.setR_mb_id(request.getParameter("r_mb_id"));
 		
 		
 		RentDAO dao = new RentDAO();

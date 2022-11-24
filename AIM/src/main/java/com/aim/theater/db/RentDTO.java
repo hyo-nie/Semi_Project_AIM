@@ -15,6 +15,8 @@ public class RentDTO {
 	
 	private String r_name;
 	private String r_tel;
+	private String r_mb_pw;
+	private String r_mb_id;
 	
 	private int r_re_ref;
 	private int r_re_lev;
@@ -117,18 +119,27 @@ public class RentDTO {
 	public void setMovieNm(String movieNm) {
 		this.movieNm = movieNm;
 	}
+	
+	public String getR_mb_pw() {
+		return r_mb_pw;
+	}
+	public void setR_mb_pw(String r_mb_pw) {
+		this.r_mb_pw = r_mb_pw;
+	}
+	
+	public String getR_mb_id() {
+		return r_mb_id;
+	}
+	public void setR_mb_id(String r_mb_id) {
+		this.r_mb_id = r_mb_id;
+	}
 	@Override
 	public String toString() {
 		return "RentDTO [rno=" + rno + ", branchCd=" + branchCd + ", branch_name=" + branch_name + ", r_class="
 				+ r_class + ", r_people=" + r_people + ", hopeday=" + hopeday + ", hopestart=" + hopestart
 				+ ", hopeend=" + hopeend + ", movieCd=" + movieCd + ", movieNm=" + movieNm + ", r_text=" + r_text
-				+ ", r_name=" + r_name + ", r_tel=" + r_tel + ", r_re_ref=" + r_re_ref + ", r_re_lev=" + r_re_lev
-				+ ", r_re_seq=" + r_re_seq + "]";
+				+ ", r_name=" + r_name + ", r_tel=" + r_tel + ", r_mb_pw=" + r_mb_pw + ", r_mb_id=" + r_mb_id
+				+ ", r_re_ref=" + r_re_ref + ", r_re_lev=" + r_re_lev + ", r_re_seq=" + r_re_seq + "]";
 	}
-	
-	
-	
-	
-	
 	
 }

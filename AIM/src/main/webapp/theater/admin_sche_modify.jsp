@@ -30,6 +30,28 @@
 			target.appendChild(opt);
 		}
 	}
+	function scheMo(){
+		if(document.sm.roomCd.value == ""){
+			alert("상영관을 선택해주세요");
+			document.sm.roomCd.focus();
+			return false;
+		}
+		if(document.sm.runcount.value == ""){
+			alert("상영횟수를 입력해주세요");
+			document.sm.runcount.focus();
+			return false;
+		}
+		if(isNaN(document.sm.runcount.value)){
+			alert("상영횟수는 숫자로 입력해주세요");
+			document.sm.runcount.focus();
+			return false;
+		}
+		if (confirm("수정 하시겠습니까?") == true){    //확인
+			 document.sm.submit();
+		}else{   //취소
+		     return false;
+		}	
+	}
 </script>
 </head>
 <body>
@@ -52,100 +74,133 @@
 	<br><br><br><br><br><br><br><br><br><br><br><br>
 	<!-- 게시판 -->
 	<article>
-	<h1>관리자 스케줄 수정페이지</h1>
-	<form action ="./AdminScheModifyPro.th" method="post" >
-	<input type="hidden" name="scCode" value="${getsche.scCode }">
-	<table id="notice">
-		<tr>
-	   		<th class="ttitle" colspan="2">AIM 스케줄 수정</th>
-	    </tr>
-		<tr>
-			<td>지점</td>
-			<td>
-				<select name="branchCd" onchange="roomCdChange(this)">
-					<option value="1"
-						<c:if test="${getsche.branchCd eq 1}">
-						selected="selected"
-						</c:if>
-					>서면점</option>
-					<option value="2"
-						<c:if test="${getsche.branchCd eq 2}">
-						selected="selected"
-						</c:if>
-					>해운대점</option>
-					<option value="3"
-						<c:if test="${getsche.branchCd eq 3}">
-						selected="selected"
-						</c:if>
-					>대연점</option>
-					<option value="4"
-						<c:if test="${getsche.branchCd eq 4}">
-						selected="selected"
-						</c:if>
-					>사상점</option>
-					<option value="5"
-						<c:if test="${getsche.branchCd eq 5}">
-						selected="selected"
-						</c:if>
-					>동래점</option>
-
-				</select>
-			</td>
-	    </tr>
-		<tr>
-			<td>날짜</td>
-			<td>
-				<input type="text" name="sc_date" value="${getsche.sc_date }">
-			</td>
-	    </tr>
-		<tr>
-			<td>상영관코드</td>
-			<td>
-				<select name="roomCd" id="room" value="${getsche.roomCd }">
-
-				</select>
-			</td>
-	    </tr>
-		<tr>
-			<td>영화제목</td>
-			<td>			
-				<select name="movieCd">
-					<c:forEach var="movie" items="${getmovie }">
-						<option value="${movie.movieCd}" 
-							<c:if test="${getsche.movieCd eq movie.movieCd}">
-							selected="selected"
-							</c:if>
-						>${movie.movieNm }
-						</option>
-					</c:forEach>
-
-				</select>
-			</td>
-	    </tr>
-	    <tr>
-			<td>상영시간</td>
-			<td>
-				<input type="text" name="starttime" value="${getsche.starttime }">
-			</td>
-	    </tr>
-	    <tr>
-			<td>상영종료시간</td>
-			<td>
-				<input type="text" name="endtime" value="${getsche.endtime }">
-			</td>
-	    </tr>
-	    <tr>
-			<td>상영횟수</td>
-			<td>
-				<input type="text" name="runcount" value="${getsche.runcount }">
-			</td>
-	    </tr>
-	    
-	    
-	</table>
-		<div id="table_search">
-			<input type="submit" value="수정하기" class="btn">
+	<form action ="./AdminScheModifyPro.th" method="post" name="sm">
+	<div id="contents">
+			<div class="title_top">
+				<h2 class="tit">AIM 스케줄 수정</h2>
+			</div>
+				<input type="hidden" name="scCode" value="${getsche.scCode }">
+			<table class="tbl_form">
+					<colgroup>
+						<col style="width: 15%;">
+						<col style="width: auto;">
+					</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row" class="req1">지점</th>
+					<td>
+						<select name="branchCd" onchange="roomCdChange(this)">
+							<option value="1"
+								<c:if test="${getsche.branchCd eq 1}">
+								selected="selected"
+								</c:if>
+							>서면점</option>
+							<option value="2"
+								<c:if test="${getsche.branchCd eq 2}">
+								selected="selected"
+								</c:if>
+							>해운대점</option>
+							<option value="3"
+								<c:if test="${getsche.branchCd eq 3}">
+								selected="selected"
+								</c:if>
+							>대연점</option>
+							<option value="4"
+								<c:if test="${getsche.branchCd eq 4}">
+								selected="selected"
+								</c:if>
+							>사상점</option>
+							<option value="5"
+								<c:if test="${getsche.branchCd eq 5}">
+								selected="selected"
+								</c:if>
+							>동래점</option>
+		
+						</select>
+					</td>
+			    </tr>
+				<tr>
+					<th scope="row" class="req1">날짜</th>
+					<td>
+						<input type="date"
+							         name="sc_date"
+							         value="${getsche.sc_date }">
+						
+					</td>
+			    </tr>
+				<tr>
+					<th scope="row" class="req1">상영관</th>
+					<td>
+						<select name="roomCd" id="room" value="${getsche.roomCd }">
+		
+						</select>
+					</td>
+			    </tr>
+				<tr>
+					<th scope="row" class="req1">영화</th>
+					<td>			
+						<select name="movieCd">
+							<c:forEach var="movie" items="${getmovie }">
+								<option value="${movie.movieCd}" 
+									<c:if test="${getsche.movieCd eq movie.movieCd}">
+									selected="selected"
+									</c:if>
+								>${movie.movieNm }
+								</option>
+							</c:forEach>
+		
+						</select>
+					</td>
+			    </tr>
+			    <tr>
+					<th scope="row" class="req1">상영시간</th>
+					<td>
+						<select title="상영시간 선택" name="starttime">
+							<option value="${getsche.starttime }">${getsche.starttime }</option>
+							<option value="09:00">09:00</option>
+							<option value="10:00">10:00</option>
+							<option value="11:00">11:00</option>
+							<option value="12:00">12:00</option>
+							<option value="13:00">13:00</option>
+							<option value="14:00">14:00</option>
+							<option value="15:00">15:00</option>
+							<option value="16:00">16:00</option>
+							<option value="17:00">17:00</option>
+							<option value="18:00">18:00</option>
+						</select>
+					</td>
+			    </tr>
+			    <tr>
+					<th scope="row" class="req1">상영종료시간</th>
+					<td>
+						<select title="상영시간 선택" name="endtime">
+							<option value="${getsche.endtime }">${getsche.endtime }</option>
+							<option value="11:00">11:00</option>
+							<option value="12:00">12:00</option>
+							<option value="13:00">13:00</option>
+							<option value="14:00">14:00</option>
+							<option value="15:00">15:00</option>
+							<option value="16:00">16:00</option>
+							<option value="17:00">17:00</option>
+							<option value="18:00">18:00</option>
+							<option value="19:00">19:00</option>
+							<option value="20:00">20:00</option>
+						</select>
+					</td>
+			    </tr>
+			    <tr>
+					<th scope="row" class="req1">상영횟수</th>
+					<td>
+						<input type="text" name="runcount" value="${getsche.runcount }">
+					</td>
+			    </tr>
+		    </tbody>    
+		</table>
+		<div id="table_search" align="center">
+			<input type="button" value="수정하기" class="btn" onclick="scheMo();">
 		</div>
+	</div>
+	
 	</form>
 		<div class="clear"></div>
 			<div id="page_control">
