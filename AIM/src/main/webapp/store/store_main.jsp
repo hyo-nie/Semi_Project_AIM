@@ -16,6 +16,24 @@
 
 
 </script>
+
+<!--  장바구니 버튼을 위한 CSS -->
+<style>
+	#floatMenu{
+		width: 70px;
+		height: 70px;
+	    padding: 5px;
+	    z-index: 100;			
+	    position: fixed;
+	    bottom: 30px;
+	    right: 30px;
+	    background-image: url(./assets/img/bg_cartBtn.png);
+	    background-color: lightgray;
+	    background-size: cover;
+	    border-radius: 30%
+	}
+</style>
+
 </head>
 <body>
 
@@ -43,6 +61,9 @@
 	    </strong>
   	</div>
   	
+  	<a href="./CartList.ct">
+  		<div id="floatMenu"></div>
+  	</a>
   	
   	<div class="category_product_wrap">
   		<c:set var="size" value="3"/>
