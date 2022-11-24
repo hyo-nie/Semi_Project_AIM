@@ -85,6 +85,15 @@ function requestPay(user_tel) {
 
 </script>
 
+<style>
+	#forBlank{
+	    width: 38px;
+	    height: 50px;
+	    float: left;
+	}
+	
+</style>
+
 </head>
 <body>
 
@@ -155,12 +164,12 @@ function requestPay(user_tel) {
             
        		</ul>
         
-			<table class="com_cart_total_price_wrap">
-				<colgroup>
-					<col style="width: 400px">
-					<col style="width: 0%">
-					<col style="width: 0%">
-				</colgroup>
+			<table class="com_cart_total_price_wrap" style="width: 33%;">
+<%-- 				<colgroup> --%>
+<%-- 					<col style="width: 400px"> --%>
+<%-- 					<col style="width: 0%"> --%>
+<%-- 					<col style="width: 0%"> --%>
+<%-- 				</colgroup> --%>
 				<thead>
 					<tr>
 						<th>총 결제 예정금액</th>
@@ -169,7 +178,7 @@ function requestPay(user_tel) {
 
 				<tbody>
 					<tr>
-						<td>
+						<td style="height: 60px; line-height: 60px;">
 							<strong class="cart_total_price" id="totalAmountMoney" name="o_sum"> </strong>
 						</td>
 					</tr>
@@ -196,10 +205,10 @@ function requestPay(user_tel) {
 		<!-- 주문자 정보 확인 -->
 		<div class="com_box_design_wrap">
 			<strong class="com_box_design_title">주문자 정보 확인</strong>
-			<ul class="com_box_design" style="list-style: none;">
-				<li><label for="user_info_name"> 아이디</label> 
+			<ul class="com_box_design" style="list-style: none; padding: 20px 0 20px;">
+				<li><label for="user_info_name"  style="margin-top: 25px;"> 아이디</label> 
 				<input type="text" id="user_info_name" placeholder="이름" style="width: 128px" value="<%=session.getAttribute("mb_id") %>" readonly> 
-				<label for="user_info_phonenum">휴대전화 번호</label>
+				<label for="user_info_phonenum" style="margin-top: 25px; margin-left: 50px;">휴대전화 번호</label>
 					<input type="tel" id="user_info_phonenum" name="o_tel" placeholder="휴대전화 번호" style="width: 228px" value="${member.mb_tel }"></li>
 			</ul>
 <!-- 			<p class="com_box_design_olist"> -->
@@ -665,7 +674,7 @@ function requestPay(user_tel) {
 				<!--   <input type="button" onClick="api_start()" />-->
 <!-- 				<a href="javascript:requestPay()" class="btn_style0">결제하기</a> -->
  				<a href='javascript:requestPay2("${member.mb_tel}")'>결제하기</a> 
-				<a href="./CartList.ct" class="btn_style0">돌아가기</a> 
+				<a href="./CartList.ct" class="btn_style0" style="color:white">돌아가기</a> 
 			</div>
 		</div>
 		</div>
@@ -673,6 +682,8 @@ function requestPay(user_tel) {
 
 </form>
 
+	<!-- 약관 -->
+	<jsp:include page="../inc/footer.jsp" />
 
 </body>
 </html>
