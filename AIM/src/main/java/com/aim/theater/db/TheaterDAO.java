@@ -135,7 +135,7 @@ public class TheaterDAO {
 		try {
 			con= getConnection();		
 			
-			sql="select scCode, schedule.branchCd, sc_date, schedule.roomCd, room.roomNum, schedule.movieCd, schedule.starttime, movie.movieNm, movie.watchGradeNm "
+			sql="select scCode, schedule.branchCd, sc_date, schedule.roomCd, room.roomNum, schedule.movieCd,schedule.endtime, schedule.starttime, movie.movieNm, movie.watchGradeNm, movie.poster "
 					+ "from schedule "
 					+ "inner join movie "
 					+ "on schedule.movieCd = movie.movieCd "
@@ -152,7 +152,6 @@ public class TheaterDAO {
 			
 			while(rs.next()) {
 				TheaterDTO dto = new TheaterDTO();
-				
 				dto.setScCode(rs.getInt("scCode"));
 				dto.setBranchCd(rs.getInt("branchCd"));
 				dto.setSc_date(rs.getString("sc_date"));
@@ -161,7 +160,9 @@ public class TheaterDAO {
 				dto.setRoomCd(rs.getInt("roomCd"));
 				dto.setRoomNum(rs.getString("roomNum"));;
 				dto.setStarttime(rs.getString("starttime"));
+				dto.setEndtime(rs.getString("endtime")); 
 				dto.setWatchGradeNm(rs.getString("watchGradeNm"));
+				dto.setPoster(rs.getString("poster"));
 				
 				scheList.add(dto);
 			}//while

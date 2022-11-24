@@ -189,7 +189,6 @@ public class OrderDAO {
 					dto.setO_pay(rs.getString("o_pay"));
 					dto.setO_tel(rs.getString("o_tel"));
 					dto.setO_id(rs.getString("o_id"));
-					dto.setO_gimg(rs.getString("o_gimg"));
 					
 					orderList.add(dto);
 				}
@@ -203,57 +202,6 @@ public class OrderDAO {
 	      }  // 주문 번호에 해당하는 상세정보 - orderDetail(o_cnum)
 
 	     
-	  /**
-	   * OrderNow(OrderDTO dto)
-	   * 장바구니를 거치지 않고 바로 주문할 경우 사용하는 메서드
-	 * @return 
-	   */
-	  public void orderNow(OrderDTO dto, MemberDTO mbDTO, StoreDTO stDTO) {
-			int o_num = 0; 
-			
-			Calendar cal = Calendar.getInstance();
-			SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
-			int o_cnum = 0; // 주문번호
-			
-			try {
-				con = getConnection();
-				
-				// 1. 주문번호 계산 후 생성
-				sql = "select max(o_num) from class7_220721_team3.order";
-				pstmt = con.prepareStatement(sql);
-				rs = pstmt.executeQuery();
-				if(rs.next()) {
-					o_num = rs.getInt(1)+1;
-				}
-				
-				o_cnum = o_num;
-				// -> 주문번호 생성 완료
-				
-				// 2. 주문한 상품정보를 저장
-				sql = "insert into class7_220721_team3.order "
-						+ "values(?,?,?,?,?,?,?,?,?,now(),?)";
-	            pstmt = con.prepareStatement(sql);
-	            
-	            pstmt.setInt(1, o_num); // 일련번호
-	            pstmt.setString(2, sdf.format(cal.getTime())+"-"+o_cnum); // 주문번호
-	            pstmt.setInt(3, dto.getO_stnum()); // 주문한 상품번호
-	            pstmt.setString(4, dto.getO_name()); // 상품이름
-	            pstmt.setInt(5, dto.getO_amount()); // 상품수량
-	            pstmt.setString(6, dto.getO_id()); // 주문자 아이디
-	            pstmt.setString(7, dto.getO_tel()); // 주문자 전화번호
-	            pstmt.setInt(8, dto.getO_amount() * stDTO.getSt_price()); // 구매 총액
-	            pstmt.setString(9, dto.getO_pay()); // 결제방법
-	            pstmt.setInt(10, dto.getO_refund()); // 환불가능여부
-	               
-	            pstmt.executeUpdate();
-				
-			} catch (Exception e) {
-				e.printStackTrace();
-			} finally {
-				closeDB();
-			}
-
-	  }
-
+	 
 }
 

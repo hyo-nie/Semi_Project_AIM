@@ -29,31 +29,15 @@ public class NtWriteAction implements Action {
 			return forward;
 		}
 		
-		// 파일 업로드
-		String realPath = request.getRealPath("/upload");
-		System.out.println(" M : realPath : "+realPath);
-		int maxSize = 10 * 1024 * 1024;
-				
-		// 파일업로드 -> 파일업로드 객체 생성(MultipartRequest)
-		MultipartRequest multi 
-				      = new MultipartRequest(
-				        request,
-				        realPath,
-				        maxSize,
-				        "UTF-8",
-				        new DefaultFileRenamePolicy()
-				        );
-				
-		System.out.println(" M : 첨부파일 업로드 성공! ");	
+			
 				
 		// 전달정보 저장 (NtDTO)
 		NtDTO dto = new NtDTO();
 				
-		dto.setMb_id(multi.getParameter("mb_id"));
-		dto.setMb_pw(multi.getParameter("mb_pw"));
-		dto.setNt_file(multi.getFilesystemName("nt_file"));
-		dto.setNt_content(multi.getParameter("nt_content"));
-		dto.setNt_subject(multi.getParameter("nt_subject"));
+		dto.setMb_id(request.getParameter("mb_id"));
+		dto.setMb_pw(request.getParameter("mb_pw"));
+		dto.setNt_content(request.getParameter("nt_content"));
+		dto.setNt_subject(request.getParameter("nt_subject"));
 		
 				
 				

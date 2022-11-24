@@ -4,6 +4,7 @@ import java.io.PrintWriter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.aim.hp.db.HpDAO;
 import com.aim.hp.db.HpDTO;
@@ -16,31 +17,27 @@ public class NtUpdateProAction implements Action {
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		// 파일 업로드
-				String realPath = request.getRealPath("/upload");
-				System.out.println(" M : realPath : "+realPath);
-				int maxSize = 10 * 1024 * 1024;
+		
+			
+				//세션 제어
+				HttpSession session = request.getSession();
+				String mb_id = (String)session.getAttribute("mb_id");
 						
-				// 파일업로드 -> 파일업로드 객체 생성(MultipartRequest)
-				MultipartRequest multi 
-						      = new MultipartRequest(
-						        request,
-						        realPath,
-						        maxSize,
-						        "UTF-8",
-						        new DefaultFileRenamePolicy()
-						        );
-						
-				System.out.println(" M : 첨부파일 업로드 성공! ");			
-						
+				ActionForward forward = new ActionForward();
+				if(mb_id == null) {
+					forward.setPath("./Main.aim");
+					forward.setRedirect(true);
+					return forward;
+				}
+		
+		
 				// DTO 객체 생성 및 데이터 저장
 				NtDTO dto = new NtDTO();
-				dto.setNt_bno(Integer.parseInt(multi.getParameter("nt_bno")));
-				dto.setMb_id(multi.getParameter("mb_id"));
-				dto.setMb_pw(multi.getParameter("mb_pw"));
-				dto.setNt_subject(multi.getParameter("nt_subject"));
-				dto.setNt_select(Integer.parseInt(multi.getParameter("nt_select")));
-				dto.setNt_content(multi.getParameter("nt_content"));
+				dto.setNt_bno(Integer.parseInt(request.getParameter("nt_bno")));
+				dto.setMb_id(request.getParameter("mb_id"));
+				dto.setMb_pw(request.getParameter("mb_pw"));
+				dto.setNt_subject(request.getParameter("nt_subject"));
+				dto.setNt_content(request.getParameter("nt_content"));
 				
 				
 				String pageNum = request.getParameter("pageNum");

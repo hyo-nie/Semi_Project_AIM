@@ -32,11 +32,11 @@ function requestPay(user_tel) {
 		var itemName = "";
 		
 		if(itemObj.length == 1){
-			// 한개인경우
+			// 한 개인 경우
 			itemName = $(".product_info_name").eq(0)[0].outerText
 		}
 		else{
-			// 여러개인경우
+			// 여러 개인 경우
 			itemName = $(".product_info_name").eq(0)[0].outerText + " 외 " + (itemObj.length-1) + "건"
 		}
 		
@@ -46,7 +46,7 @@ function requestPay(user_tel) {
           merchant_uid: "${order.o_cnum}",
           name: itemName,
           amount: payAmount,
-          // buyer_email: "gildong@gmail.com", 주문자 이메일[페이먼트월 필수]
+          // buyer_email: "gildong@gmail.com", 주문자 이메일
           buyer_name: user,
           buyer_tel: user_tel,
       }, function (rsp) {

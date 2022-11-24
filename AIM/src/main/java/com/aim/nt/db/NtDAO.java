@@ -212,8 +212,8 @@ public class NtDAO {
 				
 				// 3. sql 작성 & pstmt 객체
 				sql = "insert into notice_board(nt_bno,mb_id,mb_pw,nt_select,nt_subject,"
-						+ "nt_content,nt_file,nt_date,nt_re_ref,nt_re_lev) "
-						+ "values(?,?,?,?,?,?,?,now(),?,?)";
+						+ "nt_content,nt_date,nt_re_ref,nt_re_lev) "
+						+ "values(?,?,?,?,?,?,now(),?,?)";
 			
 				pstmt = con.prepareStatement(sql);
 				
@@ -224,9 +224,8 @@ public class NtDAO {
 				pstmt.setInt(4, dto.getNt_select());
 				pstmt.setString(5, dto.getNt_subject());
 				pstmt.setString(6, dto.getNt_content());
-				pstmt.setString(7, dto.getNt_file());
+				pstmt.setInt(7, nt_bno);
 				pstmt.setInt(8, 0);
-				pstmt.setInt(9, 0);
 				
 				// 4. sql 실행
 				pstmt.executeUpdate();

@@ -396,14 +396,15 @@ public class MemberDAO {
 	   * 구매 시 구매금액을 member테이블 mbpay에 구매금액을 누적시키는 메서드
 	   */
 	  
-    public void Addsum(String mb_id, String mb_pay){
+    public void Addsum(String mb_id, int mb_pay){
     	
     	try {
 			con = getConnection();
 			sql = "update class7_220721_team3.member set mb_pay=mb_pay+? where mb_id=?";
 			pstmt = con.prepareStatement(sql);
-			pstmt.setString(1, mb_pay);
+			pstmt.setInt(1, mb_pay);
 			pstmt.setString(2, mb_id);
+			pstmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

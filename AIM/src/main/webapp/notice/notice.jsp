@@ -31,7 +31,7 @@
 					style="width: 33.33%; left: 0%;">
 					<span>공지사항</span>
 				</button>
-				<form>
+				<form action="./NtWriteForm.nt" method="post" >
 				<div class="tab_con">
 					<h3 class="hidden">공지사항</h3>
 					<ul class="tab_wrap inner">
@@ -49,7 +49,6 @@
 									<thead>
 										<tr>
 											<th scope="col">번호</th>
-											<th scope="col">구분</th>
 											<th scope="col">작성자</th>
 											<th scope="col">제목</th>
 											<th scope="col">등록일</th>
@@ -59,7 +58,6 @@
 									<c:forEach var="dto" items="${NtListAll }">
 										<tr>
 											<td><strong class="ico_imp"> ${dto.nt_bno }</strong></td>
-											<td>${dto.nt_select }</td>
 											<td>${dto.mb_id }</td>
 											<td class="text_l">
 												<a href="./NtContent.nt?nt_bno=${dto.nt_bno }&pageNum=${pageNum}">${dto.nt_subject }</a>
@@ -91,9 +89,12 @@
 									<button type="button" class="btn_pg_next">다음 페이지로 이동</button>
 									<button type="button" class="btn_pg_last">마지막 페이지로 이동</button>
 									
+									<input type="hidden" name="mb_id" id="mb_id" value="${dto.mb_id }">
+									<input type="hidden" name="mb_pw" id="mb_pw" value="${dto.mb_pw }">
 									<c:if test="${mb_id.equals('admin') }">
-										<input type="button" value="공지사항 올리기" class="btn_col2 ty6" onclick="location.href='./NtWriteForm.nt';">
+										<input type="submit" value="공지사항 올리기" class="btn_col2 ty6">
 									</c:if>
+									
 									
 								</div>
 							</div></li>
@@ -102,8 +103,9 @@
 							onload();
 						</script>
 					</ul>
-				</div></li>
+				</div>
 				</form>
+				</li>
 			<li><button type="button" class="tab_tit" style="width: 33.33%; left: 33.33%;" onclick="location.href='./HpLogin.hp';">
 					<span>1:1문의</span>
 				</button></li>

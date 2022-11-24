@@ -211,12 +211,6 @@
 								<label for="radio10">동의 </label>
 							<input type="radio" name="hp_agree" id="radio11" checked>
 								<label for="radio11">동의하지않음</label>
-							<td class="form-inline">
-  						 	<input type="radio" name="hp_open" id="radio10" value="Y" class="radio" />
-  						 		<span class="ml_10">공개</span>
-  						    <input type="radio" name="hp_open" id="radio11" value="N" class="radio" />
-  						   		<span class="ml_10">비공개</span>
-							</td>
 						</div>
 						
 					<div class="submit">
