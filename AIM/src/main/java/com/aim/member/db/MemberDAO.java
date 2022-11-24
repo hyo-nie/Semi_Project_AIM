@@ -447,4 +447,44 @@ public class MemberDAO {
 	}	
 	// 회원정보 수정메서드 - MemberUpdate(DTO)
    
+	 /**
+		 * MemberDelete() - member 테이블에 회원정보 삭제하는 메서드
+		 */
+	   // 회원 탈퇴 메서드 - MemberDelete(DTO)
+		public int MemberDelete(String mb_id, String mb_pw) {
+			int result = -1;
+			
+			try {
+				con = getConnection();
+		        sql = "select mb_pw from member where mb_id=?";
+		        pstmt = con.prepareStatement(sql);
+				pstmt.setString(1, mb_id);
+				rs = pstmt.executeQuery();
+				
+				if(rs.next()) {
+					if(mb_pw.equals(rs.getString("mb_pw"))) {
+						sql = "delete from member "
+								+ "where mb_id = ?";
+						pstmt = con.prepareStatement(sql);
+						pstmt.setString(1, mb_id);
+						result = pstmt.executeUpdate();				
+					}else {
+						result = 0;
+					}				
+				}else {
+					result = -1;
+				}
+				
+				System.out.println(" DAO : 회원탈퇴 완료("+result+")");
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				closeDB();
+			}
+			return result;
+		}
+			
+		// 회원 탈퇴 메서드 - MemberDelete(DTO)
+	
 }
