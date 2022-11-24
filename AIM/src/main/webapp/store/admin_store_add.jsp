@@ -161,7 +161,7 @@
 		
 			<div class="btn_btm_wrap">
 				<input type="button" value="등록" class="btn_col2 ty6" onclick="check();">
-				<input type="reset" class="btn_col3 ty6" value="취소하기">
+				<input type="reset" class="btn_col3 ty6" value="취소하기" onclick="history.back()">
 			</div>
 			
 		</div>
