@@ -27,6 +27,7 @@ function requestPay(user_tel) {
       
 		var user = "<%=session.getAttribute("mb_id") %>";
 		var payAmount = Number(document.getElementById("totalAmountMoney").innerHTML);
+// 		alert(payAmount);
 		
 		var itemObj = $(".product_info_name");	
 		var itemName = "";
@@ -53,7 +54,7 @@ function requestPay(user_tel) {
           if (rsp.success) {
              console.log("결제 성공!");
               // 결제 성공 시 이동하는 페이지(./OrderList.or)
-              location.href="./OrderAddAction.or?mb_tel="+user_tel+"&totalAmountMoney="+payAmount;
+              location.href="./OrderAddAction.or?mb_tel="+user_tel;
               
           } else {
         	  console.log(rsp)
@@ -68,13 +69,14 @@ function requestPay(user_tel) {
     
 	function requestPay2(user_tel){
 // 		alert('requestPay2 호출 완');
+var payAmount = Number(document.getElementById("totalAmountMoney").innerHTML);
 		
 		var check = $('#check00').prop('checked');
 		
 		if(check){
 			console.log("체크 완료");
 // 			requestPay(user_tel);
-			location.href="./OrderAddAction.or?mb_tel="+user_tel;
+			location.href="./OrderAddAction.or?mb_tel="+user_tel+"&totalAmountMoney="+payAmount;
 			
 		} else{
 			alert('약관에 모두 동의하셔야 결제가 가능합니다.');
@@ -672,7 +674,7 @@ function requestPay(user_tel) {
 			
 			<div class="com_btn_wrap pT40">
 				<!--   <input type="button" onClick="api_start()" />-->
-<!-- 				<a href="javascript:requestPay()" class="btn_style0">결제하기</a> -->
+				<a href="javascript:requestPay()" class="btn_style0">결제하기</a>
  				<a href='javascript:requestPay2("${member.mb_tel}")'>결제하기</a> 
 				<a href="./CartList.ct" class="btn_style0" style="color:white">돌아가기</a> 
 			</div>
