@@ -13,26 +13,7 @@
 <style type="text/css">
 	.layer_contents ul, li {list-style: none; }
 	</style>
-<script type="text/javascript">
-	$(document).ready(function() {
-		$('#datesel a').click(function() {
-			$('#schedule li').remove();
 
-			$ajax({
-				url : "./dateClick.th",
-				data : {
-					sc_date : $(this).val()
-				},
-				success : function(data) {
-					$('#schedule').append(data);
-				},
-				error : function() {
-					alert('실패!')
-				}
-			});
-		});
-	});
-</script>
 <%-- owl 조작 --%>
 <script type="text/javascript">
 	$(document).ready(function() {
@@ -106,6 +87,30 @@
 
 			$(".maps1").attr('class', 'maps2')
 			$(".public1").attr('class', 'public2')
+			return false;
+		});
+
+	});
+	$(function() {
+		$("#tap_con11").on("click", function() {
+			
+			$("#datesel").show();
+			$("#schedule").show();
+			$("#tap_con111").show();
+			$("#sibal").show(1000);
+			$("#tap_con2").hide();
+			return false;
+		});
+
+	});
+	$(function() {
+		$("#tap_con22").on("click", function() {
+			
+			$("#datesel").hide();
+			$("#schedule").hide();
+			$("#tap_con111").hide();
+			$("#sibal").hide();
+			$("#tap_con2").show(1000);
 			return false;
 		});
 
@@ -267,8 +272,8 @@
 	<div id="contents"
 		class="contents_theater_detail area__movingbar litype2">
 		<div class="theater_top_wrap">
-			<div class="theater_tit">
-				<h3 class="tit">${dto.branch_name}</h3>
+			<div class="theater_tit" ><a name="name"></a>
+				<h3 class="tit" >${dto.branch_name}</h3>
 
 				<button type="button" class="btnToggle btn_col4 ty3">
 					<span class="icon_groupvisit"></span> 단체/대관문의
@@ -421,13 +426,14 @@
 			</div>
 		</div>
 		<ul class="tab_wrap outer actionmovingbar">
-			<li class="active"><button id="dates" type="button"
+			<li class="active"><button id="tap_con11" type="button"
 					class="tab_tit" style="width: 50%; left: 0%;">
 					<span>상영시간표</span>
 				</button>
-				<div class="tab_con ty5" id="timeTable" style="zoom: 1;">
+
+				<div class="tab_con ty5" id="tab_con1" style="zoom: 1; padding-top:10px">
 					<h4 class="hidden">상영시간표</h4>
-					<div class="date_select_wrap datetheaterWrap">
+					<div id="tap_con111" class="date_select_wrap datetheaterWrap">
 						<div class="slide_wrap slide_reserve_date_wide">
 							<ul id="datesel" class="owl-two owl-carousel owl-loaded owl-drag">
 								<div class="owl-stage-outer">
@@ -444,48 +450,48 @@
 												<li class="item"><strong class="month">${m }월</strong><span
 													class="date"><label> <input type="radio"
 															name="radioDate1" checked=""> <a
-															href="./branch.th?branchCd=${date.branchCd }&date=${ymd}#dates"><strong>${d }</strong><em>오늘</em></a></label></span></li>
+															href="./branch.th?branchCd=${date.branchCd }&date=${ymd}#name"><strong>${d }</strong><em>오늘</em></a></label></span></li>
 											</div>
 											<div class="owl-item active" style="width: 67.143px;">
 												<li class="item"><span class="date"><label>
 															<input type="radio" name="radioDate1"><a
-															href="./branch.th?branchCd=${date.branchCd }&date=${ymd1}#dates"><strong>${d1 }</strong><em>${e1 }</em></a>
+															href="./branch.th?branchCd=${date.branchCd }&date=${ymd1}#name"><strong>${d1 }</strong><em>${e1 }</em></a>
 													</label></span></li>
 											</div>
 											<div class="owl-item active" style="width: 67.143px;">
 												<li class="item"><span class="date"><label><input
 															type="radio" name="radioDate1"><a
-															href="./branch.th?branchCd=${date.branchCd }&date=${ymd2}#dates"><strong>${d2 }</strong><em>${e2 }</em></a></label></span></li>
+															href="./branch.th?branchCd=${date.branchCd }&date=${ymd2}#name"><strong>${d2 }</strong><em>${e2 }</em></a></label></span></li>
 											</div>
 											<div class="owl-item active" style="width: 67.143px;">
 												<li class="item"><span class="date"><label><input
 															type="radio" name="radioDate1"><a
-															href="./branch.th?branchCd=${date.branchCd }&date=${ymd3}#dates"><strong>${d3 }</strong><em>${e3 }</em></a></label></span></li>
+															href="./branch.th?branchCd=${date.branchCd }&date=${ymd3}#name"><strong>${d3 }</strong><em>${e3 }</em></a></label></span></li>
 											</div>
 											<div class="owl-item active" style="width: 67.143px;">
 												<li class="item"><span class="date"><label><input
 															type="radio" name="radioDate1"><a
-															href="./branch.th?branchCd=${date.branchCd }&date=${ymd4}#dates"><strong>${d4 }</strong><em>${e4 }</em></a></label></span></li>
+															href="./branch.th?branchCd=${date.branchCd }&date=${ymd4}#name"><strong>${d4 }</strong><em>${e4 }</em></a></label></span></li>
 											</div>
 											<div class="owl-item active" style="width: 67.143px;">
 												<li class="item"><span class="date"><label><input
 															type="radio" name="radioDate1"><a
-															href="./branch.th?branchCd=${date.branchCd }&date=${ymd5}#dates"><strong>${d5 }</strong><em>${e5 }</em></a></label></span></li>
+															href="./branch.th?branchCd=${date.branchCd }&date=${ymd5}#name"><strong>${d5 }</strong><em>${e5 }</em></a></label></span></li>
 											</div>
 											<div class="owl-item active" style="width: 67.143px;">
 												<li class="item"><span class="date"><label><input
 															type="radio" name="radioDate1"><a
-															href="./branch.th?branchCd=${date.branchCd }&date=${ymd6}#dates"><strong>${d6 }</strong><em>${e6 }</em></a></label></span></li>
+															href="./branch.th?branchCd=${date.branchCd }&date=${ymd6}#name"><strong>${d6 }</strong><em>${e6 }</em></a></label></span></li>
 											</div>
 											<div class="owl-item active" style="width: 67.143px;">
 												<li class="item"><span class="date"><label><input
 															type="radio" name="radioDate1"><a
-															href="./branch.th?branchCd=${date.branchCd }&date=${ymd7}#dates"><strong>${d7 }</strong><em>${e7 }</em></a></label></span></li>
+															href="./branch.th?branchCd=${date.branchCd }&date=${ymd7}#name"><strong>${d7 }</strong><em>${e7 }</em></a></label></span></li>
 											</div>
 											<div class="owl-item active" style="width: 67.143px;">
 												<li class="item"><span class="date"><label><input
 															type="radio" name="radioDate1"><a
-															href="./branch.th?branchCd=${date.branchCd }&date=${ymd8}#dates"><strong>${d8 }</strong><em>${e8 }</em></a></label></span></li>
+															href="./branch.th?branchCd=${date.branchCd }&date=${ymd8}#name"><strong>${d8 }</strong><em>${e8 }</em></a></label></span></li>
 											</div>
 										</c:forEach>
 									</div>
@@ -493,7 +499,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="movie_grade_wrap">
+					<div id="sibal" class="movie_grade_wrap">
 						<span class="txt_grade gr_all">전체 관람가</span><span
 							class="txt_grade gr_12">만 12세 이상 관람가</span><span
 							class="txt_grade gr_15">만 15세 이상 관람가</span><span
@@ -504,102 +510,19 @@
 					</div>
 
 				</div></li>
-			<li class=""><button type="button" class="tab_tit"
+				
+				
+			<li id="tab_con2" class="active"><button id="tap_con22" type="button" class="tab_tit"
 					style="width: 50%; left: 50%;">
 					<span>요금안내</span>
 				</button>
-				<div class="tab_con ty2">
+				<div id="tap_con2" hidden="" class="tab_con ty2">
 					<h4 class="hidden">요금안내</h4>
 					<ul class="tab_wrap outer lft sml">
-						<li class="active"><button type="button" class="tab_tit"
-								style="left: 0px; width: 48px;">
-								<span>일반관</span>
-							</button>
+						<li class="active">
 							<div class="tab_con ty2">
 								<h4 class="hidden">일반관</h4>
 								<div class="th_price_wrap">
-									<div>
-										<div class="th_price_tit">
-											<h5 class="tit">2D 씨네컴포트(리클라이너)</h5>
-											<p>단, 공휴일은 주말요금 반영</p>
-										</div>
-										<table class="th_price_table"
-											summary="2D 씨네컴포트(리클라이너) 영화관 요금에 대한 내용입니다.">
-											<caption>2D 영화관 요금</caption>
-											<colgroup>
-												<col style="width: 7%;">
-												<col style="width: 7%;">
-												<col style="width: 7%;">
-												<col style="width: 7%;">
-												<col style="width: 7%;">
-												<col style="width: 7%;">
-												<col style="width: auto;">
-												<col style="width: 7%;">
-												<col style="width: 7%;">
-												<col style="width: 7%;">
-												<col style="width: 7%;">
-												<col style="width: 7%;">
-												<col style="width: 7%;">
-												<col style="width: auto;">
-											</colgroup>
-											<thead>
-												<tr>
-													<th colspan="7">주중<span>(월~목)</span></th>
-													<th colspan="7">주말<span>(금~일)</span></th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr class="price_tabletoptitle">
-													<th class="txtleft">구분</th>
-													<th>성인</th>
-													<th>청소년</th>
-													<th>시니어</th>
-													<th>장애인</th>
-													<th>어린이</th>
-													<th>&nbsp;</th>
-													<th class="txtleft">구분</th>
-													<th>성인</th>
-													<th>청소년</th>
-													<th>시니어</th>
-													<th>장애인</th>
-													<th>어린이</th>
-													<th>&nbsp;</th>
-												</tr>
-												<tr>
-													<th>조조</th>
-													<td>13,000</td>
-													<td>11,000</td>
-													<td>10,000</td>
-													<td>8,000</td>
-													<td>-</td>
-													<td>&nbsp;</td>
-													<th>조조</th>
-													<td>14,000</td>
-													<td>11,000</td>
-													<td>10,000</td>
-													<td>8,000</td>
-													<td>-</td>
-													<td>&nbsp;</td>
-												</tr>
-												<tr>
-													<th>일반</th>
-													<td>15,000</td>
-													<td>12,000</td>
-													<td>11,000</td>
-													<td>8,000</td>
-													<td>-</td>
-													<td>&nbsp;</td>
-													<th>일반</th>
-													<td>16,000</td>
-													<td>13,000</td>
-													<td>12,000</td>
-													<td>8,000</td>
-													<td>-</td>
-													<td>&nbsp;</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
 									<div>
 										<div class="th_price_tit">
 											<h5 class="tit">2D 일반석</h5>
@@ -665,17 +588,17 @@
 												</tr>
 												<tr>
 													<th>일반</th>
-													<td>12,000</td>
-													<td>10,000</td>
+													<td>13,000</td>
+													<td>9,000</td>
 													<td>7,000</td>
-													<td>5,000</td>
+													<td>7,000</td>
 													<td>-</td>
 													<td>&nbsp;</td>
 													<th>일반</th>
 													<td>14,000</td>
 													<td>10,000</td>
 													<td>7,000</td>
-													<td>5,000</td>
+													<td>7,000</td>
 													<td>-</td>
 													<td>&nbsp;</td>
 												</tr>
@@ -732,14 +655,14 @@
 													<th>조조</th>
 													<td>11,000</td>
 													<td>10,000</td>
-													<td>10,000</td>
+													<td>8,000</td>
 													<td>8,000</td>
 													<td>-</td>
 													<td>&nbsp;</td>
 													<th>조조</th>
 													<td>12,000</td>
 													<td>10,000</td>
-													<td>10,000</td>
+													<td>8,000</td>
 													<td>8,000</td>
 													<td>-</td>
 													<td>&nbsp;</td>
@@ -748,14 +671,14 @@
 													<th>일반</th>
 													<td>13,000</td>
 													<td>12,000</td>
-													<td>10,000</td>
+													<td>8,000</td>
 													<td>8,000</td>
 													<td>-</td>
 													<td>&nbsp;</td>
 													<th>일반</th>
 													<td>15,000</td>
 													<td>12,000</td>
-													<td>10,000</td>
+													<td>8,000</td>
 													<td>8,000</td>
 													<td>-</td>
 													<td>&nbsp;</td>
@@ -763,88 +686,7 @@
 											</tbody>
 										</table>
 									</div>
-									<div>
-										<div class="th_price_tit">
-											<h5 class="tit">3D 씨네컴포트(리클라이너)</h5>
-											<p>단, 공휴일은 주말요금 반영</p>
-										</div>
-										<table class="th_price_table"
-											summary="3D 씨네컴포트(리클라이너) 영화관 요금에 대한 내용입니다.">
-											<caption>2D 영화관 요금</caption>
-											<colgroup>
-												<col style="width: 7%;">
-												<col style="width: 7%;">
-												<col style="width: 7%;">
-												<col style="width: 7%;">
-												<col style="width: 7%;">
-												<col style="width: 7%;">
-												<col style="width: auto;">
-												<col style="width: 7%;">
-												<col style="width: 7%;">
-												<col style="width: 7%;">
-												<col style="width: 7%;">
-												<col style="width: 7%;">
-												<col style="width: 7%;">
-												<col style="width: auto;">
-											</colgroup>
-											<thead>
-												<tr>
-													<th colspan="7">주중<span>(월~목)</span></th>
-													<th colspan="7">주말<span>(금~일)</span></th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr class="price_tabletoptitle">
-													<th class="txtleft">구분</th>
-													<th>성인</th>
-													<th>청소년</th>
-													<th>시니어</th>
-													<th>장애인</th>
-													<th>어린이</th>
-													<th>&nbsp;</th>
-													<th class="txtleft">구분</th>
-													<th>성인</th>
-													<th>청소년</th>
-													<th>시니어</th>
-													<th>장애인</th>
-													<th>어린이</th>
-													<th>&nbsp;</th>
-												</tr>
-												<tr>
-													<th>조조</th>
-													<td>-</td>
-													<td>-</td>
-													<td>-</td>
-													<td>-</td>
-													<td>-</td>
-													<td>&nbsp;</td>
-													<th>조조</th>
-													<td>-</td>
-													<td>-</td>
-													<td>-</td>
-													<td>-</td>
-													<td>-</td>
-													<td>&nbsp;</td>
-												</tr>
-												<tr>
-													<th>일반</th>
-													<td>-</td>
-													<td>-</td>
-													<td>-</td>
-													<td>-</td>
-													<td>-</td>
-													<td>&nbsp;</td>
-													<th>일반</th>
-													<td>-</td>
-													<td>-</td>
-													<td>-</td>
-													<td>-</td>
-													<td>-</td>
-													<td>&nbsp;</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
+
 									<div class="th_price_info_wrap">
 										<div class="bx_para">
 											<strong class="tit">[각 시간대별 기준]</strong>
@@ -873,43 +715,7 @@
 									</div>
 								</div>
 							</div></li>
-						<li class=""><button type="button" class="tab_tit"
-								style="left: 48px; width: 60px;">
-								<span>스페셜관</span>
-							</button>
-							<div class="tab_con">
-								<h4 class="hidden">스페셜관</h4>
-								<div class="nonCinemaSpecialText">해당 영화관에는 스페셜관이 없습니다.</div>
-								<div style="margin-bottom: 5px;"></div>
-								<div class="th_price_wrap">
-									<div class="th_price_info_wrap">
-										<div class="bx_para">
-											<strong class="tit">[각 시간대별 기준]</strong>
-											<ul class="list_txt">
-												<li>조조 : 09시 59시</li>
-												<li>일반 : 10시 00시</li>
-											</ul>
-
-											<strong class="tit">[요일 구분 기준]</strong>
-											<ul class="list_txt">
-												<li>주중 : 월~목</li>
-												<li>주말 : 금~일(단,공휴일은 주말요금이 적용됩니다)</li>
-											</ul>
-
-											<strong class="tit">[청소년 할인]</strong>
-											<ul class="list_txt">
-												<li>만 4세이상~만 18세 미만의 학생 또는 청소년(어린이)</li>
-											</ul>
-
-											<strong class="tit">[장애 우대할인]</strong>
-											<ul class="list_txt">
-												<li>현장에서 복지카드를 소지한 장애인(장애의 정도가 심한 장애인 : 동반 1인까지 적용(기존
-													1~3등급) / 장애의 정도가 심하지 않은 장애인 : 본인에 한함(기존 4~6등급)</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div></li>
+						
 					</ul>
 				</div></li>
 		</ul>

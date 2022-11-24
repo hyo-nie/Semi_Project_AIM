@@ -64,5 +64,7 @@
          <a href="#none" class="btn_style0 " onclick="location.href='./Main.aim';">돌아가기</a> 
       </div>
 </article>
+
+	
 </body>
 </html>

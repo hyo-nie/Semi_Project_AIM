@@ -100,6 +100,21 @@
 			
 			
 		}
+		// 확인용!
+		function buyNow2(){
+			var queryString = $("form[name=fr]").serialize() ;
+			var amount = document.getElementById("showCnt").innerHTML;
+			
+			 $.ajax({
+				 	type : 'post',
+				 	data : queryString,
+		            url:"./CartAddAction.ct?c_amount="+amount+"&buyNow=Y",
+		            success:function(data){
+		               location.href="./OrderStart.or";
+		            }
+		        }) 
+		}
+
 
 		
 		
@@ -137,16 +152,16 @@ ${dto }
            		</div>           
            <div class="category_product_detail_contents_wrap">               
 				<p class="category_product_detail_sale_price_wrap">    
-	          	 	<span class="store_deatail_sale_price" id="spnSalePrice">${dto.st_price }</span>
-	          	 	<span class="store_deatail_sale_price">원</span>
+	          	 	<span class="store_deatail_sale_price" id="spnSalePrice" style="visibility: hidden;">${dto.st_price }</span>
+	          	 	<span class="store_deatail_sale_price"></span>
           	 	</p>               
           	 	
           	 	<dl class="category_product_detail_add_info">                  
-            		<dt>상품구성</dt>                  
+            		<dt><b>상품구성</b></dt>                  
              			<dd>${dto.st_text }</dd>                 
-               		<dt>유효기간</dt>               
+               		<dt><b>유효기간</b></dt>               
                			<dd>구매일로부터 6개월 이내</dd>              
-               		<dt>사용 극장</dt>                 
+               		<dt><b>사용 극장</b></dt>                 
                 		<dd>전 극장 사용 가능</dd>              
                </dl>    
                           
@@ -169,7 +184,7 @@ ${dto }
                
                <div class="category_product_detail_btn_wrap"> 
 					<a href="javascript:goCart();" class="btn_cart">장바구니</a>               
-					<a href="javascript:buyNow();">구매하기</a>               
+					<a href="javascript:buyNow2();">구매하기</a>               
                </div> 
                          
 		</div>      
@@ -208,6 +223,9 @@ ${dto }
 		
 		</div>
 		</form>
+		
+			<!-- 약관 -->
+	<jsp:include page="../inc/footer.jsp" />
 		
 </body>
 </html>

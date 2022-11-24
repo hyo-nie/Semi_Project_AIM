@@ -8,14 +8,23 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+
+	<%
+		/* 로그인 제어! 회원만 접근 가능 */
+			String id = (String) session.getAttribute("mb_id");
+			if (id == null) {
+				response.sendRedirect("./Login.aim");
+			}
+	%>
 	<!-- 각종 요소 -->
 	<jsp:include page="../inc/include.jsp" />
 	<!-- 상위 배너 -->
 	<jsp:include page="../inc/topbanner.jsp"/>
 	<!-- 헤더/네비 -->
-	<jsp:include page="../inc/login_nav_bar.jsp" />
+	<jsp:include page="../inc/nav_bar.jsp" />
 	
-	
+	<br><br><br><br><br><br><br><br><br>
 	<div id="contents" class="contents_customer area__movingbar litype5" style="">
 		<div class="title_top">
 			<h2 class="tit">단체관람/대관문의 신청 목록</h2>
@@ -27,34 +36,89 @@
 			<table class="tbl_list text_c">
 				<caption>문의 내용 목록</caption>
 				<colgroup>
-					<col style="width: 10%;">
-					<col style="width: 15%;">
-					<col style="width: auto%;">
-					<col style="width: 15%;">
+					<col style="width: 20%;">
+					<col style="width: 50%;">
+<%-- 					<col style="width: auto%;"> --%>
+					<col style="width: 30%;">
 				</colgroup>
 				<thead>
 					<tr>
 						<th scope="col">번호</th>
 						
 						<th scope="col">신청자명</th>
+						<th scope="col">ID</th>
+						
 					
 					</tr>
 				</thead>
+				<!-- c:if 사용해서 session 아이디랑 일치하는 아이디만 출력, admin포함 -->
 				<tbody>
+					
 					<c:forEach var="dto" items="${RtListAll }">
+					
 						<tr>
 							<td>${dto.rno }</td>
 					
 							<td> 
 								<c:if test="${dto.r_re_lev > 0}">
-									<img src="./level.png" width="${dto.r_re_lev * 10 }">
+									<img src="./assets/img/cart.png" width="${dto.r_re_lev * 10 }">
 									<img src="./re.gif">
 									
 								</c:if>
-								<a href="./AdminRentalContent.th?rno=${dto.rno }&pageNum=${pageNum}">${dto.r_name }</a>
+								<a href="./AdminRentalPwCheck.th?rno=${dto.rno }&pageNum=${pageNum}">${dto.r_name }</a>
+							</td>
+							<td>
+					
+								${dto.r_mb_id }
 							</td>
 				
 						</tr>
+						
+<%-- 						<c:choose> --%>
+<%-- 							<c:when test="${sessionScope.mb_id eq 'admin' }"> --%>
+<!-- 								<tr> -->
+<%-- 									<td>${dto.rno }</td> --%>
+							
+<!-- 									<td>  -->
+<%-- 										<c:if test="${dto.r_re_lev > 0}"> --%>
+<%-- 											<img src="./assets/img/cart.png" width="${dto.r_re_lev * 10 }"> --%>
+<!-- 											<img src="./re.gif"> -->
+											
+<%-- 										</c:if> --%>
+<%-- 										<a href="./AdminRentalPwCheck.th?rno=${dto.rno }&pageNum=${pageNum}">${dto.r_name }</a> --%>
+<!-- 									</td> -->
+<!-- 									<td> -->
+							
+<%-- 										${dto.r_mb_id } --%>
+<!-- 									</td> -->
+						
+<!-- 								</tr> -->
+							
+<%-- 							</c:when> --%>
+<%-- 							<c:otherwise>			 --%>
+<%-- 								<c:if test="${sessionScope.mb_id eq dto.r_mb_id}"> --%>
+<!-- 									<tr> -->
+<%-- 										<td>${dto.rno }</td> --%>
+								
+<!-- 										<td>  -->
+<%-- 											<c:if test="${dto.r_re_lev > 0}"> --%>
+<%-- 												<img src="./assets/img/cart.png" width="${dto.r_re_lev * 10 }"> --%>
+<!-- 												<img src="./re.gif"> -->
+												
+<%-- 											</c:if> --%>
+<%-- 											<a href="./AdminRentalPwCheck.th?rno=${dto.rno }&pageNum=${pageNum}">${dto.r_name }</a> --%>
+<!-- 										</td> -->
+<!-- 										<td> -->
+								
+<%-- 											${dto.r_mb_id } --%>
+<!-- 										</td> -->
+							
+<!-- 									</tr> -->
+<%-- 								</c:if> --%>
+<%-- 							</c:otherwise>	 --%>
+<%-- 						</c:choose> --%>
+
+
 					</c:forEach>
 				</tbody>
 			</table>

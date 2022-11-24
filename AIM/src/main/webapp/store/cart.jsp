@@ -44,17 +44,25 @@
 	}
 
 </script>
+<style>
+	#forBlank{
+	    width: 43px;
+	    height: 50px;
+	    float: left;
+	}
+	
+</style>
 <body>
 	<%-- ${productList }
 	${cartList }	 --%>
 	
 	
 	<!-- 각종 요소 -->
-<%-- 	<jsp:include page="../inc/include.jsp"/> --%>
+	<jsp:include page="../inc/include.jsp"/>
 	
 
 	<!-- 헤더/네비 -->
-<%-- 	<jsp:include page="../inc/login_nav_bar.jsp"/> --%>
+	<jsp:include page="../inc/login_nav_bar.jsp"/>
 	
 	
 	
@@ -83,20 +91,22 @@
 	%>		
 		<div class="com_cart_list_wrap">
 				<p class="cart_allchecker_wrap">
-					<input type="checkbox" id="checkboxall" class="com_custom_all_checkbox com_custom_checkbox" checked="checked">
-					<label for="checkboxall">전체선택</label>
+<!-- 					<input type="checkbox" id="checkboxall" class="com_custom_all_checkbox com_custom_checkbox" checked="checked"> -->
+<!-- 					<label for="checkboxall">전체선택</label> -->
 					<strong class="com_custom_checkbox_product_name">상품명</strong>
-					<strong class="com_custom_checkbox_sel_price">판매금액</strong>
+					<strong class="com_custom_checkbox_sel_price" style="margin-left: 22px;">판매금액</strong>
 					<strong class="com_custom_checkbox_cnt">수량</strong>
 					<strong class="com_custom_checkbox_price">구매금액</strong>
 					<strong class="com_custom_checkbox_product_sel">선택</strong>
 				</p>			
 			
 			
-			<div>장바구니가 비어있습니다!</div>
+			<div style="text-align: center; margin-top: 50px;">
+				장바구니가 비어있습니다!
+			</div>
 			
 			<div class="com_btn_wrap pT60">
-				<a href="./StoreMain.st" class="btn_style0 ">스토어 메인</a>
+				<a href="./StoreMain.st" class="btn_style0 " style="color: white;">스토어 메인</a>
 			</div>
 	<%	
 		}
@@ -105,10 +115,10 @@
 	%>		
 	<div class="com_cart_list_wrap">
 		<p class="cart_allchecker_wrap">
-			<input type="checkbox" id="checkboxall" class="com_custom_all_checkbox com_custom_checkbox" checked="checked">
-			<label for="checkboxall">전체선택</label>
+<!-- 			<input type="checkbox" id="checkboxall" class="com_custom_all_checkbox com_custom_checkbox" checked="checked"> -->
+<!-- 			<label for="checkboxall">전체선택</label> -->
 			<strong class="com_custom_checkbox_product_name">상품명</strong>
-			<strong class="com_custom_checkbox_sel_price">판매금액</strong>
+			<strong class="com_custom_checkbox_sel_price" style="margin-left: 22px;">판매금액</strong>
 			<strong class="com_custom_checkbox_cnt">수량</strong>
 			<strong class="com_custom_checkbox_price">구매금액</strong>
 			<strong class="com_custom_checkbox_product_sel">선택</strong>
@@ -118,12 +128,14 @@
 		<c:set var="cart" value="${cartList[i]}" />
 		<c:set var="prdt" value="${productList[i]}" />
         
-        <ul class="com_list_style1">
+        <ul class="com_list_style1" style="border-width: 0px;">
         	<li class="" id="cart_item_idx_886182">    
-        	<input type="checkbox" id="checkbox886182" name="checkbox" value="886182" class="com_custom_checkbox" checked="checked">
-        		<label for="checkbox886182"></label> 
+<!--          	<input type="checkbox" id="checkbox886182" name="checkbox" value="886182" class="com_custom_checkbox" checked="checked">
+ -->        		
+ 				<span id="forBlank"></span>
+ 				<label for="checkbox886182"></label> 
         		   
-        		<a href="" class="product_info_img">        
+        		<a class="product_info_img">        
         			<img src="./assets/img/${prdt.st_img }" alt="${prdt.st_name }">        
         			<strong class="product_info_name">${prdt.st_name }</strong>        
         			<span class="product_info_origin" id="spanOriginName886182" >${prdt.st_text }    
@@ -131,26 +143,26 @@
         		</a> 
         		   
         	<div class="product_info_wrap not_sale">        
-        		<span class="product_info_one_price" id="product_info_one_price886182">
+        		<span class="product_info_one_price" id="product_info_one_price886182" style="margin-top: -15px;">
         		<fmt:formatNumber value="${prdt.st_price}"/>
         		</span>    
         	</div>    
         		  
-        	<div class="product_info_cnt_wrap">      
+        	<div class="product_info_cnt_wrap" style="margin-top: 15px; margin-left: 15px; width: 165px;">      
         		<span class="com_form_count com_form_count886182" id="com_form_count886182">${cart.c_amount}</span>  
         		<!-- changeItemAmount(object, index, st_price, c_amount ,mode) -->  
         		<a href="#none" onclick='javascript:changeItemAmount(this, ${i}, ${prdt.st_price }, ${cart.c_amount},  "plus")' class="com_btn_plus">+</a>        
         		<a href="#none" onclick='javascript:changeItemAmount(this, ${i}, ${prdt.st_price }, ${cart.c_amount}, "minus")' class="com_btn_minus">-</a>        
-        		<a href="#none" onclick="javascript:saveChangeInfo(${cart.c_num}, ${i})" class="btn_change">변경</a>    
+        		<a href="#none" onclick="javascript:saveChangeInfo(${cart.c_num}, ${i})" class="btn_change" style="text-decoration-line: none;">변경</a>    
         	</div>  
         	  
-        		<span class="product_info_price" id="totalgoodsprice886182"> 
+        		<span class="product_info_price" id="totalgoodsprice886182" style="margin-top: 17px;"> 
         			<fmt:formatNumber value="${prdt.st_price * cart.c_amount }"/>
         		</span>  
         		  
         		<div class="product_info_btn_wrap">      
 <!--         			<a href="#none" onclick="javascript:fn_Buy();">바로구매</a>    -->
-        			<a href="./CartDeleteAction.ct?c_num=${cart.c_num }">삭제</a>         
+        			<a href="./CartDeleteAction.ct?c_num=${cart.c_num }" style="text-decoration-line: none;">삭제</a>         
         			      
         		</div>    
         		</li>
@@ -171,7 +183,7 @@
 		
 		
 	<!-- 약관 -->
-<%-- 	<jsp:include page="../inc/footer.jsp" />	 --%>
+	<jsp:include page="../inc/footer.jsp" />	
 		
 		
 		
