@@ -1,16 +1,16 @@
 package com.aim.member.db;
 
 public class MemberDTO {
-  private String mb_id;
-  private String mb_pw;
-  private String mb_name;
-  private String mb_nick;
-  private String mb_birth;
-  private String mb_gender;
-  private String mb_tel;
-  private int mb_grade;
-  private int mb_pay;
-  private int mb_view;
+  private String mb_id;		//아이디
+  private String mb_pw;		//비밀번호
+  private String mb_name;	//이름
+  private String mb_nick;	//닉네임
+  private String mb_birth;	//생일
+  private String mb_gender;	//성별
+  private String mb_tel;	//전화번호
+  private int mb_grade;		//회원등급
+  private int mb_pay;		//총 결제금액
+  private int mb_view;		//관람횟수
   
   public String getMb_id() {
     return mb_id;

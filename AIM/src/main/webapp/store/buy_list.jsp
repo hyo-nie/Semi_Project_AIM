@@ -9,6 +9,27 @@
 <title>AIM - ALL IN MOVIE</title>
 <link href="./assets/css/giftstore.css" rel="stylesheet" type="text/css">
 <script src="jquery-3.6.1.js"></script>
+<style>
+		#contentArea{
+			height:600px;
+			overflow: auto;
+		}
+		
+		#contentArea::-webkit-scrollbar {
+	    width: 10px;
+	  }
+	  #contentArea::-webkit-scrollbar-thumb {
+	    background-color: #2f3542;
+	    border-radius: 10px;
+	    background-clip: padding-box;
+	    border: 2px solid transparent;
+	  }
+	  #contentArea::-webkit-scrollbar-track {
+	    background-color: none;
+	    border-radius: 10px;
+	    box-shadow: inset 0px 0px 5px white;
+	  }
+</style>
 </head>
 <body>
 
@@ -44,7 +65,7 @@
 <%--                      <c:set var="refund" value="환불가능"/>    --%>
 <%--                   </c:when>                                                 --%>
 <%--                </c:choose> --%>
-               
+<div id="contentArea">                   
 <ul class="com_list_style1">
 
 <c:forEach var="i" begin="0" end="${orderList.size()-1 }" step="1">
@@ -58,7 +79,10 @@
   </strong> 
   </span>
   </div>
-  <div class="product_info_cnt_wrap" style= "margin-top: 0px; width: 248px;"> ${odt.o_name } 외 ${odt.o_amount -1}건 </div>
+  
+  <div class="product_info_cnt_wrap" style= "margin-top: 0px; width: 248px;"> ${odt.o_name } 
+  <c:if test="${odt.o_amount != 1 }">
+  외 ${odt.o_amount -1}건 </c:if></div>
   <div class="product_info_cnt_wrap" style= "margin-top: 0px; padding-right: 100px;"> ${odt.o_amount } </div>
 <%--   <div class="product_info_cnt_wrap"> ${odt.o_pay } </div> --%>
     <div class="product_info_cnt_wrap" style= "margin-top: 0px; padding-right: 70px;">
