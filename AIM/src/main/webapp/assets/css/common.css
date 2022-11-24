@@ -1044,7 +1044,7 @@ a.btn_lnk2 {border-bottom:1px solid #666; font-size:12px; color:#666; vertical-a
 /* text :list ================================================== */
 .list_txt {font-size:13px;}
 .list_txt > li {line-height:1.4; margin:0 0 5px 8px; text-indent:-8px; color:#333;}
-.list_txt > li:before {content:""; display:inline-block; width:3px; height:3px; margin:8px 5px 0 0; border-radius:50%; vertical-align:top; background-color:#666;}
+.list_txt > li:before {content:""; display:inline-block; width:3px; height:3px; margin:8px 5px 0 0; border-radius:50%; vertical-align:top; background-color:white;}
 .list_txt.ty2 > li {margin:0 0 5px 6px; text-indent:-6px; color:#000;}
 .list_txt.ty2 > li:before {width:1px; height:1px; margin:8px 5px 0 0; background-color:#000;}
 .list_txt.ty3 > li {position:relative; margin:0; padding-left:8px; color:#666; text-indent:0;}

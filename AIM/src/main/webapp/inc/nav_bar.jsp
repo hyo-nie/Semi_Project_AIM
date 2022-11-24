@@ -99,7 +99,7 @@
 						<li><a href="./branch.th?branchCd=1" title="서면">서면</a></li>
 						<li><a href="./branch.th?branchCd=2" title="해운대">해운대</a></li>
 						<li><a href="./branch.th?branchCd=3" title="대연">대연</a></li>
-						<li><a href="./branch.th?branchCd=4" title="사상">사상</a></li>
+						<li><a href="./branch.th?branchCd=4" title="하단">하단</a></li>
 						<li><a href="./branch.th?branchCd=5" title="동래">동래</a></li>
 					</ul>
 				</div></li>
