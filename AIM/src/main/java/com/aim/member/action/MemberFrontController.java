@@ -282,20 +282,33 @@ public class MemberFrontController extends HttpServlet {
           } // MemberUpdatePro.aim 끝
     	
     	
-    	
-    	
-    	
-    	
-    	
     	else if(command.equals("/MemberDelete.aim")) {       
-        System.out.println("C : /MemberDelete.aim 호출");
-        System.out.println("[패턴1]");
-        
-        forward = new ActionForward();
-        forward.setPath("./member/memberDelete.jsp");
-        forward.setRedirect(false);
-        
-      } // MemberDelete.aim 끝
+            System.out.println("C : /MemberDelete.aim 호출");
+            System.out.println("[패턴1]");
+            
+            forward = new ActionForward();
+            forward.setPath("./member/memberDelete.jsp");
+            forward.setRedirect(false);
+        	}
+        	else if(command.equals("/MemberDeleteAction.aim")) {
+    		System.out.println(" C : /MemberDeleteAction.aim 호출 ");
+    		System.out.println("[패턴2]");
+        	
+    		// MemberDeleteAction()
+    		action = new MemberDeleteAction();
+    		
+    		try {
+    			forward = action.execute(request, response);
+    		} catch (Exception e) {
+    			e.printStackTrace();
+    		}
+        		
+            
+          } else  if(command.equals("/MyPage.aim")) {
+    	  System.out.println("C : /MyPage.aim 호출");
+          System.out.println("[패턴3]"); 
+          }	
+        // MemberDelete.aim 끝
     	
 
     	

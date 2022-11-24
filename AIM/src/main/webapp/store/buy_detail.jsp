@@ -12,29 +12,29 @@
 </head>
 <body>
 
+
+	<!-- 각종 요소 -->
+	<jsp:include page="../inc/include.jsp"/>
+	
+
+	<!-- 헤더/네비 -->
+	<jsp:include page="../inc/login_nav_bar.jsp"/>
+
+
 <article>
 <%-- 	${detailInfo } --%>
 	<table>
       <div class="com_cart_list_wrap">
-      <h1>주문 상세 내역</h1>
+      <h2 style="margin-bottom: 10px;">주문 상세 내역</h2>
       <p class="cart_allchecker_wrap">
-         <input type="checkbox" id="checkboxall" class="com_custom_all_checkbox com_custom_checkbox" checked="checked">
-         <label for="checkboxall"></label>
+<!--          <input type="checkbox" id="checkboxall" class="com_custom_all_checkbox com_custom_checkbox" checked="checked"> -->
+<!--          <label for="checkboxall"></label> -->
          <strong class="com_custom_checkbox_product_name">상품명</strong>
          <strong class="com_custom_checkbox_price">수량</strong>
          <strong class="com_custom_checkbox_price">주문금액</strong>
 <!--          <strong class="com_custom_checkbox_product_sel">환불여부</strong> -->
       </p>
                
-<%--                <c:set var="refund" value="환불가능"/>                --%>
-<%--                <c:choose> --%>
-<%--                   <c:when test="${dto.o_refund == 0 }"> --%>
-<%--                      <c:set var="refund" value="환불불가"/>    --%>
-<%--                   </c:when> --%>
-<%--                   <c:when test="${dto.o_refund == 1 }"> --%>
-<%--                      <c:set var="refund" value="환불가능"/>    --%>
-<%--                   </c:when>                                                 --%>
-<%--                </c:choose> --%>
                
 <ul class="com_list_style1">
 
@@ -46,11 +46,13 @@
   <span class="product_info_one_origin">
   </span>
   </div>
-  <div class="product_info_cnt_wrap" style= "margin-top: 0px; margin-bottom: 20px; padding-left: 90px; padding-right: 180px;"> ${dti.o_name } 
-          <img src="./assets/img/바코드.png" width="400" height="150" alt="${dti.o_name }">
+  <div class="product_info_cnt_wrap" style= "margin-top: 30px; padding-left: 100px; width: 200px;"> ${dti.o_name } 
+          
   </div>
-  <div class="product_info_cnt_wrap" style= "margin-top: 0px; width: auto; padding-left: 60px;"> ${dti.o_amount } </div>
-    <div class="product_info_cnt_wrap" style= "margin-top: 0px;">
+  <div class="product_info_cnt_wrap" style= "margin-top: 30px; padding-left: 235px;"> ${dti.o_amount } </div>
+  <img src="./assets/img/바코드.png" width="350" height="100" alt="${dti.o_name }" style="margin-left:50px; margin-top:-15px">
+    
+    <div class="product_info_cnt_wrap" style= "margin-top: 30px;">
 	 <span>
        <fmt:formatNumber value="${dti.o_sum}" />
      </span>
@@ -61,9 +63,14 @@
             </div>
 	</table>
 	  <div class="com_btn_wrap pT60">
-         <a href="#none" class="btn_style0 " onclick="location.href='./Main.aim';">돌아가기</a> 
+         <a href="#none" class="btn_style0 " onclick="location.href='./Main.aim';" style="color:white">돌아가기</a> 
       </div>
 </article>
+
+
+	<!-- 약관 -->
+	<jsp:include page="../inc/footer.jsp" />
+
 
 	
 </body>
