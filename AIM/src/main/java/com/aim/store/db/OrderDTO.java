@@ -15,7 +15,6 @@ public class OrderDTO {
 	private String o_pay;
 	private Timestamp o_pdate;
 	private int o_refund;
-	private String o_gimg;
 	public int getO_num() {
 		return o_num;
 	}
@@ -82,17 +81,11 @@ public class OrderDTO {
 	public void setO_refund(int o_refund) {
 		this.o_refund = o_refund;
 	}
-	public String getO_gimg() {
-		return o_gimg;
-	}
-	public void setO_gimg(String o_gimg) {
-		this.o_gimg = o_gimg;
-	}
 	@Override
 	public String toString() {
 		return "OrderDTO [o_num=" + o_num + ", o_cnum=" + o_cnum + ", o_stnum=" + o_stnum + ", o_name=" + o_name
 				+ ", o_amount=" + o_amount + ", o_id=" + o_id + ", o_tel=" + o_tel + ", o_sum=" + o_sum + ", o_pay="
-				+ o_pay + ", o_pdate=" + o_pdate + ", o_refund=" + o_refund + ", o_gimg=" + o_gimg + "]";
+				+ o_pay + ", o_pdate=" + o_pdate + ", o_refund=" + o_refund + "]";
 	}
-
+	
 }
