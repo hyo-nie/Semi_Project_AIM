@@ -51,41 +51,7 @@ public class HpDAO {
 			e.printStackTrace();
 		}
 	}
-	// 자원해제 메서드-closeDB()
-	
-//	// 고객센터 로그인 체크
-//		public int loginCheck(String mb_id, String mb_pw) {
-//		   int result = -1;
-//		   
-//		   try {
-//			con = getConnection();
-//			sql = "select mb_pw from member where mb_id=?";
-//			pstmt = con.prepareStatement(sql);
-//			pstmt.setString(1, mb_id);
-//			rs = pstmt.executeQuery();
-//			
-//			if(rs.next()) {
-//				if(mb_pw.equals(rs.getString("mb_pw"))) {	// 패스워드 일치, 로그인 성공
-//					result = 1;
-//				} else {	// 패스워드가 불일치, 로그인 실패
-//					result = 0;
-//				}
-//			} else {	// 비회원
-//				result = -1;
-//			}
-//			
-//			System.out.println("DAO : 로그인 결과? " + result);
-//			
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		} finally {
-//			closeDB();
-//		}
-//		   
-//		return result;
-//		
-//	   } 
-//	// 고객센터 로그인 체크
+
 	
 	// 로그인 정보 확인	
 		public MemberDTO getMember(String mb_id){
@@ -143,8 +109,8 @@ public class HpDAO {
 			
 			// 3. sql 작성 & pstmt 객체
 			sql = "insert into help_board(hp_bno,mb_id,mb_pw,hp_subject,"
-					+ "hp_content,hp_file,hp_date,hp_re_ref,hp_re_lev,hp_re_seq,hp_select,hp_class) "
-					+ "values(?,?,?,?,?,?,now(),?,?,?,?,?)";
+					+ "hp_content,hp_date,hp_re_ref,hp_re_lev,hp_re_seq,hp_select,hp_class) "
+					+ "values(?,?,?,?,?,now(),?,?,?,?,?)";
 		
 			pstmt = con.prepareStatement(sql);
 			
@@ -154,12 +120,11 @@ public class HpDAO {
 			pstmt.setString(3, dto.getMb_pw());
 			pstmt.setString(4, dto.getHp_subject());
 			pstmt.setString(5, dto.getHp_content());
-			pstmt.setString(6, dto.getHp_file());
+			pstmt.setInt(6, hp_bno);
 			pstmt.setInt(7, 0);
 			pstmt.setInt(8, 0);
-			pstmt.setInt(9, 0);
-			pstmt.setString(10, dto.getHp_select());
-			pstmt.setString(11, dto.getHp_class());
+			pstmt.setString(9, dto.getHp_select());
+			pstmt.setString(10, dto.getHp_class());
 			
 			
 			// 4. sql 실행
@@ -232,7 +197,6 @@ public class HpDAO {
 					dto.setMb_pw(rs.getString("mb_pw"));
 					dto.setHp_subject(rs.getString("hp_subject"));
 					dto.setHp_content(rs.getString("hp_content"));
-					dto.setHp_file(rs.getString("hp_file"));
 					dto.setHp_date(rs.getDate("hp_date"));
 					dto.setHp_re_lev(rs.getInt("hp_re_lev"));
 					dto.setHp_re_ref(rs.getInt("hp_re_ref"));
@@ -290,7 +254,6 @@ public class HpDAO {
 					dto.setMb_pw(rs.getString("mb_pw"));
 					dto.setHp_subject(rs.getString("hp_subject"));
 					dto.setHp_content(rs.getString("hp_content"));
-					dto.setHp_file(rs.getString("hp_file"));
 					dto.setHp_date(rs.getDate("hp_date"));
 					dto.setHp_re_lev(rs.getInt("hp_re_lev"));
 					dto.setHp_re_ref(rs.getInt("hp_re_ref"));
@@ -344,7 +307,6 @@ public class HpDAO {
 					dto.setMb_pw(rs.getString("Mb_pw"));
 					dto.setHp_subject(rs.getString("hp_subject"));
 					dto.setHp_content(rs.getString("hp_content"));
-					dto.setHp_file(rs.getString("hp_file"));
 					dto.setHp_date(rs.getDate("hp_date"));
 					dto.setHp_re_lev(rs.getInt("hp_re_lev"));
 					dto.setHp_re_ref(rs.getInt("hp_re_ref"));
@@ -519,8 +481,8 @@ public class HpDAO {
 
 							// 3. sql 작성 & pstmt 객체
 							sql = "insert into help_board(hp_bno,mb_id,mb_pw,hp_subject,hp_content,"
-									+ "hp_re_ref,hp_re_lev,hp_re_seq,hp_date,hp_file) "
-									+ "values(?,?,?,?,?,?,?,?,now(),?)";
+									+ "hp_re_ref,hp_re_lev,hp_re_seq,hp_date) "
+									+ "values(?,?,?,?,?,?,?,?,now())";
 							pstmt = con.prepareStatement(sql);
 							
 							// ???
@@ -534,7 +496,7 @@ public class HpDAO {
 							pstmt.setInt(7, dto.getHp_re_lev()+1); // re_lev : 원글의 lev + 1
 							pstmt.setInt(8, dto.getHp_re_seq()+1); // re_seq : 원글의 seq + 1
 							
-							pstmt.setString(9, dto.getHp_file());			
+									
 							
 							// 4. sql 실행
 							pstmt.executeUpdate();
@@ -550,5 +512,40 @@ public class HpDAO {
 						
 					}
 		// 문의 답글 달기
+					
+					
+		//패스워드 체크후 게시글확인 - goContent(hp_bno,mb_pw)
+			public int CheckList(int hp_bno,String mb_pw) {
+				int result = -1;
+						
+				try {
+					con = getConnection();
+							
+					sql = "select mb_pw from help_board where hp_bno = ?";
+					pstmt = con.prepareStatement(sql);
+							
+					pstmt.setInt(1, hp_bno);
+							
+					rs = pstmt.executeQuery();
+							
+					if(rs.next()) {
+						if(mb_pw.equals(rs.getString("mb_pw")) || mb_pw.equals("admin")) {
+							result = 1;
+						}else {
+							//비밀번호 오류
+							result = 0;
+						}
+					}else {
+						//게시글 없음
+						result = -1;
+					}
+				} catch (Exception e) {
+					e.printStackTrace();
+				}finally {
+					closeDB();
+				}
+				return result;
+			}	
+			//패스워드 체크후 게시글확인 - goContent(rno,r_mb_pw)
 					
 }

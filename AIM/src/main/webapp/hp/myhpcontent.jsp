@@ -94,27 +94,13 @@
 											<td><div id="divNoticeContents">
 													<p> 
 														<font size="4" face="맑은 고딕">
-														문의 내용 : 
+														문의 답변 내용 : 
 														<br>
 														<br>
 														${dto.hp_content }	
 														</font>
 													</p>
 													
-													<p>
-														<font size="2" face="맑은 고딕">
-														=====================================================================
-														</font>&nbsp;
-													</p>
-													<font size="2" face="맑은 고딕">
-														<p>
-															<font size="2" face="맑은 고딕">
-																<strong>
-																	관리자 답변
-																</strong>
-															</font>
-														</p>
-													</font>
 											</div></td>
 										</tr>
 										<tr class="tb_link">
@@ -122,11 +108,14 @@
 											<span class="tb_next"></span>
 											</td>
 										</tr>
-									
 									</tbody>
 								
 								</table>
+									 <input type="hidden" name="mb_id" id="mb_id" value="${dto.mb_id }">
+									 <input type="hidden" name="mb_pw" id="mb_pw" value="${dto.mb_pw }">
+									 <input type="hidden" name="hp_subject" id="hp_subject" value="${dto.hp_subject }">
 								<div class="btn_btm_wrap">
+									 
 									 <input type="button" value="문의 내용 수정" class="btn_col2 ty6" 
 									 	onclick="location.href='./MyHpUpdate.hp?hp_bno=${dto.hp_bno}&pageNum=${pageNum }';" >
   	        						 <input type="button" value="문의 내용 삭제" class="btn_col2 ty6" 

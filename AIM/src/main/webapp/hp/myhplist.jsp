@@ -52,22 +52,46 @@
 									<thead>
 										<tr>
 											<th scope="col">번호</th>
-											<th scope="col">구분</th>
+											<th scope="col">작성자</th>
 											<th scope="col">제목</th>
 											<th scope="col">등록일</th>
 										</tr>
 									</thead>
 									<tbody>
-										<c:forEach var="dto" items="${HpListAll }">
-										<tr>
-											<td>${dto.hp_bno }</td>
-											<td>${dto.hp_class }</td>
-											<td> 
-												<a href="./MyHpContent.hp?hp_bno=${dto.hp_bno }&pageNum=${pageNum}">${dto.hp_subject }</a>
-											</td>
-											<td>${dto.hp_date }</td>
-										</tr>
-										</c:forEach>
+<%-- 										<c:forEach var="dto" items="${HpListAll }"> --%>
+<!-- 										<tr> -->
+<%-- 											<td>${dto.hp_bno }</td> --%>
+<%-- 											<td>${dto.mb_id }</td> --%>
+<!-- 											<td>  -->
+<%-- 												<a href="./MyHpContent.hp?hp_bno=${dto.hp_bno }&pageNum=${pageNum}">${dto.hp_subject }</a> --%>
+<!-- 											</td> -->
+<%-- 											<td>${dto.hp_date }</td> --%>
+<!-- 										</tr> -->
+<%-- 										</c:forEach> --%>
+							<tbody>
+					
+					<c:forEach var="dto" items="${HpListAll }">
+					
+						<tr>
+							<td>${dto.hp_bno }</td>
+							<td>${dto.mb_id }</td>
+					
+							<td> 
+								<c:if test="${dto.hp_re_lev > 0}">
+									<img src="./re.gif" width="${dto.hp_re_lev * 10 }">
+										
+								</c:if>
+								<a href="./HpPwCheck.hp?hp_bno=${dto.hp_bno }&pageNum=${pageNum}">${dto.hp_subject }</a>
+							</td>
+							<td>
+					
+								${dto.hp_date }
+							</td>
+				
+						</tr>
+						</c:forEach>
+						
+
 									</tbody>
 								</table>
 								
@@ -90,6 +114,8 @@
 	
 										</c:if>
 									</ol>
+									<input type="hidden" name="mb_id" id="mb_id" value="${dto.mb_id }">
+									<input type="hidden" name="mb_pw" id="mb_pw" value="${dto.mb_pw }">
 									<button type="button" class="btn_pg_next">다음 페이지로 이동</button>
 									<button type="button" class="btn_pg_last">마지막 페이지로 이동</button>
 								</div>

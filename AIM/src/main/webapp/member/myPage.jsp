@@ -55,7 +55,7 @@
 									<div class="next_rank">
 										<p>
 											회원님의 총 관람횟수는 <em class="font22">${dto.mb_view }</em>회 입니다.<br> 
-											회원님의 총 결제금액은 <em class="font22">${dto.mb_pay }</em>원 입니다.
+											회원님의 총 결제금액은 <em class="font22"><fmt:formatNumber type="number" maxFractionDigits="3" value="${dto.mb_pay }"/></em>원 입니다.
 											
 										</p>
 									</div>
@@ -111,10 +111,19 @@
 									<em style="font-weight:bold;">구매내역 조회</em>
 								</h3>
 								<div class="list_bdr_box">
-									<ul class="list_txt" style="text-align:center;">
-										<li>ㅇㅇ</li>
-										<li>ㅇㅇ</li>
+								<c:choose>
+									<c:when test="${orderList.size() == 0 }">
+											<p style="text-align:center; font-size:20px;"> 구매내역이 없습니다! </p>
+									</c:when>
+									<c:otherwise>
+									<ul class="list_txt" style="text-align:center; font-size:14px;">
+										<li>스토어 상품의 취소기한은 구매일로부터 70일입니다.</li>
+										<li>구매내역은 아래의 버튼을 누르면 확인 가능합니다.</li>
 									</ul>
+									<button onclick="location.href='./OrderList.or';" 
+										style="height:40px; line-height:38px; padding:0 18px; margin:auto; display:block; font-size:13px;">구매내역</button>
+									</c:otherwise>
+								</c:choose>		
 								</div>
 							</div>
 							<div class="txt_list_wrap" style="margin-bottom:50px;">
@@ -140,7 +149,7 @@
 								<div class="list_bdr_box">
 									 <ul class="list_txt" style="text-align:center; font-size:14px;">
 					                    <li>단체관람 및 대관을 원하시는 고객님께 할인 혜택을 드리고 있습니다.<br>
-					                    신청을 원하시거나 문의사항이 있으시면 아래 정보를 입력해주세요.</li>
+					                    신청을 원하시거나 문의사항이 있으시면 페이지 상단의 단체관람/대관문의를 이용해주세요.</li>
 					                 </ul>
                   					 <button onclick="location.href='./AdminRentalList.th';" 
                           					 style="height:40px; line-height:38px; padding:0 18px; margin:auto; display:block; font-size:13px;">대관 문의내역</button>

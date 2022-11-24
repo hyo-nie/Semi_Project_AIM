@@ -193,5 +193,4 @@ $(document).ready(function() {
 	<!-- 약관 -->
 	<jsp:include page="../inc/footer.jsp" />
 </body>
-
 </html>

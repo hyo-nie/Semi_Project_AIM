@@ -34,7 +34,7 @@
 						<li class="active">
 							<div class="tab_con ty3">
 								<h4 class="hidden">전체 공지</h4>
-					<form action="./NtWrite.nt" method="post" enctype="multipart/form-data">
+					<form action="./NtWrite.nt" method="post">
 						<table class="tbl_list text_c" summary="공지사항에 대한 표입니다">
 						<caption>공지 사항을 작성해주세요</caption>
 						<colgroup>
@@ -44,30 +44,11 @@
 						<tbody>
 							
 							<tr>
-								<th scope="row" class="req">분류</th>
-								
-								<td>
-									<select title="문의내용 분류선택" name="nt_select">
-										<option	value="0">분류 선택</option>
-										<option value="1">전체</option>
-										<option value="2">영화관</option>
-										<option value="3">영화</option>
-										<option value="4">멤버십</option>
-										<option value="5">예매/결제</option>
-										<option value="6">이벤트</option>
-										<option value="7">홈페이지/모바일</option>
-										<option value="8">개인정보</option>
-									</select>
-								</td>
-							</tr>
-							
-							<tr>
 								<th scope="row" class="req">제목</th>
 								<td>
 									<div class="bx_textarea">
 										<input type="text" class="ty2 w_full" placeholder="제목을 입력해주세요" title="공지사항 제목입력" name="nt_subject">
-										
-									</div>
+										</div>
 								</td>
 							</tr>
 							<tr>
@@ -75,24 +56,9 @@
 								<td>
 									<div class="bx_textarea">
 										<textarea class="ty2" cols="10" rows="10" name="nt_content" 
-										title="공지사항 내용을 입력해주세요">
-										</textarea>
+										title="공지사항 내용을 입력해주세요" placeholder="공지사항 내용을 입력해주세요"></textarea>
 								</div></td>
 							</tr>
-							<tr>
-								<th scope="row">첨부파일</th>
-								<td>
-									<div class="bx_file ">
-										<input type="file" id="file" name="nt_file">
-											<label class="" for="file">파일선택</label>
-									<div class="file_item">
-									<span class="" id="iDfileUpload1"> ${file } </span>
-									<button class="btn_del">삭제</button></div>
-									</div>
-									<span class="txt_caution1 fl_r with_inp">첨부 파일형식 : jpg / jpeg / png / bmp / gif / pdf (5MB X 1개)</span>
-								</td>
-							</tr>
-							
 						</tbody>
 					</table>
 					<table class="tbl_form" summary="고객정보작성 테이블">
@@ -102,24 +68,12 @@
 							<col style="width: auto;">
 						</colgroup>
 						<tbody>
-							<tr>						
-								<th scope="row" class="req">관리자</th>
-								<td>
-									<div class="bx_textarea">
-										<input type="text" class="ty2 inp_name" title="어드민 입력" name="mb_id" value="${dto.mb_id }">
-										</div>
-								</td>
-							</tr>
-							<tr>						
-								<th scope="row" class="req">관리자 비밀번호</th>
-								<td>
-									<div class="bx_textarea">
-										<input type="password" class="ty2 inp_name" title="어드민 비밀번호" name="mb_pw">
-										</div>
-								</td>
-							</tr>
+							
+							
 							</tbody>
 					</table>
+					<input type="hidden" name="mb_id" id="mb_id" value="${dto.mb_id }">
+					<input type="hidden" name="mb_pw" id="mb_pw" value="${dto.mb_pw }">
 					<input type="submit" value="작성하기" class="btn_col2 ty6">
 								</form>
 								

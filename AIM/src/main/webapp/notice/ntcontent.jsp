@@ -28,12 +28,14 @@
 					style="width: 33.33%; left: 0%;" onclick="location.href='./NtList.nt'">
 					<span>공지사항</span>
 				</button>
+				<form action="./NtUpdate.nt?nt_bno=${dto.nt_bno}&pageNum=${pageNum }" method="post">
 				<div class="tab_con">
 					<h3 class="hidden">공지사항</h3>
 					<ul class="tab_wrap inner">
 						<li class="active"><div class="tab_con ty4">
 								<h4 class="hidden">전체 공지</h4>
 								<table class="tbl_dtal" summary="공지사항 상세내용에 대한 표입니다">
+								
 									<caption>공지사항 상세내용</caption>
 									<colgroup>
 										<col style="width: auto;">
@@ -46,7 +48,7 @@
 									<tbody>
 										<tr class="tb_info">
 											<td>
-												<span class="tit">구분</span><span class="cont">${dto.nt_select }</span>
+												<span class="tit">작성자</span><span class="cont">${dto.mb_id }</span>
 												<span class="tit">등록일</span><span class="cont">${dto.nt_date }</span>
 												<span class="tit">번호</span><soab class="cont">${requestScope.dto.nt_bno }
 											</tr>
@@ -62,17 +64,20 @@
 									</tbody>
 								</table>
 								<div class="btn_btm_wrap">
+									<input type="hidden" name="mb_id" id="mb_id" value="${dto.mb_id }">
+									<input type="hidden" name="mb_pw" id="mb_pw" value="${dto.mb_pw }">
 									<c:if test="${mb_id.equals('admin') }">
-									 <input type="button" value="공지 사항 수정" class="btn_col2 ty6" 
-									 	onclick="location.href='./NtUpdate.nt?nt_bno=${dto.nt_bno}&pageNum=${pageNum }';" >
+									 <input type="submit" value="공지 사항 수정" class="btn_col2 ty6">
   	        						 <input type="button" value="공지 사항 삭제" class="btn_col2 ty6" 
   	        						 	onclick="location.href= './NtDelete.nt?nt_bno=${dto.nt_bno}&pageNum=${pageNum }';">
-									 <a href="./MyHpList.hp" class="btn_col2 ty6">문의 목록</a>
 									 </c:if>
+									 <a href="./NtList.nt" class="btn_col2 ty6">공지사항 목록</a>
 								</div>
 							</div></li>
 					</ul>
-				</div></li>
+				</div></form>
+				</li>
+				
 			<li><button type="button" class="tab_tit"
 					style="width: 33.33%; left: 33.33%;" onclick="location.href='./HpLogin.hp';">
 					<span>1:1문의</span>

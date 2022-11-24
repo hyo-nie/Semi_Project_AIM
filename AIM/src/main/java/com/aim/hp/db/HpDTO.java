@@ -8,7 +8,6 @@ public class HpDTO {
 	private String mb_pw; // 삭제시 필요한 pw
 	private String hp_subject; // 문의 제목
 	private String hp_content; // 문의 내용
-	private String hp_file; // 첨부파일
 	private Date hp_date; // 문의 남긴 시간
 	private String hp_select; // 문의 분류
 	private String hp_class; // 문의 종류 (영화 or 기타)
@@ -44,12 +43,6 @@ public class HpDTO {
 	}
 	public void setHp_content(String hp_content) {
 		this.hp_content = hp_content;
-	}
-	public String getHp_file() {
-		return hp_file;
-	}
-	public void setHp_file(String hp_file) {
-		this.hp_file = hp_file;
 	}
 	public Date getHp_date() {
 		return hp_date;
@@ -87,14 +80,14 @@ public class HpDTO {
 	public void setHp_re_seq(int hp_re_seq) {
 		this.hp_re_seq = hp_re_seq;
 	}
-	
 	@Override
 	public String toString() {
 		return "HpDTO [hp_bno=" + hp_bno + ", mb_id=" + mb_id + ", mb_pw=" + mb_pw + ", hp_subject=" + hp_subject
-				+ ", hp_content=" + hp_content + ", hp_file=" + hp_file + ", hp_date=" + hp_date + ", hp_select="
-				+ hp_select + ", hp_class=" + hp_class + ", hp_re_ref=" + hp_re_ref + ", hp_re_lev=" + hp_re_lev
-				+ ", hp_re_seq=" + hp_re_seq + "]";
+				+ ", hp_content=" + hp_content + ", hp_date=" + hp_date + ", hp_select=" + hp_select + ", hp_class="
+				+ hp_class + ", hp_re_ref=" + hp_re_ref + ", hp_re_lev=" + hp_re_lev + ", hp_re_seq=" + hp_re_seq + "]";
 	}
+	
+	
 
 	
 }

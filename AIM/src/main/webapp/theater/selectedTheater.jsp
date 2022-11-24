@@ -11,8 +11,10 @@
 <title>AIM - 극장</title>
 <jsp:include page="../inc/include.jsp" />
 <style type="text/css">
-	.layer_contents ul, li {list-style: none; }
-	</style>
+.layer_contents ul, li {
+	list-style: none;
+}
+</style>
 
 <%-- owl 조작 --%>
 <script type="text/javascript">
@@ -122,6 +124,7 @@
 </head>
 
 <body>
+
 	<!--  날짜값 오늘 ~ 20일뒤 까지 변수 생성 -->
 	<c:set var="today" value="<%=new Date()%>" />
 	<c:set var="yesterday"
@@ -261,21 +264,22 @@
 	<jsp:include page="../inc/side_quick_menu.jsp" />
 	<!--사이드 원 팝업창 -->
 	<jsp:include page="../inc/left_circle_pop.jsp" />
-	<c:set var="seo" value="서면점"/>
-	<c:set var="hae" value="해운대점"/>
-	<c:set var="dae" value="대연점"/>
-	<c:set var="had" value="하단점"/>
-	<c:set var="don" value="동래점"/>
-	
+	<c:set var="seo" value="서면점" />
+	<c:set var="hae" value="해운대점" />
+	<c:set var="dae" value="대연점" />
+	<c:set var="had" value="하단점" />
+	<c:set var="don" value="동래점" />
+
 
 
 	<div id="contents"
 		class="contents_theater_detail area__movingbar litype2">
 		<div class="theater_top_wrap">
-			<div class="theater_tit" ><a name="name"></a>
-				<h3 class="tit" >${dto.branch_name}</h3>
+			<div class="theater_tit">
+				<a name="name"></a>
+				<h3 class="tit">${dto.branch_name}</h3>
 
-				<button type="button" class="btnToggle btn_col4 ty3">
+				<button type="button" class="btnToggle btn_col4 ty3" onclick="location.href='RentalWrite.th';">
 					<span class="icon_groupvisit"></span> 단체/대관문의
 				</button>
 			</div>
@@ -315,81 +319,102 @@
 						<p class="ppp">교통/주차안내</p>
 					</div>
 					<button class="maphide" id="maphide">닫기</button>
-					<div style="width: 445px; height: 326px; left: 0%; top: 18%; margin-left: -250; position: absolute;">
-						<div class="layer_contents" style="top:10px;">
-								<ul class="list_txt" style="list-style: none;">
-									<c:choose>
-										<c:when test="${dto.branch_name eq seo }">
-											<li><font color="blue"><b>지하철 이용 시</b></font></li>
-											<li><font color="black">1) 2호선 서면역 2번 출구</font></li>
-											<li><font color="black">2) 2호선 전포역 5번 출구</font></li>
-											<li><font color="blue"><b>버스 이용 시</b></font></li>
-											<li><font color="black">- 시내버스 : 20번,24번,301번,66번,17번,23번</font></li>
-											<li><font color="black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-											103번,81번,83-1번,86번,133번 등</font></li>
-											<li><font color="red">[서면삼정타워]주차 안내</font></li>
-											<li><font color="Blue">주차장이 협소하오니 가급적 대중교통 이용부탁드립니다.</font></li>
-											<li><font color="black">★당일 영화 관람시★</font></li>
-											<li><font color="black">지하주차장 3시간 1,000원</font></li>
-											<li><font color="black">13층 매표소에서 차량번호 입력/결제 후 출차 가능</font></li>
-											<li><font color="black">(초과시 10분당 1,000원)</font></li>
-										</c:when>
-										<c:when test="${dto.branch_name eq hae }">
-											<li><font color="blue"><b>지하철 이용 시</b></font></li>
-											<li><font color="black">- 지하철 2호선 해운대역과 지하2층 연결(5번과 7번출구)</font></li>
-											<li><font color="blue"><b>버스 이용 시</b></font></li>
-											<li><font color="black">- 시내버스 : 31번,38번,39번,63번,100번,100-1번,115번,141번</font></li>
-											<li><font color="black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;141번(심야),181번,200번</font></li>
-											<li><font color="black">- 급행버스 : 1001번,1006번,1011번</font></li>
-											<li><font color="red">주차 안내</font></li>
-											<li><font color="Blue">영화관 지하 라뮤에뜨 상가 지하주차장 이용(지하 2F ~ 지하 5F 이용가능)</font></li>
-											<li><font color="black">입차 시 10분 무료 회차</font></li>
-											<li><font color="black">매표소에서 당일티켓 인증 시, 3시간 무료주차 등록가능</font></li>
-											<li><font color="black">3시간 초과 시, 지하 2,3층 주차장 무인정산기기 이용하여 정산</font></li>
-											<li><font color="black">- 30분까지 1,500원 이후 10분당 500원 부과</font></li>
-										</c:when>
-										<c:when test="${dto.branch_name eq dae }">
-											<li><font color="blue"><b>지하철 이용 시</b></font></li>
-											<li><font color="black">- 2호선 경성대 부경대역 6번 출구</font></li>
-											<li><font color="blue"><b>버스 이용 시</b></font></li>
-											<li><font color="black">- 시내버스 : 10-1번,20번,22번,24번,27번,39번,40번,41번,42번</font></li>
-											<li><font color="black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;51-1번,83번,108-1번,131번,139번,155번</font></li>
-											<li><font color="red">주차안내</font></li>
-											<li><font color="blue">건물 사정상 주차장이 협소하오니 대중교통 이용 부탁드립니다</font></li>
-											<li><font color="Black">건물 지하주차장 이용(무인 정산 시스템)</font></li>
-											<li><font color="black">주차 요금 안내</font></li>
-											<li><font color="black">5,6,8층 티켓판매기/APP에서 당일 관람후 티켓 인증시 3시간 무료</font></li>
-											<li><font color="black">추가요금은 카드결제만 가능 (현금결제 불가. 초과요금 : 10분당 500원)</font></li>
-										</c:when>
-										<c:when test="${dto.branch_name eq had }">
-											<li><font color="blue"><b>지하철 이용 시</b></font></li>
-											<li><font color="black">지하철 1호선 하단역과 지하 1층 연결(3번과 5번출구)</font></li>
-											<li><font color="blue"><b>버스 이용 시</b></font></li>
-											<li><font color="black">- 시내버스 : 55번,58번,58-2번,68번,168번,520번 급행버스 2000번</font></li>
-											<li><font color="black">- 좌석버스 : 58-1번, 58-1번(심야),221번,2000번(하단.연사)</font></li>
-											<li><font color="red">주차 안내</font></li>
-											<li><font color="black">지하 2F ~ 지하 6F 이용 가능</font></li>
-											<li><font color="black">무인정산기에서 셀프 정산 진행(3시간 무료)</font></li>
-											<li><font color="black">- 종이 티켓의 경우 티켓 아래쪽 바코드를 기계에 인식</font></li>
-											<li><font color="black">- 모바일 티켓의 경우, 예매번호 15자리를 기계에 입력</font></li>
-											<li><font color="black">건물 내 타 매장과 합산시 최대 6시간 무료</font></li> 
-											<li><font color="blue">차량이 2대 이상일 경우에는 7F 매표소로 문의</font></li> 
-										</c:when>
-										<c:when test="${dto.branch_name eq don }">
-											<li><font color="blue"><b>지하철 이용 시</b></font></li>
- 											<li><font color="black">1호선 온천장역 3번출구</font></li>
-											<li><font color="blue"><b>버스 이용 시</b></font></li>
-											<li><font color="black">- 시내버스 : 80번,80-1번,77번,189번,188번,100번,100-1번,144번</font></li>
-											<li><font color="red">주차 안내</font></li>
-											<li><font color="Blue">무료주차(건물 지하4층 4시간)</font></li>
-											<li><font color="black">-6F 매표/매점에서 ★사전주차등록★진행</font></li>
-											<li><font color="black">-초과 시 10분당 500원</font></li>
-											<li><font color="blue">유료주차(홈플러스 지하2층,3층)</font></li>
-											<li><font color="black">- 무료출차 불가, 10분당 500원</font></li> 
-											<li><font color="black">- 홈플러스 주차장 23시 이후 출차 불가</font></li> 
-											<li><font color="black">&nbsp;&nbsp;(2,4주차 휴무일은 22시 이후 출차 불가)</font></li> 
-										</c:when>
-									</c:choose>
+					<div
+						style="width: 445px; height: 326px; left: 0%; top: 18%; margin-left: -250; position: absolute;">
+						<div class="layer_contents" style="top: 10px;">
+							<ul class="list_txt" style="list-style: none;">
+								<c:choose>
+									<c:when test="${dto.branch_name eq seo }">
+										<li><font color="blue"><b>지하철 이용 시</b></font></li>
+										<li><font color="black">1) 2호선 서면역 2번 출구</font></li>
+										<li><font color="black">2) 2호선 전포역 5번 출구</font></li>
+										<li><font color="blue"><b>버스 이용 시</b></font></li>
+										<li><font color="black">- 시내버스 :
+												20번,24번,301번,66번,17번,23번</font></li>
+										<li><font color="black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+												103번,81번,83-1번,86번,133번 등</font></li>
+										<li><font color="red">[서면삼정타워]주차 안내</font></li>
+										<li><font color="Blue">주차장이 협소하오니 가급적 대중교통
+												이용부탁드립니다.</font></li>
+										<li><font color="black">★당일 영화 관람시★</font></li>
+										<li><font color="black">지하주차장 3시간 1,000원</font></li>
+										<li><font color="black">13층 매표소에서 차량번호 입력/결제 후 출차
+												가능</font></li>
+										<li><font color="black">(초과시 10분당 1,000원)</font></li>
+									</c:when>
+									<c:when test="${dto.branch_name eq hae }">
+										<li><font color="blue"><b>지하철 이용 시</b></font></li>
+										<li><font color="black">- 지하철 2호선 해운대역과 지하2층
+												연결(5번과 7번출구)</font></li>
+										<li><font color="blue"><b>버스 이용 시</b></font></li>
+										<li><font color="black">- 시내버스 :
+												31번,38번,39번,63번,100번,100-1번,115번,141번</font></li>
+										<li><font color="black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;141번(심야),181번,200번</font></li>
+										<li><font color="black">- 급행버스 : 1001번,1006번,1011번</font></li>
+										<li><font color="red">주차 안내</font></li>
+										<li><font color="Blue">영화관 지하 라뮤에뜨 상가 지하주차장 이용(지하
+												2F ~ 지하 5F 이용가능)</font></li>
+										<li><font color="black">입차 시 10분 무료 회차</font></li>
+										<li><font color="black">매표소에서 당일티켓 인증 시, 3시간 무료주차
+												등록가능</font></li>
+										<li><font color="black">3시간 초과 시, 지하 2,3층 주차장
+												무인정산기기 이용하여 정산</font></li>
+										<li><font color="black">- 30분까지 1,500원 이후 10분당
+												500원 부과</font></li>
+									</c:when>
+									<c:when test="${dto.branch_name eq dae }">
+										<li><font color="blue"><b>지하철 이용 시</b></font></li>
+										<li><font color="black">- 2호선 경성대 부경대역 6번 출구</font></li>
+										<li><font color="blue"><b>버스 이용 시</b></font></li>
+										<li><font color="black">- 시내버스 :
+												10-1번,20번,22번,24번,27번,39번,40번,41번,42번</font></li>
+										<li><font color="black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;51-1번,83번,108-1번,131번,139번,155번</font></li>
+										<li><font color="red">주차안내</font></li>
+										<li><font color="blue">건물 사정상 주차장이 협소하오니 대중교통 이용
+												부탁드립니다</font></li>
+										<li><font color="Black">건물 지하주차장 이용(무인 정산 시스템)</font></li>
+										<li><font color="black">주차 요금 안내</font></li>
+										<li><font color="black">5,6,8층 티켓판매기/APP에서 당일 관람후
+												티켓 인증시 3시간 무료</font></li>
+										<li><font color="black">추가요금은 카드결제만 가능 (현금결제 불가.
+												초과요금 : 10분당 500원)</font></li>
+									</c:when>
+									<c:when test="${dto.branch_name eq had }">
+										<li><font color="blue"><b>지하철 이용 시</b></font></li>
+										<li><font color="black">지하철 1호선 하단역과 지하 1층 연결(3번과
+												5번출구)</font></li>
+										<li><font color="blue"><b>버스 이용 시</b></font></li>
+										<li><font color="black">- 시내버스 :
+												55번,58번,58-2번,68번,168번,520번 급행버스 2000번</font></li>
+										<li><font color="black">- 좌석버스 : 58-1번,
+												58-1번(심야),221번,2000번(하단.연사)</font></li>
+										<li><font color="red">주차 안내</font></li>
+										<li><font color="black">지하 2F ~ 지하 6F 이용 가능</font></li>
+										<li><font color="black">무인정산기에서 셀프 정산 진행(3시간 무료)</font></li>
+										<li><font color="black">- 종이 티켓의 경우 티켓 아래쪽 바코드를
+												기계에 인식</font></li>
+										<li><font color="black">- 모바일 티켓의 경우, 예매번호 15자리를
+												기계에 입력</font></li>
+										<li><font color="black">건물 내 타 매장과 합산시 최대 6시간 무료</font></li>
+										<li><font color="blue">차량이 2대 이상일 경우에는 7F 매표소로 문의</font></li>
+									</c:when>
+									<c:when test="${dto.branch_name eq don }">
+										<li><font color="blue"><b>지하철 이용 시</b></font></li>
+										<li><font color="black">1호선 온천장역 3번출구</font></li>
+										<li><font color="blue"><b>버스 이용 시</b></font></li>
+										<li><font color="black">- 시내버스 :
+												80번,80-1번,77번,189번,188번,100번,100-1번,144번</font></li>
+										<li><font color="red">주차 안내</font></li>
+										<li><font color="Blue">무료주차(건물 지하4층 4시간)</font></li>
+										<li><font color="black">-6F 매표/매점에서 ★사전주차등록★진행</font></li>
+										<li><font color="black">-초과 시 10분당 500원</font></li>
+										<li><font color="blue">유료주차(홈플러스 지하2층,3층)</font></li>
+										<li><font color="black">- 무료출차 불가, 10분당 500원</font></li>
+										<li><font color="black">- 홈플러스 주차장 23시 이후 출차 불가</font></li>
+										<li><font color="black">&nbsp;&nbsp;(2,4주차 휴무일은
+												22시 이후 출차 불가)</font></li>
+									</c:when>
+								</c:choose>
 							</ul>
 						</div>
 					</div>
@@ -431,7 +456,8 @@
 					<span>상영시간표</span>
 				</button>
 
-				<div class="tab_con ty5" id="tab_con1" style="zoom: 1; padding-top:10px">
+				<div class="tab_con ty5" id="tab_con1"
+					style="zoom: 1; padding-top: 10px">
 					<h4 class="hidden">상영시간표</h4>
 					<div id="tap_con111" class="date_select_wrap datetheaterWrap">
 						<div class="slide_wrap slide_reserve_date_wide">
@@ -510,10 +536,10 @@
 					</div>
 
 				</div></li>
-				
-				
-			<li id="tab_con2" class="active"><button id="tap_con22" type="button" class="tab_tit"
-					style="width: 50%; left: 50%;">
+
+
+			<li id="tab_con2" class="active"><button id="tap_con22"
+					type="button" class="tab_tit" style="width: 50%; left: 50%;">
 					<span>요금안내</span>
 				</button>
 				<div id="tap_con2" hidden="" class="tab_con ty2">
@@ -714,8 +740,9 @@
 										</div>
 									</div>
 								</div>
-							</div></li>
-						
+							</div>
+						</li>
+
 					</ul>
 				</div></li>
 		</ul>
@@ -790,24 +817,85 @@
 						</div>
 						<ul class="list_time">
 							<c:forEach var="fsche" items="${scheduleFirst }">
-								<c:if test="${fmovie.movieNm eq fsche.movieNm }">
-									<li class=""><a
-										href="./SelectSeat.tk?scCode=${fsche.scCode}" onclick="alert('좌석을 선택해주세요');" role="button">
-											<dl>
-												<dt>상영시간</dt>
-												<dd class="time">
-													<strong> ${fsche.starttime}</strong>
-													<div class="tooltip">종료 :</div>
-												</dd>
-												<dt>잔여석</dt>
-												<dd class="seat">
-													<strong>146</strong> / 162
-												</dd>
-												<dt>상영관</dt>
-												<dd class="hall">${fsche.roomCd}관</dd>
-											</dl>
-									</a></li>
+
+										<c:if test="${fmovie.movieNm eq fsche.movieNm }">
+											<li class=""><a
+												href="./SelectSeat.tk?scCode=${fsche.scCode}"
+												onclick="alert('좌석을 선택해주세요');" role="button">
+													<dl>
+														<dt>상영시간</dt>
+														<dd class="time">
+															<strong> ${fsche.starttime}</strong>
+															<div class="tooltip">종료 :</div>
+														</dd>
+														<dt>잔여석</dt>
+														<dd class="seat">
+															<strong>146</strong> / 162
+														</dd>
+														<dt>상영관</dt>
+														<dd class="hall">${fsche.roomCd}관</dd>
+														
+													</dl>
+											</a></li>
+
+
+
+									<div id="hwakin" class="hwakin">
+										<div class="hwakin1">
+											<div class="hwakin-1">
+												<span>${fsche.starttime }&nbsp;&nbsp;~&nbsp;&nbsp;${fsche.endtime }(${fsche.roomCd }관)</span>
+											</div>
+											<div class="posterimg">
+												<img class="img" src="${fsche.poster }">
+											</div>
+											<div class="info">
+											<c:choose>
+												<c:when test="${fmovie.watchGradeNm eq '12세이상관람가' }">
+													<span class="ic_grade gr_12">12</span>
+													본 영화는<span class="y12" > 만 12세 이상 관람가 </span> 영화입니다.<br>
+													만 12세 미만의 고객님(영, 유아 포함)은 반드시 부모님 또는 성인 보호자의 
+													동반하에 관람이 가능합니다. 연령 확인 불가 시 입장이 제한될 수 있습니다.
+													
+												</c:when>
+												<c:when test="${fmovie.watchGradeNm eq '15세이상관람가' }">
+													<span class="ic_grade gr_15">15</span>
+													본 영화는<span class="y15"> 만 15세 이상 관람가 </span> 영화입니다.<br>
+													만 15세 미만의 고객님(영, 유아 포함)은 반드시 부모님 또는 성인 보호자의 동반하에
+													관람이 가능합니다. 연령 확인 불가 시 입장이 제한될 수 있습니다.
+												</c:when>
+												<c:when test="${fmovie.watchGradeNm eq '청소년관람불가' }">
+													<span class="ic_grade gr_18">18</span>
+													본 영화는<span class="18"> 청소년 관람불가 </span> 영화입니다.<br>
+													만 18세 미만의 고객님(영, 유아 포함)은 부모님 또는 성인 보호자를 동반하여도
+													관람이 불가합니다. 또한 만 18세 이상이라도 재학중인 학생은 관람이 불가합니다.
+													영화 관람 시, 반드시 신분증을 지참하여 주시기 바랍니다.
+												</c:when>
+												<c:otherwise>
+													<span class="ic_grade gr_all">All</span>
+													본 영화는<span class="all"> 전체 관람가 </span> 영화입니다.
+												</c:otherwise>
+											</c:choose>
+											</div>
+											<div class="button">
+											<button>취소</button><button>인원/좌석 선택</button>
+											</div>
+										</div>
+
+									</div>
+
+
+
 								</c:if>
+										<div id="mCSB_6_container"
+											class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y"
+											style="position: relative; top: 0; left: 0;" dir="ltr">
+											<div class="bx_nodata_movie">
+												<p >
+													조회 가능한 상영시간이 없습니다.<br>조건을 변경해주세요.
+												</p>
+											</div>
+										</div>
+
 							</c:forEach>
 						</ul>
 
@@ -823,10 +911,10 @@
 	</div>
 
 
-	<div id="layerMovieTrailer" class="layer_wrap ty2 layer_movie_trailer"></div>
-
-	<div id="layerLocationPublic" class="layer_wrap layer_location_public"></div>
-	<div id="layerLocationCar" class="layer_wrap layer_location_car"></div>
+	<div style="width:100%; height: 100%; background: black; opacity:0.3">
+		
+	</div>
+	
 
 
 	<script type="text/javascript"

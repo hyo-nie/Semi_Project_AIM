@@ -29,7 +29,7 @@ public class AdminMovieModifyAction implements Action{
 		// 전달정보(movieCd)
 		String movieCd = request.getParameter("movieCd");
 		
-		// DAO - 상품정보 가져오기
+		// DAO - 영화정보 가져오기
 		MovieDAO dao = new MovieDAO();	
 		
 		// request 영역에 저장
