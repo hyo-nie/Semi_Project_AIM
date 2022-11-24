@@ -29,12 +29,10 @@ public class MyPageAction implements Action {
 		MemberDAO dao = new MemberDAO();
 		MemberDTO dto = new MemberDTO();
 		
-<<<<<<< HEAD
 		dto = dao.getMember(mb_id);
 
 		System.out.println("dto:" +dto);
 
-=======
 		// 영화예매내역 조회
 		ReservationDAO reDAO = new ReservationDAO();
 		ReservationDTO reDTO = reDAO.getReservationMy(mb_id);
@@ -44,10 +42,6 @@ public class MyPageAction implements Action {
 		}
 		
 		// 영화예매내역 조회 
-		
-		dto = dao.getMember(request.getParameter("mb_id"));
-	
->>>>>>> branch 'master' of https://github.com/hyo-nie/AIMAIM.git
 		request.setAttribute("dto", dto);
 		request.setAttribute("reDTO", reDTO);
 		request.setAttribute("scDTO", scDTO);
