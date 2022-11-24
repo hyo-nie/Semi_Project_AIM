@@ -525,7 +525,8 @@ public class ReservationDAO {
 	/**
 	 * insertReservation(scDTO, tkCode, totalPirce, cusCnt)
 	 */
-	public void insertReservation(ScheduleDTO scDTO, String tkCode, int totalPrice, int totalCnt, String id) {
+	public int insertReservation(ScheduleDTO scDTO, String tkCode, int totalPrice, int totalCnt, String id) {
+		int result = 0;
 		
 		try {
 			con = getConnection();
@@ -542,6 +543,7 @@ public class ReservationDAO {
 			
 			pstmt.executeUpdate();
 			
+			result = 1;
 			System.out.println(" DAO : 영화 예매 정보 저장 성공! ");
 			
 		} catch (Exception e) {
@@ -549,6 +551,7 @@ public class ReservationDAO {
 		} finally {
 			closeDB();
 		}
+		return result;
 	}
 	// insertReservation()
 	

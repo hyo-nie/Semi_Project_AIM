@@ -197,12 +197,23 @@
 						</div>
 						<div class="inner">
 							<div class="select_item_wrap">
+							
+							<!-- 태홍님 css 부탁드려용 - 영민  -->
+							
+							
+							
+							
+							
+							<!-- 태홍님 css 부탁드려용 - 영민 -->
+							
+							
+							
 							</div>
 							<div class="payment_sum_wrap">
 								<dl style="background-color:gray;">
 									<dt>성인 (${adultCnt })</dt>
 									<dd>
-										<strong><fmt:formatNumber value="${adultCnt*12000}"/></strong>원
+										<strong><fmt:formatNumber value="${adultCnt*13000}"/></strong>원
 									</dd>
 								</dl>
 								<dl style="background-color:gray;">
@@ -220,7 +231,7 @@
 								<dl>
 									<dt>총 금액</dt>
 									<dd>
-										<strong><fmt:formatNumber value="${adultCnt*12000 + childCnt*9000 + seniorCnt*7000 }"/></strong>원
+										<strong><fmt:formatNumber value="${adultCnt*13000 + childCnt*9000 + seniorCnt*7000 }"/></strong>원
 									</dd>
 								</dl>
 								<dl>
@@ -232,7 +243,7 @@
 								<dl>
 									<dt>결제금액</dt>
 									<dd>
-										총<strong><fmt:formatNumber value="${adultCnt*12000 + childCnt*9000 + seniorCnt*7000 }"/></strong>원
+										총<strong><fmt:formatNumber value="${adultCnt*13000 + childCnt*9000 + seniorCnt*7000 }"/></strong>원
 									</dd>
 								</dl>
 								<a href="javascript:requestPay();" class="btn_col1 btn_confirm">결제하기</a>
