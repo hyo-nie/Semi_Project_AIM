@@ -26,16 +26,21 @@ public class MemberUpdateAction implements Action {
 			return forward;
 		}
 		
-		// DAO - 회원정보 가져오기
 		MemberDAO dao = new MemberDAO();
 		MemberDTO dto = new MemberDTO();
 		
 		dto = dao.getMember(mb_id);
 
 		System.out.println("dto:" +dto);
+
+//		// 전달정보(mb_id)
+//		String mb_id = request.getParameter("mb_id");
 		
+//		// DAO - 회원정보 가져오기
+//		MemberDAO dao = new MemberDAO();s
+	
 		// request 영역에 저장
-		request.setAttribute("dto", dao.getMemberInfo(mb_id));
+		request.setAttribute("dto", dao.getMember(mb_id));
 		
 		// 페이지 이동 (./member/memberUpdate.jsp)
 		forward.setPath("./member/memberUpdate.jsp");

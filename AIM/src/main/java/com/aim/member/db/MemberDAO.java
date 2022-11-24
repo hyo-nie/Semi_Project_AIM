@@ -4,14 +4,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
-import com.aim.store.db.OrderDTO;
 
 public class MemberDAO {
 
@@ -426,8 +423,8 @@ public class MemberDAO {
 		try {
 			con = getConnection();
 	        sql = "update member set "
-	         		+ "mb_pw=?,mb_name=?,mb_nick=?,mb_tel=?,mb_id=? ";
-//		            + "where mb_id=?";
+	         		+ "mb_pw=?,mb_name=?,mb_nick=?,mb_tel=? "
+		            + "where mb_id=?";
 	        pstmt = con.prepareStatement(sql);
 	         
 			pstmt.setString(1, dto.getMb_pw());

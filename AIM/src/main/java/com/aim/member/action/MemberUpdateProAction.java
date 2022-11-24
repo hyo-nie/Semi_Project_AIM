@@ -17,10 +17,10 @@ public class MemberUpdateProAction implements Action {
 		
 		// 비회원 못 사용하게 세션 제어
 		HttpSession session = request.getSession();
-		String mb_id = (String)session.getAttribute("mb_id");
+		String id = (String)session.getAttribute("mb_id");
 		
 		ActionForward forward = new ActionForward();
-		if(mb_id == null) {
+		if(id == null) {
 			forward.setPath("./Login.aim");
 			forward.setRedirect(true);
 			return forward;
@@ -37,7 +37,7 @@ public class MemberUpdateProAction implements Action {
 		
 		System.out.println(" M : dto : " + dto);
 		
-		// DAO - 회원 정보 수정 메서드 (MemberUpdate
+		// DAO - 회원 정보 수정 메서드 (MemberUpdate(DTO))
 		MemberDAO dao = new MemberDAO();
 		dao.MemberUpdate(dto);
 		System.out.println(" M : dto : " + " 회원 정보 수정 성공");

@@ -261,7 +261,6 @@ public class MemberFrontController extends HttpServlet {
         try {
 			forward = action.execute(request, response);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
         
@@ -277,7 +276,6 @@ public class MemberFrontController extends HttpServlet {
             try {
     			forward = action.execute(request, response);
     		} catch (Exception e) {
-    			// TODO Auto-generated catch block
     			e.printStackTrace();
     		}
             
