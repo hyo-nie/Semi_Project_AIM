@@ -26,8 +26,10 @@ public class MyPageAction implements Action {
 		MemberDAO dao = new MemberDAO();
 		MemberDTO dto = new MemberDTO();
 		
-		dto = dao.getMember(request.getParameter("mb_id"));
-	
+		dto = dao.getMember(mb_id);
+
+		System.out.println("dto:" +dto);
+
 		request.setAttribute("dto", dto);
 		
 		forward.setPath("./member/myPage.jsp");

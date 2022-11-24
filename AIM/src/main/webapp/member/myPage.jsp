@@ -29,20 +29,39 @@
 			<ul class="tab_wrap outer actionmovingbar" style="padding-top:10px;">
 				<li class="active">
 					<div class="tab_con">
-						<div class="vip_top_infor">
+						<div class="vip_top_infor" style="background-color:ghostwhite;">
 							<div class="mypage_box">
 								<div class="my_info">
 									<p class="name">
-										<strong>${dto.mb_id}</strong>님은 <span class="txt_rank_common">${dto.mb_grade }</span>
+										<strong>${dto.mb_id}</strong>님은 
+										<span class="txt_rank_common" style="background-color:#18315D;">
+											<c:choose>
+												<c:when test="${dto.mb_grade==1 }">
+													SILVER
+												</c:when>
+												<c:when test="${dto.mb_grade==2 }">
+													GOLD
+												</c:when>
+												<c:when test="${dto.mb_grade==3 }">
+													VIP
+												</c:when>
+												<c:when test="${dto.mb_grade==4 }">
+													VVIP
+												</c:when>
+											</c:choose>
+										</span>
 										<span class="light">등급입니다.</span>
 									</p>
 									<div class="next_rank">
 										<p>
+											회원님의 총 관람횟수는 <em class="font22">${dto.mb_view }</em>회 입니다.<br> 
+											회원님의 총 결제금액은 <em class="font22">${dto.mb_pay }</em>원 입니다.
+											
 										</p>
 									</div>
 								</div>
 								<div class="bx_grade merge2020">
-									<div class="area_gauge friendslv">
+									<div class="area_gauge friendslv" style="margin-bottom:-25px;">
 										<div class="gauge" style="width: 0%;"></div>
 									</div>
 								</div>
@@ -56,7 +75,7 @@
 						<div class="benefit_wrap">
 							<div class="txt_list_wrap" style="margin-bottom:50px;">
 								<h3 class="tit">
-									<em>예매내역 조회</em>
+									<em style="font-weight:bold;">예매내역 조회</em>
 								</h3>
 								<div class="list_bdr_box">
 									<ul class="list_txt">
@@ -67,10 +86,10 @@
 							</div>
 							<div class="txt_list_wrap" style="margin-bottom:50px;">
 								<h3 class="tit">
-									<em>구매내역 조회</em>
+									<em style="font-weight:bold;">구매내역 조회</em>
 								</h3>
 								<div class="list_bdr_box">
-									<ul class="list_txt">
+									<ul class="list_txt" style="text-align:center;">
 										<li>ㅇㅇ</li>
 										<li>ㅇㅇ</li>
 									</ul>
@@ -78,31 +97,31 @@
 							</div>
 							<div class="txt_list_wrap" style="margin-bottom:50px;">
 								<h3 class="tit">
-									<em>1:1 문의내역</em>
+									<em style="font-weight:bold;">1:1 문의내역</em>
 								</h3>
 								<div class="list_bdr_box">
-                  <ul class="list_txt" style="text-align:center;">
-								    <li>FAQ를 이용하시면 궁금증을 더 빠르게 해결하실 수 있습니다.</li>
-                    <li>1:1 문의글 답변 운영시간 10:00 ~ 19:00</li>
-                    <li>접수 후 48시간 안에 답변 드리겠습니다.</li>
-                  </ul>
-									<button onclick="location.href='./MyHpList.hp';" 
-									        style="height:40px; line-height:38px; padding:0 18px; margin:auto; display: block;">1:1 문의내역</button>
-                </div>
+		                  		 <ul class="list_txt" style="text-align:center; font-size:14px;">
+									<li>FAQ를 이용하시면 궁금증을 더 빠르게 해결하실 수 있습니다.</li>
+		                    		<li>1:1 문의글 답변 운영시간 10:00 ~ 19:00</li>
+		                    		<li>접수 후 48시간 안에 답변 드리겠습니다.</li>
+		                  		</ul>
+								<button onclick="location.href='./MyHpList.hp';" 
+										style="height:40px; line-height:38px; padding:0 18px; margin:auto; display:block; font-size:13px;">1:1 문의내역</button>
+								</div>
 								<div>
 								</div>
-              </div>
+							</div>
 							<div class="txt_list_wrap" style="margin-bottom:50px;">
 								<h3 class="tit">
-									<em>대관 문의내역</em>
+									<em style="font-weight:bold;">대관 문의내역</em>
 								</h3>
 								<div class="list_bdr_box">
-									 <ul class="list_txt" style="text-align:center;">
-                    <li>단체관람 및 대관을 원하시는 고객님께 할인 혜택을 드리고 있습니다.<br>
-                    신청을 원하시거나 문의사항이 있으시면 아래 정보를 입력해주세요.</li>
-                  </ul>
-                  <button onclick="location.href='./AdminRentalList.th';" 
-                          style="height:40px; line-height:38px; padding:0 18px; margin:auto; display: block;">대관 문의내역</button>
+									 <ul class="list_txt" style="text-align:center; font-size:14px;">
+					                    <li>단체관람 및 대관을 원하시는 고객님께 할인 혜택을 드리고 있습니다.<br>
+					                    신청을 원하시거나 문의사항이 있으시면 아래 정보를 입력해주세요.</li>
+					                 </ul>
+                  					 <button onclick="location.href='./AdminRentalList.th';" 
+                          					 style="height:40px; line-height:38px; padding:0 18px; margin:auto; display:block; font-size:13px;">대관 문의내역</button>
 								</div>
 							</div>
 							</div>
