@@ -79,7 +79,8 @@
 			</ul>
 			
 			<c:if test="${mb_id.equals('admin')}">
-					<input type="button" value="상품등록" onclick="location.href='./AdminPickAdd.ad';">
+					<input type="button" value="상품등록" onclick="location.href='./AdminStoreAdd.ad';">
+					<input type="button" value="상품리스트" onclick="location.href='./AdminStoreList.ad';">
 				</c:if>
 				<!-- 버튼은 css적용 추후 적용할 예정! admin(관리자)만 볼 수 있도록 제어할 예정 -->
 		</div>
