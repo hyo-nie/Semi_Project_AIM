@@ -358,33 +358,31 @@
 										</c:when>
 										<c:when test="${dto.branch_name eq had }">
 											<li><font color="blue"><b>지하철 이용 시</b></font></li>
-											<li><font color="black">1) 2호선 서면역 2번 출구</font></li>
-											<li><font color="black">2) 2호선 전포역 5번 출구</font></li>
+											<li><font color="black">지하철 1호선 하단역과 지하 1층 연결(3번과 5번출구)</font></li>
 											<li><font color="blue"><b>버스 이용 시</b></font></li>
-											<li><font color="black">- 시내버스 : 20번,24번,301번,66번,17번,23번</font></li>
-											<li><font color="black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-											103번,81번,83-1번,86번,133번 등</font></li>
-											<li><font color="red">[서면삼정타워]주차 안내</font></li>
-											<li><font color="Blue">주차장이 협소하오니 가급적 대중교통 이용부탁드립니다.</font></li>
-											<li><font color="black">★당일 영화 관람시★</font></li>
-											<li><font color="black">지하주차장 3시간 1,000원</font></li>
-											<li><font color="black">13층 매표소에서 차량번호 입력/결제 후 출차 가능</font></li>
-											<li><font color="black">(초과시 10분당 1,000원)</font></li> 
+											<li><font color="black">- 시내버스 : 55번,58번,58-2번,68번,168번,520번 급행버스 2000번</font></li>
+											<li><font color="black">- 좌석버스 : 58-1번, 58-1번(심야),221번,2000번(하단.연사)</font></li>
+											<li><font color="red">주차 안내</font></li>
+											<li><font color="black">지하 2F ~ 지하 6F 이용 가능</font></li>
+											<li><font color="black">무인정산기에서 셀프 정산 진행(3시간 무료)</font></li>
+											<li><font color="black">- 종이 티켓의 경우 티켓 아래쪽 바코드를 기계에 인식</font></li>
+											<li><font color="black">- 모바일 티켓의 경우, 예매번호 15자리를 기계에 입력</font></li>
+											<li><font color="black">건물 내 타 매장과 합산시 최대 6시간 무료</font></li> 
+											<li><font color="blue">차량이 2대 이상일 경우에는 7F 매표소로 문의</font></li> 
 										</c:when>
 										<c:when test="${dto.branch_name eq don }">
 											<li><font color="blue"><b>지하철 이용 시</b></font></li>
- 											<li><font color="black">1) 2호선 서면역 2번 출구</font></li>
-											<li><font color="black">2) 2호선 전포역 5번 출구</font></li>
+ 											<li><font color="black">1호선 온천장역 3번출구</font></li>
 											<li><font color="blue"><b>버스 이용 시</b></font></li>
-											<li><font color="black">- 시내버스 : 20번,24번,301번,66번,17번,23번</font></li>
-											<li><font color="black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-											103번,81번,83-1번,86번,133번 등</font></li>
-											<li><font color="red">[서면삼정타워]주차 안내</font></li>
-											<li><font color="Blue">주차장이 협소하오니 가급적 대중교통 이용부탁드립니다.</font></li>
-											<li><font color="black">★당일 영화 관람시★</font></li>
-											<li><font color="black">지하주차장 3시간 1,000원</font></li>
-											<li><font color="black">13층 매표소에서 차량번호 입력/결제 후 출차 가능</font></li>
-											<li><font color="black">(초과시 10분당 1,000원)</font></li> 
+											<li><font color="black">- 시내버스 : 80번,80-1번,77번,189번,188번,100번,100-1번,144번</font></li>
+											<li><font color="red">주차 안내</font></li>
+											<li><font color="Blue">무료주차(건물 지하4층 4시간)</font></li>
+											<li><font color="black">-6F 매표/매점에서 ★사전주차등록★진행</font></li>
+											<li><font color="black">-초과 시 10분당 500원</font></li>
+											<li><font color="blue">유료주차(홈플러스 지하2층,3층)</font></li>
+											<li><font color="black">- 무료출차 불가, 10분당 500원</font></li> 
+											<li><font color="black">- 홈플러스 주차장 23시 이후 출차 불가</font></li> 
+											<li><font color="black">&nbsp;&nbsp;(2,4주차 휴무일은 22시 이후 출차 불가)</font></li> 
 										</c:when>
 									</c:choose>
 							</ul>
