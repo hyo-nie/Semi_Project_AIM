@@ -27,22 +27,19 @@ function requestPay(user_tel) {
       
 		var user = "<%=session.getAttribute("mb_id") %>";
 		var payAmount = Number(document.getElementById("totalAmountMoney").innerHTML);
-		alert(payAmount);
-		alert(user);
 		
-		var itemObj = $(".product_info_name");	
+		var itemObj = $(".product_info_origin");	
 		var itemName = "";
 		
-// 		if(itemObj.length == 1){
-// 			// 한 개인 경우
-// 			itemName = $(".product_info_name").eq(0)[0].outerText
-// 		}
-// 		else{
-// 			// 여러 개인 경우
-// 			itemName = $(".product_info_name").eq(0)[0].outerText + " 외 " + (itemObj.length-1) + "건"
-// 		}
-		alert('결제가 되는지......... 왜 안 되는지,,,,,,,,,,,,,,');
-
+ 		if(itemObj.length == 1){
+			// 한 개인 경우
+ 			itemName = $(".product_info_origin").eq(0)[0].outerText
+ 		}
+ 		else{
+ 			// 여러 개인 경우
+ 			itemName = $(".product_info_origin").eq(0)[0].outerText + " 외 " + (itemObj.length-1) + "건"
+ 		}
+ 			
       IMP.request_pay({ 
           pg: "html5_inicis",
           pay_method: "card",
@@ -56,15 +53,15 @@ function requestPay(user_tel) {
           if (rsp.success) {
              console.log("결제 성공!");
               // 결제 성공 시 이동하는 페이지(./OrderList.or)
-              location.href="./OrderAddAction.or?mb_tel="+user_tel;
+              location.href="./OrderAddAction.or?mb_tel="+user_tel+"&totalAmountMoney="+payAmount;
               
           } else {
         	  console.log(rsp)
               console.log("결제 실패!");
+        	  
         	  alert('결제 실패!');
         	  // 결제 실패 시 이동하는 페이지
         	  location.href="./OrderFail.or";
-        	  
           }
       });
     }
@@ -83,8 +80,6 @@ function requestPay(user_tel) {
 		} else{
 			alert('약관에 모두 동의하셔야 결제가 가능합니다.');
 		}
-		
-		
 	}    
 
 </script>
@@ -95,6 +90,49 @@ function requestPay(user_tel) {
 	    height: 50px;
 	    float: left;
 	}
+	
+	/* 	체크박스 버튼 디자인 커스텀 */
+	input[type="checkbox"]{
+        display: none !important;
+     }
+      
+	input[id="check00"]:checked + label::after{
+	        content:'✔' !important ;
+	        font-size: 17px !important;
+	        width: 15px !important;
+	        height: 15px !important;
+	        text-align:  !important;
+	        position: absolute !important;
+	        left: 2px !important;
+	        top:1px !important;
+	  }
+	
+	/* 	라디오 버튼 디자인 커스텀 */
+	.radioDesign input[type="radio"] {
+        display: none;
+    }
+ 
+    .radioDesign input[type="radio"] + span {
+        display: inline-block;
+        padding: 15px 10px;
+        border: 1px solid #dfdfdf;
+        background-color: #ffffff;
+        text-align: center;
+        cursor: pointer;
+        margin:5px 4px 0px 12px;
+    }
+ 
+    .radioDesign input[type="radio"]:checked + span {
+        background-color: #113a6b;
+        color: #ffffff;
+    }
+    
+    /* 결제수단 위 아래 선 모양 */
+    #payMethodWrapper{
+        border: 1px solid black;
+	    border-width: 2px 0px 2px 0px;
+	    padding-top: 20px; 
+	 }
 	
 </style>
 
@@ -108,6 +146,13 @@ function requestPay(user_tel) {
 <%-- ${member } --%>
 
 
+	<!-- 각종 요소 -->
+	<jsp:include page="../inc/include.jsp"/>
+	
+
+	<!-- 헤더/네비 -->
+	<jsp:include page="../inc/login_nav_bar.jsp"/>
+
 <form method="post" name="fr">
 
 	<div id="contents" class="gift_store">
@@ -119,8 +164,6 @@ function requestPay(user_tel) {
 				<li class="step3"><span>STEP 03</span><strong>결제완료</strong></li>
 			</ul>
 		</div>
-
-
 
 		<!-- 장바구니 리스트 구매상품 정보 -->
 		<div class="com_cart_list_wrap com_cart_list_wrap1">
@@ -207,7 +250,7 @@ function requestPay(user_tel) {
 		
 		
 		<!-- 주문자 정보 확인 -->
-		<div class="com_box_design_wrap">
+		<div class="com_box_design_wrap" style="margin-top : 0px">
 			<strong class="com_box_design_title">주문자 정보 확인</strong>
 			<ul class="com_box_design" style="list-style: none; padding: 20px 0 20px;">
 				<li><label for="user_info_name"  style="margin-top: 25px;"> 아이디</label> 
@@ -227,28 +270,24 @@ function requestPay(user_tel) {
 			<!-- 결제 수단 -->
 			<div class="com_box_design_wrap">
 				<strong class="com_box_design_title">결제 수단</strong>
-					<ul class="com_box_design radioCheck" style="list-style: none;">
-	            		<li>
-	            		<label for="payment_card">
-	                		<input type="radio" name="o_pay" id="payment_card">
-<!-- 	                		class="com_custom_radio" id="payment_card" value="credit_card" -->
-	                		신용카드</label>
-	               		</li>
-	               		<li>
-	               		<label for="payment_kakaopay">
-	                		<input type="radio" name="o_pay">
-<!-- 	                		 class="com_custom_radio kakaopay" id="payment_kakaopay" value="kakaopay" -->
-	                    	<img src="./assets/img/btn_kakaopay.png" alt="kakaopay">
-	               			</label>
-	           			 </li>
-					</ul>
+				<div id="payMethodWrapper">
+					<label class="radioDesign">
+						    <input type="radio" name="o_pay" id="payment_card">
+						    <span>신용카드</span>
+						</label>
+						 
+						<label class="radioDesign">
+						    <input type="radio" name="o_pay">
+						    <span>카카오페이</span>
+						</label>
+					</div>					
 				
 				
 			<!-- 약관 -->		
 			<div class="com_agree_wrap">
 				<p class="com_list_style1_title">
 					<input type="checkbox" id="check00" class="com_all_checker">
-					<label for="check00" style="width:350px">주문정보/결제 대행 서비스 약관 모두 동의</label>
+					<label for="check00" style="width:350px; margin-bottom:0px">주문정보/결제 대행 서비스 약관 모두 동의</label>
 				</p>
 			
 				<div class="accordion-flush" id="accordionExample">
@@ -675,16 +714,16 @@ function requestPay(user_tel) {
 			</div>
 			
 			<div class="com_btn_wrap pT40">
-				<!--   <input type="button" onClick="api_start()" />-->
-<!-- 				<a href="javascript:requestPay()" class="btn_style0">결제하기</a> -->
- 				<a href='javascript:requestPay2("${member.mb_tel}")' class="btn_style0">결제하기</a> 
+ 				<a href='javascript:requestPay2("${member.mb_tel}")' class="btn_style0" style='color:white'>결제하기</a> 
 				<a href="./CartList.ct" class="btn_style0" style="color:white">돌아가기</a> 
 			</div>
+			
+			
 		</div>
-		</div>
+	</div>
 
 
-</form>
+	</form>
 
 	<!-- 약관 -->
 	<jsp:include page="../inc/footer.jsp" />

@@ -1,7 +1,6 @@
 package com.aim.store.action;
 
 import java.util.ArrayList;
-import java.util.Vector;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -47,10 +46,6 @@ public class OrderStartAction implements Action {
 		request.setAttribute("productList", productList);
 		request.setAttribute("member", mDTO);
 		
-		// 정보 확인용!
-//		System.out.println("정보확ㄴ인용!!!!!!! " + productList);
-//		System.out.println(member);
-	
 		// ./store/buy.jsp		페이지 이동
 		forward.setPath("./store/buy.jsp");
 		forward.setRedirect(false);

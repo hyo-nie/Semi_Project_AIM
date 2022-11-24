@@ -6,7 +6,6 @@ import javax.servlet.http.HttpSession;
 
 import com.aim.store.db.CartDAO;
 import com.aim.store.db.CartDTO;
-import com.aim.store.db.StoreDTO;
 
 public class CartAddAction implements Action {
 
@@ -51,6 +50,15 @@ public class CartAddAction implements Action {
 			System.out.println(" M : 장바구니 추가 ");
 		}
 		
+		
+		// 구매하기 버튼을 눌렀을 때 장바구니를 먼저 비우고 상품 추가
+		boolean buyNowGbn = request.getParameter("buyNow") == null ? false : true;
+		
+		if(buyNowGbn) {
+			dao.deleteCart(id); 
+			dao.cartAdd(dto); 
+		}
+
 		// 사용자의 선택에 따라 장바구니 페이지로 이동/상품리스트 이동
 		String isMove = request.getParameter("isMove");
 		System.out.println(" M : isMove : " + isMove);
