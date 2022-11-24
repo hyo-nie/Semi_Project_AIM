@@ -6,11 +6,37 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script type="text/javascript">
+
+	function rewrite(){
+		if(document.rr.r_name.value == ""){
+			alert("작성자를 입력해주세요");
+			document.rr.r_name.focus();
+			return false;
+		}
+		if(document.rr.r_text.value == ""){
+			alert("답변을 입력해주세요");
+			document.rr.r_text.focus();
+			return false;
+		}
+		if(document.rr.r_mb_pw.value == ""){
+			alert("비밀번호를 입력해주세요");
+			document.rr.r_mb_pw.focus();
+			return false;
+		}
+		if (confirm("등록 하시겠습니까?") == true){
+			document.rr.submit();
+			alert("답변완료");
+		}else{   //취소
+		     return false;
+		}
+	}
+</script>
 </head>
 <body>
 
 	<%
-		/* 로그인 제어! 스토어 상품 등록 페이지는 admin(관리자)만 접근 가능 */
+		/* 로그인 제어! 답글작성 페이지는 admin(관리자)만 접근 가능 */
 			String id = (String) session.getAttribute("mb_id");
 			if (id == null || !id.equals("admin")) {
 				response.sendRedirect("./Login.aim");
@@ -23,7 +49,7 @@
 	<!-- 헤더/네비 -->
 	<jsp:include page="../inc/login_nav_bar.jsp" />
 	
-	<form action="./AdminRentalReWriteAction.th" method="post">
+	<form action="./AdminRentalReWriteAction.th" method="post" name="rr">
 	
 	<input type="hidden" name="rno" value="${param.rno }">
 	<input type="hidden" name="pageNum" value="${param.pageNum }">
@@ -39,6 +65,7 @@
 	<input type="hidden" name="hopeend" value="${dto.hopeend }">
 	<input type="hidden" name="movieCd" value="${dto.movieCd }">
 	<input type="hidden" name="r_tel" value="${dto.r_tel }">
+<%-- 	<input type="hidden" name="r_mb_id" value="${dto.r_mb_id }"> --%>
 	
 	
 	<div id="contents">
@@ -58,13 +85,25 @@
 				<tr>
 					<th scope="row" class="req1">작성자</th>
 					<td>
-						<input type="text" name ="r_name">
+						<input type="text" name ="r_name" value="관리자">
 					</td>
 				</tr>
 				<tr>
 					<th scope="row" class="req1">답변</th>
 					<td>
 						 <textarea rows="10" cols="20" name="r_text"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row" class="req1">ID</th>
+					<td>
+						 <input readonly type="text" name ="r_mb_id" value="${dto.r_mb_id }">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row" class="req1">비밀번호</th>
+					<td>
+						 <input readonly type="password" name ="r_mb_pw" value="${dto.r_mb_pw }">
 					</td>
 				</tr>
 				
@@ -74,7 +113,7 @@
 		</table>
 		<div class="btn_btm_wrap">
 			<a href="#none" class="btn_col3 ty6">취소</a>
-			<input type="submit" value="등록" class="btn_col2 ty6">
+			<input type="button" value="등록" class="btn_col2 ty6" onclick="rewrite();">
 		</div>
 		</div>
 	

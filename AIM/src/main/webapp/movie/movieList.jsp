@@ -193,4 +193,8 @@ $(document).ready(function() {
 	<!-- 약관 -->
 	<jsp:include page="../inc/footer.jsp" />
 </body>
+<<<<<<< HEAD
+=======
+
+>>>>>>> branch 'master' of https://github.com/hyo-nie/AIMAIM.git
 </html>

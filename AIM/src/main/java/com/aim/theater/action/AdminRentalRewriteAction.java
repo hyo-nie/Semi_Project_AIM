@@ -47,6 +47,9 @@ public class AdminRentalRewriteAction implements Action {
 		dto.setR_name(request.getParameter("r_name"));
 		dto.setR_text(request.getParameter("r_text"));
 		
+		dto.setR_mb_id(request.getParameter("r_mb_id"));
+		dto.setR_mb_pw(request.getParameter("r_mb_pw"));
+		
 		RentDAO dao = new RentDAO();
 		dao.reInsertRent(dto);
 		
