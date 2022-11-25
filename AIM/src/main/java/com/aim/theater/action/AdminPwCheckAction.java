@@ -16,7 +16,7 @@ public class AdminPwCheckAction implements Action {
 		//전달된 파라미터 bno pass pageNum
 		int rno = Integer.parseInt(request.getParameter("rno"));
 		String r_mb_pw = request.getParameter("r_mb_pw");
-		String r_mb_id = request.getParameter("r_mb_id");
+//		String r_mb_id = request.getParameter("r_mb_id");
 		String pageNum = request.getParameter("pageNum");
 		
 		RentDAO dao = new RentDAO();

@@ -47,7 +47,9 @@
 	<!-- 상위 배너 -->
 	<jsp:include page="../inc/topbanner.jsp"/>
 	<!-- 헤더/네비 -->
-	<jsp:include page="../inc/login_nav_bar.jsp" />
+	<jsp:include page="../inc/nav_bar.jsp" />
+	
+	<br><br><br><br><br><br><br><br><br>
 	
 	<form action="./AdminRentalReWriteAction.th" method="post" name="rr">
 	
@@ -85,7 +87,7 @@
 				<tr>
 					<th scope="row" class="req1">작성자</th>
 					<td>
-						<input type="text" name ="r_name" value="관리자">
+						<input type="text" name ="r_name" value="[${dto.r_name }]님에 대한 답변">
 					</td>
 				</tr>
 				<tr>
@@ -97,7 +99,7 @@
 				<tr>
 					<th scope="row" class="req1">ID</th>
 					<td>
-						 <input readonly type="text" name ="r_mb_id" value="${dto.r_mb_id }">
+						 <input readonly type="text" name ="r_mb_id" value="${sessionScope.mb_id }">
 					</td>
 				</tr>
 				<tr>

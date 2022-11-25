@@ -17,13 +17,18 @@ public class AdminRentalContentAction implements Action {
 		//세션제어(비회원접근불가)
 		HttpSession session = request.getSession();
 		String mb_id = (String) session.getAttribute("mb_id");
+
 		
 		ActionForward forward = new ActionForward();
-		if(mb_id==null) {
-			forward.setPath("./Main.aim");
-			forward.setRedirect(true);
-			return forward;
-		}
+		
+		
+			if(mb_id==null) {
+				forward.setPath("./Main.aim");
+				forward.setRedirect(true);
+				return forward;
+			}
+		
+		
 
 		int rno = Integer.parseInt(request.getParameter("rno"));
 		String pageNum = request.getParameter("pageNum");
