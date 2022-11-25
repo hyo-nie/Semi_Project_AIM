@@ -24,8 +24,8 @@
 <article>
 <%-- 	${detailInfo } --%>
 	<table>
-      <div class="com_cart_list_wrap">
-      <h2 style="margin-bottom: 10px;">주문 상세 내역</h2>
+      <div class="com_cart_list_wrap" style="margin-top: 45px;">
+      <h3 style="margin-bottom: 10px;">주문 상세 내역</h3>
       <p class="cart_allchecker_wrap">
 <!--          <input type="checkbox" id="checkboxall" class="com_custom_all_checkbox com_custom_checkbox" checked="checked"> -->
 <!--          <label for="checkboxall"></label> -->
@@ -67,7 +67,7 @@
 	</table>
 	
 		<div class="category_product_detail_wrap">  
-		<dl class="category_product_detail_dlist">         	
+		<dl class="category_product_detail_dlist" style="margin-top: -5px;">         	
 			<dt><b>이용안내</b></dt> 	
 			 <dd>
 				• AIM 상품바코드는 AIM 오프라인에서 사용 가능한 기프티콘입니다.<br>
