@@ -8,7 +8,6 @@
 <title>AIM - 회원 정보 수정</title>
 <script type="text/javascript">
   function check(){
-	  alert('test');
 	  if(document.fr.mb_pw.value==""){
 		  alert('비밀번호를 입력하세요');
 		  document.fr.pw.focus();
@@ -62,8 +61,8 @@
         <br>
         전화번호 <input type="text" name="mb_tel" value="${dto.mb_tel }" ><br>
         <br>
-        <input type="button" value="변경하기"  onclick="return check();">
-        <input type="button" value="돌아가기" onclick="history.back();">
+        <input type="button" value="변경하기"  onclick="return check();" style="color:#fff; background:#18315D; width:75px; height:25px; margin:5px; border-radius:5px; border:1px solid #fff;">
+        <input type="button" value="돌아가기" onclick="history.back();" style="color:#fff; background:#18315D; width:75px; height:25px; margin:5px; border-radius:5px; border:1px solid #fff;">
       </form>
     </div>
   </fieldset>
