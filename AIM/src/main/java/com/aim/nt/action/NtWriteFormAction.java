@@ -18,7 +18,7 @@ public class NtWriteFormAction implements Action {
 		String mb_id = (String)session.getAttribute("mb_id");
 						
 		ActionForward forward = new ActionForward();
-		if(mb_id == null) {
+		if(mb_id == null || !mb_id.equals("admin")) {
 			forward.setPath("./Login.aim");
 			forward.setRedirect(true);
 			return forward;

@@ -11,23 +11,27 @@ import com.aim.member.db.MemberDTO;
 import com.aim.hp.action.Action;
 import com.aim.hp.action.ActionForward;
 
-public class MyHpContentAction implements Action {
+public class HpReContentAction implements Action {
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		System.out.println(" M : MyHpContentAction_execute() 호출");
+		System.out.println(" M : HpReContentAction_execute() 호출");
 		
 		// 세션 저장
 		HttpSession session = request.getSession();
 		String mb_id = (String)session.getAttribute("mb_id");
 				
 			ActionForward forward = new ActionForward();
-				if(mb_id == null) {
+				if(mb_id == null || !mb_id.equals("admin")) {
 					forward.setPath("./Login.aim");
 					forward.setRedirect(true);
 					return forward;
 				}
 		
+				System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"+request.getParameter("hp_content"));
+				System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"+request.getParameter("hp_subject"));
+				System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"+request.getParameter("mb_id"));
+				System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"+request.getParameter("mb_pw"));
 		// 전달정보(파라메터) 저장
 		int hp_bno = Integer.parseInt(request.getParameter("hp_bno"));
 		String pageNum = request.getParameter("pageNum");
@@ -42,15 +46,13 @@ public class MyHpContentAction implements Action {
 		// 글번호에 해당 글 정보를 가져오기
 		HpDTO dto = dao.getHpList(hp_bno);
 		
-		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"+request.getParameter("hp_select"));
-		
 		// request 영역에 글정보를 저장
 		request.setAttribute("dto", dto);
 		request.setAttribute("pageNum", pageNum);
 		request.setAttribute("mdto", mdto);
 		
 		// 페이지 이동(준비)
-		forward.setPath("./hp/myhpcontent.jsp");
+		forward.setPath("./HpAdminLoginAction.hp");
 		forward.setRedirect(false);
 		
 		return forward;

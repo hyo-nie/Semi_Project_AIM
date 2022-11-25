@@ -36,11 +36,14 @@
 					style="width: 33.33%; left: 66.67%;">
 					<span>문의 내용 목록</span>
 				</button>
+				<form action="./HpAdminLoginAction.hp?hp_bno=${dto.hp_bno}&pageNum=${pageNum }&hp_re_ref=${dto.hp_re_ref }&hp_re_seq=${dto.hp_re_seq}&hp_re_lev=${dto.hp_re_lev }"
+					method="post">
 				<div class="tab_con">
 					<h3 class="hidden">문의 내용 목록</h3>
 					<ul class="tab_wrap inner">
 						<li class="active"><div class="tab_con ty4">
 								<h4 class="hidden">문의 내용 목록</h4>
+								
 								<table class="tbl_dtal" summary="문의 내용 목록">
 									<caption>문의 내용 목록</caption>
 									<colgroup>
@@ -48,60 +51,67 @@
 									</colgroup>
 									<thead>
 										<tr>
-											<th scope="col">${dto.hp_subject }</th>
+											<th scope="col" name="hp_subject">${dto.hp_subject }</th>
 										</tr>
 									</thead>
 									<tbody>
 										<tr class="tb_info">
 											<td>
-													<span class="tit">${dto.hp_class }</span>
-													
-<%-- 													<c:choose> --%>
-<%-- 															<c:when test="${dto.hp_class ==0 }"> --%>
-<%-- 																<c:set var="hp_class" value="분류 선택"/> --%>
-<%-- 															</c:when> --%>
-<%-- 															<c:when test="${dto.hp_class ==1 }"> --%>
-<%-- 																<c:set var="hp_class" value="영화관"/> --%>
-<%-- 															</c:when> --%>
-<%-- 															<c:when test="${dto.hp_class ==2 }"> --%>
-<%-- 																<c:set var="hp_class" value="영화"/> --%>
-<%-- 															</c:when> --%>
-<%-- 															<c:when test="${dto.hp_class ==3 }"> --%>
-<%-- 																<c:set var="hp_class" value="멤버십"/> --%>
-<%-- 															</c:when> --%>
-<%-- 															<c:when test="${dto.hp_class ==4 }"> --%>
-<%-- 																<c:set var="hp_class" value="예매/결제"/> --%>
-<%-- 															</c:when> --%>
-<%-- 															<c:when test="${dto.hp_class ==5 }"> --%>
-<%-- 																<c:set var="hp_class" value="이벤트"/> --%>
-<%-- 															</c:when> --%>
-<%-- 															<c:when test="${dto.hp_class ==6 }"> --%>
-<%-- 																<c:set var="hp_class" value="홈페이지/모바일"/> --%>
-<%-- 															</c:when> --%>
-<%-- 															<c:when test="${dto.hp_class ==0 }"> --%>
-<%-- 																<c:set var="hp_class" value="개인정보"/> --%>
-<%-- 															</c:when> --%>
-<%-- 													</c:choose> --%>
-
-													<span class="cont">${dto.hp_select }</span>
+													<span class="tit">작성자</span>
+													<span class="cont">${dto.mb_id }</span>
 													<span class="tit">등록일</span>
 													<span class="cont">${dto.hp_date }</span>
 													<span class="tit">글번호</span>
 													<span class="cont">${requestScope.dto.hp_bno }</span>
 											</td>
 										</tr>
-										<tr class="tb_content">
-											<td><div id="divNoticeContents">
-													<p> 
-														<font size="4" face="맑은 고딕">
-														문의 답변 내용 : 
+										<tr class="tb_content" >
+											<td><div id="divNoticeContents" >
+												<p> 
+													<font size ="3" face="맑은 고딕">
+														문의 종류 : ${dto.hp_select }
+														<c:set var="hp_select" value="분류선택"/>
+														<c:forEach var="dto" items="${HpList }">
+															<c:choose>
+																<c:when test="${dto.hp_select == 0 }">
+																	<c:set var="hp_select" value="분류선택"/>
+																</c:when>
+																<c:when test="${dto.o_status == 1 }">
+																	<c:set var="hp_select" value="영화관"/>
+																</c:when>
+																<c:when test="${dto.o_status == 2 }">
+																	<c:set var="hp_select" value="영화"/>
+																</c:when>
+																<c:when test="${dto.o_status == 3 }">
+																	<c:set var="hp_select" value="멤버십"/>
+																</c:when>
+																<c:when test="${dto.o_status == 4 }">
+																	<c:set var="hp_select" value="예매/결제"/>
+																</c:when>
+																<c:when test="${dto.o_status == 5 }">
+																	<c:set var="hp_select" value="이벤트"/>
+																</c:when>
+																<c:when test="${dto.o_status == 6 }">
+																	<c:set var="hp_select" value="홈페이지/모바일"/>
+																</c:when>
+																<c:when test="${dto.o_status == 7 }">
+																	<c:set var="hp_select" value="개인정보"/>
+																</c:when>
+															</c:choose>
+														</c:forEach>
+													</font>
+												</p>
+												<p> 
+													<font size="3" face="맑은 고딕">
+														문의 사항 : 
 														<br>
-														<br>
+													</font>
+													<font size="2" face="맑은 고딕">
 														${dto.hp_content }	
-														</font>
-													</p>
-													
-											</div></td>
+													</font>
+												</p>
+												</div>
+											</td>
 										</tr>
 										<tr class="tb_link">
 											<td>
@@ -111,25 +121,27 @@
 									</tbody>
 								
 								</table>
-									 <input type="hidden" name="mb_id" id="mb_id" value="${dto.mb_id }">
-									 <input type="hidden" name="mb_pw" id="mb_pw" value="${dto.mb_pw }">
-									 <input type="hidden" name="hp_subject" id="hp_subject" value="${dto.hp_subject }">
-								<div class="btn_btm_wrap">
-									 
-									 <input type="button" value="문의 내용 수정" class="btn_col2 ty6" 
+									 <input type="hidden" name="mb_id" id="mb_id" value="${mdto.mb_id }">
+									 <input type="hidden" name="mb_pw" id="mb_pw" value="${mdto.mb_pw }">
+									
+									
+									<div class="btn_btm_wrap">
+									 <input type="button" value="문의 내용 수정" class="btn_col3 ty6" 
 									 	onclick="location.href='./MyHpUpdate.hp?hp_bno=${dto.hp_bno}&pageNum=${pageNum }';" >
-  	        						 <input type="button" value="문의 내용 삭제" class="btn_col2 ty6" 
+  	        						 <input type="button" style="background-color:#18315D" value="문의 내용 삭제" class="btn_col2 ty6" 
   	        						 	onclick="location.href= './MyHpDeleteCheck.hp?hp_bno=${dto.hp_bno}&pageNum=${param.pageNum }';">
+									 <a href="./MyHpList.hp" class="btn_col3 ty6">문의 목록</a>
   	        						<c:if test="${mb_id.equals('admin') }">
-  	        						 <input type="button" value="문의 답글 달기" class="btn_col2 ty6" 
-  	        						 	onclick=" location.href='./HpReWriteForm.hp?hp_bno=${dto.hp_bno}&pageNum=${pageNum }&hp_re_ref=${dto.hp_re_ref }&hp_re_seq=${dto.hp_re_seq}&hp_re_lev=${dto.hp_re_lev }'; ">
+  	        						 <input type="submit" style="background-color:#18315D" value="문의 답글 달기" class="btn_col2 ty6">
   	        						</c:if>
-									 <a href="./MyHpList.hp" class="btn_col2 ty6">문의 목록</a>
 									 
 								</div>
-							</div></li>
+							</div>
+						</li>
 					</ul>
-				</div></li>
+				</div>
+				</form>
+			</li>
 		
 		<li class="wrap_nav_underline"><span class="nav_underline"></span></li>
 		</ul>

@@ -109,7 +109,7 @@ public class HpDAO {
 			
 			// 3. sql 작성 & pstmt 객체
 			sql = "insert into help_board(hp_bno,mb_id,mb_pw,hp_subject,"
-					+ "hp_content,hp_date,hp_re_ref,hp_re_lev,hp_re_seq,hp_select,hp_class) "
+					+ "hp_content,hp_date,hp_re_ref,hp_re_lev,hp_re_seq,hp_select,hp_selectN) "
 					+ "values(?,?,?,?,?,now(),?,?,?,?,?)";
 		
 			pstmt = con.prepareStatement(sql);
@@ -123,8 +123,8 @@ public class HpDAO {
 			pstmt.setInt(6, hp_bno);
 			pstmt.setInt(7, 0);
 			pstmt.setInt(8, 0);
-			pstmt.setString(9, dto.getHp_select());
-			pstmt.setString(10, dto.getHp_class());
+			pstmt.setInt(9, dto.getHp_select());
+			pstmt.setString(10, dto.getHp_selectN());
 			
 			
 			// 4. sql 실행
@@ -201,8 +201,7 @@ public class HpDAO {
 					dto.setHp_re_lev(rs.getInt("hp_re_lev"));
 					dto.setHp_re_ref(rs.getInt("hp_re_ref"));
 					dto.setHp_re_seq(rs.getInt("hp_re_seq"));
-					dto.setHp_class(rs.getString("hp_class"));
-					dto.setHp_select(rs.getString("hp_select"));
+					dto.setHp_select(rs.getInt("hp_select"));
 					
 					// List
 					HpList.add(dto);
@@ -258,8 +257,7 @@ public class HpDAO {
 					dto.setHp_re_lev(rs.getInt("hp_re_lev"));
 					dto.setHp_re_ref(rs.getInt("hp_re_ref"));
 					dto.setHp_re_seq(rs.getInt("hp_re_seq"));
-					dto.setHp_class(rs.getString("hp_class"));
-					dto.setHp_select(rs.getString("hp_select"));
+					dto.setHp_select(rs.getInt("hp_select"));
 								
 					// DTO -> List
 					HpList.add(dto);
@@ -311,7 +309,7 @@ public class HpDAO {
 					dto.setHp_re_lev(rs.getInt("hp_re_lev"));
 					dto.setHp_re_ref(rs.getInt("hp_re_ref"));
 					dto.setHp_re_seq(rs.getInt("hp_re_seq"));
-					dto.setHp_select(rs.getString("hp_select"));
+					dto.setHp_select(rs.getInt("hp_select"));
 				}
 				
 				System.out.println(" DAO : 글 정보 1개 저장완료 ");
@@ -348,13 +346,13 @@ public class HpDAO {
 					if(rs.next()) {
 						if(dto.getMb_pw().equals(rs.getString("mb_pw"))) {
 							// 3. sql 작성(update) & pstmt 객체
-							sql = "update help_board set hp_subject=?,hp_select=?,hp_class=?,hp_content=? where hp_bno=?";
+							sql = "update help_board set hp_subject=?,hp_select=?,hp_selectN=?,hp_content=? where hp_bno=?";
 							pstmt = con.prepareStatement(sql);
 									
 							//??? 
 							pstmt.setString(1, dto.getHp_subject());
-							pstmt.setString(2, dto.getHp_select());
-							pstmt.setString(3, dto.getHp_class());
+							pstmt.setInt(2, dto.getHp_select());
+							pstmt.setString(3, dto.getHp_selectN());
 							pstmt.setString(4, dto.getHp_content());
 							pstmt.setInt(5, dto.getHp_bno());
 							
@@ -458,7 +456,6 @@ public class HpDAO {
 							
 							System.out.println(" DAO : 답글 번호(bno) "+hp_bno+"@@@@@@@@@@@@@@@@@@@@@@@@@");
 							
-							/////////////////////////////////
 							//2. 답글 순서 재배치
 							
 							// 3. sql 작성(update) & pstmt 객체
@@ -476,7 +473,6 @@ public class HpDAO {
 								System.out.println(" DAO : 답글 재정렬 완료! ");
 							}
 							
-							/////////////////////////////////
 							//3. 답글 쓰기(insert)
 
 							// 3. sql 작성 & pstmt 객체

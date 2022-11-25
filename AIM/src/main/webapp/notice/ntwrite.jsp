@@ -74,8 +74,10 @@
 					</table>
 					<input type="hidden" name="mb_id" id="mb_id" value="${dto.mb_id }">
 					<input type="hidden" name="mb_pw" id="mb_pw" value="${dto.mb_pw }">
-					<input type="submit" value="작성하기" class="btn_col2 ty6">
-								</form>
+					<input type="submit" style="background-color:#18315D" value="작성" class="btn_col2 ty6">
+					<a href="./NtList.nt" class="btn_col3 ty6">취소</a>
+					
+					</form>
 								
 							</div></li>
 						

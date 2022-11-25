@@ -1,35 +1,40 @@
 package com.aim.hp.action;
 
+import java.io.PrintWriter;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.aim.hp.db.HpDAO;
-import com.aim.hp.db.HpDTO;
+import com.aim.nt.db.NtDAO;
+import com.aim.member.db.MemberDAO;
+import com.aim.member.db.MemberDTO;
 import com.aim.hp.action.Action;
 import com.aim.hp.action.ActionForward;
+import com.aim.hp.db.HpDAO;
+import com.aim.hp.db.HpDTO;
 
-
-public class HpReWriteAction implements Action {
+public class HpAdminLoginAction implements Action {
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-
-		System.out.println(" M : HpReWriteAction_execute 실행");
+		System.out.println("M : HpAdminLoginAction_execute() 호출 ");
 		
+
+		//세션 제어
 		HttpSession session = request.getSession();
 		String mb_id = (String)session.getAttribute("mb_id");
 				
-			ActionForward forward = new ActionForward();
-				if(mb_id == null || !mb_id.equals("admin")) {
+		ActionForward forward = new ActionForward();
+		if(mb_id == null || !mb_id.equals("admin")) {
 					forward.setPath("./Login.aim");
 					forward.setRedirect(true);
 					return forward;
 				}
-		
-		
-		// 전달 데이터 저장(pageNum,  bno,re_ref,re_lev,re_seq, 
-		//                  subject,name,pass,content)
+				
+		// DAO - 회원정보 가져오는 메서드 ( getMember(ID) )
+		MemberDAO mdao = new MemberDAO();
+		MemberDTO mdto = mdao.getMember(mb_id);
 		
 		String pageNum = request.getParameter("pageNum");
 		
@@ -44,18 +49,23 @@ public class HpReWriteAction implements Action {
 		dto.setMb_pw(request.getParameter("mb_pw"));
 		dto.setHp_content(request.getParameter("hp_content"));
 		
+		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"+request.getParameter("hp_content"));
 		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"+request.getParameter("hp_subject"));
 		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"+request.getParameter("mb_id"));
 		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"+request.getParameter("mb_pw"));
 		
-		// DAO 객체 생성
-		HpDAO dao = new HpDAO();
-		dao.reInsertHp(dto);
 		
-		//  페이지 이동(정보 저장)
-		forward.setPath("./MyHpList.hp?pageNum="+pageNum);
-		forward.setRedirect(true);
+		// 정보를 request 영역에 저장(view 전달)
+		request.setAttribute("dto", dto);
+		request.setAttribute("mdto", mdto);
+		request.setAttribute("pageNum", pageNum);
+				
+		// 페이지 이동
+		forward.setPath("./hp/rewriteForm.jsp");
+		forward.setRedirect(false);
 		return forward;
+			
+		
 	}
 
 }
