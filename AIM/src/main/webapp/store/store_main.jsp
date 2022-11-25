@@ -49,7 +49,8 @@
 
 
 	<div class="category_product_list_wrap">
-	    <strong class="category_product_list_title"> STORE
+	    <strong class="category_product_list_title">
+	    	<b>STORE</b>
 	    	<span>
 	    		All In Movie, 영화의 모든 것
 	    		<div style=float:right;>

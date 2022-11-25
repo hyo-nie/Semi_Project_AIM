@@ -8,7 +8,7 @@
 <meta charset="UTF-8">
 <title>AIM - ALL IN MOVIE</title>
 <link href="./assets/css/giftstore.css" rel="stylesheet" type="text/css">
-<!--  부트스트랩 관련 소스 - 3줄  -->
+<!--  부트스트랩 관련 소스  3줄  -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
@@ -53,7 +53,7 @@ function requestPay(user_tel) {
           if (rsp.success) {
              console.log("결제 성공!");
               // 결제 성공 시 이동하는 페이지(./OrderList.or)
-              alert('결제되었습니다! 주문하신 상품의 바코드는 주문 상세 페이지에서 확인 가능합니다.');
+              alert('결제되었습니다! \n주문하신 상품의 바코드는 주문 상세 페이지에서 확인 가능합니다.');
               location.href="./OrderAddAction.or?mb_tel="+user_tel+"&totalAmountMoney="+payAmount;
               
           } else {
@@ -183,8 +183,8 @@ function requestPay(user_tel) {
 	            <c:set var="totalPrice"/>
 				<c:set var="cart" value="${cartList[i]}" />
 				<c:set var="prdt" value="${productList[i]}" />
-	            <li style="padding-left: 5px;">
-	                <div class="product_info_img" style= "width: 280px;">
+	            <li style="padding-left: 5px; padding-bottom: 0px;">
+	                <div class="product_info_img" style= "width: 240px; margin-left: 40px;">
 	                    <img src="./assets/img/${prdt.st_img }" alt="${prdt.st_name}" style= "margin-right: 0px;">
 	                    <strong class="product_info_origin">
 	                        ${prdt.st_name }
@@ -197,11 +197,11 @@ function requestPay(user_tel) {
 	                        <fmt:formatNumber value="${prdt.st_price}"/></span>
 	                </div>
 	                
-	                <div class="product_info_cnt_wrap" style= "width: 100px; margin-left: 61px; margin-top: 25px;">
+	                <div class="product_info_cnt_wrap" style= "width: 100px; margin-left: 63px; margin-top: 25px;">
 	                    ${cart.c_amount}
 	                </div>
 	                
-	                <div class="product_info_cnt_wrap" style="margin-left: 52px; margin-top: 25px;">
+	                <div class="product_info_cnt_wrap" style="margin-left: 54px; margin-top: 25px;">
 	                    <fmt:formatNumber value="${prdt.st_price * cart.c_amount}" />원
 	                </div>
 	                
@@ -253,7 +253,7 @@ function requestPay(user_tel) {
 		<!-- 주문자 정보 확인 -->
 		<div class="com_box_design_wrap" style="margin-top : 45px">
 			<strong class="com_box_design_title">주문자 정보 확인</strong>
-			<ul class="com_box_design" style="list-style: none; padding: 20px 0 20px;">
+			<ul class="com_box_design" style="list-style: none; padding: 5px 0 5px;">
 				<li><label for="user_info_name"  style="margin-top: 25px;"> 아이디</label> 
 				<input type="text" id="user_info_name" placeholder="이름" style="width: 128px" value="<%=session.getAttribute("mb_id") %>" readonly> 
 				<label for="user_info_phonenum" style="margin-top: 25px; margin-left: 50px;">휴대전화 번호</label>
