@@ -33,7 +33,8 @@
 	<br><br><br><br><br><br><br>
 	
 	<form action="./AdminPwCheckAction.th?rno=${param.rno }&pageNum=${param.pageNum }" method="post" name="rc">
-	<input type="hidden" name="r_mb_id" value="${sessionScope.mb_id }">
+	<input type="hidden" name="mb_id" value="${sessionScope.mb_id }">
+<%-- 	<input type="hidden" name="r_mb_id" value="${param.r_mb_id }"> --%>
 	<div id="contents">
 		<div class="title_top">
 			<h2 class="tit">문의글 비밀번호 확인</h2>
@@ -57,7 +58,7 @@
 			</tbody>
 		</table>
 			<div class="btn_btm_wrap">
-				<a href="#" class="btn_col3 ty6">취소</a>
+				<a href="javascript:window.history.back();" class="btn_col3 ty6">취소</a>
 				<input type="submit" value="비밀번호 확인" class="btn_col2 ty6" onclick='pwCheck();'>
 			</div>
 			

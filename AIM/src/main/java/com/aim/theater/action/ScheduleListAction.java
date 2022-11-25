@@ -1,6 +1,7 @@
 package com.aim.theater.action;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -43,13 +44,32 @@ public class ScheduleListAction implements Action {
 		
 		
 		//지점/날짜/영화 별 상영관과 상영시간 가져오기(첫번째날짜 디폴트)
-		List scheduleFirst = dao.getScheList(branchCd,date);
+		List<ScheduleDTO> scheduleFirst = dao.getScheList(branchCd,date);
+		
+		// 남은 좌석수 계산 로직
+//		List<String> seatArr = new ArrayList<String>();
+//		for(int i = 0; i < scheduleFirst.size(); i++) {
+//			seatArr.add(scheduleFirst.get(i).getSeatcomp());
+//		}
+//		
+//		List<Integer> currentSeatArr = new ArrayList<Integer>(); 
+//		for(int j = 0; j < seatArr.size(); j++) {
+//			int currentSeat = 0;
+//			for (int k = 0; k < 80; k++) {
+//				if (seatArr.get(j).split(",")[k].equals("0")) {
+//					currentSeat++;
+//				}
+//			}
+//			currentSeatArr.add(currentSeat);
+//		}
+		
 		
 		//연결된 view 페이지로 정보 전달
 		request.setAttribute("dto", dto);
 		request.setAttribute("dateList", dateList);
 		request.setAttribute("fmovieName", fmovieName);
 		request.setAttribute("scheduleFirst", scheduleFirst);
+//		request.setAttribute("currentSeatArr", currentSeatArr);
 		
 		//페이지 이동	
 		ActionForward forward = new ActionForward();

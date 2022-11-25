@@ -10,15 +10,22 @@
 <body>
 
 	<%
-			String id = (String) session.getAttribute("mb_id");
-
+ 			String id = (String) session.getAttribute("mb_id");
+			
+ 			if (id == null) { 
+ 				response.sendRedirect("./Login.aim");
+ 			}
+			
 	%>
+
+
+	
 	<!-- 각종 요소 -->
 	<jsp:include page="../inc/include.jsp" />
 	<!-- 상위 배너 -->
 	<jsp:include page="../inc/topbanner.jsp"/>
 	<!-- 헤더/네비 -->
-	<jsp:include page="../inc/login_nav_bar.jsp" />
+	<jsp:include page="../inc/nav_bar.jsp" />
 	
 
 
@@ -52,31 +59,59 @@
 						</td>
 
 					</tr>
-					<tr>
+					<tr class="tb_content">
 						<td>
-							<span class="tit">인원수</span>
-							<span class="cont">${dto.r_people }</span>
+							<div id="divNoticeContents">
+								<span class="cont">인원 수</span>
+								<br><br>
+								<p><font size="3" face="맑은 고딕">${dto.r_people }명</font>
+								</p>
+								
+							</div>
 						</td>
 
 					</tr>
-					<tr>
+					<tr class="tb_content">
 						<td>
-							<span class="tit">영화명</span>
-							<span class="cont">${dto.movieNm }</span>
+							<div id="divNoticeContents">
+								<span class="tit">영화명</span>
+								<br><br>
+								<p><font size="3" face="맑은 고딕">${dto.movieNm }</font>
+								</p>
+							
+							</div>
 						</td>
 
 					</tr>
-					<tr>
-						<td>
-							<span class="tit">신청자명</span>
-							<span class="cont">${dto.r_name}</span>
-						</td>
-
+					<tr class="tb_content">
+						<c:choose>
+							<c:when test="${dto.r_mb_id eq 'admin' }">
+								
+							</c:when>
+							<c:otherwise>
+								
+									<td>
+										<div id="divNoticeContents">
+											<span class="tit">신청자 id</span>
+											<br><br>
+											<p><font size="3" face="맑은 고딕">${dto.r_mb_id}</font>
+											</p>
+								
+										</div>
+									</td>
+								
+							</c:otherwise>
+						</c:choose>
 					</tr>
-					<tr>
+					<tr class="tb_content">
 						<td>
-							<span class="tit">신청자 전화번호</span>
-							<span class="cont">${dto.r_tel }</span>
+							<div id="divNoticeContents">
+								<span class="tit">신청자 전화번호</span>
+								<br><br>
+								<p><font size="3" face="맑은 고딕">${dto.r_tel }</font>
+								</p>
+							
+							</div>
 						</td>
 
 					</tr>
@@ -84,7 +119,9 @@
 					<tr class="tb_content">
 						<td>
 							<div id="divNoticeContents">
-								<p><font size="2" face="맑은 고딕">${dto.r_text }</font>
+								<span class="tit">내용</span>
+								<br><br>
+								<p><font size="3" face="맑은 고딕">${dto.r_text }</font>
 								</p>
 							</div>
 						</td>
@@ -96,11 +133,22 @@
 				
 					<c:choose>
 						<c:when test="${sessionScope.mb_id eq 'admin' }">
-							<a href="./AdminRentalList.th?rno=${dto.rno }&pageNum=${pageNum}" class="btn_col2 ty6">목록</a>
-							<a href="./AdminRentalReWrite.th?rno=${dto.rno }&pageNum=${pageNum }&r_re_ref=${dto.r_re_ref}&r_re_lev=${dto.r_re_lev}&r_re_seq=${dto.r_re_seq}" class="btn_col2 ty6">답글</a>
+							<c:choose>
+								<c:when test="${dto.r_mb_id eq 'admin' }">
+									<a href="./AdminRentalList.th?rno=${dto.rno }&pageNum=${pageNum}" class="btn_col2 ty6">목록</a>
+									
+								</c:when>
+								<c:otherwise>
+									<a href="./AdminRentalList.th?rno=${dto.rno }&pageNum=${pageNum}" class="btn_col2 ty6">목록</a>
+									<a href="./AdminRentalReWrite.th?rno=${dto.rno }&pageNum=${pageNum }&r_re_ref=${dto.r_re_ref}&r_re_lev=${dto.r_re_lev}&r_re_seq=${dto.r_re_seq}" class="btn_col2 ty6">답글</a>
+								</c:otherwise>
+							</c:choose>
 						</c:when>
+			
+						
 						<c:otherwise>
 							<a href="./AdminRentalList.th?rno=${dto.rno }&pageNum=${pageNum}" class="btn_col2 ty6">목록</a>
+							<a href="./AdminReContent.th?rno=${dto.rno }&pageNum=${pageNum}&r_re_ref=${dto.r_re_ref}" class="btn_col2 ty6">답변보기</a>
 						</c:otherwise>			
 					</c:choose>
 					

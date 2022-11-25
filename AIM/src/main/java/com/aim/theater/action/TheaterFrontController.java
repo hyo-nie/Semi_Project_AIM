@@ -232,6 +232,18 @@ public class TheaterFrontController extends HttpServlet {
 			}
 			
 		}
+		else if(command.equals("/AdminReContent.th")) {
+			System.out.println("/AdminReContent.th 호출, 패턴3");
+			
+			action = new AdminReContentAction();
+			
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 		
 		System.out.println(" C : 2. 가상주소 매핑(패턴1,2,3) 끝 \n");
 
