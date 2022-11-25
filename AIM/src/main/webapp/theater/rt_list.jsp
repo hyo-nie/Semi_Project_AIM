@@ -29,10 +29,10 @@ text-align: center;
 	<!-- 헤더/네비 -->
 	<jsp:include page="../inc/nav_bar.jsp" />
 	
-	<br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br>
 	<div id="contents" class="contents_customer area__movingbar litype5" style="">
-		<div class="title_top">
-			<h2 class="tit">단체관람/대관문의 신청 목록</h2>
+		<div class="movi_pre_list">
+			<h3 class="tit_type0"><strong class="ty2 eng">AIM</strong> 단체관람 / 대관문의 신청 목록</h3>
 		</div>
 					
 		<div class="tab_con ty3">
