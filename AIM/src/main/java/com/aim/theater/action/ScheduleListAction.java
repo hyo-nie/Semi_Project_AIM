@@ -46,7 +46,7 @@ public class ScheduleListAction implements Action {
 		//지점/날짜/영화 별 상영관과 상영시간 가져오기(첫번째날짜 디폴트)
 		List<ScheduleDTO> scheduleFirst = dao.getScheList(branchCd,date);
 		
-		// 남은 좌석수 계산 로직
+//		 //남은 좌석수 계산 로직
 //		List<String> seatArr = new ArrayList<String>();
 //		for(int i = 0; i < scheduleFirst.size(); i++) {
 //			seatArr.add(scheduleFirst.get(i).getSeatcomp());

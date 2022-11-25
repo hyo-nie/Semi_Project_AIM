@@ -6,8 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>AIM - Sign Up</title>
-<!-- 상위 배너 -->
-<jsp:include page="../inc/topbanner.jsp"/>
+
 <!-- 각종 요소 -->
 <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
 <jsp:include page="../inc/include.jsp" />
