@@ -32,7 +32,46 @@ ex ) skt / 010 / 0000 / 0000
  --%>
 
 <!-- function  -->
+<script src="./assets/css/jquery-3.6.1.js"></script>
 <script type="text/javascript">
+	
+	// 아이디 중복체크(ajax)
+	
+	$(document).ready(function(){
+		
+		alert('test');
+		
+		$('#mb_id').focusout(function(){
+			let userId = $('#mb_id').val();
+			alert("test중@@@@@@@@@");
+			
+			$.ajax({
+				url : "./IdCheckAjax.aim",
+				type : "post",
+				data : {userId: userId},
+				dataType : 'json',
+				success : function(result){
+					if(result == 0){
+						$("#checkId_ym").html('사용할 수 없는 아이디입니다.');
+						$("#checkId_ym").attr('color','red');
+					} else{
+						$("#checkId_ym").html('사용할 수 있는 아이디입니다.');
+						$("#checkId_ym").attr('color','green');
+					} 
+				},
+				error : function(){
+					alert("서버요청실패");
+				}
+			});
+			
+		});
+		
+	});
+	
+
+
+
+
 	function chk(){
 		var mb_id = $("#mb_id").val();
 		var mb_pw = $("#mb_pw").val();
@@ -160,6 +199,12 @@ ex ) skt / 010 / 0000 / 0000
 		alert("회원가입이 완료되었습니다");
 		document.fr.submit();
 	}
+	
+	
+
+	
+	
+	
 
 
 	</script>
@@ -211,6 +256,7 @@ ex ) skt / 010 / 0000 / 0000
 							<div class="ui-input">
 								<input type="text" id="mb_id" name="mb_id" title="아이디를 입력해주세요." maxlength="12"> <!-- 아이디를 입력해주세요 -->
 								<span class="placeholder">영문으로 입력해주세요.<!-- 한글 또는 영문으로 입력해주세요. --></span>
+								<font id="checkId_ym" size="2"></font>
 							</div>
 						</div>
 					</div>

@@ -486,5 +486,36 @@ public class MemberDAO {
 		}
 			
 		// 회원 탈퇴 메서드 - MemberDelete(DTO)
+		
+		/**
+		 * IdCheckAjax(id) - id 입력받아서 id 중복체크하는 메서드
+		 */
+		public int IdCheckAjax(String id) {
+			int result = 0;
+			
+			try {
+				con = getConnection();
+				sql = "select mb_id from member where mb_id = ?";
+				pstmt = con.prepareStatement(sql);
+				pstmt.setString(1, id);
+				
+				rs = pstmt.executeQuery();
+				
+				if (rs.next()) {
+					// 중복o
+					result = 0;
+				} else {
+					// 중복x
+					result = 1;
+				}
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			return result;
+		}
+		// IdCheckAjax(id)
+		
+		
 	
 }
