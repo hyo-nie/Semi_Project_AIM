@@ -19,15 +19,16 @@
 	var tkCode = "${tkCode}";
 	var seatArr = "${seatArr}";
 	var totalCnt = "${adultCnt+childCnt+seniorCnt}";
-	var totalPrice = "${adultCnt*13000 + childCnt*9000 + seniorCnt*7000 }";
-
+	
 	function requestPay() {
+		var totalPrice = parseInt(document.getElementById("finalPrice").value);
+		
         IMP.request_pay({ 
             pg: "html5_inicis",
             pay_method: "card",
             merchant_uid: "${tkCode}",   //주문번호, 고유값(PK) 여야 한다(디비에 저장);
             name: "${scDTO.movieNm}",
-            amount: 100,	// 숫자타입
+            amount: totalPrice,	// 숫자타입
             buyer_email: "email",
             buyer_name: "홍길동",
             buyer_tel: "010-4242-4242",
@@ -76,7 +77,7 @@
 	<br>
 
 	<div id="sub_section">
-		<div id="contents" class="contents_full contents_reserve" style="">
+		<div id="contents" class="contents_full contents_reserve" style="background-color: #f3f5fa">
 			<div class="wrap_reserve ">
 				<h2 class="hidden">예매하기</h2>
 				<div class="section_step_tit">
@@ -124,7 +125,8 @@
 								</div>
 							</a>
 						</li>
-						<li class="step03 active"><a href="#"><strong class="tit"><span>03</span><br>결제</strong>
+						<li class="step03 active" style="background-color: #18315D; border-color: #18315D;">
+							<a href="#"><strong class="tit"><span>03</span><br>결제</strong>
 							<div class="bx_con">
 									<dl>
 										<dt>티켓금액</dt>
@@ -150,7 +152,7 @@
 				
 				<div id="reserveStep03" class="section_step_con step03 active">
 					<h3 class="hidden">결제</h3>
-					<div class="article article_sum_infor" style="width: 788px">
+					<div class="article article_sum_infor" style="width: 788px;">
 						<div class="group_top">
 							<h4 class="tit">예매정보</h4>
 						</div>
@@ -159,28 +161,43 @@
 								<span class="thm">
 									<img src="${scDTO.poster }" alt="${scDTO.movieNm }" style="width:320px;">
 								</span>
+								<br>
+								<br>
+								<br>
 								<strong class="tit">
-									<span
-										class="ic_grade gr_12">
+									<span class=
+										<c:if test="${scDTO.watchGradeNm.equals('12세이상관람가') }">
+											"ic_grade gr_12"
+										</c:if>
+										<c:if test="${scDTO.watchGradeNm.equals('15세이상관람가') }">
+											"ic_grade gr_15"
+										</c:if>
+										<c:if test="${scDTO.watchGradeNm.equals('18세이상관람가') }">
+											"ic_grade gr_18"
+										</c:if>
+										<c:if test="${scDTO.watchGradeNm.equals('전체관람가') }">
+											"ic_grade gr_all"
+										</c:if> 
+										style="width: 30px; height: 30px; font-size: 1.5em;">
 									</span>&nbsp;
-									${scDTO.movieNm }
+									<b style="font-size: 1.5em;">${scDTO.movieNm }</b><br><br>
 								</strong>
 								<dl class="dlist_infor">
-									<dt>일시</dt>
-									<dd>
-										<strong>${scDTO.sc_date } | ${scDTO.starttime } ~ ${scDTO.endtime }</strong>
+									<dt style="width:100px; font-size: 1.3em; padding-top: 6px;">일시</dt>
+									<dd style="width:500px; font-size: 1.3em;">
+										<strong style="width:500px; font-size: 1.3em;">${scDTO.sc_date }&nbsp; | &nbsp;${scDTO.starttime } ~ ${scDTO.endtime }</strong>
 									</dd>
-									<dt>영화관</dt>
-									<dd>${scDTO.branch_name } ${scDTO.roomNum }</dd>
-									<dt>인원</dt>
-									<dd>성인 ${adultCnt }, 청소년 ${childCnt }, 경로/우대 ${seniorCnt }</dd>
+									<dt style="width:100px; font-size: 1.3em;">영화관</dt>
+									<dd style="width:300px; font-size: 1.3em;">${scDTO.branch_name } ${scDTO.roomNum }</dd>
+									<dt style="width:100px; font-size: 1.3em; padding-top: 5px;">인원</dt>
+									<dd style="width:300px; font-size: 1.3em; padding-top: 5px;">성인 ${adultCnt }, 청소년 ${childCnt }, 경로/우대 ${seniorCnt }</dd>
 								</dl>
 							</div>
 							<div class="seat_infor">
 								<dl class="dlist_infor">
-									<dt>좌석</dt>
-									<dd>
-										<strong>
+									<dt style="width:100px; font-size: 1.3em; padding-top: 7px;">좌석</dt>
+									<dd style="width:500px; font-size: 1.3em;">
+										<strong style="width:500px; font-size: 1.3em;">
 											<c:forEach var="seat" items="${seatArr }">
 												${seat } 											
 											</c:forEach>
@@ -198,13 +215,61 @@
 						<div class="inner">
 							<div class="select_item_wrap">
 							
-							<!-- 태홍님 css 부탁드려용 - 영민  -->
-							
-							
-							
-							
-							
-							<!-- 태홍님 css 부탁드려용 - 영민 -->
+							<br>
+							<br>
+								<div align="center" style="font-size: 1.5em"> <b>🌟 등급별 할인 혜택 🌟</b> </div><br>
+								<span class="img_info"><img src="./assets/img/silver.png" alt="silver" width="100px"></span>
+								<span class="img_info"><img src="./assets/img/gold.png" alt="gold" width="100px"></span>
+								<span class="img_info"><img src="./assets/img/vip.png" alt="vip" width="100px"></span>
+								<span class="img_info"><img src="./assets/img/vvip.png" alt="vvip" width="100px"></span>
+								<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								할 인 없 음 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								5%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								10%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								15%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<br><br><br>
+								<div align="center"><b>(총 결제금액에서 할인 됩니다)</b></div>
+								
+								<br><br><br><br>
+								
+								
+								<div align="center">
+									<div style="font-size: 1.5em">회원님의 등급은 <b>
+										<span class="txt_rank_common" style="background-color:#18315D;">
+											<c:if test="${mbDTO.mb_grade==1 }">
+												실버
+											</c:if>
+											<c:if test="${mbDTO.mb_grade==2 }">
+												골드
+											</c:if>
+											<c:if test="${mbDTO.mb_grade==3 }">
+												VIP
+											</c:if>
+											<c:if test="${mbDTO.mb_grade==4 }">
+												VVIP
+											</c:if></b>
+										</span>
+										입니다
+									</div>
+									<c:choose>
+										<c:when test="${mbDTO.mb_grade==1 }">
+											<span class="img_info"><img src="./assets/img/silver.png" alt="silver"></span>
+										</c:when>
+										<c:when test="${mbDTO.mb_grade==2 }">
+											<span class="img_info"><img src="./assets/img/gold.png" alt="gold"></span>
+										</c:when>
+										<c:when test="${mbDTO.mb_grade==3 }">
+											<span class="img_info"><img src="./assets/img/vip.png" alt="vip"></span>
+										</c:when>
+										<c:when test="${mbDTO.mb_grade==4 }">
+											<span class="img_info"><img src="./assets/img/vvip.png" alt="vvip"></span>
+										</c:when>
+									</c:choose> 
+								</div>
 							
 							
 							
@@ -231,19 +296,34 @@
 								<dl>
 									<dt>총 금액</dt>
 									<dd>
-										<strong><fmt:formatNumber value="${adultCnt*13000 + childCnt*9000 + seniorCnt*7000 }"/></strong>원
+										<c:set var="price1" value="${adultCnt*13000 + childCnt*9000 + seniorCnt*7000 }"/>
+										<strong><fmt:formatNumber value="${price1 }"/></strong>원
 									</dd>
 								</dl>
 								<dl>
 									<dt>할인금액</dt>
 									<dd>
-										-<strong>0</strong>원
+										<c:if test="${mbDTO.mb_grade==1 }">
+											<c:set var="price2" value="${(adultCnt*13000 + childCnt*9000 + seniorCnt*7000)} "/>
+										</c:if>
+										<c:if test="${mbDTO.mb_grade==2 }">
+											<c:set var="price2" value="${(adultCnt*13000 + childCnt*9000 + seniorCnt*7000)*0.05} "/>
+										</c:if>
+										<c:if test="${mbDTO.mb_grade==3 }">
+											<c:set var="price2" value="${(adultCnt*13000 + childCnt*9000 + seniorCnt*7000)*0.1} "/>
+										</c:if>
+										<c:if test="${mbDTO.mb_grade==4 }">
+											<c:set var="price2" value="${(adultCnt*13000 + childCnt*9000 + seniorCnt*7000)*0.15} "/>
+										</c:if>
+										-<strong><fmt:formatNumber value="${price2 }"/></strong>원
 									</dd>
 								</dl>
 								<dl>
 									<dt>결제금액</dt>
 									<dd>
-										총<strong><fmt:formatNumber value="${adultCnt*13000 + childCnt*9000 + seniorCnt*7000 }"/></strong>원
+										<c:set var="finalPrice" value="${price1-price2 }"></c:set>
+										<input type="hidden" value="${finalPrice }" id="finalPrice">
+										총<strong><fmt:formatNumber value="${finalPrice }"/></strong>원
 									</dd>
 								</dl>
 								<a href="javascript:requestPay();" class="btn_col1 btn_confirm">결제하기</a>

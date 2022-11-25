@@ -76,7 +76,7 @@
 				<div class="tab_con">
 					<h4 class="hidden">영화정보</h4>
 					<div class="movi_tab_info1">
-						<div class="left_con">
+						<div class="left_con" style="margin-top:20px;">
 							<strong class="tit_info">시놉시스</strong>
 								<p class="txt_info">
 									<span> ${dto.contents } </span>
@@ -102,7 +102,7 @@
 						<form action="./ReviewWrite.mv?movieCd=${dto.movieCd }" method="post">
 							<div class="movi_review_box" style="width: 1000px; left: 50%; margin-left: 0px;">
 								<div class="review_write_box" style="width:860px;">
-									<textarea id="txtComment" name="review_sy" "
+									<textarea id="txtComment" name="review_sy"
 										placeholder="평점 및 영화 관람평을 작성해주세요. 주제와 무관한 리뷰 또는 스포일러는 표시제한 또는 삭제될 수 있습니다. 
 작성하신 평점 및 관람평은 AIM 홈페이지, SNS 등에 인용될 수 있습니다."
 										title="관람평 작성"></textarea>

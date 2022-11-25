@@ -40,10 +40,10 @@
 	<h1 align="center">아이디 찾기</h1><br><br>	
 	
 	<div align="center">
-	<p>회원님의 아이디는 ${mb_id } 입니다. </p><br><br>
+	<p style="font-size:20px;">회원님의 아이디는 <em style="font-color:#ED4C6B;">${mb_id }</em> 입니다. </p><br><br>
 	
-	<input type="button" value="로그인하기" onclick="location.href='./Login.aim';">
-	<input type="button" value="비밀번호 찾기" onclick="location.href='./FindPw.aim'">
+	<input type="button" value="로그인하기" onclick="location.href='./Login.aim';" style="color:#fff; background:#18315D; width:80px; height:25px; margin:5px; border-radius:5px; border:1px solid #fff;">
+	<input type="button" value="비밀번호 찾기" onclick="location.href='./FindPw.aim'" style="color:#fff; background:#18315D; width:80px; height:25px; margin:5px; border-radius:5px; border:1px solid #fff;">
 	<!-- 비밀번호 찾기 버튼 -->
 	</div>
 	<!-- 약관 -->

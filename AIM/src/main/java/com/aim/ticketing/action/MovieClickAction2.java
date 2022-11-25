@@ -24,7 +24,7 @@ public class MovieClickAction2 implements Action {
 		
 		// dao - getScheduleList
 		ReservationDAO dao = new ReservationDAO();
-		System.out.println(branchCd + " " + movieCd + " " + date);
+//		System.out.println(branchCd + " " + movieCd + " " + date);
 		List<ScheduleDTO> scheduleList = dao.getScheduleList(branchCd, movieCd, date);
 		List<MovieDTO> movieList = dao.getMovieList(scheduleList);
 		
@@ -46,13 +46,10 @@ public class MovieClickAction2 implements Action {
 		}
 		
 		
-		
 		// request에 저장
 		request.setAttribute("scheduleList", dao.getScheduleList(branchCd, movieCd, date));
 		request.setAttribute("movieList", movieList);
 		request.setAttribute("currentSeatArr", currentSeatArr);
-		System.out.println("scheduleList : " + scheduleList);
-		System.out.println("movieList : " + movieList);
 		
 		ActionForward forward = new ActionForward();
 		forward.setPath("./ticketing/movieClick2.jsp");

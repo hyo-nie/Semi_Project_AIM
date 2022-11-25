@@ -128,8 +128,8 @@ public class TheaterDAO {
 	//지점/날짜별 영화제목 - getMovieNm()
 	
 	//지점/날짜/영화 별 상영관과 상영시간 가져오기 - getScheList()
-	public List getScheList(int branchCd, String date) {
-		List scheList = new ArrayList();
+	public List<ScheduleDTO> getScheList(int branchCd, String date) {
+		List<ScheduleDTO> scheList = new ArrayList<ScheduleDTO>();
 		
 		
 		try {
@@ -151,7 +151,7 @@ public class TheaterDAO {
 			rs = pstmt.executeQuery();
 			
 			while(rs.next()) {
-				TheaterDTO dto = new TheaterDTO();
+				ScheduleDTO dto = new ScheduleDTO();
 				dto.setScCode(rs.getInt("scCode"));
 				dto.setBranchCd(rs.getInt("branchCd"));
 				dto.setSc_date(rs.getString("sc_date"));

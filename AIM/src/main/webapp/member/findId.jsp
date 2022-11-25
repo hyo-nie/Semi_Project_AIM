@@ -61,12 +61,12 @@
 	<fieldset>
 		<div align="center">
 			<form action="./FindIdAction.aim" name="fr" method="post">
-				이 &nbsp;&nbsp;&nbsp; 름 <input type="text" name="mb_name" placeholder="이름을 입력하세요."><br>
+				이 &nbsp;&nbsp;&nbsp; 름 &nbsp; <input type="text" name="mb_name" placeholder="이름을 입력하세요."><br>
 				<br>
-				전화번호 <input type="text" name="mb_tel" placeholder="전화번호를 입력하세요."><br>
+				전화번호 &nbsp; <input type="text" name="mb_tel" placeholder="전화번호를 입력하세요."><br>
 				<br>
-				<input type="button" name="enter" value="아이디 찾기" onclick="id_serch();" >
-				<input type="button" name="cancle" value="돌아가기" onclick="history.back();">
+				<input type="button" name="enter" value="아이디 찾기" onclick="id_serch();" style="color:#fff; background:#18315D; width:80px; height:25px; margin:5px; border-radius:5px; border:1px solid #fff;" >
+				<input type="button" name="cancle" value="돌아가기" onclick="history.back();" style="color:#fff; background:#18315D; width:80px; height:25px; margin:5px; border-radius:5px; border:1px solid #fff;">
 			</form>
 		</div>
 	</fieldset>

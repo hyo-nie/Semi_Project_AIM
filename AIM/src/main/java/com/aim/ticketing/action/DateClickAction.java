@@ -33,10 +33,6 @@ public class DateClickAction implements Action {
 			movieCd = tmpmovieCd;
 		}
 		
-		System.out.println(date + "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ dateaction1");
-		System.out.println(branchCd + "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ dateaction1");
-		System.out.println(movieCd + "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ dateaction1");
-		
 		
 		// dao - getScheduleList
 		ReservationDAO dao = new ReservationDAO();
@@ -47,9 +43,6 @@ public class DateClickAction implements Action {
 		request.setAttribute("scheduleList", dao.getScheduleList(branchCd, movieCd, date));
 		request.setAttribute("movieList", movieList);
 		
-		System.out.println("scheduleList : ###################" + scheduleList);
-		System.out.println("movieList : #####################" + movieList);
-		System.out.println(movieList.size() + "###########################################");
 		
 		ActionForward forward = new ActionForward();
 		forward.setPath("./ticketing/dateClick.jsp");

@@ -243,15 +243,28 @@
 	<jsp:include page="../inc/nav_bar.jsp"/>
 
 
-	<br><br><br><br><br><br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
 
 
-	<div id="contents" class="contents_full contents_reserve"
-		>
+	<div id="contents" class="contents_full contents_reserve" style="background-color: #f3f5fa">
 		<div class="wrap_reserve">
 			<div class="section_step_tit">
 				<ul>
-					<li class="active step01">
+					<li class="active step01" style="background-color: #18315D; border-color: #18315D;">
 						<a href="#reserveStep01">
 							<strong class="tit">
 								<span>01</span><br>상영시간
