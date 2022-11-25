@@ -95,14 +95,16 @@
 	}
 	%>
 	
-	<br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br>
 	<!-- 게시판 -->
 	<article>
 
+
+
 	<form action ="./AdminScheAddAction.th" method="post" name="sc" >
 		<div id="contents">
-			<div class="title_top">
-				<h2 class="tit">AIM 스케줄 등록</h2>
+			<div class="movi_pre_list">
+				<h3 class="tit_type0"><strong class="ty2 eng">AIM</strong> 스케줄 등록</h3>
 			</div>
 				<table class="tbl_form">
 					<colgroup>

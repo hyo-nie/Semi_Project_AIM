@@ -282,20 +282,7 @@ public class RentDAO {
 //	}
 	//대관문의 답변 불러오기 -getReWriteList(rno)
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	//대관문의 답변쓰기 - reInsertRent(DTO)
 	public void reInsertRent(RentDTO dto) {
@@ -397,5 +384,55 @@ public class RentDAO {
 		return result;
 	}	
 	//패스워드 체크후 게시글확인 - goContent(rno,r_mb_pw)
+	
+	//답글 정보조회 - getReContent(,r_re_ref)
+	public RentDTO getReContent(int r_re_ref) {
+		RentDTO dto = null;
+		
+		try {
+			con = getConnection();
+			sql = "select rno, rent.branchCd, theater.branch_name, r_class, r_people,hopeday, hopestart,hopeend, rent.movieCd, movie.movieNm,r_text,r_name,r_tel,r_re_ref,r_re_lev,r_re_seq,r_mb_id,r_mb_pw "
+					+ "from rent join theater "
+					+ "on rent.branchCd = theater.branchCd "
+					+ "join movie "
+					+ "on rent.movieCd = movie.movieCd where r_re_ref=? and r_re_lev=1;";
+			pstmt = con.prepareStatement(sql);
+			
+			pstmt.setInt(1, r_re_ref);
+			rs=pstmt.executeQuery();
+			
+			if(rs.next()) {
+				dto = new RentDTO();
+				
+				dto.setRno(rs.getInt("rno"));
+				dto.setBranch_name(rs.getString("branch_name"));
+				dto.setBranchCd(rs.getInt("branchCd"));
+				dto.setR_class(rs.getString("r_class"));
+				dto.setR_people(rs.getInt("r_people"));
+				dto.setHopeday(rs.getString("hopeday"));
+				dto.setHopestart(rs.getInt("hopestart"));
+				dto.setHopeend(rs.getInt("hopeend"));
+				dto.setMovieCd(rs.getString("movieCd"));
+				dto.setMovieNm(rs.getString("movieNm"));
+				dto.setR_text(rs.getString("r_text"));
+				dto.setR_name(rs.getString("r_name"));
+				dto.setR_tel(rs.getString("r_tel"));
+				dto.setR_re_ref(rs.getInt("r_re_ref"));
+				dto.setR_re_lev(rs.getInt("r_re_lev"));
+				dto.setR_re_seq(rs.getInt("r_re_seq"));
+				
+				dto.setR_mb_id(rs.getString("r_mb_id"));
+				dto.setR_mb_pw(rs.getString("r_mb_pw"));
+				
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			closeDB();
+		}
+		return dto;
+	}
+	//대관문의 글 1개 정보조회 - getRent(rno)
 	
 }

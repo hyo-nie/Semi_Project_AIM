@@ -199,7 +199,7 @@
 
 
 	<div id="PersonSeatContents"></div>
-	<div id="contents" class="contents_full contents_reserve">
+	<div id="contents" class="contents_full contents_reserve" style="background-color: #f3f5fa">
 
 		<div class="wrap_reserve">
 			<h2 class="hidden">예매하기</h2>
@@ -228,7 +228,7 @@
 						</a>
 					</li>
 					
-					<li class="step02 active"><a href="#reserveStep02"><strong
+					<li class="step02 active" style="background-color: #18315D; border-color: #18315D;"><a href="#reserveStep02"><strong
 							class="tit"><span>02</span><br>인원/좌석</strong>
 							<div class="bx_con">
 								<dl>

@@ -115,7 +115,9 @@
 	
 		<br><br>
 		
-		<input type="button" value="뒤로가기" onclick="history.back();">
+		<div align="center">
+		<input type="button" value="뒤로가기" onclick="history.back();" style="color:#fff; background:#18315D; width:75px; height:25px; margin:5px; border-radius:5px; border:1px solid #fff;">
+		</div>
 	</div>
 		
 		

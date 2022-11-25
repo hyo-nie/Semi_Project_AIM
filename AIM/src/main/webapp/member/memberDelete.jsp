@@ -39,9 +39,9 @@
   <fieldset>
     <div align="center">
       <form action="./MemberDeleteAction.aim" name="fr" id="mypage" method="post" >
-        아이디 <input type="text" name="mb_id" value="${sessionScope.mb_id }" readonly><br>
+        아이디 <input type="text" maxlength="50" name="mb_id" value="${sessionScope.mb_id }" readonly><br>
         <br>
-        비밀번호 <input type="password" name="mb_pw" placeholder="비밀번호를 입력하세요."><br>
+        비밀번호 <input type="password" maxlength="15" name="mb_pw" placeholder="비밀번호를 입력하세요." ><br>
         <br>
         <input type="submit" value="탈퇴하기" class="submit" style="color:#fff; background:#18315D; width:75px; height:25px; margin:5px; border-radius:5px; border:1px solid #fff;">
         <input type="button" value="돌아가기" onclick="history.back();" style="color:#fff; background:#18315D; width:75px; height:25px; margin:5px; border-radius:5px; border:1px solid #fff;">

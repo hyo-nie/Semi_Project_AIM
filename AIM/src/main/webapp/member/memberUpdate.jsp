@@ -51,9 +51,9 @@
   <fieldset>
     <div align="center">
       <form action="./MemberUpdatePro.aim" name="fr" method="post">
-        아이디 <input type="text" name="mb_id" value="${dto.mb_id }" readonly><br>
+        아이디 <input type="text" maxlength="50" value="${dto.mb_id }" name="mb_id" readonly><br>
         <br>
-        비밀번호 <input type="password" name="mb_pw" placeholder="비밀번호를 입력하세요." ><br>
+        비밀번호 <input type="password" maxlength="15" name="mb_pw" placeholder="비밀번호를 입력하세요." ><br>
         <br>
         이름 <input type="text" name="mb_name" value="${dto.mb_name }" ><br>
         <br>

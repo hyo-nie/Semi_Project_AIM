@@ -50,7 +50,7 @@
 		
 		<table border="1" class="tbl_listb text_c" >
 				<colgroup>
-			<col style="width: auto;">
+			<col style="width: auto; height: 70px;">
 		</colgroup>
 			<tr>
 				<th scope="col">순위</th>
@@ -92,10 +92,10 @@
 		</c:forEach>
 		
 		<br><br>
-	
-		<input type="submit" value="모두 저장">
-		<input type="button" value="취소" onclick="history.back();">
-		
+	<div align="center">
+		<input type="submit" value="모두 저장" style="color:#fff; background:#18315D; width:75px; height:25px; margin:5px; border-radius:5px; border:1px solid #fff;">
+		<input type="button" value="취소" onclick="history.back();" style="color:#fff; background:#18315D; width:75px; height:25px; margin:5px; border-radius:5px; border:1px solid #fff;">
+	</div>
 	</form>
 	
 	

@@ -29,10 +29,10 @@ text-align: center;
 	<!-- 헤더/네비 -->
 	<jsp:include page="../inc/nav_bar.jsp" />
 	
-	<br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br>
 	<div id="contents" class="contents_customer area__movingbar litype5" style="">
-		<div class="title_top">
-			<h2 class="tit">단체관람/대관문의 신청 목록</h2>
+		<div class="movi_pre_list">
+			<h3 class="tit_type0"><strong class="ty2 eng">AIM</strong> 단체관람 / 대관문의 신청 목록</h3>
 		</div>
 					
 		<div class="tab_con ty3">
@@ -56,7 +56,7 @@ text-align: center;
 					
 					</tr>
 				</thead>
-				<!-- c:if 사용해서 session 아이디랑 일치하는 아이디만 출력, admin포함 -->
+			
 				<tbody>
 					
 					<c:forEach var="dto" items="${RtListAll }">
@@ -149,9 +149,18 @@ text-align: center;
 				<button type="button" class="btn_pg_next">다음 페이지로 이동</button>
 				<button type="button" class="btn_pg_last">마지막 페이지로 이동</button>
 			</div>
+			
+			<br><br><br>
+			
+			<div id="table_search" align="center">
+				<input type="button" value="문의하기" class="btn"
+					onclick="location.href='./RentalWrite.th';"
+				>
+			</div>
 		</div>
 
 	</div>
+	<br><br><br><br><br><br><br><br>
 
 	  
 </body>
