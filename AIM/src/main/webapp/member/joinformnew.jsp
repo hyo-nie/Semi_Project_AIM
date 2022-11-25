@@ -487,12 +487,14 @@ ex ) skt / 010 / 0000 / 0000
 			<!-- btn -->
 			<div class="btn-area __center">
 				<button type="button" class="ui-button __square-large __black" onclick="fnBack();">이전<!-- 이전 --></button>
-				<button type="button" class="ui-button __square-large __point-color" id="delaychk" onclick="chk();">다음<!-- 다음 --></button>
+				<button type="button" class="ui-button __square-large __point-color" id="delaychk" 
+				onclick="chk();" style="background:#18315d;">다음<!-- 다음 --></button>
 			</div>
 		</div>
 	</div>
 </div>
 </form>
+
 
 
 <!-- Footer -->
