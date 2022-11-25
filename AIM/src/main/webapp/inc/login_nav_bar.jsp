@@ -109,13 +109,7 @@
 	<div id="nav" class="area__gnbmovingbar">
 		<ul>
 			<li class=""><a href="./Ticketing.tk">예매</a> <!-- 예매 임시 가상주소 입니다 자유롭게 변경해서 사용해주세요 -->
-				<div>
-					<ul>
-						<li><a href="./Ticketing.tk" title="예매하기">예매하기</a></li>
-						<li><a href="#" title="상영시간표">상영시간표</a></li>
-						<li><a href="#" title="할인안내">할인안내</a></li>
-					</ul>
-				</div></li>
+			</li>
 			<li class=""><a href="./MovieHomeList.mv">영화</a> <!-- 영화 임시 가상주소 입니다 자유롭게 변경해서 사용해주세요 -->
 				<div>
 					<ul>

@@ -23,16 +23,10 @@
 <body>
 	<!-- 각종 요소 -->
 	<!-- 상위 배너 -->
-	<jsp:include page="../inc/topbanner.jsp" />
 	<!-- 헤더/네비 -->
 	<jsp:include page="../inc/nav_bar.jsp" />
 
 
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
 	<br>
 	<br>
 	<br>
