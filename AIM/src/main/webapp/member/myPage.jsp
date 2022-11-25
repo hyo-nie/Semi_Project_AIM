@@ -121,7 +121,8 @@
 										<li>구매내역은 아래의 버튼을 누르면 확인 가능합니다.</li>
 									</ul>
 									<button onclick="location.href='./OrderList.or';" 
-										style="height:40px; line-height:38px; padding:0 18px; margin:auto; display:block; font-size:13px;">구매내역</button>
+										style="height:40px; line-height:38px; padding:0 18px; margin:auto; display:block; 
+										font-size:13px; background-color:#18315D; color:white; border-radius:5px;">구매내역</button>
 									</c:otherwise>
 								</c:choose>		
 								</div>
@@ -137,7 +138,8 @@
 		                    		<li>접수 후 48시간 안에 답변 드리겠습니다.</li>
 		                  		</ul>
 								<button onclick="location.href='./MyHpList.hp';" 
-										style="height:40px; line-height:38px; padding:0 18px; margin:auto; display:block; font-size:13px;">1:1 문의내역</button>
+										style="height:40px; line-height:38px; padding:0 18px; margin:auto; display:block; 
+										font-size:13px; background-color:#18315D; color:white; border-radius:5px;">1:1 문의내역</button>
 								</div>
 								<div>
 								</div>
@@ -148,11 +150,12 @@
 								</h3>
 								<div class="list_bdr_box">
 									 <ul class="list_txt" style="text-align:center; font-size:14px;">
-					                    <li>단체관람 및 대관을 원하시는 고객님께 할인 혜택을 드리고 있습니다.<br>
-					                    신청을 원하시거나 문의사항이 있으시면 페이지 상단의 단체관람/대관문의를 이용해주세요.</li>
+					                    <li>단체관람 및 대관을 원하시는 고객님께 할인 혜택을 드리고 있습니다.</li>
+						                <li>신청 문의글은 접수 후 48시간 안에 답변 드리겠습니다.</li>
 					                 </ul>
                   					 <button onclick="location.href='./AdminRentalList.th';" 
-                          					 style="height:40px; line-height:38px; padding:0 18px; margin:auto; display:block; font-size:13px;">대관 문의내역</button>
+                          					 style="height:40px; line-height:38px; padding:0 18px; margin:auto; display:block; 
+                          					 font-size:13px; background-color:#18315D; color:white; border-radius:5px;">대관 문의내역</button>
 								</div>
 							</div>
 							</div>

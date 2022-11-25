@@ -517,7 +517,7 @@ body {overflow-y:scroll;}
 #nav > ul > li > a {display:block; position:relative; height:40px; line-height:40px; padding:0 24px; font-size:14px; letter-spacing:0.1em; white-space:nowrap;}
 #nav > ul > li > a:before {content:""; opacity:.2; position:absolute; left:0; top:50%; height:9px; margin-top:-5px; border-left:1px solid #707070;}
 #nav > ul > li:first-child a:before {display:none;}
-#nav > ul > li > div {display:none; position:absolute; z-index:2; left:0; right:0; top:114px; height:38px; text-align:center; background-color:#F8F8F8;}
+#nav > ul > li > div {display:none; position:absolute; z-index:2; left:0; right:0; top:110px; height:38px; text-align:center; background-color:#F8F8F8;}
 #nav > ul > li > div > ul {opacity:0; display:inline-block;}
 #nav > ul > li > div > ul:after {content:""; display:block; clear:both;}
 #nav > ul > li > div > ul > li {float:left; margin:0 10px;}
