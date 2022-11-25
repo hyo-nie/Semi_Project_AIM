@@ -155,8 +155,8 @@
 						<div class="btn_btm_wrap">
 							<input type="hidden" name="mb_id" id="mb_id" value="${dto.mb_id }">
 							<input type="hidden" name="mb_pw" id="mb_pw" value="${dto.mb_pw }">
-							<input type="submit" class="btn_col3 ty6" value="수정하기" >
-							<input type="button" class="btn_col2 ty6" value="문의목록" onclick="location.href='./MyHpList.hp';" >
+							<input type="submit" style="background-color:#18315D" class="btn_col3 ty6" value="수정하기" >
+							<input type="button" class="btn_col3 ty6" value="문의목록" onclick="location.href='./MyHpList.hp';" >
 							
 						</div>
 						</form>

@@ -60,7 +60,7 @@
 									for="checkSavedID">아이디 저장</label>
 							</div>
 							<div class="login_menu">
-								<a href="./Join.aim" title="페이지 이동">회원가입</a> <a
+								<a href="./JoinTerms.aim" title="페이지 이동">회원가입</a> <a
 									href="./FindId.aim" title="페이지 이동">아이디 찾기</a> <a
 									href="./FindPw.aim" title="페이지 이동">비밀번호 찾기</a>
 							</div>

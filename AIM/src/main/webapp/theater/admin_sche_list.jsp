@@ -33,12 +33,12 @@ text-align: center;
 	}
 	%>
 	
-<br><br><br><br><br><br><br><br><br>			
+<br><br><br><br><br><br><br><br><br><br><br>			
 <!-- 게시판 -->
 
 	<div id="contents" class="contents_customer area__movingbar litype5" style="">
-		<div class="title_top">
-			<h2 class="tit">스케줄 등록 리스트</h2>
+		<div class="movi_pre_list">
+			<h3 class="tit_type0"><strong class="ty2 eng">AIM</strong> 스케줄 등록 리스트</h3>
 		</div>
 					
 		<div class="tab_con ty3">

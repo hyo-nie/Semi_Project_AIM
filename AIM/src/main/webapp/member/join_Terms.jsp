@@ -102,8 +102,8 @@
 												<input type="checkbox" id="agreeCco_1009C0" name="1009"
 													class="mPrv ui-allchk-el ui-allchk-group1"
 													onclick="fnPrvAgChange('agreeCco_1009C0');"
-													data-title="L.POINT 회원약관" data-prvdvc="C0"
-													data-cconm="L.POINT" data-ccoenm="L.POINT"
+													data-title="AIM.POINT 회원약관" data-prvdvc="C0"
+													data-cconm="AIM.POINT" data-ccoenm="L.POINT"
 													data-separator-number="1">><label
 													for="agreeCco_1009C0">AIM.POINT 회원약관 <em class="">(필수)</em></label>
 											</div>
@@ -139,7 +139,7 @@
 													class="mPrv ui-allchk-el ui-allchk-group1"
 													onclick="fnPrvAgChange('agreeCco_1009BG');"
 													data-title="개인정보의 필수적인 사항에 대한 수집 이용 동의" data-prvdvc="BG"
-													data-cconm="L.POINT" data-ccoenm="L.POINT"
+													data-cconm="AIM.POINT" data-ccoenm="AIM.POINT"
 													data-separator-number="1"><label
 													for="agreeCco_1009BG">개인정보의 필수적인 사항에 대한 수집 이용 동의 <em
 													class="">(필수)</em></label>

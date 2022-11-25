@@ -96,12 +96,13 @@
 		</table>
 
 		<br><br>
-	
-		<input type="button" value="모두 저장" onclick="movieCdCheck();"> 
-		<input type="button" value="취소" onclick="history.back();">
-			
+	<div align="center">
+		<input class="btn" type="button" value="모두 저장" onclick="movieCdCheck();" style="color:#fff; background:#18315D; width:100px; height:40px; margin:5px; border-radius:5px; border:1px solid #fff;"> 
+		<input class="btn" type="button" value="취소" onclick="history.back();" style="color:#fff; background:#8C8C8C; width:100px; height:40px; margin:5px; border-radius:5px; border:1px solid #fff;">
+	</div>	
 </form>
 <!-- 내용끝	 -->
+
 
 	
 <!-- 페이지 좌우 여백 -->

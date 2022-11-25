@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.aim.hp.action.Action;
 import com.aim.hp.action.ActionForward;
+import com.aim.member.db.MemberDAO;
+import com.aim.member.db.MemberDTO;
 import com.aim.theater.action.AdminPwCheckAction;
 
 @WebServlet("*.hp")
@@ -148,15 +150,29 @@ public class HpFrontController extends HttpServlet {
 				e.printStackTrace();
 			}
     	}
-    	// 문의 답글 작성페이지
-    	else if(command.equals("/HpReWriteForm.hp")) {
-    		System.out.println(" C : HpReWrtieForm.hp 실행");
+    	// 문의 답글할 내용 불러오기
+    	else if(command.equals("/HpReContentAction.hp")) {
+    		System.out.println(" C : HpReContentAction.hp 실행");
     		
-    		forward = new ActionForward();
-    		forward.setPath("./hp/rewriteForm.jsp");
-    		forward.setRedirect(false);
+    		action = new HpReContentAction();
+    		try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
     	}
+    	
+    	// 문의 답글 어드민확인
+    	else if(command.equals("/HpAdminLoginAction.hp")){
+    		System.out.println(" C : HpAdminLoginAction.hp 실행 ");
     		
+    		action = new HpAdminLoginAction();
+    			try {
+					forward = action.execute(request, response);
+				} catch (Exception e) {
+					e.printStackTrace();
+			}
+    	}
     	
     	// 문의 답글 달기
     	else if(command.equals("/HpReWriteAction.hp")) {

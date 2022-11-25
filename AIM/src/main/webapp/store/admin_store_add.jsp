@@ -71,12 +71,11 @@
 	
 	
 	
-	
 	<form action="./AdminStoreAddAction.ad" method="post" name="adminfr" enctype="multipart/form-data">
 	
 	<div id="contents">
-		<div class="title_top">
-			<h2 class="tit">스토어 상품 등록</h2>
+		<div class="movi_pre_list">
+			<h3 class="tit_type0" style="margin-top: 50px;"><strong class="ty2 eng">AIM</strong> 스토어 상품 등록</h3>
 		</div>
 			<table class="tbl_form">
 				<colgroup>

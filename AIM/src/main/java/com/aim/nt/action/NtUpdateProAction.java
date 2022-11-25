@@ -24,7 +24,7 @@ public class NtUpdateProAction implements Action {
 				String mb_id = (String)session.getAttribute("mb_id");
 						
 				ActionForward forward = new ActionForward();
-				if(mb_id == null) {
+				if(mb_id == null || !mb_id.equals("admin")) {
 					forward.setPath("./Main.aim");
 					forward.setRedirect(true);
 					return forward;
@@ -42,6 +42,9 @@ public class NtUpdateProAction implements Action {
 				
 				String pageNum = request.getParameter("pageNum");
 				
+				
+				System.out.println("@@@@@@@@@@@@@@@@@@@"+request.getParameter("mb_id"));
+				System.out.println("@@@@@@@@@@@@@@@@@@@"+request.getParameter("mb_pw"));
 				// DB
 				NtDAO dao = new NtDAO();
 				

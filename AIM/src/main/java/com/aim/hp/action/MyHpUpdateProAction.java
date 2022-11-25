@@ -6,6 +6,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.apache.jasper.tagplugins.jstl.core.Out;
+
 import com.aim.hp.db.HpDAO;
 import com.aim.hp.db.HpDTO;
 import com.aim.hp.action.Action;
@@ -38,8 +40,8 @@ public class MyHpUpdateProAction implements Action {
 		dto.setMb_id(request.getParameter("mb_id"));
 		dto.setMb_pw(request.getParameter("mb_pw"));
 		dto.setHp_subject(request.getParameter("hp_subject"));
-		dto.setHp_select(request.getParameter("hp_select"));
-		dto.setHp_class(request.getParameter("hp_class"));
+		dto.setHp_select(Integer.parseInt(request.getParameter("hp_select")));
+		dto.setHp_selectN(request.getParameter("hp_selectN"));
 		dto.setHp_content(request.getParameter("hp_content"));
 		
 		String pageNum = request.getParameter("pageNum");

@@ -64,7 +64,6 @@
 									</tbody>
 								</table>
 								<div class="btn_btm_wrap">
-									<input type="hidden" name="mb_id" id="mb_id" value="${dto.mb_id }">
 									<input type="hidden" name="mb_pw" id="mb_pw" value="${dto.mb_pw }">
 									<c:if test="${mb_id.equals('admin') }">
 									 <input type="submit" value="공지 사항 수정" class="btn_col2 ty6">
