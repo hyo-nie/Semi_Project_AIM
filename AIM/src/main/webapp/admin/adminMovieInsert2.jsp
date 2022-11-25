@@ -9,8 +9,6 @@
 
 <script type="text/javascript">
 	function movieCdCheck(){
-		alert('test');
-		
 		if(document.cd.movieCd.value == ""){
 			alert('영화코드를 입력하세요');
 			document.cd.movieCd.focus();
