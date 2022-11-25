@@ -53,7 +53,7 @@ function requestPay(user_tel) {
           if (rsp.success) {
              console.log("결제 성공!");
               // 결제 성공 시 이동하는 페이지(./OrderList.or)
-              alert('결제되었습니다! 주문하신 상품의 바코드는 주문 상세 페이지에서 확인 가능합니다.');
+              alert("결제되었습니다! \n 주문하신 상품의 바코드는 주문 상세 페이지에서 확인 가능합니다."");
               location.href="./OrderAddAction.or?mb_tel="+user_tel+"&totalAmountMoney="+payAmount;
               
           } else {
