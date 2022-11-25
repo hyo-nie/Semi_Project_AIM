@@ -43,7 +43,10 @@ public class AdminStoreDAO {
 	   } // 자원해제
 	
 
-	  // 상품 등록 메서드 시작 - addProduct(dto) 
+	  /** addProduct(dto) 
+	   * 관리자가 상품 등록할 수 있는 메서드 
+	   * @param dto
+	   */
 	  public void addProduct(StoreDTO dto) {
 		  int st_num = 0;
 		  
@@ -86,7 +89,11 @@ public class AdminStoreDAO {
 		  
 	  }
 	  
-	 // admin 스토어 상품을 모두 가져오는 메서드 - getAdminStoreList()
+	 /**
+	  * getAdminStoreList()
+	  * 관리자가 스토어 상품을 모두 불러오는 메서드
+	  * @return List
+	  */
 	 public List getAdminStoreList() {
 		 List adminStoreList = new ArrayList();
 		 
@@ -123,7 +130,11 @@ public class AdminStoreDAO {
 	 } // admin 스토어 상품을 모두 가져오는 메서드 - getAdminStoreList()
 	  
 	 
-	 // 상품 삭제 메서드 시작 - adminStoreDel()
+	 /**
+	  * adminStoreDel()
+	  * 관리자가 상품을 삭제하는 메서드
+	  * @param st_num
+	  */
 	 public void adminStoreDel(int st_num) {
 		 try {
 			con = getConnection();
@@ -142,7 +153,12 @@ public class AdminStoreDAO {
 		 
 	 } // 상품 삭제 메서드 끝 - adminStoreDel()
 	 
-	 // 상품 1개의 정보 가져오는 메서드 - getAdminStore()
+	 /**
+	  * getAdminStore()
+	  * 관리자 상품 1개의 정보 가져오는 메서드
+	  * @param st_num
+	  * @return
+	  */
 	 public StoreDTO getAdminStore(int st_num) {
 		 StoreDTO dto = null;
 		 
@@ -178,7 +194,11 @@ public class AdminStoreDAO {
 	 }  // 상품 1개의 정보 가져오는 메서드 끝 - getAdminStore()
 	 
 	 
-	 // 상품 수정 메서드 - adminStoreModify()
+	 /**
+	  * adminStoreModify()
+	  * 관리자 상품 수정 메서드(파일은 수정 불가) 
+	  * @param dto
+	  */
 	 public void adminStoreModify(StoreDTO dto) {
 		 try {
 			con = getConnection();

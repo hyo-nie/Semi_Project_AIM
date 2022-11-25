@@ -29,7 +29,7 @@
 
     <div class="cart_step_wrap">
         <!-- S case1 -->
-        <ul class="cart_step step_unit3">
+        <ul class="cart_step step_unit3" style="margin-left:-60px;">
             <li class="step0"><span>STEP 01</span><strong>장바구니</strong></li>
             <li class="step2"><span>STEP 02</span><strong>결제하기</strong></li>
             <li class="step3 active"><span>STEP 03</span><strong>결제완료</strong></li>
@@ -52,7 +52,7 @@
         <div class="com_btn_wrap pT60">
 			<a href="./CartList.ct" class="btn_style1">다시 결제 하기</a>
 			<!-- 장바구니 페이지로 이동 -->
-            <a href="./StoreMain.st" class="btn_style0">스토어 홈</a>
+            <a href="./StoreMain.st" class="btn_style0" style="color: white;">스토어 홈</a>
             <!-- 스토어 메인 페이지로 이동 -->
         </div>
 

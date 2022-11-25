@@ -69,7 +69,7 @@
 	<div id="contents" class="gift_store">
 	
 	<div class="cart_step_wrap">
-		<ul class="cart_step step_unit4">
+		<ul class="cart_step step_unit4" style="margin-left: -65px;">
 			<li class="step0 active">
 				<span>STEP 01</span>
 				<strong>장바구니</strong>
@@ -120,7 +120,7 @@
 			<strong class="com_custom_checkbox_product_name">상품명</strong>
 			<strong class="com_custom_checkbox_sel_price" style="margin-left: 22px;">판매금액</strong>
 			<strong class="com_custom_checkbox_cnt">수량</strong>
-			<strong class="com_custom_checkbox_price">구매금액</strong>
+			<strong class="com_custom_checkbox_price" style="margin-left: 16px;">구매금액</strong>
 			<strong class="com_custom_checkbox_product_sel">선택</strong>
 		</p>
 		
