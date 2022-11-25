@@ -103,7 +103,7 @@
 		
 		// 확인용!
 		function buyNow2(){
-			var queryString = $("form[name=fr]").serialize() ;
+			var queryString = $("form[name=fr]").serialize();
 			var amount = document.getElementById("showCnt").innerHTML;
 			
 			 $.ajax({

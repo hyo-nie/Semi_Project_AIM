@@ -45,7 +45,7 @@
       
 
       <div class="com_cart_list_wrap">
-      <h1>주문목록</h1>
+      <h2 style="margin-bottom: 10px;">주문목록</h2>
       <p class="cart_allchecker_wrap">
          <strong class="com_custom_checkbox_sel_price">주문번호</strong>
          <strong class="com_custom_checkbox_product_name" style= "width: 250px;">상품명</strong>
@@ -95,7 +95,7 @@
             </div>
          </table>
       <div class="com_btn_wrap pT60">
-         <a href="#none" class="btn_style0 " onclick="location.href='./Main.aim';" style="color:#FFF;">돌아가기</a> 
+         <a href="#none" class="btn_style0 " onclick="location.href='./StoreMain.st';" style="color:#FFF;">돌아가기</a> 
       </div>
    </article>
    

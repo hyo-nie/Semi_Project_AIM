@@ -22,17 +22,15 @@ public class CartDAO {
 	
 	// 디비 연결해주는 메서드(커넥션풀)
 	private Connection getConnection() throws Exception{
-		
-		// 1. 드라이버 로드 // 2. 디비연결
+
 		Context initCTX = new InitialContext();
-		DataSource ds = (DataSource) initCTX.lookup("java:comp/env/jdbc/AIM"); // 다운캐스팅
+		DataSource ds = (DataSource) initCTX.lookup("java:comp/env/jdbc/AIM");
 		con = ds.getConnection();
 		System.out.println(" DAO : 디비연결 성공(커넥션풀) con "+ con);
 		
 		return con;
 	}
 		
-		// 자원해제 메서드-closeDB()
 		public void closeDB() {
 			System.out.println("DAO : 디비연결자원 해제");
 			
@@ -45,9 +43,13 @@ public class CartDAO {
 				e.printStackTrace();
 			}
 		}
-		// 자원해제 메서드 - closeDB()
 		
-		// 기존의 장바구니 체크 - checkCart(DTO)
+		/**
+		 * checkCart(DTO)
+		 * 기존의 장바구니 체크
+		 * @param dto
+		 * @return
+		 */
 		public boolean checkCart(CartDTO dto) {
 			boolean result = false;
 			
@@ -198,8 +200,13 @@ public class CartDAO {
 		}
 		// 장바구니 상품목록 조회 - getCartList(mb_id)
 		
-		// 장바구니 삭제(c_num) - deleteCart(c_num)
 		
+		/**
+		 * deleteCart(c_num)
+		 * 장바구니 삭제(c_num) - 
+		 * @param c_num
+		 * @return
+		 */
 		public int deleteCart(int c_num) {
 			int result = -1;
 			
@@ -222,8 +229,12 @@ public class CartDAO {
 		}
 		// 장바구니 삭제(c_num) - deleteCart(c_num)
 		
-		// 장바구니 삭제(c_num) - deleteCart(c_num)
-		
+		/**
+		 * deleteCart(String mb_id)
+		 * 장바구니 삭제(mb_id)
+		 * @param mb_id
+		 * @return
+		 */
 		public int deleteCart(String mb_id) {
 			int result = -1;
 			
@@ -243,8 +254,8 @@ public class CartDAO {
 			}
 			
 			return result;
-		}
-		// 장바구니 삭제(c_num) - deleteCart(c_num)
+		} // 장바구니 삭제 메서드 deleteCart(String mb_id)
+		
 		
 		/**
 		    * changeAmount(int c_num, int changeAmount)
