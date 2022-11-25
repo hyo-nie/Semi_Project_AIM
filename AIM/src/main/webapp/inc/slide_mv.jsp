@@ -693,91 +693,61 @@
 
 		<!-- store/event -->
 		<div class="main_cont_wrap premiere">
-			<div class="sec_tit">AIM 스토어 추천!</div>
+			<div class="sec_tit" style="font-size:22px; margin-top:40px;">AIM's pick</div>
 			<ul class="premiere_wrap">
-				<li><div class="store">
-						<br> <span class="span1">AIM 콤보</span>
-						<button onclick="location.href='http://localhost:8081/AIM/PopcornList.st'">더보기</button>
+				<li><div class="store" style="margin-top:5px; border:1px;">
+						<br> <span class="span1" style="margin:120px; color:darkslategray; font-size:14px;">AIM 콤보</span>
 							<table>
 								<tr>
 									<td class="img"><a href="http://localhost:8081/AIM/PopcornDetail.st?st_num=6">
-									<img class="img1" src="./assets/img/AIM콤보.jpg" width="250px" height="250px"></a>
+									<img class="img1" src="./assets/img/AIM콤보.jpg" style="height:200px; margin-top:35px; margin-bottom:30px;"></a>
 									</td>
 								</tr>
 							</table>
 					</div>
-				<li><div class="store">
-						<br> <span class="span2">AIM 기프트카드</span>
-						<button onclick="location.href='http://localhost:8081/AIM/GiftcardList.st'">더보기</button>	
+				<li><div class="store" style="margin-top:5px; border:1px;">
+						<br> <span class="span2" style="margin:105px; color:darkslategray; font-size:14px;">AIM 기프트카드</span>
 							<table>
 								<tr>
 									<td class="img"><a href="http://localhost:8081/AIM/PopcornDetail.st?st_num=2">
-									<img class="img1" src="./assets/img/3만원.jpg" width="250px" height="250px"></a>
+									<img class="img1" src="./assets/img/3만원.jpg" style="width:260px; height:180px; margin-top:40px; margin-bottom:30px;"></a>
 									</td>
 								</tr>
 							</table>
 					</div></li>
-				<li><div class="store">
-						<br> <span class="span3">AIM 관람권</span>
-						<button onclick="location.href='http://localhost:8081/AIM/GiftcardList.st'">더보기</button>
+				<li><div class="store" style="margin-top:5px; border:1px;">
+						<br> <span class="span3" style="margin:105px; color:darkslategray; font-size:14px;">AIM 관람권</span>
 							<table>
 								<tr>
 									<td class="img"><a href="http://localhost:8081/AIM/PopcornDetail.st?st_num=5">
-									<img class="img1" src="./assets/img/2인.jpg" width="250px" height="250px"></a>
+									<img class="img1" src="./assets/img/2인.jpg" style="width:260px; height:180px; margin-top:40px; margin-bottom:30px;"></a>
 									</td>
 								</tr>
 							</table>
 					</div></li>
 
 			</ul>
-			<button type="button" class="btn_txt_more ty2" onclick="location.href='http://localhost:8081/AIM/StoreMain.st'">더보기</button>
+			<button type="button" class="btn_txt_more ty2" style="font-size:13px;" 
+			onclick="location.href='./StoreMain.st'">더보기</button>
 		</div>
 
 
 		<div class="main_cont_wrap premiere">
-			<div class="sec_tit">시사회/무대인사</div>
+			<div class="sec_tit" style="font-size:22px;">시사회/무대인사</div>
 			<ul class="premiere_wrap">
 				<li><a href="#none"><img
 						src="https://caching.lottecinema.co.kr//Media/Event/f5eb4d354c194fa3b68d3a5facac9703.jpg"
-						alt="[오늘 밤, 세계에서] 스페셜 상영회"></a></li>
+						alt="[오늘 밤, 세계에서] 스페셜 상영회"
+						style="margin-top:5px;"></a></li>
 				<li><a href="#none"><img
 						src="https://caching.lottecinema.co.kr//Media/Event/10125de1b57e42769ebcec0ede7837a9.jpg"
-						alt="<동감> 2주차 무대인사"></a></li>
+						alt="<동감> 2주차 무대인사"
+						style="margin-top:5px;"></a></li>
 				<li><a href="#none"><img
 						src="https://caching.lottecinema.co.kr//Media/Event/e7a59bf03baf4980b33d58c33c5635cd.jpg"
-						alt="롯데시네마와 함께하는 올빼미 개봉주 무대인사 안내
-
-스크린에서 눈 뗄 수 없는 118분의 긴장감
-올빼미
-개봉주 무대인사 안내
-참석자는 아래 상세 스케줄을 확인하세요
-
-
-11/26(토)	
-롯데시네마 청량리	
-1관	13:50	시영 시	안태진 감독, 류준열, 최무성, 박명훈, 김성철, 조윤서
-4관	14:00	시영 시	안태진 감독, 류준열, 최무성, 박명훈, 김성철, 조윤서
-5관	12:00	종영 시	안태진 감독, 류준열, 최무성, 박명훈, 김성철, 조윤서
-
-롯데시네마 건대	
-5관	16:40	시영 시	안태진 감독, 류준열, 최무성, 박명훈, 김성철, 조윤서
-4관	14:40	종영 시	안태진 감독, 류준열, 최무성, 박명훈, 김성철, 조윤서
-6관	14:50	종영 시	안태진 감독, 류준열, 최무성, 박명훈, 김성철, 조윤서
-
-롯데시네마 월드타워	
-5관	15:50	종영 시	안태진 감독, 류준열, 최무성, 박명훈, 김성철, 조윤서
-8관	16:00	종영 시	안태진 감독, 류준열, 최무성, 박명훈, 김성철, 조윤서
-20관	16:10	종영 시	안태진 감독, 류준열, 최무성, 박명훈, 김성철, 조윤서
-5관	18:25	시영 시	안태진 감독, 류준열, 최무성, 박명훈, 김성철, 조윤서
-
-유의사항 
--본 행사는 사정에 의해 예고 없이 변경/취소 될 수 있습니다. 
--본행사는 마스크 미착용 시 입장이 불가능합니다. 
--발열 및 호흡기 질환 증세가 있으실 경우 본인과 관람객을 위해 이용을 자제해주시기 바랍니다. 
-
-올빼미 11월 23일 극장 개봉 "></a></li>
+						alt="롯데시네마와 함께하는 올빼미 개봉주 무대인사 안내"
+						style="margin-top:5px;"></a></li>
 			</ul>
-			<button type="button" class="btn_txt_more ty2">더보기</button>
 		</div>
 
 <!-- 		<div class="mid_menu_wrap">

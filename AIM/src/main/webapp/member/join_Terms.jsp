@@ -424,7 +424,7 @@
 						취소
 						<!-- 취소 -->
 					</button>
-					<button type="button"
+					<button type="button" style="background:#18315d;"
 						class="ui-button __square-large __point-color" id="delaychk"
 						onclick="fnChkag();">
 						다음
