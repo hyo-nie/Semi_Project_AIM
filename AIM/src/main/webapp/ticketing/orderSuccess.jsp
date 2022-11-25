@@ -46,7 +46,7 @@
 
 
 	<div id="sub_section">
-		<div id="contents" class="contents_full contents_reserve">
+		<div id="contents" class="contents_full contents_reserve"  style="background-color: #f3f5fa">
 			<div class="wrap_reserve ">
 				<h2 class="hidden">결제완료</h2>
 				<div class="section_step_tit">
@@ -104,7 +104,7 @@
 										<dd><fmt:formatNumber value="${reDTO.totalPrice }"/>원</dd>
 									</dl>
 								</div></a></li>
-						<li class="step04 active"><a href="#"><strong class="tit"><span>04</span><br>결제완료</strong></a></li>
+						<li class="step04 active" style="background-color: #18315D; border-color: #18315D;"><a href="#"><strong class="tit"><span>04</span><br>결제완료</strong></a></li>
 					</ul>
 				</div>
 				<div id="reserveStep01" class="section_step_con step01 ">
