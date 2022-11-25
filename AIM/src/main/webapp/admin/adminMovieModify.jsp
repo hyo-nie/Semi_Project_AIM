@@ -8,6 +8,7 @@
 <title>AIM - 관리자 영화 정보 수정 페이지</title>
 
 <script type="text/javascript">
+	function movieCdCheck(){
 		if(document.cd.movieCd.value == ""){
 			alert('영화코드를 입력하세요');
 			document.cd.movieCd.focus();
@@ -35,79 +36,80 @@
 	}
 	%>
 
+	
+<!-- 페이지 좌우 여백 틀 -->
+<div id="contents" class="contents_movie_list">
+	<h2 class="hidden">영화목록</h2>
+		<div class="movie_screen_box">
+<!-- 페이지 좌우 여백 틀 -->	
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<!-- 페이지 상단 여백 -->
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<!-- 페이지 상단 여백 -->
+
+
+
+<!-- 상단 이름 -->
+<div class="movi_pre_list">
+<h3 class="tit_type0"><strong class="ty2 eng">AIM</strong> 영화 정보 수정 페이지</h3>
+</div>
+<!-- 상단 이름 -->
+
 
 <form action="./AdminMovieModifyPro.mv" method="post" name="cd" >
+<!-- 내용시작	 -->
+			<table class="tbl_lista text_c">
 
-		<h3>영화정보 수정 페이지</h3>
-		
-		<br><br>
-			
-		<table border="1">
 			<tr>
 				<th>영화코드</th>
+				<th><input type="text" name="movieCd" value="${dto.movieCd }"></th>
 				<th>영화이름</th>
+				<th><input type="text" name="movieNm" value="${dto.movieNm }"></th>
 				<th>개봉일</th>
-				<th>장르</th>
-				<th>감독</th>
-				<th>포스터</th>
+				<th><input type="text" name="openDt" value="${dto.openDt }"></th>
 			</tr>
 			<tr>
-				<td>
-					<input type="text" name="movieCd" value="${dto.movieCd }">
-				</td>
-				<td>
-					<input type="text" name="movieNm" value="${dto.movieNm }">
-				</td>
-				<td>
-					<input type="text" name="openDt" value="${dto.openDt }">
-				</td>
-				<td>
-					<input type="text" name="genreNm" value="${dto.genreNm }">
-				</td>
-				<td>
-					<input type="text" name="directors" value="${dto.directors }">
-				</td>
-				<td>
-					<input type="text" name="poster" value="${dto.poster }">
-				</td>
+				<th>장르</th>
+				<th><input type="text" name="genreNm" value="${dto.genreNm }"></th>
+				<th>감독</th>
+				<th><input type="text" name="directors" value="${dto.directors }"></th>
+				<th>포스터</th>
+				<th><input type="text" name="poster" value="${dto.poster }"></th>
 			</tr>
 			<tr>
 				<th>관람등급</th>
+				<th><input type="text" name="watchGradeNm" value="${dto.watchGradeNm }"></th>
 				<th>showTm</th>
+				<th><input type="text" name="showTm" value="${dto.showTm }"></th>
 				<th>배우</th>
-				<th>contents</th>
-				<th>box rank</th>
+				<th><input type="text" name="actors" value="${dto.actors }"></th>
 			</tr>
 			<tr>
-				<td>
-					<input type="text" name="watchGradeNm" value="${dto.watchGradeNm }">
-				</td>
-				<td>
-					<input type="text" name="showTm" value="${dto.showTm }">
-				</td>
-				<td>
-					<input type="text" name="actors" value="${dto.actors }">
-				</td>
-				<td>
-					<input type="text" name="contents" value="${dto.contents }">
-				</td>
-				<td>
-					<input type="text" name="boxrank" value="${dto.boxrank }">
-				</td>
+				<th>contents</th>
+				<th><input type="text" name="contents" value="${dto.contents }"></th>
+				<th>box rank</th>
+				<th><input type="text" name="boxrank" value="${dto.boxrank }"></th>
 			</tr>
-		</table>		
-		
-		
+		</table>
+
 		<br><br>
-	
-		<input type="button" value="저장" onclick="movieCdCheck();">
-		<input type="button" value="취소" onclick="history.back();">
-			
+	<div align="center">
+		<input class="btn" type="button" value="모두 저장" onclick="movieCdCheck();" style="color:#fff; background:#18315D; width:100px; height:40px; margin:5px; border-radius:5px; border:1px solid #fff;"> 
+		<input class="btn" type="button" value="취소" onclick="history.back();" style="color:#fff; background:#8C8C8C; width:100px; height:40px; margin:5px; border-radius:5px; border:1px solid #fff;">
+	</div>	
 </form>
+<!-- 내용끝	 -->
 
 
+	
+<!-- 페이지 좌우 여백 -->
+		</div>
+</div>
+<!-- 페이지 좌우 여백 -->	
+
+<!-- 약관 -->
+<jsp:include page="../inc/footer.jsp" />
 
 
 
