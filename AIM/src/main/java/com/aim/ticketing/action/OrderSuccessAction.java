@@ -112,7 +112,7 @@ public class OrderSuccessAction implements Action {
 		MemberDAO mbDAO = new MemberDAO();
 		MemberDTO mbDTO = mbDAO.getMemberInfo(id);
 		
-		// 결제성공시 누적금액, 관람횟수 수정
+		// 결제성공시 누적금액, 관람횟수, 회원등급 수정
 		if (result == 1) {
 			mbDAO.updateMemberPay(id, totalPrice);
 			mbDAO.updateMemberView(id);

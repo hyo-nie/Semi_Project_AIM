@@ -77,8 +77,6 @@
 				<th>bookRating</th>
 				<th>watchGradeNm</th>
 				<th>showTm</th>
-				<th class="actors_ym">actors</th>
-				<th>contents</th>
 				<th>boxrank</th>
 				<th>관리</th>
 			</tr>
@@ -98,8 +96,6 @@
 				<td>${dto.bookRating }</td>
 				<td>${dto.watchGradeNm }</td>
 				<td>${dto.showTm }</td>
-				<td>${dto.actors }</td>
-				<td>${dto.contents }</td>
 				<td class="hj">${dto.boxrank }</td>
 				<td>
 				<a href="./AdminMovieModify.mv?movieCd=${dto.movieCd }">수정</a>

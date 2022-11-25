@@ -355,10 +355,7 @@
 					</div>
 					<div class="inner">
 						<div class="list_filter">
-							<select title="영화 정렬 방법 선택"><option value="A">예매순</option>
-								<option value="B">관객순</option>
-								<option value="C">평점순</option>
-								<option value="D">예정작</option>
+							<select title="영화 정렬 방법 선택"><option value="A">전체</option>
 							</select>
 						</div>
 						<div class="movie_select_wrap list movieSelect">
@@ -482,7 +479,7 @@
 						</div>
 						<ul class="tab_wrap outer sml actionmovingbar">
 							<li class="active"><button type="button" class="tab_tit"
-									style="width: 33.3333%; left: 0%;">
+									style="width: 100%; left: 0%;">
 									<span>전체</span>
 								</button>
 								<div class="tab_con ty5">
@@ -536,80 +533,6 @@
 								</div></li>
 							
 							
-							<!-- 조조/심야 탭 시작 (추후 구현 예정, 삭제할 수도 있음) -->
-							<li><button type="button" class="tab_tit"
-									style="width: 33.3333%; left: 33.3333%;">
-									<span>조조</span>
-								</button>
-								<div class="tab_con ty5">
-									<h5 class="hidden">19시 이후</h5>
-									<div
-										class="mCustomScrollbar timeScroll _mCS_26 mCS-autoHide mCS_no_scrollbar"
-										data-mcs-theme="minimal-dark"
-										style="position: relative; overflow: visible;">
-										<div id="mCSB_26"
-											class="mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside"
-											style="max-height: none;" tabindex="0">
-											<div id="mCSB_26_container"
-												class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y"
-												style="position: relative; top: 0; left: 0;" dir="ltr">
-												<div class="bx_notice">
-													<p>조회 가능한 상영시간이 없습니다.</p>
-													<p>조건을 변경해주세요.</p>
-												</div>
-											</div>
-										</div>
-										<div id="mCSB_26_scrollbar_vertical"
-											class="mCSB_scrollTools mCSB_26_scrollbar mCS-minimal-dark mCSB_scrollTools_vertical"
-											style="display: none;">
-											<div class="mCSB_draggerContainer">
-												<div id="mCSB_26_dragger_vertical" class="mCSB_dragger"
-													style="position: absolute; min-height: 50px; height: 0px; top: 0px;">
-													<div class="mCSB_dragger_bar" style="line-height: 50px;"></div>
-												</div>
-												<div class="mCSB_draggerRail"></div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li><button type="button" class="tab_tit"
-									style="width: 33.3333%; left: 66.6666%;">
-									<span>심야</span>
-								</button>
-								<div class="tab_con ty5">
-									<h5 class="hidden">심야</h5>
-									<div
-										class="mCustomScrollbar timeScroll _mCS_27 mCS-autoHide mCS_no_scrollbar"
-										data-mcs-theme="minimal-dark"
-										style="position: relative; overflow: visible;">
-										<div id="mCSB_27"
-											class="mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside"
-											style="max-height: none;" tabindex="0">
-											<div id="mCSB_27_container"
-												class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y"
-												style="position: relative; top: 0; left: 0;" dir="ltr">
-												<div class="bx_notice">
-													<p>조회 가능한 상영시간이 없습니다.</p>
-													<p>조건을 변경해주세요.</p>
-												</div>
-											</div>
-										</div>
-										<div id="mCSB_27_scrollbar_vertical"
-											class="mCSB_scrollTools mCSB_27_scrollbar mCS-minimal-dark mCSB_scrollTools_vertical"
-											style="display: none;">
-											<div class="mCSB_draggerContainer">
-												<div id="mCSB_27_dragger_vertical" class="mCSB_dragger"
-													style="position: absolute; min-height: 50px; height: 0px; top: 0px;">
-													<div class="mCSB_dragger_bar" style="line-height: 50px;"></div>
-												</div>
-												<div class="mCSB_draggerRail"></div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<!-- 조조/심야 탭 시작 (추후 구현 예정, 삭제할 수도 있음) -->
 							<li class="wrap_nav_underline"><span class="nav_underline"></span></li>
 						</ul>
 					</div>
