@@ -60,18 +60,19 @@
 			<form action="./FindPwAction.aim" method="post" name="fr"
 				onSubmit="check()">
 				<div>
-					아 이 디 : <input type="text" name="mb_id" placeholder="아이디를 입력하세요."
+					아 이 디&nbsp;  <input type="text" name="mb_id" placeholder="아이디를 입력하세요."
 						required="required">
 				</div>
 				<br>
 				<div>
-					전화번호 : <input type="text" name="mb_tel" placeholder="전화번호를 입력하세요."
+					전화번호&nbsp;  <input type="text" name="mb_tel" placeholder="전화번호를 입력하세요."
 						required="required">
 				</div>
 				<br>
 				<div>
-					<input type="submit" value="비밀번호 찾기"> <input type="button"
-						name="cancle" value="돌아가기" onclick="history.back();">
+					<input type="submit" value="비밀번호 찾기" style="color:#fff; background:#18315D; width:85px; height:25px; margin:5px; border-radius:5px; border:1px solid #fff;"> 
+					<input type="button" name="cancle" value="돌아가기" onclick="history.back();" 
+					 	   style="color:#fff; background:#18315D; width:85px; height:25px; margin:5px; border-radius:5px; border:1px solid #fff;">
 				</div>
 			</form>
 		</div>

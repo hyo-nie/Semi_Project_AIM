@@ -51,7 +51,7 @@
 										type="password" id="userPassword" maxlength="15"
 										placeholder="비밀번호를 입력해 주세요." title="입력태그" name="mb_pw"><input
 										type="hidden" name="hidLoginType" id="hidLoginType" value="">
-									<button type="submit" class="btn_login">로그인</button>
+									<button type="submit" class="btn_login" style="background-color: #18315D;">로그인</button>
 								</div>
 							</form>
 						</div>

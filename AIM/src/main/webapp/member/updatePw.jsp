@@ -81,7 +81,7 @@
 			</div>      
 			<br>
 			<div>
-			<input type="submit" value="비밀번호 변경">
+			<input type="submit" value="비밀번호 변경" style="color:#fff; background:#18315D; width:85px; height:25px; margin:5px; border-radius:5px; border:1px solid #fff;">
 			</div>  	
 		</form>
 		</div>
