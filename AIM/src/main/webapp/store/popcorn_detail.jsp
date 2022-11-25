@@ -9,7 +9,6 @@
 <title>AIM - ALL IN MOVIE</title>
 <link href="./assets/css/giftstore.css" rel="stylesheet" type="text/css">
 <script src="jquery-3.6.1.min.js"></script>
-<!-- 제이쿼리 버전 바꾸기! -->
 <script type="text/javascript">
 		
 		var defaultCnt = 1;
@@ -76,18 +75,6 @@
 			
 			alert('확인');
 			
-// 			var queryString = $("form[name=fr]").serialize() ;
-			
-// 			 $.ajax({
-// 				 	type : 'post',
-// 				 	data : queryString,
-// 		            url:"./OrderStart.or",
-// 		            success:function(data){
-// 		                console.log("orderStartAction 페이지로 이동");
-// 		                window.location.href = "./store/buy.jsp";
-// 		            }
-// 		        }) 
-			// var isMove = confirm("장바구니에 등록되었습니다! 확인 하시겠습니까?");
 			var amount = document.getElementById("showCnt").innerHTML;
 			var isMove = confirm("더이상 쇼핑하지 않고 바로 결제하시겠습니까?");
 			
@@ -123,7 +110,6 @@
 </head>
 <body>
 
-${dto }
 
 	<!-- 각종 요소 -->
 	<jsp:include page="../inc/include.jsp" />
@@ -136,8 +122,6 @@ ${dto }
 	<input type="hidden" name="st_num" value="${dto.st_num }">
 	<input type="hidden" name="isMove" value="">
 	<input type="hidden" name="st_name" value="${dto.st_name }">
-<%-- 	<input type="hidden" name="price" value="${dto.st_price }"}> --%>
-<%-- 	<input type="hidden" name="text" value="${dto.st_text }"> --%>
 	
 	<div class="category_product_detail_wrap">   
 	<strong class="category_product_detail_title">${dto.st_name }</strong> 
@@ -170,7 +154,7 @@ ${dto }
 	               		<a href="#none" onclick="javascript:downCnt()" class="com_btn_minus">-</a>    
 	               		<span class="com_form_count com_form_count0" id="showCnt">1</span>                      
 	              		<a href="#none" onclick="javascript:upCnt()" class="com_btn_plus">+</a>   
-	               		<span class="com_total_price" id="spantotalprice"><fmt:formatNumber value="${dto.st_price }"/></span>               	
+	               		<span class="com_total_price" id="spantotalprice" style="padding-right:15px;"><fmt:formatNumber value="${dto.st_price }"/></span>               	
 					</div>               	
 					<div class="category_product_detail_total_price">               		
               			 <p class="com_form_total_price">
@@ -224,8 +208,11 @@ ${dto }
 		</div>
 		</form>
 		
+		
+		
 			<!-- 약관 -->
-	<jsp:include page="../inc/footer.jsp" />
+			<jsp:include page="../inc/footer.jsp" />
+		
 		
 </body>
 </html>
