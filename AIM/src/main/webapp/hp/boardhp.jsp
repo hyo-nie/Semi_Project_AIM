@@ -11,20 +11,16 @@
 	function hpCheck(){
 		
 		var hp_select = $("#hp_select").val();
-		var hp_class1 = $("#radio01").val();
-		var hp_class2 = $("#radio02").val();
 		var hp_subject = $("#hp_subject").val();
 		var hp_content = $("#hp_content").val();
-		var mb_id = $("#mb_id").val();
-		var mb_pw = $("#mb_pw").val();
-		var hp_agree = $("#radio10").val();
+		var hp_agree1 = $("#radio10").val();
+		var hp_agree2 = $("#radio11").val();
 	
 		if(hp_select == ""){
 			alert('문의 분류를 선택해주세요');
 			document.hp.hp_select.focus();
 			return false();
 		}
-		
 		if(hp_subject == ""){
 			alert('문의 제목을 입력해주세요');
 			document.hp.hp_subject.focus();
@@ -35,23 +31,11 @@
 			document.hp.hp_content.focus();
 			return false();
 		}
-// 		if(mb_id == ""){
-// 			alert('아이디를 입력해주세요');
-// 			document.hp.hp_select.focus();
-// 			return false();
-// 		}
-// 		if(mb_pw == ""){
-// 			alert('비밀번호를 입력해주세요');
-// 			document.hp.mb_pw.focus();
-// 			return false();
-// 		}
-		if(hp_agree == ""){
+		if(hp_agree1 == ""){
 			alert('개인정보 이용에 동의를 선택해주세요');
 			documnet.hp.hp_agree.focus();
 			return false();
 		}
-		alert('함수');
-
 		document.hp.submit();
 	}
 
@@ -61,8 +45,7 @@
 <body style="">
 	<!-- 각종 요소 -->
 	<jsp:include page="../inc/include.jsp" />
-	<!-- 상위 배너 -->
-	<jsp:include page="../inc/topbanner.jsp"/>
+
 	<!-- 헤더/네비 -->
 	<jsp:include page="../inc/login_nav_bar.jsp" />
 	<!-- 사이드 퀵메뉴 -->
@@ -127,17 +110,6 @@
 									</select>
 								</td>
 							</tr>
-							
-							<tr>
-								<th>종류</th>
-								<td>
-									<input type="radio" name="hp_class" id="radio01" checked>
-										<label>영화 관련 문의</label>
-									<input type="radio" name="hp_class" id="radio02" >
-										<label>기타 문의</label>
-								</td>
-							</tr>
-							
 							<tr>
 								<th scope="row" class="req" >제목</th>
 								<td>
@@ -160,33 +132,33 @@
 						</tbody>
 					</table>
 			
-<!-- 					<div class="con_tit ty2"> -->
-<!-- 						<h4 class="tit">고객정보</h4> -->
-<!-- 						<div class="group_rgt"> -->
-<!-- 							<span class="txt_req">필수입력</span> -->
-<!-- 						</div> -->
-<!-- 					</div> -->
-<!-- 					<table class="tbl_form" summary="고객정보작성 테이블"> -->
-<%-- 						<caption>고객정보를 작성해주세요</caption> --%>
-<%-- 						<colgroup> --%>
-<%-- 							<col style="width: 15%;"> --%>
-<%-- 							<col style="width: auto;"> --%>
-<%-- 						</colgroup> --%>
-<!-- 						<tbody> -->
-<!-- 							<tr> -->
-<!-- 								<th scope="row" class="req">아이디</th> -->
-<!-- 								<td> -->
-<%-- 									<input type="text" class="ty2 inp_name" name="mb_id" id="mb_id" title="성명을 입력해주세요" value="${dto.mb_id }"> --%>
-<!-- 								</td> -->
-<!-- 							</tr> -->
-<!-- 							<tr> -->
-<!-- 								<th scope="row" class="req">비밀번호</th> -->
-<!-- 								<td> -->
-<%-- 									<input type="password" class="ty2 inp_id" title="삭제용 비밀번호" id="mb_pw" name="mb_pw" value="${dto.mb_pw }">  --%>
-<!-- 									<span class="txt_caution1 fl_r with_inp">사용되는 비밀번호는 수정 및 삭제에 이용되므로 필수로 작성해주시기 바랍니다.</span></td> -->
-<!-- 							</tr> -->
-<!-- 						</tbody> -->
-<!-- 					</table> -->
+					<div class="con_tit ty2">
+						<h4 class="tit">고객정보</h4>
+						<div class="group_rgt">
+							<span class="txt_req">필수입력</span>
+						</div>
+					</div>
+					<table class="tbl_form" summary="고객정보작성 테이블">
+						<caption>고객정보를 작성해주세요</caption>
+						<colgroup>
+							<col style="width: 15%;">
+							<col style="width: auto;">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row" class="req">아이디</th>
+								<td>
+									<input type="text" class="ty2 inp_name" name="mb_id" id="mb_id" title="성명을 입력해주세요" value="${dto.mb_id }" readonly>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row" class="req">비밀번호</th>
+								<td>
+									<input type="password" class="ty2 inp_id" title="삭제용 비밀번호" id="mb_pw" name="mb_pw" value="${dto.mb_pw }" readonly> 
+									<span class="txt_caution1 fl_r with_inp">사용되는 비밀번호는 수정 및 삭제에 이용됩니다.</span></td>
+							</tr>
+						</tbody>
+					</table>
 					<div class="con_tit ty2">
 						<h4 class="tit">개인정보 수집에 대한 동의</h4>
 						<div class="group_rgt">
@@ -206,19 +178,18 @@
 								보유기간 : 문의접수 후 처리 완료시점으로 부터 3년</span><br><br>
 								※ 1:1문의 서비스 제공을 위한 최소한의 개인정보이며 거부할 수 있습니다. 다만, 수집에 동의하지 않을 경우 서비스 이용이 제한됩니다
 						</div>
-						<div class="bx_inp" id="hp_agree">
 							<input type="radio" name="hp_agree" id="radio10">
 								<label for="radio10">동의 </label>
 							<input type="radio" name="hp_agree" id="radio11" checked>
 								<label for="radio11">동의하지않음</label>
-						</div>
+						
 						
 					<div class="submit">
 						<div class="btn_btm_wrap">
 							<input type="hidden" name="mb_id" id="mb_id" value="${dto.mb_id }">
 							<input type="hidden" name="mb_pw" id="mb_pw" value="${dto.mb_pw }">
 							<input type="button" class="btn_col3 ty6" value="취소하기" onclick="location.href='./Main.aim';">
-							<input type="button" class="btn_col2 ty6" value="문의하기" onclick="hpCheck()" >
+							<input type="button" style="background-color:#18315D" class="btn_col2 ty6" value="문의하기" onclick="hpCheck()" >
 						</div>
 					</div>
 						</form>

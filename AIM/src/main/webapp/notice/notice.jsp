@@ -10,8 +10,6 @@
 <body>
 <!-- 각종 요소 -->
 	<jsp:include page="../inc/include.jsp" />
-	<!-- 상위 배너 -->
-	<jsp:include page="../inc/topbanner.jsp"/>
 	<!-- 헤더/네비 -->
 	<jsp:include page="../inc/login_nav_bar.jsp" />
 	<!-- 사이드 퀵메뉴 -->
@@ -31,7 +29,7 @@
 					style="width: 33.33%; left: 0%;">
 					<span>공지사항</span>
 				</button>
-				<form action="./NtWriteForm.nt" method="post" >
+				<form action="./NtAdminLoginAction.nt" method="post" >
 				<div class="tab_con">
 					<h3 class="hidden">공지사항</h3>
 					<ul class="tab_wrap inner">
@@ -48,10 +46,10 @@
 									</colgroup>
 									<thead>
 										<tr>
-											<th scope="col">번호</th>
-											<th scope="col">작성자</th>
-											<th scope="col">제목</th>
-											<th scope="col">등록일</th>
+											<th scope="col" style="text-align:center">번호</th>
+											<th scope="col" style="text-align:center">작성자</th>
+											<th scope="col" style="text-align:center">제목</th>
+											<th scope="col" style="text-align:center">등록일</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -59,7 +57,7 @@
 										<tr>
 											<td><strong class="ico_imp"> ${dto.nt_bno }</strong></td>
 											<td>${dto.mb_id }</td>
-											<td class="text_l">
+											<td class="text_l" style="text-align:left">
 												<a href="./NtContent.nt?nt_bno=${dto.nt_bno }&pageNum=${pageNum}">${dto.nt_subject }</a>
 											</td>
 											<td>${dto.nt_date }</td>
@@ -92,7 +90,7 @@
 									<input type="hidden" name="mb_id" id="mb_id" value="${dto.mb_id }">
 									<input type="hidden" name="mb_pw" id="mb_pw" value="${dto.mb_pw }">
 									<c:if test="${mb_id.equals('admin') }">
-										<input type="submit" value="공지사항 올리기" class="btn_col2 ty6">
+										<input type="submit" style="background-color:#18315D" value="공지사항 올리기" class="btn_col2 ty6">
 									</c:if>
 									
 									

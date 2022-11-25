@@ -10,7 +10,6 @@
 <!-- 각종 요소 -->
 <jsp:include page="../inc/include.jsp"/>
 <!-- 상위 배너 -->
-<jsp:include page="../inc/topbanner.jsp"/>
 <!-- 헤더/네비 -->
 <jsp:include page="../inc/nav_bar.jsp"/>
 
@@ -88,21 +87,21 @@
 <tbody>	
 			<c:forEach var="dto" items="${adminMovieList }">
 			<tr>
-				<td scope="col">${dto.movieCd }</td>
-				<td scope="col">${dto.movieNm }</td>
-				<td scope="col">${dto.openDt }</td>
-				<td scope="col">${dto.genreNm }</td>
-				<td scope="col">${dto.directors }</td>
-				<td scope="col"> <img src="${dto.poster }" width="100" height="100"></td>
-				<td scope="col">${dto.audiAcc }</td>
+				<td>${dto.movieCd }</td>
+				<td>${dto.movieNm }</td>
+				<td>${dto.openDt }</td>
+				<td>${dto.genreNm }</td>
+				<td>${dto.directors }</td>
+				<td> <img src="${dto.poster }" width="100" height="100"></td>
+				<td>${dto.audiAcc }</td>
 				
-				<td scope="col">${dto.bookRating }</td>
-				<td scope="col">${dto.watchGradeNm }</td>
-				<td scope="col">${dto.showTm }</td>
-				<td scope="col">${dto.actors }</td>
-				<td scope="col">${dto.contents }</td>
+				<td>${dto.bookRating }</td>
+				<td>${dto.watchGradeNm }</td>
+				<td>${dto.showTm }</td>
+				<td>${dto.actors }</td>
+				<td>${dto.contents }</td>
 				<td class="hj">${dto.boxrank }</td>
-				<td scope="col">
+				<td>
 				<a href="./AdminMovieModify.mv?movieCd=${dto.movieCd }">수정</a>
 				<br>-<br>
 				<a href="./AdminMovieDelete.mv?movieCd=${dto.movieCd }">삭제</a>
@@ -116,12 +115,10 @@
 		<br><br>
 		
 		<div align="center">
-		<input type="button" value="뒤로가기" onclick="history.back();" style="color:#fff; background:#18315D; width:75px; height:25px; margin:5px; border-radius:5px; border:1px solid #fff;">
+		<input class="btn" type="button" value="뒤로가기" onclick="history.back();" style="color:#fff; background:#18315D; width:100px; height:40px; margin:5px; border-radius:5px; border:1px solid #fff;">
 		</div>
 	</div>
-		
-		
-		
+	
 		
 	
 <!-- 페이지 좌우 여백 -->

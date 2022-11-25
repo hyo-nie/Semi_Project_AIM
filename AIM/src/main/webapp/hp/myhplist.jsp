@@ -10,8 +10,6 @@
 <body>
 	<!-- 각종 요소 -->
 	<jsp:include page="../inc/include.jsp" />
-	<!-- 상위 배너 -->
-	<jsp:include page="../inc/topbanner.jsp"/>
 	<!-- 헤더/네비 -->
 	<jsp:include page="../inc/login_nav_bar.jsp" />
 	<!-- 사이드 퀵메뉴 -->
@@ -51,23 +49,14 @@
 									</colgroup>
 									<thead>
 										<tr>
-											<th scope="col">번호</th>
-											<th scope="col">작성자</th>
-											<th scope="col">제목</th>
-											<th scope="col">등록일</th>
+											<th scope="col" style="text-align:center">번호</th>
+											<th scope="col" style="text-align:center">작성자</th>
+											<th scope="col" style="text-align:center">제목</th>
+											<th scope="col" style="text-align:center">등록일</th>
 										</tr>
 									</thead>
 									<tbody>
-<%-- 										<c:forEach var="dto" items="${HpListAll }"> --%>
-<!-- 										<tr> -->
-<%-- 											<td>${dto.hp_bno }</td> --%>
-<%-- 											<td>${dto.mb_id }</td> --%>
-<!-- 											<td>  -->
-<%-- 												<a href="./MyHpContent.hp?hp_bno=${dto.hp_bno }&pageNum=${pageNum}">${dto.hp_subject }</a> --%>
-<!-- 											</td> -->
-<%-- 											<td>${dto.hp_date }</td> --%>
-<!-- 										</tr> -->
-<%-- 										</c:forEach> --%>
+
 							<tbody>
 					
 					<c:forEach var="dto" items="${HpListAll }">
@@ -76,11 +65,7 @@
 							<td>${dto.hp_bno }</td>
 							<td>${dto.mb_id }</td>
 					
-							<td> 
-								<c:if test="${dto.hp_re_lev > 0}">
-									<img src="./re.gif" width="${dto.hp_re_lev * 10 }">
-										
-								</c:if>
+							<td style="text-align:left"> 
 								<a href="./HpPwCheck.hp?hp_bno=${dto.hp_bno }&pageNum=${pageNum}">${dto.hp_subject }</a>
 							</td>
 							<td>

@@ -10,7 +10,6 @@
 <!-- 각종 요소 -->
 <jsp:include page="../inc/include.jsp"/>
 <!-- 상위 배너 -->
-<jsp:include page="../inc/topbanner.jsp"/>
 <!-- 헤더/네비 -->
 <jsp:include page="../inc/nav_bar.jsp"/>
 
@@ -50,22 +49,22 @@
 		
 		<table border="1" class="tbl_listb text_c" >
 				<colgroup>
-			<col style="width: auto; height: 70px;">
+			<col style="width: auto; ">
 		</colgroup>
 			<tr>
-				<th scope="col">순위</th>
-				<th scope="col">제목</th>
-				<th scope="col">포스터/줄거리/평점(크롤링)</th>
-				<th scope="col">개봉일</th>
-				<th scope="col">누적관객수</th>
+				<th scope="col" style="height:50px;">순위</th>
+				<th scope="col" style="height:50px;">제목</th>
+				<th scope="col" style="height:50px;">포스터/줄거리/평점(크롤링)</th>
+				<th scope="col" style="height:50px;">개봉일</th>
+				<th scope="col" style="height:50px;">누적관객수</th>
 			</tr>
 			
 			<c:set var="j" value="1"></c:set>
 			<c:forEach var="dto" items="${boxOfficeList }">
 			<tr>
-				<td>${dto.get("rank") }</td>
-				<td>${dto.get("movieNm") }</td>
-				<td> 
+				<td style="height:50px;">${dto.get("rank") }</td>
+				<td style="height:50px;">${dto.get("movieNm") }</td>
+				<td style="height:50px;"> 
 					<select name="poster${j }">	
 						<option>포스터를 선택하세요.</option>
 						<c:forEach var="cgv" items="${cgvList }">
@@ -76,8 +75,8 @@
 						<c:set var="j" value="${j+1 }"></c:set>
 					</select> 
 				</td>
-				<td>${dto.get("openDt") }</td>
-				<td>${dto.get("audiAcc") }</td>
+				<td style="height:50px;">${dto.get("openDt") }</td>
+				<td style="height:50px;">${dto.get("audiAcc") }</td>
 			</tr>
 			</c:forEach>
 			
@@ -93,11 +92,10 @@
 		
 		<br><br>
 	<div align="center">
-		<input type="submit" value="모두 저장" style="color:#fff; background:#18315D; width:75px; height:25px; margin:5px; border-radius:5px; border:1px solid #fff;">
-		<input type="button" value="취소" onclick="history.back();" style="color:#fff; background:#18315D; width:75px; height:25px; margin:5px; border-radius:5px; border:1px solid #fff;">
+		<input class="btn" type="submit" value="모두 저장" style="color:#fff; background:#18315D; width:100px; height:40px; margin:5px; border-radius:5px; border:1px solid #fff;">
+		<input class="btn" type="button" value="취소" onclick="history.back();" style="color:#fff; background:#8C8C8C; width:100px; height:40px; margin:5px; border-radius:5px; border:1px solid #fff;">
 	</div>
 	</form>
-	
 	
 	
 <!-- 페이지 좌우 여백 -->

@@ -7,8 +7,7 @@
 <title>Insert title here</title>
 	<!-- 각종 요소 -->
 	<jsp:include page="../inc/include.jsp" />
-	<!-- 상위 배너 -->
-	<jsp:include page="../inc/topbanner.jsp"/>
+	
 	<!-- 헤더/네비 -->
 	<jsp:include page="../inc/login_nav_bar.jsp" />
 	<!-- 사이드 퀵메뉴 -->
@@ -34,7 +33,7 @@
 						<li class="active">
 							<div class="tab_con ty3">
 								<h4 class="hidden">전체 공지</h4>
-					<form action="./NtUpdatePro.nt?nt_bno=${dto.nt_bno }&pageNum=${pageNum }" method="post" enctype="multipart/form-data">
+					<form action="./NtUpdatePro.nt?nt_bno=${dto.nt_bno }&pageNum=${pageNum }" method="post">
 						<table class="tbl_list text_c" summary="공지사항에 대한 표입니다">
 						<caption>공지 사항을 작성해주세요</caption>
 						<colgroup>
@@ -62,8 +61,8 @@
 							</tr>
 						</tbody>
 					</table>
-					<input type="hidden" name="mb_id" id="mb_id" value="${dto.mb_id }">
-					<input type="hidden" name="mb_pw" id="mb_pw" value="${dto.mb_pw }">
+					<input type="hidden" name="mb_id" id="mb_id" value="${mdto.mb_id }">
+					<input type="hidden" name="mb_pw" id="mb_pw" value="${mdto.mb_pw }">
 					<input type="submit" class="btn_col3 ty6" value="수정하기">
 					<a href="./NtList.nt" class="btn_col2 ty6">공지사항 목록</a>
 								</form>

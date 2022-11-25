@@ -7,8 +7,6 @@
 <title>Insert title here</title>
 	<!-- 각종 요소 -->
 	<jsp:include page="../inc/include.jsp" />
-	<!-- 상위 배너 -->
-	<jsp:include page="../inc/topbanner.jsp"/>
 	<!-- 헤더/네비 -->
 	<jsp:include page="../inc/login_nav_bar.jsp" />
 	<!-- 사이드 퀵메뉴 -->
@@ -74,8 +72,10 @@
 					</table>
 					<input type="hidden" name="mb_id" id="mb_id" value="${dto.mb_id }">
 					<input type="hidden" name="mb_pw" id="mb_pw" value="${dto.mb_pw }">
-					<input type="submit" value="작성하기" class="btn_col2 ty6">
-								</form>
+					<input type="submit" style="background-color:#18315D" value="작성" class="btn_col2 ty6">
+					<a href="./NtList.nt" class="btn_col3 ty6">취소</a>
+					
+					</form>
 								
 							</div></li>
 						

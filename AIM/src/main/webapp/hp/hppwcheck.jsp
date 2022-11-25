@@ -25,8 +25,7 @@
 	%>
 	<!-- 각종 요소 -->
 	<jsp:include page="../inc/include.jsp" />
-	<!-- 상위 배너 -->
-	<jsp:include page="../inc/topbanner.jsp" />
+
 	<!-- 헤더/네비 -->
 	<jsp:include page="../inc/nav_bar.jsp" />
 	
@@ -57,8 +56,8 @@
 			</tbody>
 		</table>
 			<div class="btn_btm_wrap">
-				<a href="./MyHpList.hp" class="btn_col3 ty6">목록으로 돌아가기</a>
-				<input type="submit" value="비밀번호 확인" class="btn_col2 ty6" onclick='pwCheck();'>
+				<a href="./MyHpList.hp" class="btn_col3 ty6">공지 목록</a>
+				<input type="submit" style="background-color:#18315D" value="비밀번호 확인" class="btn_col2 ty6" onclick='pwCheck();'>
 			</div>
 			
 		</div>

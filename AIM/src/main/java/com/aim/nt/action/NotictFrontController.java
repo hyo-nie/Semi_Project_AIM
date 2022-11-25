@@ -58,6 +58,17 @@ public class NotictFrontController extends HttpServlet {
 				e.printStackTrace();
 			}	
 		}
+    	// 공지사항 어드민 확인
+    	else if(command.equals("/NtAdminLoginAction.nt")) {
+    		System.out.println(" C : /NtAdminLoginAction.nt 호출");
+    		
+    		action = new NtAdminLoginAction();
+    		try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+    	}
     	
     	// 공지사항 글 쓰기
     	else if(command.equals("/NtWrite.nt")) {

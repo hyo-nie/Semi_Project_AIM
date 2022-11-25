@@ -10,8 +10,7 @@
 <body>
 	<!-- 각종 요소 -->
 	<jsp:include page="../inc/include.jsp" />
-	<!-- 상위 배너 -->
-	<jsp:include page="../inc/topbanner.jsp"/>
+
 	<!-- 헤더/네비 -->
 	<jsp:include page="../inc/login_nav_bar.jsp" />
 	<!-- 사이드 퀵메뉴 -->
@@ -56,8 +55,8 @@
 								<th scope="row" class="req">제목</th>
 								<td>
 									<div class="bx_textarea">
-										<input type="text" class="ty2 w_full" placeholder="제목을 입력해주세요" title="공지사항 제목입력" name="hp_subject" 
-										value="↪ [답글] : ">
+										<input type="text" class="ty2 w_full" placeholder="제목을 입력해주세요" title="답변 제목입력" name="hp_subject" 
+										value="↪ [답변] : [${dto.hp_subject }]">
 									</div>
 								</td>
 							</tr>
@@ -66,44 +65,22 @@
 								<td>
 									<div class="bx_textarea">
 										<textarea class="ty2" cols="10" rows="10" name="hp_content" 
-										title="공지사항 내용을 입력해주세요"></textarea>
+										title="답변 내용을 입력해주세요">${dto.hp_content } &#10;&#10;&#10;고객센터 답변 : &#10;&#10;&#10;</textarea>
+										</p>
 								</div></td>
 							</tr>
 						</tbody>
 					</table>
-<!-- 					<table class="tbl_form" summary="고객정보작성 테이블"> -->
-<%-- 						<caption>고객정보를 작성해주세요</caption> --%>
-<%-- 						<colgroup> --%>
-<%-- 							<col style="width: 15%;"> --%>
-<%-- 							<col style="width: auto;"> --%>
-<%-- 						</colgroup> --%>
-<!-- 						<tbody> -->
-<!-- 							<tr>						 -->
-<!-- 								<th scope="row" class="req">관리자</th> -->
-<!-- 								<td> -->
-<!-- 									<div class="bx_textarea"> -->
-<%-- 										<input type="text" class="ty2 inp_name" title="어드민 입력" name="mb_id" value="${dto.mb_id }"> --%>
-<!-- 										</div> -->
-<!-- 								</td> -->
-<!-- 							</tr> -->
-<!-- 							<tr>						 -->
-<!-- 								<th scope="row" class="req">관리자 비밀번호</th> -->
-<!-- 								<td> -->
-<!-- 									<div class="bx_textarea"> -->
-<!-- 										<input type="password" class="ty2 inp_name" title="어드민 비밀번호" name="mb_pw"> -->
-<!-- 										</div> -->
-<!-- 								</td> -->
-<!-- 							</tr> -->
-<!-- 							</tbody> -->
-					</table>
-					<input type="hidden" name="mb_id" id="mb_id" value="${dto.mb_id }">
-					<input type="hidden" name="mb_pw" id="mb_pw" value="${dto.mb_pw }">
+
+					<input type="hidden" name="mb_id" id="mb_id" value="${mdto.mb_id }">
+					<input type="hidden" name="mb_pw" id="mb_pw" value="${mdto.mb_pw }">
 					<input type="hidden" name="hp_bno" value="${param.hp_bno }">
 					<input type="hidden" name="hp_re_ref" value="${param.hp_re_ref }">
 					<input type="hidden" name="hp_re_lev" value="${param.hp_re_lev }">
 					<input type="hidden" name="hp_re_seq" value="${param.hp_re_seq }">
-					<input type="submit" value="작성하기" class="btn_col2 ty6">
-								</form>
+					<input type="submit" style="background-color:#18315D" value="작성하기" class="btn_col2 ty6">
+					<input type="button" class="btn_col3 ty6" value="문의목록" onclick="location.href='./MyHpList.hp';" >
+					</form>
 								
 								
 						

@@ -71,10 +71,9 @@ public class NtListAction implements Action {
 			endPage = pageCount;
 		}
 
-
+		MemberDAO mdao = new MemberDAO();
+		MemberDTO mdto = mdao.getMember(mb_id);
 		
-		MemberDAO dao2 = new MemberDAO();
-		MemberDTO dto =  dao2.getMember(mb_id);
 		
 		// Action -> jsp 페이지 정보 전달(request 영역객체 저장)
 		request.setAttribute("NtListAll", NtListAll);
@@ -86,10 +85,9 @@ public class NtListAction implements Action {
 		request.setAttribute("pageBlock", pageBlock);
 		request.setAttribute("startPage", startPage);
 		request.setAttribute("endPage", endPage);
-		request.setAttribute("dto", dto);
+		request.setAttribute("mdto", mdto);
 		
 		
-
 		// 페이지 이동준비(티켓 생성)
 		ActionForward forward = new ActionForward();
 		forward.setPath("./notice/notice.jsp");

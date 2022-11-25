@@ -50,7 +50,7 @@
 					<c:set var="popcorn" value="${popcornList[num] }"/>
 						<li class="">
 							<a href="./PopcornDetail.st?st_num=${popcorn.st_num}" class="btn_category_product"> 
-							<span class="com_list_img_wrap">
+							<span class="com_list_img_wrap" style="width: 270px; height: 270px;">
 								<img src="./assets/img/${popcorn.st_img }" alt="${popcorn.st_name }"></span> 
 								<span class="com_list_text_wrap"> 
 								<span class="com_list_text_title">${popcorn.st_name }</span> 

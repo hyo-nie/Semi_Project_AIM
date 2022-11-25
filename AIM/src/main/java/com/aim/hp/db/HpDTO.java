@@ -9,8 +9,8 @@ public class HpDTO {
 	private String hp_subject; // 문의 제목
 	private String hp_content; // 문의 내용
 	private Date hp_date; // 문의 남긴 시간
-	private String hp_select; // 문의 분류
-	private String hp_class; // 문의 종류 (영화 or 기타)
+	private int hp_select; // 문의 분류
+	private String hp_selectN; // 문의 분류 내용
 	private int hp_re_ref; // 참조 번호 (글 그룹 나눔)
 	private int hp_re_lev; // 참조 레벨 ( 답글 달시 이용)	
 	private int hp_re_seq; // 답글 순서 표시
@@ -50,17 +50,17 @@ public class HpDTO {
 	public void setHp_date(Date hp_date) {
 		this.hp_date = hp_date;
 	}
-	public String getHp_select() {
+	public int getHp_select() {
 		return hp_select;
 	}
-	public void setHp_select(String hp_select) {
+	public void setHp_select(int hp_select) {
 		this.hp_select = hp_select;
 	}
-	public String getHp_class() {
-		return hp_class;
+	public String getHp_selectN() {
+		return hp_selectN;
 	}
-	public void setHp_class(String hp_class) {
-		this.hp_class = hp_class;
+	public void setHp_selectN(String hp_selectN) {
+		this.hp_selectN = hp_selectN;
 	}
 	public int getHp_re_ref() {
 		return hp_re_ref;
@@ -83,11 +83,11 @@ public class HpDTO {
 	@Override
 	public String toString() {
 		return "HpDTO [hp_bno=" + hp_bno + ", mb_id=" + mb_id + ", mb_pw=" + mb_pw + ", hp_subject=" + hp_subject
-				+ ", hp_content=" + hp_content + ", hp_date=" + hp_date + ", hp_select=" + hp_select + ", hp_class="
-				+ hp_class + ", hp_re_ref=" + hp_re_ref + ", hp_re_lev=" + hp_re_lev + ", hp_re_seq=" + hp_re_seq + "]";
+				+ ", hp_content=" + hp_content + ", hp_date=" + hp_date + ", hp_select=" + hp_select + ", hp_selectN="
+				+ hp_selectN + ", hp_re_ref=" + hp_re_ref + ", hp_re_lev=" + hp_re_lev + ", hp_re_seq=" + hp_re_seq
+				+ "]";
 	}
 	
 	
-
 	
 }
