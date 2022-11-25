@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>AIM (All In Movie!) - 고객센터</title>
 </head>
 <body>
 	<!-- 각종 요소 -->
@@ -35,8 +35,6 @@
 					style="width: 33.33%; left: 66.67%;">
 					<span>문의 내용 목록</span>
 				</button>
-				<form action="./HpAdminLoginAction.hp?hp_bno=${dto.hp_bno}&pageNum=${pageNum }&hp_re_ref=${dto.hp_re_ref }&hp_re_seq=${dto.hp_re_seq}&hp_re_lev=${dto.hp_re_lev }"
-					method="post">
 				<div class="tab_con">
 					<h3 class="hidden">문의 내용 목록</h3>
 					<ul class="tab_wrap inner">
@@ -120,8 +118,12 @@
 									</tbody>
 								
 								</table>
+							
 									 <input type="hidden" name="mb_id" id="mb_id" value="${mdto.mb_id }">
 									 <input type="hidden" name="mb_pw" id="mb_pw" value="${mdto.mb_pw }">
+									 <input type="hidden" name="hp_subject" id="hp_subject" value="${dto.hp_subject }">
+									 <input type="hidden" name="hp_select" id="hp_select" value="${dto.hp_select }">
+									 <input type="hidden" name="hp_content" id="hp_content" value="${dto.hp_select }">
 									
 									
 									<div class="btn_btm_wrap">
@@ -131,23 +133,22 @@
   	        						 	onclick="location.href= './MyHpDeleteCheck.hp?hp_bno=${dto.hp_bno}&pageNum=${param.pageNum }';">
 									 <a href="./MyHpList.hp" class="btn_col3 ty6">문의 목록</a>
   	        						<c:if test="${mb_id.equals('admin') }">
-  	        						 <input type="submit" style="background-color:#18315D" value="문의 답글 달기" class="btn_col2 ty6">
+  	        						 <input type="button" style="background-color:#18315D" value="문의 답글 달기" class="btn_col2 ty6" 
+  	        						 onclick="location.href='./HpAdminLoginAction.hp?hp_bno=${dto.hp_bno}&pageNum=${pageNum }&hp_re_ref=${dto.hp_re_ref }&hp_re_seq=${dto.hp_re_seq}&hp_re_lev=${dto.hp_re_lev }';">
   	        						</c:if>
-									 
 								</div>
+
 							</div>
 						</li>
 					</ul>
 				</div>
-				</form>
+				
 			</li>
 		
 		<li class="wrap_nav_underline"><span class="nav_underline"></span></li>
 		</ul>
 	</div>
-  	   
-  	
-  	
-  	</table>
+  
+  
 </body>
 </html>

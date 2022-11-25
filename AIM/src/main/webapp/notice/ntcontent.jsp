@@ -65,11 +65,11 @@
 								<div class="btn_btm_wrap">
 									<input type="hidden" name="mb_pw" id="mb_pw" value="${dto.mb_pw }">
 									<c:if test="${mb_id.equals('admin') }">
-									 <input type="submit" value="공지 사항 수정" class="btn_col2 ty6">
-  	        						 <input type="button" value="공지 사항 삭제" class="btn_col2 ty6" 
+									 <input type="submit" style="background-color:#18315D" value="공지 사항 수정" class="btn_col2 ty6">
+  	        						 <input type="button" value="공지 사항 삭제" class="btn_col3 ty6" 
   	        						 	onclick="location.href= './NtDelete.nt?nt_bno=${dto.nt_bno}&pageNum=${pageNum }';">
 									 </c:if>
-									 <a href="./NtList.nt" class="btn_col2 ty6">공지사항 목록</a>
+									 <a href="./NtList.nt" style="background-color:#18315D" class="btn_col2 ty6">공지사항 목록</a>
 								</div>
 							</div></li>
 					</ul>

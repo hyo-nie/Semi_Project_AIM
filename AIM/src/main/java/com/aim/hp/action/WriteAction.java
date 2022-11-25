@@ -39,7 +39,7 @@ public class WriteAction implements Action {
 		dto.setMb_pw(request.getParameter("mb_pw"));
 		dto.setHp_subject(request.getParameter("hp_subject"));
 		dto.setHp_content(request.getParameter("hp_content"));
-		dto.setHp_select(Integer.parseInt(request.getParameter("hp_select")));
+		dto.setHp_select(request.getParameter("hp_select"));
 		
 		
 		

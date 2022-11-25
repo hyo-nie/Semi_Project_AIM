@@ -35,7 +35,7 @@
 				<div class="tab_con">
 					<ul class="tab_wrap inner">
 						<li class="active">
-						<button type="button" class="tab_tit" id="1" style="left: 0px; margin-left: 217.391px;"></button>
+						
 							<div class="tab_con ty3">
 								<h4 class="hidden">문의 내용 목록</h4>
 							

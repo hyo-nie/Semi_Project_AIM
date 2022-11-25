@@ -40,7 +40,7 @@ public class MyHpUpdateProAction implements Action {
 		dto.setMb_id(request.getParameter("mb_id"));
 		dto.setMb_pw(request.getParameter("mb_pw"));
 		dto.setHp_subject(request.getParameter("hp_subject"));
-		dto.setHp_select(Integer.parseInt(request.getParameter("hp_select")));
+		dto.setHp_select(request.getParameter("hp_select"));
 		dto.setHp_selectN(request.getParameter("hp_selectN"));
 		dto.setHp_content(request.getParameter("hp_content"));
 		

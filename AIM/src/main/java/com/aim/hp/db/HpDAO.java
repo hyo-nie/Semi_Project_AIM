@@ -123,7 +123,7 @@ public class HpDAO {
 			pstmt.setInt(6, hp_bno);
 			pstmt.setInt(7, 0);
 			pstmt.setInt(8, 0);
-			pstmt.setInt(9, dto.getHp_select());
+			pstmt.setString(9, dto.getHp_select());
 			pstmt.setString(10, dto.getHp_selectN());
 			
 			
@@ -201,7 +201,7 @@ public class HpDAO {
 					dto.setHp_re_lev(rs.getInt("hp_re_lev"));
 					dto.setHp_re_ref(rs.getInt("hp_re_ref"));
 					dto.setHp_re_seq(rs.getInt("hp_re_seq"));
-					dto.setHp_select(rs.getInt("hp_select"));
+					dto.setHp_select(rs.getString("hp_select"));
 					
 					// List
 					HpList.add(dto);
@@ -257,7 +257,7 @@ public class HpDAO {
 					dto.setHp_re_lev(rs.getInt("hp_re_lev"));
 					dto.setHp_re_ref(rs.getInt("hp_re_ref"));
 					dto.setHp_re_seq(rs.getInt("hp_re_seq"));
-					dto.setHp_select(rs.getInt("hp_select"));
+					dto.setHp_select(rs.getString("hp_select"));
 								
 					// DTO -> List
 					HpList.add(dto);
@@ -309,7 +309,7 @@ public class HpDAO {
 					dto.setHp_re_lev(rs.getInt("hp_re_lev"));
 					dto.setHp_re_ref(rs.getInt("hp_re_ref"));
 					dto.setHp_re_seq(rs.getInt("hp_re_seq"));
-					dto.setHp_select(rs.getInt("hp_select"));
+					dto.setHp_select(rs.getString("hp_select"));
 				}
 				
 				System.out.println(" DAO : 글 정보 1개 저장완료 ");
@@ -351,7 +351,7 @@ public class HpDAO {
 									
 							//??? 
 							pstmt.setString(1, dto.getHp_subject());
-							pstmt.setInt(2, dto.getHp_select());
+							pstmt.setString(2, dto.getHp_select());
 							pstmt.setString(3, dto.getHp_selectN());
 							pstmt.setString(4, dto.getHp_content());
 							pstmt.setInt(5, dto.getHp_bno());

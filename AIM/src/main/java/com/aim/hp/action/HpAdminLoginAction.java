@@ -48,9 +48,11 @@ public class HpAdminLoginAction implements Action {
 		dto.setMb_id(request.getParameter("mb_id"));
 		dto.setMb_pw(request.getParameter("mb_pw"));
 		dto.setHp_content(request.getParameter("hp_content"));
+		dto.setHp_select(request.getParameter("hp_select"));
 		
 		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"+request.getParameter("hp_content"));
 		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"+request.getParameter("hp_subject"));
+		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"+request.getParameter("hp_select"));
 		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"+request.getParameter("mb_id"));
 		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"+request.getParameter("mb_pw"));
 		

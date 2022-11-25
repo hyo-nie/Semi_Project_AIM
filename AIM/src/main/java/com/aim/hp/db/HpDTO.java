@@ -9,7 +9,7 @@ public class HpDTO {
 	private String hp_subject; // 문의 제목
 	private String hp_content; // 문의 내용
 	private Date hp_date; // 문의 남긴 시간
-	private int hp_select; // 문의 분류
+	private String hp_select; // 문의 분류
 	private String hp_selectN; // 문의 분류 내용
 	private int hp_re_ref; // 참조 번호 (글 그룹 나눔)
 	private int hp_re_lev; // 참조 레벨 ( 답글 달시 이용)	
@@ -50,10 +50,10 @@ public class HpDTO {
 	public void setHp_date(Date hp_date) {
 		this.hp_date = hp_date;
 	}
-	public int getHp_select() {
+	public String getHp_select() {
 		return hp_select;
 	}
-	public void setHp_select(int hp_select) {
+	public void setHp_select(String hp_select) {
 		this.hp_select = hp_select;
 	}
 	public String getHp_selectN() {
@@ -88,6 +88,6 @@ public class HpDTO {
 				+ "]";
 	}
 	
-	
-	
+
+
 }
