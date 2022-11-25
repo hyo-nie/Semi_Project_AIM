@@ -25,10 +25,9 @@ public class OrderDAO {
 	// 디비 연결해주는 메서드(커넥션풀)
 	private Connection getConnection() throws Exception{
 		
-		// 1. 드라이버 로드 // 2. 디비연결
-		Context initCTX = new InitialContext(); // 업캐스팅 관계
-		DataSource ds = (DataSource) initCTX.lookup("java:comp/env/jdbc/AIM"); // 다운캐스팅
-		// 디비정보(연결) 불러오기
+		Context initCTX = new InitialContext();
+		DataSource ds = (DataSource) initCTX.lookup("java:comp/env/jdbc/AIM");
+
 		con = ds.getConnection();
 		
 		System.out.println(" DAO : 디비연결 성공(커넥션풀) ");
@@ -37,7 +36,6 @@ public class OrderDAO {
 		return con;
 	}
 		
-		// 자원해제 메서드-closeDB()
 		public void closeDB() {
 			System.out.println("DAO : 디비연결자원 해제");
 			
@@ -50,7 +48,6 @@ public class OrderDAO {
 				e.printStackTrace();
 			}
 		}
-		// 자원해제 메서드 - closeDB()
 		
 		/**
 		 * addOrder(OrderDTO oDTO, ArrayList ctList, ArrayList, prdtList)

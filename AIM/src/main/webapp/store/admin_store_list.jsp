@@ -13,7 +13,18 @@
 <title>AIM - 스토어 상품 리스트</title>
 <link href="./assets/css/common.css" rel="stylesheet" type="text/css">
 <link href="./assets/css/default.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
 
+function deleteChk(st_num){
+		if(confirm("상품을 삭제하시겠습니까?")){
+			location.href="./AdminStoreDel.ad?st_num="+st_num;
+					
+		} else{
+			return;
+		}
+	}
+
+</script>
 </head>
 <body>
 	
@@ -36,6 +47,7 @@
 		</div>
 	</div>
 
+
 	<table class="tbl_list text_c" style="width: 1100px; margin: 0 auto;">
 		<caption>스토어 상품 리스트</caption>
 		<colgroup>
@@ -56,6 +68,7 @@
 			</tr>
 		</thead>
 		
+		
 		<tbody>
 			<c:forEach var="dto" items="${adminStoreList}">
 				<tr>
@@ -72,7 +85,8 @@
 					<td>
 						<a href="./AdminStoreModify.ad?st_num=${dto.st_num }">수정</a>
 						/
-						<a href="./AdminStoreDel.ad?st_num=${dto.st_num }">삭제</a>
+						<a href='javascript:deleteChk("${dto.st_num}")'>삭제</a>
+
 					</td>
 				</tr>
 			</c:forEach>
@@ -80,13 +94,18 @@
 		
 		</tbody>
 		
-
+	
 	</table>
+
 	
 	<div class="btn_btm_wrap">
 		<a href="./AdminStoreAdd.ad" class="btn_col3 ty6">상품 등록</a>
 		<a href="./StoreMain.st" class="btn_col3 ty6">스토어 메인</a>
 	</div>
+
+
+
+
 
 	<!-- 약관 -->
 	<jsp:include page="../inc/footer.jsp" />

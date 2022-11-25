@@ -212,7 +212,7 @@ public class ReservationDAO {
 		
 		try {
 			con = getConnection();
-			sql = "select * from schedule where branchCd = ? && movieCd = ? && sc_date = ?";
+			sql = "select * from schedule A join room B on A.roomCd = B.roomCd where A.branchCd = ? && A.movieCd = ? && A.sc_date = ?";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setInt(1, branchCd);
 			pstmt.setString(2, movieCd);
@@ -235,6 +235,7 @@ public class ReservationDAO {
 				dto.setMovieCd(rs.getString("movieCd"));
 				dto.setRuncount(rs.getInt("runcount"));
 				dto.setSeatcomp(rs.getString("seatcomp"));
+				dto.setRoomNum(rs.getString("roomNum"));
 				
 				scheduleList.add(dto);
 			}
@@ -468,6 +469,8 @@ public class ReservationDAO {
 		return dto;
 	}
 	// getScheduleJoin(scCode)
+	
+	
 	
 	/**
 	 *  makeTkCode() 

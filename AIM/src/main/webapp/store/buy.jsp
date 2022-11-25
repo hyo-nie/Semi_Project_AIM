@@ -53,6 +53,7 @@ function requestPay(user_tel) {
           if (rsp.success) {
              console.log("결제 성공!");
               // 결제 성공 시 이동하는 페이지(./OrderList.or)
+              alert('결제되었습니다! 주문하신 상품의 바코드는 주문 상세 페이지에서 확인 가능합니다.');
               location.href="./OrderAddAction.or?mb_tel="+user_tel+"&totalAmountMoney="+payAmount;
               
           } else {
@@ -74,7 +75,7 @@ function requestPay(user_tel) {
 		
 		if(check){
 			console.log("체크 완료");
- 			requestPay(user_tel);
+			requestPay(user_tel);
 //			location.href="./OrderAddAction.or?mb_tel="+user_tel+"&totalAmountMoney="+payAmount;
 			
 		} else{
@@ -158,7 +159,7 @@ function requestPay(user_tel) {
 	<div id="contents" class="gift_store">
 		
 		<div class="cart_step_wrap">
-			<ul class="cart_step step_unit3">
+			<ul class="cart_step step_unit3" style="margin-left: -60px;">
 				<li class="step0"><span>STEP 01</span><strong>장바구니</strong></li>
 				<li class="step2 active"><span>STEP 02</span><strong>결제하기</strong></li>
 				<li class="step3"><span>STEP 03</span><strong>결제완료</strong></li>
@@ -192,15 +193,15 @@ function requestPay(user_tel) {
 	                        ${prdt.st_text} </span>
 	                </div>
 	                <div class="product_info_wrap" style= "width: 130px;">
-	                    <span class="product_info_one_price" style= "width: 120px;">
+	                    <span class="product_info_one_price" style= "width: 120px; margin-left: 27px;">
 	                        <fmt:formatNumber value="${prdt.st_price}"/></span>
 	                </div>
 	                
-	                <div class="product_info_cnt_wrap" style= "width: 200px;">
+	                <div class="product_info_cnt_wrap" style= "width: 100px; margin-left: 61px; margin-top: 25px;">
 	                    ${cart.c_amount}
 	                </div>
 	                
-	                <div class="product_info_cnt_wrap">
+	                <div class="product_info_cnt_wrap" style="margin-left: 52px; margin-top: 25px;">
 	                    <fmt:formatNumber value="${prdt.st_price * cart.c_amount}" />원
 	                </div>
 	                
@@ -211,7 +212,7 @@ function requestPay(user_tel) {
             
        		</ul>
         
-			<table class="com_cart_total_price_wrap" style="width: 33%;">
+			<table class="com_cart_total_price_wrap" style="width: 30%; margin-left: 33%;">
 <%-- 				<colgroup> --%>
 <%-- 					<col style="width: 400px"> --%>
 <%-- 					<col style="width: 0%"> --%>
@@ -250,7 +251,7 @@ function requestPay(user_tel) {
 		
 		
 		<!-- 주문자 정보 확인 -->
-		<div class="com_box_design_wrap" style="margin-top : 0px">
+		<div class="com_box_design_wrap" style="margin-top : 45px">
 			<strong class="com_box_design_title">주문자 정보 확인</strong>
 			<ul class="com_box_design" style="list-style: none; padding: 20px 0 20px;">
 				<li><label for="user_info_name"  style="margin-top: 25px;"> 아이디</label> 

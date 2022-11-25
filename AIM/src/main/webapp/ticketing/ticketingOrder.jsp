@@ -19,15 +19,16 @@
 	var tkCode = "${tkCode}";
 	var seatArr = "${seatArr}";
 	var totalCnt = "${adultCnt+childCnt+seniorCnt}";
-	var totalPrice = "${adultCnt*13000 + childCnt*9000 + seniorCnt*7000 }";
-
+	
 	function requestPay() {
+		var totalPrice = parseInt(document.getElementById("finalPrice").value);
+		
         IMP.request_pay({ 
             pg: "html5_inicis",
             pay_method: "card",
             merchant_uid: "${tkCode}",   //주문번호, 고유값(PK) 여야 한다(디비에 저장);
             name: "${scDTO.movieNm}",
-            amount: 100,	// 숫자타입
+            amount: totalPrice,	// 숫자타입
             buyer_email: "email",
             buyer_name: "홍길동",
             buyer_tel: "010-4242-4242",
@@ -199,10 +200,60 @@
 							<div class="select_item_wrap">
 							
 							<!-- 태홍님 css 부탁드려용 - 영민  -->
+							<br>
+							<br>
 							
-							
-							
-							
+								<div align="center">&lt; 등급별 할인 혜택 &gt;</div>
+								<span class="img_info"><img src="./assets/img/silver.png" alt="silver" width="100px"></span>
+								<span class="img_info"><img src="./assets/img/gold.png" alt="gold" width="100px"></span>
+								<span class="img_info"><img src="./assets/img/vip.png" alt="vip" width="100px"></span>
+								<span class="img_info"><img src="./assets/img/vvip.png" alt="vvip" width="100px"></span>
+								<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								할 인 없 음 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								5%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								10%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								15%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<br><br><br>
+								<div align="center">(총 결제금액에서 할인 됩니다)</div>
+								
+								<br><br><br>
+								<br><br><br>
+								
+								<div align="center">
+									<div>회원님의 등급은 
+										<c:if test="${mbDTO.mb_grade==1 }">
+											실버
+										</c:if>
+										<c:if test="${mbDTO.mb_grade==2 }">
+											골드
+										</c:if>
+										<c:if test="${mbDTO.mb_grade==3 }">
+											VIP
+										</c:if>
+										<c:if test="${mbDTO.mb_grade==4 }">
+											VVIP
+										</c:if>
+										입니다
+									</div>
+									<c:choose>
+										<c:when test="${mbDTO.mb_grade==1 }">
+											<span class="img_info"><img src="./assets/img/silver.png" alt="silver"></span>
+										</c:when>
+										<c:when test="${mbDTO.mb_grade==2 }">
+											<span class="img_info"><img src="./assets/img/gold.png" alt="gold"></span>
+										</c:when>
+										<c:when test="${mbDTO.mb_grade==3 }">
+											<span class="img_info"><img src="./assets/img/vip.png" alt="vip"></span>
+										</c:when>
+										<c:when test="${mbDTO.mb_grade==4 }">
+											<span class="img_info"><img src="./assets/img/vvip.png" alt="vvip"></span>
+										</c:when>
+									</c:choose> 
+								</div>
 							
 							<!-- 태홍님 css 부탁드려용 - 영민 -->
 							
@@ -231,19 +282,34 @@
 								<dl>
 									<dt>총 금액</dt>
 									<dd>
-										<strong><fmt:formatNumber value="${adultCnt*13000 + childCnt*9000 + seniorCnt*7000 }"/></strong>원
+										<c:set var="price1" value="${adultCnt*13000 + childCnt*9000 + seniorCnt*7000 }"/>
+										<strong><fmt:formatNumber value="${price1 }"/></strong>원
 									</dd>
 								</dl>
 								<dl>
 									<dt>할인금액</dt>
 									<dd>
-										-<strong>0</strong>원
+										<c:if test="${mbDTO.mb_grade==1 }">
+											<c:set var="price2" value="${(adultCnt*13000 + childCnt*9000 + seniorCnt*7000)} "/>
+										</c:if>
+										<c:if test="${mbDTO.mb_grade==2 }">
+											<c:set var="price2" value="${(adultCnt*13000 + childCnt*9000 + seniorCnt*7000)*0.05} "/>
+										</c:if>
+										<c:if test="${mbDTO.mb_grade==3 }">
+											<c:set var="price2" value="${(adultCnt*13000 + childCnt*9000 + seniorCnt*7000)*0.1} "/>
+										</c:if>
+										<c:if test="${mbDTO.mb_grade==4 }">
+											<c:set var="price2" value="${(adultCnt*13000 + childCnt*9000 + seniorCnt*7000)*0.15} "/>
+										</c:if>
+										-<strong><fmt:formatNumber value="${price2 }"/></strong>원
 									</dd>
 								</dl>
 								<dl>
 									<dt>결제금액</dt>
 									<dd>
-										총<strong><fmt:formatNumber value="${adultCnt*13000 + childCnt*9000 + seniorCnt*7000 }"/></strong>원
+										<c:set var="finalPrice" value="${price1-price2 }"></c:set>
+										<input type="hidden" value="${finalPrice }" id="finalPrice">
+										총<strong><fmt:formatNumber value="${finalPrice }"/></strong>원
 									</dd>
 								</dl>
 								<a href="javascript:requestPay();" class="btn_col1 btn_confirm">결제하기</a>

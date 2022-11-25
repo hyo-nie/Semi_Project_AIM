@@ -27,7 +27,6 @@ public class StoreDAO {
 			return con;
 	   }
 	         
-	   // 자원 해제
 	   public void closeDB() {
 	      System.out.println("DAO : 연결 자원 해제");
 	      try {
@@ -40,7 +39,7 @@ public class StoreDAO {
 	      } catch (SQLException e) {
 	         e.printStackTrace();
 	      }
-	   } // 자원해제
+	   }
 	
 	   
 	   /**
@@ -126,7 +125,12 @@ public class StoreDAO {
 	   }
 	   
 	   
-	   // 상품 상세정보를 조회하는 메서드 - getProductInfo()
+	   /**
+	    * getProductInfo()
+	    * 상품 상세정보를 조회하는 메서드
+	    * @param st_num
+	    * @return
+	    */
 	   public StoreDTO getProductInfo(int st_num) {
 		   StoreDTO dto = null;
 		   
@@ -159,7 +163,12 @@ public class StoreDAO {
 		   return dto;
 	   } // 상품 상세정보를 조회하는 메서드 끝 - getProductInfo()
 	
-		// 관람권 & 기프트카드리스트 - getGiftcard(card)
+		/**
+		 * getGiftcard(card)
+		 * 관람권 & 기프트카드리스트
+		 * @param card
+		 * @return
+		 */
 		public List getGiftcard(String card) {
 			List Giftcard = new ArrayList();
 //			StringBuffer SQL = new StringBuffer();
@@ -199,7 +208,12 @@ public class StoreDAO {
 		}
 		// 관람권 & 기프트카드리스트 - getGiftcard(card)
 		
-		// 관람권 & 기프트카드리스트 상세정보 조회 - getGiftcardDetail(st_num)
+		/**
+		 * getGiftcardDetail(st_num)
+		 * 관람권 & 기프트카드리스트 상세정보 조회
+		 * @param st_num
+		 * @return
+		 */
 		public StoreDTO getGiftcardDetail(int st_num) {
 			StoreDTO dto = null;
 			
@@ -229,7 +243,5 @@ public class StoreDAO {
 			}
 			
 			return dto;
-		}
-		
-		// 관람권 & 기프트카드리스트 상세정보 조회 - getGiftcardDetail()
+		} // 관람권 & 기프트카드리스트 상세정보 조회 - getGiftcardDetail()
 }

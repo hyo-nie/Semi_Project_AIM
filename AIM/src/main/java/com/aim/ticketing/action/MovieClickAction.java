@@ -30,9 +30,6 @@ public class MovieClickAction implements Action {
 		request.setAttribute("scheduleList", dao.getScheduleList(branchCd, movieCd, date));
 		request.setAttribute("movieList", movieList);
 		
-		System.out.println("scheduleList : " + scheduleList);
-		System.out.println("movieList : " + movieList);
-		
 		ActionForward forward = new ActionForward();
 		forward.setPath("./ticketing/movieClick.jsp");
 		forward.setRedirect(false);

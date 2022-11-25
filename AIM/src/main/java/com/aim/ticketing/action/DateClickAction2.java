@@ -34,10 +34,6 @@ public class DateClickAction2 implements Action {
 			movieCd = tmpmovieCd;
 		}
 		
-		System.out.println(date + "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ dateaction2");
-		System.out.println(branchCd + "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ dateaction2");
-		System.out.println(movieCd + "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ dateaction2");
-		
 		
 		// dao - getScheduleList
 		ReservationDAO dao = new ReservationDAO();
@@ -61,13 +57,12 @@ public class DateClickAction2 implements Action {
 			currentSeatArr.add(currentSeat);
 		}
 		
+		
 		// request에 저장
 		request.setAttribute("scheduleList", dao.getScheduleList(branchCd, movieCd, date));
 		request.setAttribute("movieList", movieList);
 		request.setAttribute("currentSeatArr", currentSeatArr);
 		
-//		System.out.println("scheduleList : " + scheduleList);
-//		System.out.println("movieList : " + movieList);
 		
 		ActionForward forward = new ActionForward();
 		forward.setPath("./ticketing/dateClick2.jsp");

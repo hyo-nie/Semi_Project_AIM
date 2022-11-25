@@ -948,9 +948,9 @@ input[type='text'][readonly]{background-color:#fff}
 	.com_cart_list_wrap .com_list_style1 > li .product_info_cnt_wrap{float:left; position:relative; width:98px; margin-top:30px; padding:0 34px}
 	.com_cart_list_wrap .com_list_style1 > li .product_info_cnt_wrap .com_form_count{float:left; width:36px; height:29px; font-weight:400; font-size:16px; color:#000; line-height:29px; text-align:center; border:1px solid #bdc1c8; border-right:none}
 	.com_cart_list_wrap .com_list_style1 > li .product_info_cnt_wrap .com_btn_plus{position:absolute; left:71px; width:18px; height:14px; font-size:0; border:1px solid #bdc1c8}
-	.com_cart_list_wrap .com_list_style1 > li .product_info_cnt_wrap .com_btn_plus:before{content:''; display:block; width:10px; height:7px; margin:4px auto; background:transparent url('./../../images/giftstore/common/bg_plus_minus_arrow.png') left top scroll no-repeat}
+	.com_cart_list_wrap .com_list_style1 > li .product_info_cnt_wrap .com_btn_plus:before{content:''; display:block; width:10px; height:7px; margin:4px auto; background:transparent url('../img/bg_plus_minus_arrow.png') left top scroll no-repeat}
 	.com_cart_list_wrap .com_list_style1 > li .product_info_cnt_wrap .com_btn_minus{position:absolute; left:71px; top:16px; width:18px; height:14px; font-size:0; border:1px solid #bdc1c8; border-top:none}
-	.com_cart_list_wrap .com_list_style1 > li .product_info_cnt_wrap .com_btn_minus:before{content:''; display:block; width:10px; height:7px; margin:3px auto; background:transparent url('./../../images/giftstore/common/bg_plus_minus_arrow.png') -10px top scroll no-repeat}
+	.com_cart_list_wrap .com_list_style1 > li .product_info_cnt_wrap .com_btn_minus:before{content:''; display:block; width:10px; height:7px; margin:3px auto; background:transparent url('../img/bg_plus_minus_arrow.png') -10px top scroll no-repeat}
 	.com_cart_list_wrap .com_list_style1 > li .product_info_cnt_wrap .btn_change{float:right; width:36px; height:29px; font-weight:400; font-size:13px; text-align:center; color:#4b4f56; line-height:29px; border:1px solid #bdc1c8}
 	.com_cart_list_wrap .com_list_style1 > li .product_info_price{float:left; margin-top:34px; width:108px; font-weight:500; font-size:17px; color:#000; text-align:center}
 	.com_cart_list_wrap .com_list_style1 > li .product_info_price:after{content:'원'; font-size:14px}
