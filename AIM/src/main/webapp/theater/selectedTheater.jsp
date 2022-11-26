@@ -857,6 +857,8 @@
 						</div>
 						
 						<ul class="list_time" id="sele_ym">
+						<c:if test="${scheduleFirst.size() != 0 }">
+						<c:set var="i" value="0"></c:set>
 							<c:forEach var="fsche" items="${scheduleFirst }">
 								<c:if test="${fmovie.movieNm eq fsche.movieNm }">
 									<div>
@@ -870,7 +872,8 @@
 													</dd>
 													<dt>잔여석</dt>
 													<dd class="seat">
-														<strong>145</strong> / 162
+														<strong>${currentSeatArr.get(i) } </strong> / 80
+														<c:set var="i" value="${i+1 }"></c:set>
 													</dd>
 													<dt>상영관</dt>
 													<dd class="hall">${fsche.roomCd}관</dd>
@@ -938,6 +941,7 @@
 								</div> -->
 
 							</c:forEach>
+							</c:if>
 						</ul>
 
 					</c:forEach>
