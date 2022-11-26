@@ -39,11 +39,8 @@ ex ) skt / 010 / 0000 / 0000
 	
 	$(document).ready(function(){
 		
-		alert('test');
-		
 		$('#mb_id').focusout(function(){
 			let userId = $('#mb_id').val();
-			alert("test중@@@@@@@@@");
 			
 			$.ajax({
 				url : "./IdCheckAjax.aim",
@@ -139,12 +136,12 @@ ex ) skt / 010 / 0000 / 0000
 			document.fr.mb_pw.focus();
 			return false;
 		} 
-		if (/(\w)\1\1/.test(mb_pw)) {
-			// \1 추가/제거하면 반복횟수 +- 1
-			alert('비밀번호에 같은 문자를 3번 이상 사용하실 수 없습니다.');
-			document.fr.mb_pw.focus();
-			return false;
-		} 
+// 		if (/(\w)\1\1/.test(mb_pw)) {
+// 			// \1 추가/제거하면 반복횟수 +- 1
+// 			alert('비밀번호에 같은 문자를 3번 이상 사용하실 수 없습니다.');
+// 			document.fr.mb_pw.focus();
+// 			return false;
+// 		} 
 		if (mb_pw.search(mb_id) > -1) {
 			alert("비밀번호에 아이디가 포함되었습니다.");
 			document.fr.mb_pw.focus();
@@ -322,8 +319,8 @@ ex ) skt / 010 / 0000 / 0000
 			                <p class="tooltip-title"><b>비밀번호 입력 시 아래 규칙을 참고해주세요!</b></p>
 			                <p>1. 비밀번호는 영문자,숫자,특수기호의 조합으로 <b>8~15자리</b>를 사용해야합니다.</p>
 			                <p>2. 특수기호는 <b>? = . *  [ # ? ! @ $ % ^ & * -</b> 만 사용 가능합니다.</p>
-			                <p>3. 연속된 문자열을 <b>3자 이상</b> 사용할 수 없습니다.</p>
-			                <p>4. 동일한 문자열을 <b>3자 이상</b> 사용할 수 없습니다.</p>
+<!-- 			                <p>3. 연속된 문자열을 <b>3자 이상</b> 사용할 수 없습니다.</p> -->
+<!-- 			                <p>4. 동일한 문자열을 <b>3자 이상</b> 사용할 수 없습니다.</p> -->
 			                <p>5. <b>아이디가 포함된</b> 비밀번호를 사용할 수 없습니다.</p>
 			              </div>
 			            </div>
@@ -450,39 +447,8 @@ ex ) skt / 010 / 0000 / 0000
 				</div>
 			</div>
 			<!-- //section -->
-
-			<!-- section : 개인정보유효기간 -->
-				<div class="section __half __expiry" id="div-cstVltrmMg">
-					<h3 class="subject __underline">
-						<em>개인정보 유효기간<span class="__require-info __point-color"><small>*는
-									필수입력 항목입니다.</small></span></em>
-					</h3>
-					<div class="row">
-						<div class="col-md">
-							<div class="form-wrap __agreement">
-								<div class="row">
-									<div class="col-md">
-										<label><em class="__point-color">*</em><span>유효기간</span></label>
-									</div>
-									<div class="col-md">
-										<div class="ui-radio">
-											<input type="radio" id="1y" name="1y" value="1"><label
-												for="10090-privacy">1년</label>
-										</div>
-										<div class="ui-radio">
-											<input type="radio" id="later" name="later" value="9"><label
-												for="10091-privacy">탈퇴시 파기</label>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="description">
-						<p>개인정보 유효기간 경과 이후 개인정보를 분리 저장/관리 또는 파기합니다.</p>
-					</div>
+<!-- 		<p>개인정보 유효기간은 고객님께서 해당 사이트를 탈퇴 시 파기됩니다.</p> -->
 				</div>
-				<!-- //section -->
 
 			<!-- btn -->
 			<div class="btn-area __center">

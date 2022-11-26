@@ -274,9 +274,6 @@
                         </div>
                      </div>
                   </div>
-                  <div class="row __block">
-                     <div class="col-md"></div>
-                  </div>
                </div>
 
                <div class="description __high">
