@@ -11,9 +11,11 @@
 	<!-- 각종 요소 -->
 	<jsp:include page="../inc/include.jsp" />
 	<!-- 헤더/네비 -->
-	<jsp:include page="../inc/login_nav_bar.jsp" />
+	<jsp:include page="../inc/nav_bar.jsp" />
 	<!-- 사이드 퀵메뉴 -->
 	<jsp:include page="../inc/side_quick_menu.jsp" />
+	
+	<br><br><br>
 	
 	<div id="contents" class="contents_customer area__movingbar litype5"
 		style="margin-top: 120px;">

@@ -22,10 +22,11 @@ function ckhppw(){
 	<!-- 각종 요소 -->
 	<jsp:include page="../inc/include.jsp" />
 	<!-- 헤더/네비 -->
-	<jsp:include page="../inc/login_nav_bar.jsp" />
+	<jsp:include page="../inc/nav_bar.jsp" />
 	<!-- 사이드 퀵메뉴 -->
 	<jsp:include page="../inc/side_quick_menu.jsp" />
 	
+	<br><br><br><br><br><br><br><br><br><br>
 		
 	<div id="loginContents"
 		class="contents_full contents_member_comn area__movingbar litype3">

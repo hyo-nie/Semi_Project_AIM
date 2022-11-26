@@ -31,7 +31,7 @@
 	<!-- 헤더/네비 -->
 	<jsp:include page="../inc/nav_bar.jsp" />
 	
-	<br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br>
 	
 	<form action="./HpPwCheckAction.hp?hp_bno=${param.hp_bno }&pageNum=${param.pageNum }" method="post" name="hp">
 	<input type="hidden" name="mb_id" value="${sessionScope.mb_id }">

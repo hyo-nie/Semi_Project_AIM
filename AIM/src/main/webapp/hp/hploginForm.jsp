@@ -23,7 +23,7 @@
 	<jsp:include page="../inc/include.jsp" />
 
 	<!-- 헤더/네비 -->
-	<jsp:include page="../inc/login_nav_bar.jsp" />
+	<jsp:include page="../inc/nav_bar.jsp" />
 	
 </head>
 <body>

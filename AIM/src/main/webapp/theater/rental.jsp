@@ -79,6 +79,7 @@
 			document.rt.r_mb_pw.focus();
 			return false;
 		}
+		
 		if (confirm("등록 하시겠습니까?") == true){
 			document.rt.submit();
 			alert("문의내역은 마이페이지에서 확인하실 수 있습니다.");
@@ -189,7 +190,7 @@
 						<td>
 							<div class="bx_textarea">
 								<textarea class="ty2" cols="10" rows="10" name="r_text"  id="hp_content"
-								placeholder="내용 및 첨부파일에 개인정보(카드번호, 계좌번호, 주민번호)가 포함되지 않도록 유의하여 입력해주세요."></textarea>
+								placeholder="내용에 개인정보(카드번호, 계좌번호, 주민번호)가 포함되지 않도록 유의하여 입력해주세요."></textarea>
 								
 							</div>
 						
@@ -230,37 +231,11 @@
 				</tbody>
 			</table>
 		
-		
-		
-		
-			<div class="con_tit ty2">
-				<h4 class="tit">개인정보 수집에 대한 동의</h4>
-				<div class="group_rgt">
-					<p class="txt_form"> 문의를 통해 아래의 개인정보를 수집합니다. 수집된 개인정보는 문의 외 목적으로 사용하지 않습니다. </p>
-				</div>
-			</div>
-		<div class="privacy_wrap">
-			<div class="txtarea">
-				<a class="focus_textarea" href="javascript:void(0);">개인정보의 수집목적 및 항목</a><br>
-					① 수집 목적 : 원활한 고객 상담, 불편사항 및 문의사항 관련 의사소통 경로 확보<br>
-					② 수집 항목<br>
-					*필수입력사항<br>
-					- 이용자 식별을 위한 항목 : 성명, 연락처, 이메일, 아이디(로그인 시 수집)<br>
-					<span class="color_red"><br>
-					개인정보의 보유 및 이용기간<br>
-					입력하신 개인정보는 소비자 보호에 관한 법률 등 관계 법률에 의해 다음과 같이 보유합니다.<br>
-					보유기간 : 문의접수 후 처리 완료시점으로 부터 3년</span><br><br>
-					※ 1:1문의 서비스 제공을 위한 최소한의 개인정보이며 거부할 수 있습니다. 다만, 수집에 동의하지 않을 경우 서비스 이용이 제한됩니다
-			</div>
-			<div class="bx_inp" id="hp_agree">
-				<input type="radio" name="hp_agree" id="radio10">
-					<label for="radio10">동의 </label>
-				<input type="radio" name="hp_agree" id="radio11" checked>
-					<label for="radio11">동의하지않음</label>
-			</div>
+	
+			
 			<div class="submit">
 				<div class="btn_btm_wrap">
-					<a href="#none" class="btn_col3 ty6">취소</a>
+					<a href="javascript:window.history.back();" class="btn_col3 ty6">취소</a>
 					<input type="button" value="등록" class="btn_col2 ty6" onclick="rentalCheck();">
 				</div>
 			</div>
