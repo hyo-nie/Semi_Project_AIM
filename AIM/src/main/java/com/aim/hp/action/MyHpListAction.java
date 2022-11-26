@@ -1,5 +1,6 @@
 package com.aim.hp.action;
 
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
@@ -21,11 +22,15 @@ public class MyHpListAction implements Action {
 		HttpSession session = request.getSession();
 		String mb_id = (String)session.getAttribute("mb_id");
 				
-			ActionForward forward = new ActionForward();
-				if(mb_id == null) {
-					forward.setPath("./Login.aim");
-					forward.setRedirect(true);
-					return forward;
+		if(mb_id == null) {
+			response.setContentType("text/html; charset=UTF-8");
+			PrintWriter out = response.getWriter();
+					out.print("<script>");
+					out.print("alert('로그인이 필요합니다.');");
+					out.print("location.href='./Login.aim?url=MyHpList.hp';");
+					out.print("</script>");
+					out.flush();
+					return null;
 				}
 		
 		// AskDAO 객체 생성
@@ -90,6 +95,7 @@ public class MyHpListAction implements Action {
 		request.setAttribute("endPage", endPage);
 		
 		// 페이지 이동
+		ActionForward forward = new ActionForward();
 		forward.setPath("./hp/myhplist.jsp");
 		forward.setRedirect(false);
 
