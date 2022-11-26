@@ -166,7 +166,6 @@ public class NtDAO {
 				dto.setNt_bno(rs.getInt("nt_bno"));
 				dto.setNt_content(rs.getString("nt_content"));
 				dto.setNt_date(rs.getDate("nt_date"));
-				dto.setNt_file(rs.getString("nt_file"));
 				dto.setNt_subject(rs.getString("nt_subject"));
 									
 				// DTO -> List

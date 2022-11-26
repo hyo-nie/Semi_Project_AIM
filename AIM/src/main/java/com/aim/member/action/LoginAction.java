@@ -65,11 +65,11 @@ public class LoginAction implements Action {
 			forward.setRedirect(true);
 			return forward;
 		}
-		if(mb_id != null) {
-			forward.setPath("./HpLogin.hp?mb_id="+mb_id);
-			forward.setRedirect(true);
-			return forward;
-		}
+//		if(help != null) {
+//			forward.setPath("./HpLogin.hp?hp="+hp);
+//			forward.setRedirect(true);
+//			return forward;
+//		}
 		if(movieCd!=null && url!=null) {
 			forward.setPath("./"+url+"?movieCd="+movieCd);
 			forward.setRedirect(true);
