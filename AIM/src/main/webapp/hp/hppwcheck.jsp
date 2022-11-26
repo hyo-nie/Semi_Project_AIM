@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Insert title here</title>
+<title>AIM (All In Movie!) - 고객센터</title>
 <script type="text/javascript">
 	function pwCheck(){
 		if(document.hp.mb_pw.value == ""){
@@ -25,6 +25,8 @@
 	%>
 	<!-- 각종 요소 -->
 	<jsp:include page="../inc/include.jsp" />
+	<!-- 사이드 퀵메뉴 -->
+	<jsp:include page="../inc/side_quick_menu.jsp" />
 
 	<!-- 헤더/네비 -->
 	<jsp:include page="../inc/nav_bar.jsp" />
@@ -63,5 +65,8 @@
 		</div>
 	
 	</form>
+	<!-- 푸터 -->
+	<jsp:include page="../inc/footer.jsp" />
+	
 </body>
 </html>

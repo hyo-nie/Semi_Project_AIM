@@ -5,19 +5,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>AIM (All In Movie!) - 고객센터</title>
 </head>
 <body>
-<!-- 각종 요소 -->
+	<!-- 각종 요소 -->
 	<jsp:include page="../inc/include.jsp" />
 	<!-- 헤더/네비 -->
 	<jsp:include page="../inc/login_nav_bar.jsp" />
 	<!-- 사이드 퀵메뉴 -->
 	<jsp:include page="../inc/side_quick_menu.jsp" />
 	
-	
-	
-
 	<div id="contents" class="contents_customer area__movingbar litype5"
 		style="">
 		<div class="title_top">
@@ -114,5 +111,8 @@
 			<li class="wrap_nav_underline"><span class="nav_underline"></span></li>
 		</ul>
 	</div>
+	<!-- 푸터 -->
+	<jsp:include page="../inc/footer.jsp" />
+	
 </body>
 </html>

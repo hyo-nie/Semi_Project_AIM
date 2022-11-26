@@ -4,10 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>AIM (All In Movie!) - 고객센터</title>
 	<!-- 각종 요소 -->
 	<jsp:include page="../inc/include.jsp" />
-	
 	<!-- 헤더/네비 -->
 	<jsp:include page="../inc/login_nav_bar.jsp" />
 	<!-- 사이드 퀵메뉴 -->
@@ -82,5 +81,8 @@
 			<li class="wrap_nav_underline"><span class="nav_underline"></span></li>
 		</ul>
 	</div>
+	<!-- 푸터 -->
+	<jsp:include page="../inc/footer.jsp" />
+	
 </body>
 </html>

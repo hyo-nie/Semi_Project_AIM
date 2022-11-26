@@ -14,6 +14,8 @@
 	<jsp:include page="../inc/login_nav_bar.jsp" />
 	<!-- 사이드 퀵메뉴 -->
 	<jsp:include page="../inc/side_quick_menu.jsp" />
+	
+	
 
 
 	<div id="contents" class="contents_customer area__movingbar litype5" style="">
@@ -117,24 +119,9 @@
 			<li class="wrap_nav_underline"><span class="nav_underline"></span></li>
 		</ul>
 	</div>
-	  <div id="footer_section" class="footer">
-		<div class="inner">
-			<ul class="f_menu">
-				<li><a
-					href="https://www.lottecinema.co.kr/NLCHS/Etc/MemberClause"
-					title="회원약관" target="_self">회원약관</a></li>
-				<li><a
-					href="https://www.lottecinema.co.kr/NLCHS/Etc/IndividualInfomationHandlingPolicy"
-					title="개인정보처리방침" target="_self"><strong>개인정보처리방침</strong></a></li>
-				<li><a
-					href="https://www.lottecinema.co.kr/NLCHS/Etc/EmailCollectionRefusal"
-					title="이메일무단수집거부" target="_self">이메일무단수집거부</a></li>
-				<li><a
-					href="https://www.lottecinema.co.kr/NLCHS/Etc/ElectronicManagementPolicy"
-					title="영상정보처리기기 운영 및 관리방침" target="_self">영상정보처리기기 운영 및 관리방침</a></li>
-			</ul>
-		</div>
-		
-	</div>
+	  
+	<!-- 푸터 -->
+	<jsp:include page="../inc/footer.jsp" />
+	
 </body>
 </html>

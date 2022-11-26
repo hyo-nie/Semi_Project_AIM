@@ -18,7 +18,7 @@
 </script>
 
 <meta charset="UTF-8">
-<title>AIM - Login</title>
+<title>AIM (All In Movie!) - 고객센터</title>
 	<!-- 각종 요소 -->
 	<jsp:include page="../inc/include.jsp" />
 

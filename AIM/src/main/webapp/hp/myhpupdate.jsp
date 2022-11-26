@@ -15,7 +15,8 @@
 <body style="">
 	<!-- 각종 요소 -->
 	<jsp:include page="../inc/include.jsp" />
-
+	<!-- 푸터 -->
+	<jsp:include page="../inc/footer.jsp" />
 	<!-- 헤더/네비 -->
 	<jsp:include page="../inc/login_nav_bar.jsp" />
 	<!-- 사이드 퀵메뉴 -->
@@ -189,6 +190,8 @@
 		</div>
 		
 	</div>
-   
+   <!-- 푸터 -->
+	<jsp:include page="../inc/footer.jsp" />
+	
 </body>
 </html>

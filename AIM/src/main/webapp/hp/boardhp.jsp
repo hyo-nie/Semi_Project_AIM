@@ -45,11 +45,10 @@
 <body style="">
 	<!-- 각종 요소 -->
 	<jsp:include page="../inc/include.jsp" />
-
-	<!-- 헤더/네비 -->
-	<jsp:include page="../inc/login_nav_bar.jsp" />
 	<!-- 사이드 퀵메뉴 -->
 	<jsp:include page="../inc/side_quick_menu.jsp" />
+	<!-- 헤더/네비 -->
+	<jsp:include page="../inc/login_nav_bar.jsp" />
 
 <div id="contents" class="contents_customer area__movingbar litype5"
 		style="">
@@ -178,10 +177,10 @@
 								보유기간 : 문의접수 후 처리 완료시점으로 부터 3년</span><br><br>
 								※ 1:1문의 서비스 제공을 위한 최소한의 개인정보이며 거부할 수 있습니다. 다만, 수집에 동의하지 않을 경우 서비스 이용이 제한됩니다
 						</div>
-							<input type="radio" name="hp_agree" id="radio10">
-								<label for="radio10">동의 </label>
-							<input type="radio" name="hp_agree" id="radio11" checked>
-								<label for="radio11">동의하지않음</label>
+<!-- 							<input type="radio" name="hp_agree" id="radio10"> -->
+<!-- 								<label for="radio10">동의 </label> -->
+<!-- 							<input type="radio" name="hp_agree" id="radio11" checked> -->
+<!-- 								<label for="radio11">동의하지않음</label> -->
 						
 						
 					<div class="submit">
@@ -202,27 +201,11 @@
 			<li class="wrap_nav_underline"><span class="nav_underline"></span></li>
 		</ul>
 	</div>
+	<!-- 푸터 -->
+	<jsp:include page="../inc/footer.jsp" />
 
+	
 
-    <div id="footer_section" class="footer">
-		<div class="inner">
-			<ul class="f_menu">
-				<li><a
-					href="https://www.lottecinema.co.kr/NLCHS/Etc/MemberClause"
-					title="회원약관" target="_self">회원약관</a></li>
-				<li><a
-					href="https://www.lottecinema.co.kr/NLCHS/Etc/IndividualInfomationHandlingPolicy"
-					title="개인정보처리방침" target="_self"><strong>개인정보처리방침</strong></a></li>
-				<li><a
-					href="https://www.lottecinema.co.kr/NLCHS/Etc/EmailCollectionRefusal"
-					title="이메일무단수집거부" target="_self">이메일무단수집거부</a></li>
-				<li><a
-					href="https://www.lottecinema.co.kr/NLCHS/Etc/ElectronicManagementPolicy"
-					title="영상정보처리기기 운영 및 관리방침" target="_self">영상정보처리기기 운영 및 관리방침</a></li>
-			</ul>
-		</div>
-		
-	</div>
    
 </body>
 

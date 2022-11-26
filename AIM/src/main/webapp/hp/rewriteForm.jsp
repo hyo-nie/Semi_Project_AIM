@@ -5,12 +5,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>AIM (All In Movie!) - 고객센터</title>
 </head>
 <body>
 	<!-- 각종 요소 -->
 	<jsp:include page="../inc/include.jsp" />
-
 	<!-- 헤더/네비 -->
 	<jsp:include page="../inc/login_nav_bar.jsp" />
 	<!-- 사이드 퀵메뉴 -->
@@ -56,7 +55,7 @@
 								<td>
 									<div class="bx_textarea">
 										<input type="text" class="ty2 w_full" placeholder="제목을 입력해주세요" title="답변 제목입력" name="hp_subject" 
-										value="↪ [답변] : [${dto.hp_subject }]">
+										value="↪ [답변] : ">
 									</div>
 								</td>
 							</tr>
@@ -65,7 +64,7 @@
 								<td>
 									<div class="bx_textarea">
 										<textarea class="ty2" cols="10" rows="10" name="hp_content" 
-										title="답변 내용을 입력해주세요">${dto.hp_content } &#10;&#10;&#10;고객센터 답변 : &#10;&#10;&#10;</textarea>
+										title="답변 내용을 입력해주세요">고객센터 답변 : &#10;&#10;&#10;</textarea>
 										</p>
 								</div></td>
 							</tr>
@@ -95,5 +94,8 @@
   	
   	
   	</table>
+  	<!-- 푸터 -->
+	<jsp:include page="../inc/footer.jsp" />
+	
 </body>
 </html>

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>AIM (All In Movie!) - 고객센터</title>
 <script type="text/javascript">
 <script type="text/javascript">
 function ckhppw(){
@@ -23,6 +23,8 @@ function ckhppw(){
 	<jsp:include page="../inc/include.jsp" />
 	<!-- 헤더/네비 -->
 	<jsp:include page="../inc/login_nav_bar.jsp" />
+	<!-- 사이드 퀵메뉴 -->
+	<jsp:include page="../inc/side_quick_menu.jsp" />
 	
 		
 	<div id="loginContents"
@@ -54,11 +56,6 @@ function ckhppw(){
 		</div>
 	</div>
 
-
-
-
-	<!-- 하단배너 -->
-	<jsp:include page="../inc/loginform_bottom_banner.jsp" />
 	<!-- 약관 -->
 	<jsp:include page="../inc/footer.jsp" />
 </body>

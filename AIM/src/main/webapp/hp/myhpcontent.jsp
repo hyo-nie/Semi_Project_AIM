@@ -10,7 +10,6 @@
 <body>
 	<!-- 각종 요소 -->
 	<jsp:include page="../inc/include.jsp" />
-
 	<!-- 헤더/네비 -->
 	<jsp:include page="../inc/login_nav_bar.jsp" />
 	<!-- 사이드 퀵메뉴 -->
@@ -73,25 +72,25 @@
 																<c:when test="${dto.hp_select == 0 }">
 																	<c:set var="hp_select" value="분류선택"/>
 																</c:when>
-																<c:when test="${dto.o_status == 1 }">
+																<c:when test="${dto.hp_select == 1 }">
 																	<c:set var="hp_select" value="영화관"/>
 																</c:when>
-																<c:when test="${dto.o_status == 2 }">
+																<c:when test="${dto.hp_select == 2 }">
 																	<c:set var="hp_select" value="영화"/>
 																</c:when>
-																<c:when test="${dto.o_status == 3 }">
+																<c:when test="${dto.hp_select == 3 }">
 																	<c:set var="hp_select" value="멤버십"/>
 																</c:when>
-																<c:when test="${dto.o_status == 4 }">
+																<c:when test="${dto.hp_select == 4 }">
 																	<c:set var="hp_select" value="예매/결제"/>
 																</c:when>
-																<c:when test="${dto.o_status == 5 }">
+																<c:when test="${dto.hp_select == 5 }">
 																	<c:set var="hp_select" value="이벤트"/>
 																</c:when>
-																<c:when test="${dto.o_status == 6 }">
+																<c:when test="${dto.hp_select == 6 }">
 																	<c:set var="hp_select" value="홈페이지/모바일"/>
 																</c:when>
-																<c:when test="${dto.o_status == 7 }">
+																<c:when test="${dto.hp_select == 7 }">
 																	<c:set var="hp_select" value="개인정보"/>
 																</c:when>
 															</c:choose>
@@ -148,7 +147,9 @@
 		<li class="wrap_nav_underline"><span class="nav_underline"></span></li>
 		</ul>
 	</div>
-  
+  <!-- 푸터 -->
+	<jsp:include page="../inc/footer.jsp" />
+	
   
 </body>
 </html>
