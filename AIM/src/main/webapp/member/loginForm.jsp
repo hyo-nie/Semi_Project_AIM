@@ -36,7 +36,7 @@
 		<div class="tab_con">
 			<div class="member_login_wrap">
 				<div class="contents_inner">
-					<div class="login_box">
+					<div class="login_box" style="margin-top:65px;">
 						<p class="tip">세상의 모든 영화 - All In Movie !</p>
 						<div class="login_area">
 							<form action="./LoginAction.aim" method="post" name="loginfr"
