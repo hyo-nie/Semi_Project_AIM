@@ -287,8 +287,7 @@
 
             <!-- btn -->
             <div class="btn-area __center">
-               <button type="button" class="ui-button __square-large __black"
-                  onclick="fnClose();">
+               <button type="button" class="ui-button __square-large __black" onclick="location.href='./Main.aim';">
                   취소
                   <!-- 취소 -->
                </button>
