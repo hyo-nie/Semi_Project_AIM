@@ -23,7 +23,7 @@
 	<!-- 헤더/네비 -->
 	<jsp:include page="../inc/nav_bar.jsp" />
 	
-
+<br><br><br>
 
 <div id="contents" class="contents_customer area__movingbar litype5" style="margin-top: 120px;">
 	<div class="title_top">

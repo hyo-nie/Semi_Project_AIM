@@ -48,8 +48,9 @@
 	<!-- 사이드 퀵메뉴 -->
 	<jsp:include page="../inc/side_quick_menu.jsp" />
 	<!-- 헤더/네비 -->
-	<jsp:include page="../inc/login_nav_bar.jsp" />
+	<jsp:include page="../inc/nav_bar.jsp" />
 
+<br><br><br><br><br><br><br><br><br><br>
 <div id="contents" class="contents_customer area__movingbar litype5"
 		style="">
 		<div class="title_top">
