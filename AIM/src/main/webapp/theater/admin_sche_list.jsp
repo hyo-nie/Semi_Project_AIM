@@ -114,8 +114,8 @@ text-align: center;
 			
 			<br><br><br>
 				<div id="table_search" align="center">
-					<input type="button" value="스케줄등록" class="btn"
-						onclick="location.href='./AdminScheAdd.th';"
+					<input type="button" value="스케줄등록" class="btn" style="color:#fff; background:#18315D; width:100px; height:40px; margin:5px; border-radius:5px; border:1px solid #fff;"
+						onclick="location.href='./AdminScheAdd.th';" 
 					>
 				</div>
 			

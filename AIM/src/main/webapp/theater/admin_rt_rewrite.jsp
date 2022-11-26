@@ -113,8 +113,8 @@
 			
 		</table>
 		<div class="btn_btm_wrap">
-			<a href="#none" class="btn_col3 ty6">취소</a>
-			<input type="button" value="등록" class="btn_col2 ty6" onclick="rewrite();">
+			
+			<input type="button" value="등록" style="background-color:#18315D" class="btn_col2 ty6" onclick="rewrite();">
 		</div>
 		</div>
 	

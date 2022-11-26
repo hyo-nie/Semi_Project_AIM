@@ -76,56 +76,13 @@ text-align: center;
 				
 						</tr>
 						
-<%-- 						<c:choose> --%>
-<%-- 							<c:when test="${sessionScope.mb_id eq 'admin' }"> --%>
-<!-- 								<tr> -->
-<%-- 									<td>${dto.rno }</td> --%>
-							
-<!-- 									<td>  -->
-<%-- 										<c:if test="${dto.r_re_lev > 0}"> --%>
-<%-- 											<img src="./assets/img/cart.png" width="${dto.r_re_lev * 10 }"> --%>
-<!-- 											<img src="./re.gif"> -->
-											
-<%-- 										</c:if> --%>
-<%-- 										<a href="./AdminRentalPwCheck.th?rno=${dto.rno }&pageNum=${pageNum}">${dto.r_name }</a> --%>
-<!-- 									</td> -->
-<!-- 									<td> -->
-							
-<%-- 										${dto.r_mb_id } --%>
-<!-- 									</td> -->
-						
-<!-- 								</tr> -->
-							
-<%-- 							</c:when> --%>
-<%-- 							<c:otherwise>			 --%>
-<%-- 								<c:if test="${sessionScope.mb_id eq dto.r_mb_id}"> --%>
-<!-- 									<tr> -->
-<%-- 										<td>${dto.rno }</td> --%>
-								
-<!-- 										<td>  -->
-<%-- 											<c:if test="${dto.r_re_lev > 0}"> --%>
-<%-- 												<img src="./assets/img/cart.png" width="${dto.r_re_lev * 10 }"> --%>
-<!-- 												<img src="./re.gif"> -->
-												
-<%-- 											</c:if> --%>
-<%-- 											<a href="./AdminRentalPwCheck.th?rno=${dto.rno }&pageNum=${pageNum}">${dto.r_name }</a> --%>
-<!-- 										</td> -->
-<!-- 										<td> -->
-								
-<%-- 											${dto.r_mb_id } --%>
-<!-- 										</td> -->
-							
-<!-- 									</tr> -->
-<%-- 								</c:if> --%>
-<%-- 							</c:otherwise>	 --%>
-<%-- 						</c:choose> --%>
 
 
 					</c:forEach>
 				</tbody>
 			</table>
 			
-			<div class="brd_paginate">
+			<div class="brd_paginate" align="center">
 				<ol>
 					<c:if test="${totalCnt != 0}">
 
@@ -151,7 +108,7 @@ text-align: center;
 			<br><br><br>
 			
 			<div id="table_search" align="center">
-				<input type="button" value="문의하기" class="btn"
+				<input type="button" value="문의하기" class="btn" style="color:#fff; background:#18315D; width:100px; height:40px; margin:5px; border-radius:5px; border:1px solid #fff;"
 					onclick="location.href='./RentalWrite.th';"
 				>
 			</div>

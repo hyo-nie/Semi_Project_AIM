@@ -57,8 +57,8 @@
 			</tbody>
 		</table>
 			<div class="btn_btm_wrap">
-				<a href="javascript:window.history.back();" class="btn_col3 ty6">취소</a>
-				<input type="submit" value="비밀번호 확인" class="btn_col2 ty6" onclick='pwCheck();'>
+				<input type="button" class="btn_col3 ty6" value="취소하기" onclick="location.href='./AdminRentalList.th';">
+				<input type="submit" value="비밀번호 확인" style="background-color:#18315D" class="btn_col2 ty6" onclick='pwCheck();'>
 			</div>
 			
 		</div>

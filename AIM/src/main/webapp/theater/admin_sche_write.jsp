@@ -208,8 +208,8 @@
 				</tbody>
 			</table>
 				<div class="btn_btm_wrap" align="center">
-					<a href="#none" class="btn_col3 ty6">취소</a>
-					<input type="button" value="등록" class="btn_col2 ty6" onclick="scheCheck();">
+						<input type="button" class="btn_col3 ty6" value="취소하기" onclick="location.href='./AdminPage.aim';">
+					<input type="button" value="등록" style="background-color:#18315D" class="btn_col2 ty6" onclick="scheCheck();">
 				</div>
 				
 		</div>

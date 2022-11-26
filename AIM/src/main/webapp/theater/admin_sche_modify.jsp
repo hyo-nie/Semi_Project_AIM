@@ -198,7 +198,7 @@
 		    </tbody>    
 		</table>
 		<div id="table_search" align="center">
-			<input type="button" value="수정하기" class="btn" onclick="scheMo();">
+			<input type="button" value="수정하기" class="btn" style="color:#fff; background:#18315D; width:100px; height:40px; margin:5px; border-radius:5px; border:1px solid #fff;" onclick="scheMo();">
 		</div>
 	</div>
 	

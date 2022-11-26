@@ -235,8 +235,8 @@
 			
 			<div class="submit">
 				<div class="btn_btm_wrap">
-					<a href="javascript:window.history.back();" class="btn_col3 ty6">취소</a>
-					<input type="button" value="등록" class="btn_col2 ty6" onclick="rentalCheck();">
+					<input type="button" class="btn_col3 ty6" value="취소하기" onclick="location.href='./Main.aim';">
+					<input type="button" value="등록" style="background-color:#18315D" class="btn_col2 ty6" onclick="rentalCheck();">
 				</div>
 			</div>
 		</form>
