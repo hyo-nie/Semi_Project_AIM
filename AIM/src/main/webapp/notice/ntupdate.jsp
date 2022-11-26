@@ -62,8 +62,8 @@
 					</table>
 					<input type="hidden" name="mb_id" id="mb_id" value="${mdto.mb_id }">
 					<input type="hidden" name="mb_pw" id="mb_pw" value="${mdto.mb_pw }">
-					<input type="submit" class="btn_col3 ty6" value="수정하기">
-					<a href="./NtList.nt" class="btn_col2 ty6">공지사항 목록</a>
+					<input type="submit" style="background-color:#18315D" class="btn_col2 ty6" value="수정하기">
+					<a href="./NtList.nt" class="btn_col3 ty6">공지사항 목록</a>
 								</form>
 								
 							</div></li>

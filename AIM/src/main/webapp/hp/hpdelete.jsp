@@ -42,7 +42,7 @@ function ckhppw(){
 									<div class="btn_btm_wrap">
 									<input type="hidden" name="hp_bno" value="${param.hp_bno }">
 									<input type="password" id="mb_pw" maxlength="15"  placeholder="삭제 비밀번호를 입력해 주세요." title="입력태그" name="mb_pw">
-									<button type="submit" class="btn_col2 ty6">삭제하기</button>
+									<button type="submit" style="background-color:#18315D" class="btn_col2 ty6">삭제하기</button>
 									<a href="./MyHpList.hp" class="btn_col3 ty6">목록으로 돌아가기</a>
 									
 									</div>

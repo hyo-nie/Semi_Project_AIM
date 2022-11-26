@@ -67,12 +67,18 @@
 						<tbody>
 						
 							<tr>
-								<th scope="row" class="req" name="hp_class">종류</th>
+								<th scope="row" class="req">분류</th>
 								<td>
-									<input type="radio" name="rdo00" id="radio01" class="aNoneSelect" checked>
-										<label for="radio01">영화 문의</label>
-									<input type="radio" name="rdo00" id="radio02">
-										<label for="radio02">기타 문의</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<select id="hp_select" title="문의내용 분류선택" name="hp_select">
+										<option	value="">분류 선택</option>
+										<option value="1">영화관</option>
+										<option value="2">영화</option>
+										<option value="3">멤버십</option>
+										<option value="4">예매/결제</option>
+										<option value="5">이벤트</option>
+										<option value="6">홈페이지/모바일</option>
+										<option value="7">개인정보</option>
+									</select>
 								</td>
 							</tr>
 							
@@ -124,7 +130,7 @@
 							<tr>
 								<th scope="row" class="req">비밀번호</th>
 								<td>
-									<input type="text" class="ty2 inp_id" title="비밀번호"	name="mb_pw" > 
+									<input type="password" class="ty2 inp_id" title="비밀번호"	name="mb_pw" > 
 									<span class="txt_caution1 fl_r with_inp">사용되는 비밀번호는 수정 및 삭제에 이용되므로 필수로 작성해주시기 바랍니다.</span></td>
 							</tr>
 						</tbody>
@@ -148,15 +154,12 @@
 								보유기간 : 문의접수 후 처리 완료시점으로 부터 3년</span><br><br>
 								※ 1:1문의 서비스 제공을 위한 최소한의 개인정보이며 거부할 수 있습니다. 다만, 수집에 동의하지 않을 경우 서비스 이용이 제한됩니다
 						</div>
-						<div class="bx_inp">
-							<input type="radio" name="rdo01" id="radio10" class="iDrdoAgreeY"><label for="radio10">동의 </label>
-								<input type="radio" name="rdo01" id="radio11" checked=""><label for="radio11">동의하지않음</label>
-						</div>
+						
 						
 						<div class="btn_btm_wrap">
 							<input type="hidden" name="mb_id" id="mb_id" value="${dto.mb_id }">
 							<input type="hidden" name="mb_pw" id="mb_pw" value="${dto.mb_pw }">
-							<input type="submit" style="background-color:#18315D" class="btn_col3 ty6" value="수정하기" >
+							<input type="submit" style="background-color:#18315D" class="btn_col2 ty6" value="수정하기" >
 							<input type="button" class="btn_col3 ty6" value="문의목록" onclick="location.href='./MyHpList.hp';" >
 							
 						</div>
