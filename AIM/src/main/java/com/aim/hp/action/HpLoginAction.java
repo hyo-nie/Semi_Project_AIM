@@ -25,7 +25,7 @@ public class HpLoginAction implements Action {
 				
 		ActionForward forward = new ActionForward();
 		if(mb_id == null) {
-					forward.setPath("./Login.aim");
+					forward.setPath("./Login.aim?hp_id="+mb_id);
 					forward.setRedirect(true);
 					return forward;
 				}
