@@ -89,12 +89,12 @@
 		  <ul>
 			<li><button type="button" class="tab_tit"
 					style="width: 1000px; height:50px; left: 50%; margin-left: 0px;">
-					<span style="font-size:18px" >평점 및 관람평 (${requestScope.cnt })</span></button>
+					<span style="font-size:18px" >영화 관람평 (${requestScope.cnt })</span></button>
 				<div class="tab_con">
-					<h4 class="hidden">평점 및 관람평</h4>
+					<h4 class="hidden">영화 관람평</h4>
 					<div class="wrap_reviewstarscore starReg" id="movie_review_box">
 						<div class="star_score_box ">
-							<br><h4 class="h4_tit">평점 · 관람평 작성</h4><br>
+							<br><h4 class="h4_tit">영화 관람평 작성</h4><br>
 						</div>
 						
 						
@@ -102,8 +102,8 @@
 							<div class="movi_review_box" style="width: 1000px; left: 50%; margin-left: 0px;">
 								<div class="review_write_box" style="width:860px;">
 									<textarea id="txtComment" name="review_sy"
-										placeholder="평점 및 영화 관람평을 작성해주세요. 주제와 무관한 리뷰 또는 스포일러는 표시제한 또는 삭제될 수 있습니다. 
-작성하신 평점 및 관람평은 AIM 홈페이지, SNS 등에 인용될 수 있습니다."
+										placeholder="영화 관람평을 작성해주세요. 주제와 무관한 리뷰 또는 스포일러는 표시제한 또는 삭제될 수 있습니다. 
+작성하신 관람평은 AIM 홈페이지, SNS 등에 인용될 수 있습니다."
 										title="관람평 작성"></textarea>
 									<span class="byte_info"><strong class="byte">0</strong>/<em>220</em></span>
 								</div>
