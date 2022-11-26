@@ -6,7 +6,6 @@
 <meta charset="UTF-8">
 <title>간편회원 약관동의 &lt; 회원가입</title>
 <!-- css/script -->
-<%-- <jsp:include page="../inc/include.jsp" /> --%>
 <jsp:include page="../inc/join_include.jsp"/>
 
 <script type="text/javascript">
@@ -50,8 +49,9 @@
 			<h1 class="bi">
 				<!-- <a href="https://www.lpoint.com/" onclick="return fnWindowOpen(this.href);" target="_blank"><img src="/resources/images/common/bi-lpoint.png" alt="L.POINT"></a> -->
 
-				<a href="./Main.aim" onclick="return fnWindowOpen(this.href);" target="_blank">
-<!-- 				<img src="https://ifh.cc/g/RGtYO5.png" alt="AIM홈페이지"></a> -->
+				<a href="./Main.aim" onclick="return fnWindowOpen(this.href);"
+					target="_blank"><img src="https://ifh.cc/g/RGtYO5.png"
+					alt="AIM홈페이지"></a>
 			</h1>
 		</div>
 	</div>
@@ -102,9 +102,9 @@
 												<input type="checkbox" id="agreeCco_1009C0" name="1009"
 													class="mPrv ui-allchk-el ui-allchk-group1"
 													onclick="fnPrvAgChange('agreeCco_1009C0');"
-													data-title="AIM.POINT 회원약관" data-prvdvc="C0"
-													data-cconm="AIM.POINT" data-ccoenm="L.POINT"
-													data-separator-number="1">><label
+													data-title="L.POINT 회원약관" data-prvdvc="C0"
+													data-cconm="L.POINT" data-ccoenm="L.POINT"
+													data-separator-number="1"><label
 													for="agreeCco_1009C0">AIM.POINT 회원약관 <em class="">(필수)</em></label>
 											</div>
 											<div class="detail">
@@ -139,7 +139,7 @@
 													class="mPrv ui-allchk-el ui-allchk-group1"
 													onclick="fnPrvAgChange('agreeCco_1009BG');"
 													data-title="개인정보의 필수적인 사항에 대한 수집 이용 동의" data-prvdvc="BG"
-													data-cconm="AIM.POINT" data-ccoenm="AIM.POINT"
+													data-cconm="L.POINT" data-ccoenm="L.POINT"
 													data-separator-number="1"><label
 													for="agreeCco_1009BG">개인정보의 필수적인 사항에 대한 수집 이용 동의 <em
 													class="">(필수)</em></label>
@@ -283,14 +283,136 @@
 								</div>
 							</div>
 						</div>
-<!-- 					<div class="description __high"> -->
+						<div class="row __block">
+							<div class="col-md">AIM컬처웍스</div>
+							<div class="col-md">
+								<div class="form-wrap __agreement">
+									<div class="inner">
+										<div class="ui-wrap">
+											<div class="ui-check">
+												<input type="checkbox" id="agreeCco_1050C1" name="1050"
+													class="mPrv ui-allchk-el ui-allchk-group1"
+													onclick="fnPrvAgChange('agreeCco_1050C1');"
+													data-title="롯데컬처웍스 회원사 약관" data-prvdvc="C1"
+													data-cconm="롯데컬처웍스" data-ccoenm="LOTTE CINEMA"
+													data-separator-number="1"><label
+													for="agreeCco_1050C1">AIM컬처웍스 회원사 약관 <em class="">(필수)</em></label>
+											</div>
+											<div class="detail">
+												<button type="button"
+													class="ui-button __square-mini __underline"
+													onclick="modal_init('term-code-agree-10500',800)">자세히</button>
+											</div>
+										</div>
+										<div id="term-code-agree-10500"
+											class="modal-container __fixed">
+											<div class="modal-header">
+												<div class="headline">AIM컬처웍스 회원사 약관</div>
+											</div>
+											<div class="modal-contents __no-style">
+												<div class="privacyArea">
+													<iframe
+														src="./assets/joincss/1050c1/iframe_1050_C1_ko.html"
+														width="100%" height="100%" frameborder="0"
+														scrolling="auto" marginwidth="0" marginheight="0"
+														allowtransparency="true" title=""></iframe>
+												</div>
+											</div>
+											<div class="modal-closer">
+												<button type="button" class="btn-close">닫기</button>
+											</div>
+										</div>
+									</div>
+									<div class="inner">
+										<div class="ui-wrap">
+											<div class="ui-check">
+												<input type="checkbox" id="agreeCco_1050B2" name="1050"
+													class="mPrv ui-allchk-el ui-allchk-group1"
+													onclick="fnPrvAgChange('agreeCco_1050B2');"
+													data-title="필수입력정보 수집동의서" data-prvdvc="B2"
+													data-cconm="롯데컬처웍스" data-ccoenm="LOTTE CINEMA"
+													data-separator-number="1"><label
+													for="agreeCco_1050B2">필수입력정보 수집동의서 <em class="">(필수)</em></label>
+											</div>
+											<div class="detail">
+												<button type="button"
+													class="ui-button __square-mini __underline"
+													onclick="modal_init('term-code-agree-10501',800)">자세히</button>
+											</div>
+										</div>
+										<div id="term-code-agree-10501"
+											class="modal-container __fixed">
+											<div class="modal-header">
+												<div class="headline">필수입력정보 수집동의서</div>
+											</div>
+											<div class="modal-contents __no-style">
+												<div class="privacyArea">
+													<iframe
+														src="./assets/joincss/iframe_1050_B2_ko.html"
+														width="100%" height="100%" frameborder="0"
+														scrolling="auto" marginwidth="0" marginheight="0"
+														allowtransparency="true" title=""></iframe>
+												</div>
+											</div>
+											<div class="modal-closer">
+												<button type="button" class="btn-close">닫기</button>
+											</div>
+										</div>
+									</div>
+									<div class="inner">
+										<div class="ui-wrap">
+											<div class="ui-check">
+												<input type="checkbox" id="agreeCco_1050B3" name="1050"
+													class="ui-allchk-el ui-allchk-group1"
+													onclick="fnPrvAgChange('agreeCco_1050B3');"
+													data-title="선택입력정보 수집동의서" data-prvdvc="B3"
+													data-cconm="롯데컬처웍스" data-ccoenm="LOTTE CINEMA"
+													data-separator-number="1"><label
+													for="agreeCco_1050B3">선택입력정보 수집동의서 <em
+													class="__point-color">(선택)</em></label>
+											</div>
+											<div class="detail">
+												<button type="button"
+													class="ui-button __square-mini __underline"
+													onclick="modal_init('term-code-agree-10502',800)">자세히</button>
+											</div>
+										</div>
+										<div id="term-code-agree-10502"
+											class="modal-container __fixed">
+											<div class="modal-header">
+												<div class="headline">선택입력정보 수집동의서</div>
+											</div>
+											<div class="modal-contents __no-style">
+												<div class="privacyArea">
+													<iframe
+														src="./assets/joincss/1050b3/iframe_1050_B3_ko.html"
+														width="100%" height="100%" frameborder="0"
+														scrolling="auto" marginwidth="0" marginheight="0"
+														allowtransparency="true" title=""></iframe>
+												</div>
+											</div>
+											<div class="modal-closer">
+												<button type="button" class="btn-close">닫기</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="description __high">
 						<p class="__point-color">
 							선택약관에 동의하지 않으셔도 회원가입이 가능합니다.
 							<!-- 선택항목에 동의하지 않으셔도 정상적인 서비스를 이용하실 수 있습니다. -->
 						</p>
-<!-- 					</div> -->
+						<p>
+							AIM.POINT 선택약관에 동의하지 않으시면 AIM.POINT 모든 제휴사에서 회원 혜택이 제한됩니다.<br>
+							1) AIM백화점 MVG 등 제휴사 회원등급 선정 및 추가포인트 적립 대상에서 제외<br> 2) AIM마트 등
+							쿠폰 지급 대상에서 제외<br> 3) 모든 제휴사 이벤트 당첨대상에서 제외<br> 4) AIM.stamp 적립 및 리워드 대상에서 제외
+							<!-- L.POINT선택약관에 동의하시면 DM쿠폰발송, 백화점MVG선정 등 다양한 혜택을 경험하실 수 있습니다. -->
+						</p>
 					</div>
-
 				</div>
 				<!-- //약관 -->
 
@@ -301,7 +423,7 @@
 						취소
 						<!-- 취소 -->
 					</button>
-					<button type="button" style="background:#18315d;"
+					<button type="button"
 						class="ui-button __square-large __point-color" id="delaychk"
 						onclick="fnChkag();">
 						다음
