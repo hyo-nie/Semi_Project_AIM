@@ -20,7 +20,8 @@ public class FindIdAction implements Action {
     MemberDAO dao = new MemberDAO();
     String mb_id = dao.findId(mb_name, mb_tel);
     
-    if(mb_id == null) {
+    if(mb_id==null) {
+      response.setContentType("text/html; charset=UTF-8");
       PrintWriter out = response.getWriter();
       out.print("<script>");
       out.print("alert('일치하는 회원이 존재하지 않습니다');");
