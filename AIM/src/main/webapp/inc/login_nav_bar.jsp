@@ -65,8 +65,6 @@
 			<!-- AIM 인스타 주소 변경 -->
 		</ul>
 		<ul class="g_menu2">
-			<li><a href="#">멤버십</a></li>
-			<!-- 멤버십 주소 변경 -->
 			<li><a href="./NtList.nt">고객센터</a></li>
 			<!-- 고객센터 주소 변경 -->
 			<li><a href="#">단체관람/대관문의</a></li>
@@ -102,8 +100,6 @@
 
 			<li><a href="./Ticketing.tk" class="btn_reserve">바로 예매</a></li>
 			<!-- 바로예매 이동 -->
-			<li><button class="btn_menu_all">전체 메뉴 레이어 열기</button>
-				<div id="allmenu"></div></li>
 		</ul>
 	</div>
 	<div id="nav" class="area__gnbmovingbar">

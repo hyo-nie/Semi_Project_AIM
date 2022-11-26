@@ -39,7 +39,6 @@
 			<!-- AIM 인스타 주소 변경 -->
 		</ul>
 		<ul class="g_menu2">
-			<!-- 멤버십 주소 변경 -->
 			<li><a href="./NtList.nt">고객센터</a></li>
 			<!-- 고객센터 주소 변경 -->
 			<li><a href="./RentalWrite.th">단체관람/대관문의</a></li>
