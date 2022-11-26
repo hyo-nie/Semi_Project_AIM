@@ -24,6 +24,7 @@ public class LoginAction implements Action {
 		String ticketing = request.getParameter("ticketing");
 		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@"+ticketing);
 		
+		
 		// DAO - 로그인 여부 체크 메서드 loginCheck()
 		MemberDAO dao = new MemberDAO();
 		int result = dao.loginCheck(mb_id, mb_pw);
@@ -65,11 +66,7 @@ public class LoginAction implements Action {
 			forward.setRedirect(true);
 			return forward;
 		}
-//		if(help != null) {
-//			forward.setPath("./HpLogin.hp?hp="+hp);
-//			forward.setRedirect(true);
-//			return forward;
-//		}
+		
 		if(movieCd!=null && url!=null) {
 			forward.setPath("./"+url+"?movieCd="+movieCd);
 			forward.setRedirect(true);

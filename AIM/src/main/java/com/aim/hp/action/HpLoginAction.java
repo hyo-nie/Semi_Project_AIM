@@ -23,11 +23,15 @@ public class HpLoginAction implements Action {
 		HttpSession session = request.getSession();
 		String mb_id = (String)session.getAttribute("mb_id");
 				
-		ActionForward forward = new ActionForward();
 		if(mb_id == null) {
-					forward.setPath("./Login.aim?hp_id="+mb_id);
-					forward.setRedirect(true);
-					return forward;
+			response.setContentType("text/html; charset=UTF-8");
+			PrintWriter out = response.getWriter();
+					out.print("<script>");
+					out.print("alert('로그인이 필요합니다.');");
+					out.print("location.href='./Login.aim?url=HpLogin.hp';");
+					out.print("</script>");
+					out.flush();
+					return null;
 				}
 				
 		// DAO - 회원정보 가져오는 메서드 ( getMember(ID) )
@@ -38,6 +42,7 @@ public class HpLoginAction implements Action {
 		request.setAttribute("dto", dto);
 				
 		// 페이지 이동
+		ActionForward forward = new ActionForward();
 		forward.setPath("./hp/boardhp.jsp");
 		forward.setRedirect(false);
 		return forward;
