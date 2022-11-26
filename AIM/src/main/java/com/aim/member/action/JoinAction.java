@@ -19,10 +19,12 @@ public class JoinAction implements Action {
 		dto.setMb_name(request.getParameter("mb_name"));
 		dto.setMb_nick(request.getParameter("mb_nick"));
 		dto.setMb_gender(request.getParameter("mb_gender"));
-		dto.setMb_tel(request.getParameter("mb_tel"));
+		
+		String telArr = request.getParameter("mb_tel2") + "-" + request.getParameter("mb_tel3") + "-" + request.getParameter("mb_tel4");
 		
 		String birthArr = request.getParameter("mb_birth1") + "-" +  request.getParameter("mb_birth2") + "-" + request.getParameter("mb_birth3");
 		
+		dto.setMb_tel(telArr);
 		dto.setMb_birth(birthArr);
 		
 		System.out.println(" M : dto : " + dto);
