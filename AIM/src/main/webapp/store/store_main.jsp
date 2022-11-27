@@ -53,7 +53,7 @@
 	    	<b>STORE</b>
 	    	<span>
 	    		All In Movie, 영화의 모든 것
-	    		<div style=float:right;>
+	    		<div style="float: right;">
 	    		<a href="./CartList.ct">
 	    			<img src="./assets/img/bg_cartBtn.png" alt="장바구니">
 	    		</a>
@@ -71,9 +71,10 @@
 		<c:set var="num" value="0"/>
   	
 		<ul class="category_product_list">
+		
 	  		<!-- 추천상품 파트 -->
 	        <li>
-	          <strong class="category_product_title">추천상품
+	          <strong class="category_product_title" style="font-size: 23px; font-family: inherit;">추천상품
 	          <a href="./AimPick.st" class="btn_category_product">더보기</a>
 	          </strong>          
 	          
@@ -96,8 +97,8 @@
 	          	
 	          	<li class=" ">
 					<a href="./GiftcardDetail.st?st_num=${ticket.st_num}" class="btn_category_product">              
-					<span class="best_product_img_wrap">
-						<img src="./assets/img/${ticket.st_img}" alt="${ticket.st_name }"></span>              
+					<span class="best_product_img_wrap" style="width: 220px; height: 183px;">
+						<img src="./assets/img/${ticket.st_img}" alt="${ticket.st_name }" style="margin-top: 26px;"></span>              
 					<span class="best_product_text_wrap">                 
 						<span class="best_product_text_title">${ticket.st_name }</span>                  
 						<span class="best_product_text_name">${ticket.st_text }</span>                  
@@ -112,8 +113,8 @@
 	          	
 	          	<li class=" ">
 					<a href="./GiftcardDetail.st?st_num=${giftCard.st_num}" class="btn_category_product">              
-					<span class="best_product_img_wrap">
-						<img src="./assets/img/${giftCard.st_img }" alt="${giftCard.st_name }"></span>              
+					<span class="best_product_img_wrap" style="width: 220px; height: 183px;">
+						<img src="./assets/img/${giftCard.st_img }" alt="${giftCard.st_name }" style="margin-top: 26px;"></span>              
 					<span class="best_product_text_wrap">                 
 						<span class="best_product_text_title">${giftCard.st_name }</span>                  
 						<span class="best_product_text_name">${giftCard.st_text }</span>                  
@@ -129,12 +130,12 @@
 			</li>
 		</ul>
 	          
-	          <br><br>
+	    <br><br>
 	          
 	  	<ul class="category_product_list">
 	  		<!-- 영화관람권 / 기트프카드 파트 -->
 	        <li>
-	          <strong class="category_product_title">영화관람권 / 기프트카드
+	          <strong class="category_product_title" style="font-size: 23px; font-family: inherit;">영화관람권 / 기프트카드
 	          <a href="./GiftcardList.st" class="btn_category_product">더보기</a> </strong>          
 	          
 	          <ul class="category_product_inner_list">   
@@ -143,8 +144,8 @@
 		        	<c:set var="giftlist" value="${gc_list[i] }"/>
 			          <li class=" ">
 							<a href="./GiftcardDetail.st?st_num=${giftlist.st_num }" class="btn_category_product">              
-							<span class="best_product_img_wrap">
-								<img src="./assets/img/${giftlist.st_img }" alt="${giftlist.st_img }"></span>  
+							<span class="best_product_img_wrap" style="width: 220px; height: 183px;">
+								<img src="./assets/img/${giftlist.st_img }" alt="${giftlist.st_img }" style="margin-top: 26px;"></span>  
 								           
 							<span class="best_product_text_wrap">                 
 								<span class="best_product_text_title">${giftlist.st_name }</span>                  
@@ -163,11 +164,12 @@
 	          
 		 <br><br>
 	      
+	      
 	      <ul class="category_product_list">
 	        <!-- 팝콘/음료/굿즈 파트 -->
 	        
 			  <li>
-			    <strong class="category_product_title">팝콘/음료/굿즈
+			    <strong class="category_product_title" style="font-size: 23px; font-family: inherit;">팝콘/음료/굿즈
 			    	<a href="./PopcornList.st" class="btn_category_product">더보기</a> </strong>  
 			          <!-- giftstore.css 517-->
 			             
