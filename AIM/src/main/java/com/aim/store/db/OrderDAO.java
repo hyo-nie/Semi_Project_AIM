@@ -81,7 +81,7 @@ public class OrderDAO {
 					StoreDTO stDTO = (StoreDTO)prdtList.get(i);
 					
 					sql = "insert into class7_220721_team3.order "
-							+ "values(?,?,?,?,?,?,?,?,?,now(),?)";
+							+ "values(?,?,?,?,?,?,?,?,?,now())";
 		               pstmt = con.prepareStatement(sql);
 		               
 		               pstmt.setInt(1, o_num); // 일련번호
@@ -93,7 +93,6 @@ public class OrderDAO {
 		               pstmt.setString(7, oDTO.getO_tel()); // 주문자 전화번호
 		               pstmt.setInt(8, ctDTO.getC_amount() * stDTO.getSt_price()); // 구매 총액
 		               pstmt.setString(9, oDTO.getO_pay()); // 결제방법
-		               pstmt.setInt(10, oDTO.getO_refund()); // 환불가능여부
 		               
 		               pstmt.executeUpdate();
 		               
@@ -182,7 +181,6 @@ public class OrderDAO {
 					dto.setO_pdate(rs.getTimestamp("o_pdate"));
 					dto.setO_cnum(rs.getString("o_cnum"));
 					dto.setO_sum(rs.getInt("o_sum"));
-					dto.setO_refund(rs.getInt("o_refund"));
 					dto.setO_pay(rs.getString("o_pay"));
 					dto.setO_tel(rs.getString("o_tel"));
 					dto.setO_id(rs.getString("o_id"));

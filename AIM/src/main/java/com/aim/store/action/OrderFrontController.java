@@ -76,23 +76,10 @@ public class OrderFrontController extends HttpServlet {
 				  forward = new ActionForward();
 				  forward.setPath("./store/buy_fail.jsp");
 				  forward.setRedirect(false);
-			  } else if(command.equals("/OrderNowAction.or")) {
-				  System.out.println("C : /OrderNowAction.or");
-				  
-				  action = new OrderNowAction();
-				  try {
-					forward = action.execute(request, response);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
 			  } else if(command.equals("/OrderNow.or")) {
 				  System.out.println("C : /OrderNow.or");
 			  
 			  }
-		      
-	   
-		      // 가상주소 매핑
-
 		      
 
 		      // 페이지 이동
