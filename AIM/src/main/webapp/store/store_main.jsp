@@ -6,16 +6,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>AIM - ALL IN MOVIE</title>
+<title>AIM - 스토어</title>
 <link href="./assets/css/giftstore.css" rel="stylesheet" type="text/css">
-<script src="jquery-3.6.1.js"></script>
-<!-- 제이쿼리 바꿀 예정 -->
-<script type="text/javascript">
-
-
-
-
-</script>
 
 <!--  장바구니 버튼을 위한 CSS -->
 <style>
@@ -78,7 +70,7 @@
 	          <a href="./AimPick.st" class="btn_category_product">더보기</a>
 	          </strong>          
 	          
-	          <ul class="category_product_inner_list">
+	          <ul class="category_product_inner_list" style="margin-bottom: 30px;">
 	          	<li class=" ">
 					<a href="./PopcornDetail.st?st_num=${Combo.st_num}" class="btn_category_product">              
 					<span class="best_product_img_wrap">
@@ -138,7 +130,7 @@
 	          <strong class="category_product_title" style="font-size: 23px; font-family: inherit;">영화관람권 / 기프트카드
 	          <a href="./GiftcardList.st" class="btn_category_product">더보기</a> </strong>          
 	          
-	          <ul class="category_product_inner_list">   
+	          <ul class="category_product_inner_list" style="margin-bottom: 30px;">   
 	             <c:forEach var="i" begin="1" end="3" step="1">
 		        	<c:if test="${num < size}">
 		        	<c:set var="giftlist" value="${gc_list[i] }"/>

@@ -17,19 +17,13 @@
 	<!-- 헤더/네비 -->
 	<jsp:include page="../inc/login_nav_bar.jsp"/>
 
-<%-- ${Combo } --%>
-<%-- ${giftCard } --%>
-<%-- ${ticket } --%>
-		
-		
-		
 		
 		
 		
 		<div id="contents" class="gift_store">
 		
 		<div class="category_product_list_wrap">
-			<strong class="category_product_list_title">
+			<strong class="category_product_list_title" style="font-size: 25px; font-family: inherit;">
 				AIM's Pick
 			</strong>
 
@@ -82,13 +76,12 @@
 					<input type="button" value="상품등록" onclick="location.href='./AdminStoreAdd.ad';">
 					<input type="button" value="상품리스트" onclick="location.href='./AdminStoreList.ad';">
 				</c:if>
-				<!-- 버튼은 css적용 추후 적용할 예정! admin(관리자)만 볼 수 있도록 제어할 예정 -->
 		</div>
 </div>
 
 
 	<!-- 약관 -->
-<%-- 	<jsp:include page="../inc/footer.jsp" /> --%>
+	<jsp:include page="../inc/footer.jsp" />
 		
 
 </body>
