@@ -5,6 +5,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.aim.movie.db.MovieDAO;
 import com.aim.movie.db.MovieDTO;
 import com.aim.schedule.db.ScheduleDTO;
 import com.aim.ticketing.db.ReservationDAO;
@@ -26,9 +27,15 @@ public class MovieClickAction implements Action {
 		List<ScheduleDTO> scheduleList = dao.getScheduleList(branchCd, movieCd, date);
 		List<MovieDTO> movieList = dao.getMovieList(scheduleList);
 		
+		// 수정중
+		MovieDAO mvDAO = new MovieDAO();
+		MovieDTO mvDTO = mvDAO.getMovieDetail(movieCd);
+		// 수정중
+		
 		// request에 저장
 		request.setAttribute("scheduleList", dao.getScheduleList(branchCd, movieCd, date));
 		request.setAttribute("movieList", movieList);
+		request.setAttribute("movieDetail", mvDTO);
 		
 		ActionForward forward = new ActionForward();
 		forward.setPath("./ticketing/movieClick.jsp");

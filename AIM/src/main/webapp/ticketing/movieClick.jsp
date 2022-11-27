@@ -7,9 +7,9 @@
 </head>
 <body>
 	
+		<input type="hidden" value="${movieDetail.movieCd }" id="select_movie_value_ym">
 	<c:if test="${movieList.size() != 0 }">
 		<c:set var="movieDTO" value="${movieList.get(i) }"/>
-			<input type="hidden" value="${movieDTO.movieCd }" id="select_movie_value_ym">
 			<!-- 영화 정보 (ajax 구현), 등급, 제목 -->
 			<span class=
 				<c:if test="${movieDTO.watchGradeNm.equals('12세이상관람가') }">
