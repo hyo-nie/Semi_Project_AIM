@@ -93,23 +93,29 @@ text-align: center;
 				</tbody>
 			</table>
 			<br><br>
-			<div align="center">
-				<c:if test="${totalCnt !=0 }">
-					<!-- 이전 -->
-					<c:if test="${startPage > pageBlock }">
-						<a href="./AdminScheList.th?pageNum=${startPage-pageBlock }">[이전]</a>
+			<div class="brd_paginate" align="center">
+				<ol>
+					<c:if test="${totalCnt !=0 }">
+						<!-- 이전 -->
+						<c:if test="${startPage > pageBlock }">
+							<a href="./AdminScheList.th?pageNum=${startPage-pageBlock }">[이전]</a>
+
+						</c:if>
+						
+						<!-- 숫자 페이지번호 -->
+						<c:forEach var="i" begin="${startPage }" end="${endPage }" step="1">
+							<a href="./AdminScheList.th?pageNum=${i }">[${i }]</a>
+						</c:forEach>
+						
+						<!-- 다음 -->
+						<c:if test="${endPage < pageCount }">
+							<a href="./AdminScheList.th?pageNum=${startPage+pageBlock }">[다음]</a>
+
+						</c:if>
 					</c:if>
-					
-					<!-- 숫자 페이지번호 -->
-					<c:forEach var="i" begin="${startPage }" end="${endPage }" step="1">
-						<a href="./AdminScheList.th?pageNum=${i }">[${i }]</a>
-					</c:forEach>
-					
-					<!-- 다음 -->
-					<c:if test="${endPage < pageCount }">
-						<a href="./AdminScheList.th?pageNum=${startPage+pageBlock }">[다음]</a>
-					</c:if>
-				</c:if>
+			
+				
+				</ol>
 			</div>
 			
 			<br><br><br>
