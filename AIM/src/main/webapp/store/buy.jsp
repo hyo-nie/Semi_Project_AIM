@@ -76,7 +76,7 @@ function requestPay(user_tel) {
 		if(check){
 			console.log("체크 완료");
 			requestPay(user_tel);
-//			location.href="./OrderAddAction.or?mb_tel="+user_tel+"&totalAmountMoney="+payAmount;
+			// location.href="./OrderAddAction.or?mb_tel="+user_tel+"&totalAmountMoney="+payAmount;
 			
 		} else{
 			alert('약관에 모두 동의하셔야 결제가 가능합니다.');
