@@ -109,8 +109,8 @@ public class HpDAO {
 			
 			// 3. sql 작성 & pstmt 객체
 			sql = "insert into help_board(hp_bno,mb_id,mb_pw,hp_subject,"
-					+ "hp_content,hp_date,hp_re_ref,hp_re_lev,hp_re_seq,hp_select,hp_selectN) "
-					+ "values(?,?,?,?,?,now(),?,?,?,?,?)";
+					+ "hp_content,hp_date,hp_re_ref,hp_re_lev,hp_re_seq,hp_select) "
+					+ "values(?,?,?,?,?,now(),?,?,?,?)";
 		
 			pstmt = con.prepareStatement(sql);
 			
@@ -124,7 +124,7 @@ public class HpDAO {
 			pstmt.setInt(7, 0);
 			pstmt.setInt(8, 0);
 			pstmt.setString(9, dto.getHp_select());
-			pstmt.setString(10, dto.getHp_selectN());
+			
 			
 			
 			// 4. sql 실행
@@ -346,13 +346,12 @@ public class HpDAO {
 					if(rs.next()) {
 						if(dto.getMb_pw().equals(rs.getString("mb_pw"))) {
 							// 3. sql 작성(update) & pstmt 객체
-							sql = "update help_board set hp_subject=?,hp_select=?,hp_selectN=?,hp_content=? where hp_bno=?";
+							sql = "update help_board set hp_subject=?,hp_select=?,hp_content=? where hp_bno=?";
 							pstmt = con.prepareStatement(sql);
 									
 							//??? 
 							pstmt.setString(1, dto.getHp_subject());
 							pstmt.setString(2, dto.getHp_select());
-							pstmt.setString(3, dto.getHp_selectN());
 							pstmt.setString(4, dto.getHp_content());
 							pstmt.setInt(5, dto.getHp_bno());
 							

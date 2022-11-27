@@ -41,7 +41,6 @@ public class MyHpUpdateProAction implements Action {
 		dto.setMb_pw(request.getParameter("mb_pw"));
 		dto.setHp_subject(request.getParameter("hp_subject"));
 		dto.setHp_select(request.getParameter("hp_select"));
-		dto.setHp_selectN(request.getParameter("hp_selectN"));
 		dto.setHp_content(request.getParameter("hp_content"));
 		
 		String pageNum = request.getParameter("pageNum");
