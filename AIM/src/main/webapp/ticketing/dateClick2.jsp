@@ -31,7 +31,7 @@
 						<c:set var="i" value="${i+1 }"></c:set>
 					</dd>
 					<dt>상영관</dt>
-					<dd class="hall">${scList.roomNum }</dd>
+					<dd class="hall">${scList.roomNum }관</dd>
 				</dl>
 			</a>
 		</li>

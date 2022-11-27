@@ -284,32 +284,32 @@
 								<dl style="background-color:gray;">
 									<dt>경로/우대 (${seniorCnt })</dt>
 									<dd>
-										<strong><fmt:formatNumber value="${seniorCnt*7000 }"/></strong>원
+										<strong><fmt:formatNumber value="${seniorCnt*7000}"/></strong>원
 									</dd>
 								</dl>
 								<dl>
 									<dt>총 금액</dt>
 									<dd>
 										<c:set var="price1" value="${adultCnt*13000 + childCnt*9000 + seniorCnt*7000 }"/>
-										<strong><fmt:formatNumber value="${price1 }"/></strong>원
+										<strong><fmt:formatNumber value="${price1}"/></strong>원
 									</dd>
 								</dl>
 								<dl>
 									<dt>할인금액</dt>
 									<dd>
 										<c:if test="${mbDTO.mb_grade==1 }">
-											<c:set var="price2" value="${(adultCnt*13000 + childCnt*9000 + seniorCnt*7000)} "/>
+											<c:set var="price2" value="${(adultCnt*13000 + childCnt*9000 + seniorCnt*7000)*0}"/>
 										</c:if>
 										<c:if test="${mbDTO.mb_grade==2 }">
-											<c:set var="price2" value="${(adultCnt*13000 + childCnt*9000 + seniorCnt*7000)*0.05} "/>
+											<c:set var="price2" value="${(adultCnt*13000 + childCnt*9000 + seniorCnt*7000)*0.05}"/>
 										</c:if>
 										<c:if test="${mbDTO.mb_grade==3 }">
-											<c:set var="price2" value="${(adultCnt*13000 + childCnt*9000 + seniorCnt*7000)*0.1} "/>
+											<c:set var="price2" value="${(adultCnt*13000 + childCnt*9000 + seniorCnt*7000)*0.1}"/>
 										</c:if>
 										<c:if test="${mbDTO.mb_grade==4 }">
-											<c:set var="price2" value="${(adultCnt*13000 + childCnt*9000 + seniorCnt*7000)*0.15} "/>
+											<c:set var="price2" value="${(adultCnt*13000 + childCnt*9000 + seniorCnt*7000)*0.15}"/>
 										</c:if>
-										-<strong><fmt:formatNumber value="${price2 }"/></strong>원
+										-<strong><fmt:formatNumber value="${price2}"/></strong>원
 									</dd>
 								</dl>
 								<dl>
