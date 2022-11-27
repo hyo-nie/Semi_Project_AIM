@@ -379,7 +379,7 @@ public class TheaterDAO {
 					+ "on schedule.branchCd = theater.branchCd "
 					+ "join movie "
 					+ "on schedule.movieCd = movie.movieCd "
-					+ "order by scCode desc limit ?,?;";
+					+ "order by sc_date desc,schedule.branchCd, roomCd limit ?,?;";
 			pstmt = con.prepareStatement(sql);
 			
 			// ?????

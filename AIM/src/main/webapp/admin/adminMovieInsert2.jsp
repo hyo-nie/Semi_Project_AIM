@@ -13,7 +13,36 @@
 			alert('영화코드를 입력하세요');
 			document.cd.movieCd.focus();
 			return false;
-		} else
+		} else if (document.cd.movieNm.value == ""){
+			alert('영화이름을 입력하세요');
+			document.cd.movieNm.focus();
+			return false;
+		} else if (document.cd.openDt.value == ""){
+			alert('개봉일을 입력하세요');
+			document.cd.openDt.focus();
+			return false;
+		} else if (document.cd.genreNm.value == ""){
+			alert('장르를 입력하세요');
+			document.cd.genreNm.focus();
+			return false;
+		} else if (document.cd.directors.value == ""){
+			alert('감독을 입력하세요');
+			document.cd.directors.focus();
+			return false;
+		} else if (document.cd.watchGradeNm.value == ""){
+			alert('관람등급을 입력하세요');
+			document.cd.watchGradeNm.focus();
+			return false;
+		} else if (document.cd.showTm.value == ""){
+			alert('showTm를 입력하세요');
+			document.cd.showTm.focus();
+			return false;
+		} else if (document.cd.boxrank.value == ""){
+			alert('box rank를 입력하세요');
+			document.cd.boxrank.focus();
+			return false;
+		}
+	alert('영화 정보 등록이 완료되었습니다!');
 		document.cd.submit();
 	}
 </script>

@@ -36,7 +36,7 @@ public class AdminScheListAction implements Action {
 		//////////////////////////////////
 		//페이징처리_1
 		// 한 페이지에 보여줄 글의 개수 
-       int pageSize = 15;
+       int pageSize = 10;
        
        // http://localhost:8088/JSP/board/boardList.jsp?pageNum=2
     		   
@@ -61,7 +61,8 @@ public class AdminScheListAction implements Action {
 		
 		//페이징처리_2
 		// 전체 페이지수 
-		int pagecnt = (cnt/pageSize)+(cnt%pageSize==0? 0:1);
+		int pagecnt = (cnt/pageSize)+(cnt % pageSize == 0 ? 0 : 1);
+		System.out.println("전체페이지수" +pagecnt);
 		
 		// 한 화면에 보여줄 페이지수
 		int pageBlock = 5;
@@ -79,10 +80,10 @@ public class AdminScheListAction implements Action {
 		request.setAttribute("adminScheList", adminScheList);
 		
 		//페이징처리 정보 저장
+		request.setAttribute("pageNum", pageNum);
 		request.setAttribute("totalCnt", cnt);
-		request.setAttribute("PageNum", pageNum);
-		request.setAttribute("PageCount", pagecnt);
-		request.setAttribute("PageBlock", pageBlock);
+		request.setAttribute("pageCount", pagecnt);
+		request.setAttribute("pageBlock", pageBlock);
 		request.setAttribute("startPage", startPage);
 		request.setAttribute("endPage", endPage);
 		

@@ -69,11 +69,7 @@
 			document.rt.r_tel.focus();
 			return false;
 		}
-		if(isNaN(document.rt.r_tel.value)){
-			alert("전화번호는 숫자로 입력해주세요");
-			document.rt.r_tel.focus();
-			return false;
-		}
+		
 		if(document.rt.r_mb_pw.value == ""){
 			alert("신청자 정보를 입력해주세요");
 			document.rt.r_mb_pw.focus();

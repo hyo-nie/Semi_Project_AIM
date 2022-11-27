@@ -25,7 +25,7 @@
 		<div id="contents" class="gift_store">
 		
 		<div class="category_product_list_wrap">
-			<strong class="category_product_list_title">
+			<strong class="category_product_list_title" style="font-size: 25px; font-family: inherit;">
 				기프트카드 / 관람권
 				<span style=float:right;>
 		    		<a href="./CartList.ct">

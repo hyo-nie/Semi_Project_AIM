@@ -352,8 +352,8 @@ public class HpDAO {
 							//??? 
 							pstmt.setString(1, dto.getHp_subject());
 							pstmt.setString(2, dto.getHp_select());
-							pstmt.setString(4, dto.getHp_content());
-							pstmt.setInt(5, dto.getHp_bno());
+							pstmt.setString(3, dto.getHp_content());
+							pstmt.setInt(4, dto.getHp_bno());
 							
 									
 							// 4. sql 실행
