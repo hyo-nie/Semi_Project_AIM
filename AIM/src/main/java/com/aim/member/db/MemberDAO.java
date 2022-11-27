@@ -48,8 +48,8 @@ public class MemberDAO {
    public void memberJoin(MemberDTO dto) {
 	      try {
 	         con = getConnection();
-	         sql = "insert into member(mb_id,mb_pw,mb_name,mb_nick,mb_birth,mb_gender,mb_tel,mb_grade,mb_pay,mb_view)"
-	               +"value(?,?,?,?,?,?,?,?,?,?)";
+	         sql = "insert into member(mb_id,mb_pw,mb_name,mb_nick,mb_birth,mb_tel,mb_grade,mb_pay,mb_view)"
+	               +"value(?,?,?,?,?,?,?,?,?)";
 	         pstmt = con.prepareStatement(sql);
 	         
 	         pstmt.setString(1, dto.getMb_id());
@@ -57,11 +57,10 @@ public class MemberDAO {
 	         pstmt.setString(3, dto.getMb_name());
 	         pstmt.setString(4, dto.getMb_nick());
 	         pstmt.setString(5, dto.getMb_birth());
-	         pstmt.setString(6, dto.getMb_gender());
-	         pstmt.setString(7, dto.getMb_tel());
-	         pstmt.setInt(8, 1);
+	         pstmt.setString(6, dto.getMb_tel());
+	         pstmt.setInt(7, 1);
+	         pstmt.setInt(8, 0);
 	         pstmt.setInt(9, 0);
-	         pstmt.setInt(10, 0);
 	         
 	         int result = pstmt.executeUpdate();
 	         
@@ -253,7 +252,6 @@ public class MemberDAO {
  			dto = new MemberDTO();
  			
  			dto.setMb_birth(rs.getString("mb_birth"));
- 			dto.setMb_gender(rs.getString("mb_gender"));
  			dto.setMb_grade(rs.getInt("mb_grade"));
  			dto.setMb_id(mb_id);
  			dto.setMb_name(rs.getString("mb_name"));
@@ -284,7 +282,6 @@ public class MemberDAO {
 				dto.setMb_id(rs.getString("mb_id"));
 				dto.setMb_pw(rs.getString("mb_pw"));
 				dto.setMb_name(rs.getString("mb_name"));
-				dto.setMb_gender(rs.getString("mb_gender"));
 				dto.setMb_nick(rs.getString("mb_nick"));
 				dto.setMb_birth(rs.getString("mb_birth"));
 				dto.setMb_pay(rs.getInt("mb_pay"));
