@@ -53,7 +53,7 @@ public class HpReContentAction implements Action {
 		
 		// 페이지 이동(준비)
 		forward.setPath("./HpAdminLoginAction.hp");
-		forward.setRedirect(false);
+		forward.setRedirect(true);
 		
 		return forward;
 	}

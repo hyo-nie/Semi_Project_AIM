@@ -269,7 +269,6 @@ public class NtDAO {
 					dto.setMb_pw(rs.getString("mb_pw"));
 					dto.setNt_subject(rs.getString("nt_subject"));
 					dto.setNt_content(rs.getString("nt_content"));
-					dto.setNt_file(rs.getString("nt_file"));
 					dto.setNt_date(rs.getDate("nt_date"));
 					dto.setNt_re_lev(rs.getInt("nt_re_lev"));
 					dto.setNt_re_ref(rs.getInt("nt_re_ref"));

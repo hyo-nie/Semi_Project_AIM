@@ -11,7 +11,6 @@ public class NtDTO {
 	private String nt_content; // 공지 내용
 	private int nt_select; // 공지의 분류 
 	private Date nt_date;	// 공지 날짜
-	private String nt_file;	// 공지 첨부 파일
 	private int nt_re_ref; // 참조 번호 (글 그룹 나눔)
 	private int nt_re_lev; // 참조 레벨 ( 답글 달시 이용)	
 	public String getMb_id() {
@@ -56,12 +55,6 @@ public class NtDTO {
 	public void setNt_date(Date nt_date) {
 		this.nt_date = nt_date;
 	}
-	public String getNt_file() {
-		return nt_file;
-	}
-	public void setNt_file(String nt_file) {
-		this.nt_file = nt_file;
-	}
 	public int getNt_re_ref() {
 		return nt_re_ref;
 	}
@@ -77,9 +70,10 @@ public class NtDTO {
 	@Override
 	public String toString() {
 		return "NtDTO [mb_id=" + mb_id + ", mb_pw=" + mb_pw + ", nt_bno=" + nt_bno + ", nt_subject=" + nt_subject
-				+ ", nt_content=" + nt_content + ", nt_select=" + nt_select + ", nt_date=" + nt_date + ", nt_file="
-				+ nt_file + ", nt_re_ref=" + nt_re_ref + ", nt_re_lev=" + nt_re_lev + "]";
+				+ ", nt_content=" + nt_content + ", nt_select=" + nt_select + ", nt_date=" + nt_date + ", nt_re_ref="
+				+ nt_re_ref + ", nt_re_lev=" + nt_re_lev + "]";
 	}
+	
 	
 	
 	
