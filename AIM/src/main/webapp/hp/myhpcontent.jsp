@@ -63,8 +63,8 @@
 													<span class="cont">${requestScope.dto.hp_bno }</span>
 											</td>
 										</tr>
-														<c:set var="select" value="분류선택"/>
-														<c:forEach var="dto" items="${getHpList }">
+														<c:set var="select" value="영화관"/>
+														<c:forEach var="dto" items="${HpList }">
 															<c:choose>
 																<c:when test="${dto.hp_select == 0 }">
 																	<c:set var="select" value="분류선택"/>
