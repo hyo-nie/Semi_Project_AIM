@@ -31,7 +31,12 @@
 	  alert('회원정보가 변경되었습니다');
 	  document.fr.submit();  
   }
+  
+  
+  
 </script>
+
+
 
 <!-- 각종 요소 -->
 <jsp:include page="../inc/include.jsp" />
@@ -58,25 +63,49 @@
   <br>
   <br>
   <br>
+<style>
+h4 {font-size: 14px; margin-left: -30%; margin-bottom: 8px; color: #a4a2a2; margin-top: 20px;}
+input[type='text']{width: 40%;}
+.class_for_main{padding: 40px 14px;
+   				line-height: 17px;
+    			border: 1px solid #eee;
+    			border-radius: 15px;
+    			width: 50%;
+    			margin-left: 39em;}
+
+
+</style>
   
-  <h1 align="center">회원정보변경</h1>
-  <br>
-  <br>
+  
+  
+  <h1 style="margin-bottom: 10px; margin-left: 27%; color: #a4a2a2;">
+  	회원정보변경
+  </h1>
+
+  
   <fieldset>
-    <div align="center">
+    <div class="class_for_main" align="center">
       <form action="./MemberUpdatePro.aim" name="fr" method="post">
-        아이디 <input type="text" maxlength="10" value="${dto.mb_id }" name="mb_id" readonly><br>
-        <br>
-        비밀번호 <input type="password" maxlength="19" id="mb_pw" name="mb_pw" placeholder="비밀번호를 입력하세요." ><br>
-        <br>
-        이름 <input type="text" name="mb_name" value="${dto.mb_name }" ><br>
-        <br>
-        닉네임 <input type="text" name="mb_nick" value="${dto.mb_nick }" ><br>
-        <br>
-        전화번호 <input type="text" name="mb_tel" value="${dto.mb_tel }" ><br>
-        <br>
-        <input type="button" value="변경하기"  onclick="return check();" style="color:#fff; background:#18315D; width:75px; height:25px; margin:5px; border-radius:5px; border:1px solid #fff;">
-        <input type="button" value="돌아가기" onclick="history.back();" style="color:#fff; background:#18315D; width:75px; height:25px; margin:5px; border-radius:5px; border:1px solid #fff;">
+        <h4>아이디</h4>
+        <input type="text" maxlength="10" value="${dto.mb_id }" name="mb_id" readonly><br>
+
+        <h4>비밀번호</h4>
+        <input type="password" maxlength="19" id="mb_pw" name="mb_pw" style="width: 40%;" placeholder="비밀번호를 입력하세요." ><br>
+
+        <h4 style="margin-left: -32%;">이름</h4>
+        <input type="text" name="mb_name" value="${dto.mb_name }" ><br>
+
+        <h4>닉네임</h4>
+        <input type="text" name="mb_nick" value="${dto.mb_nick }" ><br>
+
+        <h4>전화번호</h4>
+        <input type="text" name="mb_tel" value="${dto.mb_tel }" ><br>
+        
+        <div class="class_for_btn" style="margin-top: 50px;">
+	        <input type="button" value="변경하기"  onclick="return check();" style="color:#fff; background:#18315D; width: 110px; height:40px; margin:5px; border-radius:5px; border:1px solid #fff;">
+	        <input type="button" value="돌아가기" onclick="history.back();" style="color:#fff; background:#18315D; width: 110px; height:40px; margin:5px; border-radius:5px; border:1px solid #fff;">
+      	</div>
+      
       </form>
     </div>
   </fieldset>
