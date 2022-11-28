@@ -64,34 +64,32 @@
 											</td>
 										</tr>
 														<c:set var="select" value="영화관"/>
-														<c:forEach var="dto" items="${HpList }">
 															<c:choose>
-																<c:when test="${dto.hp_select == 0 }">
+																<c:when test="${dto.hp_select.equals('0') }">
 																	<c:set var="select" value="분류선택"/>
 																</c:when>
-																<c:when test="${dto.hp_select == 1 }">
+																<c:when test="${dto.hp_select.equals('1') }">
 																	<c:set var="select" value="영화관"/>
 																</c:when>
-																<c:when test="${dto.hp_select == 2 }">
+																<c:when test="${dto.hp_select.equals('2') }">
 																	<c:set var="select" value="영화"/>
 																</c:when>
-																<c:when test="${dto.hp_select == 3 }">
+																<c:when test="${dto.hp_select.equals('3') }">
 																	<c:set var="select" value="멤버십"/>
 																</c:when>
-																<c:when test="${dto.hp_select == 4 }">
+																<c:when test="${dto.hp_select.equals('4') }">
 																	<c:set var="select" value="예매/결제"/>
 																</c:when>
-																<c:when test="${dto.hp_select == 5 }">
+																<c:when test="${dto.hp_select.equals('5') }">
 																	<c:set var="select" value="이벤트"/>
 																</c:when>
-																<c:when test="${dto.hp_select == 6 }">
+																<c:when test="${dto.hp_select.equals('6') }">
 																	<c:set var="select" value="홈페이지/모바일"/>
 																</c:when>
-																<c:when test="${dto.hp_select == 7 }">
+																<c:when test="${dto.hp_select.equals('7')}">
 																	<c:set var="select" value="개인정보"/>
 																</c:when>
 															</c:choose>
-														</c:forEach>
 										<tr class="tb_content" >
 											<td><div id="divNoticeContents" >
 												<p> 

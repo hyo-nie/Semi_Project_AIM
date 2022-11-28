@@ -40,7 +40,7 @@ public class MyHpContentAction implements Action {
 		HpDAO dao = new HpDAO();
 		
 		// 글번호에 해당 글 정보를 가져오기
-		HpDTO dto = dao.getHpList(hp_bno);
+		HpDTO dto = dao.getHp(hp_bno);
 		
 		
 		// request 영역에 글정보를 저장

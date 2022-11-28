@@ -277,42 +277,82 @@ public class HpDAO {
 		// 문의글정보 가져오기 - getHpList(int startRow,int pageSize)
 		
 		// 문의글 1개 불러오기 - getHpList(hp_bno)
-		public HpDTO getHpList(int hp_bno) {
+//		public HpDTO getHpList(int hp_bno) {
+//			HpDTO dto=null;
+//			try {
+//				// 1.2. 디비연결
+//				con = getConnection();
+//				
+//				// 3. sql 작성(select) & pstmt 객체
+//				sql = "select * from help_board where hp_bno = ?";
+//				pstmt = con.prepareStatement(sql);
+//				
+//				// ???
+//				pstmt.setInt(1, hp_bno);
+//				
+//				// 4. sql 실행
+//				rs = pstmt.executeQuery();
+//				
+//				// 5. 데이터처리	
+//				if(rs.next()) {
+//					
+//					// 데이터있을때만 dto객체 생성
+//					dto = new HpDTO();
+//					
+//					// DB정보(rs) -> dto 저장
+//					dto.setHp_bno(rs.getInt("Hp_bno"));
+//					dto.setMb_id(rs.getString("mb_id"));
+//					dto.setMb_pw(rs.getString("mb_pw"));
+//					dto.setHp_subject(rs.getString("hp_subject"));
+//					dto.setHp_content(rs.getString("hp_content"));
+//					dto.setHp_date(rs.getDate("hp_date"));
+//					dto.setHp_re_lev(rs.getInt("hp_re_lev"));
+//					dto.setHp_re_ref(rs.getInt("hp_re_ref"));
+//					dto.setHp_re_seq(rs.getInt("hp_re_seq"));
+//					dto.setHp_select(rs.getString("hp_select"));
+//				}
+//				
+//				System.out.println(" DAO : 글 정보 1개 저장완료 ");
+//					
+//			} catch (Exception e) {
+//				e.printStackTrace();
+//			} finally {
+//				closeDB();
+//			}
+//			
+//			return dto;
+//}
+		public HpDTO getHp(int hp_bno) {
 			HpDTO dto=null;
 			try {
 				// 1.2. 디비연결
 				con = getConnection();
-				
 				// 3. sql 작성(select) & pstmt 객체
 				sql = "select * from help_board where hp_bno = ?";
 				pstmt = con.prepareStatement(sql);
-				
 				// ???
 				pstmt.setInt(1, hp_bno);
-				
 				// 4. sql 실행
 				rs = pstmt.executeQuery();
-				
 				// 5. 데이터처리	
 				if(rs.next()) {
-					
 					// 데이터있을때만 dto객체 생성
 					dto = new HpDTO();
 					
 					// DB정보(rs) -> dto 저장
-					dto.setHp_bno(rs.getInt("Hp_bno"));
-					dto.setMb_id(rs.getString("mb_id"));
-					dto.setMb_pw(rs.getString("mb_pw"));
-					dto.setHp_subject(rs.getString("hp_subject"));
+					dto.setHp_bno(rs.getInt("hp_bno"));
 					dto.setHp_content(rs.getString("hp_content"));
 					dto.setHp_date(rs.getDate("hp_date"));
+					dto.setMb_id(rs.getString("mb_id"));
+					dto.setMb_pw(rs.getString("mb_pw"));
+					dto.setHp_select(rs.getString("hp_select"));
 					dto.setHp_re_lev(rs.getInt("hp_re_lev"));
 					dto.setHp_re_ref(rs.getInt("hp_re_ref"));
 					dto.setHp_re_seq(rs.getInt("hp_re_seq"));
-					dto.setHp_select(rs.getString("hp_select"));
+					dto.setHp_subject(rs.getString("hp_subject"));
 				}
 				
-				System.out.println(" DAO : 글 정보 1개 저장완료 ");
+				System.out.println(" DAO : 글 정보 1개 저장완료! ");
 					
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -322,6 +362,7 @@ public class HpDAO {
 			
 			return dto;
 		}
+		
 		// 문의 글 1개 불러오기 - getHpList(hp_bno)
 			
 		// 문의 게시글 수정 -myhpupdate (DTO)
