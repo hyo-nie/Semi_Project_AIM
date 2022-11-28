@@ -8,11 +8,26 @@
 <title>AIM - 회원 정보 수정</title>
 <script type="text/javascript">
   function check(){
+		var mb_pw = $("#mb_pw").val();
+		var reg = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
+		// 대문자,소문자,숫자,특수기호 포함 최소 8글자 여부
+		// 특수기호는 "#?!@$%^&*-" 만 사용가능 필요시 추가하면 됍니다.
+				
 	  if(document.fr.mb_pw.value==""){
 		  alert('비밀번호를 입력하세요');
 		  document.fr.pw.focus();
 		  return false;
-	  } else
+	  }
+	  else if (mb_pw.length < 8 || mb_pw.length > 20){
+				alert("비밀번호를 8글자~20글자 사이로 입력해주세요");
+				document.fr.mb_pw.focus();
+				return false;
+	 } 
+	  else if (false === reg.test(mb_pw)) {
+				alert('비밀번호는 숫자/대문자/소문자/특수문자를 최소 1개이상 모두 포함해야 합니다.');
+				document.fr.mb_pw.focus();
+				return false;
+			} 
 	  alert('회원정보가 변경되었습니다');
 	  document.fr.submit();  
   }
@@ -50,9 +65,9 @@
   <fieldset>
     <div align="center">
       <form action="./MemberUpdatePro.aim" name="fr" method="post">
-        아이디 <input type="text" maxlength="50" value="${dto.mb_id }" name="mb_id" readonly><br>
+        아이디 <input type="text" maxlength="10" value="${dto.mb_id }" name="mb_id" readonly><br>
         <br>
-        비밀번호 <input type="password" maxlength="15" name="mb_pw" placeholder="비밀번호를 입력하세요." ><br>
+        비밀번호 <input type="password" maxlength="19" id="mb_pw" name="mb_pw" placeholder="비밀번호를 입력하세요." ><br>
         <br>
         이름 <input type="text" name="mb_name" value="${dto.mb_name }" ><br>
         <br>
