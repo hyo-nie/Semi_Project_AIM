@@ -9,12 +9,6 @@
 <body>
 
 	<%
-// 		response.sendRedirect("./Login.aim");
-		// http://localhost:8088/AIM3/Login.aim
-// 		response.sendRedirect("./JoinForm.aim");
-		// http://localhost:8088/AIM3/Join.aim
-		// http://localhost:8080/AIM/Main.aim
-		
 		response.sendRedirect("./Main.aim");
 	%>
 	

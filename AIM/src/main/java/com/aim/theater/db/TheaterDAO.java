@@ -217,54 +217,7 @@ public class TheaterDAO {
 		return dto;
 	}//지점 소개 - getBranchIntro()
 	
-	
-	//선택한 상영정보 리스트
-	public TheaterDTO getSelectSche(int scCode) {
-		TheaterDTO selectScheList = null;
-		
-		try {
-			con= getConnection();
-			
-			sql="select scCode, schedule.branchCd, theater.branch_name, sc_date, schedule.roomCd, room.roomNum, schedule.movieCd, schedule.starttime, movie.movieNm, movie.watchGradeNm "
-					+ "from schedule "
-					+ "inner join movie "
-					+ "on schedule.movieCd = movie.movieCd inner join theater "
-					+ "on schedule.branchCd = theater.branchCd "
-					+ "join room "
-					+ "on schedule.roomCd = room.roomCd "
-					+ "where schedule.scCode=?;";
-			pstmt = con.prepareStatement(sql);
-			
-			pstmt.setInt(1, scCode);
-			
-			rs = pstmt.executeQuery();
-			
-			if(rs.next()) {
-				selectScheList = new TheaterDTO();
-				
-				selectScheList.setScCode(rs.getInt("scCode"));
-				selectScheList.setBranchCd(rs.getInt("branchCd"));
-				selectScheList.setBranch_name(rs.getString("branch_name"));
-				selectScheList.setSc_date(rs.getString("sc_date"));
-				selectScheList.setRoomCd(rs.getInt("roomCd"));
-				selectScheList.setRoomNum(rs.getString("roomNum"));
-				selectScheList.setMovieCd(rs.getString("movieCd"));
-				selectScheList.setStarttime(rs.getString("starttime"));
-				selectScheList.setMovieNm(rs.getString("movieNm"));
-				selectScheList.setWatchGradeNm(rs.getString("watchGradeNm"));
-				selectScheList.setSeatcomp(rs.getInt("seatcomp"));
-				
-			}//if
-			System.out.println("선택한 상영정보 저장완료");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}finally {
-			closeDB();
-		}
-		return selectScheList;
-		
-	}
-	//선택한 상영정보 리스트
+
 	
 	//영화정보 조회 getMovieList()
 	public List getMovieList() {

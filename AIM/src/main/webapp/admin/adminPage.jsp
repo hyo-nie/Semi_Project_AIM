@@ -38,13 +38,8 @@
 <!-- 페이지 상단 여백 -->
 
 
-
-<!-- 	스토어에서 쌔빈 코드 -->	<!-- css : /* ADMINPAGE ==== , /* ADMINPAGE */:x -->
-<!-- 	<div id="contents" class="contents_admin_home"> -->
-<!-- 		<div class="title_top"> -->
-<!-- 			<h2 class="tit01"><strong class="tit02">AIM </strong> 관리자 페이지</h2> -->
-<!-- 		</div> -->
-<!-- 	</div> -->
+<!-- 스토어참조코드 -->
+<!-- css : /* ADMINPAGE ==== , /* ADMINPAGE */:x -->
 
 <!-- 상단 이름 -->
 <div class="movi_pre_list">
@@ -86,7 +81,7 @@
 		</tbody>
 	</table>
 <!-- 내용 끝 -->
-<!-- 	스토어에서 쌔빈 코드 -->
+<!-- 스토어참조코드 -->
 
 
 

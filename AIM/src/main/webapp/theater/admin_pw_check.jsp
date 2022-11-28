@@ -33,7 +33,7 @@
 	
 	<form action="./AdminPwCheckAction.th?rno=${param.rno }&pageNum=${param.pageNum }" method="post" name="rc">
 	<input type="hidden" name="mb_id" value="${sessionScope.mb_id }">
-<%-- 	<input type="hidden" name="r_mb_id" value="${param.r_mb_id }"> --%>
+
 	<div id="contents">
 		<div class="title_top">
 			<h2 class="tit">문의글 비밀번호 확인</h2>

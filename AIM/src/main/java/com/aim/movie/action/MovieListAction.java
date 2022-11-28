@@ -18,10 +18,8 @@ public class MovieListAction implements Action {
     System.out.println("M : MovieListAction_execute() 호출");
     
     MovieDAO dao = new MovieDAO();
-   // MovieDTO dto = new MovieDTO();
     
     List movieList = dao.allMovieList(request.getParameter("orderFlag"));
-    //System.out.println(movieList);
     request.setAttribute("movieList", movieList);
     
 //    System.out.println("@@@@@@@@@@@@@@@"+movieList);

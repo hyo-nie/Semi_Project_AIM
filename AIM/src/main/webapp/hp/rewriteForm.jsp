@@ -70,6 +70,7 @@
 								</div></td>
 							</tr>
 						</tbody>
+						
 					</table>
 
 					<input type="hidden" name="mb_id" id="mb_id" value="${mdto.mb_id }">

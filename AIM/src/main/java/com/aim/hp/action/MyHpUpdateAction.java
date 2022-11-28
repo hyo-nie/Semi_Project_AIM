@@ -34,7 +34,7 @@ public class MyHpUpdateAction implements Action {
 		HpDAO dao = new HpDAO();
 		
 		// DB에 저장된 수정할 글번호를 가져와서
-		HpDTO dto = dao.getHpList(hp_bno);
+		HpDTO dto = dao.getHp(hp_bno);
 		
 		// request 영역에 저장
 		request.setAttribute("dto", dto);

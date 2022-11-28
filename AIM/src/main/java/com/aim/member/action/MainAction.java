@@ -9,7 +9,6 @@ public class MainAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		System.out.println(" M : MainAction.aim 호출 ");
 		
-		// 메인페이지에 DB사용하는 코드 나중에 구현
 		
 		// 페이지 이동 준비
 		ActionForward forward = new ActionForward();

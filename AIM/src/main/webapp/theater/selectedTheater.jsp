@@ -137,29 +137,10 @@
 	});
 	
 	
-	// 태홍님 코드
-// 	$(function() {
-// 		$("#sele").on("click", function() {
-
-// 			$("#hwakin").attr('class','hwakin1');
-// 			return false;
-// 		});
-
-// 	});
-// 	$(function() {
-// 		$("#cans").on("click", function() {
-
-// 			$("#hwakin").attr('class','hwakin0');
-// 			return false;
-// 		});
-
-// 	});
-// 	$(function(){
-// 		$('sele').tooltip();
-// 	});
 
 </script>
-<link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
 <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 </head>
 
@@ -235,9 +216,25 @@
 				<div class="owl-one owl-carousel owl-loaded owl-drag">
 					<div class="owl-stage-outer">
 						<div class="owl-stage"
-							style="transform: translate3d(-5760px, 0px, 0px); transition: all 0.25s ease 0s; width: 11520px;">
+							style="transform: translate3d(-7680px, 0px, 0px); transition: all 0.25s ease 0s; width: 21120px;">
+							<div class="owl-item cloned" style="width: 1920px;">
+								<div class="item">
+									<a href="#none"><img
+										src="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1121/ST_1920420.jpg"
+										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1121/ST_1280720.mp4"
+										alt="스트레인지 월드 절찬상영중 전체관람가 겨울왕국 엔칸토 제작진"></a>
+								</div>
+							</div>
+							<div class="owl-item cloned" style="width: 1920px;">
+								<div class="item">
+									<a href="#none"><img
+										src="https://caching2.lottecinema.co.kr/lotte_image/2022/CC/CC_1920420.jpg"
+										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/CC/CC_1280720.mp4"
+										alt="크리스마스 캐럴 12월 7일 대개봉 핏빛으로 물든 크리스마스 피할 수 없는 폭력의 시작 박진영 김영민 김동휘 송건희 허동원 감독 김성수 청소년관람불가"></a>
+								</div>
+							</div>
 
-							<div class="owl-item" style="width: 1920px;">
+							<div class="owl-item active" style="width: 1920px;">
 								<div class="item">
 									<a href="#none"><img
 										src="https://caching2.lottecinema.co.kr/lotte_image/2022/AA/AA_1920420.jpg"
@@ -245,29 +242,36 @@
 										alt="아바타 물의길 판도라의 바다 새로운 세계가 펼쳐진다 12월 대개봉 관람등급미정"></a>
 								</div>
 							</div>
-							<div class="owl-item active" style="width: 1920px;">
+							<div class="owl-item" style="width: 1920px;">
 								<div class="item">
 									<a href="#none"><img
 										src="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1121/ST_1920420.jpg"
 										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1121/ST_1280720.mp4"
-										alt=""></a>
+										alt="스트레인지 월드 절찬상영중 전체관람가 겨울왕국 엔칸토 제작진"></a>
 								</div>
 							</div>
 							<div class="owl-item" style="width: 1920px;">
 								<div class="item">
 									<a href="#none"><img
-										src="https://caching2.lottecinema.co.kr/lotte_image/2022/boo/boo_1920420.jpg"
-										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/boo/boo_1280720.mp4"
-										alt="극장판 뽀로로와 친구들 바이러스를 없애줘 전체관람가 12월 1일 롯데시네마에서 만나요 네모바이러스의 습격 친구들을 구하라"></a>
+										src="https://caching2.lottecinema.co.kr/lotte_image/2022/CC/CC_1920420.jpg"
+										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/CC/CC_1280720.mp4"
+										alt="크리스마스 캐럴 12월 7일 대개봉 핏빛으로 물든 크리스마스 피할 수 없는 폭력의 시작 박진영 김영민 김동휘 송건희 허동원 감독 김성수 청소년관람불가"></a>
 								</div>
 							</div>
-
 							<div class="owl-item cloned" style="width: 1920px;">
 								<div class="item">
 									<a href="#none"><img
 										src="https://caching2.lottecinema.co.kr/lotte_image/2022/AA/AA_1920420.jpg"
 										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/AA/AA_1280720.mp4"
 										alt="아바타 물의길 판도라의 바다 새로운 세계가 펼쳐진다 12월 대개봉 관람등급미정"></a>
+								</div>
+							</div>
+							<div class="owl-item cloned" style="width: 1920px;">
+								<div class="item">
+									<a href="#none"><img
+										src="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1121/ST_1920420.jpg"
+										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1121/ST_1280720.mp4"
+										alt="스트레인지 월드 절찬상영중 전체관람가 겨울왕국 엔칸토 제작진"></a>
 								</div>
 							</div>
 						</div>
@@ -465,27 +469,25 @@
 			<div class="rcm_wrap">
 				<div class="rcm_txt_wrap">
 					<div class="rcm_txt">
-						<strong>${dto.branch_name}</strong>에서 <br> <span>블랙
-							팬서: 와칸다 포에버</span><br> 어떠세요 ?
+						<strong>${dto.branch_name}</strong>에서 <br> <span>올빼미</span><br>
+						어떠세요 ?
 					</div>
 					<div class="rcm_info">
-						<dt>블랙 팬서: 와칸다 포에버</dt>
+						<dt>올빼미</dt>
 						<dd>
-							예매율 <span>71.3%</span>
+							예매율 <span>33.8%</span>
 						</dd>
 						<dd>
-							<span class="txt_ic_score ty1"><em>평점</em> <strong>8.6</strong></span>
+							<span class="txt_ic_score ty1"><em>평점</em> <strong>9.6</strong></span>
 						</dd>
 					</div>
 					<div class="btn_wrap">
 						<a href="./Ticketing.tk" class="btn_col1 ty3 rnd">프리셋예매</a>
 					</div>
 					<div class="thm">
-						<a
-							href="https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=18944"
-							title="영화상세페이지로 이동"><img
-							src="https://caching.lottecinema.co.kr//Media/MovieFile/MovieImg/202211/18944_101_1.jpg"
-							alt="블랙 팬서: 와칸다 포에버"></a>
+						<a href="#" title="영화상세페이지로 이동"><img
+							src="https://caching.lottecinema.co.kr//Media/MovieFile/MovieImg/202211/19162_101_1.jpg"
+							alt="올뺴미"></a>
 					</div>
 				</div>
 			</div>
@@ -855,92 +857,80 @@
 							</c:choose>
 							<p>${fmovie.movieNm }</p>
 						</div>
-						
+
 						<ul class="list_time" id="sele_ym">
-						<c:if test="${scheduleFirst.size() != 0 }">
-						<c:set var="i" value="0"></c:set>
-							<c:forEach var="fsche" items="${scheduleFirst }">
-								<c:if test="${fmovie.movieNm eq fsche.movieNm }">
-									<div>
-										<li class="">
-											<a id="sele" title="종료시간:${fsche.endtime }" role="button">
-												<dl>
-													<dt>상영시간</dt>
-													<dd class="time">
-														<strong> ${fsche.starttime}</strong>
-														<div class="tooltip">종료 :</div>
-													</dd>
-													<dt>잔여석</dt>
-													<dd class="seat">
-														<strong>${currentSeatArr.get(i) } </strong> / 80
-														<c:set var="i" value="${i+1 }"></c:set>
-													</dd>
-													<dt>상영관</dt>
-													<dd class="hall">${fsche.roomCd}관</dd>
-	
-												</dl>
-											</a>
-										</li>
-										<div class="hwakin">
-											<div id="hwakin" class="hwakin0">
-												<div class="hwakin-1">
-													<span>${fsche.starttime }&nbsp;&nbsp;~&nbsp;&nbsp;${fsche.endtime }(${fsche.roomCd }관)</span>
-												</div>
-												<div class="posterimg">
-													<img class="img" src="${fsche.poster }">
-												</div>
-												<div class="info">
-													<c:choose>
-														<c:when test="${fmovie.watchGradeNm eq '12세이상관람가' }">
-															<span class="ic_grade gr_12">12</span>
+							<c:if test="${scheduleFirst.size() != 0 }">
+								<c:set var="i" value="0"></c:set>
+								<c:forEach var="fsche" items="${scheduleFirst }">
+									<c:if test="${fmovie.movieNm eq fsche.movieNm }">
+										<div>
+											<li class=""><a id="sele" title="종료시간:${fsche.endtime }"
+												role="button">
+													<dl>
+														<dt>상영시간</dt>
+														<dd class="time">
+															<strong> ${fsche.starttime}</strong>
+															<div class="tooltip">종료 :</div>
+														</dd>
+														<dt>잔여석</dt>
+														<dd class="seat">
+															<strong>${currentSeatArr.get(i) } </strong> / 80
+															<c:set var="i" value="${i+1 }"></c:set>
+														</dd>
+														<dt>상영관</dt>
+														<dd class="hall">${fsche.roomCd}관</dd>
+
+													</dl>
+											</a></li>
+											<div class="hwakin">
+												<div id="hwakin" class="hwakin0">
+													<div class="hwakin-1">
+														<span>${fsche.starttime }&nbsp;&nbsp;~&nbsp;&nbsp;${fsche.endtime }(${fsche.roomCd }관)</span>
+													</div>
+													<div class="posterimg">
+														<img class="img" src="${fsche.poster }">
+													</div>
+													<div class="info">
+														<c:choose>
+															<c:when test="${fmovie.watchGradeNm eq '12세이상관람가' }">
+																<span class="ic_grade gr_12">12</span>
 														본 영화는<span class="y12"> 만 12세 이상 관람가 </span> 영화입니다.<br>
 														만 12세 미만의 고객님(영, 유아 포함)은 반드시 부모님 또는 성인 보호자의 
 														동반하에 관람이 가능합니다. 연령 확인 불가 시 입장이 제한될 수 있습니다.
 														
 													</c:when>
-														<c:when test="${fmovie.watchGradeNm eq '15세이상관람가' }">
-															<span class="ic_grade gr_15">15</span>
+															<c:when test="${fmovie.watchGradeNm eq '15세이상관람가' }">
+																<span class="ic_grade gr_15">15</span>
 														본 영화는<span class="y15"> 만 15세 이상 관람가 </span> 영화입니다.<br>
 														만 15세 미만의 고객님(영, 유아 포함)은 반드시 부모님 또는 성인 보호자의 동반하에
 														관람이 가능합니다. 연령 확인 불가 시 입장이 제한될 수 있습니다.
 													</c:when>
-														<c:when test="${fmovie.watchGradeNm eq '청소년관람불가' }">
-															<span class="ic_grade gr_18">18</span>
+															<c:when test="${fmovie.watchGradeNm eq '청소년관람불가' }">
+																<span class="ic_grade gr_18">18</span>
 														본 영화는<span class="18"> 청소년 관람불가 </span> 영화입니다.<br>
 														만 18세 미만의 고객님(영, 유아 포함)은 부모님 또는 성인 보호자를 동반하여도
 														관람이 불가합니다. 또한 만 18세 이상이라도 재학중인 학생은 관람이 불가합니다.
 														영화 관람 시, 반드시 신분증을 지참하여 주시기 바랍니다.
 													</c:when>
-														<c:otherwise>
-															<span class="ic_grade gr_all">All</span>
+															<c:otherwise>
+																<span class="ic_grade gr_all">All</span>
 														본 영화는<span class="all"> 전체 관람가 </span> 영화입니다.
 													</c:otherwise>
-													</c:choose>
+														</c:choose>
+													</div>
+													<div class="button" id="cans_ym">
+														<button id="cans" class="cansle">취소</button>
+														<button class="sel"
+															onclick='location.href="./SelectSeat.tk?scCode=${fsche.scCode}"'>인원/좌석
+															선택</button>
+													</div>
 												</div>
-												<div class="button" id="cans_ym">
-													<button id="cans" class="cansle">취소</button>
-													<button class="sel"
-														onclick='location.href="./SelectSeat.tk?scCode=${fsche.scCode}"'>인원/좌석
-														선택</button>
-												</div>
+
 											</div>
-		
 										</div>
-									</div>
-								</c:if>
+									</c:if>
 
-
-								<!-- <div id="mCSB_6_container"
-									class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y"
-									style="position: relative; top: 0; left: 0;" dir="ltr">
-									<div class="bx_nodata_movie">
-										<p>
-											조회 가능한 상영시간이 없습니다.<br>조건을 변경해주세요.
-										</p>
-									</div>
-								</div> -->
-
-							</c:forEach>
+								</c:forEach>
 							</c:if>
 						</ul>
 

@@ -21,7 +21,6 @@
 <title>AIM - Login</title>
 	<!-- 각종 요소 -->
 	<jsp:include page="../inc/include.jsp" />
-	<!-- 상위 배너 -->
 	<!-- 헤더/네비 -->
 	<jsp:include page="../inc/login_nav_bar.jsp" />
 	<!-- 사이드 퀵메뉴 -->
@@ -66,13 +65,6 @@
 							</div>
 						</div>
 					</div>
-					<!-- 								<div class="ad_box">
-									<a
-										href="https://nvapi.feeldmc.com:443/ad/p/in/v1_0/clk?slotid=stw_lottelotte_42&amp;adgroupid=adg_lottecinema_20221031_15&amp;adid=adi_lottecinema_20221031_15"
-										target=""><img
-										src="https://caching2.lottecinema.co.kr/lotte_image/2022/Hyundaicard/Hyundaicard_450220.jpg"
-										alt="상시 영화티켓 장당 6,000M포인트 사용 자세히보기"></a>
-								</div> -->
 				</div>
 			</div>
 		</div>

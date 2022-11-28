@@ -45,14 +45,13 @@
 					<div class="owl-stage-outer">
 						<!-- 오울 -->
 						<div class="owl-stage"
-							style="transform: translate3d(-3840px, 0px, 0px); transition: all 0.25s ease 0s; width: 11520px;">
-							<!-- 오울 -->
+							style="transform: translate3d(-7680px, 0px, 0px); transition: all 0.25s ease 0s; width: 21120px;">
 							<div class="owl-item cloned" style="width: 1920px;">
 								<div class="item">
 									<a href="#none"><img
-										src="https://caching2.lottecinema.co.kr/lotte_image/2022/boo/boo_1920774.jpg"
-										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/boo/boo_1280720.mp4"
-										alt="극장판 뽀로로와 친구들 바이러스를 없애줘 전체관람가 12월 1일 롯데시네마에서 만나요 네모바이러스의 습격 친구들을 구하라"></a>
+										src="https://caching2.lottecinema.co.kr/lotte_image/2022/CC/CC_1920774.jpg"
+										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/CC/CC_1280720.mp4"
+										alt="크리스마스 캐럴 12월 7일 대개봉 핏빛으로 물든 크리스마스 피할 수 없는 폭력의 시작 박진영 김영민 김동휘 송건희 허동원 감독 김성수 청소년관람불가"></a>
 								</div>
 							</div>
 							<div class="owl-item cloned" style="width: 1920px;">
@@ -63,12 +62,21 @@
 										alt="아바타 물의길 판도라의 바다 새로운 세계가 펼쳐진다 12월 대개봉 관람등급미정"></a>
 								</div>
 							</div>
-							<div class="owl-item cloned" style="width: 1920px;">
+							<div class="owl-item" style="width: 1920px;">
 								<div class="item">
 									<a href="#none"><img
 										src="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1121/ST_1920774.jpg"
 										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1121/ST_1280720.mp4"
-										alt=""></a>
+										alt="스트레인지 월드 절찬상영중 전체관람가 겨울왕국 엔칸토 제작진"></a>
+								</div>
+							</div>
+
+							<div class="owl-item" style="width: 1920px;">
+								<div class="item">
+									<a href="#none"><img
+										src="https://caching2.lottecinema.co.kr/lotte_image/2022/CC/CC_1920774.jpg"
+										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/CC/CC_1280720.mp4"
+										alt="크리스마스 캐럴 12월 7일 대개봉 핏빛으로 물든 크리스마스 피할 수 없는 폭력의 시작 박진영 김영민 김동휘 송건희 허동원 감독 김성수 청소년관람불가"></a>
 								</div>
 							</div>
 
@@ -80,28 +88,20 @@
 										alt="아바타 물의길 판도라의 바다 새로운 세계가 펼쳐진다 12월 대개봉 관람등급미정"></a>
 								</div>
 							</div>
-							<div class="owl-item" style="width: 1920px;">
-								<div class="item">
-									<a href="#none"><img
-										src="https://caching2.lottecinema.co.kr/lotte_image/2022/boo/boo_1920774.jpg"
-										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/boo/boo_1280720.mp4"
-										alt="극장판 뽀로로와 친구들 바이러스를 없애줘 전체관람가 12월 1일 롯데시네마에서 만나요 네모바이러스의 습격 친구들을 구하라"></a>
-								</div>
-							</div>
-							<div class="owl-item active" style="width: 1920px;">
+							<div class="owl-item cloned" style="width: 1920px;">
 								<div class="item">
 									<a href="#none"><img
 										src="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1121/ST_1920774.jpg"
 										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/ST/1121/ST_1280720.mp4"
-										alt=""></a>
+										alt="스트레인지 월드 절찬상영중 전체관람가 겨울왕국 엔칸토 제작진"></a>
 								</div>
 							</div>
 							<div class="owl-item cloned" style="width: 1920px;">
 								<div class="item">
 									<a href="#none"><img
-										src="https://caching2.lottecinema.co.kr/lotte_image/2022/PR/PR_1920774.jpg"
-										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/PR/PR_1280720.mp4"
-										alt="프레이 포 더 데블 12월 7일 대개봉 15세이상관람가 애나벨 인시디어스 제작진"></a>
+										src="https://caching2.lottecinema.co.kr/lotte_image/2022/CC/CC_1920774.jpg"
+										data-video="https://caching2.lottecinema.co.kr/lotte_image/2022/CC/CC_1280720.mp4"
+										alt="크리스마스 캐럴 12월 7일 대개봉 핏빛으로 물든 크리스마스 피할 수 없는 폭력의 시작 박진영 김영민 김동휘 송건희 허동원 감독 김성수 청소년관람불가"></a>
 								</div>
 							</div>
 						</div>
@@ -679,78 +679,90 @@
 				</li>
 			</ul>
 		</div>
-				<div class="main_cont_wrap notice">
+		<div class="main_cont_wrap notice">
 			<div class="sec_tit">공지사항</div>
 			<div class="rolling_menu_wrap">
 				<ul class="rollings" style="top: -30px;">
-					<li><a href="#none" title="">영화관람권 가격 변경 안내</a></li>
-					<li><a href="#none" title="">2D 일반 관람권 활용 스페셜관 이용 안내 </a></li>
-					<li><a href="#none" title="">V3 백신 엔진 악성코드 오진 안내</a></li>
-					<li><a href="#none" title="">AIM 영구VIP 서비스 종료 안내</a></li>
+					<li><a href="http://localhost:8080/AIM/NtContent.nt?nt_bno=1&pageNum=1" title="">A.I.M 개인정보처리방침 개정 안내</a></li>
+					<li><a href="http://localhost:8080/AIM/NtContent.nt?nt_bno=2&pageNum=1" title="">회원약관 및 개인정보처리방침 개정 안내</a></li>
+					<li><a href="http://localhost:8080/AIM/NtContent.nt?nt_bno=4&pageNum=1" title="">A.I.M 영상정보처리기기 운영 및 관리방침 개정 안내</a></li>
+					<li><a href="http://localhost:8080/AIM/NtContent.nt?nt_bno=5&pageNum=1" title="">시스템 점검 안내</a></li>
+					<li><a href="http://localhost:8080/AIM/NtContent.nt?nt_bno=6&pageNum=1" title="">공지사항 상세내용 푸시(알림) 서비스 점검 안내</a></li>
+					<li><a href="http://localhost:8080/AIM/NtContent.nt?nt_bno=7&pageNum=1" title="">A.I.M &lt;방역패스&gt; 적용 해제 안내</a></li>
 				</ul>
 			</div>
 		</div>
 
 		<!-- store/event -->
 		<div class="main_cont_wrap premiere">
-			<div class="sec_tit" style="font-size:22px; margin-top:40px;">AIM's pick</div>
+			<div class="sec_tit" style="font-size: 22px; margin-top: 40px;">AIM's
+				pick</div>
 			<ul class="premiere_wrap">
-				<li><div class="store" style="margin-top:5px; border:1px;">
-						<br> <span class="span1" style="margin:120px; color:darkslategray; font-size:14px;">AIM 콤보</span>
-							<table>
-								<tr>
-									<td class="img"><a href="http://localhost:8081/AIM/PopcornDetail.st?st_num=6">
-									<img class="img1" src="./assets/img/AIM콤보.jpg" style="height:200px; margin-top:35px; margin-bottom:30px;"></a>
-									</td>
-								</tr>
-							</table>
+				<li><div class="store" style="margin-top: 5px; border: 1px;">
+						<br> <span class="span1"
+							style="margin: 120px; color: darkslategray; font-size: 14px;">AIM
+							콤보</span>
+						<table>
+							<tr>
+								<td class="img"><a
+									href="http://localhost:8080/AIM/PopcornDetail.st?st_num=6">
+										<img class="img1" src="./assets/img/AIM콤보.jpg"
+										style="height: 200px; margin-top: 35px; margin-bottom: 30px;">
+								</a></td>
+							</tr>
+						</table>
 					</div>
-				<li><div class="store" style="margin-top:5px; border:1px;">
-						<br> <span class="span2" style="margin:105px; color:darkslategray; font-size:14px;">AIM 기프트카드</span>
-							<table>
-								<tr>
-									<td class="img"><a href="http://localhost:8081/AIM/PopcornDetail.st?st_num=2">
-									<img class="img1" src="./assets/img/3만원.jpg" style="width:260px; height:180px; margin-top:40px; margin-bottom:30px;"></a>
-									</td>
-								</tr>
-							</table>
+				<li><div class="store" style="margin-top: 5px; border: 1px;">
+						<br> <span class="span2"
+							style="margin: 105px; color: darkslategray; font-size: 14px;">AIM
+							기프트카드</span>
+						<table>
+							<tr>
+								<td class="img"><a
+									href="http://localhost:8080/AIM/PopcornDetail.st?st_num=2">
+										<img class="img1" src="./assets/img/3만원.jpg"
+										style="width: 260px; height: 180px; margin-top: 40px; margin-bottom: 30px;">
+								</a></td>
+							</tr>
+						</table>
 					</div></li>
-				<li><div class="store" style="margin-top:5px; border:1px;">
-						<br> <span class="span3" style="margin:105px; color:darkslategray; font-size:14px;">AIM 관람권</span>
-							<table>
-								<tr>
-									<td class="img"><a href="http://localhost:8081/AIM/PopcornDetail.st?st_num=5">
-									<img class="img1" src="./assets/img/2인.jpg" style="width:260px; height:180px; margin-top:40px; margin-bottom:30px;"></a>
-									</td>
-								</tr>
-							</table>
+				<li><div class="store" style="margin-top: 5px; border: 1px;">
+						<br> <span class="span3"
+							style="margin: 105px; color: darkslategray; font-size: 14px;">AIM
+							관람권</span>
+						<table>
+							<tr>
+								<td class="img"><a
+									href="http://localhost:8080/AIM/PopcornDetail.st?st_num=5">
+										<img class="img1" src="./assets/img/2인.jpg"
+										style="width: 260px; height: 180px; margin-top: 40px; margin-bottom: 30px;">
+								</a></td>
+							</tr>
+						</table>
 					</div></li>
 
 			</ul>
-			<button type="button" class="btn_txt_more ty2" style="font-size:13px;" 
-			onclick="location.href='./StoreMain.st'">더보기</button>
+			<button type="button" class="btn_txt_more ty2"
+				style="font-size: 13px;" onclick="location.href='./StoreMain.st'">더보기</button>
 		</div>
 
 
 		<div class="main_cont_wrap premiere">
-			<div class="sec_tit" style="font-size:22px;">시사회/무대인사</div>
+			<div class="sec_tit" style="font-size: 22px;">시사회/무대인사</div>
 			<ul class="premiere_wrap">
 				<li><a href="#none"><img
 						src="https://caching.lottecinema.co.kr//Media/Event/f5eb4d354c194fa3b68d3a5facac9703.jpg"
-						alt="[오늘 밤, 세계에서] 스페셜 상영회"
-						style="margin-top:5px;"></a></li>
+						alt="[오늘 밤, 세계에서] 스페셜 상영회" style="margin-top: 5px;"></a></li>
 				<li><a href="#none"><img
 						src="https://caching.lottecinema.co.kr//Media/Event/10125de1b57e42769ebcec0ede7837a9.jpg"
-						alt="<동감> 2주차 무대인사"
-						style="margin-top:5px;"></a></li>
+						alt="<동감> 2주차 무대인사" style="margin-top: 5px;"></a></li>
 				<li><a href="#none"><img
 						src="https://caching.lottecinema.co.kr//Media/Event/e7a59bf03baf4980b33d58c33c5635cd.jpg"
-						alt="롯데시네마와 함께하는 올빼미 개봉주 무대인사 안내"
-						style="margin-top:5px;"></a></li>
+						alt="롯데시네마와 함께하는 올빼미 개봉주 무대인사 안내" style="margin-top: 5px;"></a></li>
 			</ul>
 		</div>
 
-<!-- 		<div class="mid_menu_wrap">
+		<!-- 		<div class="mid_menu_wrap">
 			<a href="#none" class="mid_itm" title=""> <img
 				src="https://caching.lottecinema.co.kr//Media/WebAdmin/3423e358b74d49d5b12867c7d9c6f6a8.png"
 				alt="할인안내"></a> <a href="#none" class="mid_itm" title=""> <img
