@@ -11,10 +11,6 @@
 <script type="text/javascript">
 
     function fnChkag() {
-         if(document.getElementById('agreeCco_1009C0').checked == false){
-            alert("필수요소를 모두 체크하세요");
-            return false;
-         }
          
          if(document.getElementById('agreeCco_1009BG').checked == false){
             alert("필수요소를 모두 체크하세요");
