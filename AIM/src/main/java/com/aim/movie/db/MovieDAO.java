@@ -65,7 +65,7 @@ public class MovieDAO {
           } else if(orderFlag.equals("bookRating")) {
               sql = sql + " order by bookRating desc";
           } else if(orderFlag.equals("openDt")) {
-              sql = sql + " order by openDt";
+              sql = sql + " order by openDt desc";
           }
         } else {
            sql = sql + " order by boxrank";
