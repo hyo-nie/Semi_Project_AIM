@@ -705,7 +705,7 @@
 						<table>
 							<tr>
 								<td class="img"><a
-									href="http://localhost:8081/AIM/PopcornDetail.st?st_num=6">
+									href="http://localhost:8080/AIM/PopcornDetail.st?st_num=6">
 										<img class="img1" src="./assets/img/AIM콤보.jpg"
 										style="height: 200px; margin-top: 35px; margin-bottom: 30px;">
 								</a></td>
@@ -719,7 +719,7 @@
 						<table>
 							<tr>
 								<td class="img"><a
-									href="http://localhost:8081/AIM/PopcornDetail.st?st_num=2">
+									href="http://localhost:8080/AIM/PopcornDetail.st?st_num=2">
 										<img class="img1" src="./assets/img/3만원.jpg"
 										style="width: 260px; height: 180px; margin-top: 40px; margin-bottom: 30px;">
 								</a></td>
@@ -733,7 +733,7 @@
 						<table>
 							<tr>
 								<td class="img"><a
-									href="http://localhost:8081/AIM/PopcornDetail.st?st_num=5">
+									href="http://localhost:8080/AIM/PopcornDetail.st?st_num=5">
 										<img class="img1" src="./assets/img/2인.jpg"
 										style="width: 260px; height: 180px; margin-top: 40px; margin-bottom: 30px;">
 								</a></td>
