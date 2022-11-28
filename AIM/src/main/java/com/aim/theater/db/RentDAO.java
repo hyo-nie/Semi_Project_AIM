@@ -266,23 +266,6 @@ public class RentDAO {
 	}
 	//대관문의 글 1개 정보조회 - getRent(rno)
 	
-	//대관문의 답변 불러오기 -getReWriteList(rno)
-//	public ArrayList getReWriteList(int rno) {
-//		ArrayList rewriteList = new ArrayList();
-//		
-//		try {
-//			con = getConnection();
-//			sql = "select "
-//		} catch (Exception e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		} finally {
-//			closeDB();
-//		}
-//	}
-	//대관문의 답변 불러오기 -getReWriteList(rno)
-	
-
 	
 	//대관문의 답변쓰기 - reInsertRent(DTO)
 	public void reInsertRent(RentDTO dto) {

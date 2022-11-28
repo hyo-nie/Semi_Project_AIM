@@ -25,8 +25,7 @@ public class AdminReContentAction implements Action {
 			forward.setRedirect(true);
 			return forward;
 		}
-		
-//		int rno = Integer.parseInt(request.getParameter("rno"));
+
 		String pageNum = request.getParameter("pageNum");
 		int r_re_ref = Integer.parseInt(request.getParameter("r_re_ref"));
 		

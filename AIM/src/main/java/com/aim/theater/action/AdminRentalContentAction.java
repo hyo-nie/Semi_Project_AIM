@@ -39,14 +39,7 @@ public class AdminRentalContentAction implements Action {
 		
 		request.setAttribute("dto", dto);
 		request.setAttribute("pageNum", pageNum);
-		
-	 //================================================================
-		
-//		//작성된 답변 불러와기
-//		 ArrayList rewriteListAll = dao.getReWriteList(rno);
-//	    //System.out.println(reviewListAll);
-//	    request.setAttribute("rewriteListAll", rewriteListAll);
-		
+			
 	    forward = new ActionForward();
 		forward.setPath("./theater/admin_rt_content.jsp");
 		forward.setRedirect(false);
