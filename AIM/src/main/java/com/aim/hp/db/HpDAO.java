@@ -302,7 +302,7 @@ public class HpDAO {
 					// DB정보(rs) -> dto 저장
 					dto.setHp_bno(rs.getInt("Hp_bno"));
 					dto.setMb_id(rs.getString("mb_id"));
-					dto.setMb_pw(rs.getString("Mb_pw"));
+					dto.setMb_pw(rs.getString("mb_pw"));
 					dto.setHp_subject(rs.getString("hp_subject"));
 					dto.setHp_content(rs.getString("hp_content"));
 					dto.setHp_date(rs.getDate("hp_date"));
