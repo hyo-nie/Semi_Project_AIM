@@ -135,7 +135,7 @@
 						<tr>
 							<th scope="row" class="req1">상영관</th>
 							<td><select name="roomCd" id="room">
-								 <option value="${getsche.roomCd }" ${room == 'getsche.roomCd' ? 'selected="selected"' : '' }>${getsche.roomCd }관</option>
+								 <option value="${getsche.roomCd }" ${room == 'getsche.roomCd' ? 'selected="selected"' : '' } disabled>${getsche.roomCd }관 (현재)</option>
 									<c:choose>
 										<c:when test="${getsche.branchCd eq 1}">
 											<option value="1">1관</option>
