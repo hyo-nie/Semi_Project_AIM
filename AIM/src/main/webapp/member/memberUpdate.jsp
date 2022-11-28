@@ -78,7 +78,7 @@ input[type='text']{width: 40%;}
   
   
   
-  <h1 style="margin-bottom: 10px; margin-left: 27%; color: #a4a2a2;">
+  <h1 style="margin-bottom: 10px; margin-left: 27%; color: black;">
   	회원정보변경
   </h1>
 
