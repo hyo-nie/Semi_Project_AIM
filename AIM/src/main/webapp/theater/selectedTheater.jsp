@@ -137,26 +137,6 @@
 	});
 	
 	
-	// 태홍님 코드
-// 	$(function() {
-// 		$("#sele").on("click", function() {
-
-// 			$("#hwakin").attr('class','hwakin1');
-// 			return false;
-// 		});
-
-// 	});
-// 	$(function() {
-// 		$("#cans").on("click", function() {
-
-// 			$("#hwakin").attr('class','hwakin0');
-// 			return false;
-// 		});
-
-// 	});
-// 	$(function(){
-// 		$('sele').tooltip();
-// 	});
 
 </script>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
@@ -928,17 +908,6 @@
 										</div>
 									</div>
 								</c:if>
-
-
-								<!-- <div id="mCSB_6_container"
-									class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y"
-									style="position: relative; top: 0; left: 0;" dir="ltr">
-									<div class="bx_nodata_movie">
-										<p>
-											조회 가능한 상영시간이 없습니다.<br>조건을 변경해주세요.
-										</p>
-									</div>
-								</div> -->
 
 							</c:forEach>
 							</c:if>

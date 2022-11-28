@@ -10,10 +10,8 @@
 <jsp:include page="../inc/include.jsp"/>
 <script type="text/javascript">
 	$(document).ready(function(){
-// 		alert('테스트');
 		
 		$('#theater_ym li').click(function(){
-// 			alert('지점 클릭@@@@@@@@@@@@@@@@');
 			$('#movieList_ym li').remove();
 			$('#movieList_ym input').remove();
 // 			alert($(this).val());
@@ -30,7 +28,6 @@
 						
 						// ajax - movie 클릭 이벤트
 						$('#movieList_ym li').click(function(){
-// 							alert('제발 되게 해주세요 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@');
 							$('#time_select_tit_ym span').remove();
 							$('#time_select_tit_ym strong').remove();
 							$('#time_select_tit_ym input').remove();
@@ -63,7 +60,6 @@
 // 									alert(data)
 
 									if (typeof $('#list_time_ym li').val() == 'undefined') {
-//				 						alert("이거뜨면 성공@@@@@@@@@@@@@@@@@@@@@@");
 										$('#bx_notice_ym').show();
 									}
 
@@ -75,7 +71,6 @@
 							
 							// 날짜 클릭 ajax 시작
 // 							$('#owl-stage_ym input').click(function(){
-// 								alert('@@@@@@@@@@@@@@@@@@@제발 부탁드립니다@@@@@@@@');
 // // 								alert($(this).val());
 // 								$.ajax({
 // 									url:"./DateClick.tk",
@@ -103,7 +98,6 @@
 		
 		// 초기값 movie 클릭 ajax 시작
 		$('#movieList_ym li').click(function(){
-// 			alert('제발 되게 해주세요 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@');
 			$('#time_select_tit_ym span').remove();
 			$('#time_select_tit_ym strong').remove();
 			$('#time_select_tit_ym input').remove();
@@ -135,7 +129,6 @@
 // 					alert(data)
 
 					if (typeof $('#list_time_ym li').val() == 'undefined') {
-//				 		alert("이거뜨면 성공@@@@@@@@@@@@@@@@@@@@@@");
 						$('#bx_notice_ym').show();
 					}
 
@@ -147,7 +140,6 @@
 			
 			// 날짜 클릭 ajax 시작
 // 			$('#owl-stage_ym input').click(function(){
-// 				alert('@@@@@@@@@@@@@@@@@@@제발 부탁드립니다@@@@@@@@');
 // // 				alert($(this).val());
 // 				$.ajax({
 // 					url:"./DateClick.tk",
@@ -168,7 +160,6 @@
 		
 		// 날짜 클릭 ajax 시작
 		$('#owl-stage_ym input').click(function(){
-// 			alert('@@@@@@@@@@@@@@@@@@@제발 부탁드립니다@@@@@@@@');
 //			alert($(this).val());
 // 			alert($('#list_time_ym li').val())
 			$('#time_select_tit_ym span').remove();
@@ -203,7 +194,6 @@
 // 					alert($('#list_time_ym li').val());
 					
 					if (typeof $('#list_time_ym li').val() == 'undefined') {
-// 						alert("이거뜨면 성공@@@@@@@@@@@@@@@@@@@@@@");
 						$('#bx_notice_ym').show();
 					}
 						

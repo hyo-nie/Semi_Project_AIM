@@ -46,15 +46,9 @@ text-align: center;
 			<table class="tbl_list text_c">
 				<caption>문의 내용 목록</caption>
 				<colgroup>
-<%-- 					<col style="width:5 %;"> --%>
-<%-- 					<col style="width: 10%;"> --%>
+
 					<col style="width: auto%;">
-<%-- 					<col style="width: 10%;"> --%>
-<%-- 					<col style="width: 10%;"> --%>
-<%-- 					<col style="width: 35%;"> --%>
-<%-- 					<col style="width: 10%;"> --%>
-<%-- 					<col style="width: 10%;"> --%>
-<%-- 					<col style="width: 10%;"> --%>
+
 				</colgroup>
 				<thead align="center">
 					<tr class="sujeong">
@@ -70,7 +64,7 @@ text-align: center;
 					
 					</tr>
 				</thead>
-				<!-- c:if 사용해서 session 아이디랑 일치하는 아이디만 출력, admin포함 -->
+			
 				<tbody>
 					
 					 <c:forEach var="admins" items="${adminScheList }">

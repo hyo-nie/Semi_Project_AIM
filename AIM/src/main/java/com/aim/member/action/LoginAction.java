@@ -22,7 +22,7 @@ public class LoginAction implements Action {
 		
 		// Ticketing 에서 넘어왔으면
 		String ticketing = request.getParameter("ticketing");
-		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@"+ticketing);
+		//System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@"+ticketing);
 		
 		
 		// DAO - 로그인 여부 체크 메서드 loginCheck()

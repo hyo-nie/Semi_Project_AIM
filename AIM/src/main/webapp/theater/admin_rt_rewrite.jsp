@@ -66,7 +66,7 @@
 	<input type="hidden" name="hopeend" value="${dto.hopeend }">
 	<input type="hidden" name="movieCd" value="${dto.movieCd }">
 	<input type="hidden" name="r_tel" value="${dto.r_tel }">
-<%-- 	<input type="hidden" name="r_mb_id" value="${dto.r_mb_id }"> --%>
+
 	
 	
 	<div id="contents">

@@ -41,7 +41,6 @@ text-align: center;
 				<colgroup>
 					<col style="width: 20%;">
 					<col style="width: 50%;">
-<%-- 					<col style="width: auto%;"> --%>
 					<col style="width: 30%;">
 				</colgroup>
 				<thead>

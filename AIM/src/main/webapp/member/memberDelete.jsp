@@ -9,28 +9,11 @@
 
 <!-- 각종 요소 -->
 <jsp:include page="../inc/include.jsp" />
-<!-- 상위 배너 -->
 <!-- 헤더/네비 -->
 <jsp:include page="../inc/nav_bar.jsp"></jsp:include>
 </head>
 <body>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
   <h1 align="center">회원탈퇴</h1>
   <br>

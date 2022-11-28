@@ -13,7 +13,6 @@ public class FindIdAction implements Action {
   public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
     System.out.println("M : FindIdAction_execute()");
     
-    // 전달정보
     String mb_name = request.getParameter("mb_name");
     String mb_tel = request.getParameter("mb_tel");
     

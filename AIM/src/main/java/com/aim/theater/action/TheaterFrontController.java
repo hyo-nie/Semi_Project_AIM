@@ -53,18 +53,7 @@ public class TheaterFrontController extends HttpServlet {
 				e.printStackTrace();
 			}
 		}
-		else if(command.equals("/SeatSelect.th")) {
-			System.out.println("C :/SeatSelect.th 호출");
-			
-			action = new SeatSelectAction();
-			
-			try {
-				forward = action.execute(request, response);
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}	
-		}
+	
 		else if(command.equals("/AdminScheAdd.th")) {
 			System.out.println(" C : /AdminScheAdd.th 호출, 패턴3 ");
 			

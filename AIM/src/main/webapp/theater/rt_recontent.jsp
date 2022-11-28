@@ -130,11 +130,9 @@
 					<c:choose>
 						<c:when test="${sessionScope.mb_id eq 'admin' }">
 							<a href="./AdminRentalList.th?rno=${dto.rno }&pageNum=${pageNum}" class="btn_col2 ty6">목록</a>
-<%-- 							<a href="./AdminRentalReWrite.th?rno=${dto.rno }&pageNum=${pageNum }&r_re_ref=${dto.r_re_ref}&r_re_lev=${dto.r_re_lev}&r_re_seq=${dto.r_re_seq}" class="btn_col2 ty6">답글</a> --%>
 						</c:when>
 						<c:otherwise>
 							<a href="./AdminRentalList.th?rno=${dto.rno }&pageNum=${pageNum}" class="btn_col2 ty6">목록</a>
-<%-- 							<a href="./AdminReContent.th?rno=${dto.rno }&pageNum=${pageNum}&r_re_ref=${dto.r_re_ref}" class="btn_col2 ty6">답변보기</a> --%>
 						</c:otherwise>			
 					</c:choose>
 					

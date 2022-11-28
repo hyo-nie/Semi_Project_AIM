@@ -65,7 +65,7 @@ public class MovieDAO {
           } else if(orderFlag.equals("bookRating")) {
               sql = sql + " order by bookRating desc";
           } else if(orderFlag.equals("openDt")) {
-              sql = sql + " order by openDt";
+              sql = sql + " order by openDt desc";
           }
         } else {
            sql = sql + " order by boxrank";
@@ -358,44 +358,6 @@ public class MovieDAO {
         
 	}
 	
-	// 백업(현재 줄거리 내용 받아오게 수정중)
-//	/**
-//	 * 크롤링해서 cgv에서 title(제목), percents(예매율), image(포스터) 가져오는 메서드
-//	 */
-//	public static List<MovieVo> getCGVdata() throws Exception{
-//		
-//		// http://www.cgv.co.kr/movies/?lt=1&ot=3
-//		Document doc = Jsoup.connect("http://www.cgv.co.kr/movies/?lt=1&ot=3").get();
-//  
-//        Elements titles = doc.select("div.box-contents strong.title");        
-//        Elements percents = doc.select("div.box-contents div.score strong.percent span");
-//        Elements images = doc.select("div.box-image a span.thumb-image img");
-//        
-//        List<MovieVo> list = new ArrayList<MovieVo>();
-//        
-//        for(int i = 0; i < 19; i++) {
-//        	Element title = titles.get(i);
-//        	Element percent = percents.get(i);
-//        	
-//        	String image = images.get(i).attr("src");
-//        	String t = title.text();
-//        	String p = percent.text();
-//        	
-//        	double pv = Double.parseDouble(p.replace("%",""));
-//        	
-//        	MovieVo vo = new MovieVo(t, pv, image);
-//        	
-//        	list.add(vo);
-//        }
-//        
-//        return list;
-//        
-//	}
-	
-	
-	
-	
-	
 	
 	/**
 	 * AdminMovieRecommend() - movie 테이블에 추천 영화 정보 저장하는 메서드
@@ -422,12 +384,6 @@ public class MovieDAO {
 
 		         pstmt.executeUpdate();
 		         
-		        // int result = pstmt.executeUpdate();
-//		         
-//		         if(result > 0) {
-//		            System.out.println("DAO : 추천 영화 등록에 성공하셨습니다");
-//		         }
-		         
 		      } catch (Exception e) {
 		         e.printStackTrace();
 		      } finally {
@@ -439,7 +395,6 @@ public class MovieDAO {
 		/**
 		 * AdminMovieModify() - movie 테이블에 추천 영화 정보 수정하는 메서드
 		 */
-	   // 영화정보 수정메서드 - AdminMovieModify(DTO)
 		public void AdminMovieModify(MovieDTO dto) {
 			
 			try {
@@ -479,7 +434,6 @@ public class MovieDAO {
 		/**
 		 * AdminMovieDelete() - movie 테이블에 추천 영화 정보 삭제하는 메서드
 		 */
-		// 영화정보 삭제메서드 - AdminMovieDelete(MovieCd)
 		public void AdminMovieDelete(String MovieCd) {
 			
 			try {
@@ -559,15 +513,6 @@ public class MovieDAO {
 	      return movieList;
 	    }
 	    //HomeMovieList() 끝
-	
-		
-		
-		
-		
-		
-		
-		
-		
 	
 	
 }
