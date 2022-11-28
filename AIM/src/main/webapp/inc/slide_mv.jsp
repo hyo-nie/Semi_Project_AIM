@@ -683,10 +683,12 @@
 			<div class="sec_tit">공지사항</div>
 			<div class="rolling_menu_wrap">
 				<ul class="rollings" style="top: -30px;">
-					<li><a href="#none" title="">영화관람권 가격 변경 안내</a></li>
-					<li><a href="#none" title="">2D 일반 관람권 활용 스페셜관 이용 안내 </a></li>
-					<li><a href="#none" title="">V3 백신 엔진 악성코드 오진 안내</a></li>
-					<li><a href="#none" title="">AIM 영구VIP 서비스 종료 안내</a></li>
+					<li><a href="http://localhost:8080/AIM/NtContent.nt?nt_bno=1&pageNum=1" title="">A.I.M 개인정보처리방침 개정 안내</a></li>
+					<li><a href="http://localhost:8080/AIM/NtContent.nt?nt_bno=2&pageNum=1" title="">회원약관 및 개인정보처리방침 개정 안내</a></li>
+					<li><a href="http://localhost:8080/AIM/NtContent.nt?nt_bno=4&pageNum=1" title="">A.I.M 영상정보처리기기 운영 및 관리방침 개정 안내</a></li>
+					<li><a href="http://localhost:8080/AIM/NtContent.nt?nt_bno=5&pageNum=1" title="">시스템 점검 안내</a></li>
+					<li><a href="http://localhost:8080/AIM/NtContent.nt?nt_bno=6&pageNum=1" title="">공지사항 상세내용 푸시(알림) 서비스 점검 안내</a></li>
+					<li><a href="http://localhost:8080/AIM/NtContent.nt?nt_bno=7&pageNum=1" title="">A.I.M &lt;방역패스&gt; 적용 해제 안내</a></li>
 				</ul>
 			</div>
 		</div>
