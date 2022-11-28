@@ -56,13 +56,9 @@
 
 
 
-<!-- /* hj */ 페이지 상단 여백 표 14칸 ㅜ /* ADMINTABLE2*/   /* ADMINTABLE3*/  -->
+<!-- /* hj */  /* ADMINTABLE2*/   /* ADMINTABLE3*/  -->
 	<div class="">
 		<table class="tbl_dtalb" >
-<%-- 			<colgroup> --%>
-<%-- 				<col style="height:10%; overflow-y:scroll;"> --%>
-<%-- 			</colgroup> --%>
-
 
 <thead>
 			<tr>

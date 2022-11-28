@@ -11,10 +11,6 @@
 <script type="text/javascript">
 
     function fnChkag() {
-         if(document.getElementById('agreeCco_1009C0').checked == false){
-            alert("필수요소를 모두 체크하세요");
-            return false;
-         }
          
          if(document.getElementById('agreeCco_1009BG').checked == false){
             alert("필수요소를 모두 체크하세요");
@@ -38,7 +34,6 @@
    <div id="mast-head">
       <div class="container">
          <h1 class="bi">
-            <!-- <a href="https://www.lpoint.com/" onclick="return fnWindowOpen(this.href);" target="_blank"><img src="/resources/images/common/bi-lpoint.png" alt="L.POINT"></a> -->
 
             <a href="./Main.aim" onclick="return fnWindowOpen(this.href);"
                target="_blank"><img src="https://ifh.cc/g/RGtYO5.png"
@@ -84,26 +79,15 @@
                </div>
                <div class="section __opt-in __opt-wrap" id="div-prv">
                   <div class="row __block">
-                     <div class="col-md">AIM.POINT</div>
+                     <div class="col-md"></div>
                      <div class="col-md">
                         <div class="form-wrap __agreement">
                            <div class="inner">
-                              <div class="ui-wrap">
-                                 <div class="ui-check">
-                                    <input type="checkbox" id="agreeCco_1009C0" name="1009"
-                                       class="mPrv ui-allchk-el ui-allchk-group1"
-                                       onclick="fnPrvAgChange('agreeCco_1009C0');"
-                                       data-title="L.POINT 회원약관" data-prvdvc="C0"
-                                       data-cconm="L.POINT" data-ccoenm="L.POINT"
-                                       data-separator-number="1"><label
-                                       for="agreeCco_1009C0">AIM.POINT 회원약관 <em class="">(필수)</em></label>
-                                 </div>
                                  <div class="detail">
                                     <button type="button"
                                        class="ui-button __square-mini __underline"
-                                       onclick="modal_init('term-code-agree-10090',800)">자세히</button>
+                                       onclick="modal_init('term-code-agree-10090',800)"></button>
                                  </div>
-                              </div>
                               <div id="term-code-agree-10090"
                                  class="modal-container __fixed">
                                  <div class="modal-header">
