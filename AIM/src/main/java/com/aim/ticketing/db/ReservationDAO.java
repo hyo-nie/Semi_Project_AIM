@@ -316,7 +316,13 @@ public class ReservationDAO {
 			// 월
 			int month = cal.get(Calendar.MONTH)+1;
 			// 일
-			int date = cal.get(Calendar.DATE);
+			String date = "";
+			int datetmp = cal.get(Calendar.DATE);
+			if (datetmp >= 10) {
+				date = datetmp+"";
+			} else {
+				date = "0"+datetmp;
+			}
 			int dayOfWeek = cal.get(Calendar.DAY_OF_WEEK);
 			String korDayOfWeek = "";
 			switch (dayOfWeek % 7) {

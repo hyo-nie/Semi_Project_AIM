@@ -2,20 +2,19 @@ package com.aim.ticketing.db;
 
 public class timeDTO {
 	private int month;
-	private int date;
+	private String date;
 	private String korDayOfWeek;
 	private String yyyyMMdd;
-	
 	public int getMonth() {
 		return month;
 	}
 	public void setMonth(int month) {
 		this.month = month;
 	}
-	public int getDate() {
+	public String getDate() {
 		return date;
 	}
-	public void setDate(int date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 	public String getKorDayOfWeek() {
@@ -30,7 +29,6 @@ public class timeDTO {
 	public void setYyyyMMdd(String yyyyMMdd) {
 		this.yyyyMMdd = yyyyMMdd;
 	}
-	
 	@Override
 	public String toString() {
 		return "timeDTO [month=" + month + ", date=" + date + ", korDayOfWeek=" + korDayOfWeek + ", yyyyMMdd="
