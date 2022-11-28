@@ -11,7 +11,6 @@
 <body>
 
 
-	<!-- 상위 배너 -->
 	<!-- 헤더/네비 -->
 	<jsp:include page="../inc/nav_bar.jsp" />
 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -163,9 +162,6 @@
 							</li>
 							</c:forEach> 
 							</ul>
-<!-- 						<button type="button" class="btn_txt_more" id="btn_review_more"> -->
-<!-- 							<span>펼쳐보기</span> -->
-<!-- 						</button> -->
 					</div>
 					<div class="list_bdr_box">
 						<h3 class="title txt_caution2">유의사항</h3>

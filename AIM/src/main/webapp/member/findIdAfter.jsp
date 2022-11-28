@@ -15,26 +15,7 @@
 	<!-- 헤더/네비 -->
 	<jsp:include page="../inc/nav_bar.jsp"></jsp:include>
 
-	<!-- 보기안좋아서 임시방편입니다 -->
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<!-- 보기안좋아서 임시방편입니다 -->
-
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 	
 	<h1 align="center">아이디 찾기</h1><br><br>	

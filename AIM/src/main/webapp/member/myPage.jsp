@@ -10,17 +10,12 @@
 
 <!-- 각종 요소 -->
 <jsp:include page="../inc/include.jsp" />
-<!-- 상위 배너 -->
 <!-- 헤더/네비 -->
 <jsp:include page="../inc/nav_bar.jsp" />
 </head>
 <body>
 
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
+	<br><br><br><br><br>
 	<!-- 본문 -->
 <div id="contents" style="margin-top: 120px;">
 		<h2 class="h2_memtit">My Page</h2>
