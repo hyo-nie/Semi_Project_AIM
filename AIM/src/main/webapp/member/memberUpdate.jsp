@@ -40,29 +40,12 @@
 
 <!-- 각종 요소 -->
 <jsp:include page="../inc/include.jsp" />
-<!-- 상위 배너 -->
 <!-- 헤더/네비 -->
 <jsp:include page="../inc/nav_bar.jsp"></jsp:include>
 
 </head>
 <body>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <style>
 h4 {font-size: 14px; margin-left: -30%; margin-bottom: 8px; color: #a4a2a2; margin-top: 20px;}
 input[type='text']{width: 40%;}
