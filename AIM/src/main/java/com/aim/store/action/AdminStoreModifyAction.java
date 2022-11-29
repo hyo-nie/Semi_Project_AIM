@@ -12,10 +12,8 @@ public class AdminStoreModifyAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		System.out.println("M : AdminStoreModifyAction_execute()");
 		
-		// 전달정보 : st_num
 		int st_num = Integer.parseInt(request.getParameter("st_num"));
 		
-		// st_num에 맞는 상품 가져오기 - getAdminStore
 		AdminStoreDAO dao = new AdminStoreDAO();
 		StoreDTO dto = dao.getAdminStore(st_num);
 		

@@ -27,9 +27,7 @@ function deleteChk(st_num){
 </script>
 </head>
 <body>
-	
-	<%-- ${adminStoreList } --%>
-	<!-- 정보 확인 완료 -->
+
 	
 	
 	

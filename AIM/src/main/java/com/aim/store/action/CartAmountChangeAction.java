@@ -11,7 +11,6 @@ public class CartAmountChangeAction implements Action {
    public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
       System.out.println("M : CartAmountChangeAction_execute()");
 
-      // 전달정보 저장(c_num, change_amount)
       int c_num = Integer.parseInt(request.getParameter("c_num"));
       int changeAmount = Integer.parseInt(request.getParameter("change_amount"));
       

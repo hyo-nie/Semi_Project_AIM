@@ -27,7 +27,6 @@ public class AdminStoreDAO {
 			return con;
 	   }
 	         
-	   // 자원 해제
 	   public void closeDB() {
 	      System.out.println("DAO : 연결 자원 해제");
 	      try {
@@ -40,7 +39,7 @@ public class AdminStoreDAO {
 	      } catch (SQLException e) {
 	         e.printStackTrace();
 	      }
-	   } // 자원해제
+	   }
 	
 
 	  /** addProduct(dto) 

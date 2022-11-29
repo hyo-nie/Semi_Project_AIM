@@ -20,7 +20,6 @@ public class CartDAO {
 	private ResultSet rs = null;
 	private String sql = "";
 	
-	// 디비 연결해주는 메서드(커넥션풀)
 	private Connection getConnection() throws Exception{
 
 		Context initCTX = new InitialContext();

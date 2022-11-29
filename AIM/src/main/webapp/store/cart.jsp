@@ -91,8 +91,6 @@
 	%>		
 		<div class="com_cart_list_wrap">
 				<p class="cart_allchecker_wrap">
-<!-- 					<input type="checkbox" id="checkboxall" class="com_custom_all_checkbox com_custom_checkbox" checked="checked"> -->
-<!-- 					<label for="checkboxall">전체선택</label> -->
 					<strong class="com_custom_checkbox_product_name">상품명</strong>
 					<strong class="com_custom_checkbox_sel_price" style="margin-left: 22px;">판매금액</strong>
 					<strong class="com_custom_checkbox_cnt">수량</strong>
@@ -115,8 +113,6 @@
 	%>		
 	<div class="com_cart_list_wrap">
 		<p class="cart_allchecker_wrap">
-<!-- 			<input type="checkbox" id="checkboxall" class="com_custom_all_checkbox com_custom_checkbox" checked="checked"> -->
-<!-- 			<label for="checkboxall">전체선택</label> -->
 			<strong class="com_custom_checkbox_product_name">상품명</strong>
 			<strong class="com_custom_checkbox_sel_price" style="margin-left: 22px;">판매금액</strong>
 			<strong class="com_custom_checkbox_cnt">수량</strong>
@@ -130,8 +126,6 @@
         
         <ul class="com_list_style1" style="border-width: 0px;">
         	<li class="" id="cart_item_idx_886182">    
-<!--          	<input type="checkbox" id="checkbox886182" name="checkbox" value="886182" class="com_custom_checkbox" checked="checked">
- -->        		
  				<span id="forBlank"></span>
  				<label for="checkbox886182"></label> 
         		   
@@ -150,7 +144,6 @@
         		  
         	<div class="product_info_cnt_wrap" style="margin-top: 15px; margin-left: 15px; width: 165px;">      
         		<span class="com_form_count com_form_count886182" id="com_form_count886182">${cart.c_amount}</span>  
-        		<!-- changeItemAmount(object, index, st_price, c_amount ,mode) -->  
         		<a href="#none" onclick='javascript:changeItemAmount(this, ${i}, ${prdt.st_price }, ${cart.c_amount},  "plus")' class="com_btn_plus">+</a>        
         		<a href="#none" onclick='javascript:changeItemAmount(this, ${i}, ${prdt.st_price }, ${cart.c_amount}, "minus")' class="com_btn_minus">-</a>        
         		<a href="#none" onclick="javascript:saveChangeInfo(${cart.c_num}, ${i})" class="btn_change" style="text-decoration-line: none;">변경</a>    
@@ -161,9 +154,7 @@
         		</span>  
         		  
         		<div class="product_info_btn_wrap">      
-<!--         			<a href="#none" onclick="javascript:fn_Buy();">바로구매</a>    -->
         			<a href="./CartDeleteAction.ct?c_num=${cart.c_num }" style="text-decoration-line: none;">삭제</a>         
-        			      
         		</div>    
         		</li>
         	</ul>

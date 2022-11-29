@@ -12,11 +12,9 @@ public class CartDeleteAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		System.out.println(" M : CartDeleteAction_execute 호출 ");
 		
-		// 세션값 제어
 		HttpSession session = request.getSession();
 		String id = (String) session.getAttribute("mb_id");
 
-		// id 정보 없을 때
 		ActionForward forward = new ActionForward();
 		if(id == null) {
 			forward.setPath("./Login.aim");
@@ -25,10 +23,8 @@ public class CartDeleteAction implements Action {
 			return forward;
 		}
 		
-		// 전달정보 저장(c_num)
 		int c_num = Integer.parseInt(request.getParameter("c_num"));
 		
-		// DAO - 장바구니 삭제(c_num)
 		CartDAO dao = new CartDAO();
 		int result = dao.deleteCart(c_num);
 		
@@ -36,7 +32,6 @@ public class CartDeleteAction implements Action {
 			System.out.println(" M : 장바구니 삭제완료 ");
 		}
 		
-		// 페이지 이동(CartList.ct)
 		forward.setPath("./CartList.ct");
 		forward.setRedirect(true);
 		

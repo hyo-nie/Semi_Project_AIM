@@ -17,7 +17,6 @@ public class CartFrontController extends HttpServlet {
 		   
 		   System.out.println(" C : doProcess() ");
 	
-		      // 가상주소 계산
 		      String requestURI = request.getRequestURI();
 		      System.out.println(" C : requestURI : " + requestURI);
 		      String ctxPath = request.getContextPath();
@@ -31,11 +30,9 @@ public class CartFrontController extends HttpServlet {
 		      Action action = null;
 		   
 
-		      // 가상주소 매핑
 		      if(command.equals("/CartAddAction.ct")) {
-		    	  System.out.println(" C : CartAddAction.ct 호출 "); // 패턴2 장바구니 담고 페이지 이동
+		    	  System.out.println(" C : CartAddAction.ct 호출 ");
 		    	  
-		    	  // CartAddAction()
 		    	  action = new CartAddAction();
 		    	  
 		    	  try {
@@ -44,9 +41,8 @@ public class CartFrontController extends HttpServlet {
 					e.printStackTrace();
 				}
 		      } else if(command.equals("/CartList.ct")) {
-		    	  System.out.println(" C : /CartList.ct 호출 "); // 패턴3 장바구니 리스트페이지 출력
+		    	  System.out.println(" C : /CartList.ct 호출 "); 
 		    	  
-		    	  // CartAction()
 		    	  action = new CartAction();
 		    	  try {
 					forward = action.execute(request, response);
@@ -55,9 +51,8 @@ public class CartFrontController extends HttpServlet {
 				}
 		    	  
 		      } else if(command.equals("/CartDeleteAction.ct")) {
-		    	  System.out.println(" C : CartDeleteAction.ct 호출 "); // 패턴 2 장바구니 상품 삭제 후 페이지 이동
+		    	  System.out.println(" C : CartDeleteAction.ct 호출 "); 
 		    	  
-		    	  // CartDeleteAction()
 		    	  action = new CartDeleteAction();
 		    	  
 		    	  try {
@@ -77,14 +72,14 @@ public class CartFrontController extends HttpServlet {
 	               
 	            }
 
-		    	  
 		      System.out.println("가상주소 매핑 완료");
-		      // 페이지 이동
+
+		      
 		      if (forward != null) {
-		         if (forward.isRedirect()) { // true
+		         if (forward.isRedirect()) { 
 		            System.out.println(" C : sendRedirect() : " + forward.getPath());
 		            response.sendRedirect(forward.getPath());
-		         } else { // false
+		         } else { 
 		            System.out.println(" C : forward() : " + forward.getPath());
 		            RequestDispatcher dis = request.getRequestDispatcher(forward.getPath());
 		            dis.forward(request, response);

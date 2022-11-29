@@ -16,12 +16,8 @@ public class OrderStartAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		System.out.println(" M : OrderStartAction_execute() ");
 		
-		// 사용자 정보(세션제어)
 		HttpSession session = request.getSession();
 		String id = (String) session.getAttribute("mb_id");
-		
-		System.out.println("id : " + id);
-		System.out.println("---------------------------------------------------");
 		
 		ActionForward forward = new ActionForward();
 		if(id == null) {
@@ -30,23 +26,20 @@ public class OrderStartAction implements Action {
 			return forward;
 		}
 		
-		// 구매 정보(장바구니 정보)
+
 		CartDAO cdao = new CartDAO();
 		
 		ArrayList totalList = cdao.getCartList(id);
 		ArrayList cartList = (ArrayList) totalList.get(0); 
 		ArrayList productList = (ArrayList) totalList.get(1); 
 		
-		// 사용자 정보
 		MemberDAO mDAO = new MemberDAO();
 		MemberDTO mDTO = mDAO.getMemberInfo(id);
 		
-		// 저장해서 view 출력
 		request.setAttribute("cartList", cartList);
 		request.setAttribute("productList", productList);
 		request.setAttribute("member", mDTO);
 		
-		// ./store/buy.jsp		페이지 이동
 		forward.setPath("./store/buy.jsp");
 		forward.setRedirect(false);
 			

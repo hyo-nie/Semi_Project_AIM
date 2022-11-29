@@ -1,13 +1,13 @@
 package com.aim.store.db;
 
 public class StoreDTO {
-   private int st_num; // 제품번호
-   private String st_name; // 상품명
-   private int st_price; // 상품가격
-   private String st_text; // 상품 설명
-   private String st_img; // 상품 사진
-   private String category_name; // 카테고리이름
-   private String category_code; // 카테고리코드
+   private int st_num; 
+   private String st_name; 
+   private int st_price; 
+   private String st_text; 
+   private String st_img; 
+   private String category_name; 
+   private String category_code; 
    
 public int getSt_num() {
 	return st_num;

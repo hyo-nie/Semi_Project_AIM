@@ -15,7 +15,7 @@
 		var defaultCnt = 1;
 		
 		function downCnt(){		
-			if(defaultCnt>1){	// defaultCnt가 0보다 큰 1이면 --; -> 0으로 값이 변하므로 X
+			if(defaultCnt>1){
 				defaultCnt--;
 				document.getElementById("showCnt").innerHTML = defaultCnt;
 				
@@ -52,7 +52,7 @@
 			if(isMove){
 			
 				document.fr.action="./CartAddAction.ct?c_amount="+amount;
-				document.fr.isMove.value = isMove; // true
+				document.fr.isMove.value = isMove;
 				document.fr.submit();
 				
 			}  
@@ -80,7 +80,7 @@
 			
 			if(isMove){
 				document.fr.action="./OrderNowAction.or?c_amount="+amount;
-				document.fr.isMove.value = isMove; // true
+				document.fr.isMove.value = isMove;
 				document.fr.submit();
 				
 			}  
@@ -88,7 +88,6 @@
 			
 		}
 		
-		// 확인용!
 		function buyNow2(){
 			var queryString = $("form[name=fr]").serialize();
 			var amount = document.getElementById("showCnt").innerHTML;

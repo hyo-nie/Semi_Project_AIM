@@ -22,13 +22,11 @@
 
 
 <article>
-<%-- 	${detailInfo } --%>
+
 	<table>
       <div class="com_cart_list_wrap" style="margin-top: 45px;">
       <h3 style="margin-bottom: 10px;">주문 상세 내역</h3>
       <p class="cart_allchecker_wrap">
-<!--          <input type="checkbox" id="checkboxall" class="com_custom_all_checkbox com_custom_checkbox" checked="checked"> -->
-<!--          <label for="checkboxall"></label> -->
          <strong class="com_custom_checkbox_product_name" style="width: 250px;">상품명</strong>
          <strong class="com_custom_checkbox_price" style="width: 100px;">수량</strong>
          <strong class="com_custom_checkbox_price" style="width: 220px;">주문금액</strong>

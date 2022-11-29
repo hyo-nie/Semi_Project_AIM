@@ -16,7 +16,6 @@ public class OrderFrontController extends HttpServlet {
 	         throws ServletException, IOException {
 	      	System.out.println(" C : doProcess() 호출 ");
 	      	
-		      // 가상주소 계산
 		      String requestURI = request.getRequestURI();
 		      System.out.println(" C : requestURI : " + requestURI);
 		      String ctxPath = request.getContextPath();
@@ -30,9 +29,8 @@ public class OrderFrontController extends HttpServlet {
 		      Action action = null;
 		      
 		      if(command.equals("/OrderStart.or")) {
-		    	  System.out.println(" C : /OrderStart.or 호출 "); // 패턴3
+		    	  System.out.println(" C : /OrderStart.or 호출 "); 
 
-		    	  // OrderStartAction
 		    	  action = new OrderStartAction();
 		    	  
 		    	 try {
@@ -41,9 +39,8 @@ public class OrderFrontController extends HttpServlet {
 					e.printStackTrace();
 				}
 		      }else if(command.equals("/OrderAddAction.or")) {
-		    	  System.out.println(" C : /OrderAddAction.or 호출 "); // 패턴2
+		    	  System.out.println(" C : /OrderAddAction.or 호출 "); 
 		    	  
-		    	  //OrderAddAction
 		    	  action = new OrderAddAction();
 		    	  try {
 					forward = action.execute(request, response);
@@ -53,7 +50,6 @@ public class OrderFrontController extends HttpServlet {
 		      } else if(command.equals("/OrderList.or")) {
 		    	  System.out.println(" C : /OrderList.or 호출 ");
 		    	  
-		    	   // OrderListAction
 					action = new OrderListAction();
 					try {
 						forward = action.execute(request, response);
@@ -63,7 +59,6 @@ public class OrderFrontController extends HttpServlet {
 			  }else if(command.equals("/OrderDetail.or")) {
 				   System.out.println(" C : /OrderDetail.or 호출 ");
 				  
-				   // OrderDetailAction()
 				   action = new OrderDetailAction();
 					try {
 						forward = action.execute(request, response);
@@ -82,12 +77,12 @@ public class OrderFrontController extends HttpServlet {
 			  }
 		      
 
-		      // 페이지 이동
+
 		      if (forward != null) {
-		         if (forward.isRedirect()) { // true
+		         if (forward.isRedirect()) { 
 		            System.out.println(" C : sendRedirect() : " + forward.getPath());
 		            response.sendRedirect(forward.getPath());
-		         } else { // false
+		         } else {
 		            System.out.println(" C : forward() : " + forward.getPath());
 		            RequestDispatcher dis = request.getRequestDispatcher(forward.getPath());
 		            dis.forward(request, response);

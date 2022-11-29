@@ -18,8 +18,6 @@
 	<!-- 헤더/네비 -->
 	<jsp:include page="../inc/login_nav_bar.jsp"/>
 
-<%-- ${Giftcard} --%>
-		
 		
 		
 		<div id="contents" class="gift_store">
@@ -66,7 +64,7 @@
 				<c:if test="${mb_id.equals('admin')}">
 					<input type="button" value="상품등록" onclick="location.href='./AdminStoreAdd.ad';">
 					<input type="button" value="상품리스트" onclick="location.href='./AdminStoreList.ad';">
-					<!-- 버튼 css 추후 적용 -->
+
 				</c:if>
 				
 		</div>

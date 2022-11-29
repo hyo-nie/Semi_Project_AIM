@@ -14,21 +14,15 @@ public class GiftcardAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		System.out.println(" M : GiftcardAction_execute 호출 ");
 		
-		// 기프트카드 & 관람권 상품 정보 저장
-		// String card = request.getParameter("card");
-//		if( card == null) {
-//			card = "all";
-//		}
-//		System.out.println(" M : card = " + card);
 		
 		StoreDTO dto = new StoreDTO();
 		dto.setCategory_code("1");
 		String card = dto.getCategory_code();
 		
 		StoreDAO dao = new StoreDAO();
-		List Giftcard = dao.getGiftcard(card); // 카테고리별 전체상품 가져옴
+		List Giftcard = dao.getGiftcard(card); 
 		
-//		System.out.println("M : "+ card); 
+
 		
 		request.setAttribute("Giftcard", Giftcard);
 		

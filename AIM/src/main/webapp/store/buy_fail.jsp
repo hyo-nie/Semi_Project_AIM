@@ -24,7 +24,6 @@
 
 
 
-<!-- 결제 실패 시 보여지는 view -->
 <div id="contents" class="gift_store">
 
     <div class="cart_step_wrap">
@@ -51,9 +50,7 @@
             
         <div class="com_btn_wrap pT60">
 			<a href="./CartList.ct" class="btn_style1">다시 결제 하기</a>
-			<!-- 장바구니 페이지로 이동 -->
             <a href="./StoreMain.st" class="btn_style0" style="color: white;">스토어 홈</a>
-            <!-- 스토어 메인 페이지로 이동 -->
         </div>
 
     </div>

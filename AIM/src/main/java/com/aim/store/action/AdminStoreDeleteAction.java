@@ -11,10 +11,8 @@ public class AdminStoreDeleteAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		System.out.println("M : AdminStoreDelete_execute()");
 		
-		// 전달 정보 : st_num
 		int st_num = Integer.parseInt(request.getParameter("st_num"));
 		
-		// 삭제 메서드 - adminStoreDel();
 		AdminStoreDAO dao = new AdminStoreDAO();
 		dao.adminStoreDel(st_num);
 		

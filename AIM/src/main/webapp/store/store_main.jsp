@@ -125,10 +125,10 @@
 	    <br><br>
 	          
 	  	<ul class="category_product_list">
-	  		<!-- 영화관람권 / 기트프카드 파트 -->
 	        <li>
 	          <strong class="category_product_title" style="font-size: 23px; font-family: inherit;">영화관람권 / 기프트카드
-	          <a href="./GiftcardList.st" class="btn_category_product">더보기</a> </strong>          
+	         	 <a href="./GiftcardList.st" class="btn_category_product">더보기</a> 
+	          </strong>          
 	          
 	          <ul class="category_product_inner_list" style="margin-bottom: 30px;">   
 	             <c:forEach var="i" begin="1" end="3" step="1">
@@ -163,7 +163,6 @@
 			  <li>
 			    <strong class="category_product_title" style="font-size: 23px; font-family: inherit;">팝콘/음료/굿즈
 			    	<a href="./PopcornList.st" class="btn_category_product">더보기</a> </strong>  
-			          <!-- giftstore.css 517-->
 			             
 			    <ul class="category_product_inner_list">      
 			      <c:forEach var="i" begin="1" end="3" step="1">
@@ -178,7 +177,9 @@
 								<span class="best_product_text_title">${poplist.st_name }</span>                  
 								<span class="best_product_text_name">${poplist.st_text }</span>                  
 								<span class="best_product_sale_price_wrap">                  
-								<span class="store_deatail_source_price"><fmt:formatNumber value="${poplist.st_price }"/></span>                  
+								<span class="store_deatail_source_price">
+									<fmt:formatNumber value="${poplist.st_price }"/>
+								</span>                  
 							</span>
 			              </span>
 			          </a>

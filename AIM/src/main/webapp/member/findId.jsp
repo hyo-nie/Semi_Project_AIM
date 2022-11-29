@@ -23,21 +23,24 @@
 	  
 	  document.fr.submit();
   }
+  
 </script>
 </head>
 <body>
 
 	<!-- 각종 요소 -->
-	<jsp:include page="../inc/include.jsp" />
+	<jsp:include page="../inc/include.jsp"/>
 	<!-- 헤더/네비 -->
-	<jsp:include page="../inc/nav_bar.jsp"></jsp:include>
+	<jsp:include page="../inc/nav_bar.jsp"/>
 
 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
 	<h1 align="center">아이디찾기</h1>
+	
 	<br>
 	<br>
+	
 	<fieldset>
 		<div align="center">
 			<form action="./FindIdAction.aim" name="fr" method="post">
@@ -50,7 +53,11 @@
 			</form>
 		</div>
 	</fieldset>
-<!-- 약관 -->
+
+
 <jsp:include page="../inc/footer.jsp"/>
+
+
+
 </body>
 </html>

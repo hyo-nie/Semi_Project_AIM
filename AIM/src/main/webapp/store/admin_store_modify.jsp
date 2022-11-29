@@ -10,7 +10,6 @@
 <link href="./assets/css/default.css" rel="stylesheet" type="text/css">
 <script type="text/javascript">
 function check(){
-	// 카테고리, 소분류, 상품명, 가격, 구성
 	if(document.adminfr.category.value == ""){
 		alert("카테고리를 선택해주세요!");
 		document.adminfr.category.focus();
@@ -51,7 +50,6 @@ function check(){
 <body>
 
 	<%
-		/* 로그인 제어! 스토어 상품 수정 페이지는 admin(관리자)만 접근 가능 */
 			String id = (String) session.getAttribute("mb_id");
 			if (id == null || !id.equals("admin")) {
 				response.sendRedirect("./Login.aim");

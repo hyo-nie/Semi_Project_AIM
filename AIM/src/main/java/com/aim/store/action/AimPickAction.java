@@ -14,7 +14,6 @@ public class AimPickAction implements Action{
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		System.out.println("M : AimPickAction_execute()");
 		
-		// 추천 상품? AIM 콤보(st_num=6), 2인 관람권(st_num=5), 30000원(st_num=2)
 		StoreDAO dao = new StoreDAO();
 		StoreDTO aimCombo = dao.getAimPick(6);
 		StoreDTO ticket = dao.getAimPick(5);

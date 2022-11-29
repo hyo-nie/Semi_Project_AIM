@@ -19,10 +19,7 @@
 	<!-- 헤더/네비 -->
 	<jsp:include page="../inc/login_nav_bar.jsp"/>
 
-<%-- ${popcornList} 정보 넘어오는 거 확인했음! 나중에 지우기 --%>
-		
-		
-		
+
 		
 		
 		
@@ -69,7 +66,6 @@
 			<c:if test="${mb_id.equals('admin')}">
 				<input type="button" value="상품등록" onclick="location.href='./AdminStoreAdd.ad';">
 				<input type="button" value="상품리스트" onclick="location.href='./AdminStoreList.ad';">
-				<!-- 버튼 css 추후 적용 -->
 			</c:if>
 		</div>
 </div>

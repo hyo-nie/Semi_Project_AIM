@@ -5,8 +5,6 @@
 <head>
 <meta charset="UTF-8">
 <title>간편회원 정보입력 &lt; 회원가입</title>
-
-<!-- css/script -->
 <jsp:include page="../inc/join_include.jsp"/>
 
 <%--
@@ -30,8 +28,6 @@ ex ) skt / 010 / 0000 / 0000
 개인정보 유효기간 - db 사용여부 회의필요
 
  --%>
-
-<!-- function  -->
 <script src="./assets/css/jquery-3.6.1.js"></script>
 <script type="text/javascript">
 	
@@ -149,7 +145,7 @@ ex ) skt / 010 / 0000 / 0000
 		} 
 
 		if (mb_pw == mb_pw2) {
-			// 일치시에는 문구 출력하지 않음
+			
 		} else {
 			alert("비밀번호가 일치하지 않습니다.")
 			return false;
@@ -207,121 +203,137 @@ ex ) skt / 010 / 0000 / 0000
 	</script>
 </head>
 <body>
-<!-- header -->
 
-<div id="mast-head">
-	<div class="container">
-		<h1 class="bi">
-			<a href="./Main.aim" onclick="return fnWindowOpen(this.href);"
-				target="_blank"><img src="https://ifh.cc/g/RGtYO5.png"
-				alt="AIM홈페이지"></a>
-		</h1>
-	</div>
-</div>
-<!-- //header -->
+		<!-- header -->
+		<div id="mast-head">
+			<div class="container">
+				<h1 class="bi">
+					<a href="./Main.aim" onclick="return fnWindowOpen(this.href);" target="_blank">
+						<img src="https://ifh.cc/g/RGtYO5.png" alt="AIM홈페이지">
+					</a>
+				</h1>
+			</div>
+		</div>
+		<!-- //header -->
+
+
 
 <form action="./JoinAction.aim" method="post" name="fr" id="join">
 <!-- mast body -->
 <div id="mast-body">
 	<div class="container">
-		<!-- toparea -->
+	
 		<div class="toparea">
-			<h2 class="title">AIM 회원가입<!-- 회원가입 --></h2>   
+			<h2 class="title">AIM 회원가입</h2>   
 			<div class="step __2">
-				<div class="step-desc">짠! 벌써<br>마지막 단계에요!<!-- 짠! 벌써<br>마지막 단계에요! --></div>
+				<div class="step-desc">짠! 벌써<br>마지막 단계에요!</div>
 			</div>
 		</div>
-		<!-- //toparea -->
 
 		<!-- contents -->
 		<div class="contents">
 			<!-- section : 정보입력 -->
 			<div class="section __half">
 				<h3 class="subject __underline">
-					<em>회원정보입력<!-- 회원정보입력 -->
-						<span class="__require-info __point-color"><small>*는 필수입력 항목입니다.<!-- *는 필수입력 항목입니다. --></small></span>
+					<em>회원정보입력
+						<span class="__require-info __point-color">
+							<small>*는 필수입력 항목입니다.</small>
+						</span>
 					</em>
 				</h3>
-				<!-- 아이디 -->
 				
+				<!-- 아이디 -->
 				<div class="row _none" id="div-cstNm">
 					<div class="col-md">
-						<label for="cstNm"><em class="__point-color">*</em>아이디<!-- 아이디 --></label>
+						<label for="cstNm">
+							<em class="__point-color">*</em>아이디
+						</label>
 					</div>
+					
 					<div class="col-md">
 						<div class="form-wrap __normal">
 							<div class="ui-input">
-								<input type="text" id="mb_id" name="mb_id" title="아이디를 입력해주세요." maxlength="12"> <!-- 아이디를 입력해주세요 -->
-								<span class="placeholder">영문으로 입력해주세요.<!-- 한글 또는 영문으로 입력해주세요. --></span>
+								<input type="text" id="mb_id" name="mb_id" title="아이디를 입력해주세요." maxlength="12">
+								<span class="placeholder">영문으로 입력해주세요.</span>
 								<font id="checkId_ym" size="2"></font>
 							</div>
 						</div>
 					</div>
 				</div>
 				<!-- 아이디 -->
+				
 				<div class="section rowgroup" id="div-elcAdd">
 					<!-- 이름 -->
 					<div class="row">
 						<div class="col-md">
-							<label for="elcAdd"><em class="__point-color">*</em>이름<!-- 본인 이름 --></label>
+							<label for="elcAdd">
+								<em class="__point-color">*</em>이름
+							</label>
 						</div>
+						
 						<div class="col-md">
 							<div class="form-wrap __normal __x1">
 								<div class="inner">
 									<div class="ui-input">
 										<input type="text" id="mb_name" name="mb_name" title="이름을 입력해주세요." class="" maxlength="10"><!-- 이름을 입력해주세요. -->
-										<span class="placeholder">이름을 입력해주세요.<!-- 이름을 입력해주세요. --></span>
+										<span class="placeholder">이름을 입력해주세요.</span>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
+					
 					<!-- 닉네임 -->
 					<div class="row">
 						<div class="col-md">
-							<label for="ctfMg"><em class="__point-color">*</em>닉네임<!-- 닉네임 --></label>
+							<label for="ctfMg">
+								<em class="__point-color">*</em>닉네임
+							</label>
 						</div>
+						
 						<div class="col-md">
 							<div class="form-wrap __normal __x1">
 								<div class="inner">
 									<div class="ui-input">
-										<input type="text" id="mb_nick" name="mb_nick" maxlength="10" title="닉네임을 입력해주세요." class=""><!-- 닉네임을 입력해주세요. -->
-										<span class="placeholder">닉네임을 입력해주세요.<!-- 닉네임을 입력해주세요. --></span>
+										<input type="text" id="mb_nick" name="mb_nick" maxlength="10" title="닉네임을 입력해주세요." class="">
+										<span class="placeholder">닉네임을 입력해주세요.</span>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+				
 				<!-- 이메일 -->
 				<div class="row _none" id="div-cstNm">
 					<div class="col-md">
-						<label for="cstNm"><em class="__point-color"></em>이메일<!-- 이메일 --></label>
+						<label for="cstNm">
+							<em class="__point-color"></em>
+							이메일
+						</label>
 					</div>
 					<div class="col-md">
 						<div class="form-wrap __normal">
 							<div class="ui-input">
 								<input type="text" id="mb_email" name="mb_email" title="이메일을 입력해주세요." maxlength="20"> <!-- 이메일 입력해주세요 -->
-								<span class="placeholder">이메일을 입력해주세요.<!-- 이메일을 입력해주세요. --></span>
+								<span class="placeholder">이메일을 입력해주세요.</span>
 							</div>
 						</div>
 					</div>
 				</div>
 				<!-- 이메일 -->
+				
 				<!-- 비밀번호 -->
 				<div class="row" id="div-pswd">
 					<div class="col-md">
-						<label for="onlCstPswd"><em class="__point-color">*</em>비밀번호<!-- 비밀번호 --></label>
-						<!-- SSO페이지 수정 비밀번호규칙 안내문구 추가 MYENG 3.26 -->
+						<label for="onlCstPswd"><em class="__point-color">*</em>비밀번호</label>
 						<div class="tooltip-container">
 			              <button type="button" class="tooltip-trigger" onclick="$(this).parent().toggleClass('active');">설명보기</button>
 			              <div class="tooltip-content">
 			                <p class="tooltip-title"><b>비밀번호 입력 시 아래 규칙을 참고해주세요!</b></p>
 			                <p>1. 비밀번호는 영문자,숫자,특수기호의 조합으로 <b>8~15자리</b>를 사용해야합니다.</p>
 			                <p>2. 특수기호는 <b>? = . *  [ # ? ! @ $ % ^ & * -</b> 만 사용 가능합니다.</p>
-<!-- 			                <p>3. 연속된 문자열을 <b>3자 이상</b> 사용할 수 없습니다.</p> -->
-<!-- 			                <p>4. 동일한 문자열을 <b>3자 이상</b> 사용할 수 없습니다.</p> -->
-			                <p>5. <b>아이디가 포함된</b> 비밀번호를 사용할 수 없습니다.</p>
+			                <p>3. <b>아이디가 포함된</b> 비밀번호를 사용할 수 없습니다.</p>
 			              </div>
 			            </div>
 					</div>
@@ -330,74 +342,72 @@ ex ) skt / 010 / 0000 / 0000
 							<div class="inner">
 								<div class="ui-input">
 									<input type="password" id="mb_pw" name="mb_pw" title="비밀번호를 입력해주세요." maxlength="20" class="" aria-autocomplete="list">
-									<span class="placeholder">비밀번호를 입력해주세요.<!-- 비밀번호를 입력해주세요. --></span>
+									<span class="placeholder">
+										비밀번호를 입력해주세요.
+									</span>
 								</div>
 							</div>
-							<span class="__point-color"><small>8-20자리의 대소문자/숫자/특수기호를 함께 입력해주세요.<!-- 8-20자리의 대소문자/숫자/특수기호를 함께 입력해주세요. --></small></span>
+							<span class="__point-color">
+								<small>8-20자리의 대소문자/숫자/특수기호를 함께 입력해주세요.</small>
+							</span>
 							<div class="inner">
 								<div class="ui-input">
 									<input type="password" id="mb_pw2" name="mb_pw2" title="입력하신 비밀번호를 다시 한번 입력해주세요." maxlength="20">
-									<span class="placeholder">입력하신 비밀번호를 다시 한번 입력해주세요.<!-- 입력하신 비밀번호를 다시 한번 입력해주세요. --></span>
+									<span class="placeholder">입력하신 비밀번호를 다시 한번 입력해주세요.</span>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+				
 				<!-- 휴대폰 번호 -->
 				<div class="row" id="div-mblNo">
 					<div class="col-md">
-						<label for="tcccDc"><em class="__point-color">*</em>휴대폰 번호<!-- 휴대폰 번호 --></label>
+						<label for="tcccDc">
+							<em class="__point-color">*</em>휴대폰 번호
+						</label>
 					</div>
 					<div class="col-md">
 						<div class="form-wrap __mobile __telecom">
 							<div class="inner"> 
-								<select title="통신사" id="mb_tel1" name="mb_tel1" class="ui-select"><!-- 통신사 -->
-									
+								<select title="통신사" id="mb_tel1" name="mb_tel1" class="ui-select">
 										<option value="1">SKT</option>
-									
 										<option value="2">KT</option>
-									
 										<option value="3">LGU+</option>
-									
 										<option value="4">SKT알뜰폰</option>
-									
 										<option value="5">KT알뜰폰</option>
-									
 										<option value="6">LGU+알뜰폰</option>
-									
 										<option value="9">ETC</option>
-									
 								</select>
-								<select title="통신사번호" id="mb_tel2" name="mb_tel2" class="ui-select"><!-- 통신사번호 -->
-									<option value="">선택<!-- 선택 --></option>
-									
+								
+								<select title="통신사번호" id="mb_tel2" name="mb_tel2" class="ui-select">
+										<option value="">선택</option>
 										<option value="010">010</option>
-									
 										<option value="011">011</option>
-									
 										<option value="016">016</option>
-									
 										<option value="017">017</option>
-									
 										<option value="018">018</option>
-									
 										<option value="019">019</option>
-									
 								</select>
+
 								<div class="ui-input">
-									<input id="mb_tel3" name="mb_tel3" type="tel" onkeydown="return fnNumOnly(event);" onkeyup="this.value=this.value.replace(/[^0-9]/g,'')" style="ime-mode:disabled;" maxlength="4" title="휴대폰 번호 중간자리"><!-- 휴대폰 번호 중간자리 -->
+									<input id="mb_tel3" name="mb_tel3" type="tel" onkeydown="return fnNumOnly(event);" onkeyup="this.value=this.value.replace(/[^0-9]/g,'')" style="ime-mode:disabled;" maxlength="4" title="휴대폰 번호 중간자리">
 								</div>
 								<div class="ui-input">
-									<input id="mb_tel4" name="mb_tel4" type="tel" onkeydown="return fnNumOnly(event);" onkeyup="this.value=this.value.replace(/[^0-9]/g,'')" style="ime-mode:disabled;" maxlength="4" title="휴대폰 번호 뒷자리"><!-- 휴대폰 번호 뒷자리 -->
+									<input id="mb_tel4" name="mb_tel4" type="tel" onkeydown="return fnNumOnly(event);" onkeyup="this.value=this.value.replace(/[^0-9]/g,'')" style="ime-mode:disabled;" maxlength="4" title="휴대폰 번호 뒷자리">
 								</div>
+								
 							</div>
 						</div>
 					</div>
 				</div>
+				
 				<!-- 생년월일 -->
 				<div class="row" id="div-bird">
 					<div class="col-md">
-						<label for="birthday-y"><em class="__point-color">*</em>생년월일<!-- 생년월일 --></label>
+						<label for="birthday-y">
+							<em class="__point-color">*</em>생년월일
+						</label>
 					</div>
 					<div class="col-md">
 						<div class="form-wrap __date ui-check-date">
@@ -408,16 +418,15 @@ ex ) skt / 010 / 0000 / 0000
 					</div>
 				</div>        
 			</div>
-			<!-- //section -->
 
 			<!-- section : 마케팅정보수신동의 -->
 			<div class="section __half __expiry" id="div-cstMrktRcvYn">     
 				<h3 class="subject __underline">
-					<em>마케팅 정보 수신동의<!-- 마케팅 정보 수신동의 --></em>
+					<em>마케팅 정보 수신동의</em>
 				</h3>
 				<div class="ui-check __toggle">
 					<input type="checkbox" id="all-agreement" data-trigger="#marketing-agreement" class="ui-allchk-btn ui-allchk-group1" data-separator-number="1">
-					<label for="all-agreement">전체동의<!-- 전체동의 --></label>
+					<label for="all-agreement">전체동의</label>
 				</div>
 				<div class="row ui-allchk-wrap ui-allchk-group1" id="marketing-agreement" data-separator-number="1">
 					<div class="col-md">
@@ -430,7 +439,7 @@ ex ) skt / 010 / 0000 / 0000
 								<div class="col-md">
 									<div class="ui-check">
 										<input type="checkbox" id="mbMlRcvYn" name="mbMlRcvYn" class="ui-allchk-el ui-allchk-group1" data-separator-number="1">
-										<label for="mbMlRcvYn" title="E-Mail">카카오톡<!-- 까톡~ --></label>
+										<label for="mbMlRcvYn" title="E-Mail">카카오톡</label>
 									</div>
 									<div class="ui-check">
 										<input type="checkbox" id="mbSmsRcvYn" name="mbSmsRcvYn" class="ui-allchk-el ui-allchk-group1" data-separator-number="1">
@@ -446,15 +455,15 @@ ex ) skt / 010 / 0000 / 0000
 					</div>
 				</div>
 			</div>
-			<!-- //section -->
-<!-- 		<p>개인정보 유효기간은 고객님께서 해당 사이트를 탈퇴 시 파기됩니다.</p> -->
-				</div>
+		</div>
 
-			<!-- btn -->
 			<div class="btn-area __center">
-				<button type="button" class="ui-button __square-large __black" onclick="fnBack();">이전<!-- 이전 --></button>
-				<button type="button" class="ui-button __square-large __point-color" id="delaychk" 
-				onclick="chk();" style="background:#18315d;">다음<!-- 다음 --></button>
+				<button type="button" class="ui-button __square-large __black" onclick="history.back();">
+					이전
+				</button>
+				<button type="button" class="ui-button __square-large __point-color" id="delaychk" onclick="chk();" style="background:#18315d;">
+					다음
+				</button>
 			</div>
 		</div>
 	</div>
@@ -463,7 +472,6 @@ ex ) skt / 010 / 0000 / 0000
 
 
 
-<!-- Footer -->
 
 
 

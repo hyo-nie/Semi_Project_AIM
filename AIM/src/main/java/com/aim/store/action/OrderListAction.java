@@ -12,7 +12,6 @@ public class OrderListAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		System.out.println("M : OrderListAction_execute()");
 
-		// 세션정보 체크
 		HttpSession session = request.getSession();
 		String id = (String) session.getAttribute("mb_id");
 		
@@ -23,13 +22,10 @@ public class OrderListAction implements Action {
 			return forward;
 		}
 		
-		// OrderDAO 객체 - getOrderList(id)
 		OrderDAO orDAO = new OrderDAO();
 
-		// request 영역저장
 		request.setAttribute("orderList", orDAO.getOrderList(id));
 		
-		// 페이지 이동 (./store/buy_list.jsp)
 		forward.setPath("./store/buy_list.jsp");
 		forward.setRedirect(false);
 		return forward;

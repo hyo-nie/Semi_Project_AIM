@@ -22,7 +22,6 @@ public class OrderDAO {
 	private ResultSet rs = null;
 	private String sql = "";
 	
-	// 디비 연결해주는 메서드(커넥션풀)
 	private Connection getConnection() throws Exception{
 		
 		Context initCTX = new InitialContext();
@@ -61,7 +60,7 @@ public class OrderDAO {
 			
 			Calendar cal = Calendar.getInstance();
 			SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
-			int o_cnum = 0; // 주문번호
+			int o_cnum = 0; 
 			
 			try {
 				con = getConnection();
@@ -132,7 +131,6 @@ public class OrderDAO {
 				
 				orderList = new ArrayList<>();
 				while(rs.next()) {
-					// DB(rs) -> OrderDTO 저장 -> OrderList저장
 					OrderDTO dto = new OrderDTO();
 					
 					dto.setO_cnum(rs.getString(1));

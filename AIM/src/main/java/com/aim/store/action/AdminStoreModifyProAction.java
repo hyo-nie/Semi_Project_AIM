@@ -12,11 +12,9 @@ public class AdminStoreModifyProAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		System.out.println("M : AdminStoreModifyProAction_execute");
 		
-		// dto에 전달정보 저장
 		StoreDTO dto = new StoreDTO();
 		dto.setCategory_code(request.getParameter("category"));
 		dto.setCategory_name(request.getParameter("category_name"));
-//		dto.setSt_img(request.getParameter("img"));
 		dto.setSt_name(request.getParameter("name"));
 		dto.setSt_price(Integer.parseInt(request.getParameter("price")));
 		dto.setSt_text(request.getParameter("text"));

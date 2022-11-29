@@ -14,7 +14,7 @@
 		var defaultCnt = 1;
 		
 		function downCnt(){		
-			if(defaultCnt>1){	// defaultCnt가 0보다 큰 1이면 --; -> 0으로 값이 변하므로 X
+			if(defaultCnt>1){
 				defaultCnt--;
 				document.getElementById("showCnt").innerHTML = defaultCnt;
 				
@@ -51,7 +51,7 @@
 			if(isMove){
 			
 				document.fr.action="./CartAddAction.ct?c_amount="+amount;
-				document.fr.isMove.value = isMove; // true
+				document.fr.isMove.value = isMove;
 				document.fr.submit();
 				
 			}  
@@ -71,23 +71,17 @@
 		}
 		
 		function buyNow(){
-			// ./OrderStart.or
-			
-			alert('확인');
-			
 			var amount = document.getElementById("showCnt").innerHTML;
 			var isMove = confirm("더이상 쇼핑하지 않고 바로 결제하시겠습니까?");
 			
 			if(isMove){
 				document.fr.action="./OrderNowAction.or?c_amount="+amount;
-				document.fr.isMove.value = isMove; // true
+				document.fr.isMove.value = isMove;
 				document.fr.submit();
 				
 			}  
-			
-			
 		}
-		// 확인용!
+
 		function buyNow2(){
 			var queryString = $("form[name=fr]").serialize() ;
 			var amount = document.getElementById("showCnt").innerHTML;
@@ -154,7 +148,9 @@
 	               		<a href="#none" onclick="javascript:downCnt()" class="com_btn_minus">-</a>    
 	               		<span class="com_form_count com_form_count0" id="showCnt">1</span>                      
 	              		<a href="#none" onclick="javascript:upCnt()" class="com_btn_plus">+</a>   
-	               		<span class="com_total_price" id="spantotalprice" style="padding-right:15px;"><fmt:formatNumber value="${dto.st_price }"/></span>               	
+	               		<span class="com_total_price" id="spantotalprice" style="padding-right:15px;">
+	               			<fmt:formatNumber value="${dto.st_price }"/>
+	               		</span>               	
 					</div>               	
 					<div class="category_product_detail_total_price">               		
               			 <p class="com_form_total_price">

@@ -14,7 +14,6 @@ public class PopcornAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		System.out.println("M : PopcornAction_execute()");
 		
-		// 스토어 카테고리별로 상품 정보를 받아오려면 어떻게 해야할지?
 		StoreDAO dao = new StoreDAO();
 		StoreDTO dto = new StoreDTO();
 		dto.setCategory_code("2");
@@ -23,10 +22,8 @@ public class PopcornAction implements Action {
 		List popcornList = dao.getStoreProduct(code);
 		System.out.println("상품 정보? " + popcornList);
 		
-		// view로 정보를 전달
 		request.setAttribute("popcornList", popcornList);
 		
-		// ./store/popcorn.jsp
 		ActionForward forward = new ActionForward();
 		forward.setPath("./store/popcorn.jsp");
 		forward.setRedirect(false);

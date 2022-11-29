@@ -28,7 +28,6 @@
 </script>
 </head>
 
-<%-- 헤드 끝  --%>
 
    <!-- header -->
    <div id="mast-head">
@@ -44,38 +43,31 @@
    <!-- //header -->
 
    <!-- mast body -->
-   <form action="./Join.aim" method="post" name="fr"> <%-- 액션 링크 설정하기 --%>
+   <form action="./Join.aim" method="post" name="fr">
    <div id="mast-body">
       <div class="container">
-         <!-- toparea -->
          <div class="toparea">
             <h2 class="title">
                AIM 회원가입
-               <!-- 회원가입 -->
             </h2>
+           
             <div class="step __1">
                <div class="step-desc">
                   필수 약관에<br>동의해주세요:)
-                  <!-- 필수 약관에<br>동의해주세요:) -->
                </div>
             </div>
          </div>
-         <!-- //toparea -->
 
          <!-- contents -->
          <div class="contents">
             <!-- 약관 -->
-            <div id="member-terms"
-               class="section __half __opt-in ui-allchk-wrap ui-allchk-group1"
-               data-separator-number="1">
+            <div id="member-terms" class="section __half __opt-in ui-allchk-wrap ui-allchk-group1" data-separator-number="1">
                <h3 class="subject __underline">
-                  <em>약관<!-- 약관 --></em>
+                  <em>약관</em>
                </h3>
                <div class="ui-check __toggle">
-                  <input type="checkbox" id="terms-all-check"
-                     data-trigger="#member-terms"
-                     class="ui-allchk-btn ui-allchk-group1" data-separator-number="1">
-                  <label for="terms-all-check">전체동의<!-- 전체동의 --></label>
+                  <input type="checkbox" id="terms-all-check" data-trigger="#member-terms" class="ui-allchk-btn ui-allchk-group1" data-separator-number="1">
+                  <label for="terms-all-check">전체동의</label>
                </div>
                <div class="section __opt-in __opt-wrap" id="div-prv">
                   <div class="row __block">
@@ -84,12 +76,9 @@
                         <div class="form-wrap __agreement">
                            <div class="inner">
                                  <div class="detail">
-                                    <button type="button"
-                                       class="ui-button __square-mini __underline"
-                                       onclick="modal_init('term-code-agree-10090',800)"></button>
+                                    <button type="button" class="ui-button __square-mini __underline" onclick="modal_init('term-code-agree-10090',800)"></button>
                                  </div>
-                              <div id="term-code-agree-10090"
-                                 class="modal-container __fixed">
+                              <div id="term-code-agree-10090" class="modal-container __fixed">
                                  <div class="modal-header">
                                     <div class="headline">AIM.POINT 회원약관</div>
                                  </div>
@@ -107,6 +96,7 @@
                                  </div>
                               </div>
                            </div>
+                           
                            <div class="inner">
                               <div class="ui-wrap">
                                  <div class="ui-check">
@@ -115,16 +105,15 @@
                                        onclick="fnPrvAgChange('agreeCco_1009BG');"
                                        data-title="개인정보의 필수적인 사항에 대한 수집 이용 동의" data-prvdvc="BG"
                                        data-cconm="L.POINT" data-ccoenm="L.POINT"
-                                       data-separator-number="1"><label
-                                       for="agreeCco_1009BG">개인정보의 필수적인 사항에 대한 수집 이용 동의 <em
-                                       class="">(필수)</em></label>
+                                       data-separator-number="1">
+                                       <label for="agreeCco_1009BG">개인정보의 필수적인 사항에 대한 수집 이용 동의 <em class="">(필수)</em></label>
                                  </div>
+                                 
                                  <div class="detail">
-                                    <button type="button"
-                                       class="ui-button __square-mini __underline"
-                                       onclick="modal_init('term-code-agree-10091',800)">자세히</button>
+                                    <button type="button" class="ui-button __square-mini __underline" onclick="modal_init('term-code-agree-10091',800)">자세히</button>
                                  </div>
                               </div>
+                              
                               <div id="term-code-agree-10091"
                                  class="modal-container __fixed">
                                  <div class="modal-header">
@@ -144,6 +133,7 @@
                                  </div>
                               </div>
                            </div>
+                           
                            <div class="inner">
                               <div class="ui-wrap">
                                  <div class="ui-check">
@@ -194,9 +184,7 @@
                                        class="">(필수)</em></label>
                                  </div>
                                  <div class="detail">
-                                    <button type="button"
-                                       class="ui-button __square-mini __underline"
-                                       onclick="modal_init('term-code-agree-10093',800)">자세히</button>
+                                    <button type="button" class="ui-button __square-mini __underline" onclick="modal_init('term-code-agree-10093',800)">자세히</button>
                                  </div>
                               </div>
                               <div id="term-code-agree-10093"
@@ -263,37 +251,33 @@
                <div class="description __high">
                   <p class="__point-color">
                      선택약관에 동의하지 않으셔도 회원가입이 가능합니다.
-                     <!-- 선택항목에 동의하지 않으셔도 정상적인 서비스를 이용하실 수 있습니다. -->
                   </p>
                </div>
             </div>
-            <!-- //약관 -->
 
             <!-- btn -->
             <div class="btn-area __center">
                <button type="button" class="ui-button __square-large __black" onclick="location.href='./Main.aim';">
                   취소
-                  <!-- 취소 -->
                </button>
-               <button type="button"
-                  class="ui-button __square-large __point-color" id="delaychk"
-                  onclick="fnChkag();" style="background-color: #18315D;">
+               <button type="button" class="ui-button __square-large __point-color" id="delaychk" onclick="fnChkag();" style="background-color: #18315D;">
                   다음
-                  <!-- 다음 -->
                </button>
             </div>
          </div>
          <!-- //contents -->
       </div>
    </div>
-   <!-- //mast body -->
    </form>
 
 
 
 
 
-<jsp:include page="../inc/footer.jsp"/>
+	<jsp:include page="../inc/footer.jsp"/>
+	
+	
+	
+	
 </body>
-<!-- 약관 -->
 </html>

@@ -32,11 +32,9 @@ function requestPay(user_tel) {
 		var itemName = "";
 		
  		if(itemObj.length == 1){
-			// 한 개인 경우
  			itemName = $(".product_info_origin").eq(0)[0].outerText
  		}
  		else{
- 			// 여러 개인 경우
  			itemName = $(".product_info_origin").eq(0)[0].outerText + " 외 " + (itemObj.length-1) + "건"
  		}
  			
@@ -46,29 +44,21 @@ function requestPay(user_tel) {
           merchant_uid: "${order.o_cnum}",
           name: itemName,
           amount: payAmount,
-          // buyer_email: "gildong@gmail.com", 주문자 이메일
           buyer_name: user,
           buyer_tel: user_tel,
       }, function (rsp) {
           if (rsp.success) {
-             console.log("결제 성공!");
-              // 결제 성공 시 이동하는 페이지(./OrderList.or)
               alert('결제되었습니다! \n주문하신 상품의 바코드는 주문 상세 페이지에서 확인 가능합니다.');
               location.href="./OrderAddAction.or?mb_tel="+user_tel+"&totalAmountMoney="+payAmount;
               
           } else {
-        	  console.log(rsp)
-              console.log("결제 실패!");
-        	  
         	  alert('결제 실패!');
-        	  // 결제 실패 시 이동하는 페이지
         	  location.href="./OrderFail.or";
           }
       });
     }
     
 	function requestPay2(user_tel){
-// 		alert('requestPay2 호출 완');
 		var payAmount = Number(document.getElementById("totalAmountMoney").innerHTML);
 		
 		var check = $('#check00').prop('checked');
@@ -92,7 +82,6 @@ function requestPay(user_tel) {
 	    float: left;
 	}
 	
-	/* 	체크박스 버튼 디자인 커스텀 */
 	input[type="checkbox"]{
         display: none !important;
      }
@@ -108,7 +97,6 @@ function requestPay(user_tel) {
 	        top:1px !important;
 	  }
 	
-	/* 	라디오 버튼 디자인 커스텀 */
 	.radioDesign input[type="radio"] {
         display: none;
     }
@@ -128,7 +116,6 @@ function requestPay(user_tel) {
         color: #ffffff;
     }
     
-    /* 결제수단 위 아래 선 모양 */
     #payMethodWrapper{
         border: 1px solid black;
 	    border-width: 2px 0px 2px 0px;
@@ -140,12 +127,6 @@ function requestPay(user_tel) {
 </head>
 <body>
 
-<%-- ${cartList } --%>
-<br>
-<%-- ${productList } --%>
-<br>
-<%-- ${member } --%>
-
 
 	<!-- 각종 요소 -->
 	<jsp:include page="../inc/include.jsp"/>
@@ -154,8 +135,8 @@ function requestPay(user_tel) {
 	<!-- 헤더/네비 -->
 	<jsp:include page="../inc/login_nav_bar.jsp"/>
 
-<form method="post" name="fr">
 
+	<form method="post" name="fr">
 	<div id="contents" class="gift_store">
 		
 		<div class="cart_step_wrap">
@@ -166,7 +147,6 @@ function requestPay(user_tel) {
 			</ul>
 		</div>
 
-		<!-- 장바구니 리스트 구매상품 정보 -->
 		<div class="com_cart_list_wrap com_cart_list_wrap1">
 			<strong class="com_box_design_title">구매상품 정보</strong>
 			<p class="cart_allchecker_wrap " style="width: 1000px;">
@@ -213,11 +193,6 @@ function requestPay(user_tel) {
        		</ul>
         
 			<table class="com_cart_total_price_wrap" style="width: 30%; margin-left: 33%;">
-<%-- 				<colgroup> --%>
-<%-- 					<col style="width: 400px"> --%>
-<%-- 					<col style="width: 0%"> --%>
-<%-- 					<col style="width: 0%"> --%>
-<%-- 				</colgroup> --%>
 				<thead>
 					<tr>
 						<th>총 결제 예정금액</th>
@@ -246,7 +221,6 @@ function requestPay(user_tel) {
 			</script>
 			
 		</div>
-		<!-- 장바구니 리스트 구매상품 정보 -->
 		
 		
 		
@@ -259,9 +233,6 @@ function requestPay(user_tel) {
 				<label for="user_info_phonenum" style="margin-top: 25px; margin-left: 50px;">휴대전화 번호</label>
 					<input type="tel" id="user_info_phonenum" name="o_tel" placeholder="휴대전화 번호" style="width: 228px" value="${member.mb_tel }"></li>
 			</ul>
-<!-- 			<p class="com_box_design_olist"> -->
-				
-<!-- 			</p> -->
 		</div>
 		<!-- 주문자 정보 확인 -->
 		
